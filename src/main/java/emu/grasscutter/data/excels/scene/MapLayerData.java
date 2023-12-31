@@ -13,6 +13,8 @@ public final class MapLayerData extends GameResource {
     @SerializedName("NLPFIGAEBFP")
     private int idk1;
 
-    @SerializedName("GCBPOOPNLLD")
+    @SerializedName(
+                value = "level",
+                alternate = {"GCBPOOPNLLD"})
     private float level; // how deep thoronium is in me
 }

@@ -82,7 +82,7 @@ public final class PluginManager {
                         Grasscutter.getLogger()
                                 .warn(translate("plugin.invalid_api.not_present", plugin.getName()));
                         continue;
-                    } else if (pluginConfig.api != API_VERSION) {
+                    } else if (pluginConfig.api != API_VERSION && pluginConfig.api != 3) {
                         Grasscutter.getLogger()
                                 .warn(
                                         translate(

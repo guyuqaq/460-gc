@@ -434,6 +434,21 @@ public final class ResourceLoader {
                             // .map(action -> {modifierActionTypes.add(action.$type); return action;})
                             .filter(action -> action.type == AbilityModifierAction.Type.HealHP)
                             .forEach(action -> modifierEntry.getOnRemoved().add(action));
+                    Stream.ofNullable(modifier.onAdded)
+                            .flatMap(Stream::of)
+                            // .map(action -> {modifierActionTypes.add(action.$type); return action;})
+                            .filter(action -> action.type == AbilityModifierAction.Type.LoseHP)
+                            .forEach(action -> modifierEntry.getOnAdded().add(action));
+                    Stream.ofNullable(modifier.onThinkInterval)
+                            .flatMap(Stream::of)
+                            // .map(action -> {modifierActionTypes.add(action.$type); return action;})
+                            .filter(action -> action.type == AbilityModifierAction.Type.LoseHP)
+                            .forEach(action -> modifierEntry.getOnThinkInterval().add(action));
+                    Stream.ofNullable(modifier.onRemoved)
+                            .flatMap(Stream::of)
+                            // .map(action -> {modifierActionTypes.add(action.$type); return action;})
+                            .filter(action -> action.type == AbilityModifierAction.Type.LoseHP)
+                            .forEach(action -> modifierEntry.getOnRemoved().add(action));
                 });
     }
 

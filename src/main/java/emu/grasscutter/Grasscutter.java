@@ -187,6 +187,14 @@ public final class Grasscutter {
         Grasscutter.startConsole();
     }
 
+    private static void forceReload() {
+        // Force reload
+        Grasscutter.loadConfig();
+        Grasscutter.loadLanguage();
+        Grasscutter.getGameServer().getGachaSystem().load();
+        Grasscutter.getGameServer().getShopSystem().load();
+    }
+
     /** Server shutdown event. */
     private static void onShutdown() {
         // Disable all plugins.
@@ -321,6 +329,7 @@ public final class Grasscutter {
             logger.info(translate("messages.dispatch.no_commands_error"));
             return;
         } else {
+            forceReload();
             logger.info(translate("messages.status.done"));
         }
 

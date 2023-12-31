@@ -12,6 +12,7 @@ import emu.grasscutter.game.player.Player;
 import emu.grasscutter.game.props.*;
 import emu.grasscutter.game.world.*;
 import emu.grasscutter.net.proto.*;
+import emu.grasscutter.net.proto.AbilityGadgetInfoOuterClass.AbilityGadgetInfo;
 import emu.grasscutter.net.proto.AbilitySyncStateInfoOuterClass.AbilitySyncStateInfo;
 import emu.grasscutter.net.proto.AnimatorParameterValueInfoPairOuterClass.AnimatorParameterValueInfoPair;
 import emu.grasscutter.net.proto.EntityAuthorityInfoOuterClass.EntityAuthorityInfo;
@@ -415,6 +416,9 @@ public class EntityGadget extends EntityBaseGadget {
 
         if (owner != null) {
             gadgetInfo.setOwnerEntityId(owner.getId());
+            gadgetInfo.setAbilityGadget(AbilityGadgetInfo.newBuilder()
+                                            .setCampId(this.getCampId())
+                                            .setTargetEntityId(owner.getId())); // gagana shoot follow scara hitbox
         }
 
         if (this.getContent() != null) {

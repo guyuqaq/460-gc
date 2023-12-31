@@ -253,7 +253,8 @@ public final class SetPropCommand implements CommandHandler {
                                     boolean sceneBuildingPointLocked =
                                             pointData.getType().equals("SceneBuildingPoint") && !pointData.isUnlocked();
 
-                                    if (forbidSimpleUnlock || sceneBuildingPointLocked) scenePointsBackup.remove(p);
+                                    //if (forbidSimpleUnlock)
+									if (sceneBuildingPointLocked) scenePointsBackup.remove(p);
                                 }
 
                                 // Unlock trans points.

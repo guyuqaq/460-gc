@@ -603,6 +603,13 @@ public class Player implements PlayerHook, FieldFetch {
                     }
                     this.getSceneTags().get(sceneTag.getSceneId()).add(sceneTag.getId());
                 });
+        //sceneId -> List<sceneTagIds>, since some are blocked off by annoying quests
+        GameConstants.DEFAULT_CUSTOM_SCENE_TAGS.entrySet().forEach(entry -> {
+            if (this.getSceneTags().get(entry.getKey()) == null) {
+                this.getSceneTags().put(entry.getKey(), new HashSet<>());
+            }
+            this.getSceneTags().get(entry.getKey()).addAll(entry.getValue());
+        });
     }
 
     /**
