@@ -97,6 +97,7 @@ public class Player implements PlayerHook, FieldFetch {
     @Getter private int mainCharacterId;
     @Getter @Setter private boolean inGodMode;
     @Getter @Setter private boolean unlimitedStamina;
+    @Getter @Setter public boolean forceLegacyDrops;
 
     @Getter private Set<Integer> nameCardList;
     @Getter private Set<Integer> flyCloakList;
@@ -1418,6 +1419,7 @@ public class Player implements PlayerHook, FieldFetch {
         // Create world
         World world = new World(this);
         world.addPlayer(this);
+        this.setForceLegacyDrops(GAME_OPTIONS.forceLegacyDrops);
 
         // Multiplayer setting
         this.setProperty(PlayerProperty.PROP_PLAYER_MP_SETTING_TYPE, this.getMpSetting().getNumber(), false);
