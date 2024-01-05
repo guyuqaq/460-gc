@@ -41,6 +41,9 @@ import emu.grasscutter.server.packet.send.*;
 import emu.grasscutter.server.scheduler.ServerTaskScheduler;
 import emu.grasscutter.utils.algorithms.KahnsSort;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
+
+import static emu.grasscutter.config.Configuration.GAME_OPTIONS;
+
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
@@ -535,6 +538,9 @@ public class Scene {
                                 "Can not solve monster drop: drop_id = {}, drop_tag = {}. Falling back to legacy drop system.",
                                 monster.getMetaMonster().drop_id,
                                 monster.getMetaMonster().drop_tag);
+                world.getServer().getDropSystemLegacy().callDrop(monster);
+            } else {
+                if (world.getHost().isForceLegacyDrops() == false) return;
                 world.getServer().getDropSystemLegacy().callDrop(monster);
             }
         }

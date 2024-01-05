@@ -35,9 +35,10 @@ public class ConfigContainer {
      *              HTTP server should start immediately.
      * Version 13 - 'game.useUniquePacketKey' was added to control whether the
      *              encryption key used for packets is a constant or randomly generated.
+     * Version 14 - 'forceLegacyDrops' was added to force legacy drop system to be used
      */
     private static int version() {
-        return 13;
+        return 14;
     }
 
     /**
@@ -276,6 +277,7 @@ public class ConfigContainer {
         public boolean energyUsage = true;
         public boolean fishhookTeleport = true;
         public boolean trialCostumes = false;
+        public boolean forceLegacyDrops = true;
 
         @SerializedName(value = "questing", alternate = "questOptions")
         public Questing questing = new Questing();
