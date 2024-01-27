@@ -581,8 +581,7 @@ public class Player implements PlayerHook, FieldFetch {
         this.setOrFetch(PlayerProperty.PROP_IS_TRANSFERABLE, 1);
         this.setOrFetch(PlayerProperty.PROP_MAX_STAMINA,
             withQuesting ? 10000 : 24000);
-        this.setOrFetch(PlayerProperty.PROP_DIVE_MAX_STAMINA,
-                withQuesting ? 10000 : 0);
+        this.setOrFetch(PlayerProperty.PROP_DIVE_MAX_STAMINA, 10000);
         this.setOrFetch(PlayerProperty.PROP_PLAYER_RESIN, 160);
 
         // The player's current stamina is always their max stamina.
