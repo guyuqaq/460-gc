@@ -8,6 +8,7 @@ import emu.grasscutter.data.excels.GadgetData;
 import emu.grasscutter.game.props.*;
 import java.util.*;
 import lombok.Getter;
+import lombok.Setter;
 
 @ResourceType(name = "MonsterExcelConfigData.json", loadPriority = LoadPriority.LOW)
 @Getter
@@ -70,6 +71,7 @@ public class MonsterData extends GameResource {
     private int weaponId;
     private MonsterDescribeData describeData;
 
+    @Setter @Getter
     private int specialNameId; // will only be set if describe data is available
 
     @Override
