@@ -131,108 +131,6 @@ public final class VehicleInteractRspOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private VehicleInteractRsp(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder subBuilder = null;
-              if (jGOGBMEKOPP_ != null) {
-                subBuilder = jGOGBMEKOPP_.toBuilder();
-              }
-              jGOGBMEKOPP_ = input.readMessage(emu.grasscutter.net.proto.VectorOuterClass.Vector.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(jGOGBMEKOPP_);
-                jGOGBMEKOPP_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 34: {
-              emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder subBuilder = null;
-              if (kKDFCJENDNI_ != null) {
-                subBuilder = kKDFCJENDNI_.toBuilder();
-              }
-              kKDFCJENDNI_ = input.readMessage(emu.grasscutter.net.proto.VectorOuterClass.Vector.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(kKDFCJENDNI_);
-                kKDFCJENDNI_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 40: {
-
-              entityId_ = input.readUInt32();
-              break;
-            }
-            case 48: {
-
-              retcode_ = input.readInt32();
-              break;
-            }
-            case 56: {
-              int rawValue = input.readEnum();
-
-              interactType_ = rawValue;
-              break;
-            }
-            case 80: {
-
-              cJIMMADJKHD_ = input.readUInt32();
-              break;
-            }
-            case 104: {
-
-              gadgetId_ = input.readUInt32();
-              break;
-            }
-            case 114: {
-              emu.grasscutter.net.proto.VehicleMemberOuterClass.VehicleMember.Builder subBuilder = null;
-              if (member_ != null) {
-                subBuilder = member_.toBuilder();
-              }
-              member_ = input.readMessage(emu.grasscutter.net.proto.VehicleMemberOuterClass.VehicleMember.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(member_);
-                member_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.VehicleInteractRspOuterClass.internal_static_VehicleInteractRsp_descriptor;
@@ -425,7 +323,7 @@ public final class VehicleInteractRspOuterClass {
       if (member_ != null) {
         output.writeMessage(14, getMember());
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -466,7 +364,7 @@ public final class VehicleInteractRspOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(14, getMember());
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -505,7 +403,7 @@ public final class VehicleInteractRspOuterClass {
       }
       if (getCJIMMADJKHD()
           != other.getCJIMMADJKHD()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -538,7 +436,7 @@ public final class VehicleInteractRspOuterClass {
       }
       hash = (37 * hash) + CJIMMADJKHD_FIELD_NUMBER;
       hash = (53 * hash) + getCJIMMADJKHD();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -660,18 +558,13 @@ public final class VehicleInteractRspOuterClass {
 
       // Construct using emu.grasscutter.net.proto.VehicleInteractRspOuterClass.VehicleInteractRsp.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -822,7 +715,7 @@ public final class VehicleInteractRspOuterClass {
         if (other.getCJIMMADJKHD() != 0) {
           setCJIMMADJKHD(other.getCJIMMADJKHD());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -837,17 +730,76 @@ public final class VehicleInteractRspOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.VehicleInteractRspOuterClass.VehicleInteractRsp parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getJGOGBMEKOPPFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 10
+              case 34: {
+                input.readMessage(
+                    getKKDFCJENDNIFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 34
+              case 40: {
+                entityId_ = input.readUInt32();
+
+                break;
+              } // case 40
+              case 48: {
+                retcode_ = input.readInt32();
+
+                break;
+              } // case 48
+              case 56: {
+                interactType_ = input.readEnum();
+
+                break;
+              } // case 56
+              case 80: {
+                cJIMMADJKHD_ = input.readUInt32();
+
+                break;
+              } // case 80
+              case 104: {
+                gadgetId_ = input.readUInt32();
+
+                break;
+              } // case 104
+              case 114: {
+                input.readMessage(
+                    getMemberFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 114
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.VehicleInteractRspOuterClass.VehicleInteractRsp) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -1418,7 +1370,18 @@ public final class VehicleInteractRspOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new VehicleInteractRsp(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

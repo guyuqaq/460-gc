@@ -297,272 +297,6 @@ public final class VintageMarketInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private VintageMarketInfo(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-
-              storeRound_ = input.readUInt32();
-              break;
-            }
-            case 16: {
-
-              iBDPMPBMDOJ_ = input.readBool();
-              break;
-            }
-            case 24: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                aAHAODOBJKM_ = newIntList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              aAHAODOBJKM_.addInt(input.readUInt32());
-              break;
-            }
-            case 26: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
-                aAHAODOBJKM_ = newIntList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                aAHAODOBJKM_.addInt(input.readUInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            case 34: {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                bargainInfoMap_ = com.google.protobuf.MapField.newMapField(
-                    BargainInfoMapDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000002;
-              }
-              com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Boolean>
-              bargainInfoMap__ = input.readMessage(
-                  BargainInfoMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              bargainInfoMap_.getMutableMap().put(
-                  bargainInfoMap__.getKey(), bargainInfoMap__.getValue());
-              break;
-            }
-            case 40: {
-
-              pJDGIHDIPFP_ = input.readBool();
-              break;
-            }
-            case 50: {
-              emu.grasscutter.net.proto.VintageMarketDealInfoOuterClass.VintageMarketDealInfo.Builder subBuilder = null;
-              if (dealInfo_ != null) {
-                subBuilder = dealInfo_.toBuilder();
-              }
-              dealInfo_ = input.readMessage(emu.grasscutter.net.proto.VintageMarketDealInfoOuterClass.VintageMarketDealInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(dealInfo_);
-                dealInfo_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 56: {
-              if (!((mutable_bitField0_ & 0x00000010) != 0)) {
-                bPGHMOFCODI_ = newIntList();
-                mutable_bitField0_ |= 0x00000010;
-              }
-              bPGHMOFCODI_.addInt(input.readUInt32());
-              break;
-            }
-            case 58: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000010) != 0) && input.getBytesUntilLimit() > 0) {
-                bPGHMOFCODI_ = newIntList();
-                mutable_bitField0_ |= 0x00000010;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                bPGHMOFCODI_.addInt(input.readUInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            case 64: {
-
-              cFFLPFMIIIG_ = input.readUInt32();
-              break;
-            }
-            case 72: {
-
-              mHBEIKFONOC_ = input.readUInt32();
-              break;
-            }
-            case 82: {
-              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
-                openStoreList_ = new java.util.ArrayList<emu.grasscutter.net.proto.VintageMarketStoreInfoOuterClass.VintageMarketStoreInfo>();
-                mutable_bitField0_ |= 0x00000008;
-              }
-              openStoreList_.add(
-                  input.readMessage(emu.grasscutter.net.proto.VintageMarketStoreInfoOuterClass.VintageMarketStoreInfo.parser(), extensionRegistry));
-              break;
-            }
-            case 88: {
-
-              gLAMFOFAGHB_ = input.readBool();
-              break;
-            }
-            case 96: {
-              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-                nNPCKHPIBEC_ = newIntList();
-                mutable_bitField0_ |= 0x00000004;
-              }
-              nNPCKHPIBEC_.addInt(input.readUInt32());
-              break;
-            }
-            case 98: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000004) != 0) && input.getBytesUntilLimit() > 0) {
-                nNPCKHPIBEC_ = newIntList();
-                mutable_bitField0_ |= 0x00000004;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                nNPCKHPIBEC_.addInt(input.readUInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            case 104: {
-              if (!((mutable_bitField0_ & 0x00000020) != 0)) {
-                unlockStrategyList_ = newIntList();
-                mutable_bitField0_ |= 0x00000020;
-              }
-              unlockStrategyList_.addInt(input.readUInt32());
-              break;
-            }
-            case 106: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000020) != 0) && input.getBytesUntilLimit() > 0) {
-                unlockStrategyList_ = newIntList();
-                mutable_bitField0_ |= 0x00000020;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                unlockStrategyList_.addInt(input.readUInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            case 112: {
-
-              cEFFFAKMCDE_ = input.readBool();
-              break;
-            }
-            case 120: {
-
-              fELLANIIDOF_ = input.readBool();
-              break;
-            }
-            case 664: {
-
-              aANHIOBNPKF_ = input.readBool();
-              break;
-            }
-            case 1256: {
-
-              jNBINOIMACB_ = input.readUInt32();
-              break;
-            }
-            case 8904: {
-
-              nBHJKLCJFKH_ = input.readUInt32();
-              break;
-            }
-            case 9832: {
-
-              iIMBAGFEFPG_ = input.readBool();
-              break;
-            }
-            case 10480: {
-
-              iEPLKANKPPD_ = input.readBool();
-              break;
-            }
-            case 12000: {
-              if (!((mutable_bitField0_ & 0x00000040) != 0)) {
-                eGJLAHOIPJD_ = newIntList();
-                mutable_bitField0_ |= 0x00000040;
-              }
-              eGJLAHOIPJD_.addInt(input.readUInt32());
-              break;
-            }
-            case 12002: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000040) != 0) && input.getBytesUntilLimit() > 0) {
-                eGJLAHOIPJD_ = newIntList();
-                mutable_bitField0_ |= 0x00000040;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                eGJLAHOIPJD_.addInt(input.readUInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            case 13632: {
-
-              bJFKPOGKOMD_ = input.readUInt32();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          aAHAODOBJKM_.makeImmutable(); // C
-        }
-        if (((mutable_bitField0_ & 0x00000010) != 0)) {
-          bPGHMOFCODI_.makeImmutable(); // C
-        }
-        if (((mutable_bitField0_ & 0x00000008) != 0)) {
-          openStoreList_ = java.util.Collections.unmodifiableList(openStoreList_);
-        }
-        if (((mutable_bitField0_ & 0x00000004) != 0)) {
-          nNPCKHPIBEC_.makeImmutable(); // C
-        }
-        if (((mutable_bitField0_ & 0x00000020) != 0)) {
-          unlockStrategyList_.makeImmutable(); // C
-        }
-        if (((mutable_bitField0_ & 0x00000040) != 0)) {
-          eGJLAHOIPJD_.makeImmutable(); // C
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.VintageMarketInfoOuterClass.internal_static_VintageMarketInfo_descriptor;
@@ -1133,7 +867,7 @@ public final class VintageMarketInfoOuterClass {
       if (bJFKPOGKOMD_ != 0) {
         output.writeUInt32(1704, bJFKPOGKOMD_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -1286,7 +1020,7 @@ public final class VintageMarketInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(1704, bJFKPOGKOMD_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -1348,7 +1082,7 @@ public final class VintageMarketInfoOuterClass {
           .equals(other.getEGJLAHOIPJDList())) return false;
       if (getAANHIOBNPKF()
           != other.getAANHIOBNPKF()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -1427,7 +1161,7 @@ public final class VintageMarketInfoOuterClass {
       hash = (37 * hash) + AANHIOBNPKF_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getAANHIOBNPKF());
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -1570,19 +1304,13 @@ public final class VintageMarketInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.VintageMarketInfoOuterClass.VintageMarketInfo.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getOpenStoreListFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1602,10 +1330,11 @@ public final class VintageMarketInfoOuterClass {
         bitField0_ = (bitField0_ & ~0x00000004);
         if (openStoreListBuilder_ == null) {
           openStoreList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
         } else {
+          openStoreList_ = null;
           openStoreListBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000008);
         bPGHMOFCODI_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000010);
         iEPLKANKPPD_ = false;
@@ -1891,7 +1620,7 @@ public final class VintageMarketInfoOuterClass {
         if (other.getAANHIOBNPKF() != false) {
           setAANHIOBNPKF(other.getAANHIOBNPKF());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -1906,17 +1635,208 @@ public final class VintageMarketInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.VintageMarketInfoOuterClass.VintageMarketInfo parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                storeRound_ = input.readUInt32();
+
+                break;
+              } // case 8
+              case 16: {
+                iBDPMPBMDOJ_ = input.readBool();
+
+                break;
+              } // case 16
+              case 24: {
+                int v = input.readUInt32();
+                ensureAAHAODOBJKMIsMutable();
+                aAHAODOBJKM_.addInt(v);
+                break;
+              } // case 24
+              case 26: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureAAHAODOBJKMIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  aAHAODOBJKM_.addInt(input.readUInt32());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 26
+              case 34: {
+                com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Boolean>
+                bargainInfoMap__ = input.readMessage(
+                    BargainInfoMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutableBargainInfoMap().getMutableMap().put(
+                    bargainInfoMap__.getKey(), bargainInfoMap__.getValue());
+                break;
+              } // case 34
+              case 40: {
+                pJDGIHDIPFP_ = input.readBool();
+
+                break;
+              } // case 40
+              case 50: {
+                input.readMessage(
+                    getDealInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 50
+              case 56: {
+                int v = input.readUInt32();
+                ensureBPGHMOFCODIIsMutable();
+                bPGHMOFCODI_.addInt(v);
+                break;
+              } // case 56
+              case 58: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureBPGHMOFCODIIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  bPGHMOFCODI_.addInt(input.readUInt32());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 58
+              case 64: {
+                cFFLPFMIIIG_ = input.readUInt32();
+
+                break;
+              } // case 64
+              case 72: {
+                mHBEIKFONOC_ = input.readUInt32();
+
+                break;
+              } // case 72
+              case 82: {
+                emu.grasscutter.net.proto.VintageMarketStoreInfoOuterClass.VintageMarketStoreInfo m =
+                    input.readMessage(
+                        emu.grasscutter.net.proto.VintageMarketStoreInfoOuterClass.VintageMarketStoreInfo.parser(),
+                        extensionRegistry);
+                if (openStoreListBuilder_ == null) {
+                  ensureOpenStoreListIsMutable();
+                  openStoreList_.add(m);
+                } else {
+                  openStoreListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 82
+              case 88: {
+                gLAMFOFAGHB_ = input.readBool();
+
+                break;
+              } // case 88
+              case 96: {
+                int v = input.readUInt32();
+                ensureNNPCKHPIBECIsMutable();
+                nNPCKHPIBEC_.addInt(v);
+                break;
+              } // case 96
+              case 98: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureNNPCKHPIBECIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  nNPCKHPIBEC_.addInt(input.readUInt32());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 98
+              case 104: {
+                int v = input.readUInt32();
+                ensureUnlockStrategyListIsMutable();
+                unlockStrategyList_.addInt(v);
+                break;
+              } // case 104
+              case 106: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureUnlockStrategyListIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  unlockStrategyList_.addInt(input.readUInt32());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 106
+              case 112: {
+                cEFFFAKMCDE_ = input.readBool();
+
+                break;
+              } // case 112
+              case 120: {
+                fELLANIIDOF_ = input.readBool();
+
+                break;
+              } // case 120
+              case 664: {
+                aANHIOBNPKF_ = input.readBool();
+
+                break;
+              } // case 664
+              case 1256: {
+                jNBINOIMACB_ = input.readUInt32();
+
+                break;
+              } // case 1256
+              case 8904: {
+                nBHJKLCJFKH_ = input.readUInt32();
+
+                break;
+              } // case 8904
+              case 9832: {
+                iIMBAGFEFPG_ = input.readBool();
+
+                break;
+              } // case 9832
+              case 10480: {
+                iEPLKANKPPD_ = input.readBool();
+
+                break;
+              } // case 10480
+              case 12000: {
+                int v = input.readUInt32();
+                ensureEGJLAHOIPJDIsMutable();
+                eGJLAHOIPJD_.addInt(v);
+                break;
+              } // case 12000
+              case 12002: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureEGJLAHOIPJDIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  eGJLAHOIPJD_.addInt(input.readUInt32());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 12002
+              case 13632: {
+                bJFKPOGKOMD_ = input.readUInt32();
+
+                break;
+              } // case 13632
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.VintageMarketInfoOuterClass.VintageMarketInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -3269,7 +3189,18 @@ public final class VintageMarketInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new VintageMarketInfo(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

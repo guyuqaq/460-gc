@@ -216,184 +216,6 @@ public final class PlayerEnterSceneNotifyOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private PlayerEnterSceneNotify(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-
-              targetUid_ = input.readUInt32();
-              break;
-            }
-            case 24: {
-
-              isSkipUi_ = input.readBool();
-              break;
-            }
-            case 32: {
-
-              worldLevel_ = input.readUInt32();
-              break;
-            }
-            case 40: {
-
-              sceneBeginTime_ = input.readUInt64();
-              break;
-            }
-            case 48: {
-              int rawValue = input.readEnum();
-
-              type_ = rawValue;
-              break;
-            }
-            case 56: {
-
-              enterSceneToken_ = input.readUInt32();
-              break;
-            }
-            case 72: {
-
-              prevSceneId_ = input.readUInt32();
-              break;
-            }
-            case 80: {
-
-              sceneId_ = input.readUInt32();
-              break;
-            }
-            case 88: {
-
-              dungeonId_ = input.readUInt32();
-              break;
-            }
-            case 98: {
-              emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder subBuilder = null;
-              if (prevPos_ != null) {
-                subBuilder = prevPos_.toBuilder();
-              }
-              prevPos_ = input.readMessage(emu.grasscutter.net.proto.VectorOuterClass.Vector.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(prevPos_);
-                prevPos_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 104: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                sceneTagIdList_ = newIntList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              sceneTagIdList_.addInt(input.readUInt32());
-              break;
-            }
-            case 106: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
-                sceneTagIdList_ = newIntList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                sceneTagIdList_.addInt(input.readUInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            case 114: {
-              emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder subBuilder = null;
-              if (pos_ != null) {
-                subBuilder = pos_.toBuilder();
-              }
-              pos_ = input.readMessage(emu.grasscutter.net.proto.VectorOuterClass.Vector.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(pos_);
-                pos_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 1312: {
-
-              isFirstLoginEnterScene_ = input.readBool();
-              break;
-            }
-            case 5360: {
-
-              enterReason_ = input.readUInt32();
-              break;
-            }
-            case 7178: {
-              emu.grasscutter.net.proto.MapLayerInfoOuterClass.MapLayerInfo.Builder subBuilder = null;
-              if (mapLayerInfo_ != null) {
-                subBuilder = mapLayerInfo_.toBuilder();
-              }
-              mapLayerInfo_ = input.readMessage(emu.grasscutter.net.proto.MapLayerInfoOuterClass.MapLayerInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(mapLayerInfo_);
-                mapLayerInfo_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 10554: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              sceneTransaction_ = s;
-              break;
-            }
-            case 10616: {
-
-              worldType_ = input.readUInt32();
-              break;
-            }
-            case 13984: {
-
-              createPlayerUid_ = input.readUInt32();
-              break;
-            }
-            case 14560: {
-
-              lAJGLCIFKCP_ = input.readUInt32();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          sceneTagIdList_.makeImmutable(); // C
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.PlayerEnterSceneNotifyOuterClass.internal_static_PlayerEnterSceneNotify_descriptor;
@@ -789,7 +611,7 @@ public final class PlayerEnterSceneNotifyOuterClass {
       if (lAJGLCIFKCP_ != 0) {
         output.writeUInt32(1820, lAJGLCIFKCP_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -883,7 +705,7 @@ public final class PlayerEnterSceneNotifyOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(1820, lAJGLCIFKCP_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -944,7 +766,7 @@ public final class PlayerEnterSceneNotifyOuterClass {
           != other.getSceneId()) return false;
       if (getCreatePlayerUid()
           != other.getCreatePlayerUid()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -1004,7 +826,7 @@ public final class PlayerEnterSceneNotifyOuterClass {
       hash = (53 * hash) + getSceneId();
       hash = (37 * hash) + CREATE_PLAYER_UID_FIELD_NUMBER;
       hash = (53 * hash) + getCreatePlayerUid();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -1126,18 +948,13 @@ public final class PlayerEnterSceneNotifyOuterClass {
 
       // Construct using emu.grasscutter.net.proto.PlayerEnterSceneNotifyOuterClass.PlayerEnterSceneNotify.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1367,7 +1184,7 @@ public final class PlayerEnterSceneNotifyOuterClass {
         if (other.getCreatePlayerUid() != 0) {
           setCreatePlayerUid(other.getCreatePlayerUid());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -1382,17 +1199,142 @@ public final class PlayerEnterSceneNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.PlayerEnterSceneNotifyOuterClass.PlayerEnterSceneNotify parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                targetUid_ = input.readUInt32();
+
+                break;
+              } // case 8
+              case 24: {
+                isSkipUi_ = input.readBool();
+
+                break;
+              } // case 24
+              case 32: {
+                worldLevel_ = input.readUInt32();
+
+                break;
+              } // case 32
+              case 40: {
+                sceneBeginTime_ = input.readUInt64();
+
+                break;
+              } // case 40
+              case 48: {
+                type_ = input.readEnum();
+
+                break;
+              } // case 48
+              case 56: {
+                enterSceneToken_ = input.readUInt32();
+
+                break;
+              } // case 56
+              case 72: {
+                prevSceneId_ = input.readUInt32();
+
+                break;
+              } // case 72
+              case 80: {
+                sceneId_ = input.readUInt32();
+
+                break;
+              } // case 80
+              case 88: {
+                dungeonId_ = input.readUInt32();
+
+                break;
+              } // case 88
+              case 98: {
+                input.readMessage(
+                    getPrevPosFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 98
+              case 104: {
+                int v = input.readUInt32();
+                ensureSceneTagIdListIsMutable();
+                sceneTagIdList_.addInt(v);
+                break;
+              } // case 104
+              case 106: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureSceneTagIdListIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  sceneTagIdList_.addInt(input.readUInt32());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 106
+              case 114: {
+                input.readMessage(
+                    getPosFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 114
+              case 1312: {
+                isFirstLoginEnterScene_ = input.readBool();
+
+                break;
+              } // case 1312
+              case 5360: {
+                enterReason_ = input.readUInt32();
+
+                break;
+              } // case 5360
+              case 7178: {
+                input.readMessage(
+                    getMapLayerInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 7178
+              case 10554: {
+                sceneTransaction_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10554
+              case 10616: {
+                worldType_ = input.readUInt32();
+
+                break;
+              } // case 10616
+              case 13984: {
+                createPlayerUid_ = input.readUInt32();
+
+                break;
+              } // case 13984
+              case 14560: {
+                lAJGLCIFKCP_ = input.readUInt32();
+
+                break;
+              } // case 14560
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.PlayerEnterSceneNotifyOuterClass.PlayerEnterSceneNotify) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -2398,7 +2340,18 @@ public final class PlayerEnterSceneNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new PlayerEnterSceneNotify(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

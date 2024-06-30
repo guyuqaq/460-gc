@@ -123,88 +123,6 @@ public final class ExpeditionActivityDetailInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private ExpeditionActivityDetailInfo(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-
-              contentCloseTime_ = input.readUInt32();
-              break;
-            }
-            case 16: {
-
-              oLDDLIEHOBB_ = input.readUInt32();
-              break;
-            }
-            case 34: {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                challengeInfoList_ = new java.util.ArrayList<emu.grasscutter.net.proto.ExpeditionChallengeInfoOuterClass.ExpeditionChallengeInfo>();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              challengeInfoList_.add(
-                  input.readMessage(emu.grasscutter.net.proto.ExpeditionChallengeInfoOuterClass.ExpeditionChallengeInfo.parser(), extensionRegistry));
-              break;
-            }
-            case 42: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                pathInfoList_ = new java.util.ArrayList<emu.grasscutter.net.proto.ExpeditionPathInfoOuterClass.ExpeditionPathInfo>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              pathInfoList_.add(
-                  input.readMessage(emu.grasscutter.net.proto.ExpeditionPathInfoOuterClass.ExpeditionPathInfo.parser(), extensionRegistry));
-              break;
-            }
-            case 72: {
-
-              hCDDLBJBIOH_ = input.readUInt32();
-              break;
-            }
-            case 96: {
-
-              isContentClosed_ = input.readBool();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000002) != 0)) {
-          challengeInfoList_ = java.util.Collections.unmodifiableList(challengeInfoList_);
-        }
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          pathInfoList_ = java.util.Collections.unmodifiableList(pathInfoList_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.ExpeditionActivityDetailInfoOuterClass.internal_static_ExpeditionActivityDetailInfo_descriptor;
@@ -374,7 +292,7 @@ public final class ExpeditionActivityDetailInfoOuterClass {
       if (isContentClosed_ != false) {
         output.writeBool(12, isContentClosed_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -407,7 +325,7 @@ public final class ExpeditionActivityDetailInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(12, isContentClosed_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -434,7 +352,7 @@ public final class ExpeditionActivityDetailInfoOuterClass {
           != other.getHCDDLBJBIOH()) return false;
       if (getOLDDLIEHOBB()
           != other.getOLDDLIEHOBB()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -462,7 +380,7 @@ public final class ExpeditionActivityDetailInfoOuterClass {
       hash = (53 * hash) + getHCDDLBJBIOH();
       hash = (37 * hash) + OLDDLIEHOBB_FIELD_NUMBER;
       hash = (53 * hash) + getOLDDLIEHOBB();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -583,20 +501,13 @@ public final class ExpeditionActivityDetailInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.ExpeditionActivityDetailInfoOuterClass.ExpeditionActivityDetailInfo.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPathInfoListFieldBuilder();
-          getChallengeInfoListFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -607,16 +518,18 @@ public final class ExpeditionActivityDetailInfoOuterClass {
 
         if (pathInfoListBuilder_ == null) {
           pathInfoList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          pathInfoList_ = null;
           pathInfoListBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000001);
         if (challengeInfoListBuilder_ == null) {
           challengeInfoList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
+          challengeInfoList_ = null;
           challengeInfoListBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000002);
         hCDDLBJBIOH_ = 0;
 
         oLDDLIEHOBB_ = 0;
@@ -782,7 +695,7 @@ public final class ExpeditionActivityDetailInfoOuterClass {
         if (other.getOLDDLIEHOBB() != 0) {
           setOLDDLIEHOBB(other.getOLDDLIEHOBB());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -797,17 +710,76 @@ public final class ExpeditionActivityDetailInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.ExpeditionActivityDetailInfoOuterClass.ExpeditionActivityDetailInfo parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                contentCloseTime_ = input.readUInt32();
+
+                break;
+              } // case 8
+              case 16: {
+                oLDDLIEHOBB_ = input.readUInt32();
+
+                break;
+              } // case 16
+              case 34: {
+                emu.grasscutter.net.proto.ExpeditionChallengeInfoOuterClass.ExpeditionChallengeInfo m =
+                    input.readMessage(
+                        emu.grasscutter.net.proto.ExpeditionChallengeInfoOuterClass.ExpeditionChallengeInfo.parser(),
+                        extensionRegistry);
+                if (challengeInfoListBuilder_ == null) {
+                  ensureChallengeInfoListIsMutable();
+                  challengeInfoList_.add(m);
+                } else {
+                  challengeInfoListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 34
+              case 42: {
+                emu.grasscutter.net.proto.ExpeditionPathInfoOuterClass.ExpeditionPathInfo m =
+                    input.readMessage(
+                        emu.grasscutter.net.proto.ExpeditionPathInfoOuterClass.ExpeditionPathInfo.parser(),
+                        extensionRegistry);
+                if (pathInfoListBuilder_ == null) {
+                  ensurePathInfoListIsMutable();
+                  pathInfoList_.add(m);
+                } else {
+                  pathInfoListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 42
+              case 72: {
+                hCDDLBJBIOH_ = input.readUInt32();
+
+                break;
+              } // case 72
+              case 96: {
+                isContentClosed_ = input.readBool();
+
+                break;
+              } // case 96
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.ExpeditionActivityDetailInfoOuterClass.ExpeditionActivityDetailInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -1448,7 +1420,18 @@ public final class ExpeditionActivityDetailInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new ExpeditionActivityDetailInfo(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

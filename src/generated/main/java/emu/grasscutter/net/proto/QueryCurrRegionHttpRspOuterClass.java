@@ -149,116 +149,6 @@ public final class QueryCurrRegionHttpRspOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private QueryCurrRegionHttpRsp(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-
-              retcode_ = input.readInt32();
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              msg_ = s;
-              break;
-            }
-            case 26: {
-              emu.grasscutter.net.proto.RegionInfoOuterClass.RegionInfo.Builder subBuilder = null;
-              if (regionInfo_ != null) {
-                subBuilder = regionInfo_.toBuilder();
-              }
-              regionInfo_ = input.readMessage(emu.grasscutter.net.proto.RegionInfoOuterClass.RegionInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(regionInfo_);
-                regionInfo_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 34: {
-              emu.grasscutter.net.proto.ForceUpdateInfoOuterClass.ForceUpdateInfo.Builder subBuilder = null;
-              if (detailCase_ == 4) {
-                subBuilder = ((emu.grasscutter.net.proto.ForceUpdateInfoOuterClass.ForceUpdateInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.ForceUpdateInfoOuterClass.ForceUpdateInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.ForceUpdateInfoOuterClass.ForceUpdateInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 4;
-              break;
-            }
-            case 42: {
-              emu.grasscutter.net.proto.StopServerInfoOuterClass.StopServerInfo.Builder subBuilder = null;
-              if (detailCase_ == 5) {
-                subBuilder = ((emu.grasscutter.net.proto.StopServerInfoOuterClass.StopServerInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.StopServerInfoOuterClass.StopServerInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.StopServerInfoOuterClass.StopServerInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 5;
-              break;
-            }
-            case 90: {
-
-              clientSecretKey_ = input.readBytes();
-              break;
-            }
-            case 98: {
-
-              regionCustomConfigEncrypted_ = input.readBytes();
-              break;
-            }
-            case 106: {
-
-              clientRegionCustomConfigEncrypted_ = input.readBytes();
-              break;
-            }
-            case 114: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              lDOHCJJALDK_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.QueryCurrRegionHttpRspOuterClass.internal_static_QueryCurrRegionHttpRsp_descriptor;
@@ -562,7 +452,7 @@ public final class QueryCurrRegionHttpRspOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lDOHCJJALDK_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 14, lDOHCJJALDK_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -605,7 +495,7 @@ public final class QueryCurrRegionHttpRspOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lDOHCJJALDK_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, lDOHCJJALDK_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -650,7 +540,7 @@ public final class QueryCurrRegionHttpRspOuterClass {
         case 0:
         default:
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -689,7 +579,7 @@ public final class QueryCurrRegionHttpRspOuterClass {
         case 0:
         default:
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -810,18 +700,13 @@ public final class QueryCurrRegionHttpRspOuterClass {
 
       // Construct using emu.grasscutter.net.proto.QueryCurrRegionHttpRspOuterClass.QueryCurrRegionHttpRsp.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -835,6 +720,12 @@ public final class QueryCurrRegionHttpRspOuterClass {
         } else {
           regionInfo_ = null;
           regionInfoBuilder_ = null;
+        }
+        if (forceUpdateBuilder_ != null) {
+          forceUpdateBuilder_.clear();
+        }
+        if (stopServerBuilder_ != null) {
+          stopServerBuilder_.clear();
         }
         clientSecretKey_ = com.google.protobuf.ByteString.EMPTY;
 
@@ -982,7 +873,7 @@ public final class QueryCurrRegionHttpRspOuterClass {
             break;
           }
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -997,17 +888,81 @@ public final class QueryCurrRegionHttpRspOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.QueryCurrRegionHttpRspOuterClass.QueryCurrRegionHttpRsp parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                retcode_ = input.readInt32();
+
+                break;
+              } // case 8
+              case 18: {
+                msg_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getRegionInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getForceUpdateFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 4;
+                break;
+              } // case 34
+              case 42: {
+                input.readMessage(
+                    getStopServerFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 5;
+                break;
+              } // case 42
+              case 90: {
+                clientSecretKey_ = input.readBytes();
+
+                break;
+              } // case 90
+              case 98: {
+                regionCustomConfigEncrypted_ = input.readBytes();
+
+                break;
+              } // case 98
+              case 106: {
+                clientRegionCustomConfigEncrypted_ = input.readBytes();
+
+                break;
+              } // case 106
+              case 114: {
+                lDOHCJJALDK_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 114
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.QueryCurrRegionHttpRspOuterClass.QueryCurrRegionHttpRsp) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int detailCase_ = 0;
@@ -1744,7 +1699,18 @@ public final class QueryCurrRegionHttpRspOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new QueryCurrRegionHttpRsp(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

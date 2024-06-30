@@ -140,85 +140,6 @@ public final class TrackingIOInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private TrackingIOInfo(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              mDBEAHIPNIC_ = s;
-              break;
-            }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              dPKNOBIHNPI_ = s;
-              break;
-            }
-            case 50: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              jFEEMKEKMKN_ = s;
-              break;
-            }
-            case 58: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              fCPKNHGBLCF_ = s;
-              break;
-            }
-            case 90: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              lCNCLEJILOF_ = s;
-              break;
-            }
-            case 98: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              gIAEKBEHJIC_ = s;
-              break;
-            }
-            case 122: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              oHMDCAEDJPG_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.TrackingIOInfoOuterClass.internal_static_TrackingIOInfo_descriptor;
@@ -533,7 +454,7 @@ public final class TrackingIOInfoOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(oHMDCAEDJPG_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 15, oHMDCAEDJPG_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -563,7 +484,7 @@ public final class TrackingIOInfoOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(oHMDCAEDJPG_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, oHMDCAEDJPG_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -592,7 +513,7 @@ public final class TrackingIOInfoOuterClass {
           .equals(other.getLCNCLEJILOF())) return false;
       if (!getGIAEKBEHJIC()
           .equals(other.getGIAEKBEHJIC())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -617,7 +538,7 @@ public final class TrackingIOInfoOuterClass {
       hash = (53 * hash) + getLCNCLEJILOF().hashCode();
       hash = (37 * hash) + GIAEKBEHJIC_FIELD_NUMBER;
       hash = (53 * hash) + getGIAEKBEHJIC().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -738,18 +659,13 @@ public final class TrackingIOInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.TrackingIOInfoOuterClass.TrackingIOInfo.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -877,7 +793,7 @@ public final class TrackingIOInfoOuterClass {
           gIAEKBEHJIC_ = other.gIAEKBEHJIC_;
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -892,17 +808,65 @@ public final class TrackingIOInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.TrackingIOInfoOuterClass.TrackingIOInfo parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                mDBEAHIPNIC_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+              case 34: {
+                dPKNOBIHNPI_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 34
+              case 50: {
+                jFEEMKEKMKN_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 50
+              case 58: {
+                fCPKNHGBLCF_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 58
+              case 90: {
+                lCNCLEJILOF_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 90
+              case 98: {
+                gIAEKBEHJIC_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 98
+              case 122: {
+                oHMDCAEDJPG_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 122
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.TrackingIOInfoOuterClass.TrackingIOInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -1470,7 +1434,18 @@ public final class TrackingIOInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new TrackingIOInfo(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

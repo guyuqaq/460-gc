@@ -139,121 +139,6 @@ public final class AkaFesDetailInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private AkaFesDetailInfo(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              emu.grasscutter.net.proto.MEJPJACBPIGOuterClass.MEJPJACBPIG.Builder subBuilder = null;
-              if (potionInfo_ != null) {
-                subBuilder = potionInfo_.toBuilder();
-              }
-              potionInfo_ = input.readMessage(emu.grasscutter.net.proto.MEJPJACBPIGOuterClass.MEJPJACBPIG.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(potionInfo_);
-                potionInfo_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 42: {
-              emu.grasscutter.net.proto.FHLNPLFEFFOOuterClass.FHLNPLFEFFO.Builder subBuilder = null;
-              if (nJALPDCPMOL_ != null) {
-                subBuilder = nJALPDCPMOL_.toBuilder();
-              }
-              nJALPDCPMOL_ = input.readMessage(emu.grasscutter.net.proto.FHLNPLFEFFOOuterClass.FHLNPLFEFFO.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(nJALPDCPMOL_);
-                nJALPDCPMOL_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 82: {
-              emu.grasscutter.net.proto.BCIBGJPGJNHOuterClass.BCIBGJPGJNH.Builder subBuilder = null;
-              if (kIJKCBOBFIM_ != null) {
-                subBuilder = kIJKCBOBFIM_.toBuilder();
-              }
-              kIJKCBOBFIM_ = input.readMessage(emu.grasscutter.net.proto.BCIBGJPGJNHOuterClass.BCIBGJPGJNH.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(kIJKCBOBFIM_);
-                kIJKCBOBFIM_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 90: {
-              emu.grasscutter.net.proto.ONGCBHPILNPOuterClass.ONGCBHPILNP.Builder subBuilder = null;
-              if (ePBBHCIHJOB_ != null) {
-                subBuilder = ePBBHCIHJOB_.toBuilder();
-              }
-              ePBBHCIHJOB_ = input.readMessage(emu.grasscutter.net.proto.ONGCBHPILNPOuterClass.ONGCBHPILNP.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(ePBBHCIHJOB_);
-                ePBBHCIHJOB_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 98: {
-              emu.grasscutter.net.proto.IHLKALJJCFJOuterClass.IHLKALJJCFJ.Builder subBuilder = null;
-              if (iEKAJGGJEFD_ != null) {
-                subBuilder = iEKAJGGJEFD_.toBuilder();
-              }
-              iEKAJGGJEFD_ = input.readMessage(emu.grasscutter.net.proto.IHLKALJJCFJOuterClass.IHLKALJJCFJ.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(iEKAJGGJEFD_);
-                iEKAJGGJEFD_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 106: {
-              emu.grasscutter.net.proto.GLCFFFILFGKOuterClass.GLCFFFILFGK.Builder subBuilder = null;
-              if (jFHPDMPHDKG_ != null) {
-                subBuilder = jFHPDMPHDKG_.toBuilder();
-              }
-              jFHPDMPHDKG_ = input.readMessage(emu.grasscutter.net.proto.GLCFFFILFGKOuterClass.GLCFFFILFGK.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(jFHPDMPHDKG_);
-                jFHPDMPHDKG_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.AkaFesDetailInfoOuterClass.internal_static_AkaFesDetailInfo_descriptor;
@@ -455,7 +340,7 @@ public final class AkaFesDetailInfoOuterClass {
       if (jFHPDMPHDKG_ != null) {
         output.writeMessage(13, getJFHPDMPHDKG());
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -488,7 +373,7 @@ public final class AkaFesDetailInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(13, getJFHPDMPHDKG());
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -533,7 +418,7 @@ public final class AkaFesDetailInfoOuterClass {
         if (!getJFHPDMPHDKG()
             .equals(other.getJFHPDMPHDKG())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -568,7 +453,7 @@ public final class AkaFesDetailInfoOuterClass {
         hash = (37 * hash) + JFHPDMPHDKG_FIELD_NUMBER;
         hash = (53 * hash) + getJFHPDMPHDKG().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -689,18 +574,13 @@ public final class AkaFesDetailInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.AkaFesDetailInfoOuterClass.AkaFesDetailInfo.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -863,7 +743,7 @@ public final class AkaFesDetailInfoOuterClass {
         if (other.hasJFHPDMPHDKG()) {
           mergeJFHPDMPHDKG(other.getJFHPDMPHDKG());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -878,17 +758,72 @@ public final class AkaFesDetailInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.AkaFesDetailInfoOuterClass.AkaFesDetailInfo parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getPotionInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 10
+              case 42: {
+                input.readMessage(
+                    getNJALPDCPMOLFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 42
+              case 82: {
+                input.readMessage(
+                    getKIJKCBOBFIMFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 82
+              case 90: {
+                input.readMessage(
+                    getEPBBHCIHJOBFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 90
+              case 98: {
+                input.readMessage(
+                    getIEKAJGGJEFDFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 98
+              case 106: {
+                input.readMessage(
+                    getJFHPDMPHDKGFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 106
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.AkaFesDetailInfoOuterClass.AkaFesDetailInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -1638,7 +1573,18 @@ public final class AkaFesDetailInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new AkaFesDetailInfo(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

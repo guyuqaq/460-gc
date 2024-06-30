@@ -91,78 +91,6 @@ public final class EffigyDailyInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private EffigyDailyInfo(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-
-              beginTime_ = input.readUInt32();
-              break;
-            }
-            case 40: {
-
-              kDLLALBPPLE_ = input.readUInt32();
-              break;
-            }
-            case 48: {
-
-              bOJLBFLOAPN_ = input.readUInt32();
-              break;
-            }
-            case 64: {
-
-              challengeId_ = input.readUInt32();
-              break;
-            }
-            case 72: {
-
-              dayIndex_ = input.readUInt32();
-              break;
-            }
-            case 88: {
-
-              isFirstPassRewardTaken_ = input.readBool();
-              break;
-            }
-            case 120: {
-
-              challengeMaxScore_ = input.readUInt32();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.EffigyDailyInfoOuterClass.internal_static_EffigyDailyInfo_descriptor;
@@ -288,7 +216,7 @@ public final class EffigyDailyInfoOuterClass {
       if (challengeMaxScore_ != 0) {
         output.writeUInt32(15, challengeMaxScore_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -325,7 +253,7 @@ public final class EffigyDailyInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(15, challengeMaxScore_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -354,7 +282,7 @@ public final class EffigyDailyInfoOuterClass {
           != other.getIsFirstPassRewardTaken()) return false;
       if (getDayIndex()
           != other.getDayIndex()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -380,7 +308,7 @@ public final class EffigyDailyInfoOuterClass {
           getIsFirstPassRewardTaken());
       hash = (37 * hash) + DAY_INDEX_FIELD_NUMBER;
       hash = (53 * hash) + getDayIndex();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -501,18 +429,13 @@ public final class EffigyDailyInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.EffigyDailyInfoOuterClass.EffigyDailyInfo.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -633,7 +556,7 @@ public final class EffigyDailyInfoOuterClass {
         if (other.getDayIndex() != 0) {
           setDayIndex(other.getDayIndex());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -648,17 +571,65 @@ public final class EffigyDailyInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.EffigyDailyInfoOuterClass.EffigyDailyInfo parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                beginTime_ = input.readUInt32();
+
+                break;
+              } // case 8
+              case 40: {
+                kDLLALBPPLE_ = input.readUInt32();
+
+                break;
+              } // case 40
+              case 48: {
+                bOJLBFLOAPN_ = input.readUInt32();
+
+                break;
+              } // case 48
+              case 64: {
+                challengeId_ = input.readUInt32();
+
+                break;
+              } // case 64
+              case 72: {
+                dayIndex_ = input.readUInt32();
+
+                break;
+              } // case 72
+              case 88: {
+                isFirstPassRewardTaken_ = input.readBool();
+
+                break;
+              } // case 88
+              case 120: {
+                challengeMaxScore_ = input.readUInt32();
+
+                break;
+              } // case 120
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.EffigyDailyInfoOuterClass.EffigyDailyInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -911,7 +882,18 @@ public final class EffigyDailyInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new EffigyDailyInfo(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

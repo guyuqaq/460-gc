@@ -342,242 +342,6 @@ public final class GetPlayerTokenRspOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private GetPlayerTokenRsp(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-
-              extraBinData_ = input.readBytes();
-              break;
-            }
-            case 16: {
-
-              isGuest_ = input.readBool();
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              accountUid_ = s;
-              break;
-            }
-            case 32: {
-
-              retcode_ = input.readInt32();
-              break;
-            }
-            case 40: {
-
-              platformType_ = input.readUInt32();
-              break;
-            }
-            case 48: {
-
-              kCFIGJAPNIB_ = input.readUInt32();
-              break;
-            }
-            case 56: {
-
-              uid_ = input.readUInt32();
-              break;
-            }
-            case 64: {
-
-              isProficientPlayer_ = input.readBool();
-              break;
-            }
-            case 74: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              secretKey_ = s;
-              break;
-            }
-            case 80: {
-
-              blackUidEndTime_ = input.readUInt32();
-              break;
-            }
-            case 90: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              token_ = s;
-              break;
-            }
-            case 98: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              msg_ = s;
-              break;
-            }
-            case 104: {
-
-              secretKeySeed_ = input.readUInt64();
-              break;
-            }
-            case 112: {
-
-              subChannelId_ = input.readUInt32();
-              break;
-            }
-            case 122: {
-
-              securityCmdBuffer_ = input.readBytes();
-              break;
-            }
-            case 2072: {
-
-              channelId_ = input.readUInt32();
-              break;
-            }
-            case 3154: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              sign_ = s;
-              break;
-            }
-            case 3608: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                finishCollectionIdList_ = newIntList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              finishCollectionIdList_.addInt(input.readUInt32());
-              break;
-            }
-            case 3610: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
-                finishCollectionIdList_ = newIntList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                finishCollectionIdList_.addInt(input.readUInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            case 4064: {
-
-              cloudClientIp_ = input.readUInt32();
-              break;
-            }
-            case 4138: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              serverRandKey_ = s;
-              break;
-            }
-            case 5426: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              clientVersionRandomKey_ = s;
-              break;
-            }
-            case 7002: {
-              emu.grasscutter.net.proto.StopServerInfoOuterClass.StopServerInfo.Builder subBuilder = null;
-              if (stopServer_ != null) {
-                subBuilder = stopServer_.toBuilder();
-              }
-              stopServer_ = input.readMessage(emu.grasscutter.net.proto.StopServerInfoOuterClass.StopServerInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(stopServer_);
-                stopServer_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 9928: {
-
-              regPlatform_ = input.readUInt32();
-              break;
-            }
-            case 10336: {
-
-              pELBMOHDKHJ_ = input.readBool();
-              break;
-            }
-            case 11298: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              countryCode_ = s;
-              break;
-            }
-            case 11498: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              birthday_ = s;
-              break;
-            }
-            case 12576: {
-
-              tag_ = input.readUInt32();
-              break;
-            }
-            case 12680: {
-
-              accountType_ = input.readUInt32();
-              break;
-            }
-            case 13408: {
-
-              keyId_ = input.readUInt32();
-              break;
-            }
-            case 14322: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              psnId_ = s;
-              break;
-            }
-            case 15370: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              clientIpStr_ = s;
-              break;
-            }
-            case 15696: {
-
-              iLGBPPMFHIF_ = input.readBool();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          finishCollectionIdList_.makeImmutable(); // C
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.GetPlayerTokenRspOuterClass.internal_static_GetPlayerTokenRsp_descriptor;
@@ -1387,7 +1151,7 @@ public final class GetPlayerTokenRspOuterClass {
       if (iLGBPPMFHIF_ != false) {
         output.writeBool(1962, iLGBPPMFHIF_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -1523,7 +1287,7 @@ public final class GetPlayerTokenRspOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(1962, iLGBPPMFHIF_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -1605,7 +1369,7 @@ public final class GetPlayerTokenRspOuterClass {
           .equals(other.getCountryCode())) return false;
       if (getCloudClientIp()
           != other.getCloudClientIp()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -1689,7 +1453,7 @@ public final class GetPlayerTokenRspOuterClass {
       hash = (53 * hash) + getCountryCode().hashCode();
       hash = (37 * hash) + CLOUDCLIENTIP_FIELD_NUMBER;
       hash = (53 * hash) + getCloudClientIp();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -1811,18 +1575,13 @@ public final class GetPlayerTokenRspOuterClass {
 
       // Construct using emu.grasscutter.net.proto.GetPlayerTokenRspOuterClass.GetPlayerTokenRsp.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2124,7 +1883,7 @@ public final class GetPlayerTokenRspOuterClass {
         if (other.getCloudClientIp() != 0) {
           setCloudClientIp(other.getCloudClientIp());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -2139,17 +1898,203 @@ public final class GetPlayerTokenRspOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.GetPlayerTokenRspOuterClass.GetPlayerTokenRsp parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                extraBinData_ = input.readBytes();
+
+                break;
+              } // case 10
+              case 16: {
+                isGuest_ = input.readBool();
+
+                break;
+              } // case 16
+              case 26: {
+                accountUid_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 26
+              case 32: {
+                retcode_ = input.readInt32();
+
+                break;
+              } // case 32
+              case 40: {
+                platformType_ = input.readUInt32();
+
+                break;
+              } // case 40
+              case 48: {
+                kCFIGJAPNIB_ = input.readUInt32();
+
+                break;
+              } // case 48
+              case 56: {
+                uid_ = input.readUInt32();
+
+                break;
+              } // case 56
+              case 64: {
+                isProficientPlayer_ = input.readBool();
+
+                break;
+              } // case 64
+              case 74: {
+                secretKey_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 74
+              case 80: {
+                blackUidEndTime_ = input.readUInt32();
+
+                break;
+              } // case 80
+              case 90: {
+                token_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 90
+              case 98: {
+                msg_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 98
+              case 104: {
+                secretKeySeed_ = input.readUInt64();
+
+                break;
+              } // case 104
+              case 112: {
+                subChannelId_ = input.readUInt32();
+
+                break;
+              } // case 112
+              case 122: {
+                securityCmdBuffer_ = input.readBytes();
+
+                break;
+              } // case 122
+              case 2072: {
+                channelId_ = input.readUInt32();
+
+                break;
+              } // case 2072
+              case 3154: {
+                sign_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 3154
+              case 3608: {
+                int v = input.readUInt32();
+                ensureFinishCollectionIdListIsMutable();
+                finishCollectionIdList_.addInt(v);
+                break;
+              } // case 3608
+              case 3610: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureFinishCollectionIdListIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  finishCollectionIdList_.addInt(input.readUInt32());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 3610
+              case 4064: {
+                cloudClientIp_ = input.readUInt32();
+
+                break;
+              } // case 4064
+              case 4138: {
+                serverRandKey_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 4138
+              case 5426: {
+                clientVersionRandomKey_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 5426
+              case 7002: {
+                input.readMessage(
+                    getStopServerFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 7002
+              case 9928: {
+                regPlatform_ = input.readUInt32();
+
+                break;
+              } // case 9928
+              case 10336: {
+                pELBMOHDKHJ_ = input.readBool();
+
+                break;
+              } // case 10336
+              case 11298: {
+                countryCode_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 11298
+              case 11498: {
+                birthday_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 11498
+              case 12576: {
+                tag_ = input.readUInt32();
+
+                break;
+              } // case 12576
+              case 12680: {
+                accountType_ = input.readUInt32();
+
+                break;
+              } // case 12680
+              case 13408: {
+                keyId_ = input.readUInt32();
+
+                break;
+              } // case 13408
+              case 14322: {
+                psnId_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 14322
+              case 15370: {
+                clientIpStr_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 15370
+              case 15696: {
+                iLGBPPMFHIF_ = input.readBool();
+
+                break;
+              } // case 15696
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.GetPlayerTokenRspOuterClass.GetPlayerTokenRsp) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -3815,7 +3760,18 @@ public final class GetPlayerTokenRspOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new GetPlayerTokenRsp(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

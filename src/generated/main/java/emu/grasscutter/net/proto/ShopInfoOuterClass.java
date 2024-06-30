@@ -80,61 +80,6 @@ public final class ShopInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private ShopInfo(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 26: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                cNNOGBKOAFF_ = new java.util.ArrayList<emu.grasscutter.net.proto.NEHEKBBFPIEOuterClass.NEHEKBBFPIE>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              cNNOGBKOAFF_.add(
-                  input.readMessage(emu.grasscutter.net.proto.NEHEKBBFPIEOuterClass.NEHEKBBFPIE.parser(), extensionRegistry));
-              break;
-            }
-            case 56: {
-
-              nPFNHADIONO_ = input.readUInt32();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          cNNOGBKOAFF_ = java.util.Collections.unmodifiableList(cNNOGBKOAFF_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.ShopInfoOuterClass.internal_static_ShopInfo_descriptor;
@@ -219,7 +164,7 @@ public final class ShopInfoOuterClass {
       if (nPFNHADIONO_ != 0) {
         output.writeUInt32(7, nPFNHADIONO_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -236,7 +181,7 @@ public final class ShopInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(7, nPFNHADIONO_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -255,7 +200,7 @@ public final class ShopInfoOuterClass {
           .equals(other.getCNNOGBKOAFFList())) return false;
       if (getNPFNHADIONO()
           != other.getNPFNHADIONO()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -272,7 +217,7 @@ public final class ShopInfoOuterClass {
       }
       hash = (37 * hash) + NPFNHADIONO_FIELD_NUMBER;
       hash = (53 * hash) + getNPFNHADIONO();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -393,29 +338,24 @@ public final class ShopInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.ShopInfoOuterClass.ShopInfo.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getCNNOGBKOAFFFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
         if (cNNOGBKOAFFBuilder_ == null) {
           cNNOGBKOAFF_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          cNNOGBKOAFF_ = null;
           cNNOGBKOAFFBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000001);
         nPFNHADIONO_ = 0;
 
         return this;
@@ -532,7 +472,7 @@ public final class ShopInfoOuterClass {
         if (other.getNPFNHADIONO() != 0) {
           setNPFNHADIONO(other.getNPFNHADIONO());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -547,17 +487,48 @@ public final class ShopInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.ShopInfoOuterClass.ShopInfo parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 26: {
+                emu.grasscutter.net.proto.NEHEKBBFPIEOuterClass.NEHEKBBFPIE m =
+                    input.readMessage(
+                        emu.grasscutter.net.proto.NEHEKBBFPIEOuterClass.NEHEKBBFPIE.parser(),
+                        extensionRegistry);
+                if (cNNOGBKOAFFBuilder_ == null) {
+                  ensureCNNOGBKOAFFIsMutable();
+                  cNNOGBKOAFF_.add(m);
+                } else {
+                  cNNOGBKOAFFBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              case 56: {
+                nPFNHADIONO_ = input.readUInt32();
+
+                break;
+              } // case 56
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.ShopInfoOuterClass.ShopInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -865,7 +836,18 @@ public final class ShopInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new ShopInfo(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

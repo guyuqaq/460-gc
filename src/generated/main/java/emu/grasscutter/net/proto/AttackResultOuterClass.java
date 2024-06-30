@@ -272,226 +272,6 @@ public final class AttackResultOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private AttackResult(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 21: {
-
-              damage_ = input.readFloat();
-              break;
-            }
-            case 26: {
-              emu.grasscutter.net.proto.AbilityIdentifierOuterClass.AbilityIdentifier.Builder subBuilder = null;
-              if (abilityIdentifier_ != null) {
-                subBuilder = abilityIdentifier_.toBuilder();
-              }
-              abilityIdentifier_ = input.readMessage(emu.grasscutter.net.proto.AbilityIdentifierOuterClass.AbilityIdentifier.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(abilityIdentifier_);
-                abilityIdentifier_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 34: {
-              emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder subBuilder = null;
-              if (resolvedDir_ != null) {
-                subBuilder = resolvedDir_.toBuilder();
-              }
-              resolvedDir_ = input.readMessage(emu.grasscutter.net.proto.VectorOuterClass.Vector.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(resolvedDir_);
-                resolvedDir_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 40: {
-
-              bLJNCIEFOED_ = input.readUInt32();
-              break;
-            }
-            case 50: {
-              emu.grasscutter.net.proto.AttackHitEffectResultOuterClass.AttackHitEffectResult.Builder subBuilder = null;
-              if (hitEffResult_ != null) {
-                subBuilder = hitEffResult_.toBuilder();
-              }
-              hitEffResult_ = input.readMessage(emu.grasscutter.net.proto.AttackHitEffectResultOuterClass.AttackHitEffectResult.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(hitEffResult_);
-                hitEffResult_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 56: {
-
-              bAAHKFCEBMA_ = input.readBool();
-              break;
-            }
-            case 64: {
-
-              mIKMJNBAAIJ_ = input.readUInt32();
-              break;
-            }
-            case 72: {
-
-              defenseId_ = input.readUInt32();
-              break;
-            }
-            case 80: {
-
-              elementType_ = input.readUInt32();
-              break;
-            }
-            case 90: {
-              emu.grasscutter.net.proto.HitCollisionOuterClass.HitCollision.Builder subBuilder = null;
-              if (hitCollision_ != null) {
-                subBuilder = hitCollision_.toBuilder();
-              }
-              hitCollision_ = input.readMessage(emu.grasscutter.net.proto.HitCollisionOuterClass.HitCollision.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(hitCollision_);
-                hitCollision_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 104: {
-
-              hitRetreatAngleCompat_ = input.readInt32();
-              break;
-            }
-            case 112: {
-
-              attackerId_ = input.readUInt32();
-              break;
-            }
-            case 122: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              animEventId_ = s;
-              break;
-            }
-            case 221: {
-
-              dPHDFDJJNOA_ = input.readFloat();
-              break;
-            }
-            case 656: {
-
-              eFKGDDIGOHJ_ = input.readUInt32();
-              break;
-            }
-            case 1728: {
-
-              oEEFAHMCLOM_ = input.readUInt32();
-              break;
-            }
-            case 2512: {
-
-              eMOHABNNHBJ_ = input.readUInt32();
-              break;
-            }
-            case 3024: {
-
-              bILAJCEBMGF_ = input.readBool();
-              break;
-            }
-            case 3152: {
-
-              jDPELIFFANG_ = input.readUInt32();
-              break;
-            }
-            case 3656: {
-
-              bKKNPCPEDCF_ = input.readUInt32();
-              break;
-            }
-            case 4541: {
-
-              kFCPIKCMIOI_ = input.readFloat();
-              break;
-            }
-            case 4872: {
-
-              kAKHNCAHEOP_ = input.readBool();
-              break;
-            }
-            case 6229: {
-
-              nLAAOODDKGK_ = input.readFloat();
-              break;
-            }
-            case 6928: {
-
-              nFDLHHGPLKL_ = input.readUInt32();
-              break;
-            }
-            case 12816: {
-
-              dKDBHEJFOGD_ = input.readUInt32();
-              break;
-            }
-            case 12824: {
-
-              iEJNKCBILGI_ = input.readUInt32();
-              break;
-            }
-            case 13192: {
-
-              kGKNJIIOPMP_ = input.readUInt32();
-              break;
-            }
-            case 13216: {
-
-              oDBKCAJFBMO_ = input.readUInt32();
-              break;
-            }
-            case 13376: {
-
-              fIHKEJMFKHO_ = input.readBool();
-              break;
-            }
-            case 13789: {
-
-              fMPIEJOMIFJ_ = input.readFloat();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.AttackResultOuterClass.internal_static_AttackResult_descriptor;
@@ -936,7 +716,7 @@ public final class AttackResultOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (damage_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(damage_) != 0) {
         output.writeFloat(2, damage_);
       }
       if (abilityIdentifier_ != null) {
@@ -975,7 +755,7 @@ public final class AttackResultOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(animEventId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 15, animEventId_);
       }
-      if (dPHDFDJJNOA_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(dPHDFDJJNOA_) != 0) {
         output.writeFloat(27, dPHDFDJJNOA_);
       }
       if (eFKGDDIGOHJ_ != 0) {
@@ -996,13 +776,13 @@ public final class AttackResultOuterClass {
       if (bKKNPCPEDCF_ != 0) {
         output.writeUInt32(457, bKKNPCPEDCF_);
       }
-      if (kFCPIKCMIOI_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(kFCPIKCMIOI_) != 0) {
         output.writeFloat(567, kFCPIKCMIOI_);
       }
       if (kAKHNCAHEOP_ != false) {
         output.writeBool(609, kAKHNCAHEOP_);
       }
-      if (nLAAOODDKGK_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(nLAAOODDKGK_) != 0) {
         output.writeFloat(778, nLAAOODDKGK_);
       }
       if (nFDLHHGPLKL_ != 0) {
@@ -1023,10 +803,10 @@ public final class AttackResultOuterClass {
       if (fIHKEJMFKHO_ != false) {
         output.writeBool(1672, fIHKEJMFKHO_);
       }
-      if (fMPIEJOMIFJ_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(fMPIEJOMIFJ_) != 0) {
         output.writeFloat(1723, fMPIEJOMIFJ_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -1035,7 +815,7 @@ public final class AttackResultOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (damage_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(damage_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(2, damage_);
       }
@@ -1086,7 +866,7 @@ public final class AttackResultOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(animEventId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, animEventId_);
       }
-      if (dPHDFDJJNOA_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(dPHDFDJJNOA_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(27, dPHDFDJJNOA_);
       }
@@ -1114,7 +894,7 @@ public final class AttackResultOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(457, bKKNPCPEDCF_);
       }
-      if (kFCPIKCMIOI_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(kFCPIKCMIOI_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(567, kFCPIKCMIOI_);
       }
@@ -1122,7 +902,7 @@ public final class AttackResultOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(609, kAKHNCAHEOP_);
       }
-      if (nLAAOODDKGK_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(nLAAOODDKGK_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(778, nLAAOODDKGK_);
       }
@@ -1150,11 +930,11 @@ public final class AttackResultOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(1672, fIHKEJMFKHO_);
       }
-      if (fMPIEJOMIFJ_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(fMPIEJOMIFJ_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(1723, fMPIEJOMIFJ_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -1246,7 +1026,7 @@ public final class AttackResultOuterClass {
           != other.getIEJNKCBILGI()) return false;
       if (getFIHKEJMFKHO()
           != other.getFIHKEJMFKHO()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -1334,7 +1114,7 @@ public final class AttackResultOuterClass {
       hash = (37 * hash) + FIHKEJMFKHO_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getFIHKEJMFKHO());
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -1455,18 +1235,13 @@ public final class AttackResultOuterClass {
 
       // Construct using emu.grasscutter.net.proto.AttackResultOuterClass.AttackResult.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1758,7 +1533,7 @@ public final class AttackResultOuterClass {
         if (other.getFIHKEJMFKHO() != false) {
           setFIHKEJMFKHO(other.getFIHKEJMFKHO());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -1773,17 +1548,188 @@ public final class AttackResultOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.AttackResultOuterClass.AttackResult parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 21: {
+                damage_ = input.readFloat();
+
+                break;
+              } // case 21
+              case 26: {
+                input.readMessage(
+                    getAbilityIdentifierFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getResolvedDirFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 34
+              case 40: {
+                bLJNCIEFOED_ = input.readUInt32();
+
+                break;
+              } // case 40
+              case 50: {
+                input.readMessage(
+                    getHitEffResultFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 50
+              case 56: {
+                bAAHKFCEBMA_ = input.readBool();
+
+                break;
+              } // case 56
+              case 64: {
+                mIKMJNBAAIJ_ = input.readUInt32();
+
+                break;
+              } // case 64
+              case 72: {
+                defenseId_ = input.readUInt32();
+
+                break;
+              } // case 72
+              case 80: {
+                elementType_ = input.readUInt32();
+
+                break;
+              } // case 80
+              case 90: {
+                input.readMessage(
+                    getHitCollisionFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 90
+              case 104: {
+                hitRetreatAngleCompat_ = input.readInt32();
+
+                break;
+              } // case 104
+              case 112: {
+                attackerId_ = input.readUInt32();
+
+                break;
+              } // case 112
+              case 122: {
+                animEventId_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 122
+              case 221: {
+                dPHDFDJJNOA_ = input.readFloat();
+
+                break;
+              } // case 221
+              case 656: {
+                eFKGDDIGOHJ_ = input.readUInt32();
+
+                break;
+              } // case 656
+              case 1728: {
+                oEEFAHMCLOM_ = input.readUInt32();
+
+                break;
+              } // case 1728
+              case 2512: {
+                eMOHABNNHBJ_ = input.readUInt32();
+
+                break;
+              } // case 2512
+              case 3024: {
+                bILAJCEBMGF_ = input.readBool();
+
+                break;
+              } // case 3024
+              case 3152: {
+                jDPELIFFANG_ = input.readUInt32();
+
+                break;
+              } // case 3152
+              case 3656: {
+                bKKNPCPEDCF_ = input.readUInt32();
+
+                break;
+              } // case 3656
+              case 4541: {
+                kFCPIKCMIOI_ = input.readFloat();
+
+                break;
+              } // case 4541
+              case 4872: {
+                kAKHNCAHEOP_ = input.readBool();
+
+                break;
+              } // case 4872
+              case 6229: {
+                nLAAOODDKGK_ = input.readFloat();
+
+                break;
+              } // case 6229
+              case 6928: {
+                nFDLHHGPLKL_ = input.readUInt32();
+
+                break;
+              } // case 6928
+              case 12816: {
+                dKDBHEJFOGD_ = input.readUInt32();
+
+                break;
+              } // case 12816
+              case 12824: {
+                iEJNKCBILGI_ = input.readUInt32();
+
+                break;
+              } // case 12824
+              case 13192: {
+                kGKNJIIOPMP_ = input.readUInt32();
+
+                break;
+              } // case 13192
+              case 13216: {
+                oDBKCAJFBMO_ = input.readUInt32();
+
+                break;
+              } // case 13216
+              case 13376: {
+                fIHKEJMFKHO_ = input.readBool();
+
+                break;
+              } // case 13376
+              case 13789: {
+                fMPIEJOMIFJ_ = input.readFloat();
+
+                break;
+              } // case 13789
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.AttackResultOuterClass.AttackResult) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -3146,7 +3092,18 @@ public final class AttackResultOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new AttackResult(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

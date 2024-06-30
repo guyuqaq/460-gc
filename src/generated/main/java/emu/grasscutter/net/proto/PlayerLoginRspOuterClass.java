@@ -465,293 +465,6 @@ public final class PlayerLoginRspOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private PlayerLoginRsp(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 16: {
-
-              pKKKINOCFMJ_ = input.readBool();
-              break;
-            }
-            case 24: {
-
-              loginRand_ = input.readUInt64();
-              break;
-            }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              gameBiz_ = s;
-              break;
-            }
-            case 40: {
-
-              abilityHashCode_ = input.readInt32();
-              break;
-            }
-            case 48: {
-
-              clientSilenceDataVersion_ = input.readUInt32();
-              break;
-            }
-            case 64: {
-
-              retcode_ = input.readInt32();
-              break;
-            }
-            case 72: {
-
-              targetUid_ = input.readUInt32();
-              break;
-            }
-            case 82: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                abilityHashMap_ = com.google.protobuf.MapField.newMapField(
-                    AbilityHashMapDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000001;
-              }
-              com.google.protobuf.MapEntry<java.lang.String, java.lang.Integer>
-              abilityHashMap__ = input.readMessage(
-                  AbilityHashMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              abilityHashMap_.getMutableMap().put(
-                  abilityHashMap__.getKey(), abilityHashMap__.getValue());
-              break;
-            }
-            case 88: {
-
-              playerDataVersion_ = input.readUInt32();
-              break;
-            }
-            case 96: {
-
-              clientDataVersion_ = input.readUInt32();
-              break;
-            }
-            case 106: {
-
-              playerData_ = input.readBytes();
-              break;
-            }
-            case 112: {
-
-              isUseAbilityHash_ = input.readBool();
-              break;
-            }
-            case 120: {
-
-              fBFJPEPMAOF_ = input.readBool();
-              break;
-            }
-            case 346: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              msg_ = s;
-              break;
-            }
-            case 1690: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              clientSilenceVersionSuffix_ = s;
-              break;
-            }
-            case 2097: {
-
-              totalTickTime_ = input.readDouble();
-              break;
-            }
-            case 2248: {
-
-              gOFGOCDJDND_ = input.readBool();
-              break;
-            }
-            case 2680: {
-
-              isAudit_ = input.readBool();
-              break;
-            }
-            case 3306: {
-              emu.grasscutter.net.proto.ResVersionConfigOuterClass.ResVersionConfig.Builder subBuilder = null;
-              if (resVersionConfig_ != null) {
-                subBuilder = resVersionConfig_.toBuilder();
-              }
-              resVersionConfig_ = input.readMessage(emu.grasscutter.net.proto.ResVersionConfigOuterClass.ResVersionConfig.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(resVersionConfig_);
-                resVersionConfig_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 3330: {
-
-              scInfo_ = input.readBytes();
-              break;
-            }
-            case 3618: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              countryCode_ = s;
-              break;
-            }
-            case 4282: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              clientMd5_ = s;
-              break;
-            }
-            case 4960: {
-
-              bOKKNHEOKPD_ = input.readBool();
-              break;
-            }
-            case 6274: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              clientSilenceMd5_ = s;
-              break;
-            }
-            case 6528: {
-
-              targetHomeOwnerUid_ = input.readUInt32();
-              break;
-            }
-            case 7890: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              nextResourceUrl_ = s;
-              break;
-            }
-            case 9058: {
-              emu.grasscutter.net.proto.ResVersionConfigOuterClass.ResVersionConfig.Builder subBuilder = null;
-              if (nextResVersionConfig_ != null) {
-                subBuilder = nextResVersionConfig_.toBuilder();
-              }
-              nextResVersionConfig_ = input.readMessage(emu.grasscutter.net.proto.ResVersionConfigOuterClass.ResVersionConfig.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(nextResVersionConfig_);
-                nextResVersionConfig_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 10066: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              eNNOCBNIHIK_ = s;
-              break;
-            }
-            case 10968: {
-
-              dNHHIMENOLD_ = input.readBool();
-              break;
-            }
-            case 10986: {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                shortAbilityHashMap_ = new java.util.ArrayList<emu.grasscutter.net.proto.ShortAbilityHashPairOuterClass.ShortAbilityHashPair>();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              shortAbilityHashMap_.add(
-                  input.readMessage(emu.grasscutter.net.proto.ShortAbilityHashPairOuterClass.ShortAbilityHashPair.parser(), extensionRegistry));
-              break;
-            }
-            case 13018: {
-              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-                featureBlockInfoList_ = new java.util.ArrayList<emu.grasscutter.net.proto.FeatureBlockInfoOuterClass.FeatureBlockInfo>();
-                mutable_bitField0_ |= 0x00000004;
-              }
-              featureBlockInfoList_.add(
-                  input.readMessage(emu.grasscutter.net.proto.FeatureBlockInfoOuterClass.FeatureBlockInfo.parser(), extensionRegistry));
-              break;
-            }
-            case 13506: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              birthday_ = s;
-              break;
-            }
-            case 15904: {
-
-              isTransfer_ = input.readBool();
-              break;
-            }
-            case 15930: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              clientVersionSuffix_ = s;
-              break;
-            }
-            case 15944: {
-
-              isDataNeedRelogin_ = input.readBool();
-              break;
-            }
-            case 16058: {
-              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
-                blockInfoMap_ = com.google.protobuf.MapField.newMapField(
-                    BlockInfoMapDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000008;
-              }
-              com.google.protobuf.MapEntry<java.lang.Integer, emu.grasscutter.net.proto.BlockInfoOuterClass.BlockInfo>
-              blockInfoMap__ = input.readMessage(
-                  BlockInfoMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              blockInfoMap_.getMutableMap().put(
-                  blockInfoMap__.getKey(), blockInfoMap__.getValue());
-              break;
-            }
-            case 16170: {
-              emu.grasscutter.net.proto.StopServerInfoOuterClass.StopServerInfo.Builder subBuilder = null;
-              if (eCKNMCACJKG_ != null) {
-                subBuilder = eCKNMCACJKG_.toBuilder();
-              }
-              eCKNMCACJKG_ = input.readMessage(emu.grasscutter.net.proto.StopServerInfoOuterClass.StopServerInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(eCKNMCACJKG_);
-                eCKNMCACJKG_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000002) != 0)) {
-          shortAbilityHashMap_ = java.util.Collections.unmodifiableList(shortAbilityHashMap_);
-        }
-        if (((mutable_bitField0_ & 0x00000004) != 0)) {
-          featureBlockInfoList_ = java.util.Collections.unmodifiableList(featureBlockInfoList_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.PlayerLoginRspOuterClass.internal_static_PlayerLoginRsp_descriptor;
@@ -850,7 +563,7 @@ public final class PlayerLoginRspOuterClass {
     @java.lang.Override
     public boolean containsAbilityHashMap(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetAbilityHashMap().getMap().containsKey(key);
     }
     /**
@@ -877,7 +590,7 @@ public final class PlayerLoginRspOuterClass {
     public int getAbilityHashMapOrDefault(
         java.lang.String key,
         int defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.Integer> map =
           internalGetAbilityHashMap().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -889,7 +602,7 @@ public final class PlayerLoginRspOuterClass {
 
     public int getAbilityHashMapOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.Integer> map =
           internalGetAbilityHashMap().getMap();
       if (!map.containsKey(key)) {
@@ -1761,7 +1474,7 @@ public final class PlayerLoginRspOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clientSilenceVersionSuffix_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 211, clientSilenceVersionSuffix_);
       }
-      if (totalTickTime_ != 0D) {
+      if (java.lang.Double.doubleToRawLongBits(totalTickTime_) != 0) {
         output.writeDouble(262, totalTickTime_);
       }
       if (gOFGOCDJDND_ != false) {
@@ -1830,7 +1543,7 @@ public final class PlayerLoginRspOuterClass {
       if (eCKNMCACJKG_ != null) {
         output.writeMessage(2021, getECKNMCACJKG());
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -1902,7 +1615,7 @@ public final class PlayerLoginRspOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clientSilenceVersionSuffix_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(211, clientSilenceVersionSuffix_);
       }
-      if (totalTickTime_ != 0D) {
+      if (java.lang.Double.doubleToRawLongBits(totalTickTime_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeDoubleSize(262, totalTickTime_);
       }
@@ -1989,7 +1702,7 @@ public final class PlayerLoginRspOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2021, getECKNMCACJKG());
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -2088,7 +1801,7 @@ public final class PlayerLoginRspOuterClass {
         if (!getNextResVersionConfig()
             .equals(other.getNextResVersionConfig())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -2198,7 +1911,7 @@ public final class PlayerLoginRspOuterClass {
         hash = (37 * hash) + NEXT_RES_VERSION_CONFIG_FIELD_NUMBER;
         hash = (53 * hash) + getNextResVersionConfig().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -2346,20 +2059,13 @@ public final class PlayerLoginRspOuterClass {
 
       // Construct using emu.grasscutter.net.proto.PlayerLoginRspOuterClass.PlayerLoginRsp.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getShortAbilityHashMapFieldBuilder();
-          getFeatureBlockInfoListFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2379,10 +2085,11 @@ public final class PlayerLoginRspOuterClass {
 
         if (shortAbilityHashMapBuilder_ == null) {
           shortAbilityHashMap_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
+          shortAbilityHashMap_ = null;
           shortAbilityHashMapBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000002);
         fBFJPEPMAOF_ = false;
 
         isUseAbilityHash_ = false;
@@ -2395,10 +2102,11 @@ public final class PlayerLoginRspOuterClass {
 
         if (featureBlockInfoListBuilder_ == null) {
           featureBlockInfoList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
         } else {
+          featureBlockInfoList_ = null;
           featureBlockInfoListBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000004);
         dNHHIMENOLD_ = false;
 
         clientSilenceDataVersion_ = 0;
@@ -2763,7 +2471,7 @@ public final class PlayerLoginRspOuterClass {
         if (other.hasNextResVersionConfig()) {
           mergeNextResVersionConfig(other.getNextResVersionConfig());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -2778,17 +2486,243 @@ public final class PlayerLoginRspOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.PlayerLoginRspOuterClass.PlayerLoginRsp parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 16: {
+                pKKKINOCFMJ_ = input.readBool();
+
+                break;
+              } // case 16
+              case 24: {
+                loginRand_ = input.readUInt64();
+
+                break;
+              } // case 24
+              case 34: {
+                gameBiz_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 34
+              case 40: {
+                abilityHashCode_ = input.readInt32();
+
+                break;
+              } // case 40
+              case 48: {
+                clientSilenceDataVersion_ = input.readUInt32();
+
+                break;
+              } // case 48
+              case 64: {
+                retcode_ = input.readInt32();
+
+                break;
+              } // case 64
+              case 72: {
+                targetUid_ = input.readUInt32();
+
+                break;
+              } // case 72
+              case 82: {
+                com.google.protobuf.MapEntry<java.lang.String, java.lang.Integer>
+                abilityHashMap__ = input.readMessage(
+                    AbilityHashMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutableAbilityHashMap().getMutableMap().put(
+                    abilityHashMap__.getKey(), abilityHashMap__.getValue());
+                break;
+              } // case 82
+              case 88: {
+                playerDataVersion_ = input.readUInt32();
+
+                break;
+              } // case 88
+              case 96: {
+                clientDataVersion_ = input.readUInt32();
+
+                break;
+              } // case 96
+              case 106: {
+                playerData_ = input.readBytes();
+
+                break;
+              } // case 106
+              case 112: {
+                isUseAbilityHash_ = input.readBool();
+
+                break;
+              } // case 112
+              case 120: {
+                fBFJPEPMAOF_ = input.readBool();
+
+                break;
+              } // case 120
+              case 346: {
+                msg_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 346
+              case 1690: {
+                clientSilenceVersionSuffix_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 1690
+              case 2097: {
+                totalTickTime_ = input.readDouble();
+
+                break;
+              } // case 2097
+              case 2248: {
+                gOFGOCDJDND_ = input.readBool();
+
+                break;
+              } // case 2248
+              case 2680: {
+                isAudit_ = input.readBool();
+
+                break;
+              } // case 2680
+              case 3306: {
+                input.readMessage(
+                    getResVersionConfigFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 3306
+              case 3330: {
+                scInfo_ = input.readBytes();
+
+                break;
+              } // case 3330
+              case 3618: {
+                countryCode_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 3618
+              case 4282: {
+                clientMd5_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 4282
+              case 4960: {
+                bOKKNHEOKPD_ = input.readBool();
+
+                break;
+              } // case 4960
+              case 6274: {
+                clientSilenceMd5_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 6274
+              case 6528: {
+                targetHomeOwnerUid_ = input.readUInt32();
+
+                break;
+              } // case 6528
+              case 7890: {
+                nextResourceUrl_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 7890
+              case 9058: {
+                input.readMessage(
+                    getNextResVersionConfigFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 9058
+              case 10066: {
+                eNNOCBNIHIK_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10066
+              case 10968: {
+                dNHHIMENOLD_ = input.readBool();
+
+                break;
+              } // case 10968
+              case 10986: {
+                emu.grasscutter.net.proto.ShortAbilityHashPairOuterClass.ShortAbilityHashPair m =
+                    input.readMessage(
+                        emu.grasscutter.net.proto.ShortAbilityHashPairOuterClass.ShortAbilityHashPair.parser(),
+                        extensionRegistry);
+                if (shortAbilityHashMapBuilder_ == null) {
+                  ensureShortAbilityHashMapIsMutable();
+                  shortAbilityHashMap_.add(m);
+                } else {
+                  shortAbilityHashMapBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10986
+              case 13018: {
+                emu.grasscutter.net.proto.FeatureBlockInfoOuterClass.FeatureBlockInfo m =
+                    input.readMessage(
+                        emu.grasscutter.net.proto.FeatureBlockInfoOuterClass.FeatureBlockInfo.parser(),
+                        extensionRegistry);
+                if (featureBlockInfoListBuilder_ == null) {
+                  ensureFeatureBlockInfoListIsMutable();
+                  featureBlockInfoList_.add(m);
+                } else {
+                  featureBlockInfoListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 13018
+              case 13506: {
+                birthday_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 13506
+              case 15904: {
+                isTransfer_ = input.readBool();
+
+                break;
+              } // case 15904
+              case 15930: {
+                clientVersionSuffix_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 15930
+              case 15944: {
+                isDataNeedRelogin_ = input.readBool();
+
+                break;
+              } // case 15944
+              case 16058: {
+                com.google.protobuf.MapEntry<java.lang.Integer, emu.grasscutter.net.proto.BlockInfoOuterClass.BlockInfo>
+                blockInfoMap__ = input.readMessage(
+                    BlockInfoMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutableBlockInfoMap().getMutableMap().put(
+                    blockInfoMap__.getKey(), blockInfoMap__.getValue());
+                break;
+              } // case 16058
+              case 16170: {
+                input.readMessage(
+                    getECKNMCACJKGFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 16170
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.PlayerLoginRspOuterClass.PlayerLoginRsp) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -2902,7 +2836,7 @@ public final class PlayerLoginRspOuterClass {
       @java.lang.Override
       public boolean containsAbilityHashMap(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetAbilityHashMap().getMap().containsKey(key);
       }
       /**
@@ -2929,7 +2863,7 @@ public final class PlayerLoginRspOuterClass {
       public int getAbilityHashMapOrDefault(
           java.lang.String key,
           int defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.Integer> map =
             internalGetAbilityHashMap().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -2941,7 +2875,7 @@ public final class PlayerLoginRspOuterClass {
 
       public int getAbilityHashMapOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.Integer> map =
             internalGetAbilityHashMap().getMap();
         if (!map.containsKey(key)) {
@@ -2961,7 +2895,7 @@ public final class PlayerLoginRspOuterClass {
 
       public Builder removeAbilityHashMap(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableAbilityHashMap().getMutableMap()
             .remove(key);
         return this;
@@ -2980,7 +2914,7 @@ public final class PlayerLoginRspOuterClass {
       public Builder putAbilityHashMap(
           java.lang.String key,
           int value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         
         internalGetMutableAbilityHashMap().getMutableMap()
             .put(key, value);
@@ -4327,7 +4261,10 @@ public final class PlayerLoginRspOuterClass {
           int key,
           emu.grasscutter.net.proto.BlockInfoOuterClass.BlockInfo value) {
         
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableBlockInfoMap().getMutableMap()
             .put(key, value);
         return this;
@@ -5304,7 +5241,18 @@ public final class PlayerLoginRspOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new PlayerLoginRsp(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

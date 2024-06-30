@@ -478,359 +478,6 @@ public final class AvatarInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private AvatarInfo(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-
-              avatarId_ = input.readUInt32();
-              break;
-            }
-            case 16: {
-
-              guid_ = input.readUInt64();
-              break;
-            }
-            case 26: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                propMap_ = com.google.protobuf.MapField.newMapField(
-                    PropMapDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000001;
-              }
-              com.google.protobuf.MapEntry<java.lang.Integer, emu.grasscutter.net.proto.PropValueOuterClass.PropValue>
-              propMap__ = input.readMessage(
-                  PropMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              propMap_.getMutableMap().put(
-                  propMap__.getKey(), propMap__.getValue());
-              break;
-            }
-            case 32: {
-
-              lifeState_ = input.readUInt32();
-              break;
-            }
-            case 40: {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                equipGuidList_ = newLongList();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              equipGuidList_.addLong(input.readUInt64());
-              break;
-            }
-            case 42: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000002) != 0) && input.getBytesUntilLimit() > 0) {
-                equipGuidList_ = newLongList();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                equipGuidList_.addLong(input.readUInt64());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            case 48: {
-              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-                talentIdList_ = newIntList();
-                mutable_bitField0_ |= 0x00000004;
-              }
-              talentIdList_.addInt(input.readUInt32());
-              break;
-            }
-            case 50: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000004) != 0) && input.getBytesUntilLimit() > 0) {
-                talentIdList_ = newIntList();
-                mutable_bitField0_ |= 0x00000004;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                talentIdList_.addInt(input.readUInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            case 58: {
-              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
-                fightPropMap_ = com.google.protobuf.MapField.newMapField(
-                    FightPropMapDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000008;
-              }
-              com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Float>
-              fightPropMap__ = input.readMessage(
-                  FightPropMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              fightPropMap_.getMutableMap().put(
-                  fightPropMap__.getKey(), fightPropMap__.getValue());
-              break;
-            }
-            case 74: {
-              emu.grasscutter.net.proto.TrialAvatarInfoOuterClass.TrialAvatarInfo.Builder subBuilder = null;
-              if (trialAvatarInfo_ != null) {
-                subBuilder = trialAvatarInfo_.toBuilder();
-              }
-              trialAvatarInfo_ = input.readMessage(emu.grasscutter.net.proto.TrialAvatarInfoOuterClass.TrialAvatarInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(trialAvatarInfo_);
-                trialAvatarInfo_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 82: {
-              if (!((mutable_bitField0_ & 0x00000010) != 0)) {
-                skillMap_ = com.google.protobuf.MapField.newMapField(
-                    SkillMapDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000010;
-              }
-              com.google.protobuf.MapEntry<java.lang.Integer, emu.grasscutter.net.proto.AvatarSkillInfoOuterClass.AvatarSkillInfo>
-              skillMap__ = input.readMessage(
-                  SkillMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              skillMap_.getMutableMap().put(
-                  skillMap__.getKey(), skillMap__.getValue());
-              break;
-            }
-            case 88: {
-
-              skillDepotId_ = input.readUInt32();
-              break;
-            }
-            case 98: {
-              emu.grasscutter.net.proto.AvatarFetterInfoOuterClass.AvatarFetterInfo.Builder subBuilder = null;
-              if (fetterInfo_ != null) {
-                subBuilder = fetterInfo_.toBuilder();
-              }
-              fetterInfo_ = input.readMessage(emu.grasscutter.net.proto.AvatarFetterInfoOuterClass.AvatarFetterInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(fetterInfo_);
-                fetterInfo_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 104: {
-
-              coreProudSkillLevel_ = input.readUInt32();
-              break;
-            }
-            case 112: {
-              if (!((mutable_bitField0_ & 0x00000020) != 0)) {
-                inherentProudSkillList_ = newIntList();
-                mutable_bitField0_ |= 0x00000020;
-              }
-              inherentProudSkillList_.addInt(input.readUInt32());
-              break;
-            }
-            case 114: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000020) != 0) && input.getBytesUntilLimit() > 0) {
-                inherentProudSkillList_ = newIntList();
-                mutable_bitField0_ |= 0x00000020;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                inherentProudSkillList_.addInt(input.readUInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            case 122: {
-              if (!((mutable_bitField0_ & 0x00000040) != 0)) {
-                skillLevelMap_ = com.google.protobuf.MapField.newMapField(
-                    SkillLevelMapDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000040;
-              }
-              com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
-              skillLevelMap__ = input.readMessage(
-                  SkillLevelMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              skillLevelMap_.getMutableMap().put(
-                  skillLevelMap__.getKey(), skillLevelMap__.getValue());
-              break;
-            }
-            case 128: {
-              int rawValue = input.readEnum();
-
-              expeditionState_ = rawValue;
-              break;
-            }
-            case 138: {
-              if (!((mutable_bitField0_ & 0x00000080) != 0)) {
-                proudSkillExtraLevelMap_ = com.google.protobuf.MapField.newMapField(
-                    ProudSkillExtraLevelMapDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000080;
-              }
-              com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
-              proudSkillExtraLevelMap__ = input.readMessage(
-                  ProudSkillExtraLevelMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              proudSkillExtraLevelMap_.getMutableMap().put(
-                  proudSkillExtraLevelMap__.getKey(), proudSkillExtraLevelMap__.getValue());
-              break;
-            }
-            case 144: {
-
-              isFocus_ = input.readBool();
-              break;
-            }
-            case 152: {
-
-              avatarType_ = input.readUInt32();
-              break;
-            }
-            case 160: {
-              if (!((mutable_bitField0_ & 0x00000100) != 0)) {
-                teamResonanceList_ = newIntList();
-                mutable_bitField0_ |= 0x00000100;
-              }
-              teamResonanceList_.addInt(input.readUInt32());
-              break;
-            }
-            case 162: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000100) != 0) && input.getBytesUntilLimit() > 0) {
-                teamResonanceList_ = newIntList();
-                mutable_bitField0_ |= 0x00000100;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                teamResonanceList_.addInt(input.readUInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            case 168: {
-
-              wearingFlycloakId_ = input.readUInt32();
-              break;
-            }
-            case 178: {
-              if (!((mutable_bitField0_ & 0x00000200) != 0)) {
-                equipAffixList_ = new java.util.ArrayList<emu.grasscutter.net.proto.AvatarEquipAffixInfoOuterClass.AvatarEquipAffixInfo>();
-                mutable_bitField0_ |= 0x00000200;
-              }
-              equipAffixList_.add(
-                  input.readMessage(emu.grasscutter.net.proto.AvatarEquipAffixInfoOuterClass.AvatarEquipAffixInfo.parser(), extensionRegistry));
-              break;
-            }
-            case 184: {
-
-              bornTime_ = input.readUInt32();
-              break;
-            }
-            case 192: {
-              if (!((mutable_bitField0_ & 0x00000400) != 0)) {
-                pendingPromoteRewardList_ = newIntList();
-                mutable_bitField0_ |= 0x00000400;
-              }
-              pendingPromoteRewardList_.addInt(input.readUInt32());
-              break;
-            }
-            case 194: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000400) != 0) && input.getBytesUntilLimit() > 0) {
-                pendingPromoteRewardList_ = newIntList();
-                mutable_bitField0_ |= 0x00000400;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                pendingPromoteRewardList_.addInt(input.readUInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            case 200: {
-
-              costumeId_ = input.readUInt32();
-              break;
-            }
-            case 210: {
-              emu.grasscutter.net.proto.AvatarExcelInfoOuterClass.AvatarExcelInfo.Builder subBuilder = null;
-              if (excelInfo_ != null) {
-                subBuilder = excelInfo_.toBuilder();
-              }
-              excelInfo_ = input.readMessage(emu.grasscutter.net.proto.AvatarExcelInfoOuterClass.AvatarExcelInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(excelInfo_);
-                excelInfo_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 216: {
-
-              animHash_ = input.readUInt32();
-              break;
-            }
-            case 226: {
-              emu.grasscutter.net.proto.JCDPOCOOGCIOuterClass.JCDPOCOOGCI.Builder subBuilder = null;
-              if (pDGKJIIEPIO_ != null) {
-                subBuilder = pDGKJIIEPIO_.toBuilder();
-              }
-              pDGKJIIEPIO_ = input.readMessage(emu.grasscutter.net.proto.JCDPOCOOGCIOuterClass.JCDPOCOOGCI.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(pDGKJIIEPIO_);
-                pDGKJIIEPIO_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 232: {
-
-              gJFKDCJENJE_ = input.readUInt32();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000002) != 0)) {
-          equipGuidList_.makeImmutable(); // C
-        }
-        if (((mutable_bitField0_ & 0x00000004) != 0)) {
-          talentIdList_.makeImmutable(); // C
-        }
-        if (((mutable_bitField0_ & 0x00000020) != 0)) {
-          inherentProudSkillList_.makeImmutable(); // C
-        }
-        if (((mutable_bitField0_ & 0x00000100) != 0)) {
-          teamResonanceList_.makeImmutable(); // C
-        }
-        if (((mutable_bitField0_ & 0x00000200) != 0)) {
-          equipAffixList_ = java.util.Collections.unmodifiableList(equipAffixList_);
-        }
-        if (((mutable_bitField0_ & 0x00000400) != 0)) {
-          pendingPromoteRewardList_.makeImmutable(); // C
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.AvatarInfoOuterClass.internal_static_AvatarInfo_descriptor;
@@ -1838,7 +1485,7 @@ public final class AvatarInfoOuterClass {
       if (gJFKDCJENJE_ != 0) {
         output.writeUInt32(29, gJFKDCJENJE_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -2039,7 +1686,7 @@ public final class AvatarInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(29, gJFKDCJENJE_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -2121,7 +1768,7 @@ public final class AvatarInfoOuterClass {
       }
       if (getGJFKDCJENJE()
           != other.getGJFKDCJENJE()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -2220,7 +1867,7 @@ public final class AvatarInfoOuterClass {
       }
       hash = (37 * hash) + GJFKDCJENJE_FIELD_NUMBER;
       hash = (53 * hash) + getGJFKDCJENJE();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -2379,19 +2026,13 @@ public final class AvatarInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.AvatarInfoOuterClass.AvatarInfo.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getEquipAffixListFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2441,10 +2082,11 @@ public final class AvatarInfoOuterClass {
 
         if (equipAffixListBuilder_ == null) {
           equipAffixList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000200);
         } else {
+          equipAffixList_ = null;
           equipAffixListBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000200);
         bornTime_ = 0;
 
         pendingPromoteRewardList_ = emptyIntList();
@@ -2756,7 +2398,7 @@ public final class AvatarInfoOuterClass {
         if (other.getGJFKDCJENJE() != 0) {
           setGJFKDCJENJE(other.getGJFKDCJENJE());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -2771,17 +2413,256 @@ public final class AvatarInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.AvatarInfoOuterClass.AvatarInfo parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                avatarId_ = input.readUInt32();
+
+                break;
+              } // case 8
+              case 16: {
+                guid_ = input.readUInt64();
+
+                break;
+              } // case 16
+              case 26: {
+                com.google.protobuf.MapEntry<java.lang.Integer, emu.grasscutter.net.proto.PropValueOuterClass.PropValue>
+                propMap__ = input.readMessage(
+                    PropMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutablePropMap().getMutableMap().put(
+                    propMap__.getKey(), propMap__.getValue());
+                break;
+              } // case 26
+              case 32: {
+                lifeState_ = input.readUInt32();
+
+                break;
+              } // case 32
+              case 40: {
+                long v = input.readUInt64();
+                ensureEquipGuidListIsMutable();
+                equipGuidList_.addLong(v);
+                break;
+              } // case 40
+              case 42: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureEquipGuidListIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  equipGuidList_.addLong(input.readUInt64());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 42
+              case 48: {
+                int v = input.readUInt32();
+                ensureTalentIdListIsMutable();
+                talentIdList_.addInt(v);
+                break;
+              } // case 48
+              case 50: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureTalentIdListIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  talentIdList_.addInt(input.readUInt32());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 50
+              case 58: {
+                com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Float>
+                fightPropMap__ = input.readMessage(
+                    FightPropMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutableFightPropMap().getMutableMap().put(
+                    fightPropMap__.getKey(), fightPropMap__.getValue());
+                break;
+              } // case 58
+              case 74: {
+                input.readMessage(
+                    getTrialAvatarInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 74
+              case 82: {
+                com.google.protobuf.MapEntry<java.lang.Integer, emu.grasscutter.net.proto.AvatarSkillInfoOuterClass.AvatarSkillInfo>
+                skillMap__ = input.readMessage(
+                    SkillMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutableSkillMap().getMutableMap().put(
+                    skillMap__.getKey(), skillMap__.getValue());
+                break;
+              } // case 82
+              case 88: {
+                skillDepotId_ = input.readUInt32();
+
+                break;
+              } // case 88
+              case 98: {
+                input.readMessage(
+                    getFetterInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 98
+              case 104: {
+                coreProudSkillLevel_ = input.readUInt32();
+
+                break;
+              } // case 104
+              case 112: {
+                int v = input.readUInt32();
+                ensureInherentProudSkillListIsMutable();
+                inherentProudSkillList_.addInt(v);
+                break;
+              } // case 112
+              case 114: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureInherentProudSkillListIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  inherentProudSkillList_.addInt(input.readUInt32());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 114
+              case 122: {
+                com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
+                skillLevelMap__ = input.readMessage(
+                    SkillLevelMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutableSkillLevelMap().getMutableMap().put(
+                    skillLevelMap__.getKey(), skillLevelMap__.getValue());
+                break;
+              } // case 122
+              case 128: {
+                expeditionState_ = input.readEnum();
+
+                break;
+              } // case 128
+              case 138: {
+                com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
+                proudSkillExtraLevelMap__ = input.readMessage(
+                    ProudSkillExtraLevelMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutableProudSkillExtraLevelMap().getMutableMap().put(
+                    proudSkillExtraLevelMap__.getKey(), proudSkillExtraLevelMap__.getValue());
+                break;
+              } // case 138
+              case 144: {
+                isFocus_ = input.readBool();
+
+                break;
+              } // case 144
+              case 152: {
+                avatarType_ = input.readUInt32();
+
+                break;
+              } // case 152
+              case 160: {
+                int v = input.readUInt32();
+                ensureTeamResonanceListIsMutable();
+                teamResonanceList_.addInt(v);
+                break;
+              } // case 160
+              case 162: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureTeamResonanceListIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  teamResonanceList_.addInt(input.readUInt32());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 162
+              case 168: {
+                wearingFlycloakId_ = input.readUInt32();
+
+                break;
+              } // case 168
+              case 178: {
+                emu.grasscutter.net.proto.AvatarEquipAffixInfoOuterClass.AvatarEquipAffixInfo m =
+                    input.readMessage(
+                        emu.grasscutter.net.proto.AvatarEquipAffixInfoOuterClass.AvatarEquipAffixInfo.parser(),
+                        extensionRegistry);
+                if (equipAffixListBuilder_ == null) {
+                  ensureEquipAffixListIsMutable();
+                  equipAffixList_.add(m);
+                } else {
+                  equipAffixListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 178
+              case 184: {
+                bornTime_ = input.readUInt32();
+
+                break;
+              } // case 184
+              case 192: {
+                int v = input.readUInt32();
+                ensurePendingPromoteRewardListIsMutable();
+                pendingPromoteRewardList_.addInt(v);
+                break;
+              } // case 192
+              case 194: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensurePendingPromoteRewardListIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  pendingPromoteRewardList_.addInt(input.readUInt32());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 194
+              case 200: {
+                costumeId_ = input.readUInt32();
+
+                break;
+              } // case 200
+              case 210: {
+                input.readMessage(
+                    getExcelInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 210
+              case 216: {
+                animHash_ = input.readUInt32();
+
+                break;
+              } // case 216
+              case 226: {
+                input.readMessage(
+                    getPDGKJIIEPIOFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 226
+              case 232: {
+                gJFKDCJENJE_ = input.readUInt32();
+
+                break;
+              } // case 232
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.AvatarInfoOuterClass.AvatarInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -2960,7 +2841,10 @@ public final class AvatarInfoOuterClass {
           int key,
           emu.grasscutter.net.proto.PropValueOuterClass.PropValue value) {
         
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutablePropMap().getMutableMap()
             .put(key, value);
         return this;
@@ -3524,7 +3408,10 @@ public final class AvatarInfoOuterClass {
           int key,
           emu.grasscutter.net.proto.AvatarSkillInfoOuterClass.AvatarSkillInfo value) {
         
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableSkillMap().getMutableMap()
             .put(key, value);
         return this;
@@ -4995,7 +4882,18 @@ public final class AvatarInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new AvatarInfo(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

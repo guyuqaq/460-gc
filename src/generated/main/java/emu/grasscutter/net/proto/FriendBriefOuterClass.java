@@ -267,186 +267,6 @@ public final class FriendBriefOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private FriendBrief(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-
-              uid_ = input.readUInt32();
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              nickname_ = s;
-              break;
-            }
-            case 24: {
-
-              level_ = input.readUInt32();
-              break;
-            }
-            case 32: {
-
-              avatarId_ = input.readUInt32();
-              break;
-            }
-            case 40: {
-
-              worldLevel_ = input.readUInt32();
-              break;
-            }
-            case 50: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              signature_ = s;
-              break;
-            }
-            case 56: {
-              int rawValue = input.readEnum();
-
-              onlineState_ = rawValue;
-              break;
-            }
-            case 64: {
-
-              param_ = input.readUInt32();
-              break;
-            }
-            case 80: {
-
-              isMpModeAvailable_ = input.readBool();
-              break;
-            }
-            case 90: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              onlineId_ = s;
-              break;
-            }
-            case 96: {
-
-              lastActiveTime_ = input.readUInt32();
-              break;
-            }
-            case 104: {
-
-              nameCardId_ = input.readUInt32();
-              break;
-            }
-            case 112: {
-
-              mpPlayerNum_ = input.readUInt32();
-              break;
-            }
-            case 120: {
-
-              isChatNoDisturb_ = input.readBool();
-              break;
-            }
-            case 128: {
-
-              chatSequence_ = input.readUInt32();
-              break;
-            }
-            case 138: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              remarkName_ = s;
-              break;
-            }
-            case 178: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                showAvatarInfoList_ = new java.util.ArrayList<emu.grasscutter.net.proto.SocialShowAvatarInfoOuterClass.SocialShowAvatarInfo>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              showAvatarInfoList_.add(
-                  input.readMessage(emu.grasscutter.net.proto.SocialShowAvatarInfoOuterClass.SocialShowAvatarInfo.parser(), extensionRegistry));
-              break;
-            }
-            case 184: {
-              int rawValue = input.readEnum();
-
-              friendEnterHomeOption_ = rawValue;
-              break;
-            }
-            case 194: {
-              emu.grasscutter.net.proto.ProfilePictureOuterClass.ProfilePicture.Builder subBuilder = null;
-              if (profilePicture_ != null) {
-                subBuilder = profilePicture_.toBuilder();
-              }
-              profilePicture_ = input.readMessage(emu.grasscutter.net.proto.ProfilePictureOuterClass.ProfilePicture.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(profilePicture_);
-                profilePicture_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 200: {
-
-              isGameSource_ = input.readBool();
-              break;
-            }
-            case 208: {
-
-              isPsnSource_ = input.readBool();
-              break;
-            }
-            case 216: {
-              int rawValue = input.readEnum();
-
-              platformType_ = rawValue;
-              break;
-            }
-            case 224: {
-
-              isInDuel_ = input.readBool();
-              break;
-            }
-            case 232: {
-
-              isDuelObservable_ = input.readBool();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          showAvatarInfoList_ = java.util.Collections.unmodifiableList(showAvatarInfoList_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.FriendBriefOuterClass.internal_static_FriendBrief_descriptor;
@@ -986,7 +806,7 @@ public final class FriendBriefOuterClass {
       if (isDuelObservable_ != false) {
         output.writeBool(29, isDuelObservable_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -1087,7 +907,7 @@ public final class FriendBriefOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(29, isDuelObservable_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -1150,7 +970,7 @@ public final class FriendBriefOuterClass {
           != other.getIsInDuel()) return false;
       if (getIsDuelObservable()
           != other.getIsDuelObservable()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -1219,7 +1039,7 @@ public final class FriendBriefOuterClass {
       hash = (37 * hash) + IS_DUEL_OBSERVABLE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsDuelObservable());
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -1340,19 +1160,13 @@ public final class FriendBriefOuterClass {
 
       // Construct using emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getShowAvatarInfoListFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1391,10 +1205,11 @@ public final class FriendBriefOuterClass {
 
         if (showAvatarInfoListBuilder_ == null) {
           showAvatarInfoList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          showAvatarInfoList_ = null;
           showAvatarInfoListBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000001);
         friendEnterHomeOption_ = 0;
 
         if (profilePictureBuilder_ == null) {
@@ -1623,7 +1438,7 @@ public final class FriendBriefOuterClass {
         if (other.getIsDuelObservable() != false) {
           setIsDuelObservable(other.getIsDuelObservable());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -1638,17 +1453,160 @@ public final class FriendBriefOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                uid_ = input.readUInt32();
+
+                break;
+              } // case 8
+              case 18: {
+                nickname_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 18
+              case 24: {
+                level_ = input.readUInt32();
+
+                break;
+              } // case 24
+              case 32: {
+                avatarId_ = input.readUInt32();
+
+                break;
+              } // case 32
+              case 40: {
+                worldLevel_ = input.readUInt32();
+
+                break;
+              } // case 40
+              case 50: {
+                signature_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 50
+              case 56: {
+                onlineState_ = input.readEnum();
+
+                break;
+              } // case 56
+              case 64: {
+                param_ = input.readUInt32();
+
+                break;
+              } // case 64
+              case 80: {
+                isMpModeAvailable_ = input.readBool();
+
+                break;
+              } // case 80
+              case 90: {
+                onlineId_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 90
+              case 96: {
+                lastActiveTime_ = input.readUInt32();
+
+                break;
+              } // case 96
+              case 104: {
+                nameCardId_ = input.readUInt32();
+
+                break;
+              } // case 104
+              case 112: {
+                mpPlayerNum_ = input.readUInt32();
+
+                break;
+              } // case 112
+              case 120: {
+                isChatNoDisturb_ = input.readBool();
+
+                break;
+              } // case 120
+              case 128: {
+                chatSequence_ = input.readUInt32();
+
+                break;
+              } // case 128
+              case 138: {
+                remarkName_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 138
+              case 178: {
+                emu.grasscutter.net.proto.SocialShowAvatarInfoOuterClass.SocialShowAvatarInfo m =
+                    input.readMessage(
+                        emu.grasscutter.net.proto.SocialShowAvatarInfoOuterClass.SocialShowAvatarInfo.parser(),
+                        extensionRegistry);
+                if (showAvatarInfoListBuilder_ == null) {
+                  ensureShowAvatarInfoListIsMutable();
+                  showAvatarInfoList_.add(m);
+                } else {
+                  showAvatarInfoListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 178
+              case 184: {
+                friendEnterHomeOption_ = input.readEnum();
+
+                break;
+              } // case 184
+              case 194: {
+                input.readMessage(
+                    getProfilePictureFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 194
+              case 200: {
+                isGameSource_ = input.readBool();
+
+                break;
+              } // case 200
+              case 208: {
+                isPsnSource_ = input.readBool();
+
+                break;
+              } // case 208
+              case 216: {
+                platformType_ = input.readEnum();
+
+                break;
+              } // case 216
+              case 224: {
+                isInDuel_ = input.readBool();
+
+                break;
+              } // case 224
+              case 232: {
+                isDuelObservable_ = input.readBool();
+
+                break;
+              } // case 232
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -2975,7 +2933,18 @@ public final class FriendBriefOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new FriendBrief(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

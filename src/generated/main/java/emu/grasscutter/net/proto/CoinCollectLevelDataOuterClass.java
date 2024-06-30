@@ -149,119 +149,6 @@ public final class CoinCollectLevelDataOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private CoinCollectLevelData(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 18: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                doubleBestTeamInfoList_ = new java.util.ArrayList<emu.grasscutter.net.proto.CoinCollectTeamInfoDataOuterClass.CoinCollectTeamInfoData>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              doubleBestTeamInfoList_.add(
-                  input.readMessage(emu.grasscutter.net.proto.CoinCollectTeamInfoDataOuterClass.CoinCollectTeamInfoData.parser(), extensionRegistry));
-              break;
-            }
-            case 24: {
-
-              gENIGFJFKEE_ = input.readUInt32();
-              break;
-            }
-            case 32: {
-
-              nFKJLPLDDBM_ = input.readBool();
-              break;
-            }
-            case 40: {
-
-              isLevelOpen_ = input.readBool();
-              break;
-            }
-            case 66: {
-              emu.grasscutter.net.proto.CoinCollectTeamInfoDataOuterClass.CoinCollectTeamInfoData.Builder subBuilder = null;
-              if (singleBestTeamInfo_ != null) {
-                subBuilder = singleBestTeamInfo_.toBuilder();
-              }
-              singleBestTeamInfo_ = input.readMessage(emu.grasscutter.net.proto.CoinCollectTeamInfoDataOuterClass.CoinCollectTeamInfoData.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(singleBestTeamInfo_);
-                singleBestTeamInfo_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 72: {
-
-              gICIIMOFPLC_ = input.readBool();
-              break;
-            }
-            case 80: {
-
-              nJJLELKNFPL_ = input.readBool();
-              break;
-            }
-            case 88: {
-
-              oIDEGDJMAAH_ = input.readUInt32();
-              break;
-            }
-            case 96: {
-
-              nOBHHOIAPMM_ = input.readUInt32();
-              break;
-            }
-            case 104: {
-
-              cGCAEFMBDLE_ = input.readUInt32();
-              break;
-            }
-            case 112: {
-
-              pKPHLANBFAM_ = input.readUInt32();
-              break;
-            }
-            case 120: {
-
-              levelId_ = input.readUInt32();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          doubleBestTeamInfoList_ = java.util.Collections.unmodifiableList(doubleBestTeamInfoList_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.CoinCollectLevelDataOuterClass.internal_static_CoinCollectLevelData_descriptor;
@@ -501,7 +388,7 @@ public final class CoinCollectLevelDataOuterClass {
       if (levelId_ != 0) {
         output.writeUInt32(15, levelId_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -558,7 +445,7 @@ public final class CoinCollectLevelDataOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(15, levelId_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -600,7 +487,7 @@ public final class CoinCollectLevelDataOuterClass {
           .equals(other.getDoubleBestTeamInfoListList())) return false;
       if (getPKPHLANBFAM()
           != other.getPKPHLANBFAM()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -643,7 +530,7 @@ public final class CoinCollectLevelDataOuterClass {
       }
       hash = (37 * hash) + PKPHLANBFAM_FIELD_NUMBER;
       hash = (53 * hash) + getPKPHLANBFAM();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -764,19 +651,13 @@ public final class CoinCollectLevelDataOuterClass {
 
       // Construct using emu.grasscutter.net.proto.CoinCollectLevelDataOuterClass.CoinCollectLevelData.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getDoubleBestTeamInfoListFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -807,10 +688,11 @@ public final class CoinCollectLevelDataOuterClass {
         }
         if (doubleBestTeamInfoListBuilder_ == null) {
           doubleBestTeamInfoList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          doubleBestTeamInfoList_ = null;
           doubleBestTeamInfoListBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000001);
         pKPHLANBFAM_ = 0;
 
         return this;
@@ -971,7 +853,7 @@ public final class CoinCollectLevelDataOuterClass {
         if (other.getPKPHLANBFAM() != 0) {
           setPKPHLANBFAM(other.getPKPHLANBFAM());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -986,17 +868,100 @@ public final class CoinCollectLevelDataOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.CoinCollectLevelDataOuterClass.CoinCollectLevelData parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 18: {
+                emu.grasscutter.net.proto.CoinCollectTeamInfoDataOuterClass.CoinCollectTeamInfoData m =
+                    input.readMessage(
+                        emu.grasscutter.net.proto.CoinCollectTeamInfoDataOuterClass.CoinCollectTeamInfoData.parser(),
+                        extensionRegistry);
+                if (doubleBestTeamInfoListBuilder_ == null) {
+                  ensureDoubleBestTeamInfoListIsMutable();
+                  doubleBestTeamInfoList_.add(m);
+                } else {
+                  doubleBestTeamInfoListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              case 24: {
+                gENIGFJFKEE_ = input.readUInt32();
+
+                break;
+              } // case 24
+              case 32: {
+                nFKJLPLDDBM_ = input.readBool();
+
+                break;
+              } // case 32
+              case 40: {
+                isLevelOpen_ = input.readBool();
+
+                break;
+              } // case 40
+              case 66: {
+                input.readMessage(
+                    getSingleBestTeamInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 66
+              case 72: {
+                gICIIMOFPLC_ = input.readBool();
+
+                break;
+              } // case 72
+              case 80: {
+                nJJLELKNFPL_ = input.readBool();
+
+                break;
+              } // case 80
+              case 88: {
+                oIDEGDJMAAH_ = input.readUInt32();
+
+                break;
+              } // case 88
+              case 96: {
+                nOBHHOIAPMM_ = input.readUInt32();
+
+                break;
+              } // case 96
+              case 104: {
+                cGCAEFMBDLE_ = input.readUInt32();
+
+                break;
+              } // case 104
+              case 112: {
+                pKPHLANBFAM_ = input.readUInt32();
+
+                break;
+              } // case 112
+              case 120: {
+                levelId_ = input.readUInt32();
+
+                break;
+              } // case 120
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.CoinCollectLevelDataOuterClass.CoinCollectLevelData) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -1702,7 +1667,18 @@ public final class CoinCollectLevelDataOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new CoinCollectLevelData(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

@@ -124,106 +124,6 @@ public final class MassiveEntityElementOpBatchNotifyOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private MassiveEntityElementOpBatchNotify(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-
-              attackerId_ = input.readUInt32();
-              break;
-            }
-            case 32: {
-
-              opIdx_ = input.readUInt32();
-              break;
-            }
-            case 56: {
-
-              pIGDAOBDKBB_ = input.readInt32();
-              break;
-            }
-            case 72: {
-
-              iOJOIDKOIBH_ = input.readInt32();
-              break;
-            }
-            case 80: {
-
-              entityType_ = input.readInt32();
-              break;
-            }
-            case 90: {
-              emu.grasscutter.net.proto.ShapeBoxOuterClass.ShapeBox.Builder subBuilder = null;
-              if (checkShapeCase_ == 11) {
-                subBuilder = ((emu.grasscutter.net.proto.ShapeBoxOuterClass.ShapeBox) checkShape_).toBuilder();
-              }
-              checkShape_ =
-                  input.readMessage(emu.grasscutter.net.proto.ShapeBoxOuterClass.ShapeBox.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.ShapeBoxOuterClass.ShapeBox) checkShape_);
-                checkShape_ = subBuilder.buildPartial();
-              }
-              checkShapeCase_ = 11;
-              break;
-            }
-            case 98: {
-              emu.grasscutter.net.proto.ShapeSphereOuterClass.ShapeSphere.Builder subBuilder = null;
-              if (checkShapeCase_ == 12) {
-                subBuilder = ((emu.grasscutter.net.proto.ShapeSphereOuterClass.ShapeSphere) checkShape_).toBuilder();
-              }
-              checkShape_ =
-                  input.readMessage(emu.grasscutter.net.proto.ShapeSphereOuterClass.ShapeSphere.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.ShapeSphereOuterClass.ShapeSphere) checkShape_);
-                checkShape_ = subBuilder.buildPartial();
-              }
-              checkShapeCase_ = 12;
-              break;
-            }
-            case 104: {
-
-              userId_ = input.readUInt32();
-              break;
-            }
-            case 117: {
-
-              attackElementDurability_ = input.readFloat();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.MassiveEntityElementOpBatchNotifyOuterClass.internal_static_MassiveEntityElementOpBatchNotify_descriptor;
@@ -455,10 +355,10 @@ public final class MassiveEntityElementOpBatchNotifyOuterClass {
       if (userId_ != 0) {
         output.writeUInt32(13, userId_);
       }
-      if (attackElementDurability_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(attackElementDurability_) != 0) {
         output.writeFloat(14, attackElementDurability_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -499,11 +399,11 @@ public final class MassiveEntityElementOpBatchNotifyOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(13, userId_);
       }
-      if (attackElementDurability_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(attackElementDurability_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(14, attackElementDurability_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -546,7 +446,7 @@ public final class MassiveEntityElementOpBatchNotifyOuterClass {
         case 0:
         default:
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -584,7 +484,7 @@ public final class MassiveEntityElementOpBatchNotifyOuterClass {
         case 0:
         default:
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -706,18 +606,13 @@ public final class MassiveEntityElementOpBatchNotifyOuterClass {
 
       // Construct using emu.grasscutter.net.proto.MassiveEntityElementOpBatchNotifyOuterClass.MassiveEntityElementOpBatchNotify.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -734,6 +629,12 @@ public final class MassiveEntityElementOpBatchNotifyOuterClass {
 
         iOJOIDKOIBH_ = 0;
 
+        if (shapeSphereBuilder_ != null) {
+          shapeSphereBuilder_.clear();
+        }
+        if (shapeBoxBuilder_ != null) {
+          shapeBoxBuilder_.clear();
+        }
         attackElementDurability_ = 0F;
 
         checkShapeCase_ = 0;
@@ -868,7 +769,7 @@ public final class MassiveEntityElementOpBatchNotifyOuterClass {
             break;
           }
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -883,17 +784,79 @@ public final class MassiveEntityElementOpBatchNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.MassiveEntityElementOpBatchNotifyOuterClass.MassiveEntityElementOpBatchNotify parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                attackerId_ = input.readUInt32();
+
+                break;
+              } // case 8
+              case 32: {
+                opIdx_ = input.readUInt32();
+
+                break;
+              } // case 32
+              case 56: {
+                pIGDAOBDKBB_ = input.readInt32();
+
+                break;
+              } // case 56
+              case 72: {
+                iOJOIDKOIBH_ = input.readInt32();
+
+                break;
+              } // case 72
+              case 80: {
+                entityType_ = input.readInt32();
+
+                break;
+              } // case 80
+              case 90: {
+                input.readMessage(
+                    getShapeBoxFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                checkShapeCase_ = 11;
+                break;
+              } // case 90
+              case 98: {
+                input.readMessage(
+                    getShapeSphereFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                checkShapeCase_ = 12;
+                break;
+              } // case 98
+              case 104: {
+                userId_ = input.readUInt32();
+
+                break;
+              } // case 104
+              case 117: {
+                attackElementDurability_ = input.readFloat();
+
+                break;
+              } // case 117
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.MassiveEntityElementOpBatchNotifyOuterClass.MassiveEntityElementOpBatchNotify) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int checkShapeCase_ = 0;
@@ -1443,7 +1406,18 @@ public final class MassiveEntityElementOpBatchNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new MassiveEntityElementOpBatchNotify(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

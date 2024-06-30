@@ -108,95 +108,6 @@ public final class ItemOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private Item(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-
-              itemId_ = input.readUInt32();
-              break;
-            }
-            case 16: {
-
-              guid_ = input.readUInt64();
-              break;
-            }
-            case 42: {
-              emu.grasscutter.net.proto.MaterialOuterClass.Material.Builder subBuilder = null;
-              if (detailCase_ == 5) {
-                subBuilder = ((emu.grasscutter.net.proto.MaterialOuterClass.Material) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.MaterialOuterClass.Material.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.MaterialOuterClass.Material) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 5;
-              break;
-            }
-            case 50: {
-              emu.grasscutter.net.proto.EquipOuterClass.Equip.Builder subBuilder = null;
-              if (detailCase_ == 6) {
-                subBuilder = ((emu.grasscutter.net.proto.EquipOuterClass.Equip) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.EquipOuterClass.Equip.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.EquipOuterClass.Equip) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 6;
-              break;
-            }
-            case 58: {
-              emu.grasscutter.net.proto.FurnitureOuterClass.Furniture.Builder subBuilder = null;
-              if (detailCase_ == 7) {
-                subBuilder = ((emu.grasscutter.net.proto.FurnitureOuterClass.Furniture) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.FurnitureOuterClass.Furniture.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.FurnitureOuterClass.Furniture) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 7;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.ItemOuterClass.internal_static_Item_descriptor;
@@ -397,7 +308,7 @@ public final class ItemOuterClass {
       if (detailCase_ == 7) {
         output.writeMessage(7, (emu.grasscutter.net.proto.FurnitureOuterClass.Furniture) detail_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -426,7 +337,7 @@ public final class ItemOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, (emu.grasscutter.net.proto.FurnitureOuterClass.Furniture) detail_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -462,7 +373,7 @@ public final class ItemOuterClass {
         case 0:
         default:
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -494,7 +405,7 @@ public final class ItemOuterClass {
         case 0:
         default:
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -615,18 +526,13 @@ public final class ItemOuterClass {
 
       // Construct using emu.grasscutter.net.proto.ItemOuterClass.Item.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -635,6 +541,15 @@ public final class ItemOuterClass {
 
         guid_ = 0L;
 
+        if (materialBuilder_ != null) {
+          materialBuilder_.clear();
+        }
+        if (equipBuilder_ != null) {
+          equipBuilder_.clear();
+        }
+        if (furnitureBuilder_ != null) {
+          furnitureBuilder_.clear();
+        }
         detailCase_ = 0;
         detail_ = null;
         return this;
@@ -758,7 +673,7 @@ public final class ItemOuterClass {
             break;
           }
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -773,17 +688,61 @@ public final class ItemOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.ItemOuterClass.Item parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                itemId_ = input.readUInt32();
+
+                break;
+              } // case 8
+              case 16: {
+                guid_ = input.readUInt64();
+
+                break;
+              } // case 16
+              case 42: {
+                input.readMessage(
+                    getMaterialFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 5;
+                break;
+              } // case 42
+              case 50: {
+                input.readMessage(
+                    getEquipFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 6;
+                break;
+              } // case 50
+              case 58: {
+                input.readMessage(
+                    getFurnitureFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 7;
+                break;
+              } // case 58
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.ItemOuterClass.Item) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int detailCase_ = 0;
@@ -1319,7 +1278,18 @@ public final class ItemOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Item(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

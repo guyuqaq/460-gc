@@ -167,134 +167,6 @@ public final class RogueStageInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private RogueStageInfo(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-
-              curLevel_ = input.readUInt32();
-              break;
-            }
-            case 24: {
-
-              aGOJOHPCIGH_ = input.readBool();
-              break;
-            }
-            case 32: {
-
-              eEKEPFIGAHK_ = input.readUInt32();
-              break;
-            }
-            case 40: {
-
-              stageId_ = input.readUInt32();
-              break;
-            }
-            case 48: {
-
-              kIADBMBFJFK_ = input.readUInt32();
-              break;
-            }
-            case 56: {
-
-              lJKJLAHOHKL_ = input.readUInt32();
-              break;
-            }
-            case 64: {
-
-              isPassed_ = input.readBool();
-              break;
-            }
-            case 74: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                runeRecordList_ = new java.util.ArrayList<emu.grasscutter.net.proto.RoguelikeRuneRecordOuterClass.RoguelikeRuneRecord>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              runeRecordList_.add(
-                  input.readMessage(emu.grasscutter.net.proto.RoguelikeRuneRecordOuterClass.RoguelikeRuneRecord.parser(), extensionRegistry));
-              break;
-            }
-            case 80: {
-
-              isTakenReward_ = input.readBool();
-              break;
-            }
-            case 98: {
-              emu.grasscutter.net.proto.RogueShowAvatarTeamInfoOuterClass.RogueShowAvatarTeamInfo.Builder subBuilder = null;
-              if (avatarTeam_ != null) {
-                subBuilder = avatarTeam_.toBuilder();
-              }
-              avatarTeam_ = input.readMessage(emu.grasscutter.net.proto.RogueShowAvatarTeamInfoOuterClass.RogueShowAvatarTeamInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(avatarTeam_);
-                avatarTeam_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 104: {
-
-              jMMCGHNAINB_ = input.readUInt32();
-              break;
-            }
-            case 112: {
-
-              isOpen_ = input.readBool();
-              break;
-            }
-            case 120: {
-
-              nMCOPOECMDN_ = input.readBool();
-              break;
-            }
-            case 4072: {
-
-              aNIBHHPOKGM_ = input.readUInt32();
-              break;
-            }
-            case 15032: {
-
-              fLFNNNPKPMI_ = input.readUInt32();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          runeRecordList_ = java.util.Collections.unmodifiableList(runeRecordList_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.RogueStageInfoOuterClass.internal_static_RogueStageInfo_descriptor;
@@ -576,7 +448,7 @@ public final class RogueStageInfoOuterClass {
       if (fLFNNNPKPMI_ != 0) {
         output.writeUInt32(1879, fLFNNNPKPMI_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -645,7 +517,7 @@ public final class RogueStageInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(1879, fLFNNNPKPMI_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -693,7 +565,7 @@ public final class RogueStageInfoOuterClass {
           .equals(other.getRuneRecordListList())) return false;
       if (getJMMCGHNAINB()
           != other.getJMMCGHNAINB()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -743,7 +615,7 @@ public final class RogueStageInfoOuterClass {
       }
       hash = (37 * hash) + JMMCGHNAINB_FIELD_NUMBER;
       hash = (53 * hash) + getJMMCGHNAINB();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -864,19 +736,13 @@ public final class RogueStageInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.RogueStageInfoOuterClass.RogueStageInfo.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getRuneRecordListFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -913,10 +779,11 @@ public final class RogueStageInfoOuterClass {
 
         if (runeRecordListBuilder_ == null) {
           runeRecordList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          runeRecordList_ = null;
           runeRecordListBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000001);
         jMMCGHNAINB_ = 0;
 
         return this;
@@ -1089,7 +956,7 @@ public final class RogueStageInfoOuterClass {
         if (other.getJMMCGHNAINB() != 0) {
           setJMMCGHNAINB(other.getJMMCGHNAINB());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -1104,17 +971,115 @@ public final class RogueStageInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.RogueStageInfoOuterClass.RogueStageInfo parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                curLevel_ = input.readUInt32();
+
+                break;
+              } // case 8
+              case 24: {
+                aGOJOHPCIGH_ = input.readBool();
+
+                break;
+              } // case 24
+              case 32: {
+                eEKEPFIGAHK_ = input.readUInt32();
+
+                break;
+              } // case 32
+              case 40: {
+                stageId_ = input.readUInt32();
+
+                break;
+              } // case 40
+              case 48: {
+                kIADBMBFJFK_ = input.readUInt32();
+
+                break;
+              } // case 48
+              case 56: {
+                lJKJLAHOHKL_ = input.readUInt32();
+
+                break;
+              } // case 56
+              case 64: {
+                isPassed_ = input.readBool();
+
+                break;
+              } // case 64
+              case 74: {
+                emu.grasscutter.net.proto.RoguelikeRuneRecordOuterClass.RoguelikeRuneRecord m =
+                    input.readMessage(
+                        emu.grasscutter.net.proto.RoguelikeRuneRecordOuterClass.RoguelikeRuneRecord.parser(),
+                        extensionRegistry);
+                if (runeRecordListBuilder_ == null) {
+                  ensureRuneRecordListIsMutable();
+                  runeRecordList_.add(m);
+                } else {
+                  runeRecordListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 74
+              case 80: {
+                isTakenReward_ = input.readBool();
+
+                break;
+              } // case 80
+              case 98: {
+                input.readMessage(
+                    getAvatarTeamFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 98
+              case 104: {
+                jMMCGHNAINB_ = input.readUInt32();
+
+                break;
+              } // case 104
+              case 112: {
+                isOpen_ = input.readBool();
+
+                break;
+              } // case 112
+              case 120: {
+                nMCOPOECMDN_ = input.readBool();
+
+                break;
+              } // case 120
+              case 4072: {
+                aNIBHHPOKGM_ = input.readUInt32();
+
+                break;
+              } // case 4072
+              case 15032: {
+                fLFNNNPKPMI_ = input.readUInt32();
+
+                break;
+              } // case 15032
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.RogueStageInfoOuterClass.RogueStageInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -1913,7 +1878,18 @@ public final class RogueStageInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new RogueStageInfo(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

@@ -1618,1465 +1618,6 @@ public final class ActivityInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private ActivityInfo(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-
-              activityType_ = input.readUInt32();
-              break;
-            }
-            case 16: {
-
-              beginTime_ = input.readUInt32();
-              break;
-            }
-            case 24: {
-
-              activityId_ = input.readUInt32();
-              break;
-            }
-            case 32: {
-              if (!((mutable_bitField0_ & 0x00000040) != 0)) {
-                pHCOMIFAIJD_ = newIntList();
-                mutable_bitField0_ |= 0x00000040;
-              }
-              pHCOMIFAIJD_.addInt(input.readUInt32());
-              break;
-            }
-            case 34: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000040) != 0) && input.getBytesUntilLimit() > 0) {
-                pHCOMIFAIJD_ = newIntList();
-                mutable_bitField0_ |= 0x00000040;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                pHCOMIFAIJD_.addInt(input.readUInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            case 40: {
-
-              scheduleId_ = input.readUInt32();
-              break;
-            }
-            case 50: {
-              emu.grasscutter.net.proto.TrialAvatarActivityDetailInfoOuterClass.TrialAvatarActivityDetailInfo.Builder subBuilder = null;
-              if (detailCase_ == 6) {
-                subBuilder = ((emu.grasscutter.net.proto.TrialAvatarActivityDetailInfoOuterClass.TrialAvatarActivityDetailInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.TrialAvatarActivityDetailInfoOuterClass.TrialAvatarActivityDetailInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.TrialAvatarActivityDetailInfoOuterClass.TrialAvatarActivityDetailInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 6;
-              break;
-            }
-            case 58: {
-              emu.grasscutter.net.proto.CrucibleActivityDetailInfoOuterClass.CrucibleActivityDetailInfo.Builder subBuilder = null;
-              if (detailCase_ == 7) {
-                subBuilder = ((emu.grasscutter.net.proto.CrucibleActivityDetailInfoOuterClass.CrucibleActivityDetailInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.CrucibleActivityDetailInfoOuterClass.CrucibleActivityDetailInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.CrucibleActivityDetailInfoOuterClass.CrucibleActivityDetailInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 7;
-              break;
-            }
-            case 66: {
-              emu.grasscutter.net.proto.SalesmanActivityDetailInfoOuterClass.SalesmanActivityDetailInfo.Builder subBuilder = null;
-              if (detailCase_ == 8) {
-                subBuilder = ((emu.grasscutter.net.proto.SalesmanActivityDetailInfoOuterClass.SalesmanActivityDetailInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.SalesmanActivityDetailInfoOuterClass.SalesmanActivityDetailInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.SalesmanActivityDetailInfoOuterClass.SalesmanActivityDetailInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 8;
-              break;
-            }
-            case 74: {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                watcherInfoList_ = new java.util.ArrayList<emu.grasscutter.net.proto.ActivityWatcherInfoOuterClass.ActivityWatcherInfo>();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              watcherInfoList_.add(
-                  input.readMessage(emu.grasscutter.net.proto.ActivityWatcherInfoOuterClass.ActivityWatcherInfo.parser(), extensionRegistry));
-              break;
-            }
-            case 82: {
-              emu.grasscutter.net.proto.SeaLampActivityDetailInfoOuterClass.SeaLampActivityDetailInfo.Builder subBuilder = null;
-              if (detailCase_ == 10) {
-                subBuilder = ((emu.grasscutter.net.proto.SeaLampActivityDetailInfoOuterClass.SeaLampActivityDetailInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.SeaLampActivityDetailInfoOuterClass.SeaLampActivityDetailInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.SeaLampActivityDetailInfoOuterClass.SeaLampActivityDetailInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 10;
-              break;
-            }
-            case 88: {
-
-              endTime_ = input.readUInt32();
-              break;
-            }
-            case 96: {
-              if (!((mutable_bitField0_ & 0x00000010) != 0)) {
-                meetCondList_ = newIntList();
-                mutable_bitField0_ |= 0x00000010;
-              }
-              meetCondList_.addInt(input.readUInt32());
-              break;
-            }
-            case 98: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000010) != 0) && input.getBytesUntilLimit() > 0) {
-                meetCondList_ = newIntList();
-                mutable_bitField0_ |= 0x00000010;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                meetCondList_.addInt(input.readUInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            case 104: {
-
-              dKJDABCNGBP_ = input.readBool();
-              break;
-            }
-            case 112: {
-
-              isFinished_ = input.readBool();
-              break;
-            }
-            case 120: {
-
-              eNNDKMJIMHN_ = input.readBool();
-              break;
-            }
-            case 128: {
-
-              pJJKJGALLGD_ = input.readBool();
-              break;
-            }
-            case 306: {
-              emu.grasscutter.net.proto.LuminanceStoneChallengeActivityDetailInfoOuterClass.LuminanceStoneChallengeActivityDetailInfo.Builder subBuilder = null;
-              if (detailCase_ == 38) {
-                subBuilder = ((emu.grasscutter.net.proto.LuminanceStoneChallengeActivityDetailInfoOuterClass.LuminanceStoneChallengeActivityDetailInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.LuminanceStoneChallengeActivityDetailInfoOuterClass.LuminanceStoneChallengeActivityDetailInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.LuminanceStoneChallengeActivityDetailInfoOuterClass.LuminanceStoneChallengeActivityDetailInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 38;
-              break;
-            }
-            case 314: {
-              emu.grasscutter.net.proto.ArenaChallengeActivityDetailInfoOuterClass.ArenaChallengeActivityDetailInfo.Builder subBuilder = null;
-              if (detailCase_ == 39) {
-                subBuilder = ((emu.grasscutter.net.proto.ArenaChallengeActivityDetailInfoOuterClass.ArenaChallengeActivityDetailInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.ArenaChallengeActivityDetailInfoOuterClass.ArenaChallengeActivityDetailInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.ArenaChallengeActivityDetailInfoOuterClass.ArenaChallengeActivityDetailInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 39;
-              break;
-            }
-            case 434: {
-              emu.grasscutter.net.proto.IrodoriActivityDetailInfoOuterClass.IrodoriActivityDetailInfo.Builder subBuilder = null;
-              if (detailCase_ == 54) {
-                subBuilder = ((emu.grasscutter.net.proto.IrodoriActivityDetailInfoOuterClass.IrodoriActivityDetailInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.IrodoriActivityDetailInfoOuterClass.IrodoriActivityDetailInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.IrodoriActivityDetailInfoOuterClass.IrodoriActivityDetailInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 54;
-              break;
-            }
-            case 498: {
-              emu.grasscutter.net.proto.ToyBattleInfoOuterClass.ToyBattleInfo.Builder subBuilder = null;
-              if (detailCase_ == 62) {
-                subBuilder = ((emu.grasscutter.net.proto.ToyBattleInfoOuterClass.ToyBattleInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.ToyBattleInfoOuterClass.ToyBattleInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.ToyBattleInfoOuterClass.ToyBattleInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 62;
-              break;
-            }
-            case 882: {
-              emu.grasscutter.net.proto.DragonSpineActivityDetailInfoOuterClass.DragonSpineActivityDetailInfo.Builder subBuilder = null;
-              if (detailCase_ == 110) {
-                subBuilder = ((emu.grasscutter.net.proto.DragonSpineActivityDetailInfoOuterClass.DragonSpineActivityDetailInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.DragonSpineActivityDetailInfoOuterClass.DragonSpineActivityDetailInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.DragonSpineActivityDetailInfoOuterClass.DragonSpineActivityDetailInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 110;
-              break;
-            }
-            case 914: {
-              emu.grasscutter.net.proto.MichiaeMatsuriActivityDetailInfoOuterClass.MichiaeMatsuriActivityDetailInfo.Builder subBuilder = null;
-              if (detailCase_ == 114) {
-                subBuilder = ((emu.grasscutter.net.proto.MichiaeMatsuriActivityDetailInfoOuterClass.MichiaeMatsuriActivityDetailInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.MichiaeMatsuriActivityDetailInfoOuterClass.MichiaeMatsuriActivityDetailInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.MichiaeMatsuriActivityDetailInfoOuterClass.MichiaeMatsuriActivityDetailInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 114;
-              break;
-            }
-            case 994: {
-              emu.grasscutter.net.proto.GcgPveInfiniteInfoOuterClass.GcgPveInfiniteInfo.Builder subBuilder = null;
-              if (detailCase_ == 124) {
-                subBuilder = ((emu.grasscutter.net.proto.GcgPveInfiniteInfoOuterClass.GcgPveInfiniteInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.GcgPveInfiniteInfoOuterClass.GcgPveInfiniteInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.GcgPveInfiniteInfoOuterClass.GcgPveInfiniteInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 124;
-              break;
-            }
-            case 1810: {
-              emu.grasscutter.net.proto.PhotoUnderseaInfoOuterClass.PhotoUnderseaInfo.Builder subBuilder = null;
-              if (detailCase_ == 226) {
-                subBuilder = ((emu.grasscutter.net.proto.PhotoUnderseaInfoOuterClass.PhotoUnderseaInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.PhotoUnderseaInfoOuterClass.PhotoUnderseaInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.PhotoUnderseaInfoOuterClass.PhotoUnderseaInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 226;
-              break;
-            }
-            case 2082: {
-              emu.grasscutter.net.proto.AsterActivityDetailInfoOuterClass.AsterActivityDetailInfo.Builder subBuilder = null;
-              if (detailCase_ == 260) {
-                subBuilder = ((emu.grasscutter.net.proto.AsterActivityDetailInfoOuterClass.AsterActivityDetailInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.AsterActivityDetailInfoOuterClass.AsterActivityDetailInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.AsterActivityDetailInfoOuterClass.AsterActivityDetailInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 260;
-              break;
-            }
-            case 2346: {
-              emu.grasscutter.net.proto.FleurFairActivityDetailInfoOuterClass.FleurFairActivityDetailInfo.Builder subBuilder = null;
-              if (detailCase_ == 293) {
-                subBuilder = ((emu.grasscutter.net.proto.FleurFairActivityDetailInfoOuterClass.FleurFairActivityDetailInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.FleurFairActivityDetailInfoOuterClass.FleurFairActivityDetailInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.FleurFairActivityDetailInfoOuterClass.FleurFairActivityDetailInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 293;
-              break;
-            }
-            case 2442: {
-              emu.grasscutter.net.proto.EchoShellDetailInfoOuterClass.EchoShellDetailInfo.Builder subBuilder = null;
-              if (detailCase_ == 305) {
-                subBuilder = ((emu.grasscutter.net.proto.EchoShellDetailInfoOuterClass.EchoShellDetailInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.EchoShellDetailInfoOuterClass.EchoShellDetailInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.EchoShellDetailInfoOuterClass.EchoShellDetailInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 305;
-              break;
-            }
-            case 2450: {
-              emu.grasscutter.net.proto.PenumbraAdventureInfoOuterClass.PenumbraAdventureInfo.Builder subBuilder = null;
-              if (detailCase_ == 306) {
-                subBuilder = ((emu.grasscutter.net.proto.PenumbraAdventureInfoOuterClass.PenumbraAdventureInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.PenumbraAdventureInfoOuterClass.PenumbraAdventureInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.PenumbraAdventureInfoOuterClass.PenumbraAdventureInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 306;
-              break;
-            }
-            case 2650: {
-              emu.grasscutter.net.proto.BlessingActivityDetailInfoOuterClass.BlessingActivityDetailInfo.Builder subBuilder = null;
-              if (detailCase_ == 331) {
-                subBuilder = ((emu.grasscutter.net.proto.BlessingActivityDetailInfoOuterClass.BlessingActivityDetailInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.BlessingActivityDetailInfoOuterClass.BlessingActivityDetailInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.BlessingActivityDetailInfoOuterClass.BlessingActivityDetailInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 331;
-              break;
-            }
-            case 2850: {
-              emu.grasscutter.net.proto.GravenInnocenceDetailInfoOuterClass.GravenInnocenceDetailInfo.Builder subBuilder = null;
-              if (detailCase_ == 356) {
-                subBuilder = ((emu.grasscutter.net.proto.GravenInnocenceDetailInfoOuterClass.GravenInnocenceDetailInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.GravenInnocenceDetailInfoOuterClass.GravenInnocenceDetailInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.GravenInnocenceDetailInfoOuterClass.GravenInnocenceDetailInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 356;
-              break;
-            }
-            case 3114: {
-              emu.grasscutter.net.proto.MoonfinTrialActivityDetailInfoOuterClass.MoonfinTrialActivityDetailInfo.Builder subBuilder = null;
-              if (detailCase_ == 389) {
-                subBuilder = ((emu.grasscutter.net.proto.MoonfinTrialActivityDetailInfoOuterClass.MoonfinTrialActivityDetailInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.MoonfinTrialActivityDetailInfoOuterClass.MoonfinTrialActivityDetailInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.MoonfinTrialActivityDetailInfoOuterClass.MoonfinTrialActivityDetailInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 389;
-              break;
-            }
-            case 3418: {
-              emu.grasscutter.net.proto.RogueDiaryActivityDetailInfoOuterClass.RogueDiaryActivityDetailInfo.Builder subBuilder = null;
-              if (detailCase_ == 427) {
-                subBuilder = ((emu.grasscutter.net.proto.RogueDiaryActivityDetailInfoOuterClass.RogueDiaryActivityDetailInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.RogueDiaryActivityDetailInfoOuterClass.RogueDiaryActivityDetailInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.RogueDiaryActivityDetailInfoOuterClass.RogueDiaryActivityDetailInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 427;
-              break;
-            }
-            case 3570: {
-              emu.grasscutter.net.proto.SpiceActivityDetailInfoOuterClass.SpiceActivityDetailInfo.Builder subBuilder = null;
-              if (detailCase_ == 446) {
-                subBuilder = ((emu.grasscutter.net.proto.SpiceActivityDetailInfoOuterClass.SpiceActivityDetailInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.SpiceActivityDetailInfoOuterClass.SpiceActivityDetailInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.SpiceActivityDetailInfoOuterClass.SpiceActivityDetailInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 446;
-              break;
-            }
-            case 3856: {
-              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-                lJLDCLMAMNL_ = newIntList();
-                mutable_bitField0_ |= 0x00000004;
-              }
-              lJLDCLMAMNL_.addInt(input.readUInt32());
-              break;
-            }
-            case 3858: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000004) != 0) && input.getBytesUntilLimit() > 0) {
-                lJLDCLMAMNL_ = newIntList();
-                mutable_bitField0_ |= 0x00000004;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                lJLDCLMAMNL_.addInt(input.readUInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            case 4066: {
-              emu.grasscutter.net.proto.InstableSprayDetailInfoOuterClass.InstableSprayDetailInfo.Builder subBuilder = null;
-              if (detailCase_ == 508) {
-                subBuilder = ((emu.grasscutter.net.proto.InstableSprayDetailInfoOuterClass.InstableSprayDetailInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.InstableSprayDetailInfoOuterClass.InstableSprayDetailInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.InstableSprayDetailInfoOuterClass.InstableSprayDetailInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 508;
-              break;
-            }
-            case 4154: {
-              emu.grasscutter.net.proto.BuoyantCombatDetailInfoOuterClass.BuoyantCombatDetailInfo.Builder subBuilder = null;
-              if (detailCase_ == 519) {
-                subBuilder = ((emu.grasscutter.net.proto.BuoyantCombatDetailInfoOuterClass.BuoyantCombatDetailInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.BuoyantCombatDetailInfoOuterClass.BuoyantCombatDetailInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.BuoyantCombatDetailInfoOuterClass.BuoyantCombatDetailInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 519;
-              break;
-            }
-            case 4200: {
-
-              aBMOPKOIMPA_ = input.readBool();
-              break;
-            }
-            case 4410: {
-              emu.grasscutter.net.proto.BrickBreakerDetailInfoOuterClass.BrickBreakerDetailInfo.Builder subBuilder = null;
-              if (detailCase_ == 551) {
-                subBuilder = ((emu.grasscutter.net.proto.BrickBreakerDetailInfoOuterClass.BrickBreakerDetailInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.BrickBreakerDetailInfoOuterClass.BrickBreakerDetailInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.BrickBreakerDetailInfoOuterClass.BrickBreakerDetailInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 551;
-              break;
-            }
-            case 4968: {
-
-              cEFIPNKPEKA_ = input.readUInt32();
-              break;
-            }
-            case 5010: {
-              emu.grasscutter.net.proto.SandwormCannonDetailInfoOuterClass.SandwormCannonDetailInfo.Builder subBuilder = null;
-              if (detailCase_ == 626) {
-                subBuilder = ((emu.grasscutter.net.proto.SandwormCannonDetailInfoOuterClass.SandwormCannonDetailInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.SandwormCannonDetailInfoOuterClass.SandwormCannonDetailInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.SandwormCannonDetailInfoOuterClass.SandwormCannonDetailInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 626;
-              break;
-            }
-            case 5146: {
-              if (!((mutable_bitField0_ & 0x00000080) != 0)) {
-                activityPushTipsDataList_ = new java.util.ArrayList<emu.grasscutter.net.proto.ActivityPushTipsDataOuterClass.ActivityPushTipsData>();
-                mutable_bitField0_ |= 0x00000080;
-              }
-              activityPushTipsDataList_.add(
-                  input.readMessage(emu.grasscutter.net.proto.ActivityPushTipsDataOuterClass.ActivityPushTipsData.parser(), extensionRegistry));
-              break;
-            }
-            case 5394: {
-              emu.grasscutter.net.proto.ExpeditionActivityDetailInfoOuterClass.ExpeditionActivityDetailInfo.Builder subBuilder = null;
-              if (detailCase_ == 674) {
-                subBuilder = ((emu.grasscutter.net.proto.ExpeditionActivityDetailInfoOuterClass.ExpeditionActivityDetailInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.ExpeditionActivityDetailInfoOuterClass.ExpeditionActivityDetailInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.ExpeditionActivityDetailInfoOuterClass.ExpeditionActivityDetailInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 674;
-              break;
-            }
-            case 5864: {
-
-              iNGFNLLCDOL_ = input.readUInt32();
-              break;
-            }
-            case 6146: {
-              emu.grasscutter.net.proto.WindFieldDetailInfoOuterClass.WindFieldDetailInfo.Builder subBuilder = null;
-              if (detailCase_ == 768) {
-                subBuilder = ((emu.grasscutter.net.proto.WindFieldDetailInfoOuterClass.WindFieldDetailInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.WindFieldDetailInfoOuterClass.WindFieldDetailInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.WindFieldDetailInfoOuterClass.WindFieldDetailInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 768;
-              break;
-            }
-            case 6610: {
-              emu.grasscutter.net.proto.FlightActivityDetailInfoOuterClass.FlightActivityDetailInfo.Builder subBuilder = null;
-              if (detailCase_ == 826) {
-                subBuilder = ((emu.grasscutter.net.proto.FlightActivityDetailInfoOuterClass.FlightActivityDetailInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.FlightActivityDetailInfoOuterClass.FlightActivityDetailInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.FlightActivityDetailInfoOuterClass.FlightActivityDetailInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 826;
-              break;
-            }
-            case 6666: {
-              emu.grasscutter.net.proto.SeaLampV3DetailInfoOuterClass.SeaLampV3DetailInfo.Builder subBuilder = null;
-              if (detailCase_ == 833) {
-                subBuilder = ((emu.grasscutter.net.proto.SeaLampV3DetailInfoOuterClass.SeaLampV3DetailInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.SeaLampV3DetailInfoOuterClass.SeaLampV3DetailInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.SeaLampV3DetailInfoOuterClass.SeaLampV3DetailInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 833;
-              break;
-            }
-            case 6674: {
-              emu.grasscutter.net.proto.FungusFighterDetailInfoOuterClass.FungusFighterDetailInfo.Builder subBuilder = null;
-              if (detailCase_ == 834) {
-                subBuilder = ((emu.grasscutter.net.proto.FungusFighterDetailInfoOuterClass.FungusFighterDetailInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.FungusFighterDetailInfoOuterClass.FungusFighterDetailInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.FungusFighterDetailInfoOuterClass.FungusFighterDetailInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 834;
-              break;
-            }
-            case 6714: {
-              emu.grasscutter.net.proto.CoinCollectDetailInfoOuterClass.CoinCollectDetailInfo.Builder subBuilder = null;
-              if (detailCase_ == 839) {
-                subBuilder = ((emu.grasscutter.net.proto.CoinCollectDetailInfoOuterClass.CoinCollectDetailInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.CoinCollectDetailInfoOuterClass.CoinCollectDetailInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.CoinCollectDetailInfoOuterClass.CoinCollectDetailInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 839;
-              break;
-            }
-            case 6970: {
-              emu.grasscutter.net.proto.GcgPvePuzzleInfoOuterClass.GcgPvePuzzleInfo.Builder subBuilder = null;
-              if (detailCase_ == 871) {
-                subBuilder = ((emu.grasscutter.net.proto.GcgPvePuzzleInfoOuterClass.GcgPvePuzzleInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.GcgPvePuzzleInfoOuterClass.GcgPvePuzzleInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.GcgPvePuzzleInfoOuterClass.GcgPvePuzzleInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 871;
-              break;
-            }
-            case 7282: {
-              emu.grasscutter.net.proto.SummerTimeV2DetailInfoOuterClass.SummerTimeV2DetailInfo.Builder subBuilder = null;
-              if (detailCase_ == 910) {
-                subBuilder = ((emu.grasscutter.net.proto.SummerTimeV2DetailInfoOuterClass.SummerTimeV2DetailInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.SummerTimeV2DetailInfoOuterClass.SummerTimeV2DetailInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.SummerTimeV2DetailInfoOuterClass.SummerTimeV2DetailInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 910;
-              break;
-            }
-            case 7322: {
-              emu.grasscutter.net.proto.BlitzRushActivityDetailInfoOuterClass.BlitzRushActivityDetailInfo.Builder subBuilder = null;
-              if (detailCase_ == 915) {
-                subBuilder = ((emu.grasscutter.net.proto.BlitzRushActivityDetailInfoOuterClass.BlitzRushActivityDetailInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.BlitzRushActivityDetailInfoOuterClass.BlitzRushActivityDetailInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.BlitzRushActivityDetailInfoOuterClass.BlitzRushActivityDetailInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 915;
-              break;
-            }
-            case 7394: {
-              if (!((mutable_bitField0_ & 0x00000020) != 0)) {
-                wishGiftNumMap_ = com.google.protobuf.MapField.newMapField(
-                    WishGiftNumMapDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000020;
-              }
-              com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
-              wishGiftNumMap__ = input.readMessage(
-                  WishGiftNumMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              wishGiftNumMap_.getMutableMap().put(
-                  wishGiftNumMap__.getKey(), wishGiftNumMap__.getValue());
-              break;
-            }
-            case 7554: {
-              emu.grasscutter.net.proto.TanukiTravelActivityDetailInfoOuterClass.TanukiTravelActivityDetailInfo.Builder subBuilder = null;
-              if (detailCase_ == 944) {
-                subBuilder = ((emu.grasscutter.net.proto.TanukiTravelActivityDetailInfoOuterClass.TanukiTravelActivityDetailInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.TanukiTravelActivityDetailInfoOuterClass.TanukiTravelActivityDetailInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.TanukiTravelActivityDetailInfoOuterClass.TanukiTravelActivityDetailInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 944;
-              break;
-            }
-            case 7578: {
-              emu.grasscutter.net.proto.AnimalViewInfoOuterClass.AnimalViewInfo.Builder subBuilder = null;
-              if (detailCase_ == 947) {
-                subBuilder = ((emu.grasscutter.net.proto.AnimalViewInfoOuterClass.AnimalViewInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.AnimalViewInfoOuterClass.AnimalViewInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.AnimalViewInfoOuterClass.AnimalViewInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 947;
-              break;
-            }
-            case 7602: {
-              emu.grasscutter.net.proto.SummerTimeDetailInfoOuterClass.SummerTimeDetailInfo.Builder subBuilder = null;
-              if (detailCase_ == 950) {
-                subBuilder = ((emu.grasscutter.net.proto.SummerTimeDetailInfoOuterClass.SummerTimeDetailInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.SummerTimeDetailInfoOuterClass.SummerTimeDetailInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.SummerTimeDetailInfoOuterClass.SummerTimeDetailInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 950;
-              break;
-            }
-            case 7824: {
-
-              firstDayStartTime_ = input.readUInt32();
-              break;
-            }
-            case 7850: {
-              emu.grasscutter.net.proto.ElectroherculesBattleDetailInfoOuterClass.ElectroherculesBattleDetailInfo.Builder subBuilder = null;
-              if (detailCase_ == 981) {
-                subBuilder = ((emu.grasscutter.net.proto.ElectroherculesBattleDetailInfoOuterClass.ElectroherculesBattleDetailInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.ElectroherculesBattleDetailInfoOuterClass.ElectroherculesBattleDetailInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.ElectroherculesBattleDetailInfoOuterClass.ElectroherculesBattleDetailInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 981;
-              break;
-            }
-            case 7930: {
-              emu.grasscutter.net.proto.UgcV2InfoOuterClass.UgcV2Info.Builder subBuilder = null;
-              if (detailCase_ == 991) {
-                subBuilder = ((emu.grasscutter.net.proto.UgcV2InfoOuterClass.UgcV2Info) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.UgcV2InfoOuterClass.UgcV2Info.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.UgcV2InfoOuterClass.UgcV2Info) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 991;
-              break;
-            }
-            case 8082: {
-              emu.grasscutter.net.proto.EffigyActivityDetailInfoOuterClass.EffigyActivityDetailInfo.Builder subBuilder = null;
-              if (detailCase_ == 1010) {
-                subBuilder = ((emu.grasscutter.net.proto.EffigyActivityDetailInfoOuterClass.EffigyActivityDetailInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.EffigyActivityDetailInfoOuterClass.EffigyActivityDetailInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.EffigyActivityDetailInfoOuterClass.EffigyActivityDetailInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 1010;
-              break;
-            }
-            case 8202: {
-              emu.grasscutter.net.proto.RoguelikeDungeonActivityDetailInfoOuterClass.RoguelikeDungeonActivityDetailInfo.Builder subBuilder = null;
-              if (detailCase_ == 1025) {
-                subBuilder = ((emu.grasscutter.net.proto.RoguelikeDungeonActivityDetailInfoOuterClass.RoguelikeDungeonActivityDetailInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.RoguelikeDungeonActivityDetailInfoOuterClass.RoguelikeDungeonActivityDetailInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.RoguelikeDungeonActivityDetailInfoOuterClass.RoguelikeDungeonActivityDetailInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 1025;
-              break;
-            }
-            case 8226: {
-              emu.grasscutter.net.proto.RockBoardExploreDetailInfoOuterClass.RockBoardExploreDetailInfo.Builder subBuilder = null;
-              if (detailCase_ == 1028) {
-                subBuilder = ((emu.grasscutter.net.proto.RockBoardExploreDetailInfoOuterClass.RockBoardExploreDetailInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.RockBoardExploreDetailInfoOuterClass.RockBoardExploreDetailInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.RockBoardExploreDetailInfoOuterClass.RockBoardExploreDetailInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 1028;
-              break;
-            }
-            case 8282: {
-              emu.grasscutter.net.proto.FontaineGatherInfoOuterClass.FontaineGatherInfo.Builder subBuilder = null;
-              if (detailCase_ == 1035) {
-                subBuilder = ((emu.grasscutter.net.proto.FontaineGatherInfoOuterClass.FontaineGatherInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.FontaineGatherInfoOuterClass.FontaineGatherInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.FontaineGatherInfoOuterClass.FontaineGatherInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 1035;
-              break;
-            }
-            case 8354: {
-              emu.grasscutter.net.proto.IslandPartyDetailInfoOuterClass.IslandPartyDetailInfo.Builder subBuilder = null;
-              if (detailCase_ == 1044) {
-                subBuilder = ((emu.grasscutter.net.proto.IslandPartyDetailInfoOuterClass.IslandPartyDetailInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.IslandPartyDetailInfoOuterClass.IslandPartyDetailInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.IslandPartyDetailInfoOuterClass.IslandPartyDetailInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 1044;
-              break;
-            }
-            case 8618: {
-              emu.grasscutter.net.proto.SorushTrialDetailInfoOuterClass.SorushTrialDetailInfo.Builder subBuilder = null;
-              if (detailCase_ == 1077) {
-                subBuilder = ((emu.grasscutter.net.proto.SorushTrialDetailInfoOuterClass.SorushTrialDetailInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.SorushTrialDetailInfoOuterClass.SorushTrialDetailInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.SorushTrialDetailInfoOuterClass.SorushTrialDetailInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 1077;
-              break;
-            }
-            case 8698: {
-              emu.grasscutter.net.proto.ChessActivityDetailInfoOuterClass.ChessActivityDetailInfo.Builder subBuilder = null;
-              if (detailCase_ == 1087) {
-                subBuilder = ((emu.grasscutter.net.proto.ChessActivityDetailInfoOuterClass.ChessActivityDetailInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.ChessActivityDetailInfoOuterClass.ChessActivityDetailInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.ChessActivityDetailInfoOuterClass.ChessActivityDetailInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 1087;
-              break;
-            }
-            case 8914: {
-              emu.grasscutter.net.proto.SeaLampActivityInfoOuterClass.SeaLampActivityInfo.Builder subBuilder = null;
-              if (detailCase_ == 1114) {
-                subBuilder = ((emu.grasscutter.net.proto.SeaLampActivityInfoOuterClass.SeaLampActivityInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.SeaLampActivityInfoOuterClass.SeaLampActivityInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.SeaLampActivityInfoOuterClass.SeaLampActivityInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 1114;
-              break;
-            }
-            case 8936: {
-
-              gFEMIEBKKKL_ = input.readBool();
-              break;
-            }
-            case 9322: {
-              emu.grasscutter.net.proto.TeamChainDetailInfoOuterClass.TeamChainDetailInfo.Builder subBuilder = null;
-              if (detailCase_ == 1165) {
-                subBuilder = ((emu.grasscutter.net.proto.TeamChainDetailInfoOuterClass.TeamChainDetailInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.TeamChainDetailInfoOuterClass.TeamChainDetailInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.TeamChainDetailInfoOuterClass.TeamChainDetailInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 1165;
-              break;
-            }
-            case 9410: {
-              emu.grasscutter.net.proto.HachiActivityDetailInfoOuterClass.HachiActivityDetailInfo.Builder subBuilder = null;
-              if (detailCase_ == 1176) {
-                subBuilder = ((emu.grasscutter.net.proto.HachiActivityDetailInfoOuterClass.HachiActivityDetailInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.HachiActivityDetailInfoOuterClass.HachiActivityDetailInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.HachiActivityDetailInfoOuterClass.HachiActivityDetailInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 1176;
-              break;
-            }
-            case 9538: {
-              emu.grasscutter.net.proto.GachaActivityDetailInfoOuterClass.GachaActivityDetailInfo.Builder subBuilder = null;
-              if (detailCase_ == 1192) {
-                subBuilder = ((emu.grasscutter.net.proto.GachaActivityDetailInfoOuterClass.GachaActivityDetailInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.GachaActivityDetailInfoOuterClass.GachaActivityDetailInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.GachaActivityDetailInfoOuterClass.GachaActivityDetailInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 1192;
-              break;
-            }
-            case 9706: {
-              emu.grasscutter.net.proto.ActivityMultiCharacterInfoOuterClass.ActivityMultiCharacterInfo.Builder subBuilder = null;
-              if (detailCase_ == 1213) {
-                subBuilder = ((emu.grasscutter.net.proto.ActivityMultiCharacterInfoOuterClass.ActivityMultiCharacterInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.ActivityMultiCharacterInfoOuterClass.ActivityMultiCharacterInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.ActivityMultiCharacterInfoOuterClass.ActivityMultiCharacterInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 1213;
-              break;
-            }
-            case 9778: {
-              emu.grasscutter.net.proto.CharAmusementDetailInfoOuterClass.CharAmusementDetailInfo.Builder subBuilder = null;
-              if (detailCase_ == 1222) {
-                subBuilder = ((emu.grasscutter.net.proto.CharAmusementDetailInfoOuterClass.CharAmusementDetailInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.CharAmusementDetailInfoOuterClass.CharAmusementDetailInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.CharAmusementDetailInfoOuterClass.CharAmusementDetailInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 1222;
-              break;
-            }
-            case 10010: {
-              emu.grasscutter.net.proto.TreasureSeelieActivityDetailInfoOuterClass.TreasureSeelieActivityDetailInfo.Builder subBuilder = null;
-              if (detailCase_ == 1251) {
-                subBuilder = ((emu.grasscutter.net.proto.TreasureSeelieActivityDetailInfoOuterClass.TreasureSeelieActivityDetailInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.TreasureSeelieActivityDetailInfoOuterClass.TreasureSeelieActivityDetailInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.TreasureSeelieActivityDetailInfoOuterClass.TreasureSeelieActivityDetailInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 1251;
-              break;
-            }
-            case 10106: {
-              emu.grasscutter.net.proto.GearActivityDetailInfoOuterClass.GearActivityDetailInfo.Builder subBuilder = null;
-              if (detailCase_ == 1263) {
-                subBuilder = ((emu.grasscutter.net.proto.GearActivityDetailInfoOuterClass.GearActivityDetailInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.GearActivityDetailInfoOuterClass.GearActivityDetailInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.GearActivityDetailInfoOuterClass.GearActivityDetailInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 1263;
-              break;
-            }
-            case 10202: {
-              emu.grasscutter.net.proto.EffigyChallengeV2DetailInfoOuterClass.EffigyChallengeV2DetailInfo.Builder subBuilder = null;
-              if (detailCase_ == 1275) {
-                subBuilder = ((emu.grasscutter.net.proto.EffigyChallengeV2DetailInfoOuterClass.EffigyChallengeV2DetailInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.EffigyChallengeV2DetailInfoOuterClass.EffigyChallengeV2DetailInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.EffigyChallengeV2DetailInfoOuterClass.EffigyChallengeV2DetailInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 1275;
-              break;
-            }
-            case 10274: {
-              emu.grasscutter.net.proto.FindHilichurlDetailInfoOuterClass.FindHilichurlDetailInfo.Builder subBuilder = null;
-              if (detailCase_ == 1284) {
-                subBuilder = ((emu.grasscutter.net.proto.FindHilichurlDetailInfoOuterClass.FindHilichurlDetailInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.FindHilichurlDetailInfoOuterClass.FindHilichurlDetailInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.FindHilichurlDetailInfoOuterClass.FindHilichurlDetailInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 1284;
-              break;
-            }
-            case 10410: {
-              emu.grasscutter.net.proto.CrystalLinkActivityDetailInfoOuterClass.CrystalLinkActivityDetailInfo.Builder subBuilder = null;
-              if (detailCase_ == 1301) {
-                subBuilder = ((emu.grasscutter.net.proto.CrystalLinkActivityDetailInfoOuterClass.CrystalLinkActivityDetailInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.CrystalLinkActivityDetailInfoOuterClass.CrystalLinkActivityDetailInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.CrystalLinkActivityDetailInfoOuterClass.CrystalLinkActivityDetailInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 1301;
-              break;
-            }
-            case 10434: {
-              emu.grasscutter.net.proto.GcgPveInfoOuterClass.GcgPveInfo.Builder subBuilder = null;
-              if (detailCase_ == 1304) {
-                subBuilder = ((emu.grasscutter.net.proto.GcgPveInfoOuterClass.GcgPveInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.GcgPveInfoOuterClass.GcgPveInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.GcgPveInfoOuterClass.GcgPveInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 1304;
-              break;
-            }
-            case 10570: {
-              emu.grasscutter.net.proto.EffigyChallengeV4InfoOuterClass.EffigyChallengeV4Info.Builder subBuilder = null;
-              if (detailCase_ == 1321) {
-                subBuilder = ((emu.grasscutter.net.proto.EffigyChallengeV4InfoOuterClass.EffigyChallengeV4Info) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.EffigyChallengeV4InfoOuterClass.EffigyChallengeV4Info.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.EffigyChallengeV4InfoOuterClass.EffigyChallengeV4Info) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 1321;
-              break;
-            }
-            case 11530: {
-              emu.grasscutter.net.proto.BartenderActivityDetailInfoOuterClass.BartenderActivityDetailInfo.Builder subBuilder = null;
-              if (detailCase_ == 1441) {
-                subBuilder = ((emu.grasscutter.net.proto.BartenderActivityDetailInfoOuterClass.BartenderActivityDetailInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.BartenderActivityDetailInfoOuterClass.BartenderActivityDetailInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.BartenderActivityDetailInfoOuterClass.BartenderActivityDetailInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 1441;
-              break;
-            }
-            case 11722: {
-              emu.grasscutter.net.proto.VintageActivityDetailInfoOuterClass.VintageActivityDetailInfo.Builder subBuilder = null;
-              if (detailCase_ == 1465) {
-                subBuilder = ((emu.grasscutter.net.proto.VintageActivityDetailInfoOuterClass.VintageActivityDetailInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.VintageActivityDetailInfoOuterClass.VintageActivityDetailInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.VintageActivityDetailInfoOuterClass.VintageActivityDetailInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 1465;
-              break;
-            }
-            case 11794: {
-              emu.grasscutter.net.proto.MuqadasPotionActivityDetailInfoOuterClass.MuqadasPotionActivityDetailInfo.Builder subBuilder = null;
-              if (detailCase_ == 1474) {
-                subBuilder = ((emu.grasscutter.net.proto.MuqadasPotionActivityDetailInfoOuterClass.MuqadasPotionActivityDetailInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.MuqadasPotionActivityDetailInfoOuterClass.MuqadasPotionActivityDetailInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.MuqadasPotionActivityDetailInfoOuterClass.MuqadasPotionActivityDetailInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 1474;
-              break;
-            }
-            case 11882: {
-              emu.grasscutter.net.proto.PotionActivityDetailInfoOuterClass.PotionActivityDetailInfo.Builder subBuilder = null;
-              if (detailCase_ == 1485) {
-                subBuilder = ((emu.grasscutter.net.proto.PotionActivityDetailInfoOuterClass.PotionActivityDetailInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.PotionActivityDetailInfoOuterClass.PotionActivityDetailInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.PotionActivityDetailInfoOuterClass.PotionActivityDetailInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 1485;
-              break;
-            }
-            case 11938: {
-              emu.grasscutter.net.proto.PhotoActivityDetailInfoOuterClass.PhotoActivityDetailInfo.Builder subBuilder = null;
-              if (detailCase_ == 1492) {
-                subBuilder = ((emu.grasscutter.net.proto.PhotoActivityDetailInfoOuterClass.PhotoActivityDetailInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.PhotoActivityDetailInfoOuterClass.PhotoActivityDetailInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.PhotoActivityDetailInfoOuterClass.PhotoActivityDetailInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 1492;
-              break;
-            }
-            case 12194: {
-              emu.grasscutter.net.proto.AkaFesDetailInfoOuterClass.AkaFesDetailInfo.Builder subBuilder = null;
-              if (detailCase_ == 1524) {
-                subBuilder = ((emu.grasscutter.net.proto.AkaFesDetailInfoOuterClass.AkaFesDetailInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.AkaFesDetailInfoOuterClass.AkaFesDetailInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.AkaFesDetailInfoOuterClass.AkaFesDetailInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 1524;
-              break;
-            }
-            case 12330: {
-              emu.grasscutter.net.proto.FungusFighterV2DetailInfoOuterClass.FungusFighterV2DetailInfo.Builder subBuilder = null;
-              if (detailCase_ == 1541) {
-                subBuilder = ((emu.grasscutter.net.proto.FungusFighterV2DetailInfoOuterClass.FungusFighterV2DetailInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.FungusFighterV2DetailInfoOuterClass.FungusFighterV2DetailInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.FungusFighterV2DetailInfoOuterClass.FungusFighterV2DetailInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 1541;
-              break;
-            }
-            case 12440: {
-
-              curScore_ = input.readUInt32();
-              break;
-            }
-            case 12498: {
-              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
-                activityCoinMap_ = com.google.protobuf.MapField.newMapField(
-                    ActivityCoinMapDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000008;
-              }
-              com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
-              activityCoinMap__ = input.readMessage(
-                  ActivityCoinMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              activityCoinMap_.getMutableMap().put(
-                  activityCoinMap__.getKey(), activityCoinMap__.getValue());
-              break;
-            }
-            case 12978: {
-              emu.grasscutter.net.proto.MistTrialActivityDetailInfoOuterClass.MistTrialActivityDetailInfo.Builder subBuilder = null;
-              if (detailCase_ == 1622) {
-                subBuilder = ((emu.grasscutter.net.proto.MistTrialActivityDetailInfoOuterClass.MistTrialActivityDetailInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.MistTrialActivityDetailInfoOuterClass.MistTrialActivityDetailInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.MistTrialActivityDetailInfoOuterClass.MistTrialActivityDetailInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 1622;
-              break;
-            }
-            case 13314: {
-              emu.grasscutter.net.proto.GCGFestivalDetailInfoOuterClass.GCGFestivalDetailInfo.Builder subBuilder = null;
-              if (detailCase_ == 1664) {
-                subBuilder = ((emu.grasscutter.net.proto.GCGFestivalDetailInfoOuterClass.GCGFestivalDetailInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.GCGFestivalDetailInfoOuterClass.GCGFestivalDetailInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.GCGFestivalDetailInfoOuterClass.GCGFestivalDetailInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 1664;
-              break;
-            }
-            case 13362: {
-              emu.grasscutter.net.proto.DuelHeartDetailInfoOuterClass.DuelHeartDetailInfo.Builder subBuilder = null;
-              if (detailCase_ == 1670) {
-                subBuilder = ((emu.grasscutter.net.proto.DuelHeartDetailInfoOuterClass.DuelHeartDetailInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.DuelHeartDetailInfoOuterClass.DuelHeartDetailInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.DuelHeartDetailInfoOuterClass.DuelHeartDetailInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 1670;
-              break;
-            }
-            case 13624: {
-
-              fGFGECAAKJM_ = input.readUInt32();
-              break;
-            }
-            case 13888: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                dNMOEAFCDGC_ = newIntList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              dNMOEAFCDGC_.addInt(input.readUInt32());
-              break;
-            }
-            case 13890: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
-                dNMOEAFCDGC_ = newIntList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                dNMOEAFCDGC_.addInt(input.readUInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            case 13978: {
-              emu.grasscutter.net.proto.HideAndSeekActivityDetailInfoOuterClass.HideAndSeekActivityDetailInfo.Builder subBuilder = null;
-              if (detailCase_ == 1747) {
-                subBuilder = ((emu.grasscutter.net.proto.HideAndSeekActivityDetailInfoOuterClass.HideAndSeekActivityDetailInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.HideAndSeekActivityDetailInfoOuterClass.HideAndSeekActivityDetailInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.HideAndSeekActivityDetailInfoOuterClass.HideAndSeekActivityDetailInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 1747;
-              break;
-            }
-            case 14034: {
-              emu.grasscutter.net.proto.TreasureMapActivityDetailInfoOuterClass.TreasureMapActivityDetailInfo.Builder subBuilder = null;
-              if (detailCase_ == 1754) {
-                subBuilder = ((emu.grasscutter.net.proto.TreasureMapActivityDetailInfoOuterClass.TreasureMapActivityDetailInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.TreasureMapActivityDetailInfoOuterClass.TreasureMapActivityDetailInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.TreasureMapActivityDetailInfoOuterClass.TreasureMapActivityDetailInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 1754;
-              break;
-            }
-            case 14058: {
-              emu.grasscutter.net.proto.ChannelerSlabActivityDetailInfoOuterClass.ChannelerSlabActivityDetailInfo.Builder subBuilder = null;
-              if (detailCase_ == 1757) {
-                subBuilder = ((emu.grasscutter.net.proto.ChannelerSlabActivityDetailInfoOuterClass.ChannelerSlabActivityDetailInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.ChannelerSlabActivityDetailInfoOuterClass.ChannelerSlabActivityDetailInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.ChannelerSlabActivityDetailInfoOuterClass.ChannelerSlabActivityDetailInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 1757;
-              break;
-            }
-            case 14362: {
-              emu.grasscutter.net.proto.UgcActivityDetailInfoOuterClass.UgcActivityDetailInfo.Builder subBuilder = null;
-              if (detailCase_ == 1795) {
-                subBuilder = ((emu.grasscutter.net.proto.UgcActivityDetailInfoOuterClass.UgcActivityDetailInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.UgcActivityDetailInfoOuterClass.UgcActivityDetailInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.UgcActivityDetailInfoOuterClass.UgcActivityDetailInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 1795;
-              break;
-            }
-            case 14544: {
-
-              bKJNDLLNAML_ = input.readBool();
-              break;
-            }
-            case 14770: {
-              emu.grasscutter.net.proto.DeliveryActivityDetailInfoOuterClass.DeliveryActivityDetailInfo.Builder subBuilder = null;
-              if (detailCase_ == 1846) {
-                subBuilder = ((emu.grasscutter.net.proto.DeliveryActivityDetailInfoOuterClass.DeliveryActivityDetailInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.DeliveryActivityDetailInfoOuterClass.DeliveryActivityDetailInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.DeliveryActivityDetailInfoOuterClass.DeliveryActivityDetailInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 1846;
-              break;
-            }
-            case 14778: {
-              emu.grasscutter.net.proto.MusicGameActivityDetailInfoOuterClass.MusicGameActivityDetailInfo.Builder subBuilder = null;
-              if (detailCase_ == 1847) {
-                subBuilder = ((emu.grasscutter.net.proto.MusicGameActivityDetailInfoOuterClass.MusicGameActivityDetailInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.MusicGameActivityDetailInfoOuterClass.MusicGameActivityDetailInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.MusicGameActivityDetailInfoOuterClass.MusicGameActivityDetailInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 1847;
-              break;
-            }
-            case 14834: {
-              emu.grasscutter.net.proto.PlantFlowerActivityDetailInfoOuterClass.PlantFlowerActivityDetailInfo.Builder subBuilder = null;
-              if (detailCase_ == 1854) {
-                subBuilder = ((emu.grasscutter.net.proto.PlantFlowerActivityDetailInfoOuterClass.PlantFlowerActivityDetailInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.PlantFlowerActivityDetailInfoOuterClass.PlantFlowerActivityDetailInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.PlantFlowerActivityDetailInfoOuterClass.PlantFlowerActivityDetailInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 1854;
-              break;
-            }
-            case 14842: {
-              emu.grasscutter.net.proto.DigActivityDetailInfoOuterClass.DigActivityDetailInfo.Builder subBuilder = null;
-              if (detailCase_ == 1855) {
-                subBuilder = ((emu.grasscutter.net.proto.DigActivityDetailInfoOuterClass.DigActivityDetailInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.DigActivityDetailInfoOuterClass.DigActivityDetailInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.DigActivityDetailInfoOuterClass.DigActivityDetailInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 1855;
-              break;
-            }
-            case 14914: {
-              emu.grasscutter.net.proto.BounceConjuringActivityDetailInfoOuterClass.BounceConjuringActivityDetailInfo.Builder subBuilder = null;
-              if (detailCase_ == 1864) {
-                subBuilder = ((emu.grasscutter.net.proto.BounceConjuringActivityDetailInfoOuterClass.BounceConjuringActivityDetailInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.BounceConjuringActivityDetailInfoOuterClass.BounceConjuringActivityDetailInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.BounceConjuringActivityDetailInfoOuterClass.BounceConjuringActivityDetailInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 1864;
-              break;
-            }
-            case 14954: {
-              emu.grasscutter.net.proto.JourneyInfoOuterClass.JourneyInfo.Builder subBuilder = null;
-              if (detailCase_ == 1869) {
-                subBuilder = ((emu.grasscutter.net.proto.JourneyInfoOuterClass.JourneyInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.JourneyInfoOuterClass.JourneyInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.JourneyInfoOuterClass.JourneyInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 1869;
-              break;
-            }
-            case 15770: {
-              emu.grasscutter.net.proto.LunaRiteDetailInfoOuterClass.LunaRiteDetailInfo.Builder subBuilder = null;
-              if (detailCase_ == 1971) {
-                subBuilder = ((emu.grasscutter.net.proto.LunaRiteDetailInfoOuterClass.LunaRiteDetailInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.LunaRiteDetailInfoOuterClass.LunaRiteDetailInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.LunaRiteDetailInfoOuterClass.LunaRiteDetailInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 1971;
-              break;
-            }
-            case 15842: {
-              emu.grasscutter.net.proto.LanternRiteActivityDetailInfoOuterClass.LanternRiteActivityDetailInfo.Builder subBuilder = null;
-              if (detailCase_ == 1980) {
-                subBuilder = ((emu.grasscutter.net.proto.LanternRiteActivityDetailInfoOuterClass.LanternRiteActivityDetailInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.LanternRiteActivityDetailInfoOuterClass.LanternRiteActivityDetailInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.LanternRiteActivityDetailInfoOuterClass.LanternRiteActivityDetailInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 1980;
-              break;
-            }
-            case 15858: {
-              emu.grasscutter.net.proto.FleurFairV2DetailInfoOuterClass.FleurFairV2DetailInfo.Builder subBuilder = null;
-              if (detailCase_ == 1982) {
-                subBuilder = ((emu.grasscutter.net.proto.FleurFairV2DetailInfoOuterClass.FleurFairV2DetailInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.FleurFairV2DetailInfoOuterClass.FleurFairV2DetailInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.FleurFairV2DetailInfoOuterClass.FleurFairV2DetailInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 1982;
-              break;
-            }
-            case 15978: {
-              emu.grasscutter.net.proto.WaterSpiritActivityDetailInfoOuterClass.WaterSpiritActivityDetailInfo.Builder subBuilder = null;
-              if (detailCase_ == 1997) {
-                subBuilder = ((emu.grasscutter.net.proto.WaterSpiritActivityDetailInfoOuterClass.WaterSpiritActivityDetailInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.WaterSpiritActivityDetailInfoOuterClass.WaterSpiritActivityDetailInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.WaterSpiritActivityDetailInfoOuterClass.WaterSpiritActivityDetailInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 1997;
-              break;
-            }
-            case 16066: {
-              emu.grasscutter.net.proto.SumoActivityDetailInfoOuterClass.SumoActivityDetailInfo.Builder subBuilder = null;
-              if (detailCase_ == 2008) {
-                subBuilder = ((emu.grasscutter.net.proto.SumoActivityDetailInfoOuterClass.SumoActivityDetailInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.SumoActivityDetailInfoOuterClass.SumoActivityDetailInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.SumoActivityDetailInfoOuterClass.SumoActivityDetailInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 2008;
-              break;
-            }
-            case 16114: {
-              emu.grasscutter.net.proto.WinterCampActivityDetailInfoOuterClass.WinterCampActivityDetailInfo.Builder subBuilder = null;
-              if (detailCase_ == 2014) {
-                subBuilder = ((emu.grasscutter.net.proto.WinterCampActivityDetailInfoOuterClass.WinterCampActivityDetailInfo) detail_).toBuilder();
-              }
-              detail_ =
-                  input.readMessage(emu.grasscutter.net.proto.WinterCampActivityDetailInfoOuterClass.WinterCampActivityDetailInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.WinterCampActivityDetailInfoOuterClass.WinterCampActivityDetailInfo) detail_);
-                detail_ = subBuilder.buildPartial();
-              }
-              detailCase_ = 2014;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000040) != 0)) {
-          pHCOMIFAIJD_.makeImmutable(); // C
-        }
-        if (((mutable_bitField0_ & 0x00000002) != 0)) {
-          watcherInfoList_ = java.util.Collections.unmodifiableList(watcherInfoList_);
-        }
-        if (((mutable_bitField0_ & 0x00000010) != 0)) {
-          meetCondList_.makeImmutable(); // C
-        }
-        if (((mutable_bitField0_ & 0x00000004) != 0)) {
-          lJLDCLMAMNL_.makeImmutable(); // C
-        }
-        if (((mutable_bitField0_ & 0x00000080) != 0)) {
-          activityPushTipsDataList_ = java.util.Collections.unmodifiableList(activityPushTipsDataList_);
-        }
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          dNMOEAFCDGC_.makeImmutable(); // C
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.ActivityInfoOuterClass.internal_static_ActivityInfo_descriptor;
@@ -6854,7 +5395,7 @@ public final class ActivityInfoOuterClass {
       if (detailCase_ == 2014) {
         output.writeMessage(2014, (emu.grasscutter.net.proto.WinterCampActivityDetailInfoOuterClass.WinterCampActivityDetailInfo) detail_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -7355,7 +5896,7 @@ public final class ActivityInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2014, (emu.grasscutter.net.proto.WinterCampActivityDetailInfoOuterClass.WinterCampActivityDetailInfo) detail_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -7765,7 +6306,7 @@ public final class ActivityInfoOuterClass {
         case 0:
         default:
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -8193,7 +6734,7 @@ public final class ActivityInfoOuterClass {
         case 0:
         default:
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -8340,20 +6881,13 @@ public final class ActivityInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.ActivityInfoOuterClass.ActivityInfo.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getWatcherInfoListFieldBuilder();
-          getActivityPushTipsDataListFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -8364,10 +6898,11 @@ public final class ActivityInfoOuterClass {
         bitField0_ = (bitField0_ & ~0x00000001);
         if (watcherInfoListBuilder_ == null) {
           watcherInfoList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
+          watcherInfoList_ = null;
           watcherInfoListBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000002);
         isFinished_ = false;
 
         lJLDCLMAMNL_ = emptyIntList();
@@ -8410,9 +6945,265 @@ public final class ActivityInfoOuterClass {
         bitField0_ = (bitField0_ & ~0x00000040);
         if (activityPushTipsDataListBuilder_ == null) {
           activityPushTipsDataList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000080);
         } else {
+          activityPushTipsDataList_ = null;
           activityPushTipsDataListBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000080);
+        if (samLampInfoBuilder_ != null) {
+          samLampInfoBuilder_.clear();
+        }
+        if (crucibleInfoBuilder_ != null) {
+          crucibleInfoBuilder_.clear();
+        }
+        if (salesmanInfoBuilder_ != null) {
+          salesmanInfoBuilder_.clear();
+        }
+        if (trialAvatarInfoBuilder_ != null) {
+          trialAvatarInfoBuilder_.clear();
+        }
+        if (deliveryInfoBuilder_ != null) {
+          deliveryInfoBuilder_.clear();
+        }
+        if (asterInfoBuilder_ != null) {
+          asterInfoBuilder_.clear();
+        }
+        if (flightInfoBuilder_ != null) {
+          flightInfoBuilder_.clear();
+        }
+        if (dragonSpineInfoBuilder_ != null) {
+          dragonSpineInfoBuilder_.clear();
+        }
+        if (effigyInfoBuilder_ != null) {
+          effigyInfoBuilder_.clear();
+        }
+        if (treasureMapInfoBuilder_ != null) {
+          treasureMapInfoBuilder_.clear();
+        }
+        if (blessingInfoBuilder_ != null) {
+          blessingInfoBuilder_.clear();
+        }
+        if (seaLampInfoBuilder_ != null) {
+          seaLampInfoBuilder_.clear();
+        }
+        if (expeditionInfoBuilder_ != null) {
+          expeditionInfoBuilder_.clear();
+        }
+        if (arenaChallengeInfoBuilder_ != null) {
+          arenaChallengeInfoBuilder_.clear();
+        }
+        if (fleurFairInfoBuilder_ != null) {
+          fleurFairInfoBuilder_.clear();
+        }
+        if (waterSpiritInfoBuilder_ != null) {
+          waterSpiritInfoBuilder_.clear();
+        }
+        if (challnelerSlabInfoBuilder_ != null) {
+          challnelerSlabInfoBuilder_.clear();
+        }
+        if (mistTrialActivityInfoBuilder_ != null) {
+          mistTrialActivityInfoBuilder_.clear();
+        }
+        if (hideAndSeekInfoBuilder_ != null) {
+          hideAndSeekInfoBuilder_.clear();
+        }
+        if (findHilichurlInfoBuilder_ != null) {
+          findHilichurlInfoBuilder_.clear();
+        }
+        if (summerTimeInfoBuilder_ != null) {
+          summerTimeInfoBuilder_.clear();
+        }
+        if (buoyantCombatInfoBuilder_ != null) {
+          buoyantCombatInfoBuilder_.clear();
+        }
+        if (echoShellInfoBuilder_ != null) {
+          echoShellInfoBuilder_.clear();
+        }
+        if (bounceConjuringInfoBuilder_ != null) {
+          bounceConjuringInfoBuilder_.clear();
+        }
+        if (blitzRushInfoBuilder_ != null) {
+          blitzRushInfoBuilder_.clear();
+        }
+        if (chessInfoBuilder_ != null) {
+          chessInfoBuilder_.clear();
+        }
+        if (sumoInfoBuilder_ != null) {
+          sumoInfoBuilder_.clear();
+        }
+        if (moonfinTrialInfoBuilder_ != null) {
+          moonfinTrialInfoBuilder_.clear();
+        }
+        if (lunaRiteInfoBuilder_ != null) {
+          lunaRiteInfoBuilder_.clear();
+        }
+        if (plantFlowerInfoBuilder_ != null) {
+          plantFlowerInfoBuilder_.clear();
+        }
+        if (musicGameInfoBuilder_ != null) {
+          musicGameInfoBuilder_.clear();
+        }
+        if (roguelikeDungoenInfoBuilder_ != null) {
+          roguelikeDungoenInfoBuilder_.clear();
+        }
+        if (digInfoBuilder_ != null) {
+          digInfoBuilder_.clear();
+        }
+        if (hachiInfoBuilder_ != null) {
+          hachiInfoBuilder_.clear();
+        }
+        if (winterCampInfoBuilder_ != null) {
+          winterCampInfoBuilder_.clear();
+        }
+        if (potionInfoBuilder_ != null) {
+          potionInfoBuilder_.clear();
+        }
+        if (tanukiTravelActivityInfoBuilder_ != null) {
+          tanukiTravelActivityInfoBuilder_.clear();
+        }
+        if (lanternRiteActivityInfoBuilder_ != null) {
+          lanternRiteActivityInfoBuilder_.clear();
+        }
+        if (michiaeMatsuriInfoBuilder_ != null) {
+          michiaeMatsuriInfoBuilder_.clear();
+        }
+        if (bartenderInfoBuilder_ != null) {
+          bartenderInfoBuilder_.clear();
+        }
+        if (ugcInfoBuilder_ != null) {
+          ugcInfoBuilder_.clear();
+        }
+        if (crystalLinkInfoBuilder_ != null) {
+          crystalLinkInfoBuilder_.clear();
+        }
+        if (irodoriInfoBuilder_ != null) {
+          irodoriInfoBuilder_.clear();
+        }
+        if (photoInfoBuilder_ != null) {
+          photoInfoBuilder_.clear();
+        }
+        if (spiceInfoBuilder_ != null) {
+          spiceInfoBuilder_.clear();
+        }
+        if (gachaInfoBuilder_ != null) {
+          gachaInfoBuilder_.clear();
+        }
+        if (luminanceStoneChallengeInfoBuilder_ != null) {
+          luminanceStoneChallengeInfoBuilder_.clear();
+        }
+        if (rogueDiaryInfoBuilder_ != null) {
+          rogueDiaryInfoBuilder_.clear();
+        }
+        if (summerTimeV2InfoBuilder_ != null) {
+          summerTimeV2InfoBuilder_.clear();
+        }
+        if (islandPartyInfoBuilder_ != null) {
+          islandPartyInfoBuilder_.clear();
+        }
+        if (gearInfoBuilder_ != null) {
+          gearInfoBuilder_.clear();
+        }
+        if (gravenInnocenceInfoBuilder_ != null) {
+          gravenInnocenceInfoBuilder_.clear();
+        }
+        if (instableSprayInfoBuilder_ != null) {
+          instableSprayInfoBuilder_.clear();
+        }
+        if (muqadasPotionInfoBuilder_ != null) {
+          muqadasPotionInfoBuilder_.clear();
+        }
+        if (treasureSeelieInfoBuilder_ != null) {
+          treasureSeelieInfoBuilder_.clear();
+        }
+        if (rockBoardExploreInfoBuilder_ != null) {
+          rockBoardExploreInfoBuilder_.clear();
+        }
+        if (vintageInfoBuilder_ != null) {
+          vintageInfoBuilder_.clear();
+        }
+        if (windFieldInfoBuilder_ != null) {
+          windFieldInfoBuilder_.clear();
+        }
+        if (fungusFighterInfoBuilder_ != null) {
+          fungusFighterInfoBuilder_.clear();
+        }
+        if (charAmusementInfoBuilder_ != null) {
+          charAmusementInfoBuilder_.clear();
+        }
+        if (effigyChallengeInfoBuilder_ != null) {
+          effigyChallengeInfoBuilder_.clear();
+        }
+        if (coinCollectInfoBuilder_ != null) {
+          coinCollectInfoBuilder_.clear();
+        }
+        if (brickBreakerInfoBuilder_ != null) {
+          brickBreakerInfoBuilder_.clear();
+        }
+        if (duelHeartInfoBuilder_ != null) {
+          duelHeartInfoBuilder_.clear();
+        }
+        if (seaLampV3InfoBuilder_ != null) {
+          seaLampV3InfoBuilder_.clear();
+        }
+        if (teamChainInfoBuilder_ != null) {
+          teamChainInfoBuilder_.clear();
+        }
+        if (electroherculesBattleInfoBuilder_ != null) {
+          electroherculesBattleInfoBuilder_.clear();
+        }
+        if (gcgFestivalInfoBuilder_ != null) {
+          gcgFestivalInfoBuilder_.clear();
+        }
+        if (fleurFairV2InfoBuilder_ != null) {
+          fleurFairV2InfoBuilder_.clear();
+        }
+        if (fungusFighterV2InfoBuilder_ != null) {
+          fungusFighterV2InfoBuilder_.clear();
+        }
+        if (akaFesInfoBuilder_ != null) {
+          akaFesInfoBuilder_.clear();
+        }
+        if (sandwormCannonDetailInfoBuilder_ != null) {
+          sandwormCannonDetailInfoBuilder_.clear();
+        }
+        if (sorushTrialInfoBuilder_ != null) {
+          sorushTrialInfoBuilder_.clear();
+        }
+        if (journeyInfoBuilder_ != null) {
+          journeyInfoBuilder_.clear();
+        }
+        if (effigyChallengeV4InfoBuilder_ != null) {
+          effigyChallengeV4InfoBuilder_.clear();
+        }
+        if (gcgPveInfoBuilder_ != null) {
+          gcgPveInfoBuilder_.clear();
+        }
+        if (ugcV2InfoBuilder_ != null) {
+          ugcV2InfoBuilder_.clear();
+        }
+        if (penumbraAdventureInfoBuilder_ != null) {
+          penumbraAdventureInfoBuilder_.clear();
+        }
+        if (animalViewInfoBuilder_ != null) {
+          animalViewInfoBuilder_.clear();
+        }
+        if (activityMultiCharacterInfoBuilder_ != null) {
+          activityMultiCharacterInfoBuilder_.clear();
+        }
+        if (gcgPveInfiniteInfoBuilder_ != null) {
+          gcgPveInfiniteInfoBuilder_.clear();
+        }
+        if (toyBattleInfoBuilder_ != null) {
+          toyBattleInfoBuilder_.clear();
+        }
+        if (photoUnderseaInfoBuilder_ != null) {
+          photoUnderseaInfoBuilder_.clear();
+        }
+        if (fontaineGatherInfoBuilder_ != null) {
+          fontaineGatherInfoBuilder_.clear();
+        }
+        if (gcgPvePuzzleInfoBuilder_ != null) {
+          gcgPvePuzzleInfoBuilder_.clear();
         }
         detailCase_ = 0;
         detail_ = null;
@@ -9638,7 +8429,7 @@ public final class ActivityInfoOuterClass {
             break;
           }
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -9653,17 +8444,816 @@ public final class ActivityInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.ActivityInfoOuterClass.ActivityInfo parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                activityType_ = input.readUInt32();
+
+                break;
+              } // case 8
+              case 16: {
+                beginTime_ = input.readUInt32();
+
+                break;
+              } // case 16
+              case 24: {
+                activityId_ = input.readUInt32();
+
+                break;
+              } // case 24
+              case 32: {
+                int v = input.readUInt32();
+                ensurePHCOMIFAIJDIsMutable();
+                pHCOMIFAIJD_.addInt(v);
+                break;
+              } // case 32
+              case 34: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensurePHCOMIFAIJDIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  pHCOMIFAIJD_.addInt(input.readUInt32());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 34
+              case 40: {
+                scheduleId_ = input.readUInt32();
+
+                break;
+              } // case 40
+              case 50: {
+                input.readMessage(
+                    getTrialAvatarInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 6;
+                break;
+              } // case 50
+              case 58: {
+                input.readMessage(
+                    getCrucibleInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 7;
+                break;
+              } // case 58
+              case 66: {
+                input.readMessage(
+                    getSalesmanInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 8;
+                break;
+              } // case 66
+              case 74: {
+                emu.grasscutter.net.proto.ActivityWatcherInfoOuterClass.ActivityWatcherInfo m =
+                    input.readMessage(
+                        emu.grasscutter.net.proto.ActivityWatcherInfoOuterClass.ActivityWatcherInfo.parser(),
+                        extensionRegistry);
+                if (watcherInfoListBuilder_ == null) {
+                  ensureWatcherInfoListIsMutable();
+                  watcherInfoList_.add(m);
+                } else {
+                  watcherInfoListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 74
+              case 82: {
+                input.readMessage(
+                    getSamLampInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 10;
+                break;
+              } // case 82
+              case 88: {
+                endTime_ = input.readUInt32();
+
+                break;
+              } // case 88
+              case 96: {
+                int v = input.readUInt32();
+                ensureMeetCondListIsMutable();
+                meetCondList_.addInt(v);
+                break;
+              } // case 96
+              case 98: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureMeetCondListIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  meetCondList_.addInt(input.readUInt32());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 98
+              case 104: {
+                dKJDABCNGBP_ = input.readBool();
+
+                break;
+              } // case 104
+              case 112: {
+                isFinished_ = input.readBool();
+
+                break;
+              } // case 112
+              case 120: {
+                eNNDKMJIMHN_ = input.readBool();
+
+                break;
+              } // case 120
+              case 128: {
+                pJJKJGALLGD_ = input.readBool();
+
+                break;
+              } // case 128
+              case 306: {
+                input.readMessage(
+                    getLuminanceStoneChallengeInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 38;
+                break;
+              } // case 306
+              case 314: {
+                input.readMessage(
+                    getArenaChallengeInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 39;
+                break;
+              } // case 314
+              case 434: {
+                input.readMessage(
+                    getIrodoriInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 54;
+                break;
+              } // case 434
+              case 498: {
+                input.readMessage(
+                    getToyBattleInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 62;
+                break;
+              } // case 498
+              case 882: {
+                input.readMessage(
+                    getDragonSpineInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 110;
+                break;
+              } // case 882
+              case 914: {
+                input.readMessage(
+                    getMichiaeMatsuriInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 114;
+                break;
+              } // case 914
+              case 994: {
+                input.readMessage(
+                    getGcgPveInfiniteInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 124;
+                break;
+              } // case 994
+              case 1810: {
+                input.readMessage(
+                    getPhotoUnderseaInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 226;
+                break;
+              } // case 1810
+              case 2082: {
+                input.readMessage(
+                    getAsterInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 260;
+                break;
+              } // case 2082
+              case 2346: {
+                input.readMessage(
+                    getFleurFairInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 293;
+                break;
+              } // case 2346
+              case 2442: {
+                input.readMessage(
+                    getEchoShellInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 305;
+                break;
+              } // case 2442
+              case 2450: {
+                input.readMessage(
+                    getPenumbraAdventureInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 306;
+                break;
+              } // case 2450
+              case 2650: {
+                input.readMessage(
+                    getBlessingInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 331;
+                break;
+              } // case 2650
+              case 2850: {
+                input.readMessage(
+                    getGravenInnocenceInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 356;
+                break;
+              } // case 2850
+              case 3114: {
+                input.readMessage(
+                    getMoonfinTrialInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 389;
+                break;
+              } // case 3114
+              case 3418: {
+                input.readMessage(
+                    getRogueDiaryInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 427;
+                break;
+              } // case 3418
+              case 3570: {
+                input.readMessage(
+                    getSpiceInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 446;
+                break;
+              } // case 3570
+              case 3856: {
+                int v = input.readUInt32();
+                ensureLJLDCLMAMNLIsMutable();
+                lJLDCLMAMNL_.addInt(v);
+                break;
+              } // case 3856
+              case 3858: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureLJLDCLMAMNLIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  lJLDCLMAMNL_.addInt(input.readUInt32());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 3858
+              case 4066: {
+                input.readMessage(
+                    getInstableSprayInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 508;
+                break;
+              } // case 4066
+              case 4154: {
+                input.readMessage(
+                    getBuoyantCombatInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 519;
+                break;
+              } // case 4154
+              case 4200: {
+                aBMOPKOIMPA_ = input.readBool();
+
+                break;
+              } // case 4200
+              case 4410: {
+                input.readMessage(
+                    getBrickBreakerInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 551;
+                break;
+              } // case 4410
+              case 4968: {
+                cEFIPNKPEKA_ = input.readUInt32();
+
+                break;
+              } // case 4968
+              case 5010: {
+                input.readMessage(
+                    getSandwormCannonDetailInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 626;
+                break;
+              } // case 5010
+              case 5146: {
+                emu.grasscutter.net.proto.ActivityPushTipsDataOuterClass.ActivityPushTipsData m =
+                    input.readMessage(
+                        emu.grasscutter.net.proto.ActivityPushTipsDataOuterClass.ActivityPushTipsData.parser(),
+                        extensionRegistry);
+                if (activityPushTipsDataListBuilder_ == null) {
+                  ensureActivityPushTipsDataListIsMutable();
+                  activityPushTipsDataList_.add(m);
+                } else {
+                  activityPushTipsDataListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 5146
+              case 5394: {
+                input.readMessage(
+                    getExpeditionInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 674;
+                break;
+              } // case 5394
+              case 5864: {
+                iNGFNLLCDOL_ = input.readUInt32();
+
+                break;
+              } // case 5864
+              case 6146: {
+                input.readMessage(
+                    getWindFieldInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 768;
+                break;
+              } // case 6146
+              case 6610: {
+                input.readMessage(
+                    getFlightInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 826;
+                break;
+              } // case 6610
+              case 6666: {
+                input.readMessage(
+                    getSeaLampV3InfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 833;
+                break;
+              } // case 6666
+              case 6674: {
+                input.readMessage(
+                    getFungusFighterInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 834;
+                break;
+              } // case 6674
+              case 6714: {
+                input.readMessage(
+                    getCoinCollectInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 839;
+                break;
+              } // case 6714
+              case 6970: {
+                input.readMessage(
+                    getGcgPvePuzzleInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 871;
+                break;
+              } // case 6970
+              case 7282: {
+                input.readMessage(
+                    getSummerTimeV2InfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 910;
+                break;
+              } // case 7282
+              case 7322: {
+                input.readMessage(
+                    getBlitzRushInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 915;
+                break;
+              } // case 7322
+              case 7394: {
+                com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
+                wishGiftNumMap__ = input.readMessage(
+                    WishGiftNumMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutableWishGiftNumMap().getMutableMap().put(
+                    wishGiftNumMap__.getKey(), wishGiftNumMap__.getValue());
+                break;
+              } // case 7394
+              case 7554: {
+                input.readMessage(
+                    getTanukiTravelActivityInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 944;
+                break;
+              } // case 7554
+              case 7578: {
+                input.readMessage(
+                    getAnimalViewInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 947;
+                break;
+              } // case 7578
+              case 7602: {
+                input.readMessage(
+                    getSummerTimeInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 950;
+                break;
+              } // case 7602
+              case 7824: {
+                firstDayStartTime_ = input.readUInt32();
+
+                break;
+              } // case 7824
+              case 7850: {
+                input.readMessage(
+                    getElectroherculesBattleInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 981;
+                break;
+              } // case 7850
+              case 7930: {
+                input.readMessage(
+                    getUgcV2InfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 991;
+                break;
+              } // case 7930
+              case 8082: {
+                input.readMessage(
+                    getEffigyInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 1010;
+                break;
+              } // case 8082
+              case 8202: {
+                input.readMessage(
+                    getRoguelikeDungoenInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 1025;
+                break;
+              } // case 8202
+              case 8226: {
+                input.readMessage(
+                    getRockBoardExploreInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 1028;
+                break;
+              } // case 8226
+              case 8282: {
+                input.readMessage(
+                    getFontaineGatherInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 1035;
+                break;
+              } // case 8282
+              case 8354: {
+                input.readMessage(
+                    getIslandPartyInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 1044;
+                break;
+              } // case 8354
+              case 8618: {
+                input.readMessage(
+                    getSorushTrialInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 1077;
+                break;
+              } // case 8618
+              case 8698: {
+                input.readMessage(
+                    getChessInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 1087;
+                break;
+              } // case 8698
+              case 8914: {
+                input.readMessage(
+                    getSeaLampInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 1114;
+                break;
+              } // case 8914
+              case 8936: {
+                gFEMIEBKKKL_ = input.readBool();
+
+                break;
+              } // case 8936
+              case 9322: {
+                input.readMessage(
+                    getTeamChainInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 1165;
+                break;
+              } // case 9322
+              case 9410: {
+                input.readMessage(
+                    getHachiInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 1176;
+                break;
+              } // case 9410
+              case 9538: {
+                input.readMessage(
+                    getGachaInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 1192;
+                break;
+              } // case 9538
+              case 9706: {
+                input.readMessage(
+                    getActivityMultiCharacterInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 1213;
+                break;
+              } // case 9706
+              case 9778: {
+                input.readMessage(
+                    getCharAmusementInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 1222;
+                break;
+              } // case 9778
+              case 10010: {
+                input.readMessage(
+                    getTreasureSeelieInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 1251;
+                break;
+              } // case 10010
+              case 10106: {
+                input.readMessage(
+                    getGearInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 1263;
+                break;
+              } // case 10106
+              case 10202: {
+                input.readMessage(
+                    getEffigyChallengeInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 1275;
+                break;
+              } // case 10202
+              case 10274: {
+                input.readMessage(
+                    getFindHilichurlInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 1284;
+                break;
+              } // case 10274
+              case 10410: {
+                input.readMessage(
+                    getCrystalLinkInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 1301;
+                break;
+              } // case 10410
+              case 10434: {
+                input.readMessage(
+                    getGcgPveInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 1304;
+                break;
+              } // case 10434
+              case 10570: {
+                input.readMessage(
+                    getEffigyChallengeV4InfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 1321;
+                break;
+              } // case 10570
+              case 11530: {
+                input.readMessage(
+                    getBartenderInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 1441;
+                break;
+              } // case 11530
+              case 11722: {
+                input.readMessage(
+                    getVintageInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 1465;
+                break;
+              } // case 11722
+              case 11794: {
+                input.readMessage(
+                    getMuqadasPotionInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 1474;
+                break;
+              } // case 11794
+              case 11882: {
+                input.readMessage(
+                    getPotionInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 1485;
+                break;
+              } // case 11882
+              case 11938: {
+                input.readMessage(
+                    getPhotoInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 1492;
+                break;
+              } // case 11938
+              case 12194: {
+                input.readMessage(
+                    getAkaFesInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 1524;
+                break;
+              } // case 12194
+              case 12330: {
+                input.readMessage(
+                    getFungusFighterV2InfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 1541;
+                break;
+              } // case 12330
+              case 12440: {
+                curScore_ = input.readUInt32();
+
+                break;
+              } // case 12440
+              case 12498: {
+                com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
+                activityCoinMap__ = input.readMessage(
+                    ActivityCoinMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutableActivityCoinMap().getMutableMap().put(
+                    activityCoinMap__.getKey(), activityCoinMap__.getValue());
+                break;
+              } // case 12498
+              case 12978: {
+                input.readMessage(
+                    getMistTrialActivityInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 1622;
+                break;
+              } // case 12978
+              case 13314: {
+                input.readMessage(
+                    getGcgFestivalInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 1664;
+                break;
+              } // case 13314
+              case 13362: {
+                input.readMessage(
+                    getDuelHeartInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 1670;
+                break;
+              } // case 13362
+              case 13624: {
+                fGFGECAAKJM_ = input.readUInt32();
+
+                break;
+              } // case 13624
+              case 13888: {
+                int v = input.readUInt32();
+                ensureDNMOEAFCDGCIsMutable();
+                dNMOEAFCDGC_.addInt(v);
+                break;
+              } // case 13888
+              case 13890: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureDNMOEAFCDGCIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  dNMOEAFCDGC_.addInt(input.readUInt32());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 13890
+              case 13978: {
+                input.readMessage(
+                    getHideAndSeekInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 1747;
+                break;
+              } // case 13978
+              case 14034: {
+                input.readMessage(
+                    getTreasureMapInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 1754;
+                break;
+              } // case 14034
+              case 14058: {
+                input.readMessage(
+                    getChallnelerSlabInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 1757;
+                break;
+              } // case 14058
+              case 14362: {
+                input.readMessage(
+                    getUgcInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 1795;
+                break;
+              } // case 14362
+              case 14544: {
+                bKJNDLLNAML_ = input.readBool();
+
+                break;
+              } // case 14544
+              case 14770: {
+                input.readMessage(
+                    getDeliveryInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 1846;
+                break;
+              } // case 14770
+              case 14778: {
+                input.readMessage(
+                    getMusicGameInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 1847;
+                break;
+              } // case 14778
+              case 14834: {
+                input.readMessage(
+                    getPlantFlowerInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 1854;
+                break;
+              } // case 14834
+              case 14842: {
+                input.readMessage(
+                    getDigInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 1855;
+                break;
+              } // case 14842
+              case 14914: {
+                input.readMessage(
+                    getBounceConjuringInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 1864;
+                break;
+              } // case 14914
+              case 14954: {
+                input.readMessage(
+                    getJourneyInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 1869;
+                break;
+              } // case 14954
+              case 15770: {
+                input.readMessage(
+                    getLunaRiteInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 1971;
+                break;
+              } // case 15770
+              case 15842: {
+                input.readMessage(
+                    getLanternRiteActivityInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 1980;
+                break;
+              } // case 15842
+              case 15858: {
+                input.readMessage(
+                    getFleurFairV2InfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 1982;
+                break;
+              } // case 15858
+              case 15978: {
+                input.readMessage(
+                    getWaterSpiritInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 1997;
+                break;
+              } // case 15978
+              case 16066: {
+                input.readMessage(
+                    getSumoInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 2008;
+                break;
+              } // case 16066
+              case 16114: {
+                input.readMessage(
+                    getWinterCampInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                detailCase_ = 2014;
+                break;
+              } // case 16114
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.ActivityInfoOuterClass.ActivityInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int detailCase_ = 0;
@@ -23279,7 +22869,18 @@ public final class ActivityInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new ActivityInfo(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

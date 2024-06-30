@@ -212,194 +212,6 @@ public final class EvtCreateGadgetNotifyOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private EvtCreateGadgetNotify(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-
-              propOwnerEntityId_ = input.readUInt32();
-              break;
-            }
-            case 16: {
-
-              targetEntityId_ = input.readUInt32();
-              break;
-            }
-            case 24: {
-
-              roomId_ = input.readUInt32();
-              break;
-            }
-            case 34: {
-              emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder subBuilder = null;
-              if (initEulerAngles_ != null) {
-                subBuilder = initEulerAngles_.toBuilder();
-              }
-              initEulerAngles_ = input.readMessage(emu.grasscutter.net.proto.VectorOuterClass.Vector.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(initEulerAngles_);
-                initEulerAngles_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 40: {
-
-              campType_ = input.readUInt32();
-              break;
-            }
-            case 48: {
-
-              cNIILEKPCMD_ = input.readBool();
-              break;
-            }
-            case 56: {
-              int rawValue = input.readEnum();
-
-              forwardType_ = rawValue;
-              break;
-            }
-            case 64: {
-
-              targetLockPointIndex_ = input.readUInt32();
-              break;
-            }
-            case 74: {
-              emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder subBuilder = null;
-              if (initPos_ != null) {
-                subBuilder = initPos_.toBuilder();
-              }
-              initPos_ = input.readMessage(emu.grasscutter.net.proto.VectorOuterClass.Vector.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(initPos_);
-                initPos_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 80: {
-
-              entityId_ = input.readUInt32();
-              break;
-            }
-            case 88: {
-
-              guid_ = input.readUInt64();
-              break;
-            }
-            case 96: {
-
-              campId_ = input.readUInt32();
-              break;
-            }
-            case 104: {
-
-              hEPFGKFLCCD_ = input.readBool();
-              break;
-            }
-            case 112: {
-
-              ownerEntityId_ = input.readUInt32();
-              break;
-            }
-            case 120: {
-
-              configId_ = input.readUInt32();
-              break;
-            }
-            case 1728: {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                targetEntityIdList_ = newIntList();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              targetEntityIdList_.addInt(input.readUInt32());
-              break;
-            }
-            case 1730: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000002) != 0) && input.getBytesUntilLimit() > 0) {
-                targetEntityIdList_ = newIntList();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                targetEntityIdList_.addInt(input.readUInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            case 3504: {
-
-              isAsyncLoad_ = input.readBool();
-              break;
-            }
-            case 4128: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                targetLockPointIndexList_ = newIntList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              targetLockPointIndexList_.addInt(input.readUInt32());
-              break;
-            }
-            case 4130: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
-                targetLockPointIndexList_ = newIntList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                targetLockPointIndexList_.addInt(input.readUInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            case 15088: {
-
-              isPeerIdFromPlayer_ = input.readBool();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000002) != 0)) {
-          targetEntityIdList_.makeImmutable(); // C
-        }
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          targetLockPointIndexList_.makeImmutable(); // C
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.EvtCreateGadgetNotifyOuterClass.internal_static_EvtCreateGadgetNotify_descriptor;
@@ -774,7 +586,7 @@ public final class EvtCreateGadgetNotifyOuterClass {
       if (isPeerIdFromPlayer_ != false) {
         output.writeBool(1886, isPeerIdFromPlayer_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -879,7 +691,7 @@ public final class EvtCreateGadgetNotifyOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(1886, isPeerIdFromPlayer_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -937,7 +749,7 @@ public final class EvtCreateGadgetNotifyOuterClass {
           != other.getEntityId()) return false;
       if (getCNIILEKPCMD()
           != other.getCNIILEKPCMD()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -999,7 +811,7 @@ public final class EvtCreateGadgetNotifyOuterClass {
       hash = (37 * hash) + CNIILEKPCMD_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getCNIILEKPCMD());
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -1121,18 +933,13 @@ public final class EvtCreateGadgetNotifyOuterClass {
 
       // Construct using emu.grasscutter.net.proto.EvtCreateGadgetNotifyOuterClass.EvtCreateGadgetNotify.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1364,7 +1171,7 @@ public final class EvtCreateGadgetNotifyOuterClass {
         if (other.getCNIILEKPCMD() != false) {
           setCNIILEKPCMD(other.getCNIILEKPCMD());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -1379,17 +1186,151 @@ public final class EvtCreateGadgetNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.EvtCreateGadgetNotifyOuterClass.EvtCreateGadgetNotify parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                propOwnerEntityId_ = input.readUInt32();
+
+                break;
+              } // case 8
+              case 16: {
+                targetEntityId_ = input.readUInt32();
+
+                break;
+              } // case 16
+              case 24: {
+                roomId_ = input.readUInt32();
+
+                break;
+              } // case 24
+              case 34: {
+                input.readMessage(
+                    getInitEulerAnglesFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 34
+              case 40: {
+                campType_ = input.readUInt32();
+
+                break;
+              } // case 40
+              case 48: {
+                cNIILEKPCMD_ = input.readBool();
+
+                break;
+              } // case 48
+              case 56: {
+                forwardType_ = input.readEnum();
+
+                break;
+              } // case 56
+              case 64: {
+                targetLockPointIndex_ = input.readUInt32();
+
+                break;
+              } // case 64
+              case 74: {
+                input.readMessage(
+                    getInitPosFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 74
+              case 80: {
+                entityId_ = input.readUInt32();
+
+                break;
+              } // case 80
+              case 88: {
+                guid_ = input.readUInt64();
+
+                break;
+              } // case 88
+              case 96: {
+                campId_ = input.readUInt32();
+
+                break;
+              } // case 96
+              case 104: {
+                hEPFGKFLCCD_ = input.readBool();
+
+                break;
+              } // case 104
+              case 112: {
+                ownerEntityId_ = input.readUInt32();
+
+                break;
+              } // case 112
+              case 120: {
+                configId_ = input.readUInt32();
+
+                break;
+              } // case 120
+              case 1728: {
+                int v = input.readUInt32();
+                ensureTargetEntityIdListIsMutable();
+                targetEntityIdList_.addInt(v);
+                break;
+              } // case 1728
+              case 1730: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureTargetEntityIdListIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  targetEntityIdList_.addInt(input.readUInt32());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 1730
+              case 3504: {
+                isAsyncLoad_ = input.readBool();
+
+                break;
+              } // case 3504
+              case 4128: {
+                int v = input.readUInt32();
+                ensureTargetLockPointIndexListIsMutable();
+                targetLockPointIndexList_.addInt(v);
+                break;
+              } // case 4128
+              case 4130: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureTargetLockPointIndexListIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  targetLockPointIndexList_.addInt(input.readUInt32());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 4130
+              case 15088: {
+                isPeerIdFromPlayer_ = input.readBool();
+
+                break;
+              } // case 15088
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.EvtCreateGadgetNotifyOuterClass.EvtCreateGadgetNotify) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -2310,7 +2251,18 @@ public final class EvtCreateGadgetNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new EvtCreateGadgetNotify(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

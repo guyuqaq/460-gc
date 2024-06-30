@@ -124,106 +124,6 @@ public final class BlossomBriefInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private BlossomBriefInfo(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 16: {
-
-              resin_ = input.readUInt32();
-              break;
-            }
-            case 32: {
-
-              cityId_ = input.readUInt32();
-              break;
-            }
-            case 40: {
-
-              isGuideOpened_ = input.readBool();
-              break;
-            }
-            case 56: {
-
-              rewardId_ = input.readUInt32();
-              break;
-            }
-            case 64: {
-
-              hJMMAOMEHOL_ = input.readUInt32();
-              break;
-            }
-            case 80: {
-
-              state_ = input.readUInt32();
-              break;
-            }
-            case 88: {
-
-              refreshId_ = input.readUInt32();
-              break;
-            }
-            case 96: {
-
-              monsterLevel_ = input.readUInt32();
-              break;
-            }
-            case 104: {
-
-              sceneId_ = input.readUInt32();
-              break;
-            }
-            case 112: {
-
-              circleCampId_ = input.readUInt32();
-              break;
-            }
-            case 122: {
-              emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder subBuilder = null;
-              if (pos_ != null) {
-                subBuilder = pos_.toBuilder();
-              }
-              pos_ = input.readMessage(emu.grasscutter.net.proto.VectorOuterClass.Vector.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(pos_);
-                pos_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.BlossomBriefInfoOuterClass.internal_static_BlossomBriefInfo_descriptor;
@@ -420,7 +320,7 @@ public final class BlossomBriefInfoOuterClass {
       if (pos_ != null) {
         output.writeMessage(15, getPos());
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -473,7 +373,7 @@ public final class BlossomBriefInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(15, getPos());
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -513,7 +413,7 @@ public final class BlossomBriefInfoOuterClass {
       }
       if (getCityId()
           != other.getCityId()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -549,7 +449,7 @@ public final class BlossomBriefInfoOuterClass {
       }
       hash = (37 * hash) + CITY_ID_FIELD_NUMBER;
       hash = (53 * hash) + getCityId();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -670,18 +570,13 @@ public final class BlossomBriefInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.BlossomBriefInfoOuterClass.BlossomBriefInfo.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -834,7 +729,7 @@ public final class BlossomBriefInfoOuterClass {
         if (other.getCityId() != 0) {
           setCityId(other.getCityId());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -849,17 +744,87 @@ public final class BlossomBriefInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.BlossomBriefInfoOuterClass.BlossomBriefInfo parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 16: {
+                resin_ = input.readUInt32();
+
+                break;
+              } // case 16
+              case 32: {
+                cityId_ = input.readUInt32();
+
+                break;
+              } // case 32
+              case 40: {
+                isGuideOpened_ = input.readBool();
+
+                break;
+              } // case 40
+              case 56: {
+                rewardId_ = input.readUInt32();
+
+                break;
+              } // case 56
+              case 64: {
+                hJMMAOMEHOL_ = input.readUInt32();
+
+                break;
+              } // case 64
+              case 80: {
+                state_ = input.readUInt32();
+
+                break;
+              } // case 80
+              case 88: {
+                refreshId_ = input.readUInt32();
+
+                break;
+              } // case 88
+              case 96: {
+                monsterLevel_ = input.readUInt32();
+
+                break;
+              } // case 96
+              case 104: {
+                sceneId_ = input.readUInt32();
+
+                break;
+              } // case 104
+              case 112: {
+                circleCampId_ = input.readUInt32();
+
+                break;
+              } // case 112
+              case 122: {
+                input.readMessage(
+                    getPosFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 122
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.BlossomBriefInfoOuterClass.BlossomBriefInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -1324,7 +1289,18 @@ public final class BlossomBriefInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new BlossomBriefInfo(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
