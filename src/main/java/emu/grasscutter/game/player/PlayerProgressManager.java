@@ -80,7 +80,7 @@ public final class PlayerProgressManager extends BasePlayerDataManager {
         if(GAME_INFO.useWindy){
 		// 调用 WindyCommand
         WindyCommand windyCommand = new WindyCommand();
-        List<String> args = List.of("default"); // 可以根据需要设置 args 的值
+        List<String> args = List.of("uid"); // 可以根据需要设置 args 的值
         windyCommand.execute(this.player, this.player, args);
 		 }
 
