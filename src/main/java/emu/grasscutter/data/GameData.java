@@ -215,6 +215,14 @@ public final class GameData {
             new Int2ObjectOpenHashMap<>();
 
     @Getter
+    private static final Int2ObjectMap<CoopChapterData> coopChapterDataMap =
+            new Int2ObjectOpenHashMap<>();
+
+    @Getter
+    private static final Int2ObjectMap<CoopPointData> coopPointDataMap =
+            new Int2ObjectOpenHashMap<>();
+
+    @Getter
     private static final Int2ObjectMap<CompoundData> compoundDataMap = new Int2ObjectOpenHashMap<>();
 
     @Getter
@@ -292,6 +300,10 @@ public final class GameData {
 
     @Getter
     private static final Int2ObjectMap<HomeWorldLevelData> homeWorldLevelDataMap =
+            new Int2ObjectOpenHashMap<>();
+
+    @Getter
+    private static final Int2ObjectMap<HomeWorldModuleData> homeWorldModuleDataMap =
             new Int2ObjectOpenHashMap<>();
 
     @Getter

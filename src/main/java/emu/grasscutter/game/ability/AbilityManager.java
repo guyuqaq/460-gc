@@ -7,6 +7,7 @@ import emu.grasscutter.data.binout.*;
 import emu.grasscutter.data.binout.AbilityModifier.AbilityModifierAction;
 import emu.grasscutter.game.ability.actions.*;
 import emu.grasscutter.game.ability.mixins.*;
+import emu.grasscutter.game.entity.EntityAvatar;
 import emu.grasscutter.game.entity.GameEntity;
 import emu.grasscutter.game.player.*;
 import emu.grasscutter.game.props.FightProperty;
@@ -20,7 +21,7 @@ import emu.grasscutter.net.proto.AbilityScalarValueEntryOuterClass.AbilityScalar
 import emu.grasscutter.net.proto.ModifierActionOuterClass.ModifierAction;
 import emu.grasscutter.server.event.player.PlayerUseSkillEvent;
 import io.netty.util.concurrent.FastThreadLocalThread;
-import java.util.HashMap;
+import java.util.*;
 import java.util.concurrent.*;
 import lombok.Getter;
 
@@ -47,9 +48,64 @@ public final class AbilityManager extends BasePlayerManager {
     }
 
     @Getter private boolean abilityInvulnerable = false;
+    private int burstCasterId;
+    private int burstSkillId;
 
     public AbilityManager(Player player) {
         super(player);
+        removePendingEnergyClear();
+    }
+
+    public void removePendingEnergyClear() {
+        this.burstCasterId = 0;
+        this.burstSkillId = 0;
+    }
+
+    private void onPossibleElementalBurst(Ability ability, AbilityModifier modifier, int entityId) {
+        //
+        // Possibly clear avatar energy spent on elemental burst
+        // and set invulnerability.
+        //
+        // Problem: Burst can misfire occasionally, like hitting Q when
+        // dashing, doing E, or switching avatars. The client would
+        // still send EvtDoSkillSuccNotify, but the burst may not
+        // actually happen. We don't know when to clear avatar energy.
+        //
+        // When burst does happen, a number of AbilityInvokeEntry will
+        // come in. Use the Ability it references and search for any
+        // modifier with type=AvatarSkillStart, skillID=burst skill ID.
+        //
+        // If that is missing, search for modifier action that sets
+        // invulnerability as a fallback.
+        //
+        if (this.burstCasterId == 0) return;
+
+        boolean skillInvincibility = modifier.state == AbilityModifier.State.Invincible;
+        if (modifier.onAdded != null) {
+            skillInvincibility |=
+                    Arrays.stream(modifier.onAdded)
+                                    .filter(
+                                            action ->
+                                                    action.type == AbilityModifierAction.Type.AttachAbilityStateResistance
+                                                            && action.resistanceListID == 11002)
+                                    .toList()
+                                    .size()
+                            > 0;
+        }
+
+        if (this.burstCasterId == entityId
+                && (ability.getAvatarSkillStartIds().contains(this.burstSkillId) || skillInvincibility)) {
+            Grasscutter.getLogger()
+                    .trace(
+                            "Caster ID's {} burst successful, clearing energy and setting invulnerability",
+                            entityId);
+            this.abilityInvulnerable = true;
+            this.player
+                    .getEnergyManager()
+                    .handleEvtDoSkillSuccNotify(
+                            this.player.getSession(), this.burstSkillId, this.burstCasterId);
+            this.removePendingEnergyClear();
+        }
     }
 
     public static void registerHandlers() {
@@ -279,8 +335,9 @@ public final class AbilityManager extends BasePlayerManager {
             return;
         }
 
-        // Set the player as invulnerable.
-        this.abilityInvulnerable = true;
+        // Track this elemental burst to possibly clear avatar energy later.
+        this.burstSkillId = skillId;
+        this.burstCasterId = casterId;
     }
 
     /**
@@ -453,6 +510,8 @@ public final class AbilityManager extends BasePlayerManager {
                                 modifierData);
             }
 
+            onPossibleElementalBurst(instancedAbility, modifierData, invoke.getEntityId());
+
             AbilityModifierController modifier =
                     new AbilityModifierController(instancedAbility, instancedAbilityData, modifierData);
 
@@ -562,6 +621,14 @@ public final class AbilityManager extends BasePlayerManager {
         if (killState.getKilled()) {
             scene.killEntity(entity);
         } else if (!entity.isAlive()) {
+            if (entity instanceof EntityAvatar) {
+                // TODO Should EntityAvatar act on this invocation?
+                // It bugs revival due to resetting HP to max when
+                // the avatar should just stay dead.
+                Grasscutter.getLogger()
+                        .trace("Entity of ID {} is EntityAvatar. Ignoring", invoke.getEntityId());
+                return;
+            }
             entity.setFightProperty(
                     FightProperty.FIGHT_PROP_CUR_HP,
                     entity.getFightProperty(FightProperty.FIGHT_PROP_MAX_HP));

@@ -158,7 +158,7 @@ public class Scene {
         return entity;
     }
 
-    public GameEntity getEntityByConfigId(int configId) {
+    public GameEntity getFirstEntityByConfigId(int configId) {
         return this.entities.values().stream()
                 .filter(x -> x.getConfigId() == configId)
                 .findFirst()
@@ -597,6 +597,13 @@ public class Scene {
 
         blossomManager.onTick();
 
+        // Should be OK to check only player 0,
+        // as no other players could enter Tower
+        var towerManager = getPlayers().get(0).getTowerManager();
+        if (towerManager != null && towerManager.isInProgress()) {
+            towerManager.onTick();
+        }
+
         this.checkNpcGroup();
 
         this.finishLoading();
@@ -760,6 +767,19 @@ public class Scene {
         return level;
     }
 
+    public int getLevelForMonster(int configId, int defaultLevel) {
+        if (getDungeonManager() != null) {
+            return getDungeonManager().getLevelForMonster(configId);
+        } else if (getWorld().getWorldLevel() > 0) {
+            var worldLevelData = GameData.getWorldLevelDataMap().get(getWorld().getWorldLevel());
+
+            if (worldLevelData != null) {
+                return worldLevelData.getMonsterLevel();
+            }
+        }
+        return defaultLevel;
+    }
+
     public void checkNpcGroup() {
         Set<SceneNpcBornEntry> npcBornEntries = ConcurrentHashMap.newKeySet();
         for (Player player : this.getPlayers()) {
@@ -816,8 +836,8 @@ public class Scene {
 
                     int level = this.getEntityLevel(entry.getLevel(), worldLevelOverride);
 
-                    EntityMonster monster = new EntityMonster(this, data, entry.getPos(), level);
-                    monster.getRotation().set(entry.getRot());
+                    EntityMonster monster =
+                            new EntityMonster(this, data, entry.getPos(), entry.getRot(), level);
                     monster.setGroupId(entry.getGroup().getGroupId());
                     monster.setPoseId(entry.getPoseId());
                     monster.setConfigId(entry.getConfigId());
@@ -1102,6 +1122,9 @@ public class Scene {
         }
         if (group.regions != null) {
             group.regions.values().forEach(getScriptManager()::deregisterRegion);
+        }
+        if (challenge != null && group.id == challenge.getGroup().id) {
+            challenge.fail();
         }
 
         scriptManager.getLoadedGroupSetPerBlock().get(block.id).remove(group);

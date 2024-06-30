@@ -38,6 +38,7 @@ public final class DungeonManager {
     private boolean ended = false;
     private int newestWayPoint = 0;
     @Getter private int startSceneTime = 0;
+    @Setter @Getter private boolean towerDungeon = false;
 
     DungeonTrialTeam trialTeam = null;
 
@@ -67,6 +68,10 @@ public final class DungeonManager {
         }
 
         if (isFinishedSuccessfully()) {
+            // Set ended now because calling EVENT_DUNGEON_SETTLE
+            // during finishDungeon() may cause reentrance into
+            // this function, leading to double settles.
+            ended = true;
             finishDungeon();
         }
     }
@@ -77,8 +82,13 @@ public final class DungeonManager {
     }
 
     public int getLevelForMonster(int id) {
-        // TODO should use levelConfigMap? and how?
-        return dungeonData.getShowLevel();
+        if (isTowerDungeon()) {
+            // Tower dungeons have their own level setting in TowerLevelData
+            return scene.getPlayers().get(0).getTowerManager().getCurrentMonsterLevel();
+        } else {
+            // TODO should use levelConfigMap? and how?
+            return dungeonData.getShowLevel();
+        }
     }
 
     public boolean activateRespawnPoint(int pointId) {
@@ -323,14 +333,30 @@ public final class DungeonManager {
                                 p.getBattlePassManager().triggerMission(WatcherTriggerType.TRIGGER_FINISH_DUNGEON);
                             }
                         });
-        scene
-                .getScriptManager()
-                .callEvent(new ScriptArgs(0, EventType.EVENT_DUNGEON_SETTLE, successfully ? 1 : 0));
+        var future =
+                scene
+                        .getScriptManager()
+                        .callEvent(new ScriptArgs(0, EventType.EVENT_DUNGEON_SETTLE, successfully ? 1 : 0));
+        // Note: There is a possible race condition with calling
+        //       EVENT_DUNGEON_SETTLE here asynchronously:
+        // 1. EVENT_DUNGEON_SETTLE triggers some Lua-side logic,
+        //    which may happen after 2 (below) finishes.
+        // 2. Some DungeonSettleListener could be comparing some
+        //    Lua variable before its setting in 1 (above) finishes.
+        // For safety, ensure all events have finished before returning.
+        try {
+            future.get();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public void endDungeon(BaseDungeonResult.DungeonEndReason endReason) {
         if (scene.getDungeonSettleListeners() != null) {
             scene.getDungeonSettleListeners().forEach(o -> o.onDungeonSettle(this, endReason));
+        }
+        if (isTowerDungeon()) {
+            scene.getPlayers().get(0).getTowerManager().onEnd();
         }
         ended = true;
     }

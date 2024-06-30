@@ -1,6 +1,7 @@
 package emu.grasscutter.game.entity;
 
 import emu.grasscutter.data.GameData;
+import emu.grasscutter.data.binout.*;
 import emu.grasscutter.game.ability.*;
 import emu.grasscutter.game.player.Player;
 import emu.grasscutter.game.props.*;
@@ -15,9 +16,8 @@ import emu.grasscutter.scripts.data.controller.EntityController;
 import emu.grasscutter.server.event.entity.*;
 import emu.grasscutter.server.packet.send.PacketEntityFightPropUpdateNotify;
 import it.unimi.dsi.fastutil.ints.*;
-import lombok.*;
-
 import java.util.*;
+import lombok.*;
 
 public abstract class GameEntity {
     @Getter private final Scene scene;
@@ -33,9 +33,12 @@ public abstract class GameEntity {
     @Getter @Setter private int lastMoveReliableSeq;
 
     @Getter @Setter private boolean lockHP;
+    private boolean limbo;
+    private float limboHpThreshold;
 
     @Setter(AccessLevel.PROTECTED)
-    @Getter private boolean isDead = false;
+    @Getter
+    private boolean isDead = false;
 
     // Lua controller for specific actions
     @Getter @Setter private EntityController entityController;
@@ -110,6 +113,21 @@ public abstract class GameEntity {
                         });
     }
 
+    protected void setLimbo(float hpThreshold) {
+        limbo = true;
+        limboHpThreshold = hpThreshold;
+    }
+
+    public void onAddAbilityModifier(AbilityModifier data) {
+        // Set limbo state (invulnerability at a certain HP threshold)
+        // if ability modifier calls for it
+        if (data.state == AbilityModifier.State.Limbo
+                && data.properties != null
+                && data.properties.Actor_HpThresholdRatio > .0f) {
+            this.setLimbo(data.properties.Actor_HpThresholdRatio);
+        }
+    }
+
     protected MotionInfo getMotionInfo() {
         return MotionInfo.newBuilder()
                 .setPos(this.getPosition().toProto())
@@ -167,20 +185,29 @@ public abstract class GameEntity {
             return; // If the event is canceled, do not damage the entity.
         }
 
+        float effectiveDamage = 0;
         float curHp = getFightProperty(FightProperty.FIGHT_PROP_CUR_HP);
-        if (curHp != Float.POSITIVE_INFINITY && !lockHP || lockHP && curHp <= event.getDamage()) {
-            // Add negative HP to the current HP property.
-            this.addFightProperty(FightProperty.FIGHT_PROP_CUR_HP, -(event.getDamage()));
+        if (limbo) {
+            float maxHp = getFightProperty(FightProperty.FIGHT_PROP_MAX_HP);
+            float curRatio = curHp / maxHp;
+            if (curRatio > limboHpThreshold) {
+                // OK if this hit takes HP below threshold.
+                effectiveDamage = event.getDamage();
+            }
+            if (effectiveDamage >= curHp && limboHpThreshold > .0f) {
+                // Don't let entity die while in limbo.
+                effectiveDamage = curHp - 1;
+            }
+        } else if (curHp != Float.POSITIVE_INFINITY && !lockHP
+                || lockHP && curHp <= event.getDamage()) {
+            effectiveDamage = event.getDamage();
         }
+
+        // Add negative HP to the current HP property.
+        this.addFightProperty(FightProperty.FIGHT_PROP_CUR_HP, -effectiveDamage);
 
         this.lastAttackType = attackType;
-
-        // Check if dead
-        if (this.getFightProperty(FightProperty.FIGHT_PROP_CUR_HP) <= 0f) {
-            this.setFightProperty(FightProperty.FIGHT_PROP_CUR_HP, 0f);
-            this.isDead = true;
-        }
-
+        this.checkIfDead();
         this.runLuaCallbacks(event);
 
         // Packets
@@ -191,6 +218,17 @@ public abstract class GameEntity {
         // Check if dead.
         if (this.isDead) {
             this.getScene().killEntity(this, killerId);
+        }
+    }
+
+    public void checkIfDead() {
+        if (this.getFightProperties() == null || !hasFightProperty(FightProperty.FIGHT_PROP_CUR_HP)) {
+            return;
+        }
+
+        if (this.getFightProperty(FightProperty.FIGHT_PROP_CUR_HP) <= 0f) {
+            this.setFightProperty(FightProperty.FIGHT_PROP_CUR_HP, 0f);
+            this.isDead = true;
         }
     }
 
@@ -333,6 +371,8 @@ public abstract class GameEntity {
         if (entityController != null) {
             entityController.onDie(this, getLastAttackType());
         }
+
+        this.isDead = true;
     }
 
     /** Invoked when a global ability value is updated. */

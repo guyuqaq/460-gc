@@ -131,7 +131,11 @@ public final class DungeonSystem extends BaseGameSystem {
                         dungeonId);
 
         if (player.getWorld().transferPlayerToScene(player, data.getSceneId(), data)) {
-            dungeonSettleListeners.forEach(player.getScene()::addDungeonSettleObserver);
+            var scene = player.getScene();
+            var dungeonManager = new DungeonManager(scene, data);
+            dungeonManager.setTowerDungeon(true);
+            scene.setDungeonManager(dungeonManager);
+            dungeonSettleListeners.forEach(scene::addDungeonSettleObserver);
         }
         return true;
     }
@@ -164,11 +168,40 @@ public final class DungeonSystem extends BaseGameSystem {
             dungeonManager.unsetTrialTeam(player);
         }
         // clean temp team if it has
-        player.getTeamManager().cleanTemporaryTeam();
+        if (!player.getTeamManager().cleanTemporaryTeam()) {
+            // no temp team. Will use real current team, but check
+            // for any dead avatar to prevent switching into them.
+            player.getTeamManager().checkCurrentAvatarIsAlive(null);
+        }
         player.getTowerManager().clearEntry();
+        dungeonManager.setTowerDungeon(false);
 
-        // Transfer player back to world
-        player.getWorld().transferPlayerToScene(player, prevScene, prevPos);
-        player.sendPacket(new BasePacket(PacketOpcodes.PlayerQuitDungeonRsp));
+        // Transfer player back to world after a small delay.
+        // This wait is important for avoiding double teleports,
+        // which specifically happen when player quits a dungeon
+        // by teleporting to map waypoints.
+        // From testing, 200ms seem reasonable.
+        player.getWorld().queueTransferPlayerToScene(player, prevScene, prevPos, 200);
+    }
+
+    public void restartDungeon(Player player) {
+        var scene = player.getScene();
+        var dungeonManager = scene.getDungeonManager();
+        var dungeonData = dungeonManager.getDungeonData();
+        var sceneId = dungeonData.getSceneId();
+
+        // Forward over previous scene and scene point
+        var prevScene = scene.getPrevScene();
+        var pointId = scene.getPrevScenePoint();
+
+        // Destroy then create scene again to reinitialize script state
+        scene.getPlayers().forEach(scene::removePlayer);
+        if (player.getWorld().transferPlayerToScene(player, sceneId, dungeonData)) {
+            scene = player.getScene();
+            scene.setPrevScene(prevScene);
+            scene.setPrevScenePoint(pointId);
+            scene.setDungeonManager(new DungeonManager(scene, dungeonData));
+            scene.addDungeonSettleObserver(basicDungeonSettleObserver);
+        }
     }
 }
