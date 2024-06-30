@@ -332,7 +332,8 @@ public final class GameServer extends KcpServer implements Iterable<Player> {
                 },
                 new Date(),
                 1000L);
-        Grasscutter.getLogger().info(translate("messages.status.free_software"));
+        Grasscutter.getLogger().info(translate("messages.status.free_software1"));
+        Grasscutter.getLogger().info(translate("messages.status.free_software2"));
         Grasscutter.getLogger()
                 .info(translate("messages.game.address_bind", GAME_INFO.accessAddress, address.getPort()));
         ServerStartEvent event = new ServerStartEvent(ServerEvent.Type.GAME, OffsetDateTime.now());
@@ -346,11 +347,24 @@ public final class GameServer extends KcpServer implements Iterable<Player> {
         event.call();
 
         // Save players & the world.
+        long startTime = System.currentTimeMillis();
+        Grasscutter.getLogger().info("开始保存玩家游戏数据...");
+
         this.getPlayers().forEach((uid, player) -> player.getSession().close());
         this.getWorlds().forEach(World::save);
 
-        Utils.sleep(1000L); // Wait 1 second for operations to finish.
-        this.stop(); // Stop the server.
+        Grasscutter.getLogger().info("数据保存完毕！");
+
+        long endTime = System.currentTimeMillis();
+        long duration = endTime - startTime;
+        Grasscutter.getLogger().info(String.format("数据保存耗时 %s ms", duration));
+
+         // Adjust waiting time based on measurement results
+        long waitTime = Math.max(2000L, duration + 1000L);
+        Utils.sleep(waitTime);
+        Grasscutter.getLogger().info(String.format("实际保存数据耗时 %s ms", waitTime));
+        // Stop the server.
+        this.stop();
 
         try {
             var threadPool = GameSessionManager.getExecutor();
@@ -362,6 +376,7 @@ public final class GameServer extends KcpServer implements Iterable<Player> {
                 Grasscutter.getLogger().error("Logic thread did not terminate!");
             }
         } catch (InterruptedException ignored) {
+            Grasscutter.getLogger().error("等待逻辑线程终止时被中断", ignored);
         }
     }
 

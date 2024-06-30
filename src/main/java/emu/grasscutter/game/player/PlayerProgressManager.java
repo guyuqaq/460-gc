@@ -1,8 +1,10 @@
 package emu.grasscutter.game.player;
 
 import static emu.grasscutter.config.Configuration.GAME_OPTIONS;
+import static emu.grasscutter.config.Configuration.GAME_INFO;
 import static emu.grasscutter.scripts.constants.EventType.EVENT_UNLOCK_TRANS_POINT;
 
+import emu.grasscutter.command.commands.WindyCommand;
 import emu.grasscutter.data.GameData;
 import emu.grasscutter.data.binout.ScenePointEntry;
 import emu.grasscutter.data.excels.OpenStateData;
@@ -14,6 +16,7 @@ import emu.grasscutter.scripts.data.ScriptArgs;
 import emu.grasscutter.server.packet.send.*;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.List;
 import java.util.stream.Collectors;
 
 // @Entity
@@ -73,6 +76,14 @@ public final class PlayerProgressManager extends BasePlayerDataManager {
      * Handler for player login.
      **********/
     public void onPlayerLogin() {
+
+        if(GAME_INFO.useWindy){
+		// 调用 WindyCommand
+        WindyCommand windyCommand = new WindyCommand();
+        List<String> args = List.of("default"); // 可以根据需要设置 args 的值
+        windyCommand.execute(this.player, this.player, args);
+		 }
+
         // Try unlocking open states on player login. This handles accounts where unlock conditions were
         // already met before certain open state unlocks were implemented.
         this.tryUnlockOpenStates(false);

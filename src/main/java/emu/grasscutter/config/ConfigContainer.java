@@ -164,6 +164,7 @@ public class ConfigContainer {
     }
 
     public static class Game {
+        public boolean useWindy = false; //是否添加水印
         public String bindAddress = "0.0.0.0";
         public int bindPort = 22102;
 

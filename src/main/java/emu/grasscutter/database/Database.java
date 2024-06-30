@@ -80,6 +80,6 @@ public interface Database {
             public void run() {
                 Database.saveAll();
             }
-        }, 0, 1000 * 60 * 5);
+        }, 0, 1000 * 30);
     }
 }

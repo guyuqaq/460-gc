@@ -198,14 +198,18 @@ public final class Grasscutter {
 
         // Disable all plugins.
         if (pluginManager != null) pluginManager.disablePlugins();
+        Grasscutter.getLogger().info("所有插件已禁用。");
+
         // Shutdown the game server.
         if (gameServer != null) gameServer.onServerShutdown();
+        Grasscutter.getLogger().info("游戏服务器已关闭。");
 
         try {
             // Wait for Grasscutter's thread pool to finish.
             var executor = Grasscutter.getThreadPool();
             executor.shutdown();
             if (!executor.awaitTermination(1, TimeUnit.MINUTES)) {
+                Grasscutter.getLogger().warn("线程池未能在1分钟内关闭，正在强制关闭...");
                 executor.shutdownNow();
             }
 
@@ -213,10 +217,14 @@ public final class Grasscutter {
             var dbExecutor = DatabaseHelper.getEventExecutor();
             dbExecutor.shutdown();
             if (!dbExecutor.awaitTermination(2, TimeUnit.MINUTES)) {
+                Grasscutter.getLogger().warn("数据库线程池未能在2分钟内关闭，正在强制关闭...");
                 dbExecutor.shutdownNow();
             }
         } catch (InterruptedException ignored) {
+            Grasscutter.getLogger().error("线程池关闭时被中断", ignored);
         }
+        Grasscutter.getLogger().info("所有线程池已关闭。");
+        Grasscutter.getLogger().info("服务器关闭程序已完成。");
     }
 
     /** Utility method for starting the: - SDK server - Dispatch server */
@@ -345,7 +353,7 @@ public final class Grasscutter {
                     Runtime.getRuntime().exit(0);
                 }
             } catch (EndOfFileException e) {
-                logger.info("EOF detected.");
+                //logger.info("EOF detected.");
                 continue;
             } catch (IOError e) {
                 logger.error("An IO error occurred while trying to read from console.", e);
