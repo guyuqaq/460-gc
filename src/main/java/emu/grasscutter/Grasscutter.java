@@ -60,8 +60,8 @@ public final class Grasscutter {
     @Getter
     private static final ExecutorService threadPool =
             new ThreadPoolExecutor(
-                    6,
-                    6,
+                    10,
+                    20,
                     60,
                     TimeUnit.SECONDS,
                     new LinkedBlockingDeque<>(),

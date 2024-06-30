@@ -30,7 +30,7 @@ import static com.mongodb.client.model.Filters.eq;
 public final class DatabaseHelper {
     @Getter
     private static final ExecutorService eventExecutor =
-        Executors.newFixedThreadPool(4);
+        Executors.newFixedThreadPool(6);
 
     /**
      * Saves an object on the account datastore.

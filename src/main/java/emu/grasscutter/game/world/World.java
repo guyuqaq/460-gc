@@ -67,8 +67,8 @@ public class World implements Iterable<Player> {
 
     private static final ExecutorService eventExecutor =
             new ThreadPoolExecutor(
-                    4,
-                    4,
+                    8,
+                    16,
                     60,
                     TimeUnit.SECONDS,
                     new LinkedBlockingDeque<>(1000),
