@@ -29,6 +29,13 @@ import java.io.*;
 import java.util.Calendar;
 import java.util.concurrent.*;
 
+import java.lang.management.ManagementFactory;
+import java.lang.management.MemoryMXBean;
+import java.lang.management.MemoryUsage;
+import java.text.DecimalFormat;
+import java.time.Duration;
+import java.time.Instant;
+
 import static emu.grasscutter.config.Configuration.SERVER;
 import static emu.grasscutter.utils.lang.Language.translate;
 
@@ -56,7 +63,8 @@ public final class Grasscutter {
     @Getter @Setter private static PermissionHandler permissionHandler;
 
     private static LineReader consoleLineReader = null;
-
+	private static final long startTimeMillis;
+	
     @Getter
     private static final ExecutorService threadPool =
             new ThreadPoolExecutor(
@@ -69,6 +77,10 @@ public final class Grasscutter {
                     new ThreadPoolExecutor.AbortPolicy());
 
     static {
+		
+		// Initialize startTimeMillis
+        startTimeMillis = System.currentTimeMillis();
+		
         // Declare logback configuration.
         System.setProperty("logback.configurationFile", "src/main/resources/logback.xml");
 
@@ -330,6 +342,45 @@ public final class Grasscutter {
         logger.debug("Set day of week to " + currentDayOfWeek);
     }
 
+    /**
+     * Returns the heapMemory usage of the server, in megabytes.
+     */
+    public static double getMemoryUsage() {
+		 MemoryMXBean memoryMXBean = ManagementFactory.getMemoryMXBean();
+        MemoryUsage heapMemoryUsage = memoryMXBean.getHeapMemoryUsage();
+        double usedMemorySize = (double) heapMemoryUsage.getUsed() / 1_073_741_824L;
+        DecimalFormat df = new DecimalFormat("#0.00"); 
+        return Double.parseDouble(df.format(usedMemorySize));
+    }
+	
+    public static double getMaxHeapMemory() {
+		MemoryMXBean memoryMXBean = ManagementFactory.getMemoryMXBean();
+		MemoryUsage heapMemoryUsage = memoryMXBean.getHeapMemoryUsage();
+		double maxMemorySize = (double) heapMemoryUsage.getMax() / 1_073_741_824L;
+		 DecimalFormat df = new DecimalFormat("#.##");
+		 return Double.parseDouble(df.format(maxMemorySize));
+    }
+	
+	/**
+     * Returns the formatted runtime of the Java program.
+     *  Example output: "20-16:29:30"
+     */
+	   public static String getRunTime() {
+        Instant startTime = Instant.ofEpochMilli(startTimeMillis);
+        Instant now = Instant.now();
+        Duration duration = Duration.between(startTime, now);
+
+        long days = duration.toDays();
+        duration = duration.minusDays(days);
+        long hours = duration.toHours();
+        duration = duration.minusHours(hours);
+        long minutes = duration.toMinutes();
+        duration = duration.minusMinutes(minutes);
+        long seconds = duration.getSeconds();
+
+       return String.format("%d-%02d:%02d:%02d", days, hours, minutes, seconds);
+    }
+	
     public static void startConsole() {
         // Console should not start in dispatch only mode.
         if (Grasscutter.getRunMode() == ServerRunMode.DISPATCH_ONLY && Grasscutter.noConsole) {
