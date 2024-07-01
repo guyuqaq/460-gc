@@ -563,16 +563,13 @@ public class Player implements DatabaseObject<Player>, PlayerHook, FieldFetch {
         this.setOrFetch(PlayerProperty.PROP_PLAYER_LEVEL, 1);
         this.setOrFetch(PlayerProperty.PROP_IS_SPRING_AUTO_USE, 1);
         this.setOrFetch(PlayerProperty.PROP_SPRING_AUTO_USE_PERCENT, 50);
-        this.setOrFetch(PlayerProperty.PROP_IS_FLYABLE,
-            withQuesting ? 0 : 1);
-        this.setOrFetch(PlayerProperty.PROP_PLAYER_CAN_DIVE,
-                withQuesting ? 0 : 1);
+        this.setOrFetch(PlayerProperty.PROP_IS_FLYABLE,1);
+        this.setOrFetch(PlayerProperty.PROP_PLAYER_CAN_DIVE,1);
         this.setOrFetch(PlayerProperty.PROP_IS_TRANSFERABLE, 1);
-        this.setOrFetch(PlayerProperty.PROP_MAX_STAMINA,
-            withQuesting ? 10000 : 24000);
+        this.setOrFetch(PlayerProperty.PROP_MAX_STAMINA,24000);
         this.setOrFetch(PlayerProperty.PROP_DIVE_MAX_STAMINA,
                 withQuesting ? 10000 : 0);
-        this.setOrFetch(PlayerProperty.PROP_PLAYER_RESIN, 160);
+        this.setOrFetch(PlayerProperty.PROP_PLAYER_RESIN, 200);
 
         // The player's current stamina is always their max stamina.
         this.setProperty(PlayerProperty.PROP_CUR_PERSIST_STAMINA,
