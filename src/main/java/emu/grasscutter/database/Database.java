@@ -43,38 +43,30 @@ public interface Database {
      *
      * @param objects The objects to save.
      */
-    static void saveAll(List<? extends DatabaseObject<?>> objects) {
-        // Create a mutable copy of the passed list
-        List<DatabaseObject<?>> mutableObjects = new ArrayList<>(objects);
+ static void saveAll(List<? extends DatabaseObject<?>> objects) {
+        // Sort all objects into their respective databases.
+        var gameObjects = objects.stream()
+                .filter(DatabaseObject::isGameObject)
+                .toList();
+        var accountObjects = objects.stream()
+                .filter(o -> !o.isGameObject())
+                .toList();
 
-        var gameObjects = mutableObjects.stream()
-            .filter(DatabaseObject::isGameObject)
-            .toList();
-        var accountObjects = mutableObjects.stream()
-            .filter(o -> !o.isGameObject())
-            .toList();
+        // Clear the collective list.
+        objects.clear();
 
-        // Clear object
-        mutableObjects.clear();
-        if (objects instanceof ArrayList) {
-             ((ArrayList<?>) objects).clear();
-        }
-        
+        // Save all objects.
         var executor = DatabaseHelper.getEventExecutor();
-        try {
-            if (Grasscutter.getRunMode() != Grasscutter.ServerRunMode.DISPATCH_ONLY) {
-                executor.submit(() -> {
-                    DatabaseManager.getGameDatastore().save(gameObjects);
-                });
-            }
-            if (Grasscutter.getRunMode() != Grasscutter.ServerRunMode.GAME_ONLY) {
-                executor.submit(() -> {
-                    DatabaseManager.getAccountDatastore().save(accountObjects);
-                });
-            }
-        } catch (RejectedExecutionException e) {
-            logger.error("Task submission rejected", e);
+        if (Grasscutter.getRunMode() != Grasscutter.ServerRunMode.DISPATCH_ONLY) {
+            executor.submit(() -> {
+                DatabaseManager.getGameDatastore().save(gameObjects);
+            });
         }
+        if (Grasscutter.getRunMode() != Grasscutter.ServerRunMode.GAME_ONLY) {
+            executor.submit(() -> {
+                DatabaseManager.getAccountDatastore().save(accountObjects);
+            });
+		}
     }
 
 

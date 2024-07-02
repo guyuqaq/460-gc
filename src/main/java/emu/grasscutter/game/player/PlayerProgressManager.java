@@ -62,10 +62,10 @@ public final class PlayerProgressManager extends BasePlayerDataManager {
                                             // working chat.
                                             || s.getId() == 1)
                     .map(OpenStateData::getId)
-                    /*.filter(s -> !BLACKLIST_OPEN_STATES.contains(s)) // Filter out states in the blacklist.
+                    .filter(s -> !BLACKLIST_OPEN_STATES.contains(s)) // Filter out states in the blacklist.
                     .filter(
                             s ->
-                                    !IGNORED_OPEN_STATES.contains(s)) // Filter out states in the default ignore list.*/
+                                    !IGNORED_OPEN_STATES.contains(s)) // Filter out states in the default ignore list.
                     .collect(Collectors.toSet());
 
     public PlayerProgressManager(Player player) {

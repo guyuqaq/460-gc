@@ -83,6 +83,7 @@ public final class GameSessionManager implements KcpListener {
     public void handleClose(Ukcp ukcp) {
         var session = sessions.remove(ukcp);
         if (session != null) {
+            session.onDisconnected();
             session.close();
         }
     }

@@ -254,11 +254,11 @@ public class GameSession implements KcpChannel {
         } catch (Throwable ignore) {
             Grasscutter.getLogger().warn("closing {} error", getAddress().getAddress().getHostAddress());
         }
-        tunnel = null;
+        //tunnel = null;
     }
 
     public void close() {
-        tunnel.close();
+		tunnel.close();
     }
 
     public boolean isActive() {
