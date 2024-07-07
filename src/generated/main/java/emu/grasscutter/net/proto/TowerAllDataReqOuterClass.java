@@ -19,15 +19,15 @@ public final class TowerAllDataReqOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>bool is_interact = 6;</code>
+     * <code>bool is_interact = 9;</code>
      * @return The isInteract.
      */
     boolean getIsInteract();
   }
   /**
    * <pre>
-   * CmdId: 23009
-   * Obf: OBIBAPPDOKJ
+   * 4.6.0
+   * CmdId: 6852
    * </pre>
    *
    * Protobuf type {@code TowerAllDataReq}
@@ -56,6 +56,48 @@ public final class TowerAllDataReqOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private TowerAllDataReq(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 72: {
+
+              isInteract_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.TowerAllDataReqOuterClass.internal_static_TowerAllDataReq_descriptor;
@@ -69,10 +111,10 @@ public final class TowerAllDataReqOuterClass {
               emu.grasscutter.net.proto.TowerAllDataReqOuterClass.TowerAllDataReq.class, emu.grasscutter.net.proto.TowerAllDataReqOuterClass.TowerAllDataReq.Builder.class);
     }
 
-    public static final int IS_INTERACT_FIELD_NUMBER = 6;
+    public static final int IS_INTERACT_FIELD_NUMBER = 9;
     private boolean isInteract_;
     /**
-     * <code>bool is_interact = 6;</code>
+     * <code>bool is_interact = 9;</code>
      * @return The isInteract.
      */
     @java.lang.Override
@@ -95,9 +137,9 @@ public final class TowerAllDataReqOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (isInteract_ != false) {
-        output.writeBool(6, isInteract_);
+        output.writeBool(9, isInteract_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -108,9 +150,9 @@ public final class TowerAllDataReqOuterClass {
       size = 0;
       if (isInteract_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(6, isInteract_);
+          .computeBoolSize(9, isInteract_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -127,7 +169,7 @@ public final class TowerAllDataReqOuterClass {
 
       if (getIsInteract()
           != other.getIsInteract()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -141,7 +183,7 @@ public final class TowerAllDataReqOuterClass {
       hash = (37 * hash) + IS_INTERACT_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsInteract());
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -238,8 +280,8 @@ public final class TowerAllDataReqOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 23009
-     * Obf: OBIBAPPDOKJ
+     * 4.6.0
+     * CmdId: 6852
      * </pre>
      *
      * Protobuf type {@code TowerAllDataReq}
@@ -263,13 +305,18 @@ public final class TowerAllDataReqOuterClass {
 
       // Construct using emu.grasscutter.net.proto.TowerAllDataReqOuterClass.TowerAllDataReq.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -354,7 +401,7 @@ public final class TowerAllDataReqOuterClass {
         if (other.getIsInteract() != false) {
           setIsInteract(other.getIsInteract());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -369,41 +416,23 @@ public final class TowerAllDataReqOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.TowerAllDataReqOuterClass.TowerAllDataReq parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 48: {
-                isInteract_ = input.readBool();
-
-                break;
-              } // case 48
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.TowerAllDataReqOuterClass.TowerAllDataReq) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
 
       private boolean isInteract_ ;
       /**
-       * <code>bool is_interact = 6;</code>
+       * <code>bool is_interact = 9;</code>
        * @return The isInteract.
        */
       @java.lang.Override
@@ -411,7 +440,7 @@ public final class TowerAllDataReqOuterClass {
         return isInteract_;
       }
       /**
-       * <code>bool is_interact = 6;</code>
+       * <code>bool is_interact = 9;</code>
        * @param value The isInteract to set.
        * @return This builder for chaining.
        */
@@ -422,7 +451,7 @@ public final class TowerAllDataReqOuterClass {
         return this;
       }
       /**
-       * <code>bool is_interact = 6;</code>
+       * <code>bool is_interact = 9;</code>
        * @return This builder for chaining.
        */
       public Builder clearIsInteract() {
@@ -464,18 +493,7 @@ public final class TowerAllDataReqOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new TowerAllDataReq(input, extensionRegistry);
       }
     };
 
@@ -510,7 +528,7 @@ public final class TowerAllDataReqOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\025TowerAllDataReq.proto\"&\n\017TowerAllDataR" +
-      "eq\022\023\n\013is_interact\030\006 \001(\010B\033\n\031emu.grasscutt" +
+      "eq\022\023\n\013is_interact\030\t \001(\010B\033\n\031emu.grasscutt" +
       "er.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

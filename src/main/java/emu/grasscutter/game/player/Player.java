@@ -8,7 +8,7 @@ import emu.grasscutter.data.excels.world.WeatherData;
 import emu.grasscutter.database.DatabaseHelper;
 import emu.grasscutter.game.*;
 import emu.grasscutter.game.ability.AbilityManager;
-import emu.grasscutter.game.achievement.*;
+import emu.grasscutter.game.achievement.Achievements;
 import emu.grasscutter.game.activity.ActivityManager;
 import emu.grasscutter.game.avatar.*;
 import emu.grasscutter.game.battlepass.BattlePassManager;
@@ -55,7 +55,8 @@ import emu.grasscutter.server.game.GameSession.SessionState;
 import emu.grasscutter.server.packet.send.*;
 import emu.grasscutter.utils.*;
 import emu.grasscutter.utils.helpers.DateHelper;
-import emu.grasscutter.utils.objects.*;
+import emu.grasscutter.utils.objects.FieldFetch;
+import emu.grasscutter.utils.objects.DatabaseObject;
 import it.unimi.dsi.fastutil.ints.*;
 import lombok.*;
 
@@ -277,7 +278,6 @@ public class Player implements DatabaseObject<Player>, PlayerHook, FieldFetch {
         this.energyManager = new EnergyManager(this);
         this.resinManager = new ResinManager(this);
         this.forgingManager = new ForgingManager(this);
-        this.deforestationManager = new DeforestationManager(this);
         this.progressManager = new PlayerProgressManager(this);
         this.furnitureManager = new FurnitureManager(this);
         this.battlePassManager = new BattlePassManager(this);
@@ -294,8 +294,8 @@ public class Player implements DatabaseObject<Player>, PlayerHook, FieldFetch {
         this.account = session.getAccount();
         this.accountId = this.getAccount().getId();
         this.session = session;
-        this.nickname = "Traveler";
-        this.signature = "";
+        this.nickname = "倒卖者户口本单页";
+        this.signature = "QQ交流群929259728";
         this.teamManager = new TeamManager(this);
         this.birthday = new PlayerBirthday();
         this.codex = new PlayerCodex(this);
@@ -304,6 +304,18 @@ public class Player implements DatabaseObject<Player>, PlayerHook, FieldFetch {
         this.applyStartingSceneTags();
         this.getFlyCloakList().add(140001);
         this.getNameCardList().add(210001);
+        this.mapMarksManager = new MapMarksManager(this);
+        this.staminaManager = new StaminaManager(this);
+        this.sotsManager = new SotSManager(this);
+        this.energyManager = new EnergyManager(this);
+        this.resinManager = new ResinManager(this);
+        this.deforestationManager = new DeforestationManager(this);
+        this.forgingManager = new ForgingManager(this);
+        this.progressManager = new PlayerProgressManager(this);
+        this.furnitureManager = new FurnitureManager(this);
+        this.cookingManager = new CookingManager(this);
+        this.cookingCompoundManager = new CookingCompoundManager(this);
+        this.satiationManager = new SatiationManager(this);
     }
 
     @Override
@@ -1392,7 +1404,7 @@ public class Player implements DatabaseObject<Player>, PlayerHook, FieldFetch {
     public void onLogin() {
         // Quest - Commented out because a problem is caused if you log out while this quest is active
         /*
-        if (getQuestManager().getMainQuestById(351) == null) {
+		if (getQuestManager().getMainQuestById(351) == null) {
             GameQuest quest = getQuestManager().addQuest(35104);
             if (quest != null) {
                 quest.finish();
@@ -1402,8 +1414,8 @@ public class Player implements DatabaseObject<Player>, PlayerHook, FieldFetch {
             this.setSceneId(3);
             this.getPos().set(GameConstants.START_POSITION);
         }
-        */
-
+		*/
+        
         // Ensure the player has valid scenetags, allows old accounts to work
         if (this.getSceneTags().isEmpty() || this.getSceneTags() == null) {
             this.applyStartingSceneTags();
@@ -1431,7 +1443,7 @@ public class Player implements DatabaseObject<Player>, PlayerHook, FieldFetch {
 
         // Rewind active quests, and put the player to a rewind position it finds (if any) of an active quest
         getQuestManager().onLogin();
-
+		
         // Packets
         session.send(new PacketPlayerDataNotify(this)); // Player data
         session.send(new PacketStoreWeightLimitNotify());
@@ -1482,7 +1494,7 @@ public class Player implements DatabaseObject<Player>, PlayerHook, FieldFetch {
 
         // Set session state
         session.setState(SessionState.ACTIVE);
-
+		
         // Call join event.
         PlayerJoinEvent event = new PlayerJoinEvent(this);
         event.call();

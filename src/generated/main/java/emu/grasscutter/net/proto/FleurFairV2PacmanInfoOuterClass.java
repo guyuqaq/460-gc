@@ -80,6 +80,61 @@ public final class FleurFairV2PacmanInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private FleurFairV2PacmanInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 40: {
+
+              aIAIFMJPEBO_ = input.readUInt32();
+              break;
+            }
+            case 106: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                stageDataList_ = new java.util.ArrayList<emu.grasscutter.net.proto.FleurFairV2StageDataOuterClass.FleurFairV2StageData>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              stageDataList_.add(
+                  input.readMessage(emu.grasscutter.net.proto.FleurFairV2StageDataOuterClass.FleurFairV2StageData.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          stageDataList_ = java.util.Collections.unmodifiableList(stageDataList_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.FleurFairV2PacmanInfoOuterClass.internal_static_FleurFairV2PacmanInfo_descriptor;
@@ -164,7 +219,7 @@ public final class FleurFairV2PacmanInfoOuterClass {
       for (int i = 0; i < stageDataList_.size(); i++) {
         output.writeMessage(13, stageDataList_.get(i));
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -181,7 +236,7 @@ public final class FleurFairV2PacmanInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(13, stageDataList_.get(i));
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -200,7 +255,7 @@ public final class FleurFairV2PacmanInfoOuterClass {
           != other.getAIAIFMJPEBO()) return false;
       if (!getStageDataListList()
           .equals(other.getStageDataListList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -217,7 +272,7 @@ public final class FleurFairV2PacmanInfoOuterClass {
         hash = (37 * hash) + STAGE_DATA_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getStageDataListList().hashCode();
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -338,13 +393,19 @@ public final class FleurFairV2PacmanInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.FleurFairV2PacmanInfoOuterClass.FleurFairV2PacmanInfo.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getStageDataListFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -353,11 +414,10 @@ public final class FleurFairV2PacmanInfoOuterClass {
 
         if (stageDataListBuilder_ == null) {
           stageDataList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
-          stageDataList_ = null;
           stageDataListBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -472,7 +532,7 @@ public final class FleurFairV2PacmanInfoOuterClass {
             }
           }
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -487,48 +547,17 @@ public final class FleurFairV2PacmanInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.FleurFairV2PacmanInfoOuterClass.FleurFairV2PacmanInfo parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 40: {
-                aIAIFMJPEBO_ = input.readUInt32();
-
-                break;
-              } // case 40
-              case 106: {
-                emu.grasscutter.net.proto.FleurFairV2StageDataOuterClass.FleurFairV2StageData m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.FleurFairV2StageDataOuterClass.FleurFairV2StageData.parser(),
-                        extensionRegistry);
-                if (stageDataListBuilder_ == null) {
-                  ensureStageDataListIsMutable();
-                  stageDataList_.add(m);
-                } else {
-                  stageDataListBuilder_.addMessage(m);
-                }
-                break;
-              } // case 106
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.FleurFairV2PacmanInfoOuterClass.FleurFairV2PacmanInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -836,18 +865,7 @@ public final class FleurFairV2PacmanInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new FleurFairV2PacmanInfo(input, extensionRegistry);
       }
     };
 

@@ -19,50 +19,50 @@ public final class AchievementAllDataNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated uint32 reward_taken_goal_id_list = 4;</code>
+     * <code>repeated uint32 reward_taken_goal_id_list = 8;</code>
      * @return A list containing the rewardTakenGoalIdList.
      */
     java.util.List<java.lang.Integer> getRewardTakenGoalIdListList();
     /**
-     * <code>repeated uint32 reward_taken_goal_id_list = 4;</code>
+     * <code>repeated uint32 reward_taken_goal_id_list = 8;</code>
      * @return The count of rewardTakenGoalIdList.
      */
     int getRewardTakenGoalIdListCount();
     /**
-     * <code>repeated uint32 reward_taken_goal_id_list = 4;</code>
+     * <code>repeated uint32 reward_taken_goal_id_list = 8;</code>
      * @param index The index of the element to return.
      * @return The rewardTakenGoalIdList at the given index.
      */
     int getRewardTakenGoalIdList(int index);
 
     /**
-     * <code>repeated .Achievement achievement_list = 9;</code>
+     * <code>repeated .Achievement achievement_list = 11;</code>
      */
     java.util.List<emu.grasscutter.net.proto.AchievementOuterClass.Achievement> 
         getAchievementListList();
     /**
-     * <code>repeated .Achievement achievement_list = 9;</code>
+     * <code>repeated .Achievement achievement_list = 11;</code>
      */
     emu.grasscutter.net.proto.AchievementOuterClass.Achievement getAchievementList(int index);
     /**
-     * <code>repeated .Achievement achievement_list = 9;</code>
+     * <code>repeated .Achievement achievement_list = 11;</code>
      */
     int getAchievementListCount();
     /**
-     * <code>repeated .Achievement achievement_list = 9;</code>
+     * <code>repeated .Achievement achievement_list = 11;</code>
      */
     java.util.List<? extends emu.grasscutter.net.proto.AchievementOuterClass.AchievementOrBuilder> 
         getAchievementListOrBuilderList();
     /**
-     * <code>repeated .Achievement achievement_list = 9;</code>
+     * <code>repeated .Achievement achievement_list = 11;</code>
      */
     emu.grasscutter.net.proto.AchievementOuterClass.AchievementOrBuilder getAchievementListOrBuilder(
         int index);
   }
   /**
    * <pre>
-   * CmdId: 27422
-   * Obf: BMJFIOKJEMJ
+   * 4.6.0
+   * CmdId: 1655
    * </pre>
    *
    * Protobuf type {@code AchievementAllDataNotify}
@@ -93,6 +93,80 @@ public final class AchievementAllDataNotifyOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private AchievementAllDataNotify(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 64: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                rewardTakenGoalIdList_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              rewardTakenGoalIdList_.addInt(input.readUInt32());
+              break;
+            }
+            case 66: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
+                rewardTakenGoalIdList_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                rewardTakenGoalIdList_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 90: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                achievementList_ = new java.util.ArrayList<emu.grasscutter.net.proto.AchievementOuterClass.Achievement>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              achievementList_.add(
+                  input.readMessage(emu.grasscutter.net.proto.AchievementOuterClass.Achievement.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          rewardTakenGoalIdList_.makeImmutable(); // C
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          achievementList_ = java.util.Collections.unmodifiableList(achievementList_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.AchievementAllDataNotifyOuterClass.internal_static_AchievementAllDataNotify_descriptor;
@@ -106,10 +180,10 @@ public final class AchievementAllDataNotifyOuterClass {
               emu.grasscutter.net.proto.AchievementAllDataNotifyOuterClass.AchievementAllDataNotify.class, emu.grasscutter.net.proto.AchievementAllDataNotifyOuterClass.AchievementAllDataNotify.Builder.class);
     }
 
-    public static final int REWARD_TAKEN_GOAL_ID_LIST_FIELD_NUMBER = 4;
+    public static final int REWARD_TAKEN_GOAL_ID_LIST_FIELD_NUMBER = 8;
     private com.google.protobuf.Internal.IntList rewardTakenGoalIdList_;
     /**
-     * <code>repeated uint32 reward_taken_goal_id_list = 4;</code>
+     * <code>repeated uint32 reward_taken_goal_id_list = 8;</code>
      * @return A list containing the rewardTakenGoalIdList.
      */
     @java.lang.Override
@@ -118,14 +192,14 @@ public final class AchievementAllDataNotifyOuterClass {
       return rewardTakenGoalIdList_;
     }
     /**
-     * <code>repeated uint32 reward_taken_goal_id_list = 4;</code>
+     * <code>repeated uint32 reward_taken_goal_id_list = 8;</code>
      * @return The count of rewardTakenGoalIdList.
      */
     public int getRewardTakenGoalIdListCount() {
       return rewardTakenGoalIdList_.size();
     }
     /**
-     * <code>repeated uint32 reward_taken_goal_id_list = 4;</code>
+     * <code>repeated uint32 reward_taken_goal_id_list = 8;</code>
      * @param index The index of the element to return.
      * @return The rewardTakenGoalIdList at the given index.
      */
@@ -134,17 +208,17 @@ public final class AchievementAllDataNotifyOuterClass {
     }
     private int rewardTakenGoalIdListMemoizedSerializedSize = -1;
 
-    public static final int ACHIEVEMENT_LIST_FIELD_NUMBER = 9;
+    public static final int ACHIEVEMENT_LIST_FIELD_NUMBER = 11;
     private java.util.List<emu.grasscutter.net.proto.AchievementOuterClass.Achievement> achievementList_;
     /**
-     * <code>repeated .Achievement achievement_list = 9;</code>
+     * <code>repeated .Achievement achievement_list = 11;</code>
      */
     @java.lang.Override
     public java.util.List<emu.grasscutter.net.proto.AchievementOuterClass.Achievement> getAchievementListList() {
       return achievementList_;
     }
     /**
-     * <code>repeated .Achievement achievement_list = 9;</code>
+     * <code>repeated .Achievement achievement_list = 11;</code>
      */
     @java.lang.Override
     public java.util.List<? extends emu.grasscutter.net.proto.AchievementOuterClass.AchievementOrBuilder> 
@@ -152,21 +226,21 @@ public final class AchievementAllDataNotifyOuterClass {
       return achievementList_;
     }
     /**
-     * <code>repeated .Achievement achievement_list = 9;</code>
+     * <code>repeated .Achievement achievement_list = 11;</code>
      */
     @java.lang.Override
     public int getAchievementListCount() {
       return achievementList_.size();
     }
     /**
-     * <code>repeated .Achievement achievement_list = 9;</code>
+     * <code>repeated .Achievement achievement_list = 11;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.AchievementOuterClass.Achievement getAchievementList(int index) {
       return achievementList_.get(index);
     }
     /**
-     * <code>repeated .Achievement achievement_list = 9;</code>
+     * <code>repeated .Achievement achievement_list = 11;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.AchievementOuterClass.AchievementOrBuilder getAchievementListOrBuilder(
@@ -190,16 +264,16 @@ public final class AchievementAllDataNotifyOuterClass {
                         throws java.io.IOException {
       getSerializedSize();
       if (getRewardTakenGoalIdListList().size() > 0) {
-        output.writeUInt32NoTag(34);
+        output.writeUInt32NoTag(66);
         output.writeUInt32NoTag(rewardTakenGoalIdListMemoizedSerializedSize);
       }
       for (int i = 0; i < rewardTakenGoalIdList_.size(); i++) {
         output.writeUInt32NoTag(rewardTakenGoalIdList_.getInt(i));
       }
       for (int i = 0; i < achievementList_.size(); i++) {
-        output.writeMessage(9, achievementList_.get(i));
+        output.writeMessage(11, achievementList_.get(i));
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -224,9 +298,9 @@ public final class AchievementAllDataNotifyOuterClass {
       }
       for (int i = 0; i < achievementList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(9, achievementList_.get(i));
+          .computeMessageSize(11, achievementList_.get(i));
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -245,7 +319,7 @@ public final class AchievementAllDataNotifyOuterClass {
           .equals(other.getRewardTakenGoalIdListList())) return false;
       if (!getAchievementListList()
           .equals(other.getAchievementListList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -264,7 +338,7 @@ public final class AchievementAllDataNotifyOuterClass {
         hash = (37 * hash) + ACHIEVEMENT_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getAchievementListList().hashCode();
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -361,8 +435,8 @@ public final class AchievementAllDataNotifyOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 27422
-     * Obf: BMJFIOKJEMJ
+     * 4.6.0
+     * CmdId: 1655
      * </pre>
      *
      * Protobuf type {@code AchievementAllDataNotify}
@@ -386,13 +460,19 @@ public final class AchievementAllDataNotifyOuterClass {
 
       // Construct using emu.grasscutter.net.proto.AchievementAllDataNotifyOuterClass.AchievementAllDataNotify.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getAchievementListFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -401,11 +481,10 @@ public final class AchievementAllDataNotifyOuterClass {
         bitField0_ = (bitField0_ & ~0x00000001);
         if (achievementListBuilder_ == null) {
           achievementList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
-          achievementList_ = null;
           achievementListBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -531,7 +610,7 @@ public final class AchievementAllDataNotifyOuterClass {
             }
           }
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -546,59 +625,17 @@ public final class AchievementAllDataNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.AchievementAllDataNotifyOuterClass.AchievementAllDataNotify parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 32: {
-                int v = input.readUInt32();
-                ensureRewardTakenGoalIdListIsMutable();
-                rewardTakenGoalIdList_.addInt(v);
-                break;
-              } // case 32
-              case 34: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureRewardTakenGoalIdListIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  rewardTakenGoalIdList_.addInt(input.readUInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 34
-              case 74: {
-                emu.grasscutter.net.proto.AchievementOuterClass.Achievement m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.AchievementOuterClass.Achievement.parser(),
-                        extensionRegistry);
-                if (achievementListBuilder_ == null) {
-                  ensureAchievementListIsMutable();
-                  achievementList_.add(m);
-                } else {
-                  achievementListBuilder_.addMessage(m);
-                }
-                break;
-              } // case 74
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.AchievementAllDataNotifyOuterClass.AchievementAllDataNotify) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -611,7 +648,7 @@ public final class AchievementAllDataNotifyOuterClass {
          }
       }
       /**
-       * <code>repeated uint32 reward_taken_goal_id_list = 4;</code>
+       * <code>repeated uint32 reward_taken_goal_id_list = 8;</code>
        * @return A list containing the rewardTakenGoalIdList.
        */
       public java.util.List<java.lang.Integer>
@@ -620,14 +657,14 @@ public final class AchievementAllDataNotifyOuterClass {
                  java.util.Collections.unmodifiableList(rewardTakenGoalIdList_) : rewardTakenGoalIdList_;
       }
       /**
-       * <code>repeated uint32 reward_taken_goal_id_list = 4;</code>
+       * <code>repeated uint32 reward_taken_goal_id_list = 8;</code>
        * @return The count of rewardTakenGoalIdList.
        */
       public int getRewardTakenGoalIdListCount() {
         return rewardTakenGoalIdList_.size();
       }
       /**
-       * <code>repeated uint32 reward_taken_goal_id_list = 4;</code>
+       * <code>repeated uint32 reward_taken_goal_id_list = 8;</code>
        * @param index The index of the element to return.
        * @return The rewardTakenGoalIdList at the given index.
        */
@@ -635,7 +672,7 @@ public final class AchievementAllDataNotifyOuterClass {
         return rewardTakenGoalIdList_.getInt(index);
       }
       /**
-       * <code>repeated uint32 reward_taken_goal_id_list = 4;</code>
+       * <code>repeated uint32 reward_taken_goal_id_list = 8;</code>
        * @param index The index to set the value at.
        * @param value The rewardTakenGoalIdList to set.
        * @return This builder for chaining.
@@ -648,7 +685,7 @@ public final class AchievementAllDataNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 reward_taken_goal_id_list = 4;</code>
+       * <code>repeated uint32 reward_taken_goal_id_list = 8;</code>
        * @param value The rewardTakenGoalIdList to add.
        * @return This builder for chaining.
        */
@@ -659,7 +696,7 @@ public final class AchievementAllDataNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 reward_taken_goal_id_list = 4;</code>
+       * <code>repeated uint32 reward_taken_goal_id_list = 8;</code>
        * @param values The rewardTakenGoalIdList to add.
        * @return This builder for chaining.
        */
@@ -672,7 +709,7 @@ public final class AchievementAllDataNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 reward_taken_goal_id_list = 4;</code>
+       * <code>repeated uint32 reward_taken_goal_id_list = 8;</code>
        * @return This builder for chaining.
        */
       public Builder clearRewardTakenGoalIdList() {
@@ -695,7 +732,7 @@ public final class AchievementAllDataNotifyOuterClass {
           emu.grasscutter.net.proto.AchievementOuterClass.Achievement, emu.grasscutter.net.proto.AchievementOuterClass.Achievement.Builder, emu.grasscutter.net.proto.AchievementOuterClass.AchievementOrBuilder> achievementListBuilder_;
 
       /**
-       * <code>repeated .Achievement achievement_list = 9;</code>
+       * <code>repeated .Achievement achievement_list = 11;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.AchievementOuterClass.Achievement> getAchievementListList() {
         if (achievementListBuilder_ == null) {
@@ -705,7 +742,7 @@ public final class AchievementAllDataNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .Achievement achievement_list = 9;</code>
+       * <code>repeated .Achievement achievement_list = 11;</code>
        */
       public int getAchievementListCount() {
         if (achievementListBuilder_ == null) {
@@ -715,7 +752,7 @@ public final class AchievementAllDataNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .Achievement achievement_list = 9;</code>
+       * <code>repeated .Achievement achievement_list = 11;</code>
        */
       public emu.grasscutter.net.proto.AchievementOuterClass.Achievement getAchievementList(int index) {
         if (achievementListBuilder_ == null) {
@@ -725,7 +762,7 @@ public final class AchievementAllDataNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .Achievement achievement_list = 9;</code>
+       * <code>repeated .Achievement achievement_list = 11;</code>
        */
       public Builder setAchievementList(
           int index, emu.grasscutter.net.proto.AchievementOuterClass.Achievement value) {
@@ -742,7 +779,7 @@ public final class AchievementAllDataNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .Achievement achievement_list = 9;</code>
+       * <code>repeated .Achievement achievement_list = 11;</code>
        */
       public Builder setAchievementList(
           int index, emu.grasscutter.net.proto.AchievementOuterClass.Achievement.Builder builderForValue) {
@@ -756,7 +793,7 @@ public final class AchievementAllDataNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .Achievement achievement_list = 9;</code>
+       * <code>repeated .Achievement achievement_list = 11;</code>
        */
       public Builder addAchievementList(emu.grasscutter.net.proto.AchievementOuterClass.Achievement value) {
         if (achievementListBuilder_ == null) {
@@ -772,7 +809,7 @@ public final class AchievementAllDataNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .Achievement achievement_list = 9;</code>
+       * <code>repeated .Achievement achievement_list = 11;</code>
        */
       public Builder addAchievementList(
           int index, emu.grasscutter.net.proto.AchievementOuterClass.Achievement value) {
@@ -789,7 +826,7 @@ public final class AchievementAllDataNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .Achievement achievement_list = 9;</code>
+       * <code>repeated .Achievement achievement_list = 11;</code>
        */
       public Builder addAchievementList(
           emu.grasscutter.net.proto.AchievementOuterClass.Achievement.Builder builderForValue) {
@@ -803,7 +840,7 @@ public final class AchievementAllDataNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .Achievement achievement_list = 9;</code>
+       * <code>repeated .Achievement achievement_list = 11;</code>
        */
       public Builder addAchievementList(
           int index, emu.grasscutter.net.proto.AchievementOuterClass.Achievement.Builder builderForValue) {
@@ -817,7 +854,7 @@ public final class AchievementAllDataNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .Achievement achievement_list = 9;</code>
+       * <code>repeated .Achievement achievement_list = 11;</code>
        */
       public Builder addAllAchievementList(
           java.lang.Iterable<? extends emu.grasscutter.net.proto.AchievementOuterClass.Achievement> values) {
@@ -832,7 +869,7 @@ public final class AchievementAllDataNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .Achievement achievement_list = 9;</code>
+       * <code>repeated .Achievement achievement_list = 11;</code>
        */
       public Builder clearAchievementList() {
         if (achievementListBuilder_ == null) {
@@ -845,7 +882,7 @@ public final class AchievementAllDataNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .Achievement achievement_list = 9;</code>
+       * <code>repeated .Achievement achievement_list = 11;</code>
        */
       public Builder removeAchievementList(int index) {
         if (achievementListBuilder_ == null) {
@@ -858,14 +895,14 @@ public final class AchievementAllDataNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .Achievement achievement_list = 9;</code>
+       * <code>repeated .Achievement achievement_list = 11;</code>
        */
       public emu.grasscutter.net.proto.AchievementOuterClass.Achievement.Builder getAchievementListBuilder(
           int index) {
         return getAchievementListFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .Achievement achievement_list = 9;</code>
+       * <code>repeated .Achievement achievement_list = 11;</code>
        */
       public emu.grasscutter.net.proto.AchievementOuterClass.AchievementOrBuilder getAchievementListOrBuilder(
           int index) {
@@ -875,7 +912,7 @@ public final class AchievementAllDataNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .Achievement achievement_list = 9;</code>
+       * <code>repeated .Achievement achievement_list = 11;</code>
        */
       public java.util.List<? extends emu.grasscutter.net.proto.AchievementOuterClass.AchievementOrBuilder> 
            getAchievementListOrBuilderList() {
@@ -886,14 +923,14 @@ public final class AchievementAllDataNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .Achievement achievement_list = 9;</code>
+       * <code>repeated .Achievement achievement_list = 11;</code>
        */
       public emu.grasscutter.net.proto.AchievementOuterClass.Achievement.Builder addAchievementListBuilder() {
         return getAchievementListFieldBuilder().addBuilder(
             emu.grasscutter.net.proto.AchievementOuterClass.Achievement.getDefaultInstance());
       }
       /**
-       * <code>repeated .Achievement achievement_list = 9;</code>
+       * <code>repeated .Achievement achievement_list = 11;</code>
        */
       public emu.grasscutter.net.proto.AchievementOuterClass.Achievement.Builder addAchievementListBuilder(
           int index) {
@@ -901,7 +938,7 @@ public final class AchievementAllDataNotifyOuterClass {
             index, emu.grasscutter.net.proto.AchievementOuterClass.Achievement.getDefaultInstance());
       }
       /**
-       * <code>repeated .Achievement achievement_list = 9;</code>
+       * <code>repeated .Achievement achievement_list = 11;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.AchievementOuterClass.Achievement.Builder> 
            getAchievementListBuilderList() {
@@ -954,18 +991,7 @@ public final class AchievementAllDataNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new AchievementAllDataNotify(input, extensionRegistry);
       }
     };
 
@@ -1001,8 +1027,8 @@ public final class AchievementAllDataNotifyOuterClass {
     java.lang.String[] descriptorData = {
       "\n\036AchievementAllDataNotify.proto\032\021Achiev" +
       "ement.proto\"e\n\030AchievementAllDataNotify\022" +
-      "!\n\031reward_taken_goal_id_list\030\004 \003(\r\022&\n\020ac" +
-      "hievement_list\030\t \003(\0132\014.AchievementB\033\n\031em" +
+      "!\n\031reward_taken_goal_id_list\030\010 \003(\r\022&\n\020ac" +
+      "hievement_list\030\013 \003(\0132\014.AchievementB\033\n\031em" +
       "u.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

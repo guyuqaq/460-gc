@@ -19,21 +19,22 @@ public final class BuyBattlePassLevelRspOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 buy_level = 7;</code>
-     * @return The buyLevel.
-     */
-    int getBuyLevel();
-
-    /**
-     * <code>int32 retcode = 11;</code>
+     * <code>int32 retcode = 4;</code>
      * @return The retcode.
      */
     int getRetcode();
+
+    /**
+     * <code>uint32 buy_level = 12;</code>
+     * @return The buyLevel.
+     */
+    int getBuyLevel();
   }
   /**
    * <pre>
-   * CmdId: 26570
-   * Obf: JLNMDHMIKAE
+   * CmdId: 23240
+   * Version: 4.6.0
+   * Obfs: KDAFIJMJBPK
    * </pre>
    *
    * Protobuf type {@code BuyBattlePassLevelRsp}
@@ -62,6 +63,53 @@ public final class BuyBattlePassLevelRspOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private BuyBattlePassLevelRsp(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 32: {
+
+              retcode_ = input.readInt32();
+              break;
+            }
+            case 96: {
+
+              buyLevel_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.BuyBattlePassLevelRspOuterClass.internal_static_BuyBattlePassLevelRsp_descriptor;
@@ -75,26 +123,26 @@ public final class BuyBattlePassLevelRspOuterClass {
               emu.grasscutter.net.proto.BuyBattlePassLevelRspOuterClass.BuyBattlePassLevelRsp.class, emu.grasscutter.net.proto.BuyBattlePassLevelRspOuterClass.BuyBattlePassLevelRsp.Builder.class);
     }
 
-    public static final int BUY_LEVEL_FIELD_NUMBER = 7;
-    private int buyLevel_;
-    /**
-     * <code>uint32 buy_level = 7;</code>
-     * @return The buyLevel.
-     */
-    @java.lang.Override
-    public int getBuyLevel() {
-      return buyLevel_;
-    }
-
-    public static final int RETCODE_FIELD_NUMBER = 11;
+    public static final int RETCODE_FIELD_NUMBER = 4;
     private int retcode_;
     /**
-     * <code>int32 retcode = 11;</code>
+     * <code>int32 retcode = 4;</code>
      * @return The retcode.
      */
     @java.lang.Override
     public int getRetcode() {
       return retcode_;
+    }
+
+    public static final int BUY_LEVEL_FIELD_NUMBER = 12;
+    private int buyLevel_;
+    /**
+     * <code>uint32 buy_level = 12;</code>
+     * @return The buyLevel.
+     */
+    @java.lang.Override
+    public int getBuyLevel() {
+      return buyLevel_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -111,13 +159,13 @@ public final class BuyBattlePassLevelRspOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (buyLevel_ != 0) {
-        output.writeUInt32(7, buyLevel_);
-      }
       if (retcode_ != 0) {
-        output.writeInt32(11, retcode_);
+        output.writeInt32(4, retcode_);
       }
-      getUnknownFields().writeTo(output);
+      if (buyLevel_ != 0) {
+        output.writeUInt32(12, buyLevel_);
+      }
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -126,15 +174,15 @@ public final class BuyBattlePassLevelRspOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (buyLevel_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(7, buyLevel_);
-      }
       if (retcode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(11, retcode_);
+          .computeInt32Size(4, retcode_);
       }
-      size += getUnknownFields().getSerializedSize();
+      if (buyLevel_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(12, buyLevel_);
+      }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -149,11 +197,11 @@ public final class BuyBattlePassLevelRspOuterClass {
       }
       emu.grasscutter.net.proto.BuyBattlePassLevelRspOuterClass.BuyBattlePassLevelRsp other = (emu.grasscutter.net.proto.BuyBattlePassLevelRspOuterClass.BuyBattlePassLevelRsp) obj;
 
-      if (getBuyLevel()
-          != other.getBuyLevel()) return false;
       if (getRetcode()
           != other.getRetcode()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (getBuyLevel()
+          != other.getBuyLevel()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -164,11 +212,11 @@ public final class BuyBattlePassLevelRspOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + BUY_LEVEL_FIELD_NUMBER;
-      hash = (53 * hash) + getBuyLevel();
       hash = (37 * hash) + RETCODE_FIELD_NUMBER;
       hash = (53 * hash) + getRetcode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (37 * hash) + BUY_LEVEL_FIELD_NUMBER;
+      hash = (53 * hash) + getBuyLevel();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -265,8 +313,9 @@ public final class BuyBattlePassLevelRspOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 26570
-     * Obf: JLNMDHMIKAE
+     * CmdId: 23240
+     * Version: 4.6.0
+     * Obfs: KDAFIJMJBPK
      * </pre>
      *
      * Protobuf type {@code BuyBattlePassLevelRsp}
@@ -290,20 +339,25 @@ public final class BuyBattlePassLevelRspOuterClass {
 
       // Construct using emu.grasscutter.net.proto.BuyBattlePassLevelRspOuterClass.BuyBattlePassLevelRsp.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        buyLevel_ = 0;
-
         retcode_ = 0;
+
+        buyLevel_ = 0;
 
         return this;
       }
@@ -331,8 +385,8 @@ public final class BuyBattlePassLevelRspOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.BuyBattlePassLevelRspOuterClass.BuyBattlePassLevelRsp buildPartial() {
         emu.grasscutter.net.proto.BuyBattlePassLevelRspOuterClass.BuyBattlePassLevelRsp result = new emu.grasscutter.net.proto.BuyBattlePassLevelRspOuterClass.BuyBattlePassLevelRsp(this);
-        result.buyLevel_ = buyLevel_;
         result.retcode_ = retcode_;
+        result.buyLevel_ = buyLevel_;
         onBuilt();
         return result;
       }
@@ -381,13 +435,13 @@ public final class BuyBattlePassLevelRspOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.BuyBattlePassLevelRspOuterClass.BuyBattlePassLevelRsp other) {
         if (other == emu.grasscutter.net.proto.BuyBattlePassLevelRspOuterClass.BuyBattlePassLevelRsp.getDefaultInstance()) return this;
-        if (other.getBuyLevel() != 0) {
-          setBuyLevel(other.getBuyLevel());
-        }
         if (other.getRetcode() != 0) {
           setRetcode(other.getRetcode());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        if (other.getBuyLevel() != 0) {
+          setBuyLevel(other.getBuyLevel());
+        }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -402,77 +456,23 @@ public final class BuyBattlePassLevelRspOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.BuyBattlePassLevelRspOuterClass.BuyBattlePassLevelRsp parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 56: {
-                buyLevel_ = input.readUInt32();
-
-                break;
-              } // case 56
-              case 88: {
-                retcode_ = input.readInt32();
-
-                break;
-              } // case 88
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.BuyBattlePassLevelRspOuterClass.BuyBattlePassLevelRsp) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-
-      private int buyLevel_ ;
-      /**
-       * <code>uint32 buy_level = 7;</code>
-       * @return The buyLevel.
-       */
-      @java.lang.Override
-      public int getBuyLevel() {
-        return buyLevel_;
-      }
-      /**
-       * <code>uint32 buy_level = 7;</code>
-       * @param value The buyLevel to set.
-       * @return This builder for chaining.
-       */
-      public Builder setBuyLevel(int value) {
-        
-        buyLevel_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 buy_level = 7;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearBuyLevel() {
-        
-        buyLevel_ = 0;
-        onChanged();
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
 
       private int retcode_ ;
       /**
-       * <code>int32 retcode = 11;</code>
+       * <code>int32 retcode = 4;</code>
        * @return The retcode.
        */
       @java.lang.Override
@@ -480,7 +480,7 @@ public final class BuyBattlePassLevelRspOuterClass {
         return retcode_;
       }
       /**
-       * <code>int32 retcode = 11;</code>
+       * <code>int32 retcode = 4;</code>
        * @param value The retcode to set.
        * @return This builder for chaining.
        */
@@ -491,12 +491,43 @@ public final class BuyBattlePassLevelRspOuterClass {
         return this;
       }
       /**
-       * <code>int32 retcode = 11;</code>
+       * <code>int32 retcode = 4;</code>
        * @return This builder for chaining.
        */
       public Builder clearRetcode() {
         
         retcode_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int buyLevel_ ;
+      /**
+       * <code>uint32 buy_level = 12;</code>
+       * @return The buyLevel.
+       */
+      @java.lang.Override
+      public int getBuyLevel() {
+        return buyLevel_;
+      }
+      /**
+       * <code>uint32 buy_level = 12;</code>
+       * @param value The buyLevel to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBuyLevel(int value) {
+        
+        buyLevel_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 buy_level = 12;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBuyLevel() {
+        
+        buyLevel_ = 0;
         onChanged();
         return this;
       }
@@ -533,18 +564,7 @@ public final class BuyBattlePassLevelRspOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new BuyBattlePassLevelRsp(input, extensionRegistry);
       }
     };
 
@@ -579,8 +599,8 @@ public final class BuyBattlePassLevelRspOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\033BuyBattlePassLevelRsp.proto\";\n\025BuyBatt" +
-      "lePassLevelRsp\022\021\n\tbuy_level\030\007 \001(\r\022\017\n\007ret" +
-      "code\030\013 \001(\005B\033\n\031emu.grasscutter.net.protob" +
+      "lePassLevelRsp\022\017\n\007retcode\030\004 \001(\005\022\021\n\tbuy_l" +
+      "evel\030\014 \001(\rB\033\n\031emu.grasscutter.net.protob" +
       "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -592,7 +612,7 @@ public final class BuyBattlePassLevelRspOuterClass {
     internal_static_BuyBattlePassLevelRsp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_BuyBattlePassLevelRsp_descriptor,
-        new java.lang.String[] { "BuyLevel", "Retcode", });
+        new java.lang.String[] { "Retcode", "BuyLevel", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

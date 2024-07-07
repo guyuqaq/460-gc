@@ -19,32 +19,32 @@ public final class AbilityMetaReInitOverrideMapOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .AbilityScalarValueEntry override_map = 10;</code>
+     * <code>repeated .AbilityScalarValueEntry override_map = 15;</code>
      */
     java.util.List<emu.grasscutter.net.proto.AbilityScalarValueEntryOuterClass.AbilityScalarValueEntry> 
         getOverrideMapList();
     /**
-     * <code>repeated .AbilityScalarValueEntry override_map = 10;</code>
+     * <code>repeated .AbilityScalarValueEntry override_map = 15;</code>
      */
     emu.grasscutter.net.proto.AbilityScalarValueEntryOuterClass.AbilityScalarValueEntry getOverrideMap(int index);
     /**
-     * <code>repeated .AbilityScalarValueEntry override_map = 10;</code>
+     * <code>repeated .AbilityScalarValueEntry override_map = 15;</code>
      */
     int getOverrideMapCount();
     /**
-     * <code>repeated .AbilityScalarValueEntry override_map = 10;</code>
+     * <code>repeated .AbilityScalarValueEntry override_map = 15;</code>
      */
     java.util.List<? extends emu.grasscutter.net.proto.AbilityScalarValueEntryOuterClass.AbilityScalarValueEntryOrBuilder> 
         getOverrideMapOrBuilderList();
     /**
-     * <code>repeated .AbilityScalarValueEntry override_map = 10;</code>
+     * <code>repeated .AbilityScalarValueEntry override_map = 15;</code>
      */
     emu.grasscutter.net.proto.AbilityScalarValueEntryOuterClass.AbilityScalarValueEntryOrBuilder getOverrideMapOrBuilder(
         int index);
   }
   /**
    * <pre>
-   * Obf: DKNHIBDBJDH
+   * 4.6.0
    * </pre>
    *
    * Protobuf type {@code AbilityMetaReInitOverrideMap}
@@ -74,6 +74,56 @@ public final class AbilityMetaReInitOverrideMapOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private AbilityMetaReInitOverrideMap(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 122: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                overrideMap_ = new java.util.ArrayList<emu.grasscutter.net.proto.AbilityScalarValueEntryOuterClass.AbilityScalarValueEntry>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              overrideMap_.add(
+                  input.readMessage(emu.grasscutter.net.proto.AbilityScalarValueEntryOuterClass.AbilityScalarValueEntry.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          overrideMap_ = java.util.Collections.unmodifiableList(overrideMap_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.AbilityMetaReInitOverrideMapOuterClass.internal_static_AbilityMetaReInitOverrideMap_descriptor;
@@ -87,17 +137,17 @@ public final class AbilityMetaReInitOverrideMapOuterClass {
               emu.grasscutter.net.proto.AbilityMetaReInitOverrideMapOuterClass.AbilityMetaReInitOverrideMap.class, emu.grasscutter.net.proto.AbilityMetaReInitOverrideMapOuterClass.AbilityMetaReInitOverrideMap.Builder.class);
     }
 
-    public static final int OVERRIDE_MAP_FIELD_NUMBER = 10;
+    public static final int OVERRIDE_MAP_FIELD_NUMBER = 15;
     private java.util.List<emu.grasscutter.net.proto.AbilityScalarValueEntryOuterClass.AbilityScalarValueEntry> overrideMap_;
     /**
-     * <code>repeated .AbilityScalarValueEntry override_map = 10;</code>
+     * <code>repeated .AbilityScalarValueEntry override_map = 15;</code>
      */
     @java.lang.Override
     public java.util.List<emu.grasscutter.net.proto.AbilityScalarValueEntryOuterClass.AbilityScalarValueEntry> getOverrideMapList() {
       return overrideMap_;
     }
     /**
-     * <code>repeated .AbilityScalarValueEntry override_map = 10;</code>
+     * <code>repeated .AbilityScalarValueEntry override_map = 15;</code>
      */
     @java.lang.Override
     public java.util.List<? extends emu.grasscutter.net.proto.AbilityScalarValueEntryOuterClass.AbilityScalarValueEntryOrBuilder> 
@@ -105,21 +155,21 @@ public final class AbilityMetaReInitOverrideMapOuterClass {
       return overrideMap_;
     }
     /**
-     * <code>repeated .AbilityScalarValueEntry override_map = 10;</code>
+     * <code>repeated .AbilityScalarValueEntry override_map = 15;</code>
      */
     @java.lang.Override
     public int getOverrideMapCount() {
       return overrideMap_.size();
     }
     /**
-     * <code>repeated .AbilityScalarValueEntry override_map = 10;</code>
+     * <code>repeated .AbilityScalarValueEntry override_map = 15;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.AbilityScalarValueEntryOuterClass.AbilityScalarValueEntry getOverrideMap(int index) {
       return overrideMap_.get(index);
     }
     /**
-     * <code>repeated .AbilityScalarValueEntry override_map = 10;</code>
+     * <code>repeated .AbilityScalarValueEntry override_map = 15;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.AbilityScalarValueEntryOuterClass.AbilityScalarValueEntryOrBuilder getOverrideMapOrBuilder(
@@ -142,9 +192,9 @@ public final class AbilityMetaReInitOverrideMapOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       for (int i = 0; i < overrideMap_.size(); i++) {
-        output.writeMessage(10, overrideMap_.get(i));
+        output.writeMessage(15, overrideMap_.get(i));
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -155,9 +205,9 @@ public final class AbilityMetaReInitOverrideMapOuterClass {
       size = 0;
       for (int i = 0; i < overrideMap_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(10, overrideMap_.get(i));
+          .computeMessageSize(15, overrideMap_.get(i));
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -174,7 +224,7 @@ public final class AbilityMetaReInitOverrideMapOuterClass {
 
       if (!getOverrideMapList()
           .equals(other.getOverrideMapList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -189,7 +239,7 @@ public final class AbilityMetaReInitOverrideMapOuterClass {
         hash = (37 * hash) + OVERRIDE_MAP_FIELD_NUMBER;
         hash = (53 * hash) + getOverrideMapList().hashCode();
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -286,7 +336,7 @@ public final class AbilityMetaReInitOverrideMapOuterClass {
     }
     /**
      * <pre>
-     * Obf: DKNHIBDBJDH
+     * 4.6.0
      * </pre>
      *
      * Protobuf type {@code AbilityMetaReInitOverrideMap}
@@ -310,24 +360,29 @@ public final class AbilityMetaReInitOverrideMapOuterClass {
 
       // Construct using emu.grasscutter.net.proto.AbilityMetaReInitOverrideMapOuterClass.AbilityMetaReInitOverrideMap.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getOverrideMapFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
         if (overrideMapBuilder_ == null) {
           overrideMap_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
-          overrideMap_ = null;
           overrideMapBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -438,7 +493,7 @@ public final class AbilityMetaReInitOverrideMapOuterClass {
             }
           }
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -453,43 +508,17 @@ public final class AbilityMetaReInitOverrideMapOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.AbilityMetaReInitOverrideMapOuterClass.AbilityMetaReInitOverrideMap parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 82: {
-                emu.grasscutter.net.proto.AbilityScalarValueEntryOuterClass.AbilityScalarValueEntry m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.AbilityScalarValueEntryOuterClass.AbilityScalarValueEntry.parser(),
-                        extensionRegistry);
-                if (overrideMapBuilder_ == null) {
-                  ensureOverrideMapIsMutable();
-                  overrideMap_.add(m);
-                } else {
-                  overrideMapBuilder_.addMessage(m);
-                }
-                break;
-              } // case 82
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.AbilityMetaReInitOverrideMapOuterClass.AbilityMetaReInitOverrideMap) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -507,7 +536,7 @@ public final class AbilityMetaReInitOverrideMapOuterClass {
           emu.grasscutter.net.proto.AbilityScalarValueEntryOuterClass.AbilityScalarValueEntry, emu.grasscutter.net.proto.AbilityScalarValueEntryOuterClass.AbilityScalarValueEntry.Builder, emu.grasscutter.net.proto.AbilityScalarValueEntryOuterClass.AbilityScalarValueEntryOrBuilder> overrideMapBuilder_;
 
       /**
-       * <code>repeated .AbilityScalarValueEntry override_map = 10;</code>
+       * <code>repeated .AbilityScalarValueEntry override_map = 15;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.AbilityScalarValueEntryOuterClass.AbilityScalarValueEntry> getOverrideMapList() {
         if (overrideMapBuilder_ == null) {
@@ -517,7 +546,7 @@ public final class AbilityMetaReInitOverrideMapOuterClass {
         }
       }
       /**
-       * <code>repeated .AbilityScalarValueEntry override_map = 10;</code>
+       * <code>repeated .AbilityScalarValueEntry override_map = 15;</code>
        */
       public int getOverrideMapCount() {
         if (overrideMapBuilder_ == null) {
@@ -527,7 +556,7 @@ public final class AbilityMetaReInitOverrideMapOuterClass {
         }
       }
       /**
-       * <code>repeated .AbilityScalarValueEntry override_map = 10;</code>
+       * <code>repeated .AbilityScalarValueEntry override_map = 15;</code>
        */
       public emu.grasscutter.net.proto.AbilityScalarValueEntryOuterClass.AbilityScalarValueEntry getOverrideMap(int index) {
         if (overrideMapBuilder_ == null) {
@@ -537,7 +566,7 @@ public final class AbilityMetaReInitOverrideMapOuterClass {
         }
       }
       /**
-       * <code>repeated .AbilityScalarValueEntry override_map = 10;</code>
+       * <code>repeated .AbilityScalarValueEntry override_map = 15;</code>
        */
       public Builder setOverrideMap(
           int index, emu.grasscutter.net.proto.AbilityScalarValueEntryOuterClass.AbilityScalarValueEntry value) {
@@ -554,7 +583,7 @@ public final class AbilityMetaReInitOverrideMapOuterClass {
         return this;
       }
       /**
-       * <code>repeated .AbilityScalarValueEntry override_map = 10;</code>
+       * <code>repeated .AbilityScalarValueEntry override_map = 15;</code>
        */
       public Builder setOverrideMap(
           int index, emu.grasscutter.net.proto.AbilityScalarValueEntryOuterClass.AbilityScalarValueEntry.Builder builderForValue) {
@@ -568,7 +597,7 @@ public final class AbilityMetaReInitOverrideMapOuterClass {
         return this;
       }
       /**
-       * <code>repeated .AbilityScalarValueEntry override_map = 10;</code>
+       * <code>repeated .AbilityScalarValueEntry override_map = 15;</code>
        */
       public Builder addOverrideMap(emu.grasscutter.net.proto.AbilityScalarValueEntryOuterClass.AbilityScalarValueEntry value) {
         if (overrideMapBuilder_ == null) {
@@ -584,7 +613,7 @@ public final class AbilityMetaReInitOverrideMapOuterClass {
         return this;
       }
       /**
-       * <code>repeated .AbilityScalarValueEntry override_map = 10;</code>
+       * <code>repeated .AbilityScalarValueEntry override_map = 15;</code>
        */
       public Builder addOverrideMap(
           int index, emu.grasscutter.net.proto.AbilityScalarValueEntryOuterClass.AbilityScalarValueEntry value) {
@@ -601,7 +630,7 @@ public final class AbilityMetaReInitOverrideMapOuterClass {
         return this;
       }
       /**
-       * <code>repeated .AbilityScalarValueEntry override_map = 10;</code>
+       * <code>repeated .AbilityScalarValueEntry override_map = 15;</code>
        */
       public Builder addOverrideMap(
           emu.grasscutter.net.proto.AbilityScalarValueEntryOuterClass.AbilityScalarValueEntry.Builder builderForValue) {
@@ -615,7 +644,7 @@ public final class AbilityMetaReInitOverrideMapOuterClass {
         return this;
       }
       /**
-       * <code>repeated .AbilityScalarValueEntry override_map = 10;</code>
+       * <code>repeated .AbilityScalarValueEntry override_map = 15;</code>
        */
       public Builder addOverrideMap(
           int index, emu.grasscutter.net.proto.AbilityScalarValueEntryOuterClass.AbilityScalarValueEntry.Builder builderForValue) {
@@ -629,7 +658,7 @@ public final class AbilityMetaReInitOverrideMapOuterClass {
         return this;
       }
       /**
-       * <code>repeated .AbilityScalarValueEntry override_map = 10;</code>
+       * <code>repeated .AbilityScalarValueEntry override_map = 15;</code>
        */
       public Builder addAllOverrideMap(
           java.lang.Iterable<? extends emu.grasscutter.net.proto.AbilityScalarValueEntryOuterClass.AbilityScalarValueEntry> values) {
@@ -644,7 +673,7 @@ public final class AbilityMetaReInitOverrideMapOuterClass {
         return this;
       }
       /**
-       * <code>repeated .AbilityScalarValueEntry override_map = 10;</code>
+       * <code>repeated .AbilityScalarValueEntry override_map = 15;</code>
        */
       public Builder clearOverrideMap() {
         if (overrideMapBuilder_ == null) {
@@ -657,7 +686,7 @@ public final class AbilityMetaReInitOverrideMapOuterClass {
         return this;
       }
       /**
-       * <code>repeated .AbilityScalarValueEntry override_map = 10;</code>
+       * <code>repeated .AbilityScalarValueEntry override_map = 15;</code>
        */
       public Builder removeOverrideMap(int index) {
         if (overrideMapBuilder_ == null) {
@@ -670,14 +699,14 @@ public final class AbilityMetaReInitOverrideMapOuterClass {
         return this;
       }
       /**
-       * <code>repeated .AbilityScalarValueEntry override_map = 10;</code>
+       * <code>repeated .AbilityScalarValueEntry override_map = 15;</code>
        */
       public emu.grasscutter.net.proto.AbilityScalarValueEntryOuterClass.AbilityScalarValueEntry.Builder getOverrideMapBuilder(
           int index) {
         return getOverrideMapFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .AbilityScalarValueEntry override_map = 10;</code>
+       * <code>repeated .AbilityScalarValueEntry override_map = 15;</code>
        */
       public emu.grasscutter.net.proto.AbilityScalarValueEntryOuterClass.AbilityScalarValueEntryOrBuilder getOverrideMapOrBuilder(
           int index) {
@@ -687,7 +716,7 @@ public final class AbilityMetaReInitOverrideMapOuterClass {
         }
       }
       /**
-       * <code>repeated .AbilityScalarValueEntry override_map = 10;</code>
+       * <code>repeated .AbilityScalarValueEntry override_map = 15;</code>
        */
       public java.util.List<? extends emu.grasscutter.net.proto.AbilityScalarValueEntryOuterClass.AbilityScalarValueEntryOrBuilder> 
            getOverrideMapOrBuilderList() {
@@ -698,14 +727,14 @@ public final class AbilityMetaReInitOverrideMapOuterClass {
         }
       }
       /**
-       * <code>repeated .AbilityScalarValueEntry override_map = 10;</code>
+       * <code>repeated .AbilityScalarValueEntry override_map = 15;</code>
        */
       public emu.grasscutter.net.proto.AbilityScalarValueEntryOuterClass.AbilityScalarValueEntry.Builder addOverrideMapBuilder() {
         return getOverrideMapFieldBuilder().addBuilder(
             emu.grasscutter.net.proto.AbilityScalarValueEntryOuterClass.AbilityScalarValueEntry.getDefaultInstance());
       }
       /**
-       * <code>repeated .AbilityScalarValueEntry override_map = 10;</code>
+       * <code>repeated .AbilityScalarValueEntry override_map = 15;</code>
        */
       public emu.grasscutter.net.proto.AbilityScalarValueEntryOuterClass.AbilityScalarValueEntry.Builder addOverrideMapBuilder(
           int index) {
@@ -713,7 +742,7 @@ public final class AbilityMetaReInitOverrideMapOuterClass {
             index, emu.grasscutter.net.proto.AbilityScalarValueEntryOuterClass.AbilityScalarValueEntry.getDefaultInstance());
       }
       /**
-       * <code>repeated .AbilityScalarValueEntry override_map = 10;</code>
+       * <code>repeated .AbilityScalarValueEntry override_map = 15;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.AbilityScalarValueEntryOuterClass.AbilityScalarValueEntry.Builder> 
            getOverrideMapBuilderList() {
@@ -766,18 +795,7 @@ public final class AbilityMetaReInitOverrideMapOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new AbilityMetaReInitOverrideMap(input, extensionRegistry);
       }
     };
 
@@ -813,7 +831,7 @@ public final class AbilityMetaReInitOverrideMapOuterClass {
     java.lang.String[] descriptorData = {
       "\n\"AbilityMetaReInitOverrideMap.proto\032\035Ab" +
       "ilityScalarValueEntry.proto\"N\n\034AbilityMe" +
-      "taReInitOverrideMap\022.\n\014override_map\030\n \003(" +
+      "taReInitOverrideMap\022.\n\014override_map\030\017 \003(" +
       "\0132\030.AbilityScalarValueEntryB\033\n\031emu.grass" +
       "cutter.net.protob\006proto3"
     };

@@ -19,68 +19,76 @@ public final class TowerLevelEndNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated uint32 finished_star_cond_list = 14;</code>
+     * <code>repeated uint32 finished_star_cond_list = 3;</code>
      * @return A list containing the finishedStarCondList.
      */
     java.util.List<java.lang.Integer> getFinishedStarCondListList();
     /**
-     * <code>repeated uint32 finished_star_cond_list = 14;</code>
+     * <code>repeated uint32 finished_star_cond_list = 3;</code>
      * @return The count of finishedStarCondList.
      */
     int getFinishedStarCondListCount();
     /**
-     * <code>repeated uint32 finished_star_cond_list = 14;</code>
+     * <code>repeated uint32 finished_star_cond_list = 3;</code>
      * @param index The index of the element to return.
      * @return The finishedStarCondList at the given index.
      */
     int getFinishedStarCondList(int index);
 
     /**
-     * <code>bool is_success = 7;</code>
-     * @return The isSuccess.
-     */
-    boolean getIsSuccess();
-
-    /**
-     * <code>uint32 continue_state = 4;</code>
-     * @return The continueState.
-     */
-    int getContinueState();
-
-    /**
-     * <code>repeated .ItemParam reward_item_list = 13;</code>
+     * <code>repeated .ItemParam reward_item_list = 7;</code>
      */
     java.util.List<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam> 
         getRewardItemListList();
     /**
-     * <code>repeated .ItemParam reward_item_list = 13;</code>
+     * <code>repeated .ItemParam reward_item_list = 7;</code>
      */
     emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam getRewardItemList(int index);
     /**
-     * <code>repeated .ItemParam reward_item_list = 13;</code>
+     * <code>repeated .ItemParam reward_item_list = 7;</code>
      */
     int getRewardItemListCount();
     /**
-     * <code>repeated .ItemParam reward_item_list = 13;</code>
+     * <code>repeated .ItemParam reward_item_list = 7;</code>
      */
     java.util.List<? extends emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder> 
         getRewardItemListOrBuilderList();
     /**
-     * <code>repeated .ItemParam reward_item_list = 13;</code>
+     * <code>repeated .ItemParam reward_item_list = 7;</code>
      */
     emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder getRewardItemListOrBuilder(
         int index);
 
     /**
-     * <code>uint32 next_floor_id = 5;</code>
+     * <pre>
+     * FJLBPFJCOEB sus (9, 15)
+     * </pre>
+     *
+     * <code>uint32 next_floor_id = 9;</code>
      * @return The nextFloorId.
      */
     int getNextFloorId();
+
+    /**
+     * <code>bool is_success = 13;</code>
+     * @return The isSuccess.
+     */
+    boolean getIsSuccess();
+
+    /**
+     * <pre>
+     * MMIKGNOABLJ sus (9, 15)
+     * </pre>
+     *
+     * <code>uint32 continue_state = 15;</code>
+     * @return The continueState.
+     */
+    int getContinueState();
   }
   /**
    * <pre>
-   * CmdId: 20886
-   * Obf: BHDDDPNGPNF
+   * 4.6.0
+   * CmdId: 25369
    * </pre>
    *
    * Protobuf type {@code TowerLevelEndNotify}
@@ -110,6 +118,95 @@ public final class TowerLevelEndNotifyOuterClass {
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
+    }
+    private TowerLevelEndNotify(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 24: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                finishedStarCondList_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              finishedStarCondList_.addInt(input.readUInt32());
+              break;
+            }
+            case 26: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
+                finishedStarCondList_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                finishedStarCondList_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 58: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                rewardItemList_ = new java.util.ArrayList<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              rewardItemList_.add(
+                  input.readMessage(emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.parser(), extensionRegistry));
+              break;
+            }
+            case 72: {
+
+              nextFloorId_ = input.readUInt32();
+              break;
+            }
+            case 104: {
+
+              isSuccess_ = input.readBool();
+              break;
+            }
+            case 120: {
+
+              continueState_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          finishedStarCondList_.makeImmutable(); // C
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          rewardItemList_ = java.util.Collections.unmodifiableList(rewardItemList_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -241,10 +338,10 @@ public final class TowerLevelEndNotifyOuterClass {
       // @@protoc_insertion_point(enum_scope:TowerLevelEndNotify.ContinueStateType)
     }
 
-    public static final int FINISHED_STAR_COND_LIST_FIELD_NUMBER = 14;
+    public static final int FINISHED_STAR_COND_LIST_FIELD_NUMBER = 3;
     private com.google.protobuf.Internal.IntList finishedStarCondList_;
     /**
-     * <code>repeated uint32 finished_star_cond_list = 14;</code>
+     * <code>repeated uint32 finished_star_cond_list = 3;</code>
      * @return A list containing the finishedStarCondList.
      */
     @java.lang.Override
@@ -253,14 +350,14 @@ public final class TowerLevelEndNotifyOuterClass {
       return finishedStarCondList_;
     }
     /**
-     * <code>repeated uint32 finished_star_cond_list = 14;</code>
+     * <code>repeated uint32 finished_star_cond_list = 3;</code>
      * @return The count of finishedStarCondList.
      */
     public int getFinishedStarCondListCount() {
       return finishedStarCondList_.size();
     }
     /**
-     * <code>repeated uint32 finished_star_cond_list = 14;</code>
+     * <code>repeated uint32 finished_star_cond_list = 3;</code>
      * @param index The index of the element to return.
      * @return The finishedStarCondList at the given index.
      */
@@ -269,39 +366,17 @@ public final class TowerLevelEndNotifyOuterClass {
     }
     private int finishedStarCondListMemoizedSerializedSize = -1;
 
-    public static final int IS_SUCCESS_FIELD_NUMBER = 7;
-    private boolean isSuccess_;
-    /**
-     * <code>bool is_success = 7;</code>
-     * @return The isSuccess.
-     */
-    @java.lang.Override
-    public boolean getIsSuccess() {
-      return isSuccess_;
-    }
-
-    public static final int CONTINUE_STATE_FIELD_NUMBER = 4;
-    private int continueState_;
-    /**
-     * <code>uint32 continue_state = 4;</code>
-     * @return The continueState.
-     */
-    @java.lang.Override
-    public int getContinueState() {
-      return continueState_;
-    }
-
-    public static final int REWARD_ITEM_LIST_FIELD_NUMBER = 13;
+    public static final int REWARD_ITEM_LIST_FIELD_NUMBER = 7;
     private java.util.List<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam> rewardItemList_;
     /**
-     * <code>repeated .ItemParam reward_item_list = 13;</code>
+     * <code>repeated .ItemParam reward_item_list = 7;</code>
      */
     @java.lang.Override
     public java.util.List<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam> getRewardItemListList() {
       return rewardItemList_;
     }
     /**
-     * <code>repeated .ItemParam reward_item_list = 13;</code>
+     * <code>repeated .ItemParam reward_item_list = 7;</code>
      */
     @java.lang.Override
     public java.util.List<? extends emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder> 
@@ -309,21 +384,21 @@ public final class TowerLevelEndNotifyOuterClass {
       return rewardItemList_;
     }
     /**
-     * <code>repeated .ItemParam reward_item_list = 13;</code>
+     * <code>repeated .ItemParam reward_item_list = 7;</code>
      */
     @java.lang.Override
     public int getRewardItemListCount() {
       return rewardItemList_.size();
     }
     /**
-     * <code>repeated .ItemParam reward_item_list = 13;</code>
+     * <code>repeated .ItemParam reward_item_list = 7;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam getRewardItemList(int index) {
       return rewardItemList_.get(index);
     }
     /**
-     * <code>repeated .ItemParam reward_item_list = 13;</code>
+     * <code>repeated .ItemParam reward_item_list = 7;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder getRewardItemListOrBuilder(
@@ -331,15 +406,45 @@ public final class TowerLevelEndNotifyOuterClass {
       return rewardItemList_.get(index);
     }
 
-    public static final int NEXT_FLOOR_ID_FIELD_NUMBER = 5;
+    public static final int NEXT_FLOOR_ID_FIELD_NUMBER = 9;
     private int nextFloorId_;
     /**
-     * <code>uint32 next_floor_id = 5;</code>
+     * <pre>
+     * FJLBPFJCOEB sus (9, 15)
+     * </pre>
+     *
+     * <code>uint32 next_floor_id = 9;</code>
      * @return The nextFloorId.
      */
     @java.lang.Override
     public int getNextFloorId() {
       return nextFloorId_;
+    }
+
+    public static final int IS_SUCCESS_FIELD_NUMBER = 13;
+    private boolean isSuccess_;
+    /**
+     * <code>bool is_success = 13;</code>
+     * @return The isSuccess.
+     */
+    @java.lang.Override
+    public boolean getIsSuccess() {
+      return isSuccess_;
+    }
+
+    public static final int CONTINUE_STATE_FIELD_NUMBER = 15;
+    private int continueState_;
+    /**
+     * <pre>
+     * MMIKGNOABLJ sus (9, 15)
+     * </pre>
+     *
+     * <code>uint32 continue_state = 15;</code>
+     * @return The continueState.
+     */
+    @java.lang.Override
+    public int getContinueState() {
+      return continueState_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -357,26 +462,26 @@ public final class TowerLevelEndNotifyOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
-      if (continueState_ != 0) {
-        output.writeUInt32(4, continueState_);
-      }
-      if (nextFloorId_ != 0) {
-        output.writeUInt32(5, nextFloorId_);
-      }
-      if (isSuccess_ != false) {
-        output.writeBool(7, isSuccess_);
-      }
-      for (int i = 0; i < rewardItemList_.size(); i++) {
-        output.writeMessage(13, rewardItemList_.get(i));
-      }
       if (getFinishedStarCondListList().size() > 0) {
-        output.writeUInt32NoTag(114);
+        output.writeUInt32NoTag(26);
         output.writeUInt32NoTag(finishedStarCondListMemoizedSerializedSize);
       }
       for (int i = 0; i < finishedStarCondList_.size(); i++) {
         output.writeUInt32NoTag(finishedStarCondList_.getInt(i));
       }
-      getUnknownFields().writeTo(output);
+      for (int i = 0; i < rewardItemList_.size(); i++) {
+        output.writeMessage(7, rewardItemList_.get(i));
+      }
+      if (nextFloorId_ != 0) {
+        output.writeUInt32(9, nextFloorId_);
+      }
+      if (isSuccess_ != false) {
+        output.writeBool(13, isSuccess_);
+      }
+      if (continueState_ != 0) {
+        output.writeUInt32(15, continueState_);
+      }
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -385,22 +490,6 @@ public final class TowerLevelEndNotifyOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (continueState_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(4, continueState_);
-      }
-      if (nextFloorId_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(5, nextFloorId_);
-      }
-      if (isSuccess_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(7, isSuccess_);
-      }
-      for (int i = 0; i < rewardItemList_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(13, rewardItemList_.get(i));
-      }
       {
         int dataSize = 0;
         for (int i = 0; i < finishedStarCondList_.size(); i++) {
@@ -415,7 +504,23 @@ public final class TowerLevelEndNotifyOuterClass {
         }
         finishedStarCondListMemoizedSerializedSize = dataSize;
       }
-      size += getUnknownFields().getSerializedSize();
+      for (int i = 0; i < rewardItemList_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, rewardItemList_.get(i));
+      }
+      if (nextFloorId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(9, nextFloorId_);
+      }
+      if (isSuccess_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(13, isSuccess_);
+      }
+      if (continueState_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(15, continueState_);
+      }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -432,15 +537,15 @@ public final class TowerLevelEndNotifyOuterClass {
 
       if (!getFinishedStarCondListList()
           .equals(other.getFinishedStarCondListList())) return false;
-      if (getIsSuccess()
-          != other.getIsSuccess()) return false;
-      if (getContinueState()
-          != other.getContinueState()) return false;
       if (!getRewardItemListList()
           .equals(other.getRewardItemListList())) return false;
       if (getNextFloorId()
           != other.getNextFloorId()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (getIsSuccess()
+          != other.getIsSuccess()) return false;
+      if (getContinueState()
+          != other.getContinueState()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -455,18 +560,18 @@ public final class TowerLevelEndNotifyOuterClass {
         hash = (37 * hash) + FINISHED_STAR_COND_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getFinishedStarCondListList().hashCode();
       }
-      hash = (37 * hash) + IS_SUCCESS_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getIsSuccess());
-      hash = (37 * hash) + CONTINUE_STATE_FIELD_NUMBER;
-      hash = (53 * hash) + getContinueState();
       if (getRewardItemListCount() > 0) {
         hash = (37 * hash) + REWARD_ITEM_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getRewardItemListList().hashCode();
       }
       hash = (37 * hash) + NEXT_FLOOR_ID_FIELD_NUMBER;
       hash = (53 * hash) + getNextFloorId();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (37 * hash) + IS_SUCCESS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsSuccess());
+      hash = (37 * hash) + CONTINUE_STATE_FIELD_NUMBER;
+      hash = (53 * hash) + getContinueState();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -563,8 +668,8 @@ public final class TowerLevelEndNotifyOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 20886
-     * Obf: BHDDDPNGPNF
+     * 4.6.0
+     * CmdId: 25369
      * </pre>
      *
      * Protobuf type {@code TowerLevelEndNotify}
@@ -588,31 +693,36 @@ public final class TowerLevelEndNotifyOuterClass {
 
       // Construct using emu.grasscutter.net.proto.TowerLevelEndNotifyOuterClass.TowerLevelEndNotify.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getRewardItemListFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
         finishedStarCondList_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000001);
+        if (rewardItemListBuilder_ == null) {
+          rewardItemList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        } else {
+          rewardItemListBuilder_.clear();
+        }
+        nextFloorId_ = 0;
+
         isSuccess_ = false;
 
         continueState_ = 0;
-
-        if (rewardItemListBuilder_ == null) {
-          rewardItemList_ = java.util.Collections.emptyList();
-        } else {
-          rewardItemList_ = null;
-          rewardItemListBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000002);
-        nextFloorId_ = 0;
 
         return this;
       }
@@ -646,8 +756,6 @@ public final class TowerLevelEndNotifyOuterClass {
           bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.finishedStarCondList_ = finishedStarCondList_;
-        result.isSuccess_ = isSuccess_;
-        result.continueState_ = continueState_;
         if (rewardItemListBuilder_ == null) {
           if (((bitField0_ & 0x00000002) != 0)) {
             rewardItemList_ = java.util.Collections.unmodifiableList(rewardItemList_);
@@ -658,6 +766,8 @@ public final class TowerLevelEndNotifyOuterClass {
           result.rewardItemList_ = rewardItemListBuilder_.build();
         }
         result.nextFloorId_ = nextFloorId_;
+        result.isSuccess_ = isSuccess_;
+        result.continueState_ = continueState_;
         onBuilt();
         return result;
       }
@@ -716,12 +826,6 @@ public final class TowerLevelEndNotifyOuterClass {
           }
           onChanged();
         }
-        if (other.getIsSuccess() != false) {
-          setIsSuccess(other.getIsSuccess());
-        }
-        if (other.getContinueState() != 0) {
-          setContinueState(other.getContinueState());
-        }
         if (rewardItemListBuilder_ == null) {
           if (!other.rewardItemList_.isEmpty()) {
             if (rewardItemList_.isEmpty()) {
@@ -751,7 +855,13 @@ public final class TowerLevelEndNotifyOuterClass {
         if (other.getNextFloorId() != 0) {
           setNextFloorId(other.getNextFloorId());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        if (other.getIsSuccess() != false) {
+          setIsSuccess(other.getIsSuccess());
+        }
+        if (other.getContinueState() != 0) {
+          setContinueState(other.getContinueState());
+        }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -766,74 +876,17 @@ public final class TowerLevelEndNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.TowerLevelEndNotifyOuterClass.TowerLevelEndNotify parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 32: {
-                continueState_ = input.readUInt32();
-
-                break;
-              } // case 32
-              case 40: {
-                nextFloorId_ = input.readUInt32();
-
-                break;
-              } // case 40
-              case 56: {
-                isSuccess_ = input.readBool();
-
-                break;
-              } // case 56
-              case 106: {
-                emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.parser(),
-                        extensionRegistry);
-                if (rewardItemListBuilder_ == null) {
-                  ensureRewardItemListIsMutable();
-                  rewardItemList_.add(m);
-                } else {
-                  rewardItemListBuilder_.addMessage(m);
-                }
-                break;
-              } // case 106
-              case 112: {
-                int v = input.readUInt32();
-                ensureFinishedStarCondListIsMutable();
-                finishedStarCondList_.addInt(v);
-                break;
-              } // case 112
-              case 114: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureFinishedStarCondListIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  finishedStarCondList_.addInt(input.readUInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 114
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.TowerLevelEndNotifyOuterClass.TowerLevelEndNotify) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -846,7 +899,7 @@ public final class TowerLevelEndNotifyOuterClass {
          }
       }
       /**
-       * <code>repeated uint32 finished_star_cond_list = 14;</code>
+       * <code>repeated uint32 finished_star_cond_list = 3;</code>
        * @return A list containing the finishedStarCondList.
        */
       public java.util.List<java.lang.Integer>
@@ -855,14 +908,14 @@ public final class TowerLevelEndNotifyOuterClass {
                  java.util.Collections.unmodifiableList(finishedStarCondList_) : finishedStarCondList_;
       }
       /**
-       * <code>repeated uint32 finished_star_cond_list = 14;</code>
+       * <code>repeated uint32 finished_star_cond_list = 3;</code>
        * @return The count of finishedStarCondList.
        */
       public int getFinishedStarCondListCount() {
         return finishedStarCondList_.size();
       }
       /**
-       * <code>repeated uint32 finished_star_cond_list = 14;</code>
+       * <code>repeated uint32 finished_star_cond_list = 3;</code>
        * @param index The index of the element to return.
        * @return The finishedStarCondList at the given index.
        */
@@ -870,7 +923,7 @@ public final class TowerLevelEndNotifyOuterClass {
         return finishedStarCondList_.getInt(index);
       }
       /**
-       * <code>repeated uint32 finished_star_cond_list = 14;</code>
+       * <code>repeated uint32 finished_star_cond_list = 3;</code>
        * @param index The index to set the value at.
        * @param value The finishedStarCondList to set.
        * @return This builder for chaining.
@@ -883,7 +936,7 @@ public final class TowerLevelEndNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 finished_star_cond_list = 14;</code>
+       * <code>repeated uint32 finished_star_cond_list = 3;</code>
        * @param value The finishedStarCondList to add.
        * @return This builder for chaining.
        */
@@ -894,7 +947,7 @@ public final class TowerLevelEndNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 finished_star_cond_list = 14;</code>
+       * <code>repeated uint32 finished_star_cond_list = 3;</code>
        * @param values The finishedStarCondList to add.
        * @return This builder for chaining.
        */
@@ -907,74 +960,12 @@ public final class TowerLevelEndNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 finished_star_cond_list = 14;</code>
+       * <code>repeated uint32 finished_star_cond_list = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearFinishedStarCondList() {
         finishedStarCondList_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
-        return this;
-      }
-
-      private boolean isSuccess_ ;
-      /**
-       * <code>bool is_success = 7;</code>
-       * @return The isSuccess.
-       */
-      @java.lang.Override
-      public boolean getIsSuccess() {
-        return isSuccess_;
-      }
-      /**
-       * <code>bool is_success = 7;</code>
-       * @param value The isSuccess to set.
-       * @return This builder for chaining.
-       */
-      public Builder setIsSuccess(boolean value) {
-        
-        isSuccess_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bool is_success = 7;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearIsSuccess() {
-        
-        isSuccess_ = false;
-        onChanged();
-        return this;
-      }
-
-      private int continueState_ ;
-      /**
-       * <code>uint32 continue_state = 4;</code>
-       * @return The continueState.
-       */
-      @java.lang.Override
-      public int getContinueState() {
-        return continueState_;
-      }
-      /**
-       * <code>uint32 continue_state = 4;</code>
-       * @param value The continueState to set.
-       * @return This builder for chaining.
-       */
-      public Builder setContinueState(int value) {
-        
-        continueState_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 continue_state = 4;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearContinueState() {
-        
-        continueState_ = 0;
         onChanged();
         return this;
       }
@@ -992,7 +983,7 @@ public final class TowerLevelEndNotifyOuterClass {
           emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam, emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder, emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder> rewardItemListBuilder_;
 
       /**
-       * <code>repeated .ItemParam reward_item_list = 13;</code>
+       * <code>repeated .ItemParam reward_item_list = 7;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam> getRewardItemListList() {
         if (rewardItemListBuilder_ == null) {
@@ -1002,7 +993,7 @@ public final class TowerLevelEndNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .ItemParam reward_item_list = 13;</code>
+       * <code>repeated .ItemParam reward_item_list = 7;</code>
        */
       public int getRewardItemListCount() {
         if (rewardItemListBuilder_ == null) {
@@ -1012,7 +1003,7 @@ public final class TowerLevelEndNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .ItemParam reward_item_list = 13;</code>
+       * <code>repeated .ItemParam reward_item_list = 7;</code>
        */
       public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam getRewardItemList(int index) {
         if (rewardItemListBuilder_ == null) {
@@ -1022,7 +1013,7 @@ public final class TowerLevelEndNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .ItemParam reward_item_list = 13;</code>
+       * <code>repeated .ItemParam reward_item_list = 7;</code>
        */
       public Builder setRewardItemList(
           int index, emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam value) {
@@ -1039,7 +1030,7 @@ public final class TowerLevelEndNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ItemParam reward_item_list = 13;</code>
+       * <code>repeated .ItemParam reward_item_list = 7;</code>
        */
       public Builder setRewardItemList(
           int index, emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder builderForValue) {
@@ -1053,7 +1044,7 @@ public final class TowerLevelEndNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ItemParam reward_item_list = 13;</code>
+       * <code>repeated .ItemParam reward_item_list = 7;</code>
        */
       public Builder addRewardItemList(emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam value) {
         if (rewardItemListBuilder_ == null) {
@@ -1069,7 +1060,7 @@ public final class TowerLevelEndNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ItemParam reward_item_list = 13;</code>
+       * <code>repeated .ItemParam reward_item_list = 7;</code>
        */
       public Builder addRewardItemList(
           int index, emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam value) {
@@ -1086,7 +1077,7 @@ public final class TowerLevelEndNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ItemParam reward_item_list = 13;</code>
+       * <code>repeated .ItemParam reward_item_list = 7;</code>
        */
       public Builder addRewardItemList(
           emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder builderForValue) {
@@ -1100,7 +1091,7 @@ public final class TowerLevelEndNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ItemParam reward_item_list = 13;</code>
+       * <code>repeated .ItemParam reward_item_list = 7;</code>
        */
       public Builder addRewardItemList(
           int index, emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder builderForValue) {
@@ -1114,7 +1105,7 @@ public final class TowerLevelEndNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ItemParam reward_item_list = 13;</code>
+       * <code>repeated .ItemParam reward_item_list = 7;</code>
        */
       public Builder addAllRewardItemList(
           java.lang.Iterable<? extends emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam> values) {
@@ -1129,7 +1120,7 @@ public final class TowerLevelEndNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ItemParam reward_item_list = 13;</code>
+       * <code>repeated .ItemParam reward_item_list = 7;</code>
        */
       public Builder clearRewardItemList() {
         if (rewardItemListBuilder_ == null) {
@@ -1142,7 +1133,7 @@ public final class TowerLevelEndNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ItemParam reward_item_list = 13;</code>
+       * <code>repeated .ItemParam reward_item_list = 7;</code>
        */
       public Builder removeRewardItemList(int index) {
         if (rewardItemListBuilder_ == null) {
@@ -1155,14 +1146,14 @@ public final class TowerLevelEndNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ItemParam reward_item_list = 13;</code>
+       * <code>repeated .ItemParam reward_item_list = 7;</code>
        */
       public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder getRewardItemListBuilder(
           int index) {
         return getRewardItemListFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .ItemParam reward_item_list = 13;</code>
+       * <code>repeated .ItemParam reward_item_list = 7;</code>
        */
       public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder getRewardItemListOrBuilder(
           int index) {
@@ -1172,7 +1163,7 @@ public final class TowerLevelEndNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .ItemParam reward_item_list = 13;</code>
+       * <code>repeated .ItemParam reward_item_list = 7;</code>
        */
       public java.util.List<? extends emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder> 
            getRewardItemListOrBuilderList() {
@@ -1183,14 +1174,14 @@ public final class TowerLevelEndNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .ItemParam reward_item_list = 13;</code>
+       * <code>repeated .ItemParam reward_item_list = 7;</code>
        */
       public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder addRewardItemListBuilder() {
         return getRewardItemListFieldBuilder().addBuilder(
             emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.getDefaultInstance());
       }
       /**
-       * <code>repeated .ItemParam reward_item_list = 13;</code>
+       * <code>repeated .ItemParam reward_item_list = 7;</code>
        */
       public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder addRewardItemListBuilder(
           int index) {
@@ -1198,7 +1189,7 @@ public final class TowerLevelEndNotifyOuterClass {
             index, emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.getDefaultInstance());
       }
       /**
-       * <code>repeated .ItemParam reward_item_list = 13;</code>
+       * <code>repeated .ItemParam reward_item_list = 7;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder> 
            getRewardItemListBuilderList() {
@@ -1221,7 +1212,11 @@ public final class TowerLevelEndNotifyOuterClass {
 
       private int nextFloorId_ ;
       /**
-       * <code>uint32 next_floor_id = 5;</code>
+       * <pre>
+       * FJLBPFJCOEB sus (9, 15)
+       * </pre>
+       *
+       * <code>uint32 next_floor_id = 9;</code>
        * @return The nextFloorId.
        */
       @java.lang.Override
@@ -1229,7 +1224,11 @@ public final class TowerLevelEndNotifyOuterClass {
         return nextFloorId_;
       }
       /**
-       * <code>uint32 next_floor_id = 5;</code>
+       * <pre>
+       * FJLBPFJCOEB sus (9, 15)
+       * </pre>
+       *
+       * <code>uint32 next_floor_id = 9;</code>
        * @param value The nextFloorId to set.
        * @return This builder for chaining.
        */
@@ -1240,12 +1239,90 @@ public final class TowerLevelEndNotifyOuterClass {
         return this;
       }
       /**
-       * <code>uint32 next_floor_id = 5;</code>
+       * <pre>
+       * FJLBPFJCOEB sus (9, 15)
+       * </pre>
+       *
+       * <code>uint32 next_floor_id = 9;</code>
        * @return This builder for chaining.
        */
       public Builder clearNextFloorId() {
         
         nextFloorId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean isSuccess_ ;
+      /**
+       * <code>bool is_success = 13;</code>
+       * @return The isSuccess.
+       */
+      @java.lang.Override
+      public boolean getIsSuccess() {
+        return isSuccess_;
+      }
+      /**
+       * <code>bool is_success = 13;</code>
+       * @param value The isSuccess to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsSuccess(boolean value) {
+        
+        isSuccess_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool is_success = 13;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsSuccess() {
+        
+        isSuccess_ = false;
+        onChanged();
+        return this;
+      }
+
+      private int continueState_ ;
+      /**
+       * <pre>
+       * MMIKGNOABLJ sus (9, 15)
+       * </pre>
+       *
+       * <code>uint32 continue_state = 15;</code>
+       * @return The continueState.
+       */
+      @java.lang.Override
+      public int getContinueState() {
+        return continueState_;
+      }
+      /**
+       * <pre>
+       * MMIKGNOABLJ sus (9, 15)
+       * </pre>
+       *
+       * <code>uint32 continue_state = 15;</code>
+       * @param value The continueState to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContinueState(int value) {
+        
+        continueState_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * MMIKGNOABLJ sus (9, 15)
+       * </pre>
+       *
+       * <code>uint32 continue_state = 15;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContinueState() {
+        
+        continueState_ = 0;
         onChanged();
         return this;
       }
@@ -1282,18 +1359,7 @@ public final class TowerLevelEndNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new TowerLevelEndNotify(input, extensionRegistry);
       }
     };
 
@@ -1329,10 +1395,10 @@ public final class TowerLevelEndNotifyOuterClass {
     java.lang.String[] descriptorData = {
       "\n\031TowerLevelEndNotify.proto\032\017ItemParam.p" +
       "roto\"\273\002\n\023TowerLevelEndNotify\022\037\n\027finished" +
-      "_star_cond_list\030\016 \003(\r\022\022\n\nis_success\030\007 \001(" +
-      "\010\022\026\n\016continue_state\030\004 \001(\r\022$\n\020reward_item" +
-      "_list\030\r \003(\0132\n.ItemParam\022\025\n\rnext_floor_id" +
-      "\030\005 \001(\r\"\231\001\n\021ContinueStateType\022(\n$CONTINUE" +
+      "_star_cond_list\030\003 \003(\r\022$\n\020reward_item_lis" +
+      "t\030\007 \003(\0132\n.ItemParam\022\025\n\rnext_floor_id\030\t \001" +
+      "(\r\022\022\n\nis_success\030\r \001(\010\022\026\n\016continue_state" +
+      "\030\017 \001(\r\"\231\001\n\021ContinueStateType\022(\n$CONTINUE" +
       "_STATE_TYPE_CAN_NOT_CONTINUE\020\000\022,\n(CONTIN" +
       "UE_STATE_TYPE_CAN_ENTER_NEXT_LEVEL\020\001\022,\n(" +
       "CONTINUE_STATE_TYPE_CAN_ENTER_NEXT_FLOOR" +
@@ -1348,7 +1414,7 @@ public final class TowerLevelEndNotifyOuterClass {
     internal_static_TowerLevelEndNotify_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_TowerLevelEndNotify_descriptor,
-        new java.lang.String[] { "FinishedStarCondList", "IsSuccess", "ContinueState", "RewardItemList", "NextFloorId", });
+        new java.lang.String[] { "FinishedStarCondList", "RewardItemList", "NextFloorId", "IsSuccess", "ContinueState", });
     emu.grasscutter.net.proto.ItemParamOuterClass.getDescriptor();
   }
 

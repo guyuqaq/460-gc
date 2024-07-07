@@ -19,24 +19,24 @@ public final class ChangeTeamNameRspOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <code>int32 team_id = 4;</code>
+     * @return The teamId.
+     */
+    int getTeamId();
+
+    /**
      * <code>int32 retcode = 5;</code>
      * @return The retcode.
      */
     int getRetcode();
 
     /**
-     * <code>int32 team_id = 12;</code>
-     * @return The teamId.
-     */
-    int getTeamId();
-
-    /**
-     * <code>string team_name = 15;</code>
+     * <code>string team_name = 12;</code>
      * @return The teamName.
      */
     java.lang.String getTeamName();
     /**
-     * <code>string team_name = 15;</code>
+     * <code>string team_name = 12;</code>
      * @return The bytes for teamName.
      */
     com.google.protobuf.ByteString
@@ -44,8 +44,8 @@ public final class ChangeTeamNameRspOuterClass {
   }
   /**
    * <pre>
-   * CmdId: 29496
-   * Obf: JKAKFOEKEDH
+   * 4.6.0
+   * CmdId: 1674
    * </pre>
    *
    * Protobuf type {@code ChangeTeamNameRsp}
@@ -75,6 +75,59 @@ public final class ChangeTeamNameRspOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private ChangeTeamNameRsp(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 32: {
+
+              teamId_ = input.readInt32();
+              break;
+            }
+            case 40: {
+
+              retcode_ = input.readInt32();
+              break;
+            }
+            case 98: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              teamName_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.ChangeTeamNameRspOuterClass.internal_static_ChangeTeamNameRsp_descriptor;
@@ -88,6 +141,17 @@ public final class ChangeTeamNameRspOuterClass {
               emu.grasscutter.net.proto.ChangeTeamNameRspOuterClass.ChangeTeamNameRsp.class, emu.grasscutter.net.proto.ChangeTeamNameRspOuterClass.ChangeTeamNameRsp.Builder.class);
     }
 
+    public static final int TEAM_ID_FIELD_NUMBER = 4;
+    private int teamId_;
+    /**
+     * <code>int32 team_id = 4;</code>
+     * @return The teamId.
+     */
+    @java.lang.Override
+    public int getTeamId() {
+      return teamId_;
+    }
+
     public static final int RETCODE_FIELD_NUMBER = 5;
     private int retcode_;
     /**
@@ -99,21 +163,10 @@ public final class ChangeTeamNameRspOuterClass {
       return retcode_;
     }
 
-    public static final int TEAM_ID_FIELD_NUMBER = 12;
-    private int teamId_;
-    /**
-     * <code>int32 team_id = 12;</code>
-     * @return The teamId.
-     */
-    @java.lang.Override
-    public int getTeamId() {
-      return teamId_;
-    }
-
-    public static final int TEAM_NAME_FIELD_NUMBER = 15;
+    public static final int TEAM_NAME_FIELD_NUMBER = 12;
     private volatile java.lang.Object teamName_;
     /**
-     * <code>string team_name = 15;</code>
+     * <code>string team_name = 12;</code>
      * @return The teamName.
      */
     @java.lang.Override
@@ -130,7 +183,7 @@ public final class ChangeTeamNameRspOuterClass {
       }
     }
     /**
-     * <code>string team_name = 15;</code>
+     * <code>string team_name = 12;</code>
      * @return The bytes for teamName.
      */
     @java.lang.Override
@@ -162,16 +215,16 @@ public final class ChangeTeamNameRspOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (teamId_ != 0) {
+        output.writeInt32(4, teamId_);
+      }
       if (retcode_ != 0) {
         output.writeInt32(5, retcode_);
       }
-      if (teamId_ != 0) {
-        output.writeInt32(12, teamId_);
-      }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(teamName_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 15, teamName_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 12, teamName_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -180,18 +233,18 @@ public final class ChangeTeamNameRspOuterClass {
       if (size != -1) return size;
 
       size = 0;
+      if (teamId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(4, teamId_);
+      }
       if (retcode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(5, retcode_);
       }
-      if (teamId_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(12, teamId_);
-      }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(teamName_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, teamName_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, teamName_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -206,13 +259,13 @@ public final class ChangeTeamNameRspOuterClass {
       }
       emu.grasscutter.net.proto.ChangeTeamNameRspOuterClass.ChangeTeamNameRsp other = (emu.grasscutter.net.proto.ChangeTeamNameRspOuterClass.ChangeTeamNameRsp) obj;
 
-      if (getRetcode()
-          != other.getRetcode()) return false;
       if (getTeamId()
           != other.getTeamId()) return false;
+      if (getRetcode()
+          != other.getRetcode()) return false;
       if (!getTeamName()
           .equals(other.getTeamName())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -223,13 +276,13 @@ public final class ChangeTeamNameRspOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + RETCODE_FIELD_NUMBER;
-      hash = (53 * hash) + getRetcode();
       hash = (37 * hash) + TEAM_ID_FIELD_NUMBER;
       hash = (53 * hash) + getTeamId();
+      hash = (37 * hash) + RETCODE_FIELD_NUMBER;
+      hash = (53 * hash) + getRetcode();
       hash = (37 * hash) + TEAM_NAME_FIELD_NUMBER;
       hash = (53 * hash) + getTeamName().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -326,8 +379,8 @@ public final class ChangeTeamNameRspOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 29496
-     * Obf: JKAKFOEKEDH
+     * 4.6.0
+     * CmdId: 1674
      * </pre>
      *
      * Protobuf type {@code ChangeTeamNameRsp}
@@ -351,20 +404,25 @@ public final class ChangeTeamNameRspOuterClass {
 
       // Construct using emu.grasscutter.net.proto.ChangeTeamNameRspOuterClass.ChangeTeamNameRsp.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        retcode_ = 0;
-
         teamId_ = 0;
+
+        retcode_ = 0;
 
         teamName_ = "";
 
@@ -394,8 +452,8 @@ public final class ChangeTeamNameRspOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.ChangeTeamNameRspOuterClass.ChangeTeamNameRsp buildPartial() {
         emu.grasscutter.net.proto.ChangeTeamNameRspOuterClass.ChangeTeamNameRsp result = new emu.grasscutter.net.proto.ChangeTeamNameRspOuterClass.ChangeTeamNameRsp(this);
-        result.retcode_ = retcode_;
         result.teamId_ = teamId_;
+        result.retcode_ = retcode_;
         result.teamName_ = teamName_;
         onBuilt();
         return result;
@@ -445,17 +503,17 @@ public final class ChangeTeamNameRspOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.ChangeTeamNameRspOuterClass.ChangeTeamNameRsp other) {
         if (other == emu.grasscutter.net.proto.ChangeTeamNameRspOuterClass.ChangeTeamNameRsp.getDefaultInstance()) return this;
-        if (other.getRetcode() != 0) {
-          setRetcode(other.getRetcode());
-        }
         if (other.getTeamId() != 0) {
           setTeamId(other.getTeamId());
+        }
+        if (other.getRetcode() != 0) {
+          setRetcode(other.getRetcode());
         }
         if (!other.getTeamName().isEmpty()) {
           teamName_ = other.teamName_;
           onChanged();
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -470,45 +528,48 @@ public final class ChangeTeamNameRspOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.ChangeTeamNameRspOuterClass.ChangeTeamNameRsp parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 40: {
-                retcode_ = input.readInt32();
-
-                break;
-              } // case 40
-              case 96: {
-                teamId_ = input.readInt32();
-
-                break;
-              } // case 96
-              case 122: {
-                teamName_ = input.readStringRequireUtf8();
-
-                break;
-              } // case 122
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.ChangeTeamNameRspOuterClass.ChangeTeamNameRsp) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int teamId_ ;
+      /**
+       * <code>int32 team_id = 4;</code>
+       * @return The teamId.
+       */
+      @java.lang.Override
+      public int getTeamId() {
+        return teamId_;
+      }
+      /**
+       * <code>int32 team_id = 4;</code>
+       * @param value The teamId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTeamId(int value) {
+        
+        teamId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 team_id = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTeamId() {
+        
+        teamId_ = 0;
+        onChanged();
         return this;
       }
 
@@ -543,40 +604,9 @@ public final class ChangeTeamNameRspOuterClass {
         return this;
       }
 
-      private int teamId_ ;
-      /**
-       * <code>int32 team_id = 12;</code>
-       * @return The teamId.
-       */
-      @java.lang.Override
-      public int getTeamId() {
-        return teamId_;
-      }
-      /**
-       * <code>int32 team_id = 12;</code>
-       * @param value The teamId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setTeamId(int value) {
-        
-        teamId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int32 team_id = 12;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearTeamId() {
-        
-        teamId_ = 0;
-        onChanged();
-        return this;
-      }
-
       private java.lang.Object teamName_ = "";
       /**
-       * <code>string team_name = 15;</code>
+       * <code>string team_name = 12;</code>
        * @return The teamName.
        */
       public java.lang.String getTeamName() {
@@ -592,7 +622,7 @@ public final class ChangeTeamNameRspOuterClass {
         }
       }
       /**
-       * <code>string team_name = 15;</code>
+       * <code>string team_name = 12;</code>
        * @return The bytes for teamName.
        */
       public com.google.protobuf.ByteString
@@ -609,7 +639,7 @@ public final class ChangeTeamNameRspOuterClass {
         }
       }
       /**
-       * <code>string team_name = 15;</code>
+       * <code>string team_name = 12;</code>
        * @param value The teamName to set.
        * @return This builder for chaining.
        */
@@ -624,7 +654,7 @@ public final class ChangeTeamNameRspOuterClass {
         return this;
       }
       /**
-       * <code>string team_name = 15;</code>
+       * <code>string team_name = 12;</code>
        * @return This builder for chaining.
        */
       public Builder clearTeamName() {
@@ -634,7 +664,7 @@ public final class ChangeTeamNameRspOuterClass {
         return this;
       }
       /**
-       * <code>string team_name = 15;</code>
+       * <code>string team_name = 12;</code>
        * @param value The bytes for teamName to set.
        * @return This builder for chaining.
        */
@@ -682,18 +712,7 @@ public final class ChangeTeamNameRspOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new ChangeTeamNameRsp(input, extensionRegistry);
       }
     };
 
@@ -728,8 +747,8 @@ public final class ChangeTeamNameRspOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\027ChangeTeamNameRsp.proto\"H\n\021ChangeTeamN" +
-      "ameRsp\022\017\n\007retcode\030\005 \001(\005\022\017\n\007team_id\030\014 \001(\005" +
-      "\022\021\n\tteam_name\030\017 \001(\tB\033\n\031emu.grasscutter.n" +
+      "ameRsp\022\017\n\007team_id\030\004 \001(\005\022\017\n\007retcode\030\005 \001(\005" +
+      "\022\021\n\tteam_name\030\014 \001(\tB\033\n\031emu.grasscutter.n" +
       "et.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -741,7 +760,7 @@ public final class ChangeTeamNameRspOuterClass {
     internal_static_ChangeTeamNameRsp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ChangeTeamNameRsp_descriptor,
-        new java.lang.String[] { "Retcode", "TeamId", "TeamName", });
+        new java.lang.String[] { "TeamId", "Retcode", "TeamName", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

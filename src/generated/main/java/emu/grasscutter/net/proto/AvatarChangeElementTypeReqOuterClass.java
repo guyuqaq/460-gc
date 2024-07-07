@@ -19,21 +19,22 @@ public final class AvatarChangeElementTypeReqOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 area_id = 11;</code>
+     * <code>uint32 area_id = 14;</code>
      * @return The areaId.
      */
     int getAreaId();
 
     /**
-     * <code>uint32 scene_id = 1;</code>
+     * <code>uint32 scene_id = 15;</code>
      * @return The sceneId.
      */
     int getSceneId();
   }
   /**
    * <pre>
-   * CmdId: 3696
-   * Obf: EPCCINELCEK
+   * CmdId: 4974
+   * Version: 4.6.0
+   * Obfs: MDCHBAGDELO
    * </pre>
    *
    * Protobuf type {@code AvatarChangeElementTypeReq}
@@ -62,6 +63,53 @@ public final class AvatarChangeElementTypeReqOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private AvatarChangeElementTypeReq(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 112: {
+
+              areaId_ = input.readUInt32();
+              break;
+            }
+            case 120: {
+
+              sceneId_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.AvatarChangeElementTypeReqOuterClass.internal_static_AvatarChangeElementTypeReq_descriptor;
@@ -75,10 +123,10 @@ public final class AvatarChangeElementTypeReqOuterClass {
               emu.grasscutter.net.proto.AvatarChangeElementTypeReqOuterClass.AvatarChangeElementTypeReq.class, emu.grasscutter.net.proto.AvatarChangeElementTypeReqOuterClass.AvatarChangeElementTypeReq.Builder.class);
     }
 
-    public static final int AREA_ID_FIELD_NUMBER = 11;
+    public static final int AREA_ID_FIELD_NUMBER = 14;
     private int areaId_;
     /**
-     * <code>uint32 area_id = 11;</code>
+     * <code>uint32 area_id = 14;</code>
      * @return The areaId.
      */
     @java.lang.Override
@@ -86,10 +134,10 @@ public final class AvatarChangeElementTypeReqOuterClass {
       return areaId_;
     }
 
-    public static final int SCENE_ID_FIELD_NUMBER = 1;
+    public static final int SCENE_ID_FIELD_NUMBER = 15;
     private int sceneId_;
     /**
-     * <code>uint32 scene_id = 1;</code>
+     * <code>uint32 scene_id = 15;</code>
      * @return The sceneId.
      */
     @java.lang.Override
@@ -111,13 +159,13 @@ public final class AvatarChangeElementTypeReqOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (sceneId_ != 0) {
-        output.writeUInt32(1, sceneId_);
-      }
       if (areaId_ != 0) {
-        output.writeUInt32(11, areaId_);
+        output.writeUInt32(14, areaId_);
       }
-      getUnknownFields().writeTo(output);
+      if (sceneId_ != 0) {
+        output.writeUInt32(15, sceneId_);
+      }
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -126,15 +174,15 @@ public final class AvatarChangeElementTypeReqOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (sceneId_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(1, sceneId_);
-      }
       if (areaId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(11, areaId_);
+          .computeUInt32Size(14, areaId_);
       }
-      size += getUnknownFields().getSerializedSize();
+      if (sceneId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(15, sceneId_);
+      }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -153,7 +201,7 @@ public final class AvatarChangeElementTypeReqOuterClass {
           != other.getAreaId()) return false;
       if (getSceneId()
           != other.getSceneId()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -168,7 +216,7 @@ public final class AvatarChangeElementTypeReqOuterClass {
       hash = (53 * hash) + getAreaId();
       hash = (37 * hash) + SCENE_ID_FIELD_NUMBER;
       hash = (53 * hash) + getSceneId();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -265,8 +313,9 @@ public final class AvatarChangeElementTypeReqOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 3696
-     * Obf: EPCCINELCEK
+     * CmdId: 4974
+     * Version: 4.6.0
+     * Obfs: MDCHBAGDELO
      * </pre>
      *
      * Protobuf type {@code AvatarChangeElementTypeReq}
@@ -290,13 +339,18 @@ public final class AvatarChangeElementTypeReqOuterClass {
 
       // Construct using emu.grasscutter.net.proto.AvatarChangeElementTypeReqOuterClass.AvatarChangeElementTypeReq.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -387,7 +441,7 @@ public final class AvatarChangeElementTypeReqOuterClass {
         if (other.getSceneId() != 0) {
           setSceneId(other.getSceneId());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -402,46 +456,23 @@ public final class AvatarChangeElementTypeReqOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.AvatarChangeElementTypeReqOuterClass.AvatarChangeElementTypeReq parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                sceneId_ = input.readUInt32();
-
-                break;
-              } // case 8
-              case 88: {
-                areaId_ = input.readUInt32();
-
-                break;
-              } // case 88
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.AvatarChangeElementTypeReqOuterClass.AvatarChangeElementTypeReq) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
 
       private int areaId_ ;
       /**
-       * <code>uint32 area_id = 11;</code>
+       * <code>uint32 area_id = 14;</code>
        * @return The areaId.
        */
       @java.lang.Override
@@ -449,7 +480,7 @@ public final class AvatarChangeElementTypeReqOuterClass {
         return areaId_;
       }
       /**
-       * <code>uint32 area_id = 11;</code>
+       * <code>uint32 area_id = 14;</code>
        * @param value The areaId to set.
        * @return This builder for chaining.
        */
@@ -460,7 +491,7 @@ public final class AvatarChangeElementTypeReqOuterClass {
         return this;
       }
       /**
-       * <code>uint32 area_id = 11;</code>
+       * <code>uint32 area_id = 14;</code>
        * @return This builder for chaining.
        */
       public Builder clearAreaId() {
@@ -472,7 +503,7 @@ public final class AvatarChangeElementTypeReqOuterClass {
 
       private int sceneId_ ;
       /**
-       * <code>uint32 scene_id = 1;</code>
+       * <code>uint32 scene_id = 15;</code>
        * @return The sceneId.
        */
       @java.lang.Override
@@ -480,7 +511,7 @@ public final class AvatarChangeElementTypeReqOuterClass {
         return sceneId_;
       }
       /**
-       * <code>uint32 scene_id = 1;</code>
+       * <code>uint32 scene_id = 15;</code>
        * @param value The sceneId to set.
        * @return This builder for chaining.
        */
@@ -491,7 +522,7 @@ public final class AvatarChangeElementTypeReqOuterClass {
         return this;
       }
       /**
-       * <code>uint32 scene_id = 1;</code>
+       * <code>uint32 scene_id = 15;</code>
        * @return This builder for chaining.
        */
       public Builder clearSceneId() {
@@ -533,18 +564,7 @@ public final class AvatarChangeElementTypeReqOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new AvatarChangeElementTypeReq(input, extensionRegistry);
       }
     };
 
@@ -579,8 +599,8 @@ public final class AvatarChangeElementTypeReqOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n AvatarChangeElementTypeReq.proto\"?\n\032Av" +
-      "atarChangeElementTypeReq\022\017\n\007area_id\030\013 \001(" +
-      "\r\022\020\n\010scene_id\030\001 \001(\rB\033\n\031emu.grasscutter.n" +
+      "atarChangeElementTypeReq\022\017\n\007area_id\030\016 \001(" +
+      "\r\022\020\n\010scene_id\030\017 \001(\rB\033\n\031emu.grasscutter.n" +
       "et.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

@@ -19,32 +19,33 @@ public final class CodexDataUpdateNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 weapon_max_promote_level = 3;</code>
+     * <code>uint32 weapon_max_promote_level = 2;</code>
      * @return The weaponMaxPromoteLevel.
      */
     int getWeaponMaxPromoteLevel();
 
     /**
-     * <code>.CodexType type = 5;</code>
+     * <code>uint32 id = 8;</code>
+     * @return The id.
+     */
+    int getId();
+
+    /**
+     * <code>.CodexType type = 9;</code>
      * @return The enum numeric value on the wire for type.
      */
     int getTypeValue();
     /**
-     * <code>.CodexType type = 5;</code>
+     * <code>.CodexType type = 9;</code>
      * @return The type.
      */
     emu.grasscutter.net.proto.CodexTypeOuterClass.CodexType getType();
-
-    /**
-     * <code>uint32 id = 2;</code>
-     * @return The id.
-     */
-    int getId();
   }
   /**
    * <pre>
-   * CmdId: 6551
-   * Obf: NOPKDGNAPIK
+   * CmdId: 8002
+   * Version: 4.6.0
+   * Obfs: JJIPFMLHHKI
    * </pre>
    *
    * Protobuf type {@code CodexDataUpdateNotify}
@@ -74,6 +75,59 @@ public final class CodexDataUpdateNotifyOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private CodexDataUpdateNotify(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 16: {
+
+              weaponMaxPromoteLevel_ = input.readUInt32();
+              break;
+            }
+            case 64: {
+
+              id_ = input.readUInt32();
+              break;
+            }
+            case 72: {
+              int rawValue = input.readEnum();
+
+              type_ = rawValue;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.CodexDataUpdateNotifyOuterClass.internal_static_CodexDataUpdateNotify_descriptor;
@@ -87,10 +141,10 @@ public final class CodexDataUpdateNotifyOuterClass {
               emu.grasscutter.net.proto.CodexDataUpdateNotifyOuterClass.CodexDataUpdateNotify.class, emu.grasscutter.net.proto.CodexDataUpdateNotifyOuterClass.CodexDataUpdateNotify.Builder.class);
     }
 
-    public static final int WEAPON_MAX_PROMOTE_LEVEL_FIELD_NUMBER = 3;
+    public static final int WEAPON_MAX_PROMOTE_LEVEL_FIELD_NUMBER = 2;
     private int weaponMaxPromoteLevel_;
     /**
-     * <code>uint32 weapon_max_promote_level = 3;</code>
+     * <code>uint32 weapon_max_promote_level = 2;</code>
      * @return The weaponMaxPromoteLevel.
      */
     @java.lang.Override
@@ -98,34 +152,34 @@ public final class CodexDataUpdateNotifyOuterClass {
       return weaponMaxPromoteLevel_;
     }
 
-    public static final int TYPE_FIELD_NUMBER = 5;
+    public static final int ID_FIELD_NUMBER = 8;
+    private int id_;
+    /**
+     * <code>uint32 id = 8;</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public int getId() {
+      return id_;
+    }
+
+    public static final int TYPE_FIELD_NUMBER = 9;
     private int type_;
     /**
-     * <code>.CodexType type = 5;</code>
+     * <code>.CodexType type = 9;</code>
      * @return The enum numeric value on the wire for type.
      */
     @java.lang.Override public int getTypeValue() {
       return type_;
     }
     /**
-     * <code>.CodexType type = 5;</code>
+     * <code>.CodexType type = 9;</code>
      * @return The type.
      */
     @java.lang.Override public emu.grasscutter.net.proto.CodexTypeOuterClass.CodexType getType() {
       @SuppressWarnings("deprecation")
       emu.grasscutter.net.proto.CodexTypeOuterClass.CodexType result = emu.grasscutter.net.proto.CodexTypeOuterClass.CodexType.valueOf(type_);
       return result == null ? emu.grasscutter.net.proto.CodexTypeOuterClass.CodexType.UNRECOGNIZED : result;
-    }
-
-    public static final int ID_FIELD_NUMBER = 2;
-    private int id_;
-    /**
-     * <code>uint32 id = 2;</code>
-     * @return The id.
-     */
-    @java.lang.Override
-    public int getId() {
-      return id_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -142,16 +196,16 @@ public final class CodexDataUpdateNotifyOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (id_ != 0) {
-        output.writeUInt32(2, id_);
-      }
       if (weaponMaxPromoteLevel_ != 0) {
-        output.writeUInt32(3, weaponMaxPromoteLevel_);
+        output.writeUInt32(2, weaponMaxPromoteLevel_);
+      }
+      if (id_ != 0) {
+        output.writeUInt32(8, id_);
       }
       if (type_ != emu.grasscutter.net.proto.CodexTypeOuterClass.CodexType.CODEX_NONE.getNumber()) {
-        output.writeEnum(5, type_);
+        output.writeEnum(9, type_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -160,19 +214,19 @@ public final class CodexDataUpdateNotifyOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (id_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(2, id_);
-      }
       if (weaponMaxPromoteLevel_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(3, weaponMaxPromoteLevel_);
+          .computeUInt32Size(2, weaponMaxPromoteLevel_);
+      }
+      if (id_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(8, id_);
       }
       if (type_ != emu.grasscutter.net.proto.CodexTypeOuterClass.CodexType.CODEX_NONE.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(5, type_);
+          .computeEnumSize(9, type_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -189,10 +243,10 @@ public final class CodexDataUpdateNotifyOuterClass {
 
       if (getWeaponMaxPromoteLevel()
           != other.getWeaponMaxPromoteLevel()) return false;
-      if (type_ != other.type_) return false;
       if (getId()
           != other.getId()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (type_ != other.type_) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -205,11 +259,11 @@ public final class CodexDataUpdateNotifyOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + WEAPON_MAX_PROMOTE_LEVEL_FIELD_NUMBER;
       hash = (53 * hash) + getWeaponMaxPromoteLevel();
-      hash = (37 * hash) + TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + type_;
       hash = (37 * hash) + ID_FIELD_NUMBER;
       hash = (53 * hash) + getId();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (37 * hash) + TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + type_;
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -306,8 +360,9 @@ public final class CodexDataUpdateNotifyOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 6551
-     * Obf: NOPKDGNAPIK
+     * CmdId: 8002
+     * Version: 4.6.0
+     * Obfs: JJIPFMLHHKI
      * </pre>
      *
      * Protobuf type {@code CodexDataUpdateNotify}
@@ -331,22 +386,27 @@ public final class CodexDataUpdateNotifyOuterClass {
 
       // Construct using emu.grasscutter.net.proto.CodexDataUpdateNotifyOuterClass.CodexDataUpdateNotify.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
         weaponMaxPromoteLevel_ = 0;
 
-        type_ = 0;
-
         id_ = 0;
+
+        type_ = 0;
 
         return this;
       }
@@ -375,8 +435,8 @@ public final class CodexDataUpdateNotifyOuterClass {
       public emu.grasscutter.net.proto.CodexDataUpdateNotifyOuterClass.CodexDataUpdateNotify buildPartial() {
         emu.grasscutter.net.proto.CodexDataUpdateNotifyOuterClass.CodexDataUpdateNotify result = new emu.grasscutter.net.proto.CodexDataUpdateNotifyOuterClass.CodexDataUpdateNotify(this);
         result.weaponMaxPromoteLevel_ = weaponMaxPromoteLevel_;
-        result.type_ = type_;
         result.id_ = id_;
+        result.type_ = type_;
         onBuilt();
         return result;
       }
@@ -428,13 +488,13 @@ public final class CodexDataUpdateNotifyOuterClass {
         if (other.getWeaponMaxPromoteLevel() != 0) {
           setWeaponMaxPromoteLevel(other.getWeaponMaxPromoteLevel());
         }
-        if (other.type_ != 0) {
-          setTypeValue(other.getTypeValue());
-        }
         if (other.getId() != 0) {
           setId(other.getId());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        if (other.type_ != 0) {
+          setTypeValue(other.getTypeValue());
+        }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -449,51 +509,23 @@ public final class CodexDataUpdateNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.CodexDataUpdateNotifyOuterClass.CodexDataUpdateNotify parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 16: {
-                id_ = input.readUInt32();
-
-                break;
-              } // case 16
-              case 24: {
-                weaponMaxPromoteLevel_ = input.readUInt32();
-
-                break;
-              } // case 24
-              case 40: {
-                type_ = input.readEnum();
-
-                break;
-              } // case 40
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.CodexDataUpdateNotifyOuterClass.CodexDataUpdateNotify) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
 
       private int weaponMaxPromoteLevel_ ;
       /**
-       * <code>uint32 weapon_max_promote_level = 3;</code>
+       * <code>uint32 weapon_max_promote_level = 2;</code>
        * @return The weaponMaxPromoteLevel.
        */
       @java.lang.Override
@@ -501,7 +533,7 @@ public final class CodexDataUpdateNotifyOuterClass {
         return weaponMaxPromoteLevel_;
       }
       /**
-       * <code>uint32 weapon_max_promote_level = 3;</code>
+       * <code>uint32 weapon_max_promote_level = 2;</code>
        * @param value The weaponMaxPromoteLevel to set.
        * @return This builder for chaining.
        */
@@ -512,7 +544,7 @@ public final class CodexDataUpdateNotifyOuterClass {
         return this;
       }
       /**
-       * <code>uint32 weapon_max_promote_level = 3;</code>
+       * <code>uint32 weapon_max_promote_level = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearWeaponMaxPromoteLevel() {
@@ -522,16 +554,47 @@ public final class CodexDataUpdateNotifyOuterClass {
         return this;
       }
 
+      private int id_ ;
+      /**
+       * <code>uint32 id = 8;</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public int getId() {
+        return id_;
+      }
+      /**
+       * <code>uint32 id = 8;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(int value) {
+        
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 id = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        
+        id_ = 0;
+        onChanged();
+        return this;
+      }
+
       private int type_ = 0;
       /**
-       * <code>.CodexType type = 5;</code>
+       * <code>.CodexType type = 9;</code>
        * @return The enum numeric value on the wire for type.
        */
       @java.lang.Override public int getTypeValue() {
         return type_;
       }
       /**
-       * <code>.CodexType type = 5;</code>
+       * <code>.CodexType type = 9;</code>
        * @param value The enum numeric value on the wire for type to set.
        * @return This builder for chaining.
        */
@@ -542,7 +605,7 @@ public final class CodexDataUpdateNotifyOuterClass {
         return this;
       }
       /**
-       * <code>.CodexType type = 5;</code>
+       * <code>.CodexType type = 9;</code>
        * @return The type.
        */
       @java.lang.Override
@@ -552,7 +615,7 @@ public final class CodexDataUpdateNotifyOuterClass {
         return result == null ? emu.grasscutter.net.proto.CodexTypeOuterClass.CodexType.UNRECOGNIZED : result;
       }
       /**
-       * <code>.CodexType type = 5;</code>
+       * <code>.CodexType type = 9;</code>
        * @param value The type to set.
        * @return This builder for chaining.
        */
@@ -566,43 +629,12 @@ public final class CodexDataUpdateNotifyOuterClass {
         return this;
       }
       /**
-       * <code>.CodexType type = 5;</code>
+       * <code>.CodexType type = 9;</code>
        * @return This builder for chaining.
        */
       public Builder clearType() {
         
         type_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int id_ ;
-      /**
-       * <code>uint32 id = 2;</code>
-       * @return The id.
-       */
-      @java.lang.Override
-      public int getId() {
-        return id_;
-      }
-      /**
-       * <code>uint32 id = 2;</code>
-       * @param value The id to set.
-       * @return This builder for chaining.
-       */
-      public Builder setId(int value) {
-        
-        id_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 id = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearId() {
-        
-        id_ = 0;
         onChanged();
         return this;
       }
@@ -639,18 +671,7 @@ public final class CodexDataUpdateNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new CodexDataUpdateNotify(input, extensionRegistry);
       }
     };
 
@@ -686,8 +707,8 @@ public final class CodexDataUpdateNotifyOuterClass {
     java.lang.String[] descriptorData = {
       "\n\033CodexDataUpdateNotify.proto\032\017CodexType" +
       ".proto\"_\n\025CodexDataUpdateNotify\022 \n\030weapo" +
-      "n_max_promote_level\030\003 \001(\r\022\030\n\004type\030\005 \001(\0162" +
-      "\n.CodexType\022\n\n\002id\030\002 \001(\rB\033\n\031emu.grasscutt" +
+      "n_max_promote_level\030\002 \001(\r\022\n\n\002id\030\010 \001(\r\022\030\n" +
+      "\004type\030\t \001(\0162\n.CodexTypeB\033\n\031emu.grasscutt" +
       "er.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -700,7 +721,7 @@ public final class CodexDataUpdateNotifyOuterClass {
     internal_static_CodexDataUpdateNotify_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CodexDataUpdateNotify_descriptor,
-        new java.lang.String[] { "WeaponMaxPromoteLevel", "Type", "Id", });
+        new java.lang.String[] { "WeaponMaxPromoteLevel", "Id", "Type", });
     emu.grasscutter.net.proto.CodexTypeOuterClass.getDescriptor();
   }
 

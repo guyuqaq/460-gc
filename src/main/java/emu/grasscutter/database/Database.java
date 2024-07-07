@@ -43,32 +43,32 @@ public interface Database {
      *
      * @param objects The objects to save.
      */
- static void saveAll(List<? extends DatabaseObject<?>> objects) {
-        // Sort all objects into their respective databases.
-        var gameObjects = objects.stream()
-                .filter(DatabaseObject::isGameObject)
-                .toList();
-        var accountObjects = objects.stream()
-                .filter(o -> !o.isGameObject())
-                .toList();
+static void saveAll(List<? extends DatabaseObject<?>> objects) {
+    
+    // Sort all objects into their respective databases.
+    var gameObjects = objects.stream()
+            .filter(DatabaseObject::isGameObject)
+            .toList();
+    var accountObjects = objects.stream()
+            .filter(o -> !o.isGameObject())
+            .toList();
 
-        // Clear the collective list.
-        objects.clear();
+    // Clear the collective list.
+    objects.clear();
 
-        // Save all objects.
-        var executor = DatabaseHelper.getEventExecutor();
-        if (Grasscutter.getRunMode() != Grasscutter.ServerRunMode.DISPATCH_ONLY) {
-            executor.submit(() -> {
-                DatabaseManager.getGameDatastore().save(gameObjects);
-            });
-        }
-        if (Grasscutter.getRunMode() != Grasscutter.ServerRunMode.GAME_ONLY) {
-            executor.submit(() -> {
-                DatabaseManager.getAccountDatastore().save(accountObjects);
-            });
-		}
+    // Save all objects.
+    var executor = DatabaseHelper.getEventExecutor();
+    if (Grasscutter.getRunMode() != Grasscutter.ServerRunMode.DISPATCH_ONLY) {
+        executor.submit(() -> {
+            DatabaseManager.getGameDatastore().save(gameObjects);
+        });
     }
-
+    if (Grasscutter.getRunMode() != Grasscutter.ServerRunMode.GAME_ONLY) {
+        executor.submit(() -> {
+            DatabaseManager.getAccountDatastore().save(accountObjects);
+        });
+    }
+}
 
     /**
      * Starts the auto-save thread.

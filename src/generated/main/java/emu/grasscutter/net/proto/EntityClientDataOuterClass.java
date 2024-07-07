@@ -67,6 +67,58 @@ public final class EntityClientDataOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private EntityClientData(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              windChangeSceneTime_ = input.readUInt32();
+              break;
+            }
+            case 21: {
+
+              windmillSyncAngle_ = input.readFloat();
+              break;
+            }
+            case 24: {
+
+              windChangeTargetLevel_ = input.readInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.EntityClientDataOuterClass.internal_static_EntityClientData_descriptor;
@@ -130,13 +182,13 @@ public final class EntityClientDataOuterClass {
       if (windChangeSceneTime_ != 0) {
         output.writeUInt32(1, windChangeSceneTime_);
       }
-      if (java.lang.Float.floatToRawIntBits(windmillSyncAngle_) != 0) {
+      if (windmillSyncAngle_ != 0F) {
         output.writeFloat(2, windmillSyncAngle_);
       }
       if (windChangeTargetLevel_ != 0) {
         output.writeInt32(3, windChangeTargetLevel_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -149,7 +201,7 @@ public final class EntityClientDataOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(1, windChangeSceneTime_);
       }
-      if (java.lang.Float.floatToRawIntBits(windmillSyncAngle_) != 0) {
+      if (windmillSyncAngle_ != 0F) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(2, windmillSyncAngle_);
       }
@@ -157,7 +209,7 @@ public final class EntityClientDataOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(3, windChangeTargetLevel_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -179,7 +231,7 @@ public final class EntityClientDataOuterClass {
               other.getWindmillSyncAngle())) return false;
       if (getWindChangeTargetLevel()
           != other.getWindChangeTargetLevel()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -197,7 +249,7 @@ public final class EntityClientDataOuterClass {
           getWindmillSyncAngle());
       hash = (37 * hash) + WIND_CHANGE_TARGET_LEVEL_FIELD_NUMBER;
       hash = (53 * hash) + getWindChangeTargetLevel();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -318,13 +370,18 @@ public final class EntityClientDataOuterClass {
 
       // Construct using emu.grasscutter.net.proto.EntityClientDataOuterClass.EntityClientData.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -421,7 +478,7 @@ public final class EntityClientDataOuterClass {
         if (other.getWindChangeTargetLevel() != 0) {
           setWindChangeTargetLevel(other.getWindChangeTargetLevel());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -436,45 +493,17 @@ public final class EntityClientDataOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.EntityClientDataOuterClass.EntityClientData parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                windChangeSceneTime_ = input.readUInt32();
-
-                break;
-              } // case 8
-              case 21: {
-                windmillSyncAngle_ = input.readFloat();
-
-                break;
-              } // case 21
-              case 24: {
-                windChangeTargetLevel_ = input.readInt32();
-
-                break;
-              } // case 24
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.EntityClientDataOuterClass.EntityClientData) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
 
@@ -603,18 +632,7 @@ public final class EntityClientDataOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new EntityClientData(input, extensionRegistry);
       }
     };
 

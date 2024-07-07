@@ -19,21 +19,21 @@ public final class TakeoffEquipReqOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 slot = 14;</code>
-     * @return The slot.
-     */
-    int getSlot();
-
-    /**
-     * <code>uint64 avatar_guid = 5;</code>
+     * <code>uint64 avatar_guid = 1;</code>
      * @return The avatarGuid.
      */
     long getAvatarGuid();
+
+    /**
+     * <code>uint32 slot = 15;</code>
+     * @return The slot.
+     */
+    int getSlot();
   }
   /**
    * <pre>
-   * CmdId: 23894
-   * Obf: MGOICFILCBB
+   * 4.6.0
+   * CmdId: 3525
    * </pre>
    *
    * Protobuf type {@code TakeoffEquipReq}
@@ -62,6 +62,53 @@ public final class TakeoffEquipReqOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private TakeoffEquipReq(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              avatarGuid_ = input.readUInt64();
+              break;
+            }
+            case 120: {
+
+              slot_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.TakeoffEquipReqOuterClass.internal_static_TakeoffEquipReq_descriptor;
@@ -75,26 +122,26 @@ public final class TakeoffEquipReqOuterClass {
               emu.grasscutter.net.proto.TakeoffEquipReqOuterClass.TakeoffEquipReq.class, emu.grasscutter.net.proto.TakeoffEquipReqOuterClass.TakeoffEquipReq.Builder.class);
     }
 
-    public static final int SLOT_FIELD_NUMBER = 14;
-    private int slot_;
-    /**
-     * <code>uint32 slot = 14;</code>
-     * @return The slot.
-     */
-    @java.lang.Override
-    public int getSlot() {
-      return slot_;
-    }
-
-    public static final int AVATAR_GUID_FIELD_NUMBER = 5;
+    public static final int AVATAR_GUID_FIELD_NUMBER = 1;
     private long avatarGuid_;
     /**
-     * <code>uint64 avatar_guid = 5;</code>
+     * <code>uint64 avatar_guid = 1;</code>
      * @return The avatarGuid.
      */
     @java.lang.Override
     public long getAvatarGuid() {
       return avatarGuid_;
+    }
+
+    public static final int SLOT_FIELD_NUMBER = 15;
+    private int slot_;
+    /**
+     * <code>uint32 slot = 15;</code>
+     * @return The slot.
+     */
+    @java.lang.Override
+    public int getSlot() {
+      return slot_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -112,12 +159,12 @@ public final class TakeoffEquipReqOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (avatarGuid_ != 0L) {
-        output.writeUInt64(5, avatarGuid_);
+        output.writeUInt64(1, avatarGuid_);
       }
       if (slot_ != 0) {
-        output.writeUInt32(14, slot_);
+        output.writeUInt32(15, slot_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -128,13 +175,13 @@ public final class TakeoffEquipReqOuterClass {
       size = 0;
       if (avatarGuid_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(5, avatarGuid_);
+          .computeUInt64Size(1, avatarGuid_);
       }
       if (slot_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(14, slot_);
+          .computeUInt32Size(15, slot_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -149,11 +196,11 @@ public final class TakeoffEquipReqOuterClass {
       }
       emu.grasscutter.net.proto.TakeoffEquipReqOuterClass.TakeoffEquipReq other = (emu.grasscutter.net.proto.TakeoffEquipReqOuterClass.TakeoffEquipReq) obj;
 
-      if (getSlot()
-          != other.getSlot()) return false;
       if (getAvatarGuid()
           != other.getAvatarGuid()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (getSlot()
+          != other.getSlot()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -164,12 +211,12 @@ public final class TakeoffEquipReqOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + SLOT_FIELD_NUMBER;
-      hash = (53 * hash) + getSlot();
       hash = (37 * hash) + AVATAR_GUID_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getAvatarGuid());
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (37 * hash) + SLOT_FIELD_NUMBER;
+      hash = (53 * hash) + getSlot();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -266,8 +313,8 @@ public final class TakeoffEquipReqOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 23894
-     * Obf: MGOICFILCBB
+     * 4.6.0
+     * CmdId: 3525
      * </pre>
      *
      * Protobuf type {@code TakeoffEquipReq}
@@ -291,20 +338,25 @@ public final class TakeoffEquipReqOuterClass {
 
       // Construct using emu.grasscutter.net.proto.TakeoffEquipReqOuterClass.TakeoffEquipReq.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        slot_ = 0;
-
         avatarGuid_ = 0L;
+
+        slot_ = 0;
 
         return this;
       }
@@ -332,8 +384,8 @@ public final class TakeoffEquipReqOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.TakeoffEquipReqOuterClass.TakeoffEquipReq buildPartial() {
         emu.grasscutter.net.proto.TakeoffEquipReqOuterClass.TakeoffEquipReq result = new emu.grasscutter.net.proto.TakeoffEquipReqOuterClass.TakeoffEquipReq(this);
-        result.slot_ = slot_;
         result.avatarGuid_ = avatarGuid_;
+        result.slot_ = slot_;
         onBuilt();
         return result;
       }
@@ -382,13 +434,13 @@ public final class TakeoffEquipReqOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.TakeoffEquipReqOuterClass.TakeoffEquipReq other) {
         if (other == emu.grasscutter.net.proto.TakeoffEquipReqOuterClass.TakeoffEquipReq.getDefaultInstance()) return this;
-        if (other.getSlot() != 0) {
-          setSlot(other.getSlot());
-        }
         if (other.getAvatarGuid() != 0L) {
           setAvatarGuid(other.getAvatarGuid());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        if (other.getSlot() != 0) {
+          setSlot(other.getSlot());
+        }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -403,77 +455,23 @@ public final class TakeoffEquipReqOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.TakeoffEquipReqOuterClass.TakeoffEquipReq parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 40: {
-                avatarGuid_ = input.readUInt64();
-
-                break;
-              } // case 40
-              case 112: {
-                slot_ = input.readUInt32();
-
-                break;
-              } // case 112
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.TakeoffEquipReqOuterClass.TakeoffEquipReq) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-
-      private int slot_ ;
-      /**
-       * <code>uint32 slot = 14;</code>
-       * @return The slot.
-       */
-      @java.lang.Override
-      public int getSlot() {
-        return slot_;
-      }
-      /**
-       * <code>uint32 slot = 14;</code>
-       * @param value The slot to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSlot(int value) {
-        
-        slot_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 slot = 14;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearSlot() {
-        
-        slot_ = 0;
-        onChanged();
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
 
       private long avatarGuid_ ;
       /**
-       * <code>uint64 avatar_guid = 5;</code>
+       * <code>uint64 avatar_guid = 1;</code>
        * @return The avatarGuid.
        */
       @java.lang.Override
@@ -481,7 +479,7 @@ public final class TakeoffEquipReqOuterClass {
         return avatarGuid_;
       }
       /**
-       * <code>uint64 avatar_guid = 5;</code>
+       * <code>uint64 avatar_guid = 1;</code>
        * @param value The avatarGuid to set.
        * @return This builder for chaining.
        */
@@ -492,12 +490,43 @@ public final class TakeoffEquipReqOuterClass {
         return this;
       }
       /**
-       * <code>uint64 avatar_guid = 5;</code>
+       * <code>uint64 avatar_guid = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearAvatarGuid() {
         
         avatarGuid_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int slot_ ;
+      /**
+       * <code>uint32 slot = 15;</code>
+       * @return The slot.
+       */
+      @java.lang.Override
+      public int getSlot() {
+        return slot_;
+      }
+      /**
+       * <code>uint32 slot = 15;</code>
+       * @param value The slot to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSlot(int value) {
+        
+        slot_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 slot = 15;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSlot() {
+        
+        slot_ = 0;
         onChanged();
         return this;
       }
@@ -534,18 +563,7 @@ public final class TakeoffEquipReqOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new TakeoffEquipReq(input, extensionRegistry);
       }
     };
 
@@ -580,7 +598,7 @@ public final class TakeoffEquipReqOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\025TakeoffEquipReq.proto\"4\n\017TakeoffEquipR" +
-      "eq\022\014\n\004slot\030\016 \001(\r\022\023\n\013avatar_guid\030\005 \001(\004B\033\n" +
+      "eq\022\023\n\013avatar_guid\030\001 \001(\004\022\014\n\004slot\030\017 \001(\rB\033\n" +
       "\031emu.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -592,7 +610,7 @@ public final class TakeoffEquipReqOuterClass {
     internal_static_TakeoffEquipReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_TakeoffEquipReq_descriptor,
-        new java.lang.String[] { "Slot", "AvatarGuid", });
+        new java.lang.String[] { "AvatarGuid", "Slot", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

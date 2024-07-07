@@ -19,33 +19,29 @@ public final class WidgetGadgetDataOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated uint32 gadget_entity_id_list = 4;</code>
+     * <code>repeated uint32 gadget_entity_id_list = 1;</code>
      * @return A list containing the gadgetEntityIdList.
      */
     java.util.List<java.lang.Integer> getGadgetEntityIdListList();
     /**
-     * <code>repeated uint32 gadget_entity_id_list = 4;</code>
+     * <code>repeated uint32 gadget_entity_id_list = 1;</code>
      * @return The count of gadgetEntityIdList.
      */
     int getGadgetEntityIdListCount();
     /**
-     * <code>repeated uint32 gadget_entity_id_list = 4;</code>
+     * <code>repeated uint32 gadget_entity_id_list = 1;</code>
      * @param index The index of the element to return.
      * @return The gadgetEntityIdList at the given index.
      */
     int getGadgetEntityIdList(int index);
 
     /**
-     * <code>uint32 gadget_id = 3;</code>
+     * <code>uint32 gadget_id = 10;</code>
      * @return The gadgetId.
      */
     int getGadgetId();
   }
   /**
-   * <pre>
-   * Obf: ENKCILBBOJN
-   * </pre>
-   *
    * Protobuf type {@code WidgetGadgetData}
    */
   public static final class WidgetGadgetData extends
@@ -73,6 +69,73 @@ public final class WidgetGadgetDataOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private WidgetGadgetData(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                gadgetEntityIdList_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              gadgetEntityIdList_.addInt(input.readUInt32());
+              break;
+            }
+            case 10: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
+                gadgetEntityIdList_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                gadgetEntityIdList_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 80: {
+
+              gadgetId_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          gadgetEntityIdList_.makeImmutable(); // C
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.WidgetGadgetDataOuterClass.internal_static_WidgetGadgetData_descriptor;
@@ -86,10 +149,10 @@ public final class WidgetGadgetDataOuterClass {
               emu.grasscutter.net.proto.WidgetGadgetDataOuterClass.WidgetGadgetData.class, emu.grasscutter.net.proto.WidgetGadgetDataOuterClass.WidgetGadgetData.Builder.class);
     }
 
-    public static final int GADGET_ENTITY_ID_LIST_FIELD_NUMBER = 4;
+    public static final int GADGET_ENTITY_ID_LIST_FIELD_NUMBER = 1;
     private com.google.protobuf.Internal.IntList gadgetEntityIdList_;
     /**
-     * <code>repeated uint32 gadget_entity_id_list = 4;</code>
+     * <code>repeated uint32 gadget_entity_id_list = 1;</code>
      * @return A list containing the gadgetEntityIdList.
      */
     @java.lang.Override
@@ -98,14 +161,14 @@ public final class WidgetGadgetDataOuterClass {
       return gadgetEntityIdList_;
     }
     /**
-     * <code>repeated uint32 gadget_entity_id_list = 4;</code>
+     * <code>repeated uint32 gadget_entity_id_list = 1;</code>
      * @return The count of gadgetEntityIdList.
      */
     public int getGadgetEntityIdListCount() {
       return gadgetEntityIdList_.size();
     }
     /**
-     * <code>repeated uint32 gadget_entity_id_list = 4;</code>
+     * <code>repeated uint32 gadget_entity_id_list = 1;</code>
      * @param index The index of the element to return.
      * @return The gadgetEntityIdList at the given index.
      */
@@ -114,10 +177,10 @@ public final class WidgetGadgetDataOuterClass {
     }
     private int gadgetEntityIdListMemoizedSerializedSize = -1;
 
-    public static final int GADGET_ID_FIELD_NUMBER = 3;
+    public static final int GADGET_ID_FIELD_NUMBER = 10;
     private int gadgetId_;
     /**
-     * <code>uint32 gadget_id = 3;</code>
+     * <code>uint32 gadget_id = 10;</code>
      * @return The gadgetId.
      */
     @java.lang.Override
@@ -140,17 +203,17 @@ public final class WidgetGadgetDataOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
-      if (gadgetId_ != 0) {
-        output.writeUInt32(3, gadgetId_);
-      }
       if (getGadgetEntityIdListList().size() > 0) {
-        output.writeUInt32NoTag(34);
+        output.writeUInt32NoTag(10);
         output.writeUInt32NoTag(gadgetEntityIdListMemoizedSerializedSize);
       }
       for (int i = 0; i < gadgetEntityIdList_.size(); i++) {
         output.writeUInt32NoTag(gadgetEntityIdList_.getInt(i));
       }
-      getUnknownFields().writeTo(output);
+      if (gadgetId_ != 0) {
+        output.writeUInt32(10, gadgetId_);
+      }
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -159,10 +222,6 @@ public final class WidgetGadgetDataOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (gadgetId_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(3, gadgetId_);
-      }
       {
         int dataSize = 0;
         for (int i = 0; i < gadgetEntityIdList_.size(); i++) {
@@ -177,7 +236,11 @@ public final class WidgetGadgetDataOuterClass {
         }
         gadgetEntityIdListMemoizedSerializedSize = dataSize;
       }
-      size += getUnknownFields().getSerializedSize();
+      if (gadgetId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(10, gadgetId_);
+      }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -196,7 +259,7 @@ public final class WidgetGadgetDataOuterClass {
           .equals(other.getGadgetEntityIdListList())) return false;
       if (getGadgetId()
           != other.getGadgetId()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -213,7 +276,7 @@ public final class WidgetGadgetDataOuterClass {
       }
       hash = (37 * hash) + GADGET_ID_FIELD_NUMBER;
       hash = (53 * hash) + getGadgetId();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -309,10 +372,6 @@ public final class WidgetGadgetDataOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * Obf: ENKCILBBOJN
-     * </pre>
-     *
      * Protobuf type {@code WidgetGadgetData}
      */
     public static final class Builder extends
@@ -334,13 +393,18 @@ public final class WidgetGadgetDataOuterClass {
 
       // Construct using emu.grasscutter.net.proto.WidgetGadgetDataOuterClass.WidgetGadgetData.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -443,7 +507,7 @@ public final class WidgetGadgetDataOuterClass {
         if (other.getGadgetId() != 0) {
           setGadgetId(other.getGadgetId());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -458,51 +522,17 @@ public final class WidgetGadgetDataOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.WidgetGadgetDataOuterClass.WidgetGadgetData parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 24: {
-                gadgetId_ = input.readUInt32();
-
-                break;
-              } // case 24
-              case 32: {
-                int v = input.readUInt32();
-                ensureGadgetEntityIdListIsMutable();
-                gadgetEntityIdList_.addInt(v);
-                break;
-              } // case 32
-              case 34: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureGadgetEntityIdListIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  gadgetEntityIdList_.addInt(input.readUInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 34
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.WidgetGadgetDataOuterClass.WidgetGadgetData) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -515,7 +545,7 @@ public final class WidgetGadgetDataOuterClass {
          }
       }
       /**
-       * <code>repeated uint32 gadget_entity_id_list = 4;</code>
+       * <code>repeated uint32 gadget_entity_id_list = 1;</code>
        * @return A list containing the gadgetEntityIdList.
        */
       public java.util.List<java.lang.Integer>
@@ -524,14 +554,14 @@ public final class WidgetGadgetDataOuterClass {
                  java.util.Collections.unmodifiableList(gadgetEntityIdList_) : gadgetEntityIdList_;
       }
       /**
-       * <code>repeated uint32 gadget_entity_id_list = 4;</code>
+       * <code>repeated uint32 gadget_entity_id_list = 1;</code>
        * @return The count of gadgetEntityIdList.
        */
       public int getGadgetEntityIdListCount() {
         return gadgetEntityIdList_.size();
       }
       /**
-       * <code>repeated uint32 gadget_entity_id_list = 4;</code>
+       * <code>repeated uint32 gadget_entity_id_list = 1;</code>
        * @param index The index of the element to return.
        * @return The gadgetEntityIdList at the given index.
        */
@@ -539,7 +569,7 @@ public final class WidgetGadgetDataOuterClass {
         return gadgetEntityIdList_.getInt(index);
       }
       /**
-       * <code>repeated uint32 gadget_entity_id_list = 4;</code>
+       * <code>repeated uint32 gadget_entity_id_list = 1;</code>
        * @param index The index to set the value at.
        * @param value The gadgetEntityIdList to set.
        * @return This builder for chaining.
@@ -552,7 +582,7 @@ public final class WidgetGadgetDataOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 gadget_entity_id_list = 4;</code>
+       * <code>repeated uint32 gadget_entity_id_list = 1;</code>
        * @param value The gadgetEntityIdList to add.
        * @return This builder for chaining.
        */
@@ -563,7 +593,7 @@ public final class WidgetGadgetDataOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 gadget_entity_id_list = 4;</code>
+       * <code>repeated uint32 gadget_entity_id_list = 1;</code>
        * @param values The gadgetEntityIdList to add.
        * @return This builder for chaining.
        */
@@ -576,7 +606,7 @@ public final class WidgetGadgetDataOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 gadget_entity_id_list = 4;</code>
+       * <code>repeated uint32 gadget_entity_id_list = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearGadgetEntityIdList() {
@@ -588,7 +618,7 @@ public final class WidgetGadgetDataOuterClass {
 
       private int gadgetId_ ;
       /**
-       * <code>uint32 gadget_id = 3;</code>
+       * <code>uint32 gadget_id = 10;</code>
        * @return The gadgetId.
        */
       @java.lang.Override
@@ -596,7 +626,7 @@ public final class WidgetGadgetDataOuterClass {
         return gadgetId_;
       }
       /**
-       * <code>uint32 gadget_id = 3;</code>
+       * <code>uint32 gadget_id = 10;</code>
        * @param value The gadgetId to set.
        * @return This builder for chaining.
        */
@@ -607,7 +637,7 @@ public final class WidgetGadgetDataOuterClass {
         return this;
       }
       /**
-       * <code>uint32 gadget_id = 3;</code>
+       * <code>uint32 gadget_id = 10;</code>
        * @return This builder for chaining.
        */
       public Builder clearGadgetId() {
@@ -649,18 +679,7 @@ public final class WidgetGadgetDataOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new WidgetGadgetData(input, extensionRegistry);
       }
     };
 
@@ -695,8 +714,8 @@ public final class WidgetGadgetDataOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\026WidgetGadgetData.proto\"D\n\020WidgetGadget" +
-      "Data\022\035\n\025gadget_entity_id_list\030\004 \003(\r\022\021\n\tg" +
-      "adget_id\030\003 \001(\rB\033\n\031emu.grasscutter.net.pr" +
+      "Data\022\035\n\025gadget_entity_id_list\030\001 \003(\r\022\021\n\tg" +
+      "adget_id\030\n \001(\rB\033\n\031emu.grasscutter.net.pr" +
       "otob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

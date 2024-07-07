@@ -50,7 +50,7 @@ public final class MassivePropSyncInfoOuterClass {
   }
   /**
    * <pre>
-   * Obf: HMEMJBACNJE
+   * 4.6.0
    * </pre>
    *
    * Protobuf type {@code MassivePropSyncInfo}
@@ -79,6 +79,61 @@ public final class MassivePropSyncInfoOuterClass {
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
+    }
+    private MassivePropSyncInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              id_ = input.readInt64();
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                propList_ = new java.util.ArrayList<emu.grasscutter.net.proto.MassivePropParamOuterClass.MassivePropParam>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              propList_.add(
+                  input.readMessage(emu.grasscutter.net.proto.MassivePropParamOuterClass.MassivePropParam.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          propList_ = java.util.Collections.unmodifiableList(propList_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -164,7 +219,7 @@ public final class MassivePropSyncInfoOuterClass {
       for (int i = 0; i < propList_.size(); i++) {
         output.writeMessage(2, propList_.get(i));
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -181,7 +236,7 @@ public final class MassivePropSyncInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, propList_.get(i));
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -200,7 +255,7 @@ public final class MassivePropSyncInfoOuterClass {
           != other.getId()) return false;
       if (!getPropListList()
           .equals(other.getPropListList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -218,7 +273,7 @@ public final class MassivePropSyncInfoOuterClass {
         hash = (37 * hash) + PROP_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getPropListList().hashCode();
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -315,7 +370,7 @@ public final class MassivePropSyncInfoOuterClass {
     }
     /**
      * <pre>
-     * Obf: HMEMJBACNJE
+     * 4.6.0
      * </pre>
      *
      * Protobuf type {@code MassivePropSyncInfo}
@@ -339,13 +394,19 @@ public final class MassivePropSyncInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.MassivePropSyncInfoOuterClass.MassivePropSyncInfo.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPropListFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -354,11 +415,10 @@ public final class MassivePropSyncInfoOuterClass {
 
         if (propListBuilder_ == null) {
           propList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
-          propList_ = null;
           propListBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -473,7 +533,7 @@ public final class MassivePropSyncInfoOuterClass {
             }
           }
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -488,48 +548,17 @@ public final class MassivePropSyncInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.MassivePropSyncInfoOuterClass.MassivePropSyncInfo parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                id_ = input.readInt64();
-
-                break;
-              } // case 8
-              case 18: {
-                emu.grasscutter.net.proto.MassivePropParamOuterClass.MassivePropParam m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.MassivePropParamOuterClass.MassivePropParam.parser(),
-                        extensionRegistry);
-                if (propListBuilder_ == null) {
-                  ensurePropListIsMutable();
-                  propList_.add(m);
-                } else {
-                  propListBuilder_.addMessage(m);
-                }
-                break;
-              } // case 18
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.MassivePropSyncInfoOuterClass.MassivePropSyncInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -837,18 +866,7 @@ public final class MassivePropSyncInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new MassivePropSyncInfo(input, extensionRegistry);
       }
     };
 

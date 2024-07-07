@@ -580,7 +580,7 @@ public final class QuestManager extends BasePlayerManager {
      * @param quest The ID of the quest.
      */
     public void checkQuestAlreadyFulfilled(GameQuest quest) {
-        eventExecutor
+         Grasscutter.getThreadPool()
                 .submit(
                         () -> {
                             for (var condition : quest.getQuestData().getFinishCond()) {

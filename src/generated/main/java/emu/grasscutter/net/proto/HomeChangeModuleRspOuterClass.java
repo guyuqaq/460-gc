@@ -19,21 +19,21 @@ public final class HomeChangeModuleRspOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int32 retcode = 1;</code>
+     * <code>int32 retcode = 3;</code>
      * @return The retcode.
      */
     int getRetcode();
 
     /**
-     * <code>uint32 target_module_id = 10;</code>
+     * <code>uint32 target_module_id = 5;</code>
      * @return The targetModuleId.
      */
     int getTargetModuleId();
   }
   /**
    * <pre>
-   * CmdId: 20550
-   * Obf: HNJKLHOOECE
+   *obf: HLONDLKECKC
+   * CmdId: 9924
    * </pre>
    *
    * Protobuf type {@code HomeChangeModuleRsp}
@@ -62,6 +62,53 @@ public final class HomeChangeModuleRspOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private HomeChangeModuleRsp(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 24: {
+
+              retcode_ = input.readInt32();
+              break;
+            }
+            case 40: {
+
+              targetModuleId_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.HomeChangeModuleRspOuterClass.internal_static_HomeChangeModuleRsp_descriptor;
@@ -75,10 +122,10 @@ public final class HomeChangeModuleRspOuterClass {
               emu.grasscutter.net.proto.HomeChangeModuleRspOuterClass.HomeChangeModuleRsp.class, emu.grasscutter.net.proto.HomeChangeModuleRspOuterClass.HomeChangeModuleRsp.Builder.class);
     }
 
-    public static final int RETCODE_FIELD_NUMBER = 1;
+    public static final int RETCODE_FIELD_NUMBER = 3;
     private int retcode_;
     /**
-     * <code>int32 retcode = 1;</code>
+     * <code>int32 retcode = 3;</code>
      * @return The retcode.
      */
     @java.lang.Override
@@ -86,10 +133,10 @@ public final class HomeChangeModuleRspOuterClass {
       return retcode_;
     }
 
-    public static final int TARGET_MODULE_ID_FIELD_NUMBER = 10;
+    public static final int TARGET_MODULE_ID_FIELD_NUMBER = 5;
     private int targetModuleId_;
     /**
-     * <code>uint32 target_module_id = 10;</code>
+     * <code>uint32 target_module_id = 5;</code>
      * @return The targetModuleId.
      */
     @java.lang.Override
@@ -112,12 +159,12 @@ public final class HomeChangeModuleRspOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (retcode_ != 0) {
-        output.writeInt32(1, retcode_);
+        output.writeInt32(3, retcode_);
       }
       if (targetModuleId_ != 0) {
-        output.writeUInt32(10, targetModuleId_);
+        output.writeUInt32(5, targetModuleId_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -128,13 +175,13 @@ public final class HomeChangeModuleRspOuterClass {
       size = 0;
       if (retcode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(1, retcode_);
+          .computeInt32Size(3, retcode_);
       }
       if (targetModuleId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(10, targetModuleId_);
+          .computeUInt32Size(5, targetModuleId_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -153,7 +200,7 @@ public final class HomeChangeModuleRspOuterClass {
           != other.getRetcode()) return false;
       if (getTargetModuleId()
           != other.getTargetModuleId()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -168,7 +215,7 @@ public final class HomeChangeModuleRspOuterClass {
       hash = (53 * hash) + getRetcode();
       hash = (37 * hash) + TARGET_MODULE_ID_FIELD_NUMBER;
       hash = (53 * hash) + getTargetModuleId();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -265,8 +312,8 @@ public final class HomeChangeModuleRspOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 20550
-     * Obf: HNJKLHOOECE
+     *obf: HLONDLKECKC
+     * CmdId: 9924
      * </pre>
      *
      * Protobuf type {@code HomeChangeModuleRsp}
@@ -290,13 +337,18 @@ public final class HomeChangeModuleRspOuterClass {
 
       // Construct using emu.grasscutter.net.proto.HomeChangeModuleRspOuterClass.HomeChangeModuleRsp.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -387,7 +439,7 @@ public final class HomeChangeModuleRspOuterClass {
         if (other.getTargetModuleId() != 0) {
           setTargetModuleId(other.getTargetModuleId());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -402,46 +454,23 @@ public final class HomeChangeModuleRspOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.HomeChangeModuleRspOuterClass.HomeChangeModuleRsp parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                retcode_ = input.readInt32();
-
-                break;
-              } // case 8
-              case 80: {
-                targetModuleId_ = input.readUInt32();
-
-                break;
-              } // case 80
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.HomeChangeModuleRspOuterClass.HomeChangeModuleRsp) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
 
       private int retcode_ ;
       /**
-       * <code>int32 retcode = 1;</code>
+       * <code>int32 retcode = 3;</code>
        * @return The retcode.
        */
       @java.lang.Override
@@ -449,7 +478,7 @@ public final class HomeChangeModuleRspOuterClass {
         return retcode_;
       }
       /**
-       * <code>int32 retcode = 1;</code>
+       * <code>int32 retcode = 3;</code>
        * @param value The retcode to set.
        * @return This builder for chaining.
        */
@@ -460,7 +489,7 @@ public final class HomeChangeModuleRspOuterClass {
         return this;
       }
       /**
-       * <code>int32 retcode = 1;</code>
+       * <code>int32 retcode = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearRetcode() {
@@ -472,7 +501,7 @@ public final class HomeChangeModuleRspOuterClass {
 
       private int targetModuleId_ ;
       /**
-       * <code>uint32 target_module_id = 10;</code>
+       * <code>uint32 target_module_id = 5;</code>
        * @return The targetModuleId.
        */
       @java.lang.Override
@@ -480,7 +509,7 @@ public final class HomeChangeModuleRspOuterClass {
         return targetModuleId_;
       }
       /**
-       * <code>uint32 target_module_id = 10;</code>
+       * <code>uint32 target_module_id = 5;</code>
        * @param value The targetModuleId to set.
        * @return This builder for chaining.
        */
@@ -491,7 +520,7 @@ public final class HomeChangeModuleRspOuterClass {
         return this;
       }
       /**
-       * <code>uint32 target_module_id = 10;</code>
+       * <code>uint32 target_module_id = 5;</code>
        * @return This builder for chaining.
        */
       public Builder clearTargetModuleId() {
@@ -533,18 +562,7 @@ public final class HomeChangeModuleRspOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new HomeChangeModuleRsp(input, extensionRegistry);
       }
     };
 
@@ -579,8 +597,8 @@ public final class HomeChangeModuleRspOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\031HomeChangeModuleRsp.proto\"@\n\023HomeChang" +
-      "eModuleRsp\022\017\n\007retcode\030\001 \001(\005\022\030\n\020target_mo" +
-      "dule_id\030\n \001(\rB\033\n\031emu.grasscutter.net.pro" +
+      "eModuleRsp\022\017\n\007retcode\030\003 \001(\005\022\030\n\020target_mo" +
+      "dule_id\030\005 \001(\rB\033\n\031emu.grasscutter.net.pro" +
       "tob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

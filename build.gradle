@@ -51,14 +51,21 @@ spotless {
     }
 }
 
-compileJava.options.encoding = 'UTF-8'
+compileJava {
+	options.encoding = "UTF-8"
+	options.fork = 'true'
+	options.forkOptions.with {
+		memoryMaximumSize = "5000m"
+	}
+}
+
 compileTestJava.options.encoding = 'UTF-8'
 
 sourceCompatibility = JavaVersion.VERSION_17
 targetCompatibility = JavaVersion.VERSION_17
 
 group = 'io.grasscutter'
-version = '4.0.0'
+version = '4.6.0'
 
 java {
     withJavadocJar()
@@ -94,6 +101,7 @@ dependencies {
     // Serialization.
     implementation group: 'com.google.code.gson', name: 'gson', version: '2.9.0'
     implementation group: 'com.google.protobuf', name: 'protobuf-java', version: '3.19.6'
+    implementation group: 'com.github.os72', name: 'protobuf-dynamic', version: '1.0.1'
 
     implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.14.2'
     implementation platform('com.fasterxml.jackson:jackson-bom:2.14.0')
@@ -136,10 +144,12 @@ dependencies {
     testImplementation group: 'com.squareup.okhttp3', name: 'okhttp', version: '4.10.0'
 
     // Lombok.
-    compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.26'
-    annotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.26'
-    testCompileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.26'
-    testAnnotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.26'
+    compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.30'
+    annotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.30'
+    testCompileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.30'
+    testAnnotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.30'
+	
+	implementation group: 'it.unimi.dsi', name: 'fastutil', version: '8.5.12'
 }
 
 configurations.configureEach {
@@ -393,17 +403,17 @@ tasks.register('generateHandbook') {
         }
 
         // Build the handbook.
-        exec {
-            workingDir 'src/handbook'
-            commandLine npm, 'run', 'build'
-        }
+        //exec {
+        //    workingDir 'src/handbook'
+        //    commandLine npm, 'run', 'build'
+        //}
 
         // Copy the handbook from /dist to /src/main/resources.
-        copy {
-            from 'src/handbook/dist/index.html'
-            into 'src/main/resources/html'
-            rename 'index.html', 'handbook.html'
-        }
+        //copy {
+        //    from 'src/handbook/dist/index.html'
+        //    into 'src/main/resources/html'
+        //    rename 'index.html', 'handbook.html'
+        //}
     }
 }
 

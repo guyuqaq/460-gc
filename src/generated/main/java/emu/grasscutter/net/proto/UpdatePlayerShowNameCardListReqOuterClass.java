@@ -19,17 +19,17 @@ public final class UpdatePlayerShowNameCardListReqOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated uint32 show_name_card_id_list = 14;</code>
+     * <code>repeated uint32 show_name_card_id_list = 15;</code>
      * @return A list containing the showNameCardIdList.
      */
     java.util.List<java.lang.Integer> getShowNameCardIdListList();
     /**
-     * <code>repeated uint32 show_name_card_id_list = 14;</code>
+     * <code>repeated uint32 show_name_card_id_list = 15;</code>
      * @return The count of showNameCardIdList.
      */
     int getShowNameCardIdListCount();
     /**
-     * <code>repeated uint32 show_name_card_id_list = 14;</code>
+     * <code>repeated uint32 show_name_card_id_list = 15;</code>
      * @param index The index of the element to return.
      * @return The showNameCardIdList at the given index.
      */
@@ -37,8 +37,8 @@ public final class UpdatePlayerShowNameCardListReqOuterClass {
   }
   /**
    * <pre>
-   * CmdId: 25424
-   * Obf: OBEFEMPNKNB
+   * 4.6.0
+   * CmdId: 9487
    * </pre>
    *
    * Protobuf type {@code UpdatePlayerShowNameCardListReq}
@@ -68,6 +68,68 @@ public final class UpdatePlayerShowNameCardListReqOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private UpdatePlayerShowNameCardListReq(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 120: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                showNameCardIdList_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              showNameCardIdList_.addInt(input.readUInt32());
+              break;
+            }
+            case 122: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
+                showNameCardIdList_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                showNameCardIdList_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          showNameCardIdList_.makeImmutable(); // C
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.UpdatePlayerShowNameCardListReqOuterClass.internal_static_UpdatePlayerShowNameCardListReq_descriptor;
@@ -81,10 +143,10 @@ public final class UpdatePlayerShowNameCardListReqOuterClass {
               emu.grasscutter.net.proto.UpdatePlayerShowNameCardListReqOuterClass.UpdatePlayerShowNameCardListReq.class, emu.grasscutter.net.proto.UpdatePlayerShowNameCardListReqOuterClass.UpdatePlayerShowNameCardListReq.Builder.class);
     }
 
-    public static final int SHOW_NAME_CARD_ID_LIST_FIELD_NUMBER = 14;
+    public static final int SHOW_NAME_CARD_ID_LIST_FIELD_NUMBER = 15;
     private com.google.protobuf.Internal.IntList showNameCardIdList_;
     /**
-     * <code>repeated uint32 show_name_card_id_list = 14;</code>
+     * <code>repeated uint32 show_name_card_id_list = 15;</code>
      * @return A list containing the showNameCardIdList.
      */
     @java.lang.Override
@@ -93,14 +155,14 @@ public final class UpdatePlayerShowNameCardListReqOuterClass {
       return showNameCardIdList_;
     }
     /**
-     * <code>repeated uint32 show_name_card_id_list = 14;</code>
+     * <code>repeated uint32 show_name_card_id_list = 15;</code>
      * @return The count of showNameCardIdList.
      */
     public int getShowNameCardIdListCount() {
       return showNameCardIdList_.size();
     }
     /**
-     * <code>repeated uint32 show_name_card_id_list = 14;</code>
+     * <code>repeated uint32 show_name_card_id_list = 15;</code>
      * @param index The index of the element to return.
      * @return The showNameCardIdList at the given index.
      */
@@ -125,13 +187,13 @@ public final class UpdatePlayerShowNameCardListReqOuterClass {
                         throws java.io.IOException {
       getSerializedSize();
       if (getShowNameCardIdListList().size() > 0) {
-        output.writeUInt32NoTag(114);
+        output.writeUInt32NoTag(122);
         output.writeUInt32NoTag(showNameCardIdListMemoizedSerializedSize);
       }
       for (int i = 0; i < showNameCardIdList_.size(); i++) {
         output.writeUInt32NoTag(showNameCardIdList_.getInt(i));
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -154,7 +216,7 @@ public final class UpdatePlayerShowNameCardListReqOuterClass {
         }
         showNameCardIdListMemoizedSerializedSize = dataSize;
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -171,7 +233,7 @@ public final class UpdatePlayerShowNameCardListReqOuterClass {
 
       if (!getShowNameCardIdListList()
           .equals(other.getShowNameCardIdListList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -186,7 +248,7 @@ public final class UpdatePlayerShowNameCardListReqOuterClass {
         hash = (37 * hash) + SHOW_NAME_CARD_ID_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getShowNameCardIdListList().hashCode();
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -283,8 +345,8 @@ public final class UpdatePlayerShowNameCardListReqOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 25424
-     * Obf: OBEFEMPNKNB
+     * 4.6.0
+     * CmdId: 9487
      * </pre>
      *
      * Protobuf type {@code UpdatePlayerShowNameCardListReq}
@@ -308,13 +370,18 @@ public final class UpdatePlayerShowNameCardListReqOuterClass {
 
       // Construct using emu.grasscutter.net.proto.UpdatePlayerShowNameCardListReqOuterClass.UpdatePlayerShowNameCardListReq.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -411,7 +478,7 @@ public final class UpdatePlayerShowNameCardListReqOuterClass {
           }
           onChanged();
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -426,46 +493,17 @@ public final class UpdatePlayerShowNameCardListReqOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.UpdatePlayerShowNameCardListReqOuterClass.UpdatePlayerShowNameCardListReq parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 112: {
-                int v = input.readUInt32();
-                ensureShowNameCardIdListIsMutable();
-                showNameCardIdList_.addInt(v);
-                break;
-              } // case 112
-              case 114: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureShowNameCardIdListIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  showNameCardIdList_.addInt(input.readUInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 114
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.UpdatePlayerShowNameCardListReqOuterClass.UpdatePlayerShowNameCardListReq) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -478,7 +516,7 @@ public final class UpdatePlayerShowNameCardListReqOuterClass {
          }
       }
       /**
-       * <code>repeated uint32 show_name_card_id_list = 14;</code>
+       * <code>repeated uint32 show_name_card_id_list = 15;</code>
        * @return A list containing the showNameCardIdList.
        */
       public java.util.List<java.lang.Integer>
@@ -487,14 +525,14 @@ public final class UpdatePlayerShowNameCardListReqOuterClass {
                  java.util.Collections.unmodifiableList(showNameCardIdList_) : showNameCardIdList_;
       }
       /**
-       * <code>repeated uint32 show_name_card_id_list = 14;</code>
+       * <code>repeated uint32 show_name_card_id_list = 15;</code>
        * @return The count of showNameCardIdList.
        */
       public int getShowNameCardIdListCount() {
         return showNameCardIdList_.size();
       }
       /**
-       * <code>repeated uint32 show_name_card_id_list = 14;</code>
+       * <code>repeated uint32 show_name_card_id_list = 15;</code>
        * @param index The index of the element to return.
        * @return The showNameCardIdList at the given index.
        */
@@ -502,7 +540,7 @@ public final class UpdatePlayerShowNameCardListReqOuterClass {
         return showNameCardIdList_.getInt(index);
       }
       /**
-       * <code>repeated uint32 show_name_card_id_list = 14;</code>
+       * <code>repeated uint32 show_name_card_id_list = 15;</code>
        * @param index The index to set the value at.
        * @param value The showNameCardIdList to set.
        * @return This builder for chaining.
@@ -515,7 +553,7 @@ public final class UpdatePlayerShowNameCardListReqOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 show_name_card_id_list = 14;</code>
+       * <code>repeated uint32 show_name_card_id_list = 15;</code>
        * @param value The showNameCardIdList to add.
        * @return This builder for chaining.
        */
@@ -526,7 +564,7 @@ public final class UpdatePlayerShowNameCardListReqOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 show_name_card_id_list = 14;</code>
+       * <code>repeated uint32 show_name_card_id_list = 15;</code>
        * @param values The showNameCardIdList to add.
        * @return This builder for chaining.
        */
@@ -539,7 +577,7 @@ public final class UpdatePlayerShowNameCardListReqOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 show_name_card_id_list = 14;</code>
+       * <code>repeated uint32 show_name_card_id_list = 15;</code>
        * @return This builder for chaining.
        */
       public Builder clearShowNameCardIdList() {
@@ -581,18 +619,7 @@ public final class UpdatePlayerShowNameCardListReqOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new UpdatePlayerShowNameCardListReq(input, extensionRegistry);
       }
     };
 
@@ -628,7 +655,7 @@ public final class UpdatePlayerShowNameCardListReqOuterClass {
     java.lang.String[] descriptorData = {
       "\n%UpdatePlayerShowNameCardListReq.proto\"" +
       "A\n\037UpdatePlayerShowNameCardListReq\022\036\n\026sh" +
-      "ow_name_card_id_list\030\016 \003(\rB\033\n\031emu.grassc" +
+      "ow_name_card_id_list\030\017 \003(\rB\033\n\031emu.grassc" +
       "utter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

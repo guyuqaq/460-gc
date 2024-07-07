@@ -165,6 +165,7 @@ public class ConfigContainer {
 
     public static class Game {
         public boolean useWindy = false; //是否添加水印
+        public boolean loginUnlockMap = false; //开局是否默认解锁全图
         public String bindAddress = "0.0.0.0";
         public int bindPort = 22102;
 
@@ -361,6 +362,7 @@ public class ConfigContainer {
     }
 
     public static class JoinOptions {
+        public static String noticeMessage = "Welcome to a Grasscutter server.";
         public int[] welcomeEmotes = {2007, 1002, 4010};
         public String welcomeMessage = "Welcome to a Grasscutter server.";
         public JoinOptions.Mail welcomeMail = new JoinOptions.Mail();

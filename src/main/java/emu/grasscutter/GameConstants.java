@@ -7,8 +7,8 @@ import emu.grasscutter.utils.objects.SparseSet;
 import java.util.Arrays;
 
 public final class GameConstants {
-    public static String VERSION = "4.0.0";
-    public static int[] VERSION_PARTS = {4, 0, 0};
+    public static String VERSION = "4.6.0";
+    public static int[] VERSION_PARTS = {4, 6, 0};
     public static boolean DEBUG = false;
 
     public static final int DEFAULT_TEAMS = 4;
@@ -40,7 +40,11 @@ public final class GameConstants {
         "Absorb_SealEcho_Bullet_02",
         "Ability_Avatar_Dive_CrabShield",
         "ActivityAbility_Absorb_Shoot",
-        "SceneAbility_DiveVolume"
+        "SceneAbility_DiveVolume",
+        "Avatar_PlayerGirl_DiveStamina_Reduction",
+        "Ability_Avatar_Dive_Team",
+        "Avatar_Absorb_TrackingMissile",
+        "Avatar_Absorb_SwordFishSlash",
     };
     public static final String[] DEFAULT_TEAM_ABILITY_STRINGS = {
             "Ability_Avatar_Dive_Team"

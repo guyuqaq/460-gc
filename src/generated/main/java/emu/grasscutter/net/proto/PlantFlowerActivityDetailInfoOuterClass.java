@@ -141,6 +141,90 @@ public final class PlantFlowerActivityDetailInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private PlantFlowerActivityDetailInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 16: {
+
+              isTodayHasAwarded_ = input.readBool();
+              break;
+            }
+            case 34: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                iPADJEILKIB_ = com.google.protobuf.MapField.newMapField(
+                    IPADJEILKIBDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000002;
+              }
+              com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
+              iPADJEILKIB__ = input.readMessage(
+                  IPADJEILKIBDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              iPADJEILKIB_.getMutableMap().put(
+                  iPADJEILKIB__.getKey(), iPADJEILKIB__.getValue());
+              break;
+            }
+            case 40: {
+
+              isContentClosed_ = input.readBool();
+              break;
+            }
+            case 64: {
+
+              dayIndex_ = input.readUInt32();
+              break;
+            }
+            case 74: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                dAOOKPHJPKA_ = com.google.protobuf.MapField.newMapField(
+                    DAOOKPHJPKADefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
+              dAOOKPHJPKA__ = input.readMessage(
+                  DAOOKPHJPKADefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              dAOOKPHJPKA_.getMutableMap().put(
+                  dAOOKPHJPKA__.getKey(), dAOOKPHJPKA__.getValue());
+              break;
+            }
+            case 80: {
+
+              todaySeedRewardId_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.PlantFlowerActivityDetailInfoOuterClass.internal_static_PlantFlowerActivityDetailInfo_descriptor;
@@ -412,7 +496,7 @@ public final class PlantFlowerActivityDetailInfoOuterClass {
       if (todaySeedRewardId_ != 0) {
         output.writeUInt32(10, todaySeedRewardId_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -457,7 +541,7 @@ public final class PlantFlowerActivityDetailInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(10, todaySeedRewardId_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -484,7 +568,7 @@ public final class PlantFlowerActivityDetailInfoOuterClass {
           other.internalGetIPADJEILKIB())) return false;
       if (getDayIndex()
           != other.getDayIndex()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -513,7 +597,7 @@ public final class PlantFlowerActivityDetailInfoOuterClass {
       }
       hash = (37 * hash) + DAY_INDEX_FIELD_NUMBER;
       hash = (53 * hash) + getDayIndex();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -660,13 +744,18 @@ public final class PlantFlowerActivityDetailInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.PlantFlowerActivityDetailInfoOuterClass.PlantFlowerActivityDetailInfo.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -780,7 +869,7 @@ public final class PlantFlowerActivityDetailInfoOuterClass {
         if (other.getDayIndex() != 0) {
           setDayIndex(other.getDayIndex());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -795,66 +884,17 @@ public final class PlantFlowerActivityDetailInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.PlantFlowerActivityDetailInfoOuterClass.PlantFlowerActivityDetailInfo parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 16: {
-                isTodayHasAwarded_ = input.readBool();
-
-                break;
-              } // case 16
-              case 34: {
-                com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
-                iPADJEILKIB__ = input.readMessage(
-                    IPADJEILKIBDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-                internalGetMutableIPADJEILKIB().getMutableMap().put(
-                    iPADJEILKIB__.getKey(), iPADJEILKIB__.getValue());
-                break;
-              } // case 34
-              case 40: {
-                isContentClosed_ = input.readBool();
-
-                break;
-              } // case 40
-              case 64: {
-                dayIndex_ = input.readUInt32();
-
-                break;
-              } // case 64
-              case 74: {
-                com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
-                dAOOKPHJPKA__ = input.readMessage(
-                    DAOOKPHJPKADefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-                internalGetMutableDAOOKPHJPKA().getMutableMap().put(
-                    dAOOKPHJPKA__.getKey(), dAOOKPHJPKA__.getValue());
-                break;
-              } // case 74
-              case 80: {
-                todaySeedRewardId_ = input.readUInt32();
-
-                break;
-              } // case 80
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.PlantFlowerActivityDetailInfoOuterClass.PlantFlowerActivityDetailInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -1271,18 +1311,7 @@ public final class PlantFlowerActivityDetailInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new PlantFlowerActivityDetailInfo(input, extensionRegistry);
       }
     };
 

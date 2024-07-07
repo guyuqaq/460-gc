@@ -19,21 +19,21 @@ public final class PlayerPropChangeNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 prop_delta = 4;</code>
+     * <code>uint32 prop_delta = 1;</code>
      * @return The propDelta.
      */
     int getPropDelta();
 
     /**
-     * <code>uint32 prop_type = 6;</code>
+     * <code>uint32 prop_type = 2;</code>
      * @return The propType.
      */
     int getPropType();
   }
   /**
    * <pre>
-   * CmdId: 24729
-   * Obf: JMOMPLEOGLD
+   * 4.6.0
+   * CmdId: 26303
    * </pre>
    *
    * Protobuf type {@code PlayerPropChangeNotify}
@@ -62,6 +62,53 @@ public final class PlayerPropChangeNotifyOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private PlayerPropChangeNotify(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              propDelta_ = input.readUInt32();
+              break;
+            }
+            case 16: {
+
+              propType_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.PlayerPropChangeNotifyOuterClass.internal_static_PlayerPropChangeNotify_descriptor;
@@ -75,10 +122,10 @@ public final class PlayerPropChangeNotifyOuterClass {
               emu.grasscutter.net.proto.PlayerPropChangeNotifyOuterClass.PlayerPropChangeNotify.class, emu.grasscutter.net.proto.PlayerPropChangeNotifyOuterClass.PlayerPropChangeNotify.Builder.class);
     }
 
-    public static final int PROP_DELTA_FIELD_NUMBER = 4;
+    public static final int PROP_DELTA_FIELD_NUMBER = 1;
     private int propDelta_;
     /**
-     * <code>uint32 prop_delta = 4;</code>
+     * <code>uint32 prop_delta = 1;</code>
      * @return The propDelta.
      */
     @java.lang.Override
@@ -86,10 +133,10 @@ public final class PlayerPropChangeNotifyOuterClass {
       return propDelta_;
     }
 
-    public static final int PROP_TYPE_FIELD_NUMBER = 6;
+    public static final int PROP_TYPE_FIELD_NUMBER = 2;
     private int propType_;
     /**
-     * <code>uint32 prop_type = 6;</code>
+     * <code>uint32 prop_type = 2;</code>
      * @return The propType.
      */
     @java.lang.Override
@@ -112,12 +159,12 @@ public final class PlayerPropChangeNotifyOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (propDelta_ != 0) {
-        output.writeUInt32(4, propDelta_);
+        output.writeUInt32(1, propDelta_);
       }
       if (propType_ != 0) {
-        output.writeUInt32(6, propType_);
+        output.writeUInt32(2, propType_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -128,13 +175,13 @@ public final class PlayerPropChangeNotifyOuterClass {
       size = 0;
       if (propDelta_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(4, propDelta_);
+          .computeUInt32Size(1, propDelta_);
       }
       if (propType_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(6, propType_);
+          .computeUInt32Size(2, propType_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -153,7 +200,7 @@ public final class PlayerPropChangeNotifyOuterClass {
           != other.getPropDelta()) return false;
       if (getPropType()
           != other.getPropType()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -168,7 +215,7 @@ public final class PlayerPropChangeNotifyOuterClass {
       hash = (53 * hash) + getPropDelta();
       hash = (37 * hash) + PROP_TYPE_FIELD_NUMBER;
       hash = (53 * hash) + getPropType();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -265,8 +312,8 @@ public final class PlayerPropChangeNotifyOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 24729
-     * Obf: JMOMPLEOGLD
+     * 4.6.0
+     * CmdId: 26303
      * </pre>
      *
      * Protobuf type {@code PlayerPropChangeNotify}
@@ -290,13 +337,18 @@ public final class PlayerPropChangeNotifyOuterClass {
 
       // Construct using emu.grasscutter.net.proto.PlayerPropChangeNotifyOuterClass.PlayerPropChangeNotify.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -387,7 +439,7 @@ public final class PlayerPropChangeNotifyOuterClass {
         if (other.getPropType() != 0) {
           setPropType(other.getPropType());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -402,46 +454,23 @@ public final class PlayerPropChangeNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.PlayerPropChangeNotifyOuterClass.PlayerPropChangeNotify parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 32: {
-                propDelta_ = input.readUInt32();
-
-                break;
-              } // case 32
-              case 48: {
-                propType_ = input.readUInt32();
-
-                break;
-              } // case 48
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.PlayerPropChangeNotifyOuterClass.PlayerPropChangeNotify) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
 
       private int propDelta_ ;
       /**
-       * <code>uint32 prop_delta = 4;</code>
+       * <code>uint32 prop_delta = 1;</code>
        * @return The propDelta.
        */
       @java.lang.Override
@@ -449,7 +478,7 @@ public final class PlayerPropChangeNotifyOuterClass {
         return propDelta_;
       }
       /**
-       * <code>uint32 prop_delta = 4;</code>
+       * <code>uint32 prop_delta = 1;</code>
        * @param value The propDelta to set.
        * @return This builder for chaining.
        */
@@ -460,7 +489,7 @@ public final class PlayerPropChangeNotifyOuterClass {
         return this;
       }
       /**
-       * <code>uint32 prop_delta = 4;</code>
+       * <code>uint32 prop_delta = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearPropDelta() {
@@ -472,7 +501,7 @@ public final class PlayerPropChangeNotifyOuterClass {
 
       private int propType_ ;
       /**
-       * <code>uint32 prop_type = 6;</code>
+       * <code>uint32 prop_type = 2;</code>
        * @return The propType.
        */
       @java.lang.Override
@@ -480,7 +509,7 @@ public final class PlayerPropChangeNotifyOuterClass {
         return propType_;
       }
       /**
-       * <code>uint32 prop_type = 6;</code>
+       * <code>uint32 prop_type = 2;</code>
        * @param value The propType to set.
        * @return This builder for chaining.
        */
@@ -491,7 +520,7 @@ public final class PlayerPropChangeNotifyOuterClass {
         return this;
       }
       /**
-       * <code>uint32 prop_type = 6;</code>
+       * <code>uint32 prop_type = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearPropType() {
@@ -533,18 +562,7 @@ public final class PlayerPropChangeNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new PlayerPropChangeNotify(input, extensionRegistry);
       }
     };
 
@@ -579,8 +597,8 @@ public final class PlayerPropChangeNotifyOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\034PlayerPropChangeNotify.proto\"?\n\026Player" +
-      "PropChangeNotify\022\022\n\nprop_delta\030\004 \001(\r\022\021\n\t" +
-      "prop_type\030\006 \001(\rB\033\n\031emu.grasscutter.net.p" +
+      "PropChangeNotify\022\022\n\nprop_delta\030\001 \001(\r\022\021\n\t" +
+      "prop_type\030\002 \001(\rB\033\n\031emu.grasscutter.net.p" +
       "rotob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

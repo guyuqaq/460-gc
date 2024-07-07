@@ -184,6 +184,154 @@ public final class PlatformInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private PlatformInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              routeId_ = input.readUInt32();
+              break;
+            }
+            case 16: {
+
+              startIndex_ = input.readInt32();
+              break;
+            }
+            case 24: {
+
+              startRouteTime_ = input.readUInt32();
+              break;
+            }
+            case 32: {
+
+              startSceneTime_ = input.readUInt32();
+              break;
+            }
+            case 58: {
+              emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder subBuilder = null;
+              if (startPos_ != null) {
+                subBuilder = startPos_.toBuilder();
+              }
+              startPos_ = input.readMessage(emu.grasscutter.net.proto.VectorOuterClass.Vector.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(startPos_);
+                startPos_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 64: {
+
+              isStarted_ = input.readBool();
+              break;
+            }
+            case 74: {
+              emu.grasscutter.net.proto.MathQuaternionOuterClass.MathQuaternion.Builder subBuilder = null;
+              if (startRot_ != null) {
+                subBuilder = startRot_.toBuilder();
+              }
+              startRot_ = input.readMessage(emu.grasscutter.net.proto.MathQuaternionOuterClass.MathQuaternion.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(startRot_);
+                startRot_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 80: {
+
+              stopSceneTime_ = input.readUInt32();
+              break;
+            }
+            case 90: {
+              emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder subBuilder = null;
+              if (posOffset_ != null) {
+                subBuilder = posOffset_.toBuilder();
+              }
+              posOffset_ = input.readMessage(emu.grasscutter.net.proto.VectorOuterClass.Vector.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(posOffset_);
+                posOffset_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 98: {
+              emu.grasscutter.net.proto.MathQuaternionOuterClass.MathQuaternion.Builder subBuilder = null;
+              if (rotOffset_ != null) {
+                subBuilder = rotOffset_.toBuilder();
+              }
+              rotOffset_ = input.readMessage(emu.grasscutter.net.proto.MathQuaternionOuterClass.MathQuaternion.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(rotOffset_);
+                rotOffset_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 104: {
+              int rawValue = input.readEnum();
+
+              movingPlatformType_ = rawValue;
+              break;
+            }
+            case 112: {
+
+              isActive_ = input.readBool();
+              break;
+            }
+            case 122: {
+              emu.grasscutter.net.proto.RouteOuterClass.Route.Builder subBuilder = null;
+              if (route_ != null) {
+                subBuilder = route_.toBuilder();
+              }
+              route_ = input.readMessage(emu.grasscutter.net.proto.RouteOuterClass.Route.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(route_);
+                route_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 128: {
+
+              pointId_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.PlatformInfoOuterClass.internal_static_PlatformInfo_descriptor;
@@ -490,7 +638,7 @@ public final class PlatformInfoOuterClass {
       if (pointId_ != 0) {
         output.writeUInt32(16, pointId_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -555,7 +703,7 @@ public final class PlatformInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(16, pointId_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -612,7 +760,7 @@ public final class PlatformInfoOuterClass {
       }
       if (getPointId()
           != other.getPointId()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -663,7 +811,7 @@ public final class PlatformInfoOuterClass {
       }
       hash = (37 * hash) + POINT_ID_FIELD_NUMBER;
       hash = (53 * hash) + getPointId();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -784,13 +932,18 @@ public final class PlatformInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfo.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -993,7 +1146,7 @@ public final class PlatformInfoOuterClass {
         if (other.getPointId() != 0) {
           setPointId(other.getPointId());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -1008,110 +1161,17 @@ public final class PlatformInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfo parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                routeId_ = input.readUInt32();
-
-                break;
-              } // case 8
-              case 16: {
-                startIndex_ = input.readInt32();
-
-                break;
-              } // case 16
-              case 24: {
-                startRouteTime_ = input.readUInt32();
-
-                break;
-              } // case 24
-              case 32: {
-                startSceneTime_ = input.readUInt32();
-
-                break;
-              } // case 32
-              case 58: {
-                input.readMessage(
-                    getStartPosFieldBuilder().getBuilder(),
-                    extensionRegistry);
-
-                break;
-              } // case 58
-              case 64: {
-                isStarted_ = input.readBool();
-
-                break;
-              } // case 64
-              case 74: {
-                input.readMessage(
-                    getStartRotFieldBuilder().getBuilder(),
-                    extensionRegistry);
-
-                break;
-              } // case 74
-              case 80: {
-                stopSceneTime_ = input.readUInt32();
-
-                break;
-              } // case 80
-              case 90: {
-                input.readMessage(
-                    getPosOffsetFieldBuilder().getBuilder(),
-                    extensionRegistry);
-
-                break;
-              } // case 90
-              case 98: {
-                input.readMessage(
-                    getRotOffsetFieldBuilder().getBuilder(),
-                    extensionRegistry);
-
-                break;
-              } // case 98
-              case 104: {
-                movingPlatformType_ = input.readEnum();
-
-                break;
-              } // case 104
-              case 112: {
-                isActive_ = input.readBool();
-
-                break;
-              } // case 112
-              case 122: {
-                input.readMessage(
-                    getRouteFieldBuilder().getBuilder(),
-                    extensionRegistry);
-
-                break;
-              } // case 122
-              case 128: {
-                pointId_ = input.readUInt32();
-
-                break;
-              } // case 128
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
 
@@ -2044,18 +2104,7 @@ public final class PlatformInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new PlatformInfo(input, extensionRegistry);
       }
     };
 

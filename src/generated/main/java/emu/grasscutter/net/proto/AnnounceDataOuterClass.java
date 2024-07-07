@@ -124,6 +124,91 @@ public final class AnnounceDataOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private AnnounceData(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              centerSystemText_ = s;
+              break;
+            }
+            case 16: {
+
+              countDownFrequency_ = input.readUInt32();
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              countDownText_ = s;
+              break;
+            }
+            case 40: {
+
+              endTime_ = input.readUInt32();
+              break;
+            }
+            case 56: {
+
+              isCenterSystemLast5EveryMinutes_ = input.readBool();
+              break;
+            }
+            case 80: {
+
+              beginTime_ = input.readUInt32();
+              break;
+            }
+            case 90: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              dungeonConfirmText_ = s;
+              break;
+            }
+            case 96: {
+
+              configId_ = input.readUInt32();
+              break;
+            }
+            case 112: {
+
+              centerSystemFrequency_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.AnnounceDataOuterClass.internal_static_AnnounceData_descriptor;
@@ -358,7 +443,7 @@ public final class AnnounceDataOuterClass {
       if (centerSystemFrequency_ != 0) {
         output.writeUInt32(14, centerSystemFrequency_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -400,7 +485,7 @@ public final class AnnounceDataOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(14, centerSystemFrequency_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -433,7 +518,7 @@ public final class AnnounceDataOuterClass {
           .equals(other.getCenterSystemText())) return false;
       if (getBeginTime()
           != other.getBeginTime()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -463,7 +548,7 @@ public final class AnnounceDataOuterClass {
       hash = (53 * hash) + getCenterSystemText().hashCode();
       hash = (37 * hash) + BEGIN_TIME_FIELD_NUMBER;
       hash = (53 * hash) + getBeginTime();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -584,13 +669,18 @@ public final class AnnounceDataOuterClass {
 
       // Construct using emu.grasscutter.net.proto.AnnounceDataOuterClass.AnnounceData.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -726,7 +816,7 @@ public final class AnnounceDataOuterClass {
         if (other.getBeginTime() != 0) {
           setBeginTime(other.getBeginTime());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -741,75 +831,17 @@ public final class AnnounceDataOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.AnnounceDataOuterClass.AnnounceData parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                centerSystemText_ = input.readStringRequireUtf8();
-
-                break;
-              } // case 10
-              case 16: {
-                countDownFrequency_ = input.readUInt32();
-
-                break;
-              } // case 16
-              case 26: {
-                countDownText_ = input.readStringRequireUtf8();
-
-                break;
-              } // case 26
-              case 40: {
-                endTime_ = input.readUInt32();
-
-                break;
-              } // case 40
-              case 56: {
-                isCenterSystemLast5EveryMinutes_ = input.readBool();
-
-                break;
-              } // case 56
-              case 80: {
-                beginTime_ = input.readUInt32();
-
-                break;
-              } // case 80
-              case 90: {
-                dungeonConfirmText_ = input.readStringRequireUtf8();
-
-                break;
-              } // case 90
-              case 96: {
-                configId_ = input.readUInt32();
-
-                break;
-              } // case 96
-              case 112: {
-                centerSystemFrequency_ = input.readUInt32();
-
-                break;
-              } // case 112
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.AnnounceDataOuterClass.AnnounceData) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
 
@@ -1259,18 +1291,7 @@ public final class AnnounceDataOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new AnnounceData(input, extensionRegistry);
       }
     };
 

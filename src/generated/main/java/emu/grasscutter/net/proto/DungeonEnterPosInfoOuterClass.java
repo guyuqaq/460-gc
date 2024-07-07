@@ -19,7 +19,7 @@ public final class DungeonEnterPosInfoOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 point_id = 13;</code>
+     * <code>uint32 point_id = 7;</code>
      * @return The pointId.
      */
     int getPointId();
@@ -32,7 +32,8 @@ public final class DungeonEnterPosInfoOuterClass {
   }
   /**
    * <pre>
-   * Obf: DALBJGGPCNF
+   * Version: 4.6.0
+   * Obfs: KCCNEAHCDBC
    * </pre>
    *
    * Protobuf type {@code DungeonEnterPosInfo}
@@ -61,6 +62,53 @@ public final class DungeonEnterPosInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private DungeonEnterPosInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 56: {
+
+              pointId_ = input.readUInt32();
+              break;
+            }
+            case 96: {
+
+              questId_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.DungeonEnterPosInfoOuterClass.internal_static_DungeonEnterPosInfo_descriptor;
@@ -74,10 +122,10 @@ public final class DungeonEnterPosInfoOuterClass {
               emu.grasscutter.net.proto.DungeonEnterPosInfoOuterClass.DungeonEnterPosInfo.class, emu.grasscutter.net.proto.DungeonEnterPosInfoOuterClass.DungeonEnterPosInfo.Builder.class);
     }
 
-    public static final int POINT_ID_FIELD_NUMBER = 13;
+    public static final int POINT_ID_FIELD_NUMBER = 7;
     private int pointId_;
     /**
-     * <code>uint32 point_id = 13;</code>
+     * <code>uint32 point_id = 7;</code>
      * @return The pointId.
      */
     @java.lang.Override
@@ -110,13 +158,13 @@ public final class DungeonEnterPosInfoOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (pointId_ != 0) {
+        output.writeUInt32(7, pointId_);
+      }
       if (questId_ != 0) {
         output.writeUInt32(12, questId_);
       }
-      if (pointId_ != 0) {
-        output.writeUInt32(13, pointId_);
-      }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -125,15 +173,15 @@ public final class DungeonEnterPosInfoOuterClass {
       if (size != -1) return size;
 
       size = 0;
+      if (pointId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(7, pointId_);
+      }
       if (questId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(12, questId_);
       }
-      if (pointId_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(13, pointId_);
-      }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -152,7 +200,7 @@ public final class DungeonEnterPosInfoOuterClass {
           != other.getPointId()) return false;
       if (getQuestId()
           != other.getQuestId()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -167,7 +215,7 @@ public final class DungeonEnterPosInfoOuterClass {
       hash = (53 * hash) + getPointId();
       hash = (37 * hash) + QUEST_ID_FIELD_NUMBER;
       hash = (53 * hash) + getQuestId();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -264,7 +312,8 @@ public final class DungeonEnterPosInfoOuterClass {
     }
     /**
      * <pre>
-     * Obf: DALBJGGPCNF
+     * Version: 4.6.0
+     * Obfs: KCCNEAHCDBC
      * </pre>
      *
      * Protobuf type {@code DungeonEnterPosInfo}
@@ -288,13 +337,18 @@ public final class DungeonEnterPosInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.DungeonEnterPosInfoOuterClass.DungeonEnterPosInfo.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -385,7 +439,7 @@ public final class DungeonEnterPosInfoOuterClass {
         if (other.getQuestId() != 0) {
           setQuestId(other.getQuestId());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -400,46 +454,23 @@ public final class DungeonEnterPosInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.DungeonEnterPosInfoOuterClass.DungeonEnterPosInfo parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 96: {
-                questId_ = input.readUInt32();
-
-                break;
-              } // case 96
-              case 104: {
-                pointId_ = input.readUInt32();
-
-                break;
-              } // case 104
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.DungeonEnterPosInfoOuterClass.DungeonEnterPosInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
 
       private int pointId_ ;
       /**
-       * <code>uint32 point_id = 13;</code>
+       * <code>uint32 point_id = 7;</code>
        * @return The pointId.
        */
       @java.lang.Override
@@ -447,7 +478,7 @@ public final class DungeonEnterPosInfoOuterClass {
         return pointId_;
       }
       /**
-       * <code>uint32 point_id = 13;</code>
+       * <code>uint32 point_id = 7;</code>
        * @param value The pointId to set.
        * @return This builder for chaining.
        */
@@ -458,7 +489,7 @@ public final class DungeonEnterPosInfoOuterClass {
         return this;
       }
       /**
-       * <code>uint32 point_id = 13;</code>
+       * <code>uint32 point_id = 7;</code>
        * @return This builder for chaining.
        */
       public Builder clearPointId() {
@@ -531,18 +562,7 @@ public final class DungeonEnterPosInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new DungeonEnterPosInfo(input, extensionRegistry);
       }
     };
 
@@ -577,7 +597,7 @@ public final class DungeonEnterPosInfoOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\031DungeonEnterPosInfo.proto\"9\n\023DungeonEn" +
-      "terPosInfo\022\020\n\010point_id\030\r \001(\r\022\020\n\010quest_id" +
+      "terPosInfo\022\020\n\010point_id\030\007 \001(\r\022\020\n\010quest_id" +
       "\030\014 \001(\rB\033\n\031emu.grasscutter.net.protob\006pro" +
       "to3"
     };
