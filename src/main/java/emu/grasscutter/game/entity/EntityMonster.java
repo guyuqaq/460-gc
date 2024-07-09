@@ -384,25 +384,24 @@ public class EntityMonster extends GameEntity {
         //   +50%: Floors 3 – 7
         //  +100%: Floors 8 – 11
         //  +150%: Floor 12
-        var dungeonManager = getScene().getDungeonManager();
-        if (this.getScene().getPlayers().isEmpty()) {
-            return;
-        }
-        var towerManager = getScene().getPlayers().get(0).getTowerManager();
-        if (dungeonManager != null && dungeonManager.isTowerDungeon() && towerManager != null) {
-            var floor = towerManager.getCurrentFloorNumber();
-            float additionalScaleFactor = 0f;
-            if (floor >= 12) {
-                additionalScaleFactor = 1.5f;
-            } else if (floor >= 8) {
-                additionalScaleFactor = 1.f;
-            } else if (floor >= 3) {
-                additionalScaleFactor = .5f;
-            }
+        if (getScene().getId() > 3000 || getScene().getId() < 2000) { // Check scene
+            var dungeonManager = getScene().getDungeonManager();
+            var towerManager = getScene().getPlayers().get(0).getTowerManager();
+            if (dungeonManager != null && dungeonManager.isTowerDungeon() && towerManager != null) {
+                var floor = towerManager.getCurrentFloorNumber();
+                float additionalScaleFactor = 0f;
+                if (floor >= 12) {
+                    additionalScaleFactor = 1.5f;
+                } else if (floor >= 8) {
+                    additionalScaleFactor = 1.f;
+                } else if (floor >= 3) {
+                    additionalScaleFactor = .5f;
+                }
 
-            this.setFightProperty(
-                    FightProperty.FIGHT_PROP_MAX_HP,
-                    this.getFightProperty(FightProperty.FIGHT_PROP_MAX_HP) * (1 + additionalScaleFactor));
+                this.setFightProperty(
+                        FightProperty.FIGHT_PROP_MAX_HP,
+                        this.getFightProperty(FightProperty.FIGHT_PROP_MAX_HP) * (1 + additionalScaleFactor));
+            }
         }
 
         // Set current hp

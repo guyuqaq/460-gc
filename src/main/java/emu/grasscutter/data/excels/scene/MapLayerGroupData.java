@@ -11,9 +11,13 @@ public final class MapLayerGroupData extends GameResource {
     @Getter(onMethod_ = @Override)
     private int id;
 
-    @SerializedName("FIIAHPKBCDE")
+    @SerializedName(
+                value = "area_ids",
+                alternate = {"FIIAHPKBCDE", "GBIAKBHBKNG"})
     private List<Integer> areaIds;
 
-    @SerializedName("ODEFCAMHKNK")
+    @SerializedName(
+                value = "map_floor_Id",
+                alternate = {"ODEFCAMHKNK"})
     private float mapFloorId; // MapLayerFloorExcel (first level of the maplayer)
 }

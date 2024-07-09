@@ -4,8 +4,8 @@ import emu.grasscutter.Grasscutter;
 import emu.grasscutter.data.binout.*;
 import emu.grasscutter.data.binout.config.*;
 import emu.grasscutter.data.binout.routes.Route;
-import emu.grasscutter.data.custom.TrialAvatarActivityCustomData;
-import emu.grasscutter.data.custom.TrialAvatarCustomData;
+import emu.grasscutter.data.common.*;
+import emu.grasscutter.data.custom.*;
 import emu.grasscutter.data.excels.*;
 import emu.grasscutter.data.excels.achievement.AchievementData;
 import emu.grasscutter.data.excels.achievement.AchievementGoalData;
@@ -79,6 +79,7 @@ public final class GameData {
     private static final Int2ObjectMap<QuestEncryptionKey> questsKeys = new Int2ObjectOpenHashMap<>();
     private static final Int2ObjectMap<SceneNpcBornData> npcBornData = new Int2ObjectOpenHashMap<>();
     private static final Map<String, AbilityEmbryoEntry> abilityEmbryos = new HashMap<>();
+    @Getter private static final Int2ObjectMap<WeatherArea> weatherAreasMap = new Int2ObjectOpenHashMap<>();
 
     // ExcelConfigs
     @Getter
@@ -245,6 +246,9 @@ public final class GameData {
             new Int2ObjectOpenHashMap<>();
 
     @Getter
+    private static final Int2ObjectMap<DungeonLevelEntityConfigData> dungeonLevelEntityConfigDataMap = new Int2ObjectOpenHashMap<>();
+
+    @Getter
     private static final Int2ObjectMap<EnvAnimalGatherConfigData> envAnimalGatherConfigDataMap =
             new Int2ObjectOpenHashMap<>();
 
@@ -314,17 +318,23 @@ public final class GameData {
     private static final Int2ObjectMap<InvestigationMonsterData> investigationMonsterDataMap =
             new Int2ObjectOpenHashMap<>();
 
-    @Getter private static final Int2ObjectMap<ItemData> itemDataMap = new Int2ObjectOpenHashMap<>();
+    @Getter
+    private static final Int2ObjectMap<InvestigationData> investigationDataMap = new Int2ObjectOpenHashMap<>();
+
+    @Getter
+    private static final Int2ObjectMap<InvestigationTargetData> investigationTargetDataMap = new Int2ObjectOpenHashMap<>();
+
+    @Getter
+    private static final Int2ObjectMap<ItemData> itemDataMap = new Int2ObjectOpenHashMap<>();
+
+    @Getter
+    private static final Int2ObjectMap<MapLayerGroupData> mapLayerGroupDataMap = new Int2ObjectOpenHashMap<>();
 
     @Getter
     private static final Int2ObjectMap<MapLayerData> mapLayerDataMap = new Int2ObjectOpenHashMap<>();
 
     @Getter
     private static final Int2ObjectMap<MapLayerFloorData> mapLayerFloorDataMap =
-            new Int2ObjectOpenHashMap<>();
-
-    @Getter
-    private static final Int2ObjectMap<MapLayerGroupData> mapLayerGroupDataMap =
             new Int2ObjectOpenHashMap<>();
 
     @Getter
@@ -392,7 +402,7 @@ public final class GameData {
 
     @Getter
     private static final Int2ObjectMap<SceneData> sceneDataMap = new Int2ObjectLinkedOpenHashMap<>();
-
+	
     @Getter
     private static final Int2ObjectMap<SceneTagData> sceneTagDataMap =
             new Int2ObjectLinkedOpenHashMap<>();

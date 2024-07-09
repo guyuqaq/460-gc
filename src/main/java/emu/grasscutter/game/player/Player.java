@@ -98,6 +98,7 @@ public class Player implements DatabaseObject<Player>, PlayerHook, FieldFetch {
     @Getter private int mainCharacterId;
     @Getter @Setter private boolean inGodMode;
     @Getter @Setter private boolean unlimitedStamina;
+    @Getter @Setter public boolean forceLegacyDrops;
 
     @Getter private Set<Integer> nameCardList;
     @Getter private Set<Integer> flyCloakList;
@@ -600,6 +601,13 @@ public class Player implements DatabaseObject<Player>, PlayerHook, FieldFetch {
                     }
                     this.getSceneTags().get(sceneTag.getSceneId()).add(sceneTag.getId());
                 });
+        //sceneId -> List<sceneTagIds>, since some are blocked off by annoying quests
+        GameConstants.DEFAULT_CUSTOM_SCENE_TAGS.entrySet().forEach(entry -> {
+            if (this.getSceneTags().get(entry.getKey()) == null) {
+                this.getSceneTags().put(entry.getKey(), new HashSet<>());
+            }
+            this.getSceneTags().get(entry.getKey()).addAll(entry.getValue());
+        });
     }
 
     /**
@@ -1433,6 +1441,7 @@ public class Player implements DatabaseObject<Player>, PlayerHook, FieldFetch {
         // Create world
         World world = new World(this);
         world.addPlayer(this);
+        this.setForceLegacyDrops(GAME_OPTIONS.forceLegacyDrops);
 
         // Multiplayer setting
         this.setProperty(PlayerProperty.PROP_PLAYER_MP_SETTING_TYPE, this.getMpSetting().getNumber(), false);

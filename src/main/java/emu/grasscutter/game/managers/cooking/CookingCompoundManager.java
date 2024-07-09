@@ -154,6 +154,7 @@ public class CookingCompoundManager extends BasePlayerManager {
     }
 
     public void onPlayerLogin() {
+        initialize();
         player.sendPacket(new PacketCompoundDataNotify(unlocked, getCompoundQueueData()));
     }
 }

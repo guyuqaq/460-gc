@@ -21,7 +21,7 @@ import lombok.Setter;
         label = "give",
         aliases = {"g", "item", "giveitem"},
         usage = {
-            "(<itemId>|<avatarId>|all|weapons|mats|avatars) [lv<level>] [r<refinement>] [x<amount>] [c<constellation>] [sl<skilllevel>]",
+            "(<itemId>|<avatarId>|all|weapons|art|mats|avatars) [lv<level>] [r<refinement>] [x<amount>] [c<constellation>] [sl<skilllevel>]",
             "<artifactId> [lv<level>] [x<amount>] [<mainPropId>] [<appendPropId>[,<times>]]..."
         },
         permission = "player.give",
@@ -271,6 +271,29 @@ public final class GiveCommand implements CommandHandler {
         giveAllWeapons(player, param);
     }
 
+    private static void giveAllArt(Player player, GiveItemParameters param) {
+
+        List<GameItem> itemList = new ArrayList<>();
+        var tmplv = param.lvl;
+        if (tmplv > 20) tmplv = 20 + 1;
+
+        for (ItemData itemdata : GameData.getItemDataMap().values()) {
+            if (itemdata.getItemType() == ItemType.ITEM_RELIQUARY) {
+                GameItem item = new GameItem(itemdata);
+                if (itemdata.getRankLevel() == 5) {
+                    item.setLevel(tmplv);
+                } else {
+                    continue;
+                }
+                itemList.add(item);
+            }
+        }
+
+        addItemsChunked(player, itemList, 100);
+
+        CommandHandler.sendMessage(player, "Successfully got all item art");
+    }
+
     private GiveItemParameters parseArgs(Player sender, List<String> args)
             throws IllegalArgumentException {
         GiveItemParameters param = new GiveItemParameters();
@@ -298,6 +321,9 @@ public final class GiveCommand implements CommandHandler {
                 break;
             case "avatars":
                 param.giveAllType = GiveAllType.AVATARS;
+                break;
+            case "art":
+                param.giveAllType = GiveAllType.ARTIFACTS;
                 break;
             default:
                 try {
@@ -386,6 +412,8 @@ public final class GiveCommand implements CommandHandler {
                     giveAllAvatars(targetPlayer, param);
                     CommandHandler.sendTranslatedMessage(sender, "commands.give.giveall_success");
                     return;
+                case ARTIFACTS:
+                    giveAllArt(targetPlayer, param);
                 case NONE:
                     break;
             }
@@ -444,7 +472,8 @@ public final class GiveCommand implements CommandHandler {
         ALL,
         WEAPONS,
         MATS,
-        AVATARS
+        AVATARS,
+        ARTIFACTS
     }
 
     private static class GiveItemParameters {
