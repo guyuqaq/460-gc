@@ -26,7 +26,7 @@ public final class ShopGoodsOuterClass {
      * <code>uint32 min_level = 1;</code>
      * @return The minLevel.
      */
-    int getMaxLevel();
+    int getMinLevel();
 
     /**
      * <pre>
@@ -533,8 +533,8 @@ public final class ShopGoodsOuterClass {
      * @return The minLevel.
      */
     @java.lang.Override
-    public int getMaxLevel() {
-      return maxLevel_;
+    public int getMinLevel() {
+      return minLevel_;
     }
 
     public static final int BOUGHT_NUM_FIELD_NUMBER = 2;
