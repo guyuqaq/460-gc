@@ -125,8 +125,8 @@ public final class PlayerProgressManager extends BasePlayerDataManager {
 		mailBuilder.mail.mailContent.title = welcomeMail.title;
 		mailBuilder.mail.mailContent.sender = welcomeMail.sender;
 		mailBuilder.mail.mailContent.content =
-				welcomeMail.content
-						+ "\n<type=\"browser\" text=\"社区官网\" href=\"https://gzblog.com.cn\"/>";
+				welcomeMail.content;
+						//+ "\n<type=\"browser\" text=\"社区官网\" href=\"https://gzblog.com.cn\"/>";
 		mailBuilder.mail.itemList.addAll(Arrays.asList(welcomeMail.items));
 		mailBuilder.mail.importance = 1;
 		

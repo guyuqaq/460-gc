@@ -7,8 +7,8 @@ import java.util.*;
 import java.util.stream.IntStream;
 
 public final class GameConstants {
-    public static String VERSION = "4.6.0";
-    public static int[] VERSION_PARTS = {4, 6, 0};
+    public static String VERSION = "4.7.0";
+    public static int[] VERSION_PARTS = {4, 7, 0};
     public static boolean DEBUG = false;
 
     public static final int DEFAULT_TEAMS = 4;
