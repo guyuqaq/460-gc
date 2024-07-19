@@ -42,6 +42,8 @@ public class HandlerSceneInitFinishReq extends PacketHandler {
         session.send(new PacketSceneInitFinishRsp(player));
 		//session.send((BasePacket)new PacketWindSeedUID());
 		
+		// Reset the spwaned entities count
+		player.resetSpawnedEntitiesCount();
         // Set scene load state.
         player.setSceneLoadState(SceneLoadState.INIT);
         // Run scene initialization.

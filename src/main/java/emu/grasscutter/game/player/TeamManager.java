@@ -149,6 +149,10 @@ public final class TeamManager extends BasePlayerDataManager {
         if (useTemporarilyTeamIndex >= 0 && useTemporarilyTeamIndex < temporaryTeam.size()) {
             return temporaryTeam.get(useTemporarilyTeamIndex);
         }
+		if (this.getPlayer() == null){
+			 Grasscutter.getLogger().error("玩家数据初始化失败，正在强制关闭服务端...");
+			  System.exit(1000);
+		}
         if (this.getPlayer().isInMultiplayer()) {
             return this.getMpTeam();
         }

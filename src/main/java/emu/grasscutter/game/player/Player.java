@@ -96,6 +96,7 @@ public class Player implements DatabaseObject<Player>, PlayerHook, FieldFetch {
     @Getter @Setter private int sceneId;
     @Getter @Setter private int regionId;
     @Getter private int mainCharacterId;
+	private int spawnedEntitiesCount; //limit entities
     @Getter @Setter private boolean inGodMode;
     @Getter @Setter private boolean unlimitedStamina;
     @Getter @Setter public boolean forceLegacyDrops;
@@ -295,8 +296,8 @@ public class Player implements DatabaseObject<Player>, PlayerHook, FieldFetch {
         this.account = session.getAccount();
         this.accountId = this.getAccount().getId();
         this.session = session;
-        this.nickname = "倒卖者户口本单页";
-        this.signature = "QQ交流群929259728";
+        this.nickname = "倒卖狗全家死光光";
+        this.signature = "QQ群号929259728";
         this.teamManager = new TeamManager(this);
         this.birthday = new PlayerBirthday();
         this.codex = new PlayerCodex(this);
@@ -322,6 +323,23 @@ public class Player implements DatabaseObject<Player>, PlayerHook, FieldFetch {
     @Override
     public Player getPlayer() {
         return this;
+    }
+	
+	/**
+	* Track the number of entities spawned by the player 
+	*
+	* @param count The add entities	
+	*/
+	 public int getSpawnedEntitiesCount() {
+        return spawnedEntitiesCount;
+    }
+
+    public void incrementSpawnedEntitiesCount(int count) {
+        this.spawnedEntitiesCount += count;
+    }
+	
+    public void resetSpawnedEntitiesCount() {
+        this.spawnedEntitiesCount = 0;
     }
 
     /**

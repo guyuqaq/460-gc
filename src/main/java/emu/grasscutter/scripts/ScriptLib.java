@@ -494,7 +494,7 @@ public class ScriptLib {
     // TODO: ClearExhibitionReplaceableData
 
     public int ClearPlayerEyePoint(int var1) {
-        //logger.warn("[LUA] Call unimplemented ClearPlayerEyePoint with {}", var1);
+        logger.warn("[LUA] Call unimplemented ClearPlayerEyePoint with {}", var1);
         // TODO implement
         return 0;
     }
@@ -1260,7 +1260,7 @@ public class ScriptLib {
     }
 
     public int RefreshGroup(LuaTable table) {
-        //logger.warn("[LUA] Call improperly implemented RefreshGroup with {}", printTable(table));
+        logger.warn("[LUA] Call improperly implemented RefreshGroup with {}", printTable(table));
         // Kill and Respawn? TODO: Do not Kill and Respawn
         int groupId = table.get("group_id").toint();
         int suite = table.get("suite").toint();

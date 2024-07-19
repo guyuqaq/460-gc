@@ -56,7 +56,7 @@ public abstract class GameEntity {
         this.scene = scene;
         this.motionState = MotionState.MOTION_STATE_NONE;
     }
-
+		
     public abstract void initAbilities();
 
     public EntityType getEntityType() {

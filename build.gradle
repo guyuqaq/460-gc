@@ -402,18 +402,18 @@ tasks.register('generateHandbook') {
             commandLine npm, 'install'
         }
 
-        // Build the handbook.
-        //exec {
-        //    workingDir 'src/handbook'
-        //    commandLine npm, 'run', 'build'
-        //}
+         Build the handbook.
+        exec {
+            workingDir 'src/handbook'
+            commandLine npm, 'run', 'build'
+        }
 
         // Copy the handbook from /dist to /src/main/resources.
-        //copy {
-        //    from 'src/handbook/dist/index.html'
-        //    into 'src/main/resources/html'
-        //    rename 'index.html', 'handbook.html'
-        //}
+        copy {
+            from 'src/handbook/dist/index.html'
+            into 'src/main/resources/html'
+            rename 'index.html', 'handbook.html'
+        }
     }
 }
 

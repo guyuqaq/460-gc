@@ -354,7 +354,7 @@ public class Scene {
     public synchronized void addEntity(GameEntity entity) {
         this.addEntityDirectly(entity);
         this.broadcastPacket(new PacketSceneEntityAppearNotify(entity));
-    }
+	}
 
     public synchronized void addEntityToSingleClient(Player player, GameEntity entity) {
         this.addEntityDirectly(entity);
@@ -438,7 +438,7 @@ public class Scene {
         GameEntity removed = this.removeEntityDirectly(entity);
         if (removed != null) {
             this.broadcastPacket(new PacketSceneEntityDisappearNotify(removed, visionType));
-        }
+		}
     }
 
     public void removeEntities(List<GameEntity> entity, VisionType visionType) {
