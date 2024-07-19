@@ -43,10 +43,8 @@ jobs:
           target: src/main/resources/html/
       - name: Run Gradle
         run: ./gradlew -PskipHandbook=1 && ./gradlew jar -PskipHandbook=1
-      - name: List build directory
-        run: ls -la build/libs
       - name: Upload build
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v3
         with:
           name: Grasscutter
-          path: build/libs/GasaiGC-*.jar
+          path: GasaiGC-*.jar
