@@ -296,8 +296,8 @@ public class Player implements DatabaseObject<Player>, PlayerHook, FieldFetch {
         this.account = session.getAccount();
         this.accountId = this.getAccount().getId();
         this.session = session;
-        this.nickname = "倒卖狗全家死光光";
-        this.signature = "QQ群号929259728";
+        this.nickname = "Lumine";
+        this.signature = "";
         this.teamManager = new TeamManager(this);
         this.birthday = new PlayerBirthday();
         this.codex = new PlayerCodex(this);
