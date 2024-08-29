@@ -78,10 +78,10 @@ public final class CustomDungeonResultInfoOuterClass {
     int getTimeCost();
 
     /**
-     * <code>bool LHNFIIEJBEM = 14;</code>
-     * @return The lHNFIIEJBEM.
+     * <code>bool is_arrive_finish = 14;</code>
+     * @return The isArriveFinish.
      */
-    boolean getLHNFIIEJBEM();
+    boolean getIsArriveFinish();
 
     /**
      * <code>uint64 dungeon_guid = 15;</code>
@@ -117,6 +117,92 @@ public final class CustomDungeonResultInfoOuterClass {
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
+    }
+    private CustomDungeonResultInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                childChallengeList_ = new java.util.ArrayList<emu.grasscutter.net.proto.ChallengeBriefOuterClass.ChallengeBrief>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              childChallengeList_.add(
+                  input.readMessage(emu.grasscutter.net.proto.ChallengeBriefOuterClass.ChallengeBrief.parser(), extensionRegistry));
+              break;
+            }
+            case 24: {
+
+              gotCoinNum_ = input.readUInt32();
+              break;
+            }
+            case 40: {
+
+              fOLIKAAIKIE_ = input.readBool();
+              break;
+            }
+            case 48: {
+
+              gBLHFAEONKM_ = input.readBool();
+              break;
+            }
+            case 80: {
+              int rawValue = input.readEnum();
+
+              finishType_ = rawValue;
+              break;
+            }
+            case 88: {
+
+              timeCost_ = input.readUInt32();
+              break;
+            }
+            case 112: {
+
+              isArriveFinish_ = input.readBool();
+              break;
+            }
+            case 120: {
+
+              dungeonGuid_ = input.readUInt64();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          childChallengeList_ = java.util.Collections.unmodifiableList(childChallengeList_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -234,15 +320,15 @@ public final class CustomDungeonResultInfoOuterClass {
       return timeCost_;
     }
 
-    public static final int LHNFIIEJBEM_FIELD_NUMBER = 14;
-    private boolean lHNFIIEJBEM_;
+    public static final int IS_ARRIVE_FINISH_FIELD_NUMBER = 14;
+    private boolean isArriveFinish_;
     /**
-     * <code>bool LHNFIIEJBEM = 14;</code>
-     * @return The lHNFIIEJBEM.
+     * <code>bool is_arrive_finish = 14;</code>
+     * @return The isArriveFinish.
      */
     @java.lang.Override
-    public boolean getLHNFIIEJBEM() {
-      return lHNFIIEJBEM_;
+    public boolean getIsArriveFinish() {
+      return isArriveFinish_;
     }
 
     public static final int DUNGEON_GUID_FIELD_NUMBER = 15;
@@ -288,13 +374,13 @@ public final class CustomDungeonResultInfoOuterClass {
       if (timeCost_ != 0) {
         output.writeUInt32(11, timeCost_);
       }
-      if (lHNFIIEJBEM_ != false) {
-        output.writeBool(14, lHNFIIEJBEM_);
+      if (isArriveFinish_ != false) {
+        output.writeBool(14, isArriveFinish_);
       }
       if (dungeonGuid_ != 0L) {
         output.writeUInt64(15, dungeonGuid_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -327,15 +413,15 @@ public final class CustomDungeonResultInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(11, timeCost_);
       }
-      if (lHNFIIEJBEM_ != false) {
+      if (isArriveFinish_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(14, lHNFIIEJBEM_);
+          .computeBoolSize(14, isArriveFinish_);
       }
       if (dungeonGuid_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(15, dungeonGuid_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -361,11 +447,11 @@ public final class CustomDungeonResultInfoOuterClass {
       if (finishType_ != other.finishType_) return false;
       if (getTimeCost()
           != other.getTimeCost()) return false;
-      if (getLHNFIIEJBEM()
-          != other.getLHNFIIEJBEM()) return false;
+      if (getIsArriveFinish()
+          != other.getIsArriveFinish()) return false;
       if (getDungeonGuid()
           != other.getDungeonGuid()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -392,13 +478,13 @@ public final class CustomDungeonResultInfoOuterClass {
       hash = (53 * hash) + finishType_;
       hash = (37 * hash) + TIME_COST_FIELD_NUMBER;
       hash = (53 * hash) + getTimeCost();
-      hash = (37 * hash) + LHNFIIEJBEM_FIELD_NUMBER;
+      hash = (37 * hash) + IS_ARRIVE_FINISH_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getLHNFIIEJBEM());
+          getIsArriveFinish());
       hash = (37 * hash) + DUNGEON_GUID_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getDungeonGuid());
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -515,24 +601,29 @@ public final class CustomDungeonResultInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.CustomDungeonResultInfoOuterClass.CustomDungeonResultInfo.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getChildChallengeListFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
         if (childChallengeListBuilder_ == null) {
           childChallengeList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
-          childChallengeList_ = null;
           childChallengeListBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000001);
         gotCoinNum_ = 0;
 
         fOLIKAAIKIE_ = false;
@@ -543,7 +634,7 @@ public final class CustomDungeonResultInfoOuterClass {
 
         timeCost_ = 0;
 
-        lHNFIIEJBEM_ = false;
+        isArriveFinish_ = false;
 
         dungeonGuid_ = 0L;
 
@@ -588,7 +679,7 @@ public final class CustomDungeonResultInfoOuterClass {
         result.gBLHFAEONKM_ = gBLHFAEONKM_;
         result.finishType_ = finishType_;
         result.timeCost_ = timeCost_;
-        result.lHNFIIEJBEM_ = lHNFIIEJBEM_;
+        result.isArriveFinish_ = isArriveFinish_;
         result.dungeonGuid_ = dungeonGuid_;
         onBuilt();
         return result;
@@ -679,13 +770,13 @@ public final class CustomDungeonResultInfoOuterClass {
         if (other.getTimeCost() != 0) {
           setTimeCost(other.getTimeCost());
         }
-        if (other.getLHNFIIEJBEM() != false) {
-          setLHNFIIEJBEM(other.getLHNFIIEJBEM());
+        if (other.getIsArriveFinish() != false) {
+          setIsArriveFinish(other.getIsArriveFinish());
         }
         if (other.getDungeonGuid() != 0L) {
           setDungeonGuid(other.getDungeonGuid());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -700,78 +791,17 @@ public final class CustomDungeonResultInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.CustomDungeonResultInfoOuterClass.CustomDungeonResultInfo parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 18: {
-                emu.grasscutter.net.proto.ChallengeBriefOuterClass.ChallengeBrief m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.ChallengeBriefOuterClass.ChallengeBrief.parser(),
-                        extensionRegistry);
-                if (childChallengeListBuilder_ == null) {
-                  ensureChildChallengeListIsMutable();
-                  childChallengeList_.add(m);
-                } else {
-                  childChallengeListBuilder_.addMessage(m);
-                }
-                break;
-              } // case 18
-              case 24: {
-                gotCoinNum_ = input.readUInt32();
-
-                break;
-              } // case 24
-              case 40: {
-                fOLIKAAIKIE_ = input.readBool();
-
-                break;
-              } // case 40
-              case 48: {
-                gBLHFAEONKM_ = input.readBool();
-
-                break;
-              } // case 48
-              case 80: {
-                finishType_ = input.readEnum();
-
-                break;
-              } // case 80
-              case 88: {
-                timeCost_ = input.readUInt32();
-
-                break;
-              } // case 88
-              case 112: {
-                lHNFIIEJBEM_ = input.readBool();
-
-                break;
-              } // case 112
-              case 120: {
-                dungeonGuid_ = input.readUInt64();
-
-                break;
-              } // case 120
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.CustomDungeonResultInfoOuterClass.CustomDungeonResultInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -1194,33 +1224,33 @@ public final class CustomDungeonResultInfoOuterClass {
         return this;
       }
 
-      private boolean lHNFIIEJBEM_ ;
+      private boolean isArriveFinish_ ;
       /**
-       * <code>bool LHNFIIEJBEM = 14;</code>
-       * @return The lHNFIIEJBEM.
+       * <code>bool is_arrive_finish = 14;</code>
+       * @return The isArriveFinish.
        */
       @java.lang.Override
-      public boolean getLHNFIIEJBEM() {
-        return lHNFIIEJBEM_;
+      public boolean getIsArriveFinish() {
+        return isArriveFinish_;
       }
       /**
-       * <code>bool LHNFIIEJBEM = 14;</code>
-       * @param value The lHNFIIEJBEM to set.
+       * <code>bool is_arrive_finish = 14;</code>
+       * @param value The isArriveFinish to set.
        * @return This builder for chaining.
        */
-      public Builder setLHNFIIEJBEM(boolean value) {
+      public Builder setIsArriveFinish(boolean value) {
         
-        lHNFIIEJBEM_ = value;
+        isArriveFinish_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>bool LHNFIIEJBEM = 14;</code>
+       * <code>bool is_arrive_finish = 14;</code>
        * @return This builder for chaining.
        */
-      public Builder clearLHNFIIEJBEM() {
+      public Builder clearIsArriveFinish() {
         
-        lHNFIIEJBEM_ = false;
+        isArriveFinish_ = false;
         onChanged();
         return this;
       }
@@ -1288,18 +1318,7 @@ public final class CustomDungeonResultInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new CustomDungeonResultInfo(input, extensionRegistry);
       }
     };
 
@@ -1335,14 +1354,14 @@ public final class CustomDungeonResultInfoOuterClass {
     java.lang.String[] descriptorData = {
       "\n\035CustomDungeonResultInfo.proto\032\024Challen" +
       "geBrief.proto\032\035CustomDungeonFinishType.p" +
-      "roto\"\365\001\n\027CustomDungeonResultInfo\022-\n\024chil" +
+      "roto\"\372\001\n\027CustomDungeonResultInfo\022-\n\024chil" +
       "d_challenge_list\030\002 \003(\0132\017.ChallengeBrief\022" +
       "\024\n\014got_coin_num\030\003 \001(\r\022\023\n\013FOLIKAAIKIE\030\005 \001" +
       "(\010\022\023\n\013GBLHFAEONKM\030\006 \001(\010\022-\n\013finish_type\030\n" +
       " \001(\0162\030.CustomDungeonFinishType\022\021\n\ttime_c" +
-      "ost\030\013 \001(\r\022\023\n\013LHNFIIEJBEM\030\016 \001(\010\022\024\n\014dungeo" +
-      "n_guid\030\017 \001(\004B\033\n\031emu.grasscutter.net.prot" +
-      "ob\006proto3"
+      "ost\030\013 \001(\r\022\030\n\020is_arrive_finish\030\016 \001(\010\022\024\n\014d" +
+      "ungeon_guid\030\017 \001(\004B\033\n\031emu.grasscutter.net" +
+      ".protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1355,7 +1374,7 @@ public final class CustomDungeonResultInfoOuterClass {
     internal_static_CustomDungeonResultInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CustomDungeonResultInfo_descriptor,
-        new java.lang.String[] { "ChildChallengeList", "GotCoinNum", "FOLIKAAIKIE", "GBLHFAEONKM", "FinishType", "TimeCost", "LHNFIIEJBEM", "DungeonGuid", });
+        new java.lang.String[] { "ChildChallengeList", "GotCoinNum", "FOLIKAAIKIE", "GBLHFAEONKM", "FinishType", "TimeCost", "IsArriveFinish", "DungeonGuid", });
     emu.grasscutter.net.proto.ChallengeBriefOuterClass.getDescriptor();
     emu.grasscutter.net.proto.CustomDungeonFinishTypeOuterClass.getDescriptor();
   }

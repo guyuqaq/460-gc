@@ -19,84 +19,84 @@ public final class BlossomBriefInfoOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 refresh_id = 4;</code>
+     * <code>uint32 refresh_id = 1;</code>
      * @return The refreshId.
      */
     int getRefreshId();
 
     /**
-     * <code>uint32 resin = 9;</code>
+     * <code>uint32 resin = 2;</code>
      * @return The resin.
      */
     int getResin();
 
     /**
-     * <code>uint32 monster_level = 15;</code>
+     * <code>uint32 monster_level = 3;</code>
      * @return The monsterLevel.
      */
     int getMonsterLevel();
 
     /**
-     * <code>uint32 reward_id = 2;</code>
+     * <code>uint32 reward_id = 5;</code>
      * @return The rewardId.
      */
     int getRewardId();
 
     /**
-     * <code>bool is_guide_opened = 14;</code>
+     * <code>bool is_guide_opened = 7;</code>
      * @return The isGuideOpened.
      */
     boolean getIsGuideOpened();
 
     /**
-     * <code>uint32 scene_id = 3;</code>
+     * <code>uint32 scene_id = 8;</code>
      * @return The sceneId.
      */
     int getSceneId();
 
     /**
-     * <code>uint32 city_id = 1;</code>
+     * <code>uint32 city_id = 9;</code>
      * @return The cityId.
      */
     int getCityId();
 
     /**
-     * <code>uint32 map_layer_id = 13;</code>
+     * <code>uint32 map_layer_id = 11;</code>
      * @return The mapLayerId.
      */
     int getMapLayerId();
 
     /**
-     * <code>.Vector pos = 6;</code>
+     * <code>.Vector pos = 12;</code>
      * @return Whether the pos field is set.
      */
     boolean hasPos();
     /**
-     * <code>.Vector pos = 6;</code>
+     * <code>.Vector pos = 12;</code>
      * @return The pos.
      */
     emu.grasscutter.net.proto.VectorOuterClass.Vector getPos();
     /**
-     * <code>.Vector pos = 6;</code>
+     * <code>.Vector pos = 12;</code>
      */
     emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getPosOrBuilder();
 
     /**
-     * <code>uint32 state = 10;</code>
+     * <code>uint32 state = 13;</code>
      * @return The state.
      */
     int getState();
 
     /**
-     * <code>uint32 circle_camp_id = 5;</code>
+     * <code>uint32 circle_camp_id = 14;</code>
      * @return The circleCampId.
      */
     int getCircleCampId();
   }
   /**
    * <pre>
-   * Version: 4.7.0
-   * Obfs: KIMHLKPIGFH
+   * Version: 4.6.0
+   * Obfs: ILNBNHMLOOA
    * </pre>
    *
    * Protobuf type {@code BlossomBriefInfo}
@@ -125,6 +125,106 @@ public final class BlossomBriefInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private BlossomBriefInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              refreshId_ = input.readUInt32();
+              break;
+            }
+            case 16: {
+
+              resin_ = input.readUInt32();
+              break;
+            }
+            case 24: {
+
+              monsterLevel_ = input.readUInt32();
+              break;
+            }
+            case 40: {
+
+              rewardId_ = input.readUInt32();
+              break;
+            }
+            case 56: {
+
+              isGuideOpened_ = input.readBool();
+              break;
+            }
+            case 64: {
+
+              sceneId_ = input.readUInt32();
+              break;
+            }
+            case 72: {
+
+              cityId_ = input.readUInt32();
+              break;
+            }
+            case 88: {
+
+              mapLayerId_ = input.readUInt32();
+              break;
+            }
+            case 98: {
+              emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder subBuilder = null;
+              if (pos_ != null) {
+                subBuilder = pos_.toBuilder();
+              }
+              pos_ = input.readMessage(emu.grasscutter.net.proto.VectorOuterClass.Vector.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(pos_);
+                pos_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 104: {
+
+              state_ = input.readUInt32();
+              break;
+            }
+            case 112: {
+
+              circleCampId_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.BlossomBriefInfoOuterClass.internal_static_BlossomBriefInfo_descriptor;
@@ -138,10 +238,10 @@ public final class BlossomBriefInfoOuterClass {
               emu.grasscutter.net.proto.BlossomBriefInfoOuterClass.BlossomBriefInfo.class, emu.grasscutter.net.proto.BlossomBriefInfoOuterClass.BlossomBriefInfo.Builder.class);
     }
 
-    public static final int REFRESH_ID_FIELD_NUMBER = 4;
+    public static final int REFRESH_ID_FIELD_NUMBER = 1;
     private int refreshId_;
     /**
-     * <code>uint32 refresh_id = 4;</code>
+     * <code>uint32 refresh_id = 1;</code>
      * @return The refreshId.
      */
     @java.lang.Override
@@ -149,10 +249,10 @@ public final class BlossomBriefInfoOuterClass {
       return refreshId_;
     }
 
-    public static final int RESIN_FIELD_NUMBER = 9;
+    public static final int RESIN_FIELD_NUMBER = 2;
     private int resin_;
     /**
-     * <code>uint32 resin = 9;</code>
+     * <code>uint32 resin = 2;</code>
      * @return The resin.
      */
     @java.lang.Override
@@ -160,10 +260,10 @@ public final class BlossomBriefInfoOuterClass {
       return resin_;
     }
 
-    public static final int MONSTER_LEVEL_FIELD_NUMBER = 15;
+    public static final int MONSTER_LEVEL_FIELD_NUMBER = 3;
     private int monsterLevel_;
     /**
-     * <code>uint32 monster_level = 15;</code>
+     * <code>uint32 monster_level = 3;</code>
      * @return The monsterLevel.
      */
     @java.lang.Override
@@ -171,10 +271,10 @@ public final class BlossomBriefInfoOuterClass {
       return monsterLevel_;
     }
 
-    public static final int REWARD_ID_FIELD_NUMBER = 2;
+    public static final int REWARD_ID_FIELD_NUMBER = 5;
     private int rewardId_;
     /**
-     * <code>uint32 reward_id = 2;</code>
+     * <code>uint32 reward_id = 5;</code>
      * @return The rewardId.
      */
     @java.lang.Override
@@ -182,10 +282,10 @@ public final class BlossomBriefInfoOuterClass {
       return rewardId_;
     }
 
-    public static final int IS_GUIDE_OPENED_FIELD_NUMBER = 14;
+    public static final int IS_GUIDE_OPENED_FIELD_NUMBER = 7;
     private boolean isGuideOpened_;
     /**
-     * <code>bool is_guide_opened = 14;</code>
+     * <code>bool is_guide_opened = 7;</code>
      * @return The isGuideOpened.
      */
     @java.lang.Override
@@ -193,10 +293,10 @@ public final class BlossomBriefInfoOuterClass {
       return isGuideOpened_;
     }
 
-    public static final int SCENE_ID_FIELD_NUMBER = 3;
+    public static final int SCENE_ID_FIELD_NUMBER = 8;
     private int sceneId_;
     /**
-     * <code>uint32 scene_id = 3;</code>
+     * <code>uint32 scene_id = 8;</code>
      * @return The sceneId.
      */
     @java.lang.Override
@@ -204,10 +304,10 @@ public final class BlossomBriefInfoOuterClass {
       return sceneId_;
     }
 
-    public static final int CITY_ID_FIELD_NUMBER = 1;
+    public static final int CITY_ID_FIELD_NUMBER = 9;
     private int cityId_;
     /**
-     * <code>uint32 city_id = 1;</code>
+     * <code>uint32 city_id = 9;</code>
      * @return The cityId.
      */
     @java.lang.Override
@@ -215,10 +315,10 @@ public final class BlossomBriefInfoOuterClass {
       return cityId_;
     }
 
-    public static final int MAP_LAYER_ID_FIELD_NUMBER = 13;
+    public static final int MAP_LAYER_ID_FIELD_NUMBER = 11;
     private int mapLayerId_;
     /**
-     * <code>uint32 map_layer_id = 13;</code>
+     * <code>uint32 map_layer_id = 11;</code>
      * @return The mapLayerId.
      */
     @java.lang.Override
@@ -226,10 +326,10 @@ public final class BlossomBriefInfoOuterClass {
       return mapLayerId_;
     }
 
-    public static final int POS_FIELD_NUMBER = 6;
+    public static final int POS_FIELD_NUMBER = 12;
     private emu.grasscutter.net.proto.VectorOuterClass.Vector pos_;
     /**
-     * <code>.Vector pos = 6;</code>
+     * <code>.Vector pos = 12;</code>
      * @return Whether the pos field is set.
      */
     @java.lang.Override
@@ -237,7 +337,7 @@ public final class BlossomBriefInfoOuterClass {
       return pos_ != null;
     }
     /**
-     * <code>.Vector pos = 6;</code>
+     * <code>.Vector pos = 12;</code>
      * @return The pos.
      */
     @java.lang.Override
@@ -245,17 +345,17 @@ public final class BlossomBriefInfoOuterClass {
       return pos_ == null ? emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance() : pos_;
     }
     /**
-     * <code>.Vector pos = 6;</code>
+     * <code>.Vector pos = 12;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getPosOrBuilder() {
       return getPos();
     }
 
-    public static final int STATE_FIELD_NUMBER = 10;
+    public static final int STATE_FIELD_NUMBER = 13;
     private int state_;
     /**
-     * <code>uint32 state = 10;</code>
+     * <code>uint32 state = 13;</code>
      * @return The state.
      */
     @java.lang.Override
@@ -263,10 +363,10 @@ public final class BlossomBriefInfoOuterClass {
       return state_;
     }
 
-    public static final int CIRCLE_CAMP_ID_FIELD_NUMBER = 5;
+    public static final int CIRCLE_CAMP_ID_FIELD_NUMBER = 14;
     private int circleCampId_;
     /**
-     * <code>uint32 circle_camp_id = 5;</code>
+     * <code>uint32 circle_camp_id = 14;</code>
      * @return The circleCampId.
      */
     @java.lang.Override
@@ -288,40 +388,40 @@ public final class BlossomBriefInfoOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (cityId_ != 0) {
-        output.writeUInt32(1, cityId_);
-      }
-      if (rewardId_ != 0) {
-        output.writeUInt32(2, rewardId_);
-      }
-      if (sceneId_ != 0) {
-        output.writeUInt32(3, sceneId_);
-      }
       if (refreshId_ != 0) {
-        output.writeUInt32(4, refreshId_);
-      }
-      if (circleCampId_ != 0) {
-        output.writeUInt32(5, circleCampId_);
-      }
-      if (pos_ != null) {
-        output.writeMessage(6, getPos());
+        output.writeUInt32(1, refreshId_);
       }
       if (resin_ != 0) {
-        output.writeUInt32(9, resin_);
-      }
-      if (state_ != 0) {
-        output.writeUInt32(10, state_);
-      }
-      if (mapLayerId_ != 0) {
-        output.writeUInt32(13, mapLayerId_);
-      }
-      if (isGuideOpened_ != false) {
-        output.writeBool(14, isGuideOpened_);
+        output.writeUInt32(2, resin_);
       }
       if (monsterLevel_ != 0) {
-        output.writeUInt32(15, monsterLevel_);
+        output.writeUInt32(3, monsterLevel_);
       }
-      getUnknownFields().writeTo(output);
+      if (rewardId_ != 0) {
+        output.writeUInt32(5, rewardId_);
+      }
+      if (isGuideOpened_ != false) {
+        output.writeBool(7, isGuideOpened_);
+      }
+      if (sceneId_ != 0) {
+        output.writeUInt32(8, sceneId_);
+      }
+      if (cityId_ != 0) {
+        output.writeUInt32(9, cityId_);
+      }
+      if (mapLayerId_ != 0) {
+        output.writeUInt32(11, mapLayerId_);
+      }
+      if (pos_ != null) {
+        output.writeMessage(12, getPos());
+      }
+      if (state_ != 0) {
+        output.writeUInt32(13, state_);
+      }
+      if (circleCampId_ != 0) {
+        output.writeUInt32(14, circleCampId_);
+      }
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -330,51 +430,51 @@ public final class BlossomBriefInfoOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (cityId_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(1, cityId_);
-      }
-      if (rewardId_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(2, rewardId_);
-      }
-      if (sceneId_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(3, sceneId_);
-      }
       if (refreshId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(4, refreshId_);
-      }
-      if (circleCampId_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(5, circleCampId_);
-      }
-      if (pos_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(6, getPos());
+          .computeUInt32Size(1, refreshId_);
       }
       if (resin_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(9, resin_);
-      }
-      if (state_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(10, state_);
-      }
-      if (mapLayerId_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(13, mapLayerId_);
-      }
-      if (isGuideOpened_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(14, isGuideOpened_);
+          .computeUInt32Size(2, resin_);
       }
       if (monsterLevel_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(15, monsterLevel_);
+          .computeUInt32Size(3, monsterLevel_);
       }
-      size += getUnknownFields().getSerializedSize();
+      if (rewardId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(5, rewardId_);
+      }
+      if (isGuideOpened_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(7, isGuideOpened_);
+      }
+      if (sceneId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(8, sceneId_);
+      }
+      if (cityId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(9, cityId_);
+      }
+      if (mapLayerId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(11, mapLayerId_);
+      }
+      if (pos_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(12, getPos());
+      }
+      if (state_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(13, state_);
+      }
+      if (circleCampId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(14, circleCampId_);
+      }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -414,7 +514,7 @@ public final class BlossomBriefInfoOuterClass {
           != other.getState()) return false;
       if (getCircleCampId()
           != other.getCircleCampId()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -450,7 +550,7 @@ public final class BlossomBriefInfoOuterClass {
       hash = (53 * hash) + getState();
       hash = (37 * hash) + CIRCLE_CAMP_ID_FIELD_NUMBER;
       hash = (53 * hash) + getCircleCampId();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -547,8 +647,8 @@ public final class BlossomBriefInfoOuterClass {
     }
     /**
      * <pre>
-     * Version: 4.7.0
-     * Obfs: KIMHLKPIGFH
+     * Version: 4.6.0
+     * Obfs: ILNBNHMLOOA
      * </pre>
      *
      * Protobuf type {@code BlossomBriefInfo}
@@ -572,13 +672,18 @@ public final class BlossomBriefInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.BlossomBriefInfoOuterClass.BlossomBriefInfo.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -731,7 +836,7 @@ public final class BlossomBriefInfoOuterClass {
         if (other.getCircleCampId() != 0) {
           setCircleCampId(other.getCircleCampId());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -746,93 +851,23 @@ public final class BlossomBriefInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.BlossomBriefInfoOuterClass.BlossomBriefInfo parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                cityId_ = input.readUInt32();
-
-                break;
-              } // case 8
-              case 16: {
-                rewardId_ = input.readUInt32();
-
-                break;
-              } // case 16
-              case 24: {
-                sceneId_ = input.readUInt32();
-
-                break;
-              } // case 24
-              case 32: {
-                refreshId_ = input.readUInt32();
-
-                break;
-              } // case 32
-              case 40: {
-                circleCampId_ = input.readUInt32();
-
-                break;
-              } // case 40
-              case 50: {
-                input.readMessage(
-                    getPosFieldBuilder().getBuilder(),
-                    extensionRegistry);
-
-                break;
-              } // case 50
-              case 72: {
-                resin_ = input.readUInt32();
-
-                break;
-              } // case 72
-              case 80: {
-                state_ = input.readUInt32();
-
-                break;
-              } // case 80
-              case 104: {
-                mapLayerId_ = input.readUInt32();
-
-                break;
-              } // case 104
-              case 112: {
-                isGuideOpened_ = input.readBool();
-
-                break;
-              } // case 112
-              case 120: {
-                monsterLevel_ = input.readUInt32();
-
-                break;
-              } // case 120
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.BlossomBriefInfoOuterClass.BlossomBriefInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
 
       private int refreshId_ ;
       /**
-       * <code>uint32 refresh_id = 4;</code>
+       * <code>uint32 refresh_id = 1;</code>
        * @return The refreshId.
        */
       @java.lang.Override
@@ -840,7 +875,7 @@ public final class BlossomBriefInfoOuterClass {
         return refreshId_;
       }
       /**
-       * <code>uint32 refresh_id = 4;</code>
+       * <code>uint32 refresh_id = 1;</code>
        * @param value The refreshId to set.
        * @return This builder for chaining.
        */
@@ -851,7 +886,7 @@ public final class BlossomBriefInfoOuterClass {
         return this;
       }
       /**
-       * <code>uint32 refresh_id = 4;</code>
+       * <code>uint32 refresh_id = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearRefreshId() {
@@ -863,7 +898,7 @@ public final class BlossomBriefInfoOuterClass {
 
       private int resin_ ;
       /**
-       * <code>uint32 resin = 9;</code>
+       * <code>uint32 resin = 2;</code>
        * @return The resin.
        */
       @java.lang.Override
@@ -871,7 +906,7 @@ public final class BlossomBriefInfoOuterClass {
         return resin_;
       }
       /**
-       * <code>uint32 resin = 9;</code>
+       * <code>uint32 resin = 2;</code>
        * @param value The resin to set.
        * @return This builder for chaining.
        */
@@ -882,7 +917,7 @@ public final class BlossomBriefInfoOuterClass {
         return this;
       }
       /**
-       * <code>uint32 resin = 9;</code>
+       * <code>uint32 resin = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearResin() {
@@ -894,7 +929,7 @@ public final class BlossomBriefInfoOuterClass {
 
       private int monsterLevel_ ;
       /**
-       * <code>uint32 monster_level = 15;</code>
+       * <code>uint32 monster_level = 3;</code>
        * @return The monsterLevel.
        */
       @java.lang.Override
@@ -902,7 +937,7 @@ public final class BlossomBriefInfoOuterClass {
         return monsterLevel_;
       }
       /**
-       * <code>uint32 monster_level = 15;</code>
+       * <code>uint32 monster_level = 3;</code>
        * @param value The monsterLevel to set.
        * @return This builder for chaining.
        */
@@ -913,7 +948,7 @@ public final class BlossomBriefInfoOuterClass {
         return this;
       }
       /**
-       * <code>uint32 monster_level = 15;</code>
+       * <code>uint32 monster_level = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearMonsterLevel() {
@@ -925,7 +960,7 @@ public final class BlossomBriefInfoOuterClass {
 
       private int rewardId_ ;
       /**
-       * <code>uint32 reward_id = 2;</code>
+       * <code>uint32 reward_id = 5;</code>
        * @return The rewardId.
        */
       @java.lang.Override
@@ -933,7 +968,7 @@ public final class BlossomBriefInfoOuterClass {
         return rewardId_;
       }
       /**
-       * <code>uint32 reward_id = 2;</code>
+       * <code>uint32 reward_id = 5;</code>
        * @param value The rewardId to set.
        * @return This builder for chaining.
        */
@@ -944,7 +979,7 @@ public final class BlossomBriefInfoOuterClass {
         return this;
       }
       /**
-       * <code>uint32 reward_id = 2;</code>
+       * <code>uint32 reward_id = 5;</code>
        * @return This builder for chaining.
        */
       public Builder clearRewardId() {
@@ -956,7 +991,7 @@ public final class BlossomBriefInfoOuterClass {
 
       private boolean isGuideOpened_ ;
       /**
-       * <code>bool is_guide_opened = 14;</code>
+       * <code>bool is_guide_opened = 7;</code>
        * @return The isGuideOpened.
        */
       @java.lang.Override
@@ -964,7 +999,7 @@ public final class BlossomBriefInfoOuterClass {
         return isGuideOpened_;
       }
       /**
-       * <code>bool is_guide_opened = 14;</code>
+       * <code>bool is_guide_opened = 7;</code>
        * @param value The isGuideOpened to set.
        * @return This builder for chaining.
        */
@@ -975,7 +1010,7 @@ public final class BlossomBriefInfoOuterClass {
         return this;
       }
       /**
-       * <code>bool is_guide_opened = 14;</code>
+       * <code>bool is_guide_opened = 7;</code>
        * @return This builder for chaining.
        */
       public Builder clearIsGuideOpened() {
@@ -987,7 +1022,7 @@ public final class BlossomBriefInfoOuterClass {
 
       private int sceneId_ ;
       /**
-       * <code>uint32 scene_id = 3;</code>
+       * <code>uint32 scene_id = 8;</code>
        * @return The sceneId.
        */
       @java.lang.Override
@@ -995,7 +1030,7 @@ public final class BlossomBriefInfoOuterClass {
         return sceneId_;
       }
       /**
-       * <code>uint32 scene_id = 3;</code>
+       * <code>uint32 scene_id = 8;</code>
        * @param value The sceneId to set.
        * @return This builder for chaining.
        */
@@ -1006,7 +1041,7 @@ public final class BlossomBriefInfoOuterClass {
         return this;
       }
       /**
-       * <code>uint32 scene_id = 3;</code>
+       * <code>uint32 scene_id = 8;</code>
        * @return This builder for chaining.
        */
       public Builder clearSceneId() {
@@ -1018,7 +1053,7 @@ public final class BlossomBriefInfoOuterClass {
 
       private int cityId_ ;
       /**
-       * <code>uint32 city_id = 1;</code>
+       * <code>uint32 city_id = 9;</code>
        * @return The cityId.
        */
       @java.lang.Override
@@ -1026,7 +1061,7 @@ public final class BlossomBriefInfoOuterClass {
         return cityId_;
       }
       /**
-       * <code>uint32 city_id = 1;</code>
+       * <code>uint32 city_id = 9;</code>
        * @param value The cityId to set.
        * @return This builder for chaining.
        */
@@ -1037,7 +1072,7 @@ public final class BlossomBriefInfoOuterClass {
         return this;
       }
       /**
-       * <code>uint32 city_id = 1;</code>
+       * <code>uint32 city_id = 9;</code>
        * @return This builder for chaining.
        */
       public Builder clearCityId() {
@@ -1049,7 +1084,7 @@ public final class BlossomBriefInfoOuterClass {
 
       private int mapLayerId_ ;
       /**
-       * <code>uint32 map_layer_id = 13;</code>
+       * <code>uint32 map_layer_id = 11;</code>
        * @return The mapLayerId.
        */
       @java.lang.Override
@@ -1057,7 +1092,7 @@ public final class BlossomBriefInfoOuterClass {
         return mapLayerId_;
       }
       /**
-       * <code>uint32 map_layer_id = 13;</code>
+       * <code>uint32 map_layer_id = 11;</code>
        * @param value The mapLayerId to set.
        * @return This builder for chaining.
        */
@@ -1068,7 +1103,7 @@ public final class BlossomBriefInfoOuterClass {
         return this;
       }
       /**
-       * <code>uint32 map_layer_id = 13;</code>
+       * <code>uint32 map_layer_id = 11;</code>
        * @return This builder for chaining.
        */
       public Builder clearMapLayerId() {
@@ -1082,14 +1117,14 @@ public final class BlossomBriefInfoOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder> posBuilder_;
       /**
-       * <code>.Vector pos = 6;</code>
+       * <code>.Vector pos = 12;</code>
        * @return Whether the pos field is set.
        */
       public boolean hasPos() {
         return posBuilder_ != null || pos_ != null;
       }
       /**
-       * <code>.Vector pos = 6;</code>
+       * <code>.Vector pos = 12;</code>
        * @return The pos.
        */
       public emu.grasscutter.net.proto.VectorOuterClass.Vector getPos() {
@@ -1100,7 +1135,7 @@ public final class BlossomBriefInfoOuterClass {
         }
       }
       /**
-       * <code>.Vector pos = 6;</code>
+       * <code>.Vector pos = 12;</code>
        */
       public Builder setPos(emu.grasscutter.net.proto.VectorOuterClass.Vector value) {
         if (posBuilder_ == null) {
@@ -1116,7 +1151,7 @@ public final class BlossomBriefInfoOuterClass {
         return this;
       }
       /**
-       * <code>.Vector pos = 6;</code>
+       * <code>.Vector pos = 12;</code>
        */
       public Builder setPos(
           emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder builderForValue) {
@@ -1130,7 +1165,7 @@ public final class BlossomBriefInfoOuterClass {
         return this;
       }
       /**
-       * <code>.Vector pos = 6;</code>
+       * <code>.Vector pos = 12;</code>
        */
       public Builder mergePos(emu.grasscutter.net.proto.VectorOuterClass.Vector value) {
         if (posBuilder_ == null) {
@@ -1148,7 +1183,7 @@ public final class BlossomBriefInfoOuterClass {
         return this;
       }
       /**
-       * <code>.Vector pos = 6;</code>
+       * <code>.Vector pos = 12;</code>
        */
       public Builder clearPos() {
         if (posBuilder_ == null) {
@@ -1162,7 +1197,7 @@ public final class BlossomBriefInfoOuterClass {
         return this;
       }
       /**
-       * <code>.Vector pos = 6;</code>
+       * <code>.Vector pos = 12;</code>
        */
       public emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder getPosBuilder() {
         
@@ -1170,7 +1205,7 @@ public final class BlossomBriefInfoOuterClass {
         return getPosFieldBuilder().getBuilder();
       }
       /**
-       * <code>.Vector pos = 6;</code>
+       * <code>.Vector pos = 12;</code>
        */
       public emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getPosOrBuilder() {
         if (posBuilder_ != null) {
@@ -1181,7 +1216,7 @@ public final class BlossomBriefInfoOuterClass {
         }
       }
       /**
-       * <code>.Vector pos = 6;</code>
+       * <code>.Vector pos = 12;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder> 
@@ -1199,7 +1234,7 @@ public final class BlossomBriefInfoOuterClass {
 
       private int state_ ;
       /**
-       * <code>uint32 state = 10;</code>
+       * <code>uint32 state = 13;</code>
        * @return The state.
        */
       @java.lang.Override
@@ -1207,7 +1242,7 @@ public final class BlossomBriefInfoOuterClass {
         return state_;
       }
       /**
-       * <code>uint32 state = 10;</code>
+       * <code>uint32 state = 13;</code>
        * @param value The state to set.
        * @return This builder for chaining.
        */
@@ -1218,7 +1253,7 @@ public final class BlossomBriefInfoOuterClass {
         return this;
       }
       /**
-       * <code>uint32 state = 10;</code>
+       * <code>uint32 state = 13;</code>
        * @return This builder for chaining.
        */
       public Builder clearState() {
@@ -1230,7 +1265,7 @@ public final class BlossomBriefInfoOuterClass {
 
       private int circleCampId_ ;
       /**
-       * <code>uint32 circle_camp_id = 5;</code>
+       * <code>uint32 circle_camp_id = 14;</code>
        * @return The circleCampId.
        */
       @java.lang.Override
@@ -1238,7 +1273,7 @@ public final class BlossomBriefInfoOuterClass {
         return circleCampId_;
       }
       /**
-       * <code>uint32 circle_camp_id = 5;</code>
+       * <code>uint32 circle_camp_id = 14;</code>
        * @param value The circleCampId to set.
        * @return This builder for chaining.
        */
@@ -1249,7 +1284,7 @@ public final class BlossomBriefInfoOuterClass {
         return this;
       }
       /**
-       * <code>uint32 circle_camp_id = 5;</code>
+       * <code>uint32 circle_camp_id = 14;</code>
        * @return This builder for chaining.
        */
       public Builder clearCircleCampId() {
@@ -1291,18 +1326,7 @@ public final class BlossomBriefInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new BlossomBriefInfo(input, extensionRegistry);
       }
     };
 
@@ -1337,12 +1361,12 @@ public final class BlossomBriefInfoOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\026BlossomBriefInfo.proto\032\014Vector.proto\"\356" +
-      "\001\n\020BlossomBriefInfo\022\022\n\nrefresh_id\030\004 \001(\r\022" +
-      "\r\n\005resin\030\t \001(\r\022\025\n\rmonster_level\030\017 \001(\r\022\021\n" +
-      "\treward_id\030\002 \001(\r\022\027\n\017is_guide_opened\030\016 \001(" +
-      "\010\022\020\n\010scene_id\030\003 \001(\r\022\017\n\007city_id\030\001 \001(\r\022\024\n\014" +
-      "map_layer_id\030\r \001(\r\022\024\n\003pos\030\006 \001(\0132\007.Vector" +
-      "\022\r\n\005state\030\n \001(\r\022\026\n\016circle_camp_id\030\005 \001(\rB" +
+      "\001\n\020BlossomBriefInfo\022\022\n\nrefresh_id\030\001 \001(\r\022" +
+      "\r\n\005resin\030\002 \001(\r\022\025\n\rmonster_level\030\003 \001(\r\022\021\n" +
+      "\treward_id\030\005 \001(\r\022\027\n\017is_guide_opened\030\007 \001(" +
+      "\010\022\020\n\010scene_id\030\010 \001(\r\022\017\n\007city_id\030\t \001(\r\022\024\n\014" +
+      "map_layer_id\030\013 \001(\r\022\024\n\003pos\030\014 \001(\0132\007.Vector" +
+      "\022\r\n\005state\030\r \001(\r\022\026\n\016circle_camp_id\030\016 \001(\rB" +
       "\033\n\031emu.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

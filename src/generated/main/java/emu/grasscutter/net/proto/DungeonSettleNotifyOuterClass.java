@@ -86,16 +86,16 @@ public final class DungeonSettleNotifyOuterClass {
     int getDungeonId();
 
     /**
-     * <code>uint32 FJHHIKOIHKA = 9;</code>
-     * @return The fJHHIKOIHKA.
+     * <code>uint32 use_time = 9;</code>
+     * @return The useTime.
      */
-    int getFJHHIKOIHKA();
+    int getUseTime();
 
     /**
-     * <code>uint32 PDLMKFLEKDL = 10;</code>
-     * @return The pDLMKFLEKDL.
+     * <code>uint32 close_time = 10;</code>
+     * @return The closeTime.
      */
-    int getPDLMKFLEKDL();
+    int getCloseTime();
 
     /**
      * <code>map&lt;uint32, .ParamList&gt; settle_show = 11;</code>
@@ -138,10 +138,10 @@ public final class DungeonSettleNotifyOuterClass {
     int getCreatePlayerUid();
 
     /**
-     * <code>uint32 MHHCOEDMPDP = 14;</code>
-     * @return The mHHCOEDMPDP.
+     * <code>uint32 result = 14;</code>
+     * @return The result.
      */
-    int getMHHCOEDMPDP();
+    int getResult();
 
     /**
      * <code>.TowerLevelEndNotify tower_level_end_notify = 682;</code>
@@ -406,26 +406,26 @@ public final class DungeonSettleNotifyOuterClass {
       return dungeonId_;
     }
 
-    public static final int FJHHIKOIHKA_FIELD_NUMBER = 9;
-    private int fJHHIKOIHKA_;
+    public static final int USE_TIME_FIELD_NUMBER = 9;
+    private int useTime_;
     /**
-     * <code>uint32 FJHHIKOIHKA = 9;</code>
-     * @return The fJHHIKOIHKA.
+     * <code>uint32 use_time = 9;</code>
+     * @return The useTime.
      */
     @java.lang.Override
-    public int getFJHHIKOIHKA() {
-      return fJHHIKOIHKA_;
+    public int getUseTime() {
+      return useTime_;
     }
 
-    public static final int PDLMKFLEKDL_FIELD_NUMBER = 10;
-    private int pDLMKFLEKDL_;
+    public static final int CLOSE_TIME_FIELD_NUMBER = 10;
+    private int closeTime_;
     /**
-     * <code>uint32 PDLMKFLEKDL = 10;</code>
-     * @return The pDLMKFLEKDL.
+     * <code>uint32 close_time = 10;</code>
+     * @return The closeTime.
      */
     @java.lang.Override
-    public int getPDLMKFLEKDL() {
-      return pDLMKFLEKDL_;
+    public int getCloseTime() {
+      return closeTime_;
     }
 
     public static final int SETTLE_SHOW_FIELD_NUMBER = 11;
@@ -520,15 +520,15 @@ public final class DungeonSettleNotifyOuterClass {
       return createPlayerUid_;
     }
 
-    public static final int MHHCOEDMPDP_FIELD_NUMBER = 14;
-    private int mHHCOEDMPDP_;
+    public static final int RESULT_FIELD_NUMBER = 14;
+    private int result_;
     /**
-     * <code>uint32 MHHCOEDMPDP = 14;</code>
-     * @return The mHHCOEDMPDP.
+     * <code>uint32 result = 14;</code>
+     * @return The result.
      */
     @java.lang.Override
-    public int getMHHCOEDMPDP() {
-      return mHHCOEDMPDP_;
+    public int getResult() {
+      return result_;
     }
 
     public static final int TOWER_LEVEL_END_NOTIFY_FIELD_NUMBER = 682;
@@ -627,11 +627,11 @@ public final class DungeonSettleNotifyOuterClass {
       if (dungeonId_ != 0) {
         output.writeUInt32(8, dungeonId_);
       }
-      if (fJHHIKOIHKA_ != 0) {
-        output.writeUInt32(9, fJHHIKOIHKA_);
+      if (useTime_ != 0) {
+        output.writeUInt32(9, useTime_);
       }
-      if (pDLMKFLEKDL_ != 0) {
-        output.writeUInt32(10, pDLMKFLEKDL_);
+      if (closeTime_ != 0) {
+        output.writeUInt32(10, closeTime_);
       }
       com.google.protobuf.GeneratedMessageV3
         .serializeIntegerMapTo(
@@ -642,8 +642,8 @@ public final class DungeonSettleNotifyOuterClass {
       if (createPlayerUid_ != 0) {
         output.writeUInt32(12, createPlayerUid_);
       }
-      if (mHHCOEDMPDP_ != 0) {
-        output.writeUInt32(14, mHHCOEDMPDP_);
+      if (result_ != 0) {
+        output.writeUInt32(14, result_);
       }
       if (detailCase_ == 682) {
         output.writeMessage(682, (emu.grasscutter.net.proto.TowerLevelEndNotifyOuterClass.TowerLevelEndNotify) detail_);
@@ -692,13 +692,13 @@ public final class DungeonSettleNotifyOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(8, dungeonId_);
       }
-      if (fJHHIKOIHKA_ != 0) {
+      if (useTime_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(9, fJHHIKOIHKA_);
+          .computeUInt32Size(9, useTime_);
       }
-      if (pDLMKFLEKDL_ != 0) {
+      if (closeTime_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(10, pDLMKFLEKDL_);
+          .computeUInt32Size(10, closeTime_);
       }
       for (java.util.Map.Entry<java.lang.Integer, emu.grasscutter.net.proto.ParamListOuterClass.ParamList> entry
            : internalGetSettleShow().getMap().entrySet()) {
@@ -714,9 +714,9 @@ public final class DungeonSettleNotifyOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(12, createPlayerUid_);
       }
-      if (mHHCOEDMPDP_ != 0) {
+      if (result_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(14, mHHCOEDMPDP_);
+          .computeUInt32Size(14, result_);
       }
       if (detailCase_ == 682) {
         size += com.google.protobuf.CodedOutputStream
@@ -749,16 +749,16 @@ public final class DungeonSettleNotifyOuterClass {
           .equals(other.getFailCondListList())) return false;
       if (getDungeonId()
           != other.getDungeonId()) return false;
-      if (getFJHHIKOIHKA()
-          != other.getFJHHIKOIHKA()) return false;
-      if (getPDLMKFLEKDL()
-          != other.getPDLMKFLEKDL()) return false;
+      if (getUseTime()
+          != other.getUseTime()) return false;
+      if (getCloseTime()
+          != other.getCloseTime()) return false;
       if (!internalGetSettleShow().equals(
           other.internalGetSettleShow())) return false;
       if (getCreatePlayerUid()
           != other.getCreatePlayerUid()) return false;
-      if (getMHHCOEDMPDP()
-          != other.getMHHCOEDMPDP()) return false;
+      if (getResult()
+          != other.getResult()) return false;
       if (!getDetailCase().equals(other.getDetailCase())) return false;
       switch (detailCase_) {
         case 682:
@@ -796,18 +796,18 @@ public final class DungeonSettleNotifyOuterClass {
       }
       hash = (37 * hash) + DUNGEON_ID_FIELD_NUMBER;
       hash = (53 * hash) + getDungeonId();
-      hash = (37 * hash) + FJHHIKOIHKA_FIELD_NUMBER;
-      hash = (53 * hash) + getFJHHIKOIHKA();
-      hash = (37 * hash) + PDLMKFLEKDL_FIELD_NUMBER;
-      hash = (53 * hash) + getPDLMKFLEKDL();
+      hash = (37 * hash) + USE_TIME_FIELD_NUMBER;
+      hash = (53 * hash) + getUseTime();
+      hash = (37 * hash) + CLOSE_TIME_FIELD_NUMBER;
+      hash = (53 * hash) + getCloseTime();
       if (!internalGetSettleShow().getMap().isEmpty()) {
         hash = (37 * hash) + SETTLE_SHOW_FIELD_NUMBER;
         hash = (53 * hash) + internalGetSettleShow().hashCode();
       }
       hash = (37 * hash) + CREATE_PLAYER_UID_FIELD_NUMBER;
       hash = (53 * hash) + getCreatePlayerUid();
-      hash = (37 * hash) + MHHCOEDMPDP_FIELD_NUMBER;
-      hash = (53 * hash) + getMHHCOEDMPDP();
+      hash = (37 * hash) + RESULT_FIELD_NUMBER;
+      hash = (53 * hash) + getResult();
       switch (detailCase_) {
         case 682:
           hash = (37 * hash) + TOWER_LEVEL_END_NOTIFY_FIELD_NUMBER;
@@ -981,14 +981,14 @@ public final class DungeonSettleNotifyOuterClass {
         bitField0_ = (bitField0_ & ~0x00000002);
         dungeonId_ = 0;
 
-        fJHHIKOIHKA_ = 0;
+        useTime_ = 0;
 
-        pDLMKFLEKDL_ = 0;
+        closeTime_ = 0;
 
         internalGetMutableSettleShow().clear();
         createPlayerUid_ = 0;
 
-        mHHCOEDMPDP_ = 0;
+        result_ = 0;
 
         if (towerLevelEndNotifyBuilder_ != null) {
           towerLevelEndNotifyBuilder_.clear();
@@ -1034,12 +1034,12 @@ public final class DungeonSettleNotifyOuterClass {
         }
         result.failCondList_ = failCondList_;
         result.dungeonId_ = dungeonId_;
-        result.fJHHIKOIHKA_ = fJHHIKOIHKA_;
-        result.pDLMKFLEKDL_ = pDLMKFLEKDL_;
+        result.useTime_ = useTime_;
+        result.closeTime_ = closeTime_;
         result.settleShow_ = internalGetSettleShow();
         result.settleShow_.makeImmutable();
         result.createPlayerUid_ = createPlayerUid_;
-        result.mHHCOEDMPDP_ = mHHCOEDMPDP_;
+        result.result_ = result_;
         if (detailCase_ == 682) {
           if (towerLevelEndNotifyBuilder_ == null) {
             result.detail_ = detail_;
@@ -1121,19 +1121,19 @@ public final class DungeonSettleNotifyOuterClass {
         if (other.getDungeonId() != 0) {
           setDungeonId(other.getDungeonId());
         }
-        if (other.getFJHHIKOIHKA() != 0) {
-          setFJHHIKOIHKA(other.getFJHHIKOIHKA());
+        if (other.getUseTime() != 0) {
+          setUseTime(other.getUseTime());
         }
-        if (other.getPDLMKFLEKDL() != 0) {
-          setPDLMKFLEKDL(other.getPDLMKFLEKDL());
+        if (other.getCloseTime() != 0) {
+          setCloseTime(other.getCloseTime());
         }
         internalGetMutableSettleShow().mergeFrom(
             other.internalGetSettleShow());
         if (other.getCreatePlayerUid() != 0) {
           setCreatePlayerUid(other.getCreatePlayerUid());
         }
-        if (other.getMHHCOEDMPDP() != 0) {
-          setMHHCOEDMPDP(other.getMHHCOEDMPDP());
+        if (other.getResult() != 0) {
+          setResult(other.getResult());
         }
         switch (other.getDetailCase()) {
           case TOWER_LEVEL_END_NOTIFY: {
@@ -1209,12 +1209,12 @@ public final class DungeonSettleNotifyOuterClass {
                 break;
               } // case 64
               case 72: {
-                fJHHIKOIHKA_ = input.readUInt32();
+                useTime_ = input.readUInt32();
 
                 break;
               } // case 72
               case 80: {
-                pDLMKFLEKDL_ = input.readUInt32();
+                closeTime_ = input.readUInt32();
 
                 break;
               } // case 80
@@ -1232,7 +1232,7 @@ public final class DungeonSettleNotifyOuterClass {
                 break;
               } // case 96
               case 112: {
-                mHHCOEDMPDP_ = input.readUInt32();
+                result_ = input.readUInt32();
 
                 break;
               } // case 112
@@ -1566,64 +1566,64 @@ public final class DungeonSettleNotifyOuterClass {
         return this;
       }
 
-      private int fJHHIKOIHKA_ ;
+      private int useTime_ ;
       /**
-       * <code>uint32 FJHHIKOIHKA = 9;</code>
-       * @return The fJHHIKOIHKA.
+       * <code>uint32 use_time = 9;</code>
+       * @return The useTime.
        */
       @java.lang.Override
-      public int getFJHHIKOIHKA() {
-        return fJHHIKOIHKA_;
+      public int getUseTime() {
+        return useTime_;
       }
       /**
-       * <code>uint32 FJHHIKOIHKA = 9;</code>
-       * @param value The fJHHIKOIHKA to set.
+       * <code>uint32 use_time = 9;</code>
+       * @param value The useTime to set.
        * @return This builder for chaining.
        */
-      public Builder setFJHHIKOIHKA(int value) {
+      public Builder setUseTime(int value) {
         
-        fJHHIKOIHKA_ = value;
+        useTime_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 FJHHIKOIHKA = 9;</code>
+       * <code>uint32 use_time = 9;</code>
        * @return This builder for chaining.
        */
       public Builder clearFJHHIKOIHKA() {
         
-        fJHHIKOIHKA_ = 0;
+        useTime_ = 0;
         onChanged();
         return this;
       }
 
-      private int pDLMKFLEKDL_ ;
+      private int closeTime_ ;
       /**
-       * <code>uint32 PDLMKFLEKDL = 10;</code>
-       * @return The pDLMKFLEKDL.
+       * <code>uint32 close_time = 10;</code>
+       * @return The closeTime.
        */
       @java.lang.Override
-      public int getPDLMKFLEKDL() {
-        return pDLMKFLEKDL_;
+      public int getCloseTime() {
+        return closeTime_;
       }
       /**
-       * <code>uint32 PDLMKFLEKDL = 10;</code>
-       * @param value The pDLMKFLEKDL to set.
+       * <code>uint32 close_time = 10;</code>
+       * @param value The closeTime to set.
        * @return This builder for chaining.
        */
-      public Builder setPDLMKFLEKDL(int value) {
+      public Builder setCloseTime(int value) {
         
-        pDLMKFLEKDL_ = value;
+        closeTime_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 PDLMKFLEKDL = 10;</code>
+       * <code>uint32 close_time = 10;</code>
        * @return This builder for chaining.
        */
       public Builder clearPDLMKFLEKDL() {
         
-        pDLMKFLEKDL_ = 0;
+        closeTime_ = 0;
         onChanged();
         return this;
       }
@@ -1790,33 +1790,33 @@ public final class DungeonSettleNotifyOuterClass {
         return this;
       }
 
-      private int mHHCOEDMPDP_ ;
+      private int result_ ;
       /**
-       * <code>uint32 MHHCOEDMPDP = 14;</code>
-       * @return The mHHCOEDMPDP.
+       * <code>uint32 result = 14;</code>
+       * @return The result.
        */
       @java.lang.Override
-      public int getMHHCOEDMPDP() {
-        return mHHCOEDMPDP_;
+      public int getResult() {
+        return result_;
       }
       /**
-       * <code>uint32 MHHCOEDMPDP = 14;</code>
-       * @param value The mHHCOEDMPDP to set.
+       * <code>uint32 result = 14;</code>
+       * @param value The result to set.
        * @return This builder for chaining.
        */
-      public Builder setMHHCOEDMPDP(int value) {
+      public Builder setResult(int value) {
         
-        mHHCOEDMPDP_ = value;
+        result_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 MHHCOEDMPDP = 14;</code>
+       * <code>uint32 result = 14;</code>
        * @return This builder for chaining.
        */
       public Builder clearMHHCOEDMPDP() {
         
-        mHHCOEDMPDP_ = 0;
+        result_ = 0;
         onChanged();
         return this;
       }

@@ -139,6 +139,113 @@ public final class AbilityMixinRecoverInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private AbilityMixinRecoverInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              sourceCase_ = 1;
+              source_ = input.readUInt32();
+              break;
+            }
+            case 16: {
+              sourceCase_ = 2;
+              source_ = input.readUInt32();
+              break;
+            }
+            case 24: {
+
+              localId_ = input.readUInt32();
+              break;
+            }
+            case 32: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                dataList_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              dataList_.addInt(input.readUInt32());
+              break;
+            }
+            case 34: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
+                dataList_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                dataList_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 40: {
+
+              isServerbuffModifier_ = input.readBool();
+              break;
+            }
+            case 50: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                massivePropList_ = new java.util.ArrayList<emu.grasscutter.net.proto.MassivePropSyncInfoOuterClass.MassivePropSyncInfo>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              massivePropList_.add(
+                  input.readMessage(emu.grasscutter.net.proto.MassivePropSyncInfoOuterClass.MassivePropSyncInfo.parser(), extensionRegistry));
+              break;
+            }
+            case 58: {
+              emu.grasscutter.net.proto.BreakoutSnapShotOuterClass.BreakoutSnapShot.Builder subBuilder = null;
+              if (breakoutSnapShot_ != null) {
+                subBuilder = breakoutSnapShot_.toBuilder();
+              }
+              breakoutSnapShot_ = input.readMessage(emu.grasscutter.net.proto.BreakoutSnapShotOuterClass.BreakoutSnapShot.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(breakoutSnapShot_);
+                breakoutSnapShot_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          dataList_.makeImmutable(); // C
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          massivePropList_ = java.util.Collections.unmodifiableList(massivePropList_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.AbilityMixinRecoverInfoOuterClass.internal_static_AbilityMixinRecoverInfo_descriptor;
@@ -393,7 +500,7 @@ public final class AbilityMixinRecoverInfoOuterClass {
       if (breakoutSnapShot_ != null) {
         output.writeMessage(7, getBreakoutSnapShot());
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -442,7 +549,7 @@ public final class AbilityMixinRecoverInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getBreakoutSnapShot());
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -483,7 +590,7 @@ public final class AbilityMixinRecoverInfoOuterClass {
         case 0:
         default:
       }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -523,7 +630,7 @@ public final class AbilityMixinRecoverInfoOuterClass {
         case 0:
         default:
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -640,13 +747,19 @@ public final class AbilityMixinRecoverInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.AbilityMixinRecoverInfoOuterClass.AbilityMixinRecoverInfo.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getMassivePropListFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -659,11 +772,10 @@ public final class AbilityMixinRecoverInfoOuterClass {
 
         if (massivePropListBuilder_ == null) {
           massivePropList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
-          massivePropList_ = null;
           massivePropListBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000002);
         if (breakoutSnapShotBuilder_ == null) {
           breakoutSnapShot_ = null;
         } else {
@@ -833,7 +945,7 @@ public final class AbilityMixinRecoverInfoOuterClass {
             break;
           }
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -848,86 +960,17 @@ public final class AbilityMixinRecoverInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.AbilityMixinRecoverInfoOuterClass.AbilityMixinRecoverInfo parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                source_ = input.readUInt32();
-                sourceCase_ = 1;
-                break;
-              } // case 8
-              case 16: {
-                source_ = input.readUInt32();
-                sourceCase_ = 2;
-                break;
-              } // case 16
-              case 24: {
-                localId_ = input.readUInt32();
-
-                break;
-              } // case 24
-              case 32: {
-                int v = input.readUInt32();
-                ensureDataListIsMutable();
-                dataList_.addInt(v);
-                break;
-              } // case 32
-              case 34: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureDataListIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  dataList_.addInt(input.readUInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 34
-              case 40: {
-                isServerbuffModifier_ = input.readBool();
-
-                break;
-              } // case 40
-              case 50: {
-                emu.grasscutter.net.proto.MassivePropSyncInfoOuterClass.MassivePropSyncInfo m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.MassivePropSyncInfoOuterClass.MassivePropSyncInfo.parser(),
-                        extensionRegistry);
-                if (massivePropListBuilder_ == null) {
-                  ensureMassivePropListIsMutable();
-                  massivePropList_.add(m);
-                } else {
-                  massivePropListBuilder_.addMessage(m);
-                }
-                break;
-              } // case 50
-              case 58: {
-                input.readMessage(
-                    getBreakoutSnapShotFieldBuilder().getBuilder(),
-                    extensionRegistry);
-
-                break;
-              } // case 58
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.AbilityMixinRecoverInfoOuterClass.AbilityMixinRecoverInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int sourceCase_ = 0;
@@ -1561,18 +1604,7 @@ public final class AbilityMixinRecoverInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new AbilityMixinRecoverInfo(input, extensionRegistry);
       }
     };
 

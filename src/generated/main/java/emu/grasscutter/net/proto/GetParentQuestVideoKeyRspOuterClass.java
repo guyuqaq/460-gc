@@ -37,10 +37,6 @@ public final class GetParentQuestVideoKeyRspOuterClass {
     long getVideoKey();
   }
   /**
-   * <pre>
-   * CmdId: 28710
-   * </pre>
-   *
    * Protobuf type {@code GetParentQuestVideoKeyRsp}
    */
   public static final class GetParentQuestVideoKeyRsp extends
@@ -344,10 +340,6 @@ public final class GetParentQuestVideoKeyRspOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 28710
-     * </pre>
-     *
      * Protobuf type {@code GetParentQuestVideoKeyRsp}
      */
     public static final class Builder extends

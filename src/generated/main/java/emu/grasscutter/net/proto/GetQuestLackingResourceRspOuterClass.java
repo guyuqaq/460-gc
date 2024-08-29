@@ -46,10 +46,6 @@ public final class GetQuestLackingResourceRspOuterClass {
     int getRetcode();
   }
   /**
-   * <pre>
-   * CmdId: 27981
-   * </pre>
-   *
    * Protobuf type {@code GetQuestLackingResourceRsp}
    */
   public static final class GetQuestLackingResourceRsp extends
@@ -380,10 +376,6 @@ public final class GetQuestLackingResourceRspOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 27981
-     * </pre>
-     *
      * Protobuf type {@code GetQuestLackingResourceRsp}
      */
     public static final class Builder extends

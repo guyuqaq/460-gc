@@ -25,10 +25,6 @@ public final class GetParentQuestVideoKeyReqOuterClass {
     int getParentQuestId();
   }
   /**
-   * <pre>
-   * CmdId: 24330
-   * </pre>
-   *
    * Protobuf type {@code GetParentQuestVideoKeyReq}
    */
   public static final class GetParentQuestVideoKeyReq extends
@@ -277,10 +273,6 @@ public final class GetParentQuestVideoKeyReqOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 24330
-     * </pre>
-     *
      * Protobuf type {@code GetParentQuestVideoKeyReq}
      */
     public static final class Builder extends

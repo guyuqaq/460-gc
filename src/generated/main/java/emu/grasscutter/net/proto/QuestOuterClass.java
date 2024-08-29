@@ -118,19 +118,19 @@ public final class QuestOuterClass {
     int getMLHFBAFCKIP(int index);
 
     /**
-     * <code>.LackingResourceInfo EBPOIBHNPNH = 13;</code>
-     * @return Whether the eBPOIBHNPNH field is set.
+     * <code>.LackingResourceInfo lacking_resources_info = 13;</code>
+     * @return Whether the lackingResourcesInfo field is set.
      */
-    boolean hasEBPOIBHNPNH();
+    boolean hasLackingResourcesInfo();
     /**
-     * <code>.LackingResourceInfo EBPOIBHNPNH = 13;</code>
-     * @return The eBPOIBHNPNH.
+     * <code>.LackingResourceInfo lacking_resources_info = 13;</code>
+     * @return The lackingResourcesInfo.
      */
-    emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfo getEBPOIBHNPNH();
+    emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfo getLackingResourcesInfo();
     /**
-     * <code>.LackingResourceInfo EBPOIBHNPNH = 13;</code>
+     * <code>.LackingResourceInfo lacking_resources_info = 13;</code>
      */
-    emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfoOrBuilder getEBPOIBHNPNHOrBuilder();
+    emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfoOrBuilder getLackingResourcesInfoOrBuilder();
   }
   /**
    * Protobuf type {@code Quest}
@@ -161,6 +161,169 @@ public final class QuestOuterClass {
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
+    }
+    private Quest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              questId_ = input.readUInt32();
+              break;
+            }
+            case 16: {
+
+              state_ = input.readUInt32();
+              break;
+            }
+            case 32: {
+
+              startTime_ = input.readUInt32();
+              break;
+            }
+            case 40: {
+
+              isRandom_ = input.readBool();
+              break;
+            }
+            case 48: {
+
+              parentQuestId_ = input.readUInt32();
+              break;
+            }
+            case 56: {
+
+              questConfigId_ = input.readUInt32();
+              break;
+            }
+            case 64: {
+
+              startGameTime_ = input.readUInt32();
+              break;
+            }
+            case 72: {
+
+              acceptTime_ = input.readUInt32();
+              break;
+            }
+            case 80: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                finishProgressList_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              finishProgressList_.addInt(input.readUInt32());
+              break;
+            }
+            case 82: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
+                finishProgressList_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                finishProgressList_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 88: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                failProgressList_ = newIntList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              failProgressList_.addInt(input.readUInt32());
+              break;
+            }
+            case 90: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000002) != 0) && input.getBytesUntilLimit() > 0) {
+                failProgressList_ = newIntList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                failProgressList_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 96: {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                mLHFBAFCKIP_ = newIntList();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              mLHFBAFCKIP_.addInt(input.readUInt32());
+              break;
+            }
+            case 98: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000004) != 0) && input.getBytesUntilLimit() > 0) {
+                mLHFBAFCKIP_ = newIntList();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                mLHFBAFCKIP_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 106: {
+              emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfo.Builder subBuilder = null;
+              if (lackingResourcesInfo_ != null) {
+                subBuilder = lackingResourcesInfo_.toBuilder();
+              }
+              lackingResourcesInfo_ = input.readMessage(emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfo.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(lackingResourcesInfo_);
+                lackingResourcesInfo_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          finishProgressList_.makeImmutable(); // C
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          failProgressList_.makeImmutable(); // C
+        }
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
+          mLHFBAFCKIP_.makeImmutable(); // C
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -347,30 +510,30 @@ public final class QuestOuterClass {
     }
     private int mLHFBAFCKIPMemoizedSerializedSize = -1;
 
-    public static final int EBPOIBHNPNH_FIELD_NUMBER = 13;
-    private emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfo eBPOIBHNPNH_;
+    public static final int LACKING_RESOURCES_INFO_FIELD_NUMBER = 13;
+    private emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfo lackingResourcesInfo_;
     /**
-     * <code>.LackingResourceInfo EBPOIBHNPNH = 13;</code>
-     * @return Whether the eBPOIBHNPNH field is set.
+     * <code>.LackingResourceInfo lacking_resources_info = 13;</code>
+     * @return Whether the lackingResourcesInfo field is set.
      */
     @java.lang.Override
-    public boolean hasEBPOIBHNPNH() {
-      return eBPOIBHNPNH_ != null;
+    public boolean hasLackingResourcesInfo() {
+      return lackingResourcesInfo_ != null;
     }
     /**
-     * <code>.LackingResourceInfo EBPOIBHNPNH = 13;</code>
-     * @return The eBPOIBHNPNH.
+     * <code>.LackingResourceInfo lacking_resources_info = 13;</code>
+     * @return The lackingResourcesInfo.
      */
     @java.lang.Override
-    public emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfo getEBPOIBHNPNH() {
-      return eBPOIBHNPNH_ == null ? emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfo.getDefaultInstance() : eBPOIBHNPNH_;
+    public emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfo getLackingResourcesInfo() {
+      return lackingResourcesInfo_ == null ? emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfo.getDefaultInstance() : lackingResourcesInfo_;
     }
     /**
-     * <code>.LackingResourceInfo EBPOIBHNPNH = 13;</code>
+     * <code>.LackingResourceInfo lacking_resources_info = 13;</code>
      */
     @java.lang.Override
-    public emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfoOrBuilder getEBPOIBHNPNHOrBuilder() {
-      return getEBPOIBHNPNH();
+    public emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfoOrBuilder getLackingResourcesInfoOrBuilder() {
+      return getLackingResourcesInfo();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -433,10 +596,10 @@ public final class QuestOuterClass {
       for (int i = 0; i < mLHFBAFCKIP_.size(); i++) {
         output.writeUInt32NoTag(mLHFBAFCKIP_.getInt(i));
       }
-      if (eBPOIBHNPNH_ != null) {
-        output.writeMessage(13, getEBPOIBHNPNH());
+      if (lackingResourcesInfo_ != null) {
+        output.writeMessage(13, getLackingResourcesInfo());
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -519,11 +682,11 @@ public final class QuestOuterClass {
         }
         mLHFBAFCKIPMemoizedSerializedSize = dataSize;
       }
-      if (eBPOIBHNPNH_ != null) {
+      if (lackingResourcesInfo_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(13, getEBPOIBHNPNH());
+          .computeMessageSize(13, getLackingResourcesInfo());
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -560,12 +723,12 @@ public final class QuestOuterClass {
           .equals(other.getFailProgressListList())) return false;
       if (!getMLHFBAFCKIPList()
           .equals(other.getMLHFBAFCKIPList())) return false;
-      if (hasEBPOIBHNPNH() != other.hasEBPOIBHNPNH()) return false;
-      if (hasEBPOIBHNPNH()) {
-        if (!getEBPOIBHNPNH()
-            .equals(other.getEBPOIBHNPNH())) return false;
+      if (hasLackingResourcesInfo() != other.hasLackingResourcesInfo()) return false;
+      if (hasLackingResourcesInfo()) {
+        if (!getLackingResourcesInfo()
+            .equals(other.getLackingResourcesInfo())) return false;
       }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -605,11 +768,11 @@ public final class QuestOuterClass {
         hash = (37 * hash) + MLHFBAFCKIP_FIELD_NUMBER;
         hash = (53 * hash) + getMLHFBAFCKIPList().hashCode();
       }
-      if (hasEBPOIBHNPNH()) {
-        hash = (37 * hash) + EBPOIBHNPNH_FIELD_NUMBER;
-        hash = (53 * hash) + getEBPOIBHNPNH().hashCode();
+      if (hasLackingResourcesInfo()) {
+        hash = (37 * hash) + LACKING_RESOURCES_INFO_FIELD_NUMBER;
+        hash = (53 * hash) + getLackingResourcesInfo().hashCode();
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -726,13 +889,18 @@ public final class QuestOuterClass {
 
       // Construct using emu.grasscutter.net.proto.QuestOuterClass.Quest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -759,11 +927,11 @@ public final class QuestOuterClass {
         bitField0_ = (bitField0_ & ~0x00000002);
         mLHFBAFCKIP_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000004);
-        if (eBPOIBHNPNHBuilder_ == null) {
-          eBPOIBHNPNH_ = null;
+        if (lackingResourcesInfoBuilder_ == null) {
+          lackingResourcesInfo_ = null;
         } else {
-          eBPOIBHNPNH_ = null;
-          eBPOIBHNPNHBuilder_ = null;
+          lackingResourcesInfo_ = null;
+          lackingResourcesInfoBuilder_ = null;
         }
         return this;
       }
@@ -815,10 +983,10 @@ public final class QuestOuterClass {
           bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.mLHFBAFCKIP_ = mLHFBAFCKIP_;
-        if (eBPOIBHNPNHBuilder_ == null) {
-          result.eBPOIBHNPNH_ = eBPOIBHNPNH_;
+        if (lackingResourcesInfoBuilder_ == null) {
+          result.lackingResourcesInfo_ = lackingResourcesInfo_;
         } else {
-          result.eBPOIBHNPNH_ = eBPOIBHNPNHBuilder_.build();
+          result.lackingResourcesInfo_ = lackingResourcesInfoBuilder_.build();
         }
         onBuilt();
         return result;
@@ -922,10 +1090,10 @@ public final class QuestOuterClass {
           }
           onChanged();
         }
-        if (other.hasEBPOIBHNPNH()) {
-          mergeEBPOIBHNPNH(other.getEBPOIBHNPNH());
+        if (other.hasLackingResourcesInfo()) {
+          mergeLackingResourcesInfo(other.getLackingResourcesInfo());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -940,125 +1108,17 @@ public final class QuestOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.QuestOuterClass.Quest parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                questId_ = input.readUInt32();
-
-                break;
-              } // case 8
-              case 16: {
-                state_ = input.readUInt32();
-
-                break;
-              } // case 16
-              case 32: {
-                startTime_ = input.readUInt32();
-
-                break;
-              } // case 32
-              case 40: {
-                isRandom_ = input.readBool();
-
-                break;
-              } // case 40
-              case 48: {
-                parentQuestId_ = input.readUInt32();
-
-                break;
-              } // case 48
-              case 56: {
-                questConfigId_ = input.readUInt32();
-
-                break;
-              } // case 56
-              case 64: {
-                startGameTime_ = input.readUInt32();
-
-                break;
-              } // case 64
-              case 72: {
-                acceptTime_ = input.readUInt32();
-
-                break;
-              } // case 72
-              case 80: {
-                int v = input.readUInt32();
-                ensureFinishProgressListIsMutable();
-                finishProgressList_.addInt(v);
-                break;
-              } // case 80
-              case 82: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureFinishProgressListIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  finishProgressList_.addInt(input.readUInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 82
-              case 88: {
-                int v = input.readUInt32();
-                ensureFailProgressListIsMutable();
-                failProgressList_.addInt(v);
-                break;
-              } // case 88
-              case 90: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureFailProgressListIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  failProgressList_.addInt(input.readUInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 90
-              case 96: {
-                int v = input.readUInt32();
-                ensureMLHFBAFCKIPIsMutable();
-                mLHFBAFCKIP_.addInt(v);
-                break;
-              } // case 96
-              case 98: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureMLHFBAFCKIPIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  mLHFBAFCKIP_.addInt(input.readUInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 98
-              case 106: {
-                input.readMessage(
-                    getEBPOIBHNPNHFieldBuilder().getBuilder(),
-                    extensionRegistry);
-
-                break;
-              } // case 106
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.QuestOuterClass.Quest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -1548,123 +1608,123 @@ public final class QuestOuterClass {
         return this;
       }
 
-      private emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfo eBPOIBHNPNH_;
+      private emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfo lackingResourcesInfo_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfo, emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfo.Builder, emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfoOrBuilder> eBPOIBHNPNHBuilder_;
+          emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfo, emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfo.Builder, emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfoOrBuilder> lackingResourcesInfoBuilder_;
       /**
-       * <code>.LackingResourceInfo EBPOIBHNPNH = 13;</code>
-       * @return Whether the eBPOIBHNPNH field is set.
+       * <code>.LackingResourceInfo lacking_resources_info = 13;</code>
+       * @return Whether the lackingResourcesInfo field is set.
        */
-      public boolean hasEBPOIBHNPNH() {
-        return eBPOIBHNPNHBuilder_ != null || eBPOIBHNPNH_ != null;
+      public boolean hasLackingResourcesInfo() {
+        return lackingResourcesInfoBuilder_ != null || lackingResourcesInfo_ != null;
       }
       /**
-       * <code>.LackingResourceInfo EBPOIBHNPNH = 13;</code>
-       * @return The eBPOIBHNPNH.
+       * <code>.LackingResourceInfo lacking_resources_info = 13;</code>
+       * @return The lackingResourcesInfo.
        */
-      public emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfo getEBPOIBHNPNH() {
-        if (eBPOIBHNPNHBuilder_ == null) {
-          return eBPOIBHNPNH_ == null ? emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfo.getDefaultInstance() : eBPOIBHNPNH_;
+      public emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfo getLackingResourcesInfo() {
+        if (lackingResourcesInfoBuilder_ == null) {
+          return lackingResourcesInfo_ == null ? emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfo.getDefaultInstance() : lackingResourcesInfo_;
         } else {
-          return eBPOIBHNPNHBuilder_.getMessage();
+          return lackingResourcesInfoBuilder_.getMessage();
         }
       }
       /**
-       * <code>.LackingResourceInfo EBPOIBHNPNH = 13;</code>
+       * <code>.LackingResourceInfo lacking_resources_info = 13;</code>
        */
-      public Builder setEBPOIBHNPNH(emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfo value) {
-        if (eBPOIBHNPNHBuilder_ == null) {
+      public Builder setLackingResourcesInfo(emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfo value) {
+        if (lackingResourcesInfoBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          eBPOIBHNPNH_ = value;
+          lackingResourcesInfo_ = value;
           onChanged();
         } else {
-          eBPOIBHNPNHBuilder_.setMessage(value);
+          lackingResourcesInfoBuilder_.setMessage(value);
         }
 
         return this;
       }
       /**
-       * <code>.LackingResourceInfo EBPOIBHNPNH = 13;</code>
+       * <code>.LackingResourceInfo lacking_resources_info = 13;</code>
        */
-      public Builder setEBPOIBHNPNH(
+      public Builder setLackingResourcesInfo(
           emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfo.Builder builderForValue) {
-        if (eBPOIBHNPNHBuilder_ == null) {
-          eBPOIBHNPNH_ = builderForValue.build();
+        if (lackingResourcesInfoBuilder_ == null) {
+          lackingResourcesInfo_ = builderForValue.build();
           onChanged();
         } else {
-          eBPOIBHNPNHBuilder_.setMessage(builderForValue.build());
+          lackingResourcesInfoBuilder_.setMessage(builderForValue.build());
         }
 
         return this;
       }
       /**
-       * <code>.LackingResourceInfo EBPOIBHNPNH = 13;</code>
+       * <code>.LackingResourceInfo lacking_resources_info = 13;</code>
        */
-      public Builder mergeEBPOIBHNPNH(emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfo value) {
-        if (eBPOIBHNPNHBuilder_ == null) {
-          if (eBPOIBHNPNH_ != null) {
-            eBPOIBHNPNH_ =
-              emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfo.newBuilder(eBPOIBHNPNH_).mergeFrom(value).buildPartial();
+      public Builder mergeLackingResourcesInfo(emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfo value) {
+        if (lackingResourcesInfoBuilder_ == null) {
+          if (lackingResourcesInfo_ != null) {
+            lackingResourcesInfo_ =
+              emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfo.newBuilder(lackingResourcesInfo_).mergeFrom(value).buildPartial();
           } else {
-            eBPOIBHNPNH_ = value;
+            lackingResourcesInfo_ = value;
           }
           onChanged();
         } else {
-          eBPOIBHNPNHBuilder_.mergeFrom(value);
+          lackingResourcesInfoBuilder_.mergeFrom(value);
         }
 
         return this;
       }
       /**
-       * <code>.LackingResourceInfo EBPOIBHNPNH = 13;</code>
+       * <code>.LackingResourceInfo lacking_resources_info = 13;</code>
        */
-      public Builder clearEBPOIBHNPNH() {
-        if (eBPOIBHNPNHBuilder_ == null) {
-          eBPOIBHNPNH_ = null;
+      public Builder clearLackingResourcesInfo() {
+        if (lackingResourcesInfoBuilder_ == null) {
+          lackingResourcesInfo_ = null;
           onChanged();
         } else {
-          eBPOIBHNPNH_ = null;
-          eBPOIBHNPNHBuilder_ = null;
+          lackingResourcesInfo_ = null;
+          lackingResourcesInfoBuilder_ = null;
         }
 
         return this;
       }
       /**
-       * <code>.LackingResourceInfo EBPOIBHNPNH = 13;</code>
+       * <code>.LackingResourceInfo lacking_resources_info = 13;</code>
        */
-      public emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfo.Builder getEBPOIBHNPNHBuilder() {
+      public emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfo.Builder getLackingResourcesInfoBuilder() {
         
         onChanged();
-        return getEBPOIBHNPNHFieldBuilder().getBuilder();
+        return getLackingResourcesInfoFieldBuilder().getBuilder();
       }
       /**
-       * <code>.LackingResourceInfo EBPOIBHNPNH = 13;</code>
+       * <code>.LackingResourceInfo lacking_resources_info = 13;</code>
        */
-      public emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfoOrBuilder getEBPOIBHNPNHOrBuilder() {
-        if (eBPOIBHNPNHBuilder_ != null) {
-          return eBPOIBHNPNHBuilder_.getMessageOrBuilder();
+      public emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfoOrBuilder getLackingResourcesInfoOrBuilder() {
+        if (lackingResourcesInfoBuilder_ != null) {
+          return lackingResourcesInfoBuilder_.getMessageOrBuilder();
         } else {
-          return eBPOIBHNPNH_ == null ?
-              emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfo.getDefaultInstance() : eBPOIBHNPNH_;
+          return lackingResourcesInfo_ == null ?
+              emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfo.getDefaultInstance() : lackingResourcesInfo_;
         }
       }
       /**
-       * <code>.LackingResourceInfo EBPOIBHNPNH = 13;</code>
+       * <code>.LackingResourceInfo lacking_resources_info = 13;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfo, emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfo.Builder, emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfoOrBuilder> 
-          getEBPOIBHNPNHFieldBuilder() {
-        if (eBPOIBHNPNHBuilder_ == null) {
-          eBPOIBHNPNHBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+          getLackingResourcesInfoFieldBuilder() {
+        if (lackingResourcesInfoBuilder_ == null) {
+          lackingResourcesInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfo, emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfo.Builder, emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfoOrBuilder>(
-                  getEBPOIBHNPNH(),
+                  getLackingResourcesInfo(),
                   getParentForChildren(),
                   isClean());
-          eBPOIBHNPNH_ = null;
+          lackingResourcesInfo_ = null;
         }
-        return eBPOIBHNPNHBuilder_;
+        return lackingResourcesInfoBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -1699,18 +1759,7 @@ public final class QuestOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new Quest(input, extensionRegistry);
       }
     };
 
@@ -1745,15 +1794,15 @@ public final class QuestOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\013Quest.proto\032\031LackingResourceInfo.proto" +
-      "\"\251\002\n\005Quest\022\020\n\010quest_id\030\001 \001(\r\022\r\n\005state\030\002 " +
+      "\"\264\002\n\005Quest\022\020\n\010quest_id\030\001 \001(\r\022\r\n\005state\030\002 " +
       "\001(\r\022\022\n\nstart_time\030\004 \001(\r\022\021\n\tis_random\030\005 \001" +
       "(\010\022\027\n\017parent_quest_id\030\006 \001(\r\022\027\n\017quest_con" +
       "fig_id\030\007 \001(\r\022\027\n\017start_game_time\030\010 \001(\r\022\023\n" +
       "\013accept_time\030\t \001(\r\022\034\n\024finish_progress_li" +
       "st\030\n \003(\r\022\032\n\022fail_progress_list\030\013 \003(\r\022\023\n\013" +
-      "MLHFBAFCKIP\030\014 \003(\r\022)\n\013EBPOIBHNPNH\030\r \001(\0132\024" +
-      ".LackingResourceInfoB\033\n\031emu.grasscutter." +
-      "net.protob\006proto3"
+      "MLHFBAFCKIP\030\014 \003(\r\0224\n\026lacking_resources_i" +
+      "nfo\030\r \001(\0132\024.LackingResourceInfoB\033\n\031emu.g" +
+      "rasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1765,7 +1814,7 @@ public final class QuestOuterClass {
     internal_static_Quest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_Quest_descriptor,
-        new java.lang.String[] { "QuestId", "State", "StartTime", "IsRandom", "ParentQuestId", "QuestConfigId", "StartGameTime", "AcceptTime", "FinishProgressList", "FailProgressList", "MLHFBAFCKIP", "EBPOIBHNPNH", });
+        new java.lang.String[] { "QuestId", "State", "StartTime", "IsRandom", "ParentQuestId", "QuestConfigId", "StartGameTime", "AcceptTime", "FinishProgressList", "FailProgressList", "MLHFBAFCKIP", "LackingResourcesInfo", });
     emu.grasscutter.net.proto.LackingResourceInfoOuterClass.getDescriptor();
   }
 

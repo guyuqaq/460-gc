@@ -61,10 +61,6 @@ public final class GetAllMailRspOuterClass {
         int index);
   }
   /**
-   * <pre>
-   * CmdId: 22156
-   * </pre>
-   *
    * Protobuf type {@code GetAllMailRsp}
    */
   public static final class GetAllMailRsp extends
@@ -436,10 +432,6 @@ public final class GetAllMailRspOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 22156
-     * </pre>
-     *
      * Protobuf type {@code GetAllMailRsp}
      */
     public static final class Builder extends

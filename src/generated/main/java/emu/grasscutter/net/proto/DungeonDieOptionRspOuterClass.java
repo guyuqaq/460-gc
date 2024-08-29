@@ -42,10 +42,6 @@ public final class DungeonDieOptionRspOuterClass {
     emu.grasscutter.net.proto.PlayerDieOptionOuterClass.PlayerDieOption getDieOption();
   }
   /**
-   * <pre>
-   * CmdId: 28706
-   * </pre>
-   *
    * Protobuf type {@code DungeonDieOptionRsp}
    */
   public static final class DungeonDieOptionRsp extends
@@ -357,10 +353,6 @@ public final class DungeonDieOptionRspOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 28706
-     * </pre>
-     *
      * Protobuf type {@code DungeonDieOptionRsp}
      */
     public static final class Builder extends

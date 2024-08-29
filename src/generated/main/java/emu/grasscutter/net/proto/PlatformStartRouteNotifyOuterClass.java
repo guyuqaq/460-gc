@@ -19,7 +19,7 @@ public final class PlatformStartRouteNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 entity_id = 3;</code>
+     * <code>uint32 entity_id = 14;</code>
      * @return The entityId.
      */
     int getEntityId();
@@ -47,9 +47,8 @@ public final class PlatformStartRouteNotifyOuterClass {
   }
   /**
    * <pre>
-   * 4.7.0
-   * CmdId: 25562?
-   * Obf: PDPFPMMKOMC
+   * CmdId: 7427
+   * Obf: PPPKGDJOODM
    * </pre>
    *
    * Protobuf type {@code PlatformStartRouteNotify}
@@ -78,6 +77,66 @@ public final class PlatformStartRouteNotifyOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private PlatformStartRouteNotify(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 32: {
+
+              sceneTime_ = input.readUInt32();
+              break;
+            }
+            case 82: {
+              emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfo.Builder subBuilder = null;
+              if (platform_ != null) {
+                subBuilder = platform_.toBuilder();
+              }
+              platform_ = input.readMessage(emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfo.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(platform_);
+                platform_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 112: {
+
+              entityId_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.PlatformStartRouteNotifyOuterClass.internal_static_PlatformStartRouteNotify_descriptor;
@@ -91,10 +150,10 @@ public final class PlatformStartRouteNotifyOuterClass {
               emu.grasscutter.net.proto.PlatformStartRouteNotifyOuterClass.PlatformStartRouteNotify.class, emu.grasscutter.net.proto.PlatformStartRouteNotifyOuterClass.PlatformStartRouteNotify.Builder.class);
     }
 
-    public static final int ENTITY_ID_FIELD_NUMBER = 3;
+    public static final int ENTITY_ID_FIELD_NUMBER = 14;
     private int entityId_;
     /**
-     * <code>uint32 entity_id = 3;</code>
+     * <code>uint32 entity_id = 14;</code>
      * @return The entityId.
      */
     @java.lang.Override
@@ -153,16 +212,16 @@ public final class PlatformStartRouteNotifyOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (entityId_ != 0) {
-        output.writeUInt32(3, entityId_);
-      }
       if (sceneTime_ != 0) {
         output.writeUInt32(4, sceneTime_);
       }
       if (platform_ != null) {
         output.writeMessage(10, getPlatform());
       }
-      getUnknownFields().writeTo(output);
+      if (entityId_ != 0) {
+        output.writeUInt32(14, entityId_);
+      }
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -171,10 +230,6 @@ public final class PlatformStartRouteNotifyOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (entityId_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(3, entityId_);
-      }
       if (sceneTime_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(4, sceneTime_);
@@ -183,7 +238,11 @@ public final class PlatformStartRouteNotifyOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, getPlatform());
       }
-      size += getUnknownFields().getSerializedSize();
+      if (entityId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(14, entityId_);
+      }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -207,7 +266,7 @@ public final class PlatformStartRouteNotifyOuterClass {
         if (!getPlatform()
             .equals(other.getPlatform())) return false;
       }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -226,7 +285,7 @@ public final class PlatformStartRouteNotifyOuterClass {
         hash = (37 * hash) + PLATFORM_FIELD_NUMBER;
         hash = (53 * hash) + getPlatform().hashCode();
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -323,9 +382,8 @@ public final class PlatformStartRouteNotifyOuterClass {
     }
     /**
      * <pre>
-     * 4.7.0
-     * CmdId: 25562?
-     * Obf: PDPFPMMKOMC
+     * CmdId: 7427
+     * Obf: PPPKGDJOODM
      * </pre>
      *
      * Protobuf type {@code PlatformStartRouteNotify}
@@ -349,13 +407,18 @@ public final class PlatformStartRouteNotifyOuterClass {
 
       // Construct using emu.grasscutter.net.proto.PlatformStartRouteNotifyOuterClass.PlatformStartRouteNotify.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -460,7 +523,7 @@ public final class PlatformStartRouteNotifyOuterClass {
         if (other.hasPlatform()) {
           mergePlatform(other.getPlatform());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -475,53 +538,23 @@ public final class PlatformStartRouteNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.PlatformStartRouteNotifyOuterClass.PlatformStartRouteNotify parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 24: {
-                entityId_ = input.readUInt32();
-
-                break;
-              } // case 24
-              case 32: {
-                sceneTime_ = input.readUInt32();
-
-                break;
-              } // case 32
-              case 82: {
-                input.readMessage(
-                    getPlatformFieldBuilder().getBuilder(),
-                    extensionRegistry);
-
-                break;
-              } // case 82
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.PlatformStartRouteNotifyOuterClass.PlatformStartRouteNotify) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
 
       private int entityId_ ;
       /**
-       * <code>uint32 entity_id = 3;</code>
+       * <code>uint32 entity_id = 14;</code>
        * @return The entityId.
        */
       @java.lang.Override
@@ -529,7 +562,7 @@ public final class PlatformStartRouteNotifyOuterClass {
         return entityId_;
       }
       /**
-       * <code>uint32 entity_id = 3;</code>
+       * <code>uint32 entity_id = 14;</code>
        * @param value The entityId to set.
        * @return This builder for chaining.
        */
@@ -540,7 +573,7 @@ public final class PlatformStartRouteNotifyOuterClass {
         return this;
       }
       /**
-       * <code>uint32 entity_id = 3;</code>
+       * <code>uint32 entity_id = 14;</code>
        * @return This builder for chaining.
        */
       public Builder clearEntityId() {
@@ -732,18 +765,7 @@ public final class PlatformStartRouteNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new PlatformStartRouteNotify(input, extensionRegistry);
       }
     };
 
@@ -779,7 +801,7 @@ public final class PlatformStartRouteNotifyOuterClass {
     java.lang.String[] descriptorData = {
       "\n\036PlatformStartRouteNotify.proto\032\022Platfo" +
       "rmInfo.proto\"b\n\030PlatformStartRouteNotify" +
-      "\022\021\n\tentity_id\030\003 \001(\r\022\022\n\nscene_time\030\004 \001(\r\022" +
+      "\022\021\n\tentity_id\030\016 \001(\r\022\022\n\nscene_time\030\004 \001(\r\022" +
       "\037\n\010platform\030\n \001(\0132\r.PlatformInfoB\033\n\031emu." +
       "grasscutter.net.protob\006proto3"
     };

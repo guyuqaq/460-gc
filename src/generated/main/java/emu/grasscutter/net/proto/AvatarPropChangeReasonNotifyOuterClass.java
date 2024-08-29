@@ -55,6 +55,7 @@ public final class AvatarPropChangeReasonNotifyOuterClass {
   }
   /**
    * <pre>
+   * 4.7.0
    * CmdId: 3071
    * </pre>
    *
@@ -429,6 +430,7 @@ public final class AvatarPropChangeReasonNotifyOuterClass {
     }
     /**
      * <pre>
+     * 4.7.0
      * CmdId: 3071
      * </pre>
      *

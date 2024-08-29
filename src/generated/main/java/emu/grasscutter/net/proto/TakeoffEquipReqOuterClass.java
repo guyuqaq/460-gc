@@ -33,6 +33,7 @@ public final class TakeoffEquipReqOuterClass {
   /**
    * <pre>
    * 4.7.0
+   * CmdId: 26274
    * </pre>
    *
    * Protobuf type {@code TakeoffEquipReq}
@@ -60,6 +61,53 @@ public final class TakeoffEquipReqOuterClass {
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
+    }
+    private TakeoffEquipReq(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 40: {
+
+              avatarGuid_ = input.readUInt64();
+              break;
+            }
+            case 64: {
+
+              slot_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -116,7 +164,7 @@ public final class TakeoffEquipReqOuterClass {
       if (slot_ != 0) {
         output.writeUInt32(8, slot_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -133,7 +181,7 @@ public final class TakeoffEquipReqOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(8, slot_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -152,7 +200,7 @@ public final class TakeoffEquipReqOuterClass {
           != other.getAvatarGuid()) return false;
       if (getSlot()
           != other.getSlot()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -168,7 +216,7 @@ public final class TakeoffEquipReqOuterClass {
           getAvatarGuid());
       hash = (37 * hash) + SLOT_FIELD_NUMBER;
       hash = (53 * hash) + getSlot();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -266,6 +314,7 @@ public final class TakeoffEquipReqOuterClass {
     /**
      * <pre>
      * 4.7.0
+     * CmdId: 26274
      * </pre>
      *
      * Protobuf type {@code TakeoffEquipReq}
@@ -289,13 +338,18 @@ public final class TakeoffEquipReqOuterClass {
 
       // Construct using emu.grasscutter.net.proto.TakeoffEquipReqOuterClass.TakeoffEquipReq.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -386,7 +440,7 @@ public final class TakeoffEquipReqOuterClass {
         if (other.getSlot() != 0) {
           setSlot(other.getSlot());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -401,40 +455,17 @@ public final class TakeoffEquipReqOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.TakeoffEquipReqOuterClass.TakeoffEquipReq parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 40: {
-                avatarGuid_ = input.readUInt64();
-
-                break;
-              } // case 40
-              case 64: {
-                slot_ = input.readUInt32();
-
-                break;
-              } // case 64
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.TakeoffEquipReqOuterClass.TakeoffEquipReq) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
 
@@ -532,18 +563,7 @@ public final class TakeoffEquipReqOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new TakeoffEquipReq(input, extensionRegistry);
       }
     };
 

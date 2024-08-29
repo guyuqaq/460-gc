@@ -57,10 +57,6 @@ public final class DropItemReqOuterClass {
     long getGuid();
   }
   /**
-   * <pre>
-   * CmdId: 23432
-   * </pre>
-   *
    * Protobuf type {@code DropItemReq}
    */
   public static final class DropItemReq extends
@@ -428,10 +424,6 @@ public final class DropItemReqOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 23432
-     * </pre>
-     *
      * Protobuf type {@code DropItemReq}
      */
     public static final class Builder extends
@@ -905,8 +897,8 @@ public final class DropItemReqOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\021DropItemReq.proto\032\017StoreType.proto\032\014Ve" +
-      "ctor.proto\"`\n\013DropItemReq\022\024\n\003pos\030\016 \001(\0132\007" +
+      "\n\021DropItemReq.proto\032\014Vector.proto\032\017Store" +
+      "Type.proto\"`\n\013DropItemReq\022\024\n\003pos\030\016 \001(\0132\007" +
       ".Vector\022\036\n\nstore_type\030\013 \001(\0162\n.StoreType\022" +
       "\r\n\005count\030\r \001(\r\022\014\n\004guid\030\010 \001(\004B\033\n\031emu.gras" +
       "scutter.net.protob\006proto3"
@@ -914,8 +906,8 @@ public final class DropItemReqOuterClass {
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          emu.grasscutter.net.proto.StoreTypeOuterClass.getDescriptor(),
           emu.grasscutter.net.proto.VectorOuterClass.getDescriptor(),
+          emu.grasscutter.net.proto.StoreTypeOuterClass.getDescriptor(),
         });
     internal_static_DropItemReq_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -923,8 +915,8 @@ public final class DropItemReqOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_DropItemReq_descriptor,
         new java.lang.String[] { "Pos", "StoreType", "Count", "Guid", });
-    emu.grasscutter.net.proto.StoreTypeOuterClass.getDescriptor();
     emu.grasscutter.net.proto.VectorOuterClass.getDescriptor();
+    emu.grasscutter.net.proto.StoreTypeOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

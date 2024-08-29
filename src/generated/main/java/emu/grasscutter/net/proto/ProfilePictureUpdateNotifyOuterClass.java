@@ -36,10 +36,6 @@ public final class ProfilePictureUpdateNotifyOuterClass {
     int getSpecialProfilePictureList(int index);
   }
   /**
-   * <pre>
-   * CmdId: 5942
-   * </pre>
-   *
    * Protobuf type {@code ProfilePictureUpdateNotify}
    */
   public static final class ProfilePictureUpdateNotify extends
@@ -343,10 +339,6 @@ public final class ProfilePictureUpdateNotifyOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 5942
-     * </pre>
-     *
      * Protobuf type {@code ProfilePictureUpdateNotify}
      */
     public static final class Builder extends

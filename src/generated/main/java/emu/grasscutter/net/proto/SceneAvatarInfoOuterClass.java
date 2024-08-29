@@ -308,10 +308,10 @@ public final class SceneAvatarInfoOuterClass {
     int getAnimHash();
 
     /**
-     * <code>uint32 trace_effect_id = 23;</code>
-     * @return The traceEffectId.
+     * <code>uint32 KCINBOMOIGL = 23;</code>
+     * @return The kCINBOMOIGL.
      */
-    int getTraceEffectId();
+    int getKCINBOMOIGL();
   }
   /**
    * Protobuf type {@code SceneAvatarInfo}
@@ -345,6 +345,284 @@ public final class SceneAvatarInfoOuterClass {
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
+    }
+    private SceneAvatarInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              uid_ = input.readUInt32();
+              break;
+            }
+            case 16: {
+
+              avatarId_ = input.readUInt32();
+              break;
+            }
+            case 24: {
+
+              guid_ = input.readUInt64();
+              break;
+            }
+            case 32: {
+
+              peerId_ = input.readUInt32();
+              break;
+            }
+            case 40: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                equipIdList_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              equipIdList_.addInt(input.readUInt32());
+              break;
+            }
+            case 42: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
+                equipIdList_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                equipIdList_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 48: {
+
+              skillDepotId_ = input.readUInt32();
+              break;
+            }
+            case 56: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                talentIdList_ = newIntList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              talentIdList_.addInt(input.readUInt32());
+              break;
+            }
+            case 58: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000002) != 0) && input.getBytesUntilLimit() > 0) {
+                talentIdList_ = newIntList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                talentIdList_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 66: {
+              emu.grasscutter.net.proto.SceneWeaponInfoOuterClass.SceneWeaponInfo.Builder subBuilder = null;
+              if (weapon_ != null) {
+                subBuilder = weapon_.toBuilder();
+              }
+              weapon_ = input.readMessage(emu.grasscutter.net.proto.SceneWeaponInfoOuterClass.SceneWeaponInfo.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(weapon_);
+                weapon_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 74: {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                reliquaryList_ = new java.util.ArrayList<emu.grasscutter.net.proto.SceneReliquaryInfoOuterClass.SceneReliquaryInfo>();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              reliquaryList_.add(
+                  input.readMessage(emu.grasscutter.net.proto.SceneReliquaryInfoOuterClass.SceneReliquaryInfo.parser(), extensionRegistry));
+              break;
+            }
+            case 88: {
+
+              coreProudSkillLevel_ = input.readUInt32();
+              break;
+            }
+            case 96: {
+              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
+                inherentProudSkillList_ = newIntList();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              inherentProudSkillList_.addInt(input.readUInt32());
+              break;
+            }
+            case 98: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000008) != 0) && input.getBytesUntilLimit() > 0) {
+                inherentProudSkillList_ = newIntList();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                inherentProudSkillList_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 106: {
+              if (!((mutable_bitField0_ & 0x00000010) != 0)) {
+                skillLevelMap_ = com.google.protobuf.MapField.newMapField(
+                    SkillLevelMapDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000010;
+              }
+              com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
+              skillLevelMap__ = input.readMessage(
+                  SkillLevelMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              skillLevelMap_.getMutableMap().put(
+                  skillLevelMap__.getKey(), skillLevelMap__.getValue());
+              break;
+            }
+            case 114: {
+              if (!((mutable_bitField0_ & 0x00000020) != 0)) {
+                proudSkillExtraLevelMap_ = com.google.protobuf.MapField.newMapField(
+                    ProudSkillExtraLevelMapDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000020;
+              }
+              com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
+              proudSkillExtraLevelMap__ = input.readMessage(
+                  ProudSkillExtraLevelMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              proudSkillExtraLevelMap_.getMutableMap().put(
+                  proudSkillExtraLevelMap__.getKey(), proudSkillExtraLevelMap__.getValue());
+              break;
+            }
+            case 122: {
+              if (!((mutable_bitField0_ & 0x00000040) != 0)) {
+                serverBuffList_ = new java.util.ArrayList<emu.grasscutter.net.proto.ServerBuffOuterClass.ServerBuff>();
+                mutable_bitField0_ |= 0x00000040;
+              }
+              serverBuffList_.add(
+                  input.readMessage(emu.grasscutter.net.proto.ServerBuffOuterClass.ServerBuff.parser(), extensionRegistry));
+              break;
+            }
+            case 128: {
+              if (!((mutable_bitField0_ & 0x00000080) != 0)) {
+                teamResonanceList_ = newIntList();
+                mutable_bitField0_ |= 0x00000080;
+              }
+              teamResonanceList_.addInt(input.readUInt32());
+              break;
+            }
+            case 130: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000080) != 0) && input.getBytesUntilLimit() > 0) {
+                teamResonanceList_ = newIntList();
+                mutable_bitField0_ |= 0x00000080;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                teamResonanceList_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 136: {
+
+              wearingFlycloakId_ = input.readUInt32();
+              break;
+            }
+            case 144: {
+
+              bornTime_ = input.readUInt32();
+              break;
+            }
+            case 152: {
+
+              costumeId_ = input.readUInt32();
+              break;
+            }
+            case 162: {
+              emu.grasscutter.net.proto.CurVehicleInfoOuterClass.CurVehicleInfo.Builder subBuilder = null;
+              if (curVehicleInfo_ != null) {
+                subBuilder = curVehicleInfo_.toBuilder();
+              }
+              curVehicleInfo_ = input.readMessage(emu.grasscutter.net.proto.CurVehicleInfoOuterClass.CurVehicleInfo.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(curVehicleInfo_);
+                curVehicleInfo_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 170: {
+              emu.grasscutter.net.proto.AvatarExcelInfoOuterClass.AvatarExcelInfo.Builder subBuilder = null;
+              if (excelInfo_ != null) {
+                subBuilder = excelInfo_.toBuilder();
+              }
+              excelInfo_ = input.readMessage(emu.grasscutter.net.proto.AvatarExcelInfoOuterClass.AvatarExcelInfo.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(excelInfo_);
+                excelInfo_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 176: {
+
+              animHash_ = input.readUInt32();
+              break;
+            }
+            case 184: {
+
+              kCINBOMOIGL_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          equipIdList_.makeImmutable(); // C
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          talentIdList_.makeImmutable(); // C
+        }
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
+          reliquaryList_ = java.util.Collections.unmodifiableList(reliquaryList_);
+        }
+        if (((mutable_bitField0_ & 0x00000008) != 0)) {
+          inherentProudSkillList_.makeImmutable(); // C
+        }
+        if (((mutable_bitField0_ & 0x00000040) != 0)) {
+          serverBuffList_ = java.util.Collections.unmodifiableList(serverBuffList_);
+        }
+        if (((mutable_bitField0_ & 0x00000080) != 0)) {
+          teamResonanceList_.makeImmutable(); // C
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -915,15 +1193,15 @@ public final class SceneAvatarInfoOuterClass {
       return animHash_;
     }
 
-    public static final int TRACE_EFFECT_ID_FIELD_NUMBER = 23;
-    private int traceEffectId_;
+    public static final int KCINBOMOIGL_FIELD_NUMBER = 23;
+    private int kCINBOMOIGL_;
     /**
-     * <code>uint32 trace_effect_id = 23;</code>
-     * @return The traceEffectId.
+     * <code>uint32 KCINBOMOIGL = 23;</code>
+     * @return The kCINBOMOIGL.
      */
     @java.lang.Override
-    public int getTraceEffectId() {
-      return traceEffectId_;
+    public int getKCINBOMOIGL() {
+      return kCINBOMOIGL_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -1026,10 +1304,10 @@ public final class SceneAvatarInfoOuterClass {
       if (animHash_ != 0) {
         output.writeUInt32(22, animHash_);
       }
-      if (traceEffectId_ != 0) {
-        output.writeUInt32(23, traceEffectId_);
+      if (kCINBOMOIGL_ != 0) {
+        output.writeUInt32(23, kCINBOMOIGL_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -1174,11 +1452,11 @@ public final class SceneAvatarInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(22, animHash_);
       }
-      if (traceEffectId_ != 0) {
+      if (kCINBOMOIGL_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(23, traceEffectId_);
+          .computeUInt32Size(23, kCINBOMOIGL_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -1244,9 +1522,9 @@ public final class SceneAvatarInfoOuterClass {
       }
       if (getAnimHash()
           != other.getAnimHash()) return false;
-      if (getTraceEffectId()
-          != other.getTraceEffectId()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (getKCINBOMOIGL()
+          != other.getKCINBOMOIGL()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -1322,9 +1600,9 @@ public final class SceneAvatarInfoOuterClass {
       }
       hash = (37 * hash) + ANIM_HASH_FIELD_NUMBER;
       hash = (53 * hash) + getAnimHash();
-      hash = (37 * hash) + TRACE_EFFECT_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getTraceEffectId();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (37 * hash) + KCINBOMOIGL_FIELD_NUMBER;
+      hash = (53 * hash) + getKCINBOMOIGL();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -1467,13 +1745,20 @@ public final class SceneAvatarInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.SceneAvatarInfoOuterClass.SceneAvatarInfo.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getReliquaryListFieldBuilder();
+          getServerBuffListFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1500,11 +1785,10 @@ public final class SceneAvatarInfoOuterClass {
         }
         if (reliquaryListBuilder_ == null) {
           reliquaryList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
         } else {
-          reliquaryList_ = null;
           reliquaryListBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000004);
         coreProudSkillLevel_ = 0;
 
         inherentProudSkillList_ = emptyIntList();
@@ -1513,11 +1797,10 @@ public final class SceneAvatarInfoOuterClass {
         internalGetMutableProudSkillExtraLevelMap().clear();
         if (serverBuffListBuilder_ == null) {
           serverBuffList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000040);
         } else {
-          serverBuffList_ = null;
           serverBuffListBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000040);
         teamResonanceList_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000080);
         wearingFlycloakId_ = 0;
@@ -1540,7 +1823,7 @@ public final class SceneAvatarInfoOuterClass {
         }
         animHash_ = 0;
 
-        traceEffectId_ = 0;
+        kCINBOMOIGL_ = 0;
 
         return this;
       }
@@ -1636,7 +1919,7 @@ public final class SceneAvatarInfoOuterClass {
           result.excelInfo_ = excelInfoBuilder_.build();
         }
         result.animHash_ = animHash_;
-        result.traceEffectId_ = traceEffectId_;
+        result.kCINBOMOIGL_ = kCINBOMOIGL_;
         onBuilt();
         return result;
       }
@@ -1820,10 +2103,10 @@ public final class SceneAvatarInfoOuterClass {
         if (other.getAnimHash() != 0) {
           setAnimHash(other.getAnimHash());
         }
-        if (other.getTraceEffectId() != 0) {
-          setTraceEffectId(other.getTraceEffectId());
+        if (other.getKCINBOMOIGL() != 0) {
+          setKCINBOMOIGL(other.getKCINBOMOIGL());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -1838,212 +2121,17 @@ public final class SceneAvatarInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.SceneAvatarInfoOuterClass.SceneAvatarInfo parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                uid_ = input.readUInt32();
-
-                break;
-              } // case 8
-              case 16: {
-                avatarId_ = input.readUInt32();
-
-                break;
-              } // case 16
-              case 24: {
-                guid_ = input.readUInt64();
-
-                break;
-              } // case 24
-              case 32: {
-                peerId_ = input.readUInt32();
-
-                break;
-              } // case 32
-              case 40: {
-                int v = input.readUInt32();
-                ensureEquipIdListIsMutable();
-                equipIdList_.addInt(v);
-                break;
-              } // case 40
-              case 42: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureEquipIdListIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  equipIdList_.addInt(input.readUInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 42
-              case 48: {
-                skillDepotId_ = input.readUInt32();
-
-                break;
-              } // case 48
-              case 56: {
-                int v = input.readUInt32();
-                ensureTalentIdListIsMutable();
-                talentIdList_.addInt(v);
-                break;
-              } // case 56
-              case 58: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureTalentIdListIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  talentIdList_.addInt(input.readUInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 58
-              case 66: {
-                input.readMessage(
-                    getWeaponFieldBuilder().getBuilder(),
-                    extensionRegistry);
-
-                break;
-              } // case 66
-              case 74: {
-                emu.grasscutter.net.proto.SceneReliquaryInfoOuterClass.SceneReliquaryInfo m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.SceneReliquaryInfoOuterClass.SceneReliquaryInfo.parser(),
-                        extensionRegistry);
-                if (reliquaryListBuilder_ == null) {
-                  ensureReliquaryListIsMutable();
-                  reliquaryList_.add(m);
-                } else {
-                  reliquaryListBuilder_.addMessage(m);
-                }
-                break;
-              } // case 74
-              case 88: {
-                coreProudSkillLevel_ = input.readUInt32();
-
-                break;
-              } // case 88
-              case 96: {
-                int v = input.readUInt32();
-                ensureInherentProudSkillListIsMutable();
-                inherentProudSkillList_.addInt(v);
-                break;
-              } // case 96
-              case 98: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureInherentProudSkillListIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  inherentProudSkillList_.addInt(input.readUInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 98
-              case 106: {
-                com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
-                skillLevelMap__ = input.readMessage(
-                    SkillLevelMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-                internalGetMutableSkillLevelMap().getMutableMap().put(
-                    skillLevelMap__.getKey(), skillLevelMap__.getValue());
-                break;
-              } // case 106
-              case 114: {
-                com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
-                proudSkillExtraLevelMap__ = input.readMessage(
-                    ProudSkillExtraLevelMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-                internalGetMutableProudSkillExtraLevelMap().getMutableMap().put(
-                    proudSkillExtraLevelMap__.getKey(), proudSkillExtraLevelMap__.getValue());
-                break;
-              } // case 114
-              case 122: {
-                emu.grasscutter.net.proto.ServerBuffOuterClass.ServerBuff m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.ServerBuffOuterClass.ServerBuff.parser(),
-                        extensionRegistry);
-                if (serverBuffListBuilder_ == null) {
-                  ensureServerBuffListIsMutable();
-                  serverBuffList_.add(m);
-                } else {
-                  serverBuffListBuilder_.addMessage(m);
-                }
-                break;
-              } // case 122
-              case 128: {
-                int v = input.readUInt32();
-                ensureTeamResonanceListIsMutable();
-                teamResonanceList_.addInt(v);
-                break;
-              } // case 128
-              case 130: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureTeamResonanceListIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  teamResonanceList_.addInt(input.readUInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 130
-              case 136: {
-                wearingFlycloakId_ = input.readUInt32();
-
-                break;
-              } // case 136
-              case 144: {
-                bornTime_ = input.readUInt32();
-
-                break;
-              } // case 144
-              case 152: {
-                costumeId_ = input.readUInt32();
-
-                break;
-              } // case 152
-              case 162: {
-                input.readMessage(
-                    getCurVehicleInfoFieldBuilder().getBuilder(),
-                    extensionRegistry);
-
-                break;
-              } // case 162
-              case 170: {
-                input.readMessage(
-                    getExcelInfoFieldBuilder().getBuilder(),
-                    extensionRegistry);
-
-                break;
-              } // case 170
-              case 176: {
-                animHash_ = input.readUInt32();
-
-                break;
-              } // case 176
-              case 184: {
-                traceEffectId_ = input.readUInt32();
-
-                break;
-              } // case 184
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.SceneAvatarInfoOuterClass.SceneAvatarInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -3767,33 +3855,33 @@ public final class SceneAvatarInfoOuterClass {
         return this;
       }
 
-      private int traceEffectId_ ;
+      private int kCINBOMOIGL_ ;
       /**
-       * <code>uint32 trace_effect_id = 23;</code>
-       * @return The traceEffectId.
+       * <code>uint32 KCINBOMOIGL = 23;</code>
+       * @return The kCINBOMOIGL.
        */
       @java.lang.Override
-      public int getTraceEffectId() {
-        return traceEffectId_;
+      public int getKCINBOMOIGL() {
+        return kCINBOMOIGL_;
       }
       /**
-       * <code>uint32 trace_effect_id = 23;</code>
-       * @param value The traceEffectId to set.
+       * <code>uint32 KCINBOMOIGL = 23;</code>
+       * @param value The kCINBOMOIGL to set.
        * @return This builder for chaining.
        */
-      public Builder setTraceEffectId(int value) {
+      public Builder setKCINBOMOIGL(int value) {
         
-        traceEffectId_ = value;
+        kCINBOMOIGL_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 trace_effect_id = 23;</code>
+       * <code>uint32 KCINBOMOIGL = 23;</code>
        * @return This builder for chaining.
        */
-      public Builder clearTraceEffectId() {
+      public Builder clearKCINBOMOIGL() {
         
-        traceEffectId_ = 0;
+        kCINBOMOIGL_ = 0;
         onChanged();
         return this;
       }
@@ -3830,18 +3918,7 @@ public final class SceneAvatarInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new SceneAvatarInfo(input, extensionRegistry);
       }
     };
 
@@ -3888,7 +3965,7 @@ public final class SceneAvatarInfoOuterClass {
       "\n\025SceneAvatarInfo.proto\032\025SceneWeaponInfo" +
       ".proto\032\030SceneReliquaryInfo.proto\032\020Server" +
       "Buff.proto\032\024CurVehicleInfo.proto\032\025Avatar" +
-      "ExcelInfo.proto\"\266\006\n\017SceneAvatarInfo\022\013\n\003u" +
+      "ExcelInfo.proto\"\262\006\n\017SceneAvatarInfo\022\013\n\003u" +
       "id\030\001 \001(\r\022\021\n\tavatar_id\030\002 \001(\r\022\014\n\004guid\030\003 \001(" +
       "\004\022\017\n\007peer_id\030\004 \001(\r\022\025\n\requip_id_list\030\005 \003(" +
       "\r\022\026\n\016skill_depot_id\030\006 \001(\r\022\026\n\016talent_id_l" +
@@ -3905,11 +3982,11 @@ public final class SceneAvatarInfoOuterClass {
       "\n\tborn_time\030\022 \001(\r\022\022\n\ncostume_id\030\023 \001(\r\022)\n" +
       "\020cur_vehicle_info\030\024 \001(\0132\017.CurVehicleInfo" +
       "\022$\n\nexcel_info\030\025 \001(\0132\020.AvatarExcelInfo\022\021" +
-      "\n\tanim_hash\030\026 \001(\r\022\027\n\017trace_effect_id\030\027 \001" +
-      "(\r\0324\n\022SkillLevelMapEntry\022\013\n\003key\030\001 \001(\r\022\r\n" +
-      "\005value\030\002 \001(\r:\0028\001\032>\n\034ProudSkillExtraLevel" +
-      "MapEntry\022\013\n\003key\030\001 \001(\r\022\r\n\005value\030\002 \001(\r:\0028\001" +
-      "B\033\n\031emu.grasscutter.net.protob\006proto3"
+      "\n\tanim_hash\030\026 \001(\r\022\023\n\013KCINBOMOIGL\030\027 \001(\r\0324" +
+      "\n\022SkillLevelMapEntry\022\013\n\003key\030\001 \001(\r\022\r\n\005val" +
+      "ue\030\002 \001(\r:\0028\001\032>\n\034ProudSkillExtraLevelMapE" +
+      "ntry\022\013\n\003key\030\001 \001(\r\022\r\n\005value\030\002 \001(\r:\0028\001B\033\n\031" +
+      "emu.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3925,7 +4002,7 @@ public final class SceneAvatarInfoOuterClass {
     internal_static_SceneAvatarInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_SceneAvatarInfo_descriptor,
-        new java.lang.String[] { "Uid", "AvatarId", "Guid", "PeerId", "EquipIdList", "SkillDepotId", "TalentIdList", "Weapon", "ReliquaryList", "CoreProudSkillLevel", "InherentProudSkillList", "SkillLevelMap", "ProudSkillExtraLevelMap", "ServerBuffList", "TeamResonanceList", "WearingFlycloakId", "BornTime", "CostumeId", "CurVehicleInfo", "ExcelInfo", "AnimHash", "TraceEffectId", });
+        new java.lang.String[] { "Uid", "AvatarId", "Guid", "PeerId", "EquipIdList", "SkillDepotId", "TalentIdList", "Weapon", "ReliquaryList", "CoreProudSkillLevel", "InherentProudSkillList", "SkillLevelMap", "ProudSkillExtraLevelMap", "ServerBuffList", "TeamResonanceList", "WearingFlycloakId", "BornTime", "CostumeId", "CurVehicleInfo", "ExcelInfo", "AnimHash", "KCINBOMOIGL", });
     internal_static_SceneAvatarInfo_SkillLevelMapEntry_descriptor =
       internal_static_SceneAvatarInfo_descriptor.getNestedTypes().get(0);
     internal_static_SceneAvatarInfo_SkillLevelMapEntry_fieldAccessorTable = new

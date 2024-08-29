@@ -20,7 +20,7 @@ public final class SceneEntityAiInfoOuterClass {
 
     /**
      * <pre>
-     * -- remove
+     *old
      * </pre>
      *
      * <code>bool is_ai_open = 1;</code>
@@ -30,7 +30,7 @@ public final class SceneEntityAiInfoOuterClass {
 
     /**
      * <pre>
-     * -- remove
+     *old
      * </pre>
      *
      * <code>.Vector born_pos = 2;</code>
@@ -39,7 +39,7 @@ public final class SceneEntityAiInfoOuterClass {
     boolean hasBornPos();
     /**
      * <pre>
-     * -- remove
+     *old
      * </pre>
      *
      * <code>.Vector born_pos = 2;</code>
@@ -48,7 +48,7 @@ public final class SceneEntityAiInfoOuterClass {
     emu.grasscutter.net.proto.VectorOuterClass.Vector getBornPos();
     /**
      * <pre>
-     * -- remove
+     *old
      * </pre>
      *
      * <code>.Vector born_pos = 2;</code>
@@ -173,10 +173,10 @@ public final class SceneEntityAiInfoOuterClass {
         int key);
 
     /**
-     * <code>uint32 AJFKKOCIGHA = 7;</code>
-     * @return The aJFKKOCIGHA.
+     * <code>uint32 cur_tactic = 7;</code>
+     * @return The curTactic.
      */
-    int getAJFKKOCIGHA();
+    int getCurTactic();
 
     /**
      * <code>bool AADJDKIFENL = 8;</code>
@@ -185,6 +185,11 @@ public final class SceneEntityAiInfoOuterClass {
     boolean getAADJDKIFENL();
   }
   /**
+   * <pre>
+   * 5.0.0
+   * CmdId: 
+   * </pre>
+   *
    * Protobuf type {@code SceneEntityAiInfo}
    */
   public static final class SceneEntityAiInfo extends
@@ -210,6 +215,124 @@ public final class SceneEntityAiInfoOuterClass {
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
+    }
+    private SceneEntityAiInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              isAiOpen_ = input.readBool();
+              break;
+            }
+            case 18: {
+              emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder subBuilder = null;
+              if (bornPos_ != null) {
+                subBuilder = bornPos_.toBuilder();
+              }
+              bornPos_ = input.readMessage(emu.grasscutter.net.proto.VectorOuterClass.Vector.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(bornPos_);
+                bornPos_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                skillCdMap_ = com.google.protobuf.MapField.newMapField(
+                    SkillCdMapDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
+              skillCdMap__ = input.readMessage(
+                  SkillCdMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              skillCdMap_.getMutableMap().put(
+                  skillCdMap__.getKey(), skillCdMap__.getValue());
+              break;
+            }
+            case 34: {
+              emu.grasscutter.net.proto.ServantInfoOuterClass.ServantInfo.Builder subBuilder = null;
+              if (servantInfo_ != null) {
+                subBuilder = servantInfo_.toBuilder();
+              }
+              servantInfo_ = input.readMessage(emu.grasscutter.net.proto.ServantInfoOuterClass.ServantInfo.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(servantInfo_);
+                servantInfo_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 42: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                aiThreatMap_ = com.google.protobuf.MapField.newMapField(
+                    AiThreatMapDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000002;
+              }
+              com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
+              aiThreatMap__ = input.readMessage(
+                  AiThreatMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              aiThreatMap_.getMutableMap().put(
+                  aiThreatMap__.getKey(), aiThreatMap__.getValue());
+              break;
+            }
+            case 50: {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                skillGroupCdMap_ = com.google.protobuf.MapField.newMapField(
+                    SkillGroupCdMapDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000004;
+              }
+              com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
+              skillGroupCdMap__ = input.readMessage(
+                  SkillGroupCdMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              skillGroupCdMap_.getMutableMap().put(
+                  skillGroupCdMap__.getKey(), skillGroupCdMap__.getValue());
+              break;
+            }
+            case 56: {
+
+              curTactic_ = input.readUInt32();
+              break;
+            }
+            case 64: {
+
+              aADJDKIFENL_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -244,7 +367,7 @@ public final class SceneEntityAiInfoOuterClass {
     private boolean isAiOpen_;
     /**
      * <pre>
-     * -- remove
+     *old
      * </pre>
      *
      * <code>bool is_ai_open = 1;</code>
@@ -259,7 +382,7 @@ public final class SceneEntityAiInfoOuterClass {
     private emu.grasscutter.net.proto.VectorOuterClass.Vector bornPos_;
     /**
      * <pre>
-     * -- remove
+     *old
      * </pre>
      *
      * <code>.Vector born_pos = 2;</code>
@@ -271,7 +394,7 @@ public final class SceneEntityAiInfoOuterClass {
     }
     /**
      * <pre>
-     * -- remove
+     *old
      * </pre>
      *
      * <code>.Vector born_pos = 2;</code>
@@ -283,7 +406,7 @@ public final class SceneEntityAiInfoOuterClass {
     }
     /**
      * <pre>
-     * -- remove
+     *old
      * </pre>
      *
      * <code>.Vector born_pos = 2;</code>
@@ -562,15 +685,15 @@ public final class SceneEntityAiInfoOuterClass {
       return map.get(key);
     }
 
-    public static final int AJFKKOCIGHA_FIELD_NUMBER = 7;
-    private int aJFKKOCIGHA_;
+    public static final int CUR_TACTIC_FIELD_NUMBER = 7;
+    private int curTactic_;
     /**
-     * <code>uint32 AJFKKOCIGHA = 7;</code>
-     * @return The aJFKKOCIGHA.
+     * <code>uint32 cur_tactic = 7;</code>
+     * @return The curTactic.
      */
     @java.lang.Override
-    public int getAJFKKOCIGHA() {
-      return aJFKKOCIGHA_;
+    public int getCurTactic() {
+      return curTactic_;
     }
 
     public static final int AADJDKIFENL_FIELD_NUMBER = 8;
@@ -625,13 +748,13 @@ public final class SceneEntityAiInfoOuterClass {
           internalGetSkillGroupCdMap(),
           SkillGroupCdMapDefaultEntryHolder.defaultEntry,
           6);
-      if (aJFKKOCIGHA_ != 0) {
-        output.writeUInt32(7, aJFKKOCIGHA_);
+      if (curTactic_ != 0) {
+        output.writeUInt32(7, curTactic_);
       }
       if (aADJDKIFENL_ != false) {
         output.writeBool(8, aADJDKIFENL_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -682,15 +805,15 @@ public final class SceneEntityAiInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(6, skillGroupCdMap__);
       }
-      if (aJFKKOCIGHA_ != 0) {
+      if (curTactic_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(7, aJFKKOCIGHA_);
+          .computeUInt32Size(7, curTactic_);
       }
       if (aADJDKIFENL_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(8, aADJDKIFENL_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -723,11 +846,11 @@ public final class SceneEntityAiInfoOuterClass {
           other.internalGetAiThreatMap())) return false;
       if (!internalGetSkillGroupCdMap().equals(
           other.internalGetSkillGroupCdMap())) return false;
-      if (getAJFKKOCIGHA()
-          != other.getAJFKKOCIGHA()) return false;
+      if (getCurTactic()
+          != other.getCurTactic()) return false;
       if (getAADJDKIFENL()
           != other.getAADJDKIFENL()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -761,12 +884,12 @@ public final class SceneEntityAiInfoOuterClass {
         hash = (37 * hash) + SKILL_GROUP_CD_MAP_FIELD_NUMBER;
         hash = (53 * hash) + internalGetSkillGroupCdMap().hashCode();
       }
-      hash = (37 * hash) + AJFKKOCIGHA_FIELD_NUMBER;
-      hash = (53 * hash) + getAJFKKOCIGHA();
+      hash = (37 * hash) + CUR_TACTIC_FIELD_NUMBER;
+      hash = (53 * hash) + getCurTactic();
       hash = (37 * hash) + AADJDKIFENL_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getAADJDKIFENL());
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -862,6 +985,11 @@ public final class SceneEntityAiInfoOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * 5.0.0
+     * CmdId: 
+     * </pre>
+     *
      * Protobuf type {@code SceneEntityAiInfo}
      */
     public static final class Builder extends
@@ -913,13 +1041,18 @@ public final class SceneEntityAiInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.SceneEntityAiInfoOuterClass.SceneEntityAiInfo.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -941,7 +1074,7 @@ public final class SceneEntityAiInfoOuterClass {
         }
         internalGetMutableAiThreatMap().clear();
         internalGetMutableSkillGroupCdMap().clear();
-        aJFKKOCIGHA_ = 0;
+        curTactic_ = 0;
 
         aADJDKIFENL_ = false;
 
@@ -989,7 +1122,7 @@ public final class SceneEntityAiInfoOuterClass {
         result.aiThreatMap_.makeImmutable();
         result.skillGroupCdMap_ = internalGetSkillGroupCdMap();
         result.skillGroupCdMap_.makeImmutable();
-        result.aJFKKOCIGHA_ = aJFKKOCIGHA_;
+        result.curTactic_ = curTactic_;
         result.aADJDKIFENL_ = aADJDKIFENL_;
         onBuilt();
         return result;
@@ -1054,13 +1187,13 @@ public final class SceneEntityAiInfoOuterClass {
             other.internalGetAiThreatMap());
         internalGetMutableSkillGroupCdMap().mergeFrom(
             other.internalGetSkillGroupCdMap());
-        if (other.getAJFKKOCIGHA() != 0) {
-          setAJFKKOCIGHA(other.getAJFKKOCIGHA());
+        if (other.getCurTactic() != 0) {
+          setCurTactic(other.getCurTactic());
         }
         if (other.getAADJDKIFENL() != false) {
           setAADJDKIFENL(other.getAADJDKIFENL());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -1075,83 +1208,17 @@ public final class SceneEntityAiInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.SceneEntityAiInfoOuterClass.SceneEntityAiInfo parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                isAiOpen_ = input.readBool();
-
-                break;
-              } // case 8
-              case 18: {
-                input.readMessage(
-                    getBornPosFieldBuilder().getBuilder(),
-                    extensionRegistry);
-
-                break;
-              } // case 18
-              case 26: {
-                com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
-                skillCdMap__ = input.readMessage(
-                    SkillCdMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-                internalGetMutableSkillCdMap().getMutableMap().put(
-                    skillCdMap__.getKey(), skillCdMap__.getValue());
-                break;
-              } // case 26
-              case 34: {
-                input.readMessage(
-                    getServantInfoFieldBuilder().getBuilder(),
-                    extensionRegistry);
-
-                break;
-              } // case 34
-              case 42: {
-                com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
-                aiThreatMap__ = input.readMessage(
-                    AiThreatMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-                internalGetMutableAiThreatMap().getMutableMap().put(
-                    aiThreatMap__.getKey(), aiThreatMap__.getValue());
-                break;
-              } // case 42
-              case 50: {
-                com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
-                skillGroupCdMap__ = input.readMessage(
-                    SkillGroupCdMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-                internalGetMutableSkillGroupCdMap().getMutableMap().put(
-                    skillGroupCdMap__.getKey(), skillGroupCdMap__.getValue());
-                break;
-              } // case 50
-              case 56: {
-                aJFKKOCIGHA_ = input.readUInt32();
-
-                break;
-              } // case 56
-              case 64: {
-                aADJDKIFENL_ = input.readBool();
-
-                break;
-              } // case 64
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.SceneEntityAiInfoOuterClass.SceneEntityAiInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -1159,7 +1226,7 @@ public final class SceneEntityAiInfoOuterClass {
       private boolean isAiOpen_ ;
       /**
        * <pre>
-       * -- remove
+       *old
        * </pre>
        *
        * <code>bool is_ai_open = 1;</code>
@@ -1171,7 +1238,7 @@ public final class SceneEntityAiInfoOuterClass {
       }
       /**
        * <pre>
-       * -- remove
+       *old
        * </pre>
        *
        * <code>bool is_ai_open = 1;</code>
@@ -1186,7 +1253,7 @@ public final class SceneEntityAiInfoOuterClass {
       }
       /**
        * <pre>
-       * -- remove
+       *old
        * </pre>
        *
        * <code>bool is_ai_open = 1;</code>
@@ -1204,7 +1271,7 @@ public final class SceneEntityAiInfoOuterClass {
           emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder> bornPosBuilder_;
       /**
        * <pre>
-       * -- remove
+       *old
        * </pre>
        *
        * <code>.Vector born_pos = 2;</code>
@@ -1215,7 +1282,7 @@ public final class SceneEntityAiInfoOuterClass {
       }
       /**
        * <pre>
-       * -- remove
+       *old
        * </pre>
        *
        * <code>.Vector born_pos = 2;</code>
@@ -1230,7 +1297,7 @@ public final class SceneEntityAiInfoOuterClass {
       }
       /**
        * <pre>
-       * -- remove
+       *old
        * </pre>
        *
        * <code>.Vector born_pos = 2;</code>
@@ -1250,7 +1317,7 @@ public final class SceneEntityAiInfoOuterClass {
       }
       /**
        * <pre>
-       * -- remove
+       *old
        * </pre>
        *
        * <code>.Vector born_pos = 2;</code>
@@ -1268,7 +1335,7 @@ public final class SceneEntityAiInfoOuterClass {
       }
       /**
        * <pre>
-       * -- remove
+       *old
        * </pre>
        *
        * <code>.Vector born_pos = 2;</code>
@@ -1290,7 +1357,7 @@ public final class SceneEntityAiInfoOuterClass {
       }
       /**
        * <pre>
-       * -- remove
+       *old
        * </pre>
        *
        * <code>.Vector born_pos = 2;</code>
@@ -1308,7 +1375,7 @@ public final class SceneEntityAiInfoOuterClass {
       }
       /**
        * <pre>
-       * -- remove
+       *old
        * </pre>
        *
        * <code>.Vector born_pos = 2;</code>
@@ -1320,7 +1387,7 @@ public final class SceneEntityAiInfoOuterClass {
       }
       /**
        * <pre>
-       * -- remove
+       *old
        * </pre>
        *
        * <code>.Vector born_pos = 2;</code>
@@ -1335,7 +1402,7 @@ public final class SceneEntityAiInfoOuterClass {
       }
       /**
        * <pre>
-       * -- remove
+       *old
        * </pre>
        *
        * <code>.Vector born_pos = 2;</code>
@@ -1857,33 +1924,33 @@ public final class SceneEntityAiInfoOuterClass {
         return this;
       }
 
-      private int aJFKKOCIGHA_ ;
+      private int curTactic_ ;
       /**
-       * <code>uint32 AJFKKOCIGHA = 7;</code>
-       * @return The aJFKKOCIGHA.
+       * <code>uint32 cur_tactic = 7;</code>
+       * @return The curTactic.
        */
       @java.lang.Override
-      public int getAJFKKOCIGHA() {
-        return aJFKKOCIGHA_;
+      public int getCurTactic() {
+        return curTactic_;
       }
       /**
-       * <code>uint32 AJFKKOCIGHA = 7;</code>
-       * @param value The aJFKKOCIGHA to set.
+       * <code>uint32 cur_tactic = 7;</code>
+       * @param value The curTactic to set.
        * @return This builder for chaining.
        */
-      public Builder setAJFKKOCIGHA(int value) {
+      public Builder setCurTactic(int value) {
         
-        aJFKKOCIGHA_ = value;
+        curTactic_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 AJFKKOCIGHA = 7;</code>
+       * <code>uint32 cur_tactic = 7;</code>
        * @return This builder for chaining.
        */
-      public Builder clearAJFKKOCIGHA() {
+      public Builder clearCurTactic() {
         
-        aJFKKOCIGHA_ = 0;
+        curTactic_ = 0;
         onChanged();
         return this;
       }
@@ -1951,18 +2018,7 @@ public final class SceneEntityAiInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new SceneEntityAiInfo(input, extensionRegistry);
       }
     };
 
@@ -2011,34 +2067,34 @@ public final class SceneEntityAiInfoOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\027SceneEntityAiInfo.proto\032\021ServantInfo.p" +
-      "roto\032\014Vector.proto\"\352\003\n\021SceneEntityAiInfo" +
+      "\n\027SceneEntityAiInfo.proto\032\014Vector.proto\032" +
+      "\021ServantInfo.proto\"\351\003\n\021SceneEntityAiInfo" +
       "\022\022\n\nis_ai_open\030\001 \001(\010\022\031\n\010born_pos\030\002 \001(\0132\007" +
       ".Vector\0228\n\014skill_cd_map\030\003 \003(\0132\".SceneEnt" +
       "ityAiInfo.SkillCdMapEntry\022\"\n\014servant_inf" +
       "o\030\004 \001(\0132\014.ServantInfo\022:\n\rai_threat_map\030\005" +
       " \003(\0132#.SceneEntityAiInfo.AiThreatMapEntr" +
       "y\022C\n\022skill_group_cd_map\030\006 \003(\0132\'.SceneEnt" +
-      "ityAiInfo.SkillGroupCdMapEntry\022\023\n\013AJFKKO" +
-      "CIGHA\030\007 \001(\r\022\023\n\013AADJDKIFENL\030\010 \001(\010\0321\n\017Skil" +
-      "lCdMapEntry\022\013\n\003key\030\001 \001(\r\022\r\n\005value\030\002 \001(\r:" +
-      "\0028\001\0322\n\020AiThreatMapEntry\022\013\n\003key\030\001 \001(\r\022\r\n\005" +
-      "value\030\002 \001(\r:\0028\001\0326\n\024SkillGroupCdMapEntry\022" +
-      "\013\n\003key\030\001 \001(\r\022\r\n\005value\030\002 \001(\r:\0028\001B\033\n\031emu.g" +
-      "rasscutter.net.protob\006proto3"
+      "ityAiInfo.SkillGroupCdMapEntry\022\022\n\ncur_ta" +
+      "ctic\030\007 \001(\r\022\023\n\013AADJDKIFENL\030\010 \001(\010\0321\n\017Skill" +
+      "CdMapEntry\022\013\n\003key\030\001 \001(\r\022\r\n\005value\030\002 \001(\r:\002" +
+      "8\001\0322\n\020AiThreatMapEntry\022\013\n\003key\030\001 \001(\r\022\r\n\005v" +
+      "alue\030\002 \001(\r:\0028\001\0326\n\024SkillGroupCdMapEntry\022\013" +
+      "\n\003key\030\001 \001(\r\022\r\n\005value\030\002 \001(\r:\0028\001B\033\n\031emu.gr" +
+      "asscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          emu.grasscutter.net.proto.ServantInfoOuterClass.getDescriptor(),
           emu.grasscutter.net.proto.VectorOuterClass.getDescriptor(),
+          emu.grasscutter.net.proto.ServantInfoOuterClass.getDescriptor(),
         });
     internal_static_SceneEntityAiInfo_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_SceneEntityAiInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_SceneEntityAiInfo_descriptor,
-        new java.lang.String[] { "IsAiOpen", "BornPos", "SkillCdMap", "ServantInfo", "AiThreatMap", "SkillGroupCdMap", "AJFKKOCIGHA", "AADJDKIFENL", });
+        new java.lang.String[] { "IsAiOpen", "BornPos", "SkillCdMap", "ServantInfo", "AiThreatMap", "SkillGroupCdMap", "CurTactic", "AADJDKIFENL", });
     internal_static_SceneEntityAiInfo_SkillCdMapEntry_descriptor =
       internal_static_SceneEntityAiInfo_descriptor.getNestedTypes().get(0);
     internal_static_SceneEntityAiInfo_SkillCdMapEntry_fieldAccessorTable = new
@@ -2057,8 +2113,8 @@ public final class SceneEntityAiInfoOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_SceneEntityAiInfo_SkillGroupCdMapEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
-    emu.grasscutter.net.proto.ServantInfoOuterClass.getDescriptor();
     emu.grasscutter.net.proto.VectorOuterClass.getDescriptor();
+    emu.grasscutter.net.proto.ServantInfoOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

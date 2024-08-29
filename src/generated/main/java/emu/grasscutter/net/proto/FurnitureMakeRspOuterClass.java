@@ -146,6 +146,98 @@ public final class FurnitureMakeRspOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private FurnitureMakeRsp(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 34: {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                helpedDataList_ = new java.util.ArrayList<emu.grasscutter.net.proto.FurnitureMakeBeHelpedDataOuterClass.FurnitureMakeBeHelpedData>();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              helpedDataList_.add(
+                  input.readMessage(emu.grasscutter.net.proto.FurnitureMakeBeHelpedDataOuterClass.FurnitureMakeBeHelpedData.parser(), extensionRegistry));
+              break;
+            }
+            case 42: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                makeInfoList_ = new java.util.ArrayList<emu.grasscutter.net.proto.FurnitureMakeMakeInfoOuterClass.FurnitureMakeMakeInfo>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              makeInfoList_.add(
+                  input.readMessage(emu.grasscutter.net.proto.FurnitureMakeMakeInfoOuterClass.FurnitureMakeMakeInfo.parser(), extensionRegistry));
+              break;
+            }
+            case 50: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                helpDataList_ = new java.util.ArrayList<emu.grasscutter.net.proto.FurnitureMakeHelpDataOuterClass.FurnitureMakeHelpData>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              helpDataList_.add(
+                  input.readMessage(emu.grasscutter.net.proto.FurnitureMakeHelpDataOuterClass.FurnitureMakeHelpData.parser(), extensionRegistry));
+              break;
+            }
+            case 66: {
+              emu.grasscutter.net.proto.FurnitureMakeSlotOuterClass.FurnitureMakeSlot.Builder subBuilder = null;
+              if (furnitureMakeSlot_ != null) {
+                subBuilder = furnitureMakeSlot_.toBuilder();
+              }
+              furnitureMakeSlot_ = input.readMessage(emu.grasscutter.net.proto.FurnitureMakeSlotOuterClass.FurnitureMakeSlot.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(furnitureMakeSlot_);
+                furnitureMakeSlot_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 112: {
+
+              retcode_ = input.readInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
+          helpedDataList_ = java.util.Collections.unmodifiableList(helpedDataList_);
+        }
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          makeInfoList_ = java.util.Collections.unmodifiableList(makeInfoList_);
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          helpDataList_ = java.util.Collections.unmodifiableList(helpDataList_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.FurnitureMakeRspOuterClass.internal_static_FurnitureMakeRsp_descriptor;
@@ -345,7 +437,7 @@ public final class FurnitureMakeRspOuterClass {
       if (retcode_ != 0) {
         output.writeInt32(14, retcode_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -374,7 +466,7 @@ public final class FurnitureMakeRspOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(14, retcode_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -402,7 +494,7 @@ public final class FurnitureMakeRspOuterClass {
         if (!getFurnitureMakeSlot()
             .equals(other.getFurnitureMakeSlot())) return false;
       }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -431,7 +523,7 @@ public final class FurnitureMakeRspOuterClass {
         hash = (37 * hash) + FURNITURE_MAKE_SLOT_FIELD_NUMBER;
         hash = (53 * hash) + getFurnitureMakeSlot().hashCode();
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -553,40 +645,45 @@ public final class FurnitureMakeRspOuterClass {
 
       // Construct using emu.grasscutter.net.proto.FurnitureMakeRspOuterClass.FurnitureMakeRsp.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getMakeInfoListFieldBuilder();
+          getHelpDataListFieldBuilder();
+          getHelpedDataListFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
         if (makeInfoListBuilder_ == null) {
           makeInfoList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
-          makeInfoList_ = null;
           makeInfoListBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000001);
         retcode_ = 0;
 
         if (helpDataListBuilder_ == null) {
           helpDataList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
-          helpDataList_ = null;
           helpDataListBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000002);
         if (helpedDataListBuilder_ == null) {
           helpedDataList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
         } else {
-          helpedDataList_ = null;
           helpedDataListBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000004);
         if (furnitureMakeSlotBuilder_ == null) {
           furnitureMakeSlot_ = null;
         } else {
@@ -785,7 +882,7 @@ public final class FurnitureMakeRspOuterClass {
         if (other.hasFurnitureMakeSlot()) {
           mergeFurnitureMakeSlot(other.getFurnitureMakeSlot());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -800,81 +897,17 @@ public final class FurnitureMakeRspOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.FurnitureMakeRspOuterClass.FurnitureMakeRsp parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 34: {
-                emu.grasscutter.net.proto.FurnitureMakeBeHelpedDataOuterClass.FurnitureMakeBeHelpedData m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.FurnitureMakeBeHelpedDataOuterClass.FurnitureMakeBeHelpedData.parser(),
-                        extensionRegistry);
-                if (helpedDataListBuilder_ == null) {
-                  ensureHelpedDataListIsMutable();
-                  helpedDataList_.add(m);
-                } else {
-                  helpedDataListBuilder_.addMessage(m);
-                }
-                break;
-              } // case 34
-              case 42: {
-                emu.grasscutter.net.proto.FurnitureMakeMakeInfoOuterClass.FurnitureMakeMakeInfo m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.FurnitureMakeMakeInfoOuterClass.FurnitureMakeMakeInfo.parser(),
-                        extensionRegistry);
-                if (makeInfoListBuilder_ == null) {
-                  ensureMakeInfoListIsMutable();
-                  makeInfoList_.add(m);
-                } else {
-                  makeInfoListBuilder_.addMessage(m);
-                }
-                break;
-              } // case 42
-              case 50: {
-                emu.grasscutter.net.proto.FurnitureMakeHelpDataOuterClass.FurnitureMakeHelpData m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.FurnitureMakeHelpDataOuterClass.FurnitureMakeHelpData.parser(),
-                        extensionRegistry);
-                if (helpDataListBuilder_ == null) {
-                  ensureHelpDataListIsMutable();
-                  helpDataList_.add(m);
-                } else {
-                  helpDataListBuilder_.addMessage(m);
-                }
-                break;
-              } // case 50
-              case 66: {
-                input.readMessage(
-                    getFurnitureMakeSlotFieldBuilder().getBuilder(),
-                    extensionRegistry);
-
-                break;
-              } // case 66
-              case 112: {
-                retcode_ = input.readInt32();
-
-                break;
-              } // case 112
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.FurnitureMakeRspOuterClass.FurnitureMakeRsp) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -1781,18 +1814,7 @@ public final class FurnitureMakeRspOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new FurnitureMakeRsp(input, extensionRegistry);
       }
     };
 

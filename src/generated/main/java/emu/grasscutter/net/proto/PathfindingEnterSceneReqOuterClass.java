@@ -118,6 +118,105 @@ public final class PathfindingEnterSceneReqOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private PathfindingEnterSceneReq(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 24: {
+
+              cDDPHGDDCCN_ = input.readUInt32();
+              break;
+            }
+            case 40: {
+
+              version_ = input.readUInt32();
+              break;
+            }
+            case 64: {
+
+              isEditor_ = input.readBool();
+              break;
+            }
+            case 72: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                hDFCDNCGBBH_ = newIntList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              hDFCDNCGBBH_.addInt(input.readInt32());
+              break;
+            }
+            case 74: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000002) != 0) && input.getBytesUntilLimit() > 0) {
+                hDFCDNCGBBH_ = newIntList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                hDFCDNCGBBH_.addInt(input.readInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 82: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                obstacles_ = new java.util.ArrayList<emu.grasscutter.net.proto.ObstacleInfoOuterClass.ObstacleInfo>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              obstacles_.add(
+                  input.readMessage(emu.grasscutter.net.proto.ObstacleInfoOuterClass.ObstacleInfo.parser(), extensionRegistry));
+              break;
+            }
+            case 104: {
+
+              dKEOBFMAFPK_ = input.readUInt32();
+              break;
+            }
+            case 112: {
+
+              sceneId_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          hDFCDNCGBBH_.makeImmutable(); // C
+        }
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          obstacles_ = java.util.Collections.unmodifiableList(obstacles_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.PathfindingEnterSceneReqOuterClass.internal_static_PathfindingEnterSceneReq_descriptor;
@@ -294,7 +393,7 @@ public final class PathfindingEnterSceneReqOuterClass {
       if (sceneId_ != 0) {
         output.writeUInt32(14, sceneId_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -341,7 +440,7 @@ public final class PathfindingEnterSceneReqOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(14, sceneId_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -370,7 +469,7 @@ public final class PathfindingEnterSceneReqOuterClass {
           != other.getVersion()) return false;
       if (getCDDPHGDDCCN()
           != other.getCDDPHGDDCCN()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -400,7 +499,7 @@ public final class PathfindingEnterSceneReqOuterClass {
       hash = (53 * hash) + getVersion();
       hash = (37 * hash) + CDDPHGDDCCN_FIELD_NUMBER;
       hash = (53 * hash) + getCDDPHGDDCCN();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -517,24 +616,29 @@ public final class PathfindingEnterSceneReqOuterClass {
 
       // Construct using emu.grasscutter.net.proto.PathfindingEnterSceneReqOuterClass.PathfindingEnterSceneReq.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getObstaclesFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
         if (obstaclesBuilder_ == null) {
           obstacles_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
-          obstacles_ = null;
           obstaclesBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000001);
         hDFCDNCGBBH_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000002);
         isEditor_ = false;
@@ -692,7 +796,7 @@ public final class PathfindingEnterSceneReqOuterClass {
         if (other.getCDDPHGDDCCN() != 0) {
           setCDDPHGDDCCN(other.getCDDPHGDDCCN());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -707,84 +811,17 @@ public final class PathfindingEnterSceneReqOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.PathfindingEnterSceneReqOuterClass.PathfindingEnterSceneReq parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 24: {
-                cDDPHGDDCCN_ = input.readUInt32();
-
-                break;
-              } // case 24
-              case 40: {
-                version_ = input.readUInt32();
-
-                break;
-              } // case 40
-              case 64: {
-                isEditor_ = input.readBool();
-
-                break;
-              } // case 64
-              case 72: {
-                int v = input.readInt32();
-                ensureHDFCDNCGBBHIsMutable();
-                hDFCDNCGBBH_.addInt(v);
-                break;
-              } // case 72
-              case 74: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureHDFCDNCGBBHIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  hDFCDNCGBBH_.addInt(input.readInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 74
-              case 82: {
-                emu.grasscutter.net.proto.ObstacleInfoOuterClass.ObstacleInfo m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.ObstacleInfoOuterClass.ObstacleInfo.parser(),
-                        extensionRegistry);
-                if (obstaclesBuilder_ == null) {
-                  ensureObstaclesIsMutable();
-                  obstacles_.add(m);
-                } else {
-                  obstaclesBuilder_.addMessage(m);
-                }
-                break;
-              } // case 82
-              case 104: {
-                dKEOBFMAFPK_ = input.readUInt32();
-
-                break;
-              } // case 104
-              case 112: {
-                sceneId_ = input.readUInt32();
-
-                break;
-              } // case 112
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.PathfindingEnterSceneReqOuterClass.PathfindingEnterSceneReq) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -1295,18 +1332,7 @@ public final class PathfindingEnterSceneReqOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new PathfindingEnterSceneReq(input, extensionRegistry);
       }
     };
 

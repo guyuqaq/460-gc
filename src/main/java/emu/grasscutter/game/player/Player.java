@@ -1121,7 +1121,7 @@ public class Player implements DatabaseObject<Player>, PlayerHook, FieldFetch {
                     socialShowAvatarInfoList.add(
                         socialShowAvatarInfoList.size(),
                         SocialShowAvatarInfoOuterClass.SocialShowAvatarInfo.newBuilder()
-                            .setHeadImageId(avatarId)
+                            .setAvatarId(avatarId)
                             .setLevel(getAvatars().getAvatarById(avatarId).getLevel())
                             .setCostumeId(getAvatars().getAvatarById(avatarId).getCostume())
                             .build()
@@ -1137,7 +1137,7 @@ public class Player implements DatabaseObject<Player>, PlayerHook, FieldFetch {
                     socialShowAvatarInfoList.add(
                         socialShowAvatarInfoList.size(),
                         SocialShowAvatarInfoOuterClass.SocialShowAvatarInfo.newBuilder()
-                            .setHeadImageId(avatarId)
+                            .setAvatarId(avatarId)
                             .setLevel(avatars.getAvatarById(avatarId).getLevel())
                             .setCostumeId(avatars.getAvatarById(avatarId).getCostume())
                             .build()

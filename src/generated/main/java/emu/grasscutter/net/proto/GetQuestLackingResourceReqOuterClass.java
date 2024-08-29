@@ -25,10 +25,6 @@ public final class GetQuestLackingResourceReqOuterClass {
     int getQuestId();
   }
   /**
-   * <pre>
-   * CmdId: 25557
-   * </pre>
-   *
    * Protobuf type {@code GetQuestLackingResourceReq}
    */
   public static final class GetQuestLackingResourceReq extends
@@ -277,10 +273,6 @@ public final class GetQuestLackingResourceReqOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 25557
-     * </pre>
-     *
      * Protobuf type {@code GetQuestLackingResourceReq}
      */
     public static final class Builder extends

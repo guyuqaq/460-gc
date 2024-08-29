@@ -42,10 +42,6 @@ public final class DropItemRspOuterClass {
     emu.grasscutter.net.proto.StoreTypeOuterClass.StoreType getStoreType();
   }
   /**
-   * <pre>
-   * CmdId: 2505
-   * </pre>
-   *
    * Protobuf type {@code DropItemRsp}
    */
   public static final class DropItemRsp extends
@@ -358,10 +354,6 @@ public final class DropItemRspOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 2505
-     * </pre>
-     *
      * Protobuf type {@code DropItemRsp}
      */
     public static final class Builder extends

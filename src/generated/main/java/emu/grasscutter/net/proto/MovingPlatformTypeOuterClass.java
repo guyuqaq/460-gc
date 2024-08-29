@@ -15,6 +15,10 @@ public final class MovingPlatformTypeOuterClass {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   /**
+   * <pre>
+   * 5.0.0
+   * </pre>
+   *
    * Protobuf enum {@code MovingPlatformType}
    */
   public enum MovingPlatformType

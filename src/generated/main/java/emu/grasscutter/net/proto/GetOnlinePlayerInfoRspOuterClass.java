@@ -52,10 +52,6 @@ public final class GetOnlinePlayerInfoRspOuterClass {
     int getParam();
   }
   /**
-   * <pre>
-   * CmdId: 25443
-   * </pre>
-   *
    * Protobuf type {@code GetOnlinePlayerInfoRsp}
    */
   public static final class GetOnlinePlayerInfoRsp extends
@@ -413,10 +409,6 @@ public final class GetOnlinePlayerInfoRspOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 25443
-     * </pre>
-     *
      * Protobuf type {@code GetOnlinePlayerInfoRsp}
      */
     public static final class Builder extends

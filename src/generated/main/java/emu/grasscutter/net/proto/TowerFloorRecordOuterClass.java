@@ -19,11 +19,11 @@ public final class TowerFloorRecordOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>map&lt;uint32, uint32&gt; passed_level_map = 2;</code>
+     * <code>map&lt;uint32, uint32&gt; passed_level_map = 4;</code>
      */
     int getPassedLevelMapCount();
     /**
-     * <code>map&lt;uint32, uint32&gt; passed_level_map = 2;</code>
+     * <code>map&lt;uint32, uint32&gt; passed_level_map = 4;</code>
      */
     boolean containsPassedLevelMap(
         int key);
@@ -34,71 +34,63 @@ public final class TowerFloorRecordOuterClass {
     java.util.Map<java.lang.Integer, java.lang.Integer>
     getPassedLevelMap();
     /**
-     * <code>map&lt;uint32, uint32&gt; passed_level_map = 2;</code>
+     * <code>map&lt;uint32, uint32&gt; passed_level_map = 4;</code>
      */
     java.util.Map<java.lang.Integer, java.lang.Integer>
     getPassedLevelMapMap();
     /**
-     * <code>map&lt;uint32, uint32&gt; passed_level_map = 2;</code>
+     * <code>map&lt;uint32, uint32&gt; passed_level_map = 4;</code>
      */
 
     int getPassedLevelMapOrDefault(
         int key,
         int defaultValue);
     /**
-     * <code>map&lt;uint32, uint32&gt; passed_level_map = 2;</code>
+     * <code>map&lt;uint32, uint32&gt; passed_level_map = 4;</code>
      */
 
     int getPassedLevelMapOrThrow(
         int key);
 
     /**
-     * <code>repeated .TowerLevelRecord passed_level_record_list = 11;</code>
+     * <code>repeated .TowerLevelRecord passed_level_record_list = 7;</code>
      */
     java.util.List<emu.grasscutter.net.proto.TowerLevelRecordOuterClass.TowerLevelRecord> 
         getPassedLevelRecordListList();
     /**
-     * <code>repeated .TowerLevelRecord passed_level_record_list = 11;</code>
+     * <code>repeated .TowerLevelRecord passed_level_record_list = 7;</code>
      */
     emu.grasscutter.net.proto.TowerLevelRecordOuterClass.TowerLevelRecord getPassedLevelRecordList(int index);
     /**
-     * <code>repeated .TowerLevelRecord passed_level_record_list = 11;</code>
+     * <code>repeated .TowerLevelRecord passed_level_record_list = 7;</code>
      */
     int getPassedLevelRecordListCount();
     /**
-     * <code>repeated .TowerLevelRecord passed_level_record_list = 11;</code>
+     * <code>repeated .TowerLevelRecord passed_level_record_list = 7;</code>
      */
     java.util.List<? extends emu.grasscutter.net.proto.TowerLevelRecordOuterClass.TowerLevelRecordOrBuilder> 
         getPassedLevelRecordListOrBuilderList();
     /**
-     * <code>repeated .TowerLevelRecord passed_level_record_list = 11;</code>
+     * <code>repeated .TowerLevelRecord passed_level_record_list = 7;</code>
      */
     emu.grasscutter.net.proto.TowerLevelRecordOuterClass.TowerLevelRecordOrBuilder getPassedLevelRecordListOrBuilder(
         int index);
 
     /**
-     * <pre>
-     * sus
-     * </pre>
-     *
-     * <code>uint32 floor_star_reward_progress = 12;</code>
+     * <code>uint32 floor_star_reward_progress = 8;</code>
      * @return The floorStarRewardProgress.
      */
     int getFloorStarRewardProgress();
 
     /**
-     * <pre>
-     * sus
-     * </pre>
-     *
-     * <code>uint32 floor_id = 9;</code>
+     * <code>uint32 floor_id = 15;</code>
      * @return The floorId.
      */
     int getFloorId();
   }
   /**
    * <pre>
-   * 4.7.0
+   * 4.6.0
    * </pre>
    *
    * Protobuf type {@code TowerFloorRecord}
@@ -128,6 +120,79 @@ public final class TowerFloorRecordOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private TowerFloorRecord(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 34: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                passedLevelMap_ = com.google.protobuf.MapField.newMapField(
+                    PassedLevelMapDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
+              passedLevelMap__ = input.readMessage(
+                  PassedLevelMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              passedLevelMap_.getMutableMap().put(
+                  passedLevelMap__.getKey(), passedLevelMap__.getValue());
+              break;
+            }
+            case 58: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                passedLevelRecordList_ = new java.util.ArrayList<emu.grasscutter.net.proto.TowerLevelRecordOuterClass.TowerLevelRecord>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              passedLevelRecordList_.add(
+                  input.readMessage(emu.grasscutter.net.proto.TowerLevelRecordOuterClass.TowerLevelRecord.parser(), extensionRegistry));
+              break;
+            }
+            case 64: {
+
+              floorStarRewardProgress_ = input.readUInt32();
+              break;
+            }
+            case 120: {
+
+              floorId_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          passedLevelRecordList_ = java.util.Collections.unmodifiableList(passedLevelRecordList_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.TowerFloorRecordOuterClass.internal_static_TowerFloorRecord_descriptor;
@@ -138,7 +203,7 @@ public final class TowerFloorRecordOuterClass {
     protected com.google.protobuf.MapField internalGetMapField(
         int number) {
       switch (number) {
-        case 2:
+        case 4:
           return internalGetPassedLevelMap();
         default:
           throw new RuntimeException(
@@ -153,7 +218,7 @@ public final class TowerFloorRecordOuterClass {
               emu.grasscutter.net.proto.TowerFloorRecordOuterClass.TowerFloorRecord.class, emu.grasscutter.net.proto.TowerFloorRecordOuterClass.TowerFloorRecord.Builder.class);
     }
 
-    public static final int PASSED_LEVEL_MAP_FIELD_NUMBER = 2;
+    public static final int PASSED_LEVEL_MAP_FIELD_NUMBER = 4;
     private static final class PassedLevelMapDefaultEntryHolder {
       static final com.google.protobuf.MapEntry<
           java.lang.Integer, java.lang.Integer> defaultEntry =
@@ -180,7 +245,7 @@ public final class TowerFloorRecordOuterClass {
       return internalGetPassedLevelMap().getMap().size();
     }
     /**
-     * <code>map&lt;uint32, uint32&gt; passed_level_map = 2;</code>
+     * <code>map&lt;uint32, uint32&gt; passed_level_map = 4;</code>
      */
 
     @java.lang.Override
@@ -198,7 +263,7 @@ public final class TowerFloorRecordOuterClass {
       return getPassedLevelMapMap();
     }
     /**
-     * <code>map&lt;uint32, uint32&gt; passed_level_map = 2;</code>
+     * <code>map&lt;uint32, uint32&gt; passed_level_map = 4;</code>
      */
     @java.lang.Override
 
@@ -206,7 +271,7 @@ public final class TowerFloorRecordOuterClass {
       return internalGetPassedLevelMap().getMap();
     }
     /**
-     * <code>map&lt;uint32, uint32&gt; passed_level_map = 2;</code>
+     * <code>map&lt;uint32, uint32&gt; passed_level_map = 4;</code>
      */
     @java.lang.Override
 
@@ -219,7 +284,7 @@ public final class TowerFloorRecordOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
-     * <code>map&lt;uint32, uint32&gt; passed_level_map = 2;</code>
+     * <code>map&lt;uint32, uint32&gt; passed_level_map = 4;</code>
      */
     @java.lang.Override
 
@@ -234,17 +299,17 @@ public final class TowerFloorRecordOuterClass {
       return map.get(key);
     }
 
-    public static final int PASSED_LEVEL_RECORD_LIST_FIELD_NUMBER = 11;
+    public static final int PASSED_LEVEL_RECORD_LIST_FIELD_NUMBER = 7;
     private java.util.List<emu.grasscutter.net.proto.TowerLevelRecordOuterClass.TowerLevelRecord> passedLevelRecordList_;
     /**
-     * <code>repeated .TowerLevelRecord passed_level_record_list = 11;</code>
+     * <code>repeated .TowerLevelRecord passed_level_record_list = 7;</code>
      */
     @java.lang.Override
     public java.util.List<emu.grasscutter.net.proto.TowerLevelRecordOuterClass.TowerLevelRecord> getPassedLevelRecordListList() {
       return passedLevelRecordList_;
     }
     /**
-     * <code>repeated .TowerLevelRecord passed_level_record_list = 11;</code>
+     * <code>repeated .TowerLevelRecord passed_level_record_list = 7;</code>
      */
     @java.lang.Override
     public java.util.List<? extends emu.grasscutter.net.proto.TowerLevelRecordOuterClass.TowerLevelRecordOrBuilder> 
@@ -252,21 +317,21 @@ public final class TowerFloorRecordOuterClass {
       return passedLevelRecordList_;
     }
     /**
-     * <code>repeated .TowerLevelRecord passed_level_record_list = 11;</code>
+     * <code>repeated .TowerLevelRecord passed_level_record_list = 7;</code>
      */
     @java.lang.Override
     public int getPassedLevelRecordListCount() {
       return passedLevelRecordList_.size();
     }
     /**
-     * <code>repeated .TowerLevelRecord passed_level_record_list = 11;</code>
+     * <code>repeated .TowerLevelRecord passed_level_record_list = 7;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.TowerLevelRecordOuterClass.TowerLevelRecord getPassedLevelRecordList(int index) {
       return passedLevelRecordList_.get(index);
     }
     /**
-     * <code>repeated .TowerLevelRecord passed_level_record_list = 11;</code>
+     * <code>repeated .TowerLevelRecord passed_level_record_list = 7;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.TowerLevelRecordOuterClass.TowerLevelRecordOrBuilder getPassedLevelRecordListOrBuilder(
@@ -274,14 +339,10 @@ public final class TowerFloorRecordOuterClass {
       return passedLevelRecordList_.get(index);
     }
 
-    public static final int FLOOR_STAR_REWARD_PROGRESS_FIELD_NUMBER = 12;
+    public static final int FLOOR_STAR_REWARD_PROGRESS_FIELD_NUMBER = 8;
     private int floorStarRewardProgress_;
     /**
-     * <pre>
-     * sus
-     * </pre>
-     *
-     * <code>uint32 floor_star_reward_progress = 12;</code>
+     * <code>uint32 floor_star_reward_progress = 8;</code>
      * @return The floorStarRewardProgress.
      */
     @java.lang.Override
@@ -289,14 +350,10 @@ public final class TowerFloorRecordOuterClass {
       return floorStarRewardProgress_;
     }
 
-    public static final int FLOOR_ID_FIELD_NUMBER = 9;
+    public static final int FLOOR_ID_FIELD_NUMBER = 15;
     private int floorId_;
     /**
-     * <pre>
-     * sus
-     * </pre>
-     *
-     * <code>uint32 floor_id = 9;</code>
+     * <code>uint32 floor_id = 15;</code>
      * @return The floorId.
      */
     @java.lang.Override
@@ -323,17 +380,17 @@ public final class TowerFloorRecordOuterClass {
           output,
           internalGetPassedLevelMap(),
           PassedLevelMapDefaultEntryHolder.defaultEntry,
-          2);
-      if (floorId_ != 0) {
-        output.writeUInt32(9, floorId_);
-      }
+          4);
       for (int i = 0; i < passedLevelRecordList_.size(); i++) {
-        output.writeMessage(11, passedLevelRecordList_.get(i));
+        output.writeMessage(7, passedLevelRecordList_.get(i));
       }
       if (floorStarRewardProgress_ != 0) {
-        output.writeUInt32(12, floorStarRewardProgress_);
+        output.writeUInt32(8, floorStarRewardProgress_);
       }
-      getUnknownFields().writeTo(output);
+      if (floorId_ != 0) {
+        output.writeUInt32(15, floorId_);
+      }
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -350,21 +407,21 @@ public final class TowerFloorRecordOuterClass {
             .setValue(entry.getValue())
             .build();
         size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(2, passedLevelMap__);
-      }
-      if (floorId_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(9, floorId_);
+            .computeMessageSize(4, passedLevelMap__);
       }
       for (int i = 0; i < passedLevelRecordList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(11, passedLevelRecordList_.get(i));
+          .computeMessageSize(7, passedLevelRecordList_.get(i));
       }
       if (floorStarRewardProgress_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(12, floorStarRewardProgress_);
+          .computeUInt32Size(8, floorStarRewardProgress_);
       }
-      size += getUnknownFields().getSerializedSize();
+      if (floorId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(15, floorId_);
+      }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -387,7 +444,7 @@ public final class TowerFloorRecordOuterClass {
           != other.getFloorStarRewardProgress()) return false;
       if (getFloorId()
           != other.getFloorId()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -410,7 +467,7 @@ public final class TowerFloorRecordOuterClass {
       hash = (53 * hash) + getFloorStarRewardProgress();
       hash = (37 * hash) + FLOOR_ID_FIELD_NUMBER;
       hash = (53 * hash) + getFloorId();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -507,7 +564,7 @@ public final class TowerFloorRecordOuterClass {
     }
     /**
      * <pre>
-     * 4.7.0
+     * 4.6.0
      * </pre>
      *
      * Protobuf type {@code TowerFloorRecord}
@@ -525,7 +582,7 @@ public final class TowerFloorRecordOuterClass {
       protected com.google.protobuf.MapField internalGetMapField(
           int number) {
         switch (number) {
-          case 2:
+          case 4:
             return internalGetPassedLevelMap();
           default:
             throw new RuntimeException(
@@ -536,7 +593,7 @@ public final class TowerFloorRecordOuterClass {
       protected com.google.protobuf.MapField internalGetMutableMapField(
           int number) {
         switch (number) {
-          case 2:
+          case 4:
             return internalGetMutablePassedLevelMap();
           default:
             throw new RuntimeException(
@@ -553,13 +610,19 @@ public final class TowerFloorRecordOuterClass {
 
       // Construct using emu.grasscutter.net.proto.TowerFloorRecordOuterClass.TowerFloorRecord.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPassedLevelRecordListFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -567,11 +630,10 @@ public final class TowerFloorRecordOuterClass {
         internalGetMutablePassedLevelMap().clear();
         if (passedLevelRecordListBuilder_ == null) {
           passedLevelRecordList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
-          passedLevelRecordList_ = null;
           passedLevelRecordListBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000002);
         floorStarRewardProgress_ = 0;
 
         floorId_ = 0;
@@ -698,7 +760,7 @@ public final class TowerFloorRecordOuterClass {
         if (other.getFloorId() != 0) {
           setFloorId(other.getFloorId());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -713,61 +775,17 @@ public final class TowerFloorRecordOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.TowerFloorRecordOuterClass.TowerFloorRecord parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 18: {
-                com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
-                passedLevelMap__ = input.readMessage(
-                    PassedLevelMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-                internalGetMutablePassedLevelMap().getMutableMap().put(
-                    passedLevelMap__.getKey(), passedLevelMap__.getValue());
-                break;
-              } // case 18
-              case 72: {
-                floorId_ = input.readUInt32();
-
-                break;
-              } // case 72
-              case 90: {
-                emu.grasscutter.net.proto.TowerLevelRecordOuterClass.TowerLevelRecord m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.TowerLevelRecordOuterClass.TowerLevelRecord.parser(),
-                        extensionRegistry);
-                if (passedLevelRecordListBuilder_ == null) {
-                  ensurePassedLevelRecordListIsMutable();
-                  passedLevelRecordList_.add(m);
-                } else {
-                  passedLevelRecordListBuilder_.addMessage(m);
-                }
-                break;
-              } // case 90
-              case 96: {
-                floorStarRewardProgress_ = input.readUInt32();
-
-                break;
-              } // case 96
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.TowerFloorRecordOuterClass.TowerFloorRecord) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -799,7 +817,7 @@ public final class TowerFloorRecordOuterClass {
         return internalGetPassedLevelMap().getMap().size();
       }
       /**
-       * <code>map&lt;uint32, uint32&gt; passed_level_map = 2;</code>
+       * <code>map&lt;uint32, uint32&gt; passed_level_map = 4;</code>
        */
 
       @java.lang.Override
@@ -817,7 +835,7 @@ public final class TowerFloorRecordOuterClass {
         return getPassedLevelMapMap();
       }
       /**
-       * <code>map&lt;uint32, uint32&gt; passed_level_map = 2;</code>
+       * <code>map&lt;uint32, uint32&gt; passed_level_map = 4;</code>
        */
       @java.lang.Override
 
@@ -825,7 +843,7 @@ public final class TowerFloorRecordOuterClass {
         return internalGetPassedLevelMap().getMap();
       }
       /**
-       * <code>map&lt;uint32, uint32&gt; passed_level_map = 2;</code>
+       * <code>map&lt;uint32, uint32&gt; passed_level_map = 4;</code>
        */
       @java.lang.Override
 
@@ -838,7 +856,7 @@ public final class TowerFloorRecordOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
-       * <code>map&lt;uint32, uint32&gt; passed_level_map = 2;</code>
+       * <code>map&lt;uint32, uint32&gt; passed_level_map = 4;</code>
        */
       @java.lang.Override
 
@@ -859,7 +877,7 @@ public final class TowerFloorRecordOuterClass {
         return this;
       }
       /**
-       * <code>map&lt;uint32, uint32&gt; passed_level_map = 2;</code>
+       * <code>map&lt;uint32, uint32&gt; passed_level_map = 4;</code>
        */
 
       public Builder removePassedLevelMap(
@@ -878,7 +896,7 @@ public final class TowerFloorRecordOuterClass {
         return internalGetMutablePassedLevelMap().getMutableMap();
       }
       /**
-       * <code>map&lt;uint32, uint32&gt; passed_level_map = 2;</code>
+       * <code>map&lt;uint32, uint32&gt; passed_level_map = 4;</code>
        */
       public Builder putPassedLevelMap(
           int key,
@@ -890,7 +908,7 @@ public final class TowerFloorRecordOuterClass {
         return this;
       }
       /**
-       * <code>map&lt;uint32, uint32&gt; passed_level_map = 2;</code>
+       * <code>map&lt;uint32, uint32&gt; passed_level_map = 4;</code>
        */
 
       public Builder putAllPassedLevelMap(
@@ -913,7 +931,7 @@ public final class TowerFloorRecordOuterClass {
           emu.grasscutter.net.proto.TowerLevelRecordOuterClass.TowerLevelRecord, emu.grasscutter.net.proto.TowerLevelRecordOuterClass.TowerLevelRecord.Builder, emu.grasscutter.net.proto.TowerLevelRecordOuterClass.TowerLevelRecordOrBuilder> passedLevelRecordListBuilder_;
 
       /**
-       * <code>repeated .TowerLevelRecord passed_level_record_list = 11;</code>
+       * <code>repeated .TowerLevelRecord passed_level_record_list = 7;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.TowerLevelRecordOuterClass.TowerLevelRecord> getPassedLevelRecordListList() {
         if (passedLevelRecordListBuilder_ == null) {
@@ -923,7 +941,7 @@ public final class TowerFloorRecordOuterClass {
         }
       }
       /**
-       * <code>repeated .TowerLevelRecord passed_level_record_list = 11;</code>
+       * <code>repeated .TowerLevelRecord passed_level_record_list = 7;</code>
        */
       public int getPassedLevelRecordListCount() {
         if (passedLevelRecordListBuilder_ == null) {
@@ -933,7 +951,7 @@ public final class TowerFloorRecordOuterClass {
         }
       }
       /**
-       * <code>repeated .TowerLevelRecord passed_level_record_list = 11;</code>
+       * <code>repeated .TowerLevelRecord passed_level_record_list = 7;</code>
        */
       public emu.grasscutter.net.proto.TowerLevelRecordOuterClass.TowerLevelRecord getPassedLevelRecordList(int index) {
         if (passedLevelRecordListBuilder_ == null) {
@@ -943,7 +961,7 @@ public final class TowerFloorRecordOuterClass {
         }
       }
       /**
-       * <code>repeated .TowerLevelRecord passed_level_record_list = 11;</code>
+       * <code>repeated .TowerLevelRecord passed_level_record_list = 7;</code>
        */
       public Builder setPassedLevelRecordList(
           int index, emu.grasscutter.net.proto.TowerLevelRecordOuterClass.TowerLevelRecord value) {
@@ -960,7 +978,7 @@ public final class TowerFloorRecordOuterClass {
         return this;
       }
       /**
-       * <code>repeated .TowerLevelRecord passed_level_record_list = 11;</code>
+       * <code>repeated .TowerLevelRecord passed_level_record_list = 7;</code>
        */
       public Builder setPassedLevelRecordList(
           int index, emu.grasscutter.net.proto.TowerLevelRecordOuterClass.TowerLevelRecord.Builder builderForValue) {
@@ -974,7 +992,7 @@ public final class TowerFloorRecordOuterClass {
         return this;
       }
       /**
-       * <code>repeated .TowerLevelRecord passed_level_record_list = 11;</code>
+       * <code>repeated .TowerLevelRecord passed_level_record_list = 7;</code>
        */
       public Builder addPassedLevelRecordList(emu.grasscutter.net.proto.TowerLevelRecordOuterClass.TowerLevelRecord value) {
         if (passedLevelRecordListBuilder_ == null) {
@@ -990,7 +1008,7 @@ public final class TowerFloorRecordOuterClass {
         return this;
       }
       /**
-       * <code>repeated .TowerLevelRecord passed_level_record_list = 11;</code>
+       * <code>repeated .TowerLevelRecord passed_level_record_list = 7;</code>
        */
       public Builder addPassedLevelRecordList(
           int index, emu.grasscutter.net.proto.TowerLevelRecordOuterClass.TowerLevelRecord value) {
@@ -1007,7 +1025,7 @@ public final class TowerFloorRecordOuterClass {
         return this;
       }
       /**
-       * <code>repeated .TowerLevelRecord passed_level_record_list = 11;</code>
+       * <code>repeated .TowerLevelRecord passed_level_record_list = 7;</code>
        */
       public Builder addPassedLevelRecordList(
           emu.grasscutter.net.proto.TowerLevelRecordOuterClass.TowerLevelRecord.Builder builderForValue) {
@@ -1021,7 +1039,7 @@ public final class TowerFloorRecordOuterClass {
         return this;
       }
       /**
-       * <code>repeated .TowerLevelRecord passed_level_record_list = 11;</code>
+       * <code>repeated .TowerLevelRecord passed_level_record_list = 7;</code>
        */
       public Builder addPassedLevelRecordList(
           int index, emu.grasscutter.net.proto.TowerLevelRecordOuterClass.TowerLevelRecord.Builder builderForValue) {
@@ -1035,7 +1053,7 @@ public final class TowerFloorRecordOuterClass {
         return this;
       }
       /**
-       * <code>repeated .TowerLevelRecord passed_level_record_list = 11;</code>
+       * <code>repeated .TowerLevelRecord passed_level_record_list = 7;</code>
        */
       public Builder addAllPassedLevelRecordList(
           java.lang.Iterable<? extends emu.grasscutter.net.proto.TowerLevelRecordOuterClass.TowerLevelRecord> values) {
@@ -1050,7 +1068,7 @@ public final class TowerFloorRecordOuterClass {
         return this;
       }
       /**
-       * <code>repeated .TowerLevelRecord passed_level_record_list = 11;</code>
+       * <code>repeated .TowerLevelRecord passed_level_record_list = 7;</code>
        */
       public Builder clearPassedLevelRecordList() {
         if (passedLevelRecordListBuilder_ == null) {
@@ -1063,7 +1081,7 @@ public final class TowerFloorRecordOuterClass {
         return this;
       }
       /**
-       * <code>repeated .TowerLevelRecord passed_level_record_list = 11;</code>
+       * <code>repeated .TowerLevelRecord passed_level_record_list = 7;</code>
        */
       public Builder removePassedLevelRecordList(int index) {
         if (passedLevelRecordListBuilder_ == null) {
@@ -1076,14 +1094,14 @@ public final class TowerFloorRecordOuterClass {
         return this;
       }
       /**
-       * <code>repeated .TowerLevelRecord passed_level_record_list = 11;</code>
+       * <code>repeated .TowerLevelRecord passed_level_record_list = 7;</code>
        */
       public emu.grasscutter.net.proto.TowerLevelRecordOuterClass.TowerLevelRecord.Builder getPassedLevelRecordListBuilder(
           int index) {
         return getPassedLevelRecordListFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .TowerLevelRecord passed_level_record_list = 11;</code>
+       * <code>repeated .TowerLevelRecord passed_level_record_list = 7;</code>
        */
       public emu.grasscutter.net.proto.TowerLevelRecordOuterClass.TowerLevelRecordOrBuilder getPassedLevelRecordListOrBuilder(
           int index) {
@@ -1093,7 +1111,7 @@ public final class TowerFloorRecordOuterClass {
         }
       }
       /**
-       * <code>repeated .TowerLevelRecord passed_level_record_list = 11;</code>
+       * <code>repeated .TowerLevelRecord passed_level_record_list = 7;</code>
        */
       public java.util.List<? extends emu.grasscutter.net.proto.TowerLevelRecordOuterClass.TowerLevelRecordOrBuilder> 
            getPassedLevelRecordListOrBuilderList() {
@@ -1104,14 +1122,14 @@ public final class TowerFloorRecordOuterClass {
         }
       }
       /**
-       * <code>repeated .TowerLevelRecord passed_level_record_list = 11;</code>
+       * <code>repeated .TowerLevelRecord passed_level_record_list = 7;</code>
        */
       public emu.grasscutter.net.proto.TowerLevelRecordOuterClass.TowerLevelRecord.Builder addPassedLevelRecordListBuilder() {
         return getPassedLevelRecordListFieldBuilder().addBuilder(
             emu.grasscutter.net.proto.TowerLevelRecordOuterClass.TowerLevelRecord.getDefaultInstance());
       }
       /**
-       * <code>repeated .TowerLevelRecord passed_level_record_list = 11;</code>
+       * <code>repeated .TowerLevelRecord passed_level_record_list = 7;</code>
        */
       public emu.grasscutter.net.proto.TowerLevelRecordOuterClass.TowerLevelRecord.Builder addPassedLevelRecordListBuilder(
           int index) {
@@ -1119,7 +1137,7 @@ public final class TowerFloorRecordOuterClass {
             index, emu.grasscutter.net.proto.TowerLevelRecordOuterClass.TowerLevelRecord.getDefaultInstance());
       }
       /**
-       * <code>repeated .TowerLevelRecord passed_level_record_list = 11;</code>
+       * <code>repeated .TowerLevelRecord passed_level_record_list = 7;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.TowerLevelRecordOuterClass.TowerLevelRecord.Builder> 
            getPassedLevelRecordListBuilderList() {
@@ -1142,11 +1160,7 @@ public final class TowerFloorRecordOuterClass {
 
       private int floorStarRewardProgress_ ;
       /**
-       * <pre>
-       * sus
-       * </pre>
-       *
-       * <code>uint32 floor_star_reward_progress = 12;</code>
+       * <code>uint32 floor_star_reward_progress = 8;</code>
        * @return The floorStarRewardProgress.
        */
       @java.lang.Override
@@ -1154,11 +1168,7 @@ public final class TowerFloorRecordOuterClass {
         return floorStarRewardProgress_;
       }
       /**
-       * <pre>
-       * sus
-       * </pre>
-       *
-       * <code>uint32 floor_star_reward_progress = 12;</code>
+       * <code>uint32 floor_star_reward_progress = 8;</code>
        * @param value The floorStarRewardProgress to set.
        * @return This builder for chaining.
        */
@@ -1169,11 +1179,7 @@ public final class TowerFloorRecordOuterClass {
         return this;
       }
       /**
-       * <pre>
-       * sus
-       * </pre>
-       *
-       * <code>uint32 floor_star_reward_progress = 12;</code>
+       * <code>uint32 floor_star_reward_progress = 8;</code>
        * @return This builder for chaining.
        */
       public Builder clearFloorStarRewardProgress() {
@@ -1185,11 +1191,7 @@ public final class TowerFloorRecordOuterClass {
 
       private int floorId_ ;
       /**
-       * <pre>
-       * sus
-       * </pre>
-       *
-       * <code>uint32 floor_id = 9;</code>
+       * <code>uint32 floor_id = 15;</code>
        * @return The floorId.
        */
       @java.lang.Override
@@ -1197,11 +1199,7 @@ public final class TowerFloorRecordOuterClass {
         return floorId_;
       }
       /**
-       * <pre>
-       * sus
-       * </pre>
-       *
-       * <code>uint32 floor_id = 9;</code>
+       * <code>uint32 floor_id = 15;</code>
        * @param value The floorId to set.
        * @return This builder for chaining.
        */
@@ -1212,11 +1210,7 @@ public final class TowerFloorRecordOuterClass {
         return this;
       }
       /**
-       * <pre>
-       * sus
-       * </pre>
-       *
-       * <code>uint32 floor_id = 9;</code>
+       * <code>uint32 floor_id = 15;</code>
        * @return This builder for chaining.
        */
       public Builder clearFloorId() {
@@ -1258,18 +1252,7 @@ public final class TowerFloorRecordOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new TowerFloorRecord(input, extensionRegistry);
       }
     };
 
@@ -1310,10 +1293,10 @@ public final class TowerFloorRecordOuterClass {
     java.lang.String[] descriptorData = {
       "\n\026TowerFloorRecord.proto\032\026TowerLevelReco" +
       "rd.proto\"\365\001\n\020TowerFloorRecord\022?\n\020passed_" +
-      "level_map\030\002 \003(\0132%.TowerFloorRecord.Passe" +
+      "level_map\030\004 \003(\0132%.TowerFloorRecord.Passe" +
       "dLevelMapEntry\0223\n\030passed_level_record_li" +
-      "st\030\013 \003(\0132\021.TowerLevelRecord\022\"\n\032floor_sta" +
-      "r_reward_progress\030\014 \001(\r\022\020\n\010floor_id\030\t \001(" +
+      "st\030\007 \003(\0132\021.TowerLevelRecord\022\"\n\032floor_sta" +
+      "r_reward_progress\030\010 \001(\r\022\020\n\010floor_id\030\017 \001(" +
       "\r\0325\n\023PassedLevelMapEntry\022\013\n\003key\030\001 \001(\r\022\r\n" +
       "\005value\030\002 \001(\r:\0028\001B\033\n\031emu.grasscutter.net." +
       "protob\006proto3"

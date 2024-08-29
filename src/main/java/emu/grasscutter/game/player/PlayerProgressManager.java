@@ -259,7 +259,29 @@ public final class PlayerProgressManager extends BasePlayerDataManager {
      * MAP AREAS AND POINTS
      ******************************************************************************************************************
      *****************************************************************************************************************/
-    private void addStatueQuestsOnLogin() {
+    
+        private void addStatueQuestsOnLogin() {
+        // Get all currently existing subquests for the "unlock all statues" main quest.
+        var statueMainQuest = GameData.getMainQuestDataMap().get(303);
+        var statueSubQuests = statueMainQuest.getSubQuests();
+
+        // Add the main statue quest if it isn't active yet.
+        var statueGameMainQuest = this.player.getQuestManager().getMainQuestById(303);
+        if (statueGameMainQuest == null) {
+            this.player.getQuestManager().addQuest(30302);
+            statueGameMainQuest = this.player.getQuestManager().getMainQuestById(303);
+        }
+
+        // Set all subquests to active if they aren't already finished.
+        for (var subData : statueSubQuests) {
+            var subGameQuest = statueGameMainQuest.getChildQuestById(subData.getSubId());
+            if (subGameQuest != null && subGameQuest.getState() == QuestState.QUEST_STATE_UNSTARTED) {
+                this.player.getQuestManager().addQuest(subData.getSubId());
+            }
+        }
+    }
+
+    /*private void addStatueQuestsOnLogin() {
         // Get all currently existing subquests for the "unlock all statues" main quest.
         var statueMainQuest = GameData.getMainQuestDataMap().get(354);
         var statueSubQuests = statueMainQuest.getSubQuests();
@@ -281,7 +303,7 @@ public final class PlayerProgressManager extends BasePlayerDataManager {
             }
         }
 		*/
-    }
+    }*/
 
     public boolean unlockTransPoint(int sceneId, int pointId, boolean isStatue) {
         // Check whether the unlocked point exists and whether it is still locked.

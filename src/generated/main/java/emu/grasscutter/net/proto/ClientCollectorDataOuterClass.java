@@ -19,19 +19,26 @@ public final class ClientCollectorDataOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <pre>
-     *uint32 KMCFLNNCFBL = 15;
-     * </pre>
-     *
-     * <code>uint32 material_id = 7;</code>
+     * <code>uint32 KMCFLNNCFBL = 15;</code>
+     * @return The kMCFLNNCFBL.
+     */
+    int getKMCFLNNCFBL();
+
+    /**
+     * <code>uint32 material_id = 9;</code>
      * @return The materialId.
      */
     int getMaterialId();
+
+    /**
+     * <code>uint32 DNOGKGIHECO = 3;</code>
+     * @return The dNOGKGIHECO.
+     */
+    int getDNOGKGIHECO();
   }
   /**
    * <pre>
-   * 4.7.0
-   * Obf: DDNBBJPLJCJ
+   * Obf: KGHDHIMBJHP
    * </pre>
    *
    * Protobuf type {@code ClientCollectorData}
@@ -60,6 +67,58 @@ public final class ClientCollectorDataOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private ClientCollectorData(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 24: {
+
+              dNOGKGIHECO_ = input.readUInt32();
+              break;
+            }
+            case 72: {
+
+              materialId_ = input.readUInt32();
+              break;
+            }
+            case 120: {
+
+              kMCFLNNCFBL_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.ClientCollectorDataOuterClass.internal_static_ClientCollectorData_descriptor;
@@ -73,19 +132,37 @@ public final class ClientCollectorDataOuterClass {
               emu.grasscutter.net.proto.ClientCollectorDataOuterClass.ClientCollectorData.class, emu.grasscutter.net.proto.ClientCollectorDataOuterClass.ClientCollectorData.Builder.class);
     }
 
-    public static final int MATERIAL_ID_FIELD_NUMBER = 7;
+    public static final int KMCFLNNCFBL_FIELD_NUMBER = 15;
+    private int kMCFLNNCFBL_;
+    /**
+     * <code>uint32 KMCFLNNCFBL = 15;</code>
+     * @return The kMCFLNNCFBL.
+     */
+    @java.lang.Override
+    public int getKMCFLNNCFBL() {
+      return kMCFLNNCFBL_;
+    }
+
+    public static final int MATERIAL_ID_FIELD_NUMBER = 9;
     private int materialId_;
     /**
-     * <pre>
-     *uint32 KMCFLNNCFBL = 15;
-     * </pre>
-     *
-     * <code>uint32 material_id = 7;</code>
+     * <code>uint32 material_id = 9;</code>
      * @return The materialId.
      */
     @java.lang.Override
     public int getMaterialId() {
       return materialId_;
+    }
+
+    public static final int DNOGKGIHECO_FIELD_NUMBER = 3;
+    private int dNOGKGIHECO_;
+    /**
+     * <code>uint32 DNOGKGIHECO = 3;</code>
+     * @return The dNOGKGIHECO.
+     */
+    @java.lang.Override
+    public int getDNOGKGIHECO() {
+      return dNOGKGIHECO_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -102,10 +179,16 @@ public final class ClientCollectorDataOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (materialId_ != 0) {
-        output.writeUInt32(7, materialId_);
+      if (dNOGKGIHECO_ != 0) {
+        output.writeUInt32(3, dNOGKGIHECO_);
       }
-      getUnknownFields().writeTo(output);
+      if (materialId_ != 0) {
+        output.writeUInt32(9, materialId_);
+      }
+      if (kMCFLNNCFBL_ != 0) {
+        output.writeUInt32(15, kMCFLNNCFBL_);
+      }
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -114,11 +197,19 @@ public final class ClientCollectorDataOuterClass {
       if (size != -1) return size;
 
       size = 0;
+      if (dNOGKGIHECO_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(3, dNOGKGIHECO_);
+      }
       if (materialId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(7, materialId_);
+          .computeUInt32Size(9, materialId_);
       }
-      size += getUnknownFields().getSerializedSize();
+      if (kMCFLNNCFBL_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(15, kMCFLNNCFBL_);
+      }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -133,9 +224,13 @@ public final class ClientCollectorDataOuterClass {
       }
       emu.grasscutter.net.proto.ClientCollectorDataOuterClass.ClientCollectorData other = (emu.grasscutter.net.proto.ClientCollectorDataOuterClass.ClientCollectorData) obj;
 
+      if (getKMCFLNNCFBL()
+          != other.getKMCFLNNCFBL()) return false;
       if (getMaterialId()
           != other.getMaterialId()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (getDNOGKGIHECO()
+          != other.getDNOGKGIHECO()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -146,9 +241,13 @@ public final class ClientCollectorDataOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + KMCFLNNCFBL_FIELD_NUMBER;
+      hash = (53 * hash) + getKMCFLNNCFBL();
       hash = (37 * hash) + MATERIAL_ID_FIELD_NUMBER;
       hash = (53 * hash) + getMaterialId();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (37 * hash) + DNOGKGIHECO_FIELD_NUMBER;
+      hash = (53 * hash) + getDNOGKGIHECO();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -245,8 +344,7 @@ public final class ClientCollectorDataOuterClass {
     }
     /**
      * <pre>
-     * 4.7.0
-     * Obf: DDNBBJPLJCJ
+     * Obf: KGHDHIMBJHP
      * </pre>
      *
      * Protobuf type {@code ClientCollectorData}
@@ -270,18 +368,27 @@ public final class ClientCollectorDataOuterClass {
 
       // Construct using emu.grasscutter.net.proto.ClientCollectorDataOuterClass.ClientCollectorData.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        kMCFLNNCFBL_ = 0;
+
         materialId_ = 0;
+
+        dNOGKGIHECO_ = 0;
 
         return this;
       }
@@ -309,7 +416,9 @@ public final class ClientCollectorDataOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.ClientCollectorDataOuterClass.ClientCollectorData buildPartial() {
         emu.grasscutter.net.proto.ClientCollectorDataOuterClass.ClientCollectorData result = new emu.grasscutter.net.proto.ClientCollectorDataOuterClass.ClientCollectorData(this);
+        result.kMCFLNNCFBL_ = kMCFLNNCFBL_;
         result.materialId_ = materialId_;
+        result.dNOGKGIHECO_ = dNOGKGIHECO_;
         onBuilt();
         return result;
       }
@@ -358,10 +467,16 @@ public final class ClientCollectorDataOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.ClientCollectorDataOuterClass.ClientCollectorData other) {
         if (other == emu.grasscutter.net.proto.ClientCollectorDataOuterClass.ClientCollectorData.getDefaultInstance()) return this;
+        if (other.getKMCFLNNCFBL() != 0) {
+          setKMCFLNNCFBL(other.getKMCFLNNCFBL());
+        }
         if (other.getMaterialId() != 0) {
           setMaterialId(other.getMaterialId());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        if (other.getDNOGKGIHECO() != 0) {
+          setDNOGKGIHECO(other.getDNOGKGIHECO());
+        }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -376,45 +491,54 @@ public final class ClientCollectorDataOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.ClientCollectorDataOuterClass.ClientCollectorData parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 56: {
-                materialId_ = input.readUInt32();
-
-                break;
-              } // case 56
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.ClientCollectorDataOuterClass.ClientCollectorData) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int kMCFLNNCFBL_ ;
+      /**
+       * <code>uint32 KMCFLNNCFBL = 15;</code>
+       * @return The kMCFLNNCFBL.
+       */
+      @java.lang.Override
+      public int getKMCFLNNCFBL() {
+        return kMCFLNNCFBL_;
+      }
+      /**
+       * <code>uint32 KMCFLNNCFBL = 15;</code>
+       * @param value The kMCFLNNCFBL to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKMCFLNNCFBL(int value) {
+        
+        kMCFLNNCFBL_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 KMCFLNNCFBL = 15;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearKMCFLNNCFBL() {
+        
+        kMCFLNNCFBL_ = 0;
+        onChanged();
         return this;
       }
 
       private int materialId_ ;
       /**
-       * <pre>
-       *uint32 KMCFLNNCFBL = 15;
-       * </pre>
-       *
-       * <code>uint32 material_id = 7;</code>
+       * <code>uint32 material_id = 9;</code>
        * @return The materialId.
        */
       @java.lang.Override
@@ -422,11 +546,7 @@ public final class ClientCollectorDataOuterClass {
         return materialId_;
       }
       /**
-       * <pre>
-       *uint32 KMCFLNNCFBL = 15;
-       * </pre>
-       *
-       * <code>uint32 material_id = 7;</code>
+       * <code>uint32 material_id = 9;</code>
        * @param value The materialId to set.
        * @return This builder for chaining.
        */
@@ -437,16 +557,43 @@ public final class ClientCollectorDataOuterClass {
         return this;
       }
       /**
-       * <pre>
-       *uint32 KMCFLNNCFBL = 15;
-       * </pre>
-       *
-       * <code>uint32 material_id = 7;</code>
+       * <code>uint32 material_id = 9;</code>
        * @return This builder for chaining.
        */
       public Builder clearMaterialId() {
         
         materialId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int dNOGKGIHECO_ ;
+      /**
+       * <code>uint32 DNOGKGIHECO = 3;</code>
+       * @return The dNOGKGIHECO.
+       */
+      @java.lang.Override
+      public int getDNOGKGIHECO() {
+        return dNOGKGIHECO_;
+      }
+      /**
+       * <code>uint32 DNOGKGIHECO = 3;</code>
+       * @param value The dNOGKGIHECO to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDNOGKGIHECO(int value) {
+        
+        dNOGKGIHECO_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 DNOGKGIHECO = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDNOGKGIHECO() {
+        
+        dNOGKGIHECO_ = 0;
         onChanged();
         return this;
       }
@@ -483,18 +630,7 @@ public final class ClientCollectorDataOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new ClientCollectorData(input, extensionRegistry);
       }
     };
 
@@ -528,9 +664,10 @@ public final class ClientCollectorDataOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\031ClientCollectorData.proto\"*\n\023ClientCol" +
-      "lectorData\022\023\n\013material_id\030\007 \001(\rB\033\n\031emu.g" +
-      "rasscutter.net.protob\006proto3"
+      "\n\031ClientCollectorData.proto\"T\n\023ClientCol" +
+      "lectorData\022\023\n\013KMCFLNNCFBL\030\017 \001(\r\022\023\n\013mater" +
+      "ial_id\030\t \001(\r\022\023\n\013DNOGKGIHECO\030\003 \001(\rB\033\n\031emu" +
+      ".grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -541,7 +678,7 @@ public final class ClientCollectorDataOuterClass {
     internal_static_ClientCollectorData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ClientCollectorData_descriptor,
-        new java.lang.String[] { "MaterialId", });
+        new java.lang.String[] { "KMCFLNNCFBL", "MaterialId", "DNOGKGIHECO", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

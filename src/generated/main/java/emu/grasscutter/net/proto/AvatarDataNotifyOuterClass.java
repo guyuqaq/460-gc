@@ -231,6 +231,211 @@ public final class AvatarDataNotifyOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private AvatarDataNotify(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 16: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                oNAODHDMILI_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              oNAODHDMILI_.addInt(input.readUInt32());
+              break;
+            }
+            case 18: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
+                oNAODHDMILI_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                oNAODHDMILI_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 32: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                tempAvatarGuidList_ = newLongList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              tempAvatarGuidList_.addLong(input.readUInt64());
+              break;
+            }
+            case 34: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000002) != 0) && input.getBytesUntilLimit() > 0) {
+                tempAvatarGuidList_ = newLongList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                tempAvatarGuidList_.addLong(input.readUInt64());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 56: {
+
+              curAvatarTeamId_ = input.readUInt32();
+              break;
+            }
+            case 66: {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                avatarList_ = new java.util.ArrayList<emu.grasscutter.net.proto.AvatarInfoOuterClass.AvatarInfo>();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              avatarList_.add(
+                  input.readMessage(emu.grasscutter.net.proto.AvatarInfoOuterClass.AvatarInfo.parser(), extensionRegistry));
+              break;
+            }
+            case 72: {
+              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
+                backupAvatarTeamOrderList_ = newIntList();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              backupAvatarTeamOrderList_.addInt(input.readUInt32());
+              break;
+            }
+            case 74: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000008) != 0) && input.getBytesUntilLimit() > 0) {
+                backupAvatarTeamOrderList_ = newIntList();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                backupAvatarTeamOrderList_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 82: {
+              if (!((mutable_bitField0_ & 0x00000010) != 0)) {
+                avatarTeamMap_ = com.google.protobuf.MapField.newMapField(
+                    AvatarTeamMapDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000010;
+              }
+              com.google.protobuf.MapEntry<java.lang.Integer, emu.grasscutter.net.proto.AvatarTeamOuterClass.AvatarTeam>
+              avatarTeamMap__ = input.readMessage(
+                  AvatarTeamMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              avatarTeamMap_.getMutableMap().put(
+                  avatarTeamMap__.getKey(), avatarTeamMap__.getValue());
+              break;
+            }
+            case 88: {
+              if (!((mutable_bitField0_ & 0x00000020) != 0)) {
+                ownedFlycloakList_ = newIntList();
+                mutable_bitField0_ |= 0x00000020;
+              }
+              ownedFlycloakList_.addInt(input.readUInt32());
+              break;
+            }
+            case 90: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000020) != 0) && input.getBytesUntilLimit() > 0) {
+                ownedFlycloakList_ = newIntList();
+                mutable_bitField0_ |= 0x00000020;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                ownedFlycloakList_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 96: {
+              if (!((mutable_bitField0_ & 0x00000040) != 0)) {
+                ownedCostumeList_ = newIntList();
+                mutable_bitField0_ |= 0x00000040;
+              }
+              ownedCostumeList_.addInt(input.readUInt32());
+              break;
+            }
+            case 98: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000040) != 0) && input.getBytesUntilLimit() > 0) {
+                ownedCostumeList_ = newIntList();
+                mutable_bitField0_ |= 0x00000040;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                ownedCostumeList_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 106: {
+              if (!((mutable_bitField0_ & 0x00000080) != 0)) {
+                avatarRenameList_ = new java.util.ArrayList<emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo>();
+                mutable_bitField0_ |= 0x00000080;
+              }
+              avatarRenameList_.add(
+                  input.readMessage(emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo.parser(), extensionRegistry));
+              break;
+            }
+            case 112: {
+
+              chooseAvatarGuid_ = input.readUInt64();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          oNAODHDMILI_.makeImmutable(); // C
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          tempAvatarGuidList_.makeImmutable(); // C
+        }
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
+          avatarList_ = java.util.Collections.unmodifiableList(avatarList_);
+        }
+        if (((mutable_bitField0_ & 0x00000008) != 0)) {
+          backupAvatarTeamOrderList_.makeImmutable(); // C
+        }
+        if (((mutable_bitField0_ & 0x00000020) != 0)) {
+          ownedFlycloakList_.makeImmutable(); // C
+        }
+        if (((mutable_bitField0_ & 0x00000040) != 0)) {
+          ownedCostumeList_.makeImmutable(); // C
+        }
+        if (((mutable_bitField0_ & 0x00000080) != 0)) {
+          avatarRenameList_ = java.util.Collections.unmodifiableList(avatarRenameList_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.AvatarDataNotifyOuterClass.internal_static_AvatarDataNotify_descriptor;
@@ -647,7 +852,7 @@ public final class AvatarDataNotifyOuterClass {
       if (chooseAvatarGuid_ != 0L) {
         output.writeUInt64(14, chooseAvatarGuid_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -752,7 +957,7 @@ public final class AvatarDataNotifyOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(14, chooseAvatarGuid_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -787,7 +992,7 @@ public final class AvatarDataNotifyOuterClass {
           .equals(other.getAvatarRenameListList())) return false;
       if (getChooseAvatarGuid()
           != other.getChooseAvatarGuid()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -835,7 +1040,7 @@ public final class AvatarDataNotifyOuterClass {
       hash = (37 * hash) + CHOOSE_AVATAR_GUID_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getChooseAvatarGuid());
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -974,13 +1179,20 @@ public final class AvatarDataNotifyOuterClass {
 
       // Construct using emu.grasscutter.net.proto.AvatarDataNotifyOuterClass.AvatarDataNotify.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getAvatarListFieldBuilder();
+          getAvatarRenameListFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -993,11 +1205,10 @@ public final class AvatarDataNotifyOuterClass {
 
         if (avatarListBuilder_ == null) {
           avatarList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
         } else {
-          avatarList_ = null;
           avatarListBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000004);
         backupAvatarTeamOrderList_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000008);
         internalGetMutableAvatarTeamMap().clear();
@@ -1007,11 +1218,10 @@ public final class AvatarDataNotifyOuterClass {
         bitField0_ = (bitField0_ & ~0x00000040);
         if (avatarRenameListBuilder_ == null) {
           avatarRenameList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000080);
         } else {
-          avatarRenameList_ = null;
           avatarRenameListBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000080);
         chooseAvatarGuid_ = 0L;
 
         return this;
@@ -1246,7 +1456,7 @@ public final class AvatarDataNotifyOuterClass {
         if (other.getChooseAvatarGuid() != 0L) {
           setChooseAvatarGuid(other.getChooseAvatarGuid());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -1261,154 +1471,17 @@ public final class AvatarDataNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.AvatarDataNotifyOuterClass.AvatarDataNotify parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 16: {
-                int v = input.readUInt32();
-                ensureONAODHDMILIIsMutable();
-                oNAODHDMILI_.addInt(v);
-                break;
-              } // case 16
-              case 18: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureONAODHDMILIIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  oNAODHDMILI_.addInt(input.readUInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 18
-              case 32: {
-                long v = input.readUInt64();
-                ensureTempAvatarGuidListIsMutable();
-                tempAvatarGuidList_.addLong(v);
-                break;
-              } // case 32
-              case 34: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureTempAvatarGuidListIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  tempAvatarGuidList_.addLong(input.readUInt64());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 34
-              case 56: {
-                curAvatarTeamId_ = input.readUInt32();
-
-                break;
-              } // case 56
-              case 66: {
-                emu.grasscutter.net.proto.AvatarInfoOuterClass.AvatarInfo m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.AvatarInfoOuterClass.AvatarInfo.parser(),
-                        extensionRegistry);
-                if (avatarListBuilder_ == null) {
-                  ensureAvatarListIsMutable();
-                  avatarList_.add(m);
-                } else {
-                  avatarListBuilder_.addMessage(m);
-                }
-                break;
-              } // case 66
-              case 72: {
-                int v = input.readUInt32();
-                ensureBackupAvatarTeamOrderListIsMutable();
-                backupAvatarTeamOrderList_.addInt(v);
-                break;
-              } // case 72
-              case 74: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureBackupAvatarTeamOrderListIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  backupAvatarTeamOrderList_.addInt(input.readUInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 74
-              case 82: {
-                com.google.protobuf.MapEntry<java.lang.Integer, emu.grasscutter.net.proto.AvatarTeamOuterClass.AvatarTeam>
-                avatarTeamMap__ = input.readMessage(
-                    AvatarTeamMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-                internalGetMutableAvatarTeamMap().getMutableMap().put(
-                    avatarTeamMap__.getKey(), avatarTeamMap__.getValue());
-                break;
-              } // case 82
-              case 88: {
-                int v = input.readUInt32();
-                ensureOwnedFlycloakListIsMutable();
-                ownedFlycloakList_.addInt(v);
-                break;
-              } // case 88
-              case 90: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureOwnedFlycloakListIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  ownedFlycloakList_.addInt(input.readUInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 90
-              case 96: {
-                int v = input.readUInt32();
-                ensureOwnedCostumeListIsMutable();
-                ownedCostumeList_.addInt(v);
-                break;
-              } // case 96
-              case 98: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureOwnedCostumeListIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  ownedCostumeList_.addInt(input.readUInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 98
-              case 106: {
-                emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo.parser(),
-                        extensionRegistry);
-                if (avatarRenameListBuilder_ == null) {
-                  ensureAvatarRenameListIsMutable();
-                  avatarRenameList_.add(m);
-                } else {
-                  avatarRenameListBuilder_.addMessage(m);
-                }
-                break;
-              } // case 106
-              case 112: {
-                chooseAvatarGuid_ = input.readUInt64();
-
-                break;
-              } // case 112
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.AvatarDataNotifyOuterClass.AvatarDataNotify) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -2033,10 +2106,7 @@ public final class AvatarDataNotifyOuterClass {
           int key,
           emu.grasscutter.net.proto.AvatarTeamOuterClass.AvatarTeam value) {
         
-        if (value == null) {
-  throw new NullPointerException("map value");
-}
-
+        if (value == null) { throw new java.lang.NullPointerException(); }
         internalGetMutableAvatarTeamMap().getMutableMap()
             .put(key, value);
         return this;
@@ -2513,18 +2583,7 @@ public final class AvatarDataNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new AvatarDataNotify(input, extensionRegistry);
       }
     };
 

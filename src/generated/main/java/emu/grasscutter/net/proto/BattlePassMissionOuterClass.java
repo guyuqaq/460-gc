@@ -19,10 +19,10 @@ public final class BattlePassMissionOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 reward_battle_pass_point = 7;</code>
-     * @return The rewardBattlePassPoint.
+     * <code>uint32 mission_id = 7;</code>
+     * @return The missionId.
      */
-    int getRewardBattlePassPoint();
+    int getMissionId();
 
     /**
      * <code>.BattlePassMission.MissionStatus mission_status = 9;</code>
@@ -36,10 +36,10 @@ public final class BattlePassMissionOuterClass {
     emu.grasscutter.net.proto.BattlePassMissionOuterClass.BattlePassMission.MissionStatus getMissionStatus();
 
     /**
-     * <code>uint32 cur_progress = 10;</code>
-     * @return The curProgress.
+     * <code>uint32 reward_battle_pass_point = 10;</code>
+     * @return The rewardBattlePassPoint.
      */
-    int getCurProgress();
+    int getRewardBattlePassPoint();
 
     /**
      * <code>uint32 total_progress = 13;</code>
@@ -48,10 +48,10 @@ public final class BattlePassMissionOuterClass {
     int getTotalProgress();
 
     /**
-     * <code>uint32 mission_id = 14;</code>
-     * @return The missionId.
+     * <code>uint32 cur_progress = 14;</code>
+     * @return The curProgress.
      */
-    int getMissionId();
+    int getCurProgress();
 
     /**
      * <code>uint32 mission_type = 15;</code>
@@ -86,6 +86,74 @@ public final class BattlePassMissionOuterClass {
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
+    }
+    private BattlePassMission(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 56: {
+
+              missionId_ = input.readUInt32();
+              break;
+            }
+            case 72: {
+              int rawValue = input.readEnum();
+
+              missionStatus_ = rawValue;
+              break;
+            }
+            case 80: {
+
+              rewardBattlePassPoint_ = input.readUInt32();
+              break;
+            }
+            case 104: {
+
+              totalProgress_ = input.readUInt32();
+              break;
+            }
+            case 112: {
+
+              curProgress_ = input.readUInt32();
+              break;
+            }
+            case 120: {
+
+              missionType_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -226,15 +294,15 @@ public final class BattlePassMissionOuterClass {
       // @@protoc_insertion_point(enum_scope:BattlePassMission.MissionStatus)
     }
 
-    public static final int REWARD_BATTLE_PASS_POINT_FIELD_NUMBER = 7;
-    private int rewardBattlePassPoint_;
+    public static final int MISSION_ID_FIELD_NUMBER = 7;
+    private int missionId_;
     /**
-     * <code>uint32 reward_battle_pass_point = 7;</code>
-     * @return The rewardBattlePassPoint.
+     * <code>uint32 mission_id = 7;</code>
+     * @return The missionId.
      */
     @java.lang.Override
-    public int getRewardBattlePassPoint() {
-      return rewardBattlePassPoint_;
+    public int getMissionId() {
+      return missionId_;
     }
 
     public static final int MISSION_STATUS_FIELD_NUMBER = 9;
@@ -256,15 +324,15 @@ public final class BattlePassMissionOuterClass {
       return result == null ? emu.grasscutter.net.proto.BattlePassMissionOuterClass.BattlePassMission.MissionStatus.UNRECOGNIZED : result;
     }
 
-    public static final int CUR_PROGRESS_FIELD_NUMBER = 10;
-    private int curProgress_;
+    public static final int REWARD_BATTLE_PASS_POINT_FIELD_NUMBER = 10;
+    private int rewardBattlePassPoint_;
     /**
-     * <code>uint32 cur_progress = 10;</code>
-     * @return The curProgress.
+     * <code>uint32 reward_battle_pass_point = 10;</code>
+     * @return The rewardBattlePassPoint.
      */
     @java.lang.Override
-    public int getCurProgress() {
-      return curProgress_;
+    public int getRewardBattlePassPoint() {
+      return rewardBattlePassPoint_;
     }
 
     public static final int TOTAL_PROGRESS_FIELD_NUMBER = 13;
@@ -278,15 +346,15 @@ public final class BattlePassMissionOuterClass {
       return totalProgress_;
     }
 
-    public static final int MISSION_ID_FIELD_NUMBER = 14;
-    private int missionId_;
+    public static final int CUR_PROGRESS_FIELD_NUMBER = 14;
+    private int curProgress_;
     /**
-     * <code>uint32 mission_id = 14;</code>
-     * @return The missionId.
+     * <code>uint32 cur_progress = 14;</code>
+     * @return The curProgress.
      */
     @java.lang.Override
-    public int getMissionId() {
-      return missionId_;
+    public int getCurProgress() {
+      return curProgress_;
     }
 
     public static final int MISSION_TYPE_FIELD_NUMBER = 15;
@@ -314,25 +382,25 @@ public final class BattlePassMissionOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (rewardBattlePassPoint_ != 0) {
-        output.writeUInt32(7, rewardBattlePassPoint_);
+      if (missionId_ != 0) {
+        output.writeUInt32(7, missionId_);
       }
       if (missionStatus_ != emu.grasscutter.net.proto.BattlePassMissionOuterClass.BattlePassMission.MissionStatus.MISSION_STATUS_INVALID.getNumber()) {
         output.writeEnum(9, missionStatus_);
       }
-      if (curProgress_ != 0) {
-        output.writeUInt32(10, curProgress_);
+      if (rewardBattlePassPoint_ != 0) {
+        output.writeUInt32(10, rewardBattlePassPoint_);
       }
       if (totalProgress_ != 0) {
         output.writeUInt32(13, totalProgress_);
       }
-      if (missionId_ != 0) {
-        output.writeUInt32(14, missionId_);
+      if (curProgress_ != 0) {
+        output.writeUInt32(14, curProgress_);
       }
       if (missionType_ != 0) {
         output.writeUInt32(15, missionType_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -341,31 +409,31 @@ public final class BattlePassMissionOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (rewardBattlePassPoint_ != 0) {
+      if (missionId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(7, rewardBattlePassPoint_);
+          .computeUInt32Size(7, missionId_);
       }
       if (missionStatus_ != emu.grasscutter.net.proto.BattlePassMissionOuterClass.BattlePassMission.MissionStatus.MISSION_STATUS_INVALID.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(9, missionStatus_);
       }
-      if (curProgress_ != 0) {
+      if (rewardBattlePassPoint_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(10, curProgress_);
+          .computeUInt32Size(10, rewardBattlePassPoint_);
       }
       if (totalProgress_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(13, totalProgress_);
       }
-      if (missionId_ != 0) {
+      if (curProgress_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(14, missionId_);
+          .computeUInt32Size(14, curProgress_);
       }
       if (missionType_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(15, missionType_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -380,18 +448,18 @@ public final class BattlePassMissionOuterClass {
       }
       emu.grasscutter.net.proto.BattlePassMissionOuterClass.BattlePassMission other = (emu.grasscutter.net.proto.BattlePassMissionOuterClass.BattlePassMission) obj;
 
-      if (getRewardBattlePassPoint()
-          != other.getRewardBattlePassPoint()) return false;
-      if (missionStatus_ != other.missionStatus_) return false;
-      if (getCurProgress()
-          != other.getCurProgress()) return false;
-      if (getTotalProgress()
-          != other.getTotalProgress()) return false;
       if (getMissionId()
           != other.getMissionId()) return false;
+      if (missionStatus_ != other.missionStatus_) return false;
+      if (getRewardBattlePassPoint()
+          != other.getRewardBattlePassPoint()) return false;
+      if (getTotalProgress()
+          != other.getTotalProgress()) return false;
+      if (getCurProgress()
+          != other.getCurProgress()) return false;
       if (getMissionType()
           != other.getMissionType()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -402,19 +470,19 @@ public final class BattlePassMissionOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + REWARD_BATTLE_PASS_POINT_FIELD_NUMBER;
-      hash = (53 * hash) + getRewardBattlePassPoint();
-      hash = (37 * hash) + MISSION_STATUS_FIELD_NUMBER;
-      hash = (53 * hash) + missionStatus_;
-      hash = (37 * hash) + CUR_PROGRESS_FIELD_NUMBER;
-      hash = (53 * hash) + getCurProgress();
-      hash = (37 * hash) + TOTAL_PROGRESS_FIELD_NUMBER;
-      hash = (53 * hash) + getTotalProgress();
       hash = (37 * hash) + MISSION_ID_FIELD_NUMBER;
       hash = (53 * hash) + getMissionId();
+      hash = (37 * hash) + MISSION_STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + missionStatus_;
+      hash = (37 * hash) + REWARD_BATTLE_PASS_POINT_FIELD_NUMBER;
+      hash = (53 * hash) + getRewardBattlePassPoint();
+      hash = (37 * hash) + TOTAL_PROGRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getTotalProgress();
+      hash = (37 * hash) + CUR_PROGRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getCurProgress();
       hash = (37 * hash) + MISSION_TYPE_FIELD_NUMBER;
       hash = (53 * hash) + getMissionType();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -531,26 +599,31 @@ public final class BattlePassMissionOuterClass {
 
       // Construct using emu.grasscutter.net.proto.BattlePassMissionOuterClass.BattlePassMission.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        rewardBattlePassPoint_ = 0;
+        missionId_ = 0;
 
         missionStatus_ = 0;
 
-        curProgress_ = 0;
+        rewardBattlePassPoint_ = 0;
 
         totalProgress_ = 0;
 
-        missionId_ = 0;
+        curProgress_ = 0;
 
         missionType_ = 0;
 
@@ -580,11 +653,11 @@ public final class BattlePassMissionOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.BattlePassMissionOuterClass.BattlePassMission buildPartial() {
         emu.grasscutter.net.proto.BattlePassMissionOuterClass.BattlePassMission result = new emu.grasscutter.net.proto.BattlePassMissionOuterClass.BattlePassMission(this);
-        result.rewardBattlePassPoint_ = rewardBattlePassPoint_;
-        result.missionStatus_ = missionStatus_;
-        result.curProgress_ = curProgress_;
-        result.totalProgress_ = totalProgress_;
         result.missionId_ = missionId_;
+        result.missionStatus_ = missionStatus_;
+        result.rewardBattlePassPoint_ = rewardBattlePassPoint_;
+        result.totalProgress_ = totalProgress_;
+        result.curProgress_ = curProgress_;
         result.missionType_ = missionType_;
         onBuilt();
         return result;
@@ -634,25 +707,25 @@ public final class BattlePassMissionOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.BattlePassMissionOuterClass.BattlePassMission other) {
         if (other == emu.grasscutter.net.proto.BattlePassMissionOuterClass.BattlePassMission.getDefaultInstance()) return this;
-        if (other.getRewardBattlePassPoint() != 0) {
-          setRewardBattlePassPoint(other.getRewardBattlePassPoint());
+        if (other.getMissionId() != 0) {
+          setMissionId(other.getMissionId());
         }
         if (other.missionStatus_ != 0) {
           setMissionStatusValue(other.getMissionStatusValue());
         }
-        if (other.getCurProgress() != 0) {
-          setCurProgress(other.getCurProgress());
+        if (other.getRewardBattlePassPoint() != 0) {
+          setRewardBattlePassPoint(other.getRewardBattlePassPoint());
         }
         if (other.getTotalProgress() != 0) {
           setTotalProgress(other.getTotalProgress());
         }
-        if (other.getMissionId() != 0) {
-          setMissionId(other.getMissionId());
+        if (other.getCurProgress() != 0) {
+          setCurProgress(other.getCurProgress());
         }
         if (other.getMissionType() != 0) {
           setMissionType(other.getMissionType());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -667,90 +740,47 @@ public final class BattlePassMissionOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.BattlePassMissionOuterClass.BattlePassMission parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 56: {
-                rewardBattlePassPoint_ = input.readUInt32();
-
-                break;
-              } // case 56
-              case 72: {
-                missionStatus_ = input.readEnum();
-
-                break;
-              } // case 72
-              case 80: {
-                curProgress_ = input.readUInt32();
-
-                break;
-              } // case 80
-              case 104: {
-                totalProgress_ = input.readUInt32();
-
-                break;
-              } // case 104
-              case 112: {
-                missionId_ = input.readUInt32();
-
-                break;
-              } // case 112
-              case 120: {
-                missionType_ = input.readUInt32();
-
-                break;
-              } // case 120
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.BattlePassMissionOuterClass.BattlePassMission) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
 
-      private int rewardBattlePassPoint_ ;
+      private int missionId_ ;
       /**
-       * <code>uint32 reward_battle_pass_point = 7;</code>
-       * @return The rewardBattlePassPoint.
+       * <code>uint32 mission_id = 7;</code>
+       * @return The missionId.
        */
       @java.lang.Override
-      public int getRewardBattlePassPoint() {
-        return rewardBattlePassPoint_;
+      public int getMissionId() {
+        return missionId_;
       }
       /**
-       * <code>uint32 reward_battle_pass_point = 7;</code>
-       * @param value The rewardBattlePassPoint to set.
+       * <code>uint32 mission_id = 7;</code>
+       * @param value The missionId to set.
        * @return This builder for chaining.
        */
-      public Builder setRewardBattlePassPoint(int value) {
+      public Builder setMissionId(int value) {
         
-        rewardBattlePassPoint_ = value;
+        missionId_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 reward_battle_pass_point = 7;</code>
+       * <code>uint32 mission_id = 7;</code>
        * @return This builder for chaining.
        */
-      public Builder clearRewardBattlePassPoint() {
+      public Builder clearMissionId() {
         
-        rewardBattlePassPoint_ = 0;
+        missionId_ = 0;
         onChanged();
         return this;
       }
@@ -809,33 +839,33 @@ public final class BattlePassMissionOuterClass {
         return this;
       }
 
-      private int curProgress_ ;
+      private int rewardBattlePassPoint_ ;
       /**
-       * <code>uint32 cur_progress = 10;</code>
-       * @return The curProgress.
+       * <code>uint32 reward_battle_pass_point = 10;</code>
+       * @return The rewardBattlePassPoint.
        */
       @java.lang.Override
-      public int getCurProgress() {
-        return curProgress_;
+      public int getRewardBattlePassPoint() {
+        return rewardBattlePassPoint_;
       }
       /**
-       * <code>uint32 cur_progress = 10;</code>
-       * @param value The curProgress to set.
+       * <code>uint32 reward_battle_pass_point = 10;</code>
+       * @param value The rewardBattlePassPoint to set.
        * @return This builder for chaining.
        */
-      public Builder setCurProgress(int value) {
+      public Builder setRewardBattlePassPoint(int value) {
         
-        curProgress_ = value;
+        rewardBattlePassPoint_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 cur_progress = 10;</code>
+       * <code>uint32 reward_battle_pass_point = 10;</code>
        * @return This builder for chaining.
        */
-      public Builder clearCurProgress() {
+      public Builder clearRewardBattlePassPoint() {
         
-        curProgress_ = 0;
+        rewardBattlePassPoint_ = 0;
         onChanged();
         return this;
       }
@@ -871,33 +901,33 @@ public final class BattlePassMissionOuterClass {
         return this;
       }
 
-      private int missionId_ ;
+      private int curProgress_ ;
       /**
-       * <code>uint32 mission_id = 14;</code>
-       * @return The missionId.
+       * <code>uint32 cur_progress = 14;</code>
+       * @return The curProgress.
        */
       @java.lang.Override
-      public int getMissionId() {
-        return missionId_;
+      public int getCurProgress() {
+        return curProgress_;
       }
       /**
-       * <code>uint32 mission_id = 14;</code>
-       * @param value The missionId to set.
+       * <code>uint32 cur_progress = 14;</code>
+       * @param value The curProgress to set.
        * @return This builder for chaining.
        */
-      public Builder setMissionId(int value) {
+      public Builder setCurProgress(int value) {
         
-        missionId_ = value;
+        curProgress_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 mission_id = 14;</code>
+       * <code>uint32 cur_progress = 14;</code>
        * @return This builder for chaining.
        */
-      public Builder clearMissionId() {
+      public Builder clearCurProgress() {
         
-        missionId_ = 0;
+        curProgress_ = 0;
         onChanged();
         return this;
       }
@@ -965,18 +995,7 @@ public final class BattlePassMissionOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new BattlePassMission(input, extensionRegistry);
       }
     };
 
@@ -1011,10 +1030,10 @@ public final class BattlePassMissionOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\027BattlePassMission.proto\"\321\002\n\021BattlePass" +
-      "Mission\022 \n\030reward_battle_pass_point\030\007 \001(" +
-      "\r\0228\n\016mission_status\030\t \001(\0162 .BattlePassMi" +
-      "ssion.MissionStatus\022\024\n\014cur_progress\030\n \001(" +
-      "\r\022\026\n\016total_progress\030\r \001(\r\022\022\n\nmission_id\030" +
+      "Mission\022\022\n\nmission_id\030\007 \001(\r\0228\n\016mission_s" +
+      "tatus\030\t \001(\0162 .BattlePassMission.MissionS" +
+      "tatus\022 \n\030reward_battle_pass_point\030\n \001(\r\022" +
+      "\026\n\016total_progress\030\r \001(\r\022\024\n\014cur_progress\030" +
       "\016 \001(\r\022\024\n\014mission_type\030\017 \001(\r\"\207\001\n\rMissionS" +
       "tatus\022\032\n\026MISSION_STATUS_INVALID\020\000\022\035\n\031MIS" +
       "SION_STATUS_UNFINISHED\020\001\022\033\n\027MISSION_STAT" +
@@ -1031,7 +1050,7 @@ public final class BattlePassMissionOuterClass {
     internal_static_BattlePassMission_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_BattlePassMission_descriptor,
-        new java.lang.String[] { "RewardBattlePassPoint", "MissionStatus", "CurProgress", "TotalProgress", "MissionId", "MissionType", });
+        new java.lang.String[] { "MissionId", "MissionStatus", "RewardBattlePassPoint", "TotalProgress", "CurProgress", "MissionType", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

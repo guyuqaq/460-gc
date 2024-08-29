@@ -139,16 +139,16 @@ public final class GetPlayerTokenReqOuterClass {
         getBDGFMEIEHODBytes();
 
     /**
-     * <code>string CEMENPADOPP = 7;</code>
-     * @return The cEMENPADOPP.
+     * <code>string client_ip_str = 7;</code>
+     * @return The clientIpStr.
      */
-    java.lang.String getCEMENPADOPP();
+    java.lang.String getClientIpStr();
     /**
-     * <code>string CEMENPADOPP = 7;</code>
-     * @return The bytes for cEMENPADOPP.
+     * <code>string client_ip_str = 7;</code>
+     * @return The bytes for clientIpStr.
      */
     com.google.protobuf.ByteString
-        getCEMENPADOPPBytes();
+        getClientIpStrBytes();
 
     /**
      * <code>string birthday = 594;</code>
@@ -163,16 +163,16 @@ public final class GetPlayerTokenReqOuterClass {
         getBirthdayBytes();
 
     /**
-     * <code>string gate_ticket = 1804;</code>
-     * @return The gateTicket.
+     * <code>string ADFHNBPGAGM = 1804;</code>
+     * @return The aDFHNBPGAGM.
      */
-    java.lang.String getGateTicket();
+    java.lang.String getADFHNBPGAGM();
     /**
-     * <code>string gate_ticket = 1804;</code>
-     * @return The bytes for gateTicket.
+     * <code>string ADFHNBPGAGM = 1804;</code>
+     * @return The bytes for aDFHNBPGAGM.
      */
     com.google.protobuf.ByteString
-        getGateTicketBytes();
+        getADFHNBPGAGMBytes();
 
     /**
      * <code>uint32 platform_type = 2;</code>
@@ -193,10 +193,10 @@ public final class GetPlayerTokenReqOuterClass {
     int getAccountType();
 
     /**
-     * <code>uint32 channel_id = 15;</code>
-     * @return The channelId.
+     * <code>uint32 OCINFHOJCEA = 15;</code>
+     * @return The oCINFHOJCEA.
      */
-    int getChannelId();
+    int getOCINFHOJCEA();
 
     /**
      * <code>uint32 CIJPMGMCJBA = 1776;</code>
@@ -269,9 +269,9 @@ public final class GetPlayerTokenReqOuterClass {
       accountUid_ = "";
       clientRandKey_ = "";
       bDGFMEIEHOD_ = "";
-      cEMENPADOPP_ = "";
+      clientIpStr_ = "";
       birthday_ = "";
-      gateTicket_ = "";
+      aDFHNBPGAGM_ = "";
     }
 
     @java.lang.Override
@@ -285,6 +285,181 @@ public final class GetPlayerTokenReqOuterClass {
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
+    }
+    private GetPlayerTokenReq(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              countryCode_ = s;
+              break;
+            }
+            case 16: {
+
+              platformType_ = input.readUInt32();
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              accountUid_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              accountToken_ = s;
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              bDGFMEIEHOD_ = s;
+              break;
+            }
+            case 48: {
+
+              uid_ = input.readUInt32();
+              break;
+            }
+            case 58: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              clientIpStr_ = s;
+              break;
+            }
+            case 64: {
+
+              accountType_ = input.readUInt32();
+              break;
+            }
+            case 74: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              bPFIMEKJANE_ = s;
+              break;
+            }
+            case 82: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              psnId_ = s;
+              break;
+            }
+            case 88: {
+
+              kEKHAKAPMIN_ = input.readUInt32();
+              break;
+            }
+            case 96: {
+
+              iKKKLHICPMF_ = input.readUInt32();
+              break;
+            }
+            case 106: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              onlineId_ = s;
+              break;
+            }
+            case 112: {
+
+              isGuest_ = input.readBool();
+              break;
+            }
+            case 120: {
+
+              oCINFHOJCEA_ = input.readUInt32();
+              break;
+            }
+            case 754: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              clientRandKey_ = s;
+              break;
+            }
+            case 1344: {
+
+              kODKEFGJHAP_ = input.readUInt32();
+              break;
+            }
+            case 4754: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              birthday_ = s;
+              break;
+            }
+            case 10434: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              hCJGLLHFCMA_ = s;
+              break;
+            }
+            case 11880: {
+
+              keyId_ = input.readUInt32();
+              break;
+            }
+            case 12226: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              jLCDDOJGKKG_ = s;
+              break;
+            }
+            case 13488: {
+
+              jDHCKKAGBNL_ = input.readUInt32();
+              break;
+            }
+            case 13840: {
+
+              mPGMOFLCEOF_ = input.readUInt32();
+              break;
+            }
+            case 14208: {
+
+              cIJPMGMCJBA_ = input.readUInt32();
+              break;
+            }
+            case 14434: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              aDFHNBPGAGM_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -679,38 +854,38 @@ public final class GetPlayerTokenReqOuterClass {
       }
     }
 
-    public static final int CEMENPADOPP_FIELD_NUMBER = 7;
-    private volatile java.lang.Object cEMENPADOPP_;
+    public static final int CLIENT_IP_STR_FIELD_NUMBER = 7;
+    private volatile java.lang.Object clientIpStr_;
     /**
-     * <code>string CEMENPADOPP = 7;</code>
-     * @return The cEMENPADOPP.
+     * <code>string client_ip_str = 7;</code>
+     * @return The clientIpStr.
      */
     @java.lang.Override
-    public java.lang.String getCEMENPADOPP() {
-      java.lang.Object ref = cEMENPADOPP_;
+    public java.lang.String getClientIpStr() {
+      java.lang.Object ref = clientIpStr_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        cEMENPADOPP_ = s;
+        clientIpStr_ = s;
         return s;
       }
     }
     /**
-     * <code>string CEMENPADOPP = 7;</code>
-     * @return The bytes for cEMENPADOPP.
+     * <code>string client_ip_str = 7;</code>
+     * @return The bytes for clientIpStr.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getCEMENPADOPPBytes() {
-      java.lang.Object ref = cEMENPADOPP_;
+        getClientIpStrBytes() {
+      java.lang.Object ref = clientIpStr_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        cEMENPADOPP_ = b;
+        clientIpStr_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -755,38 +930,38 @@ public final class GetPlayerTokenReqOuterClass {
       }
     }
 
-    public static final int GATE_TICKET_FIELD_NUMBER = 1804;
-    private volatile java.lang.Object gateTicket_;
+    public static final int ADFHNBPGAGM_FIELD_NUMBER = 1804;
+    private volatile java.lang.Object aDFHNBPGAGM_;
     /**
-     * <code>string gate_ticket = 1804;</code>
-     * @return The gateTicket.
+     * <code>string ADFHNBPGAGM = 1804;</code>
+     * @return The aDFHNBPGAGM.
      */
     @java.lang.Override
-    public java.lang.String getGateTicket() {
-      java.lang.Object ref = gateTicket_;
+    public java.lang.String getADFHNBPGAGM() {
+      java.lang.Object ref = aDFHNBPGAGM_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        gateTicket_ = s;
+        aDFHNBPGAGM_ = s;
         return s;
       }
     }
     /**
-     * <code>string gate_ticket = 1804;</code>
-     * @return The bytes for gateTicket.
+     * <code>string ADFHNBPGAGM = 1804;</code>
+     * @return The bytes for aDFHNBPGAGM.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getGateTicketBytes() {
-      java.lang.Object ref = gateTicket_;
+        getADFHNBPGAGMBytes() {
+      java.lang.Object ref = aDFHNBPGAGM_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        gateTicket_ = b;
+        aDFHNBPGAGM_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -826,15 +1001,15 @@ public final class GetPlayerTokenReqOuterClass {
       return accountType_;
     }
 
-    public static final int CHANNEL_ID_FIELD_NUMBER = 15;
-    private int channelId_;
+    public static final int OCINFHOJCEA_FIELD_NUMBER = 15;
+    private int oCINFHOJCEA_;
     /**
-     * <code>uint32 channel_id = 15;</code>
-     * @return The channelId.
+     * <code>uint32 OCINFHOJCEA = 15;</code>
+     * @return The oCINFHOJCEA.
      */
     @java.lang.Override
-    public int getChannelId() {
-      return channelId_;
+    public int getOCINFHOJCEA() {
+      return oCINFHOJCEA_;
     }
 
     public static final int CIJPMGMCJBA_FIELD_NUMBER = 1776;
@@ -957,8 +1132,8 @@ public final class GetPlayerTokenReqOuterClass {
       if (uid_ != 0) {
         output.writeUInt32(6, uid_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cEMENPADOPP_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, cEMENPADOPP_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clientIpStr_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, clientIpStr_);
       }
       if (accountType_ != 0) {
         output.writeUInt32(8, accountType_);
@@ -981,8 +1156,8 @@ public final class GetPlayerTokenReqOuterClass {
       if (isGuest_ != false) {
         output.writeBool(14, isGuest_);
       }
-      if (channelId_ != 0) {
-        output.writeUInt32(15, channelId_);
+      if (oCINFHOJCEA_ != 0) {
+        output.writeUInt32(15, oCINFHOJCEA_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clientRandKey_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 94, clientRandKey_);
@@ -1011,10 +1186,10 @@ public final class GetPlayerTokenReqOuterClass {
       if (cIJPMGMCJBA_ != 0) {
         output.writeUInt32(1776, cIJPMGMCJBA_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(gateTicket_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1804, gateTicket_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(aDFHNBPGAGM_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1804, aDFHNBPGAGM_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -1043,8 +1218,8 @@ public final class GetPlayerTokenReqOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(6, uid_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cEMENPADOPP_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, cEMENPADOPP_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clientIpStr_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, clientIpStr_);
       }
       if (accountType_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -1071,9 +1246,9 @@ public final class GetPlayerTokenReqOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(14, isGuest_);
       }
-      if (channelId_ != 0) {
+      if (oCINFHOJCEA_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(15, channelId_);
+          .computeUInt32Size(15, oCINFHOJCEA_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clientRandKey_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(94, clientRandKey_);
@@ -1107,10 +1282,10 @@ public final class GetPlayerTokenReqOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(1776, cIJPMGMCJBA_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(gateTicket_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1804, gateTicket_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(aDFHNBPGAGM_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1804, aDFHNBPGAGM_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -1145,20 +1320,20 @@ public final class GetPlayerTokenReqOuterClass {
           .equals(other.getClientRandKey())) return false;
       if (!getBDGFMEIEHOD()
           .equals(other.getBDGFMEIEHOD())) return false;
-      if (!getCEMENPADOPP()
-          .equals(other.getCEMENPADOPP())) return false;
+      if (!getClientIpStr()
+          .equals(other.getClientIpStr())) return false;
       if (!getBirthday()
           .equals(other.getBirthday())) return false;
-      if (!getGateTicket()
-          .equals(other.getGateTicket())) return false;
+      if (!getADFHNBPGAGM()
+          .equals(other.getADFHNBPGAGM())) return false;
       if (getPlatformType()
           != other.getPlatformType()) return false;
       if (getIKKKLHICPMF()
           != other.getIKKKLHICPMF()) return false;
       if (getAccountType()
           != other.getAccountType()) return false;
-      if (getChannelId()
-          != other.getChannelId()) return false;
+      if (getOCINFHOJCEA()
+          != other.getOCINFHOJCEA()) return false;
       if (getCIJPMGMCJBA()
           != other.getCIJPMGMCJBA()) return false;
       if (getUid()
@@ -1175,7 +1350,7 @@ public final class GetPlayerTokenReqOuterClass {
           != other.getKEKHAKAPMIN()) return false;
       if (getJDHCKKAGBNL()
           != other.getJDHCKKAGBNL()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -1206,20 +1381,20 @@ public final class GetPlayerTokenReqOuterClass {
       hash = (53 * hash) + getClientRandKey().hashCode();
       hash = (37 * hash) + BDGFMEIEHOD_FIELD_NUMBER;
       hash = (53 * hash) + getBDGFMEIEHOD().hashCode();
-      hash = (37 * hash) + CEMENPADOPP_FIELD_NUMBER;
-      hash = (53 * hash) + getCEMENPADOPP().hashCode();
+      hash = (37 * hash) + CLIENT_IP_STR_FIELD_NUMBER;
+      hash = (53 * hash) + getClientIpStr().hashCode();
       hash = (37 * hash) + BIRTHDAY_FIELD_NUMBER;
       hash = (53 * hash) + getBirthday().hashCode();
-      hash = (37 * hash) + GATE_TICKET_FIELD_NUMBER;
-      hash = (53 * hash) + getGateTicket().hashCode();
+      hash = (37 * hash) + ADFHNBPGAGM_FIELD_NUMBER;
+      hash = (53 * hash) + getADFHNBPGAGM().hashCode();
       hash = (37 * hash) + PLATFORM_TYPE_FIELD_NUMBER;
       hash = (53 * hash) + getPlatformType();
       hash = (37 * hash) + IKKKLHICPMF_FIELD_NUMBER;
       hash = (53 * hash) + getIKKKLHICPMF();
       hash = (37 * hash) + ACCOUNT_TYPE_FIELD_NUMBER;
       hash = (53 * hash) + getAccountType();
-      hash = (37 * hash) + CHANNEL_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getChannelId();
+      hash = (37 * hash) + OCINFHOJCEA_FIELD_NUMBER;
+      hash = (53 * hash) + getOCINFHOJCEA();
       hash = (37 * hash) + CIJPMGMCJBA_FIELD_NUMBER;
       hash = (53 * hash) + getCIJPMGMCJBA();
       hash = (37 * hash) + UID_FIELD_NUMBER;
@@ -1237,7 +1412,7 @@ public final class GetPlayerTokenReqOuterClass {
       hash = (53 * hash) + getKEKHAKAPMIN();
       hash = (37 * hash) + JDHCKKAGBNL_FIELD_NUMBER;
       hash = (53 * hash) + getJDHCKKAGBNL();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -1354,13 +1529,18 @@ public final class GetPlayerTokenReqOuterClass {
 
       // Construct using emu.grasscutter.net.proto.GetPlayerTokenReqOuterClass.GetPlayerTokenReq.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1385,11 +1565,11 @@ public final class GetPlayerTokenReqOuterClass {
 
         bDGFMEIEHOD_ = "";
 
-        cEMENPADOPP_ = "";
+        clientIpStr_ = "";
 
         birthday_ = "";
 
-        gateTicket_ = "";
+        aDFHNBPGAGM_ = "";
 
         platformType_ = 0;
 
@@ -1397,7 +1577,7 @@ public final class GetPlayerTokenReqOuterClass {
 
         accountType_ = 0;
 
-        channelId_ = 0;
+        oCINFHOJCEA_ = 0;
 
         cIJPMGMCJBA_ = 0;
 
@@ -1451,13 +1631,13 @@ public final class GetPlayerTokenReqOuterClass {
         result.accountUid_ = accountUid_;
         result.clientRandKey_ = clientRandKey_;
         result.bDGFMEIEHOD_ = bDGFMEIEHOD_;
-        result.cEMENPADOPP_ = cEMENPADOPP_;
+        result.clientIpStr_ = clientIpStr_;
         result.birthday_ = birthday_;
-        result.gateTicket_ = gateTicket_;
+        result.aDFHNBPGAGM_ = aDFHNBPGAGM_;
         result.platformType_ = platformType_;
         result.iKKKLHICPMF_ = iKKKLHICPMF_;
         result.accountType_ = accountType_;
-        result.channelId_ = channelId_;
+        result.oCINFHOJCEA_ = oCINFHOJCEA_;
         result.cIJPMGMCJBA_ = cIJPMGMCJBA_;
         result.uid_ = uid_;
         result.mPGMOFLCEOF_ = mPGMOFLCEOF_;
@@ -1554,16 +1734,16 @@ public final class GetPlayerTokenReqOuterClass {
           bDGFMEIEHOD_ = other.bDGFMEIEHOD_;
           onChanged();
         }
-        if (!other.getCEMENPADOPP().isEmpty()) {
-          cEMENPADOPP_ = other.cEMENPADOPP_;
+        if (!other.getClientIpStr().isEmpty()) {
+          clientIpStr_ = other.clientIpStr_;
           onChanged();
         }
         if (!other.getBirthday().isEmpty()) {
           birthday_ = other.birthday_;
           onChanged();
         }
-        if (!other.getGateTicket().isEmpty()) {
-          gateTicket_ = other.gateTicket_;
+        if (!other.getADFHNBPGAGM().isEmpty()) {
+          aDFHNBPGAGM_ = other.aDFHNBPGAGM_;
           onChanged();
         }
         if (other.getPlatformType() != 0) {
@@ -1575,8 +1755,8 @@ public final class GetPlayerTokenReqOuterClass {
         if (other.getAccountType() != 0) {
           setAccountType(other.getAccountType());
         }
-        if (other.getChannelId() != 0) {
-          setChannelId(other.getChannelId());
+        if (other.getOCINFHOJCEA() != 0) {
+          setOCINFHOJCEA(other.getOCINFHOJCEA());
         }
         if (other.getCIJPMGMCJBA() != 0) {
           setCIJPMGMCJBA(other.getCIJPMGMCJBA());
@@ -1602,7 +1782,7 @@ public final class GetPlayerTokenReqOuterClass {
         if (other.getJDHCKKAGBNL() != 0) {
           setJDHCKKAGBNL(other.getJDHCKKAGBNL());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -1617,155 +1797,17 @@ public final class GetPlayerTokenReqOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.GetPlayerTokenReqOuterClass.GetPlayerTokenReq parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                countryCode_ = input.readStringRequireUtf8();
-
-                break;
-              } // case 10
-              case 16: {
-                platformType_ = input.readUInt32();
-
-                break;
-              } // case 16
-              case 26: {
-                accountUid_ = input.readStringRequireUtf8();
-
-                break;
-              } // case 26
-              case 34: {
-                accountToken_ = input.readStringRequireUtf8();
-
-                break;
-              } // case 34
-              case 42: {
-                bDGFMEIEHOD_ = input.readStringRequireUtf8();
-
-                break;
-              } // case 42
-              case 48: {
-                uid_ = input.readUInt32();
-
-                break;
-              } // case 48
-              case 58: {
-                cEMENPADOPP_ = input.readStringRequireUtf8();
-
-                break;
-              } // case 58
-              case 64: {
-                accountType_ = input.readUInt32();
-
-                break;
-              } // case 64
-              case 74: {
-                bPFIMEKJANE_ = input.readStringRequireUtf8();
-
-                break;
-              } // case 74
-              case 82: {
-                psnId_ = input.readStringRequireUtf8();
-
-                break;
-              } // case 82
-              case 88: {
-                kEKHAKAPMIN_ = input.readUInt32();
-
-                break;
-              } // case 88
-              case 96: {
-                iKKKLHICPMF_ = input.readUInt32();
-
-                break;
-              } // case 96
-              case 106: {
-                onlineId_ = input.readStringRequireUtf8();
-
-                break;
-              } // case 106
-              case 112: {
-                isGuest_ = input.readBool();
-
-                break;
-              } // case 112
-              case 120: {
-                channelId_ = input.readUInt32();
-
-                break;
-              } // case 120
-              case 754: {
-                clientRandKey_ = input.readStringRequireUtf8();
-
-                break;
-              } // case 754
-              case 1344: {
-                kODKEFGJHAP_ = input.readUInt32();
-
-                break;
-              } // case 1344
-              case 4754: {
-                birthday_ = input.readStringRequireUtf8();
-
-                break;
-              } // case 4754
-              case 10434: {
-                hCJGLLHFCMA_ = input.readStringRequireUtf8();
-
-                break;
-              } // case 10434
-              case 11880: {
-                keyId_ = input.readUInt32();
-
-                break;
-              } // case 11880
-              case 12226: {
-                jLCDDOJGKKG_ = input.readStringRequireUtf8();
-
-                break;
-              } // case 12226
-              case 13488: {
-                jDHCKKAGBNL_ = input.readUInt32();
-
-                break;
-              } // case 13488
-              case 13840: {
-                mPGMOFLCEOF_ = input.readUInt32();
-
-                break;
-              } // case 13840
-              case 14208: {
-                cIJPMGMCJBA_ = input.readUInt32();
-
-                break;
-              } // case 14208
-              case 14434: {
-                gateTicket_ = input.readStringRequireUtf8();
-
-                break;
-              } // case 14434
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.GetPlayerTokenReqOuterClass.GetPlayerTokenReq) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
 
@@ -2529,78 +2571,78 @@ public final class GetPlayerTokenReqOuterClass {
         return this;
       }
 
-      private java.lang.Object cEMENPADOPP_ = "";
+      private java.lang.Object clientIpStr_ = "";
       /**
-       * <code>string CEMENPADOPP = 7;</code>
-       * @return The cEMENPADOPP.
+       * <code>string client_ip_str = 7;</code>
+       * @return The clientIpStr.
        */
-      public java.lang.String getCEMENPADOPP() {
-        java.lang.Object ref = cEMENPADOPP_;
+      public java.lang.String getClientIpStr() {
+        java.lang.Object ref = clientIpStr_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          cEMENPADOPP_ = s;
+          clientIpStr_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string CEMENPADOPP = 7;</code>
-       * @return The bytes for cEMENPADOPP.
+       * <code>string client_ip_str = 7;</code>
+       * @return The bytes for clientIpStr.
        */
       public com.google.protobuf.ByteString
-          getCEMENPADOPPBytes() {
-        java.lang.Object ref = cEMENPADOPP_;
+          getClientIpStrBytes() {
+        java.lang.Object ref = clientIpStr_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          cEMENPADOPP_ = b;
+          clientIpStr_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string CEMENPADOPP = 7;</code>
-       * @param value The cEMENPADOPP to set.
+       * <code>string client_ip_str = 7;</code>
+       * @param value The clientIpStr to set.
        * @return This builder for chaining.
        */
-      public Builder setCEMENPADOPP(
+      public Builder setClientIpStr(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        cEMENPADOPP_ = value;
+        clientIpStr_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string CEMENPADOPP = 7;</code>
+       * <code>string client_ip_str = 7;</code>
        * @return This builder for chaining.
        */
-      public Builder clearCEMENPADOPP() {
+      public Builder clearClientIpStr() {
         
-        cEMENPADOPP_ = getDefaultInstance().getCEMENPADOPP();
+        clientIpStr_ = getDefaultInstance().getClientIpStr();
         onChanged();
         return this;
       }
       /**
-       * <code>string CEMENPADOPP = 7;</code>
-       * @param value The bytes for cEMENPADOPP to set.
+       * <code>string client_ip_str = 7;</code>
+       * @param value The bytes for clientIpStr to set.
        * @return This builder for chaining.
        */
-      public Builder setCEMENPADOPPBytes(
+      public Builder setClientIpStrBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        cEMENPADOPP_ = value;
+        clientIpStr_ = value;
         onChanged();
         return this;
       }
@@ -2681,78 +2723,78 @@ public final class GetPlayerTokenReqOuterClass {
         return this;
       }
 
-      private java.lang.Object gateTicket_ = "";
+      private java.lang.Object aDFHNBPGAGM_ = "";
       /**
-       * <code>string gate_ticket = 1804;</code>
-       * @return The gateTicket.
+       * <code>string ADFHNBPGAGM = 1804;</code>
+       * @return The aDFHNBPGAGM.
        */
-      public java.lang.String getGateTicket() {
-        java.lang.Object ref = gateTicket_;
+      public java.lang.String getADFHNBPGAGM() {
+        java.lang.Object ref = aDFHNBPGAGM_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          gateTicket_ = s;
+          aDFHNBPGAGM_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string gate_ticket = 1804;</code>
-       * @return The bytes for gateTicket.
+       * <code>string ADFHNBPGAGM = 1804;</code>
+       * @return The bytes for aDFHNBPGAGM.
        */
       public com.google.protobuf.ByteString
-          getGateTicketBytes() {
-        java.lang.Object ref = gateTicket_;
+          getADFHNBPGAGMBytes() {
+        java.lang.Object ref = aDFHNBPGAGM_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          gateTicket_ = b;
+          aDFHNBPGAGM_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string gate_ticket = 1804;</code>
-       * @param value The gateTicket to set.
+       * <code>string ADFHNBPGAGM = 1804;</code>
+       * @param value The aDFHNBPGAGM to set.
        * @return This builder for chaining.
        */
-      public Builder setGateTicket(
+      public Builder setADFHNBPGAGM(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        gateTicket_ = value;
+        aDFHNBPGAGM_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string gate_ticket = 1804;</code>
+       * <code>string ADFHNBPGAGM = 1804;</code>
        * @return This builder for chaining.
        */
-      public Builder clearGateTicket() {
+      public Builder clearADFHNBPGAGM() {
         
-        gateTicket_ = getDefaultInstance().getGateTicket();
+        aDFHNBPGAGM_ = getDefaultInstance().getADFHNBPGAGM();
         onChanged();
         return this;
       }
       /**
-       * <code>string gate_ticket = 1804;</code>
-       * @param value The bytes for gateTicket to set.
+       * <code>string ADFHNBPGAGM = 1804;</code>
+       * @param value The bytes for aDFHNBPGAGM to set.
        * @return This builder for chaining.
        */
-      public Builder setGateTicketBytes(
+      public Builder setADFHNBPGAGMBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        gateTicket_ = value;
+        aDFHNBPGAGM_ = value;
         onChanged();
         return this;
       }
@@ -2850,33 +2892,33 @@ public final class GetPlayerTokenReqOuterClass {
         return this;
       }
 
-      private int channelId_ ;
+      private int oCINFHOJCEA_ ;
       /**
-       * <code>uint32 channel_id = 15;</code>
-       * @return The channelId.
+       * <code>uint32 OCINFHOJCEA = 15;</code>
+       * @return The oCINFHOJCEA.
        */
       @java.lang.Override
-      public int getChannelId() {
-        return channelId_;
+      public int getOCINFHOJCEA() {
+        return oCINFHOJCEA_;
       }
       /**
-       * <code>uint32 channel_id = 15;</code>
-       * @param value The channelId to set.
+       * <code>uint32 OCINFHOJCEA = 15;</code>
+       * @param value The oCINFHOJCEA to set.
        * @return This builder for chaining.
        */
-      public Builder setChannelId(int value) {
+      public Builder setOCINFHOJCEA(int value) {
         
-        channelId_ = value;
+        oCINFHOJCEA_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 channel_id = 15;</code>
+       * <code>uint32 OCINFHOJCEA = 15;</code>
        * @return This builder for chaining.
        */
-      public Builder clearChannelId() {
+      public Builder clearOCINFHOJCEA() {
         
-        channelId_ = 0;
+        oCINFHOJCEA_ = 0;
         onChanged();
         return this;
       }
@@ -3161,18 +3203,7 @@ public final class GetPlayerTokenReqOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new GetPlayerTokenReq(input, extensionRegistry);
       }
     };
 
@@ -3206,22 +3237,22 @@ public final class GetPlayerTokenReqOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\027GetPlayerTokenReq.proto\"\230\004\n\021GetPlayerT" +
+      "\n\027GetPlayerTokenReq.proto\"\233\004\n\021GetPlayerT" +
       "okenReq\022\024\n\013HCJGLLHFCMA\030\230\n \001(\t\022\021\n\tonline_" +
       "id\030\r \001(\t\022\023\n\013BPFIMEKJANE\030\t \001(\t\022\024\n\014country" +
       "_code\030\001 \001(\t\022\025\n\raccount_token\030\004 \001(\t\022\016\n\006ps" +
       "n_id\030\n \001(\t\022\024\n\013JLCDDOJGKKG\030\370\013 \001(\t\022\023\n\013acco" +
       "unt_uid\030\003 \001(\t\022\027\n\017client_rand_key\030^ \001(\t\022\023" +
-      "\n\013BDGFMEIEHOD\030\005 \001(\t\022\023\n\013CEMENPADOPP\030\007 \001(\t" +
-      "\022\021\n\010birthday\030\322\004 \001(\t\022\024\n\013gate_ticket\030\214\016 \001(" +
-      "\t\022\025\n\rplatform_type\030\002 \001(\r\022\023\n\013IKKKLHICPMF\030" +
-      "\014 \001(\r\022\024\n\014account_type\030\010 \001(\r\022\022\n\nchannel_i" +
-      "d\030\017 \001(\r\022\024\n\013CIJPMGMCJBA\030\360\r \001(\r\022\013\n\003uid\030\006 \001" +
-      "(\r\022\024\n\013MPGMOFLCEOF\030\302\r \001(\r\022\020\n\010is_guest\030\016 \001" +
-      "(\010\022\024\n\013KODKEFGJHAP\030\250\001 \001(\r\022\017\n\006key_id\030\315\013 \001(" +
-      "\r\022\023\n\013KEKHAKAPMIN\030\013 \001(\r\022\024\n\013JDHCKKAGBNL\030\226\r" +
-      " \001(\rB\033\n\031emu.grasscutter.net.protob\006proto" +
-      "3"
+      "\n\013BDGFMEIEHOD\030\005 \001(\t\022\025\n\rclient_ip_str\030\007 \001" +
+      "(\t\022\021\n\010birthday\030\322\004 \001(\t\022\024\n\013ADFHNBPGAGM\030\214\016 " +
+      "\001(\t\022\025\n\rplatform_type\030\002 \001(\r\022\023\n\013IKKKLHICPM" +
+      "F\030\014 \001(\r\022\024\n\014account_type\030\010 \001(\r\022\023\n\013OCINFHO" +
+      "JCEA\030\017 \001(\r\022\024\n\013CIJPMGMCJBA\030\360\r \001(\r\022\013\n\003uid\030" +
+      "\006 \001(\r\022\024\n\013MPGMOFLCEOF\030\302\r \001(\r\022\020\n\010is_guest\030" +
+      "\016 \001(\010\022\024\n\013KODKEFGJHAP\030\250\001 \001(\r\022\017\n\006key_id\030\315\013" +
+      " \001(\r\022\023\n\013KEKHAKAPMIN\030\013 \001(\r\022\024\n\013JDHCKKAGBNL" +
+      "\030\226\r \001(\rB\033\n\031emu.grasscutter.net.protob\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3232,7 +3263,7 @@ public final class GetPlayerTokenReqOuterClass {
     internal_static_GetPlayerTokenReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_GetPlayerTokenReq_descriptor,
-        new java.lang.String[] { "HCJGLLHFCMA", "OnlineId", "BPFIMEKJANE", "CountryCode", "AccountToken", "PsnId", "JLCDDOJGKKG", "AccountUid", "ClientRandKey", "BDGFMEIEHOD", "CEMENPADOPP", "Birthday", "GateTicket", "PlatformType", "IKKKLHICPMF", "AccountType", "ChannelId", "CIJPMGMCJBA", "Uid", "MPGMOFLCEOF", "IsGuest", "KODKEFGJHAP", "KeyId", "KEKHAKAPMIN", "JDHCKKAGBNL", });
+        new java.lang.String[] { "HCJGLLHFCMA", "OnlineId", "BPFIMEKJANE", "CountryCode", "AccountToken", "PsnId", "JLCDDOJGKKG", "AccountUid", "ClientRandKey", "BDGFMEIEHOD", "ClientIpStr", "Birthday", "ADFHNBPGAGM", "PlatformType", "IKKKLHICPMF", "AccountType", "OCINFHOJCEA", "CIJPMGMCJBA", "Uid", "MPGMOFLCEOF", "IsGuest", "KODKEFGJHAP", "KeyId", "KEKHAKAPMIN", "JDHCKKAGBNL", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

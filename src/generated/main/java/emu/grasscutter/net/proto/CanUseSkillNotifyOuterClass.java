@@ -19,16 +19,15 @@ public final class CanUseSkillNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>bool is_can_use_skill = 13;</code>
+     * <code>bool is_can_use_skill = 2;</code>
      * @return The isCanUseSkill.
      */
     boolean getIsCanUseSkill();
   }
   /**
    * <pre>
-   * Version: 4.7.0
-   * CmdId: 21073 or 2728?
-   * ?
+   * Version: 4.6.0
+   * CmdId: 5279
    * </pre>
    *
    * Protobuf type {@code CanUseSkillNotify}
@@ -57,6 +56,48 @@ public final class CanUseSkillNotifyOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private CanUseSkillNotify(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 16: {
+
+              isCanUseSkill_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.CanUseSkillNotifyOuterClass.internal_static_CanUseSkillNotify_descriptor;
@@ -70,10 +111,10 @@ public final class CanUseSkillNotifyOuterClass {
               emu.grasscutter.net.proto.CanUseSkillNotifyOuterClass.CanUseSkillNotify.class, emu.grasscutter.net.proto.CanUseSkillNotifyOuterClass.CanUseSkillNotify.Builder.class);
     }
 
-    public static final int IS_CAN_USE_SKILL_FIELD_NUMBER = 13;
+    public static final int IS_CAN_USE_SKILL_FIELD_NUMBER = 2;
     private boolean isCanUseSkill_;
     /**
-     * <code>bool is_can_use_skill = 13;</code>
+     * <code>bool is_can_use_skill = 2;</code>
      * @return The isCanUseSkill.
      */
     @java.lang.Override
@@ -96,9 +137,9 @@ public final class CanUseSkillNotifyOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (isCanUseSkill_ != false) {
-        output.writeBool(13, isCanUseSkill_);
+        output.writeBool(2, isCanUseSkill_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -109,9 +150,9 @@ public final class CanUseSkillNotifyOuterClass {
       size = 0;
       if (isCanUseSkill_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(13, isCanUseSkill_);
+          .computeBoolSize(2, isCanUseSkill_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -128,7 +169,7 @@ public final class CanUseSkillNotifyOuterClass {
 
       if (getIsCanUseSkill()
           != other.getIsCanUseSkill()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -142,7 +183,7 @@ public final class CanUseSkillNotifyOuterClass {
       hash = (37 * hash) + IS_CAN_USE_SKILL_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsCanUseSkill());
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -239,9 +280,8 @@ public final class CanUseSkillNotifyOuterClass {
     }
     /**
      * <pre>
-     * Version: 4.7.0
-     * CmdId: 21073 or 2728?
-     * ?
+     * Version: 4.6.0
+     * CmdId: 5279
      * </pre>
      *
      * Protobuf type {@code CanUseSkillNotify}
@@ -265,13 +305,18 @@ public final class CanUseSkillNotifyOuterClass {
 
       // Construct using emu.grasscutter.net.proto.CanUseSkillNotifyOuterClass.CanUseSkillNotify.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -356,7 +401,7 @@ public final class CanUseSkillNotifyOuterClass {
         if (other.getIsCanUseSkill() != false) {
           setIsCanUseSkill(other.getIsCanUseSkill());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -371,41 +416,23 @@ public final class CanUseSkillNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.CanUseSkillNotifyOuterClass.CanUseSkillNotify parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 104: {
-                isCanUseSkill_ = input.readBool();
-
-                break;
-              } // case 104
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.CanUseSkillNotifyOuterClass.CanUseSkillNotify) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
 
       private boolean isCanUseSkill_ ;
       /**
-       * <code>bool is_can_use_skill = 13;</code>
+       * <code>bool is_can_use_skill = 2;</code>
        * @return The isCanUseSkill.
        */
       @java.lang.Override
@@ -413,7 +440,7 @@ public final class CanUseSkillNotifyOuterClass {
         return isCanUseSkill_;
       }
       /**
-       * <code>bool is_can_use_skill = 13;</code>
+       * <code>bool is_can_use_skill = 2;</code>
        * @param value The isCanUseSkill to set.
        * @return This builder for chaining.
        */
@@ -424,7 +451,7 @@ public final class CanUseSkillNotifyOuterClass {
         return this;
       }
       /**
-       * <code>bool is_can_use_skill = 13;</code>
+       * <code>bool is_can_use_skill = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearIsCanUseSkill() {
@@ -466,18 +493,7 @@ public final class CanUseSkillNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new CanUseSkillNotify(input, extensionRegistry);
       }
     };
 
@@ -512,7 +528,7 @@ public final class CanUseSkillNotifyOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\027CanUseSkillNotify.proto\"-\n\021CanUseSkill" +
-      "Notify\022\030\n\020is_can_use_skill\030\r \001(\010B\033\n\031emu." +
+      "Notify\022\030\n\020is_can_use_skill\030\002 \001(\010B\033\n\031emu." +
       "grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

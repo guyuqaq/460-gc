@@ -19,15 +19,15 @@ public final class ObstacleInfoOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.ShapeType shape = 4;</code>
+     * <code>.ObstacleInfo.ShapeType shape = 4;</code>
      * @return The enum numeric value on the wire for shape.
      */
     int getShapeValue();
     /**
-     * <code>.ShapeType shape = 4;</code>
+     * <code>.ObstacleInfo.ShapeType shape = 4;</code>
      * @return The shape.
      */
-    emu.grasscutter.net.proto.ShapeTypeOuterClass.ShapeType getShape();
+    emu.grasscutter.net.proto.ObstacleInfoOuterClass.ObstacleInfo.ShapeType getShape();
 
     /**
      * <code>.MathQuaternion rotation = 5;</code>
@@ -108,6 +108,93 @@ public final class ObstacleInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private ObstacleInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 32: {
+              int rawValue = input.readEnum();
+
+              shape_ = rawValue;
+              break;
+            }
+            case 42: {
+              emu.grasscutter.net.proto.MathQuaternionOuterClass.MathQuaternion.Builder subBuilder = null;
+              if (rotation_ != null) {
+                subBuilder = rotation_.toBuilder();
+              }
+              rotation_ = input.readMessage(emu.grasscutter.net.proto.MathQuaternionOuterClass.MathQuaternion.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(rotation_);
+                rotation_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 50: {
+              emu.grasscutter.net.proto.Vector3IntOuterClass.Vector3Int.Builder subBuilder = null;
+              if (extents_ != null) {
+                subBuilder = extents_.toBuilder();
+              }
+              extents_ = input.readMessage(emu.grasscutter.net.proto.Vector3IntOuterClass.Vector3Int.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(extents_);
+                extents_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 96: {
+
+              obstacleId_ = input.readInt32();
+              break;
+            }
+            case 106: {
+              emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder subBuilder = null;
+              if (center_ != null) {
+                subBuilder = center_.toBuilder();
+              }
+              center_ = input.readMessage(emu.grasscutter.net.proto.VectorOuterClass.Vector.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(center_);
+                center_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.ObstacleInfoOuterClass.internal_static_ObstacleInfo_descriptor;
@@ -121,23 +208,131 @@ public final class ObstacleInfoOuterClass {
               emu.grasscutter.net.proto.ObstacleInfoOuterClass.ObstacleInfo.class, emu.grasscutter.net.proto.ObstacleInfoOuterClass.ObstacleInfo.Builder.class);
     }
 
+    /**
+     * Protobuf enum {@code ObstacleInfo.ShapeType}
+     */
+    public enum ShapeType
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>OBSTACLE_SHAPE_CAPSULE = 0;</code>
+       */
+      OBSTACLE_SHAPE_CAPSULE(0),
+      /**
+       * <code>OBSTACLE_SHAPE_BOX = 1;</code>
+       */
+      OBSTACLE_SHAPE_BOX(1),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>OBSTACLE_SHAPE_CAPSULE = 0;</code>
+       */
+      public static final int OBSTACLE_SHAPE_CAPSULE_VALUE = 0;
+      /**
+       * <code>OBSTACLE_SHAPE_BOX = 1;</code>
+       */
+      public static final int OBSTACLE_SHAPE_BOX_VALUE = 1;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static ShapeType valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static ShapeType forNumber(int value) {
+        switch (value) {
+          case 0: return OBSTACLE_SHAPE_CAPSULE;
+          case 1: return OBSTACLE_SHAPE_BOX;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<ShapeType>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          ShapeType> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<ShapeType>() {
+              public ShapeType findValueByNumber(int number) {
+                return ShapeType.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return emu.grasscutter.net.proto.ObstacleInfoOuterClass.ObstacleInfo.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final ShapeType[] VALUES = values();
+
+      public static ShapeType valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private ShapeType(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:ObstacleInfo.ShapeType)
+    }
+
     public static final int SHAPE_FIELD_NUMBER = 4;
     private int shape_;
     /**
-     * <code>.ShapeType shape = 4;</code>
+     * <code>.ObstacleInfo.ShapeType shape = 4;</code>
      * @return The enum numeric value on the wire for shape.
      */
     @java.lang.Override public int getShapeValue() {
       return shape_;
     }
     /**
-     * <code>.ShapeType shape = 4;</code>
+     * <code>.ObstacleInfo.ShapeType shape = 4;</code>
      * @return The shape.
      */
-    @java.lang.Override public emu.grasscutter.net.proto.ShapeTypeOuterClass.ShapeType getShape() {
+    @java.lang.Override public emu.grasscutter.net.proto.ObstacleInfoOuterClass.ObstacleInfo.ShapeType getShape() {
       @SuppressWarnings("deprecation")
-      emu.grasscutter.net.proto.ShapeTypeOuterClass.ShapeType result = emu.grasscutter.net.proto.ShapeTypeOuterClass.ShapeType.valueOf(shape_);
-      return result == null ? emu.grasscutter.net.proto.ShapeTypeOuterClass.ShapeType.UNRECOGNIZED : result;
+      emu.grasscutter.net.proto.ObstacleInfoOuterClass.ObstacleInfo.ShapeType result = emu.grasscutter.net.proto.ObstacleInfoOuterClass.ObstacleInfo.ShapeType.valueOf(shape_);
+      return result == null ? emu.grasscutter.net.proto.ObstacleInfoOuterClass.ObstacleInfo.ShapeType.UNRECOGNIZED : result;
     }
 
     public static final int ROTATION_FIELD_NUMBER = 5;
@@ -243,7 +438,7 @@ public final class ObstacleInfoOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (shape_ != emu.grasscutter.net.proto.ShapeTypeOuterClass.ShapeType.OBSTACLE_SHAPE_CAPSULE.getNumber()) {
+      if (shape_ != emu.grasscutter.net.proto.ObstacleInfoOuterClass.ObstacleInfo.ShapeType.OBSTACLE_SHAPE_CAPSULE.getNumber()) {
         output.writeEnum(4, shape_);
       }
       if (rotation_ != null) {
@@ -258,7 +453,7 @@ public final class ObstacleInfoOuterClass {
       if (center_ != null) {
         output.writeMessage(13, getCenter());
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -267,7 +462,7 @@ public final class ObstacleInfoOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (shape_ != emu.grasscutter.net.proto.ShapeTypeOuterClass.ShapeType.OBSTACLE_SHAPE_CAPSULE.getNumber()) {
+      if (shape_ != emu.grasscutter.net.proto.ObstacleInfoOuterClass.ObstacleInfo.ShapeType.OBSTACLE_SHAPE_CAPSULE.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(4, shape_);
       }
@@ -287,7 +482,7 @@ public final class ObstacleInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(13, getCenter());
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -320,7 +515,7 @@ public final class ObstacleInfoOuterClass {
         if (!getCenter()
             .equals(other.getCenter())) return false;
       }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -347,7 +542,7 @@ public final class ObstacleInfoOuterClass {
         hash = (37 * hash) + CENTER_FIELD_NUMBER;
         hash = (53 * hash) + getCenter().hashCode();
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -464,13 +659,18 @@ public final class ObstacleInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.ObstacleInfoOuterClass.ObstacleInfo.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -603,7 +803,7 @@ public final class ObstacleInfoOuterClass {
         if (other.hasCenter()) {
           mergeCenter(other.getCenter());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -618,74 +818,30 @@ public final class ObstacleInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.ObstacleInfoOuterClass.ObstacleInfo parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 32: {
-                shape_ = input.readEnum();
-
-                break;
-              } // case 32
-              case 42: {
-                input.readMessage(
-                    getRotationFieldBuilder().getBuilder(),
-                    extensionRegistry);
-
-                break;
-              } // case 42
-              case 50: {
-                input.readMessage(
-                    getExtentsFieldBuilder().getBuilder(),
-                    extensionRegistry);
-
-                break;
-              } // case 50
-              case 96: {
-                obstacleId_ = input.readInt32();
-
-                break;
-              } // case 96
-              case 106: {
-                input.readMessage(
-                    getCenterFieldBuilder().getBuilder(),
-                    extensionRegistry);
-
-                break;
-              } // case 106
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.ObstacleInfoOuterClass.ObstacleInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
 
       private int shape_ = 0;
       /**
-       * <code>.ShapeType shape = 4;</code>
+       * <code>.ObstacleInfo.ShapeType shape = 4;</code>
        * @return The enum numeric value on the wire for shape.
        */
       @java.lang.Override public int getShapeValue() {
         return shape_;
       }
       /**
-       * <code>.ShapeType shape = 4;</code>
+       * <code>.ObstacleInfo.ShapeType shape = 4;</code>
        * @param value The enum numeric value on the wire for shape to set.
        * @return This builder for chaining.
        */
@@ -696,21 +852,21 @@ public final class ObstacleInfoOuterClass {
         return this;
       }
       /**
-       * <code>.ShapeType shape = 4;</code>
+       * <code>.ObstacleInfo.ShapeType shape = 4;</code>
        * @return The shape.
        */
       @java.lang.Override
-      public emu.grasscutter.net.proto.ShapeTypeOuterClass.ShapeType getShape() {
+      public emu.grasscutter.net.proto.ObstacleInfoOuterClass.ObstacleInfo.ShapeType getShape() {
         @SuppressWarnings("deprecation")
-        emu.grasscutter.net.proto.ShapeTypeOuterClass.ShapeType result = emu.grasscutter.net.proto.ShapeTypeOuterClass.ShapeType.valueOf(shape_);
-        return result == null ? emu.grasscutter.net.proto.ShapeTypeOuterClass.ShapeType.UNRECOGNIZED : result;
+        emu.grasscutter.net.proto.ObstacleInfoOuterClass.ObstacleInfo.ShapeType result = emu.grasscutter.net.proto.ObstacleInfoOuterClass.ObstacleInfo.ShapeType.valueOf(shape_);
+        return result == null ? emu.grasscutter.net.proto.ObstacleInfoOuterClass.ObstacleInfo.ShapeType.UNRECOGNIZED : result;
       }
       /**
-       * <code>.ShapeType shape = 4;</code>
+       * <code>.ObstacleInfo.ShapeType shape = 4;</code>
        * @param value The shape to set.
        * @return This builder for chaining.
        */
-      public Builder setShape(emu.grasscutter.net.proto.ShapeTypeOuterClass.ShapeType value) {
+      public Builder setShape(emu.grasscutter.net.proto.ObstacleInfoOuterClass.ObstacleInfo.ShapeType value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -720,7 +876,7 @@ public final class ObstacleInfoOuterClass {
         return this;
       }
       /**
-       * <code>.ShapeType shape = 4;</code>
+       * <code>.ObstacleInfo.ShapeType shape = 4;</code>
        * @return This builder for chaining.
        */
       public Builder clearShape() {
@@ -1150,18 +1306,7 @@ public final class ObstacleInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new ObstacleInfo(input, extensionRegistry);
       }
     };
 
@@ -1195,19 +1340,19 @@ public final class ObstacleInfoOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\022ObstacleInfo.proto\032\017ShapeType.proto\032\024M" +
-      "athQuaternion.proto\032\020Vector3Int.proto\032\014V" +
-      "ector.proto\"\230\001\n\014ObstacleInfo\022\031\n\005shape\030\004 " +
-      "\001(\0162\n.ShapeType\022!\n\010rotation\030\005 \001(\0132\017.Math" +
-      "Quaternion\022\034\n\007extents\030\006 \001(\0132\013.Vector3Int" +
-      "\022\023\n\013obstacle_id\030\014 \001(\005\022\027\n\006center\030\r \001(\0132\007." +
-      "VectorB\033\n\031emu.grasscutter.net.protob\006pro" +
-      "to3"
+      "\n\022ObstacleInfo.proto\032\024MathQuaternion.pro" +
+      "to\032\020Vector3Int.proto\032\014Vector.proto\"\346\001\n\014O" +
+      "bstacleInfo\022&\n\005shape\030\004 \001(\0162\027.ObstacleInf" +
+      "o.ShapeType\022!\n\010rotation\030\005 \001(\0132\017.MathQuat" +
+      "ernion\022\034\n\007extents\030\006 \001(\0132\013.Vector3Int\022\023\n\013" +
+      "obstacle_id\030\014 \001(\005\022\027\n\006center\030\r \001(\0132\007.Vect" +
+      "or\"?\n\tShapeType\022\032\n\026OBSTACLE_SHAPE_CAPSUL" +
+      "E\020\000\022\026\n\022OBSTACLE_SHAPE_BOX\020\001B\033\n\031emu.grass" +
+      "cutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          emu.grasscutter.net.proto.ShapeTypeOuterClass.getDescriptor(),
           emu.grasscutter.net.proto.MathQuaternionOuterClass.getDescriptor(),
           emu.grasscutter.net.proto.Vector3IntOuterClass.getDescriptor(),
           emu.grasscutter.net.proto.VectorOuterClass.getDescriptor(),
@@ -1218,7 +1363,6 @@ public final class ObstacleInfoOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ObstacleInfo_descriptor,
         new java.lang.String[] { "Shape", "Rotation", "Extents", "ObstacleId", "Center", });
-    emu.grasscutter.net.proto.ShapeTypeOuterClass.getDescriptor();
     emu.grasscutter.net.proto.MathQuaternionOuterClass.getDescriptor();
     emu.grasscutter.net.proto.Vector3IntOuterClass.getDescriptor();
     emu.grasscutter.net.proto.VectorOuterClass.getDescriptor();

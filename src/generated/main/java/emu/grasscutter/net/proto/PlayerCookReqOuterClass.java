@@ -74,6 +74,63 @@ public final class PlayerCookReqOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private PlayerCookReq(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 40: {
+
+              assistAvatar_ = input.readUInt32();
+              break;
+            }
+            case 64: {
+
+              qteQuality_ = input.readUInt32();
+              break;
+            }
+            case 88: {
+
+              recipeId_ = input.readUInt32();
+              break;
+            }
+            case 104: {
+
+              cookCount_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.PlayerCookReqOuterClass.internal_static_PlayerCookReq_descriptor;
@@ -157,7 +214,7 @@ public final class PlayerCookReqOuterClass {
       if (cookCount_ != 0) {
         output.writeUInt32(13, cookCount_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -182,7 +239,7 @@ public final class PlayerCookReqOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(13, cookCount_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -205,7 +262,7 @@ public final class PlayerCookReqOuterClass {
           != other.getRecipeId()) return false;
       if (getAssistAvatar()
           != other.getAssistAvatar()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -224,7 +281,7 @@ public final class PlayerCookReqOuterClass {
       hash = (53 * hash) + getRecipeId();
       hash = (37 * hash) + ASSIST_AVATAR_FIELD_NUMBER;
       hash = (53 * hash) + getAssistAvatar();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -346,13 +403,18 @@ public final class PlayerCookReqOuterClass {
 
       // Construct using emu.grasscutter.net.proto.PlayerCookReqOuterClass.PlayerCookReq.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -455,7 +517,7 @@ public final class PlayerCookReqOuterClass {
         if (other.getAssistAvatar() != 0) {
           setAssistAvatar(other.getAssistAvatar());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -470,50 +532,17 @@ public final class PlayerCookReqOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.PlayerCookReqOuterClass.PlayerCookReq parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 40: {
-                assistAvatar_ = input.readUInt32();
-
-                break;
-              } // case 40
-              case 64: {
-                qteQuality_ = input.readUInt32();
-
-                break;
-              } // case 64
-              case 88: {
-                recipeId_ = input.readUInt32();
-
-                break;
-              } // case 88
-              case 104: {
-                cookCount_ = input.readUInt32();
-
-                break;
-              } // case 104
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.PlayerCookReqOuterClass.PlayerCookReq) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
 
@@ -673,18 +702,7 @@ public final class PlayerCookReqOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new PlayerCookReq(input, extensionRegistry);
       }
     };
 

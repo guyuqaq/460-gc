@@ -25,10 +25,10 @@ public final class PingReqOuterClass {
     com.google.protobuf.ByteString getPDHFGJIBCLA();
 
     /**
-     * <code>bytes sc_data = 2;</code>
-     * @return The scData.
+     * <code>bytes IINPBFLAEEP = 2;</code>
+     * @return The iINPBFLAEEP.
      */
-    com.google.protobuf.ByteString getScData();
+    com.google.protobuf.ByteString getIINPBFLAEEP();
 
     /**
      * <code>uint64 NHLLKPHMFGP = 3;</code>
@@ -80,7 +80,7 @@ public final class PingReqOuterClass {
     }
     private PingReq() {
       pDHFGJIBCLA_ = com.google.protobuf.ByteString.EMPTY;
-      scData_ = com.google.protobuf.ByteString.EMPTY;
+      iINPBFLAEEP_ = com.google.protobuf.ByteString.EMPTY;
     }
 
     @java.lang.Override
@@ -94,6 +94,83 @@ public final class PingReqOuterClass {
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
+    }
+    private PingReq(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 18: {
+
+              iINPBFLAEEP_ = input.readBytes();
+              break;
+            }
+            case 24: {
+
+              nHLLKPHMFGP_ = input.readUInt64();
+              break;
+            }
+            case 32: {
+
+              clientTime_ = input.readUInt32();
+              break;
+            }
+            case 57: {
+
+              totalTickTime_ = input.readDouble();
+              break;
+            }
+            case 69: {
+
+              ueTime_ = input.readFloat();
+              break;
+            }
+            case 80: {
+
+              dFALBBBCFMO_ = input.readUInt32();
+              break;
+            }
+            case 106: {
+
+              pDHFGJIBCLA_ = input.readBytes();
+              break;
+            }
+            case 120: {
+
+              seq_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -119,15 +196,15 @@ public final class PingReqOuterClass {
       return pDHFGJIBCLA_;
     }
 
-    public static final int SC_DATA_FIELD_NUMBER = 2;
-    private com.google.protobuf.ByteString scData_;
+    public static final int IINPBFLAEEP_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString iINPBFLAEEP_;
     /**
-     * <code>bytes sc_data = 2;</code>
-     * @return The scData.
+     * <code>bytes IINPBFLAEEP = 2;</code>
+     * @return The iINPBFLAEEP.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString getScData() {
-      return scData_;
+    public com.google.protobuf.ByteString getIINPBFLAEEP() {
+      return iINPBFLAEEP_;
     }
 
     public static final int NHLLKPHMFGP_FIELD_NUMBER = 3;
@@ -210,8 +287,8 @@ public final class PingReqOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!scData_.isEmpty()) {
-        output.writeBytes(2, scData_);
+      if (!iINPBFLAEEP_.isEmpty()) {
+        output.writeBytes(2, iINPBFLAEEP_);
       }
       if (nHLLKPHMFGP_ != 0L) {
         output.writeUInt64(3, nHLLKPHMFGP_);
@@ -219,10 +296,10 @@ public final class PingReqOuterClass {
       if (clientTime_ != 0) {
         output.writeUInt32(4, clientTime_);
       }
-      if (java.lang.Double.doubleToRawLongBits(totalTickTime_) != 0) {
+      if (totalTickTime_ != 0D) {
         output.writeDouble(7, totalTickTime_);
       }
-      if (java.lang.Float.floatToRawIntBits(ueTime_) != 0) {
+      if (ueTime_ != 0F) {
         output.writeFloat(8, ueTime_);
       }
       if (dFALBBBCFMO_ != 0) {
@@ -234,7 +311,7 @@ public final class PingReqOuterClass {
       if (seq_ != 0) {
         output.writeUInt32(15, seq_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -243,9 +320,9 @@ public final class PingReqOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!scData_.isEmpty()) {
+      if (!iINPBFLAEEP_.isEmpty()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, scData_);
+          .computeBytesSize(2, iINPBFLAEEP_);
       }
       if (nHLLKPHMFGP_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
@@ -255,11 +332,11 @@ public final class PingReqOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(4, clientTime_);
       }
-      if (java.lang.Double.doubleToRawLongBits(totalTickTime_) != 0) {
+      if (totalTickTime_ != 0D) {
         size += com.google.protobuf.CodedOutputStream
           .computeDoubleSize(7, totalTickTime_);
       }
-      if (java.lang.Float.floatToRawIntBits(ueTime_) != 0) {
+      if (ueTime_ != 0F) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(8, ueTime_);
       }
@@ -275,7 +352,7 @@ public final class PingReqOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(15, seq_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -292,8 +369,8 @@ public final class PingReqOuterClass {
 
       if (!getPDHFGJIBCLA()
           .equals(other.getPDHFGJIBCLA())) return false;
-      if (!getScData()
-          .equals(other.getScData())) return false;
+      if (!getIINPBFLAEEP()
+          .equals(other.getIINPBFLAEEP())) return false;
       if (getNHLLKPHMFGP()
           != other.getNHLLKPHMFGP()) return false;
       if (java.lang.Double.doubleToLongBits(getTotalTickTime())
@@ -308,7 +385,7 @@ public final class PingReqOuterClass {
           != other.getDFALBBBCFMO()) return false;
       if (getSeq()
           != other.getSeq()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -321,8 +398,8 @@ public final class PingReqOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + PDHFGJIBCLA_FIELD_NUMBER;
       hash = (53 * hash) + getPDHFGJIBCLA().hashCode();
-      hash = (37 * hash) + SC_DATA_FIELD_NUMBER;
-      hash = (53 * hash) + getScData().hashCode();
+      hash = (37 * hash) + IINPBFLAEEP_FIELD_NUMBER;
+      hash = (53 * hash) + getIINPBFLAEEP().hashCode();
       hash = (37 * hash) + NHLLKPHMFGP_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getNHLLKPHMFGP());
@@ -338,7 +415,7 @@ public final class PingReqOuterClass {
       hash = (53 * hash) + getDFALBBBCFMO();
       hash = (37 * hash) + SEQ_FIELD_NUMBER;
       hash = (53 * hash) + getSeq();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -455,20 +532,25 @@ public final class PingReqOuterClass {
 
       // Construct using emu.grasscutter.net.proto.PingReqOuterClass.PingReq.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
         pDHFGJIBCLA_ = com.google.protobuf.ByteString.EMPTY;
 
-        scData_ = com.google.protobuf.ByteString.EMPTY;
+        iINPBFLAEEP_ = com.google.protobuf.ByteString.EMPTY;
 
         nHLLKPHMFGP_ = 0L;
 
@@ -509,7 +591,7 @@ public final class PingReqOuterClass {
       public emu.grasscutter.net.proto.PingReqOuterClass.PingReq buildPartial() {
         emu.grasscutter.net.proto.PingReqOuterClass.PingReq result = new emu.grasscutter.net.proto.PingReqOuterClass.PingReq(this);
         result.pDHFGJIBCLA_ = pDHFGJIBCLA_;
-        result.scData_ = scData_;
+        result.iINPBFLAEEP_ = iINPBFLAEEP_;
         result.nHLLKPHMFGP_ = nHLLKPHMFGP_;
         result.totalTickTime_ = totalTickTime_;
         result.clientTime_ = clientTime_;
@@ -567,8 +649,8 @@ public final class PingReqOuterClass {
         if (other.getPDHFGJIBCLA() != com.google.protobuf.ByteString.EMPTY) {
           setPDHFGJIBCLA(other.getPDHFGJIBCLA());
         }
-        if (other.getScData() != com.google.protobuf.ByteString.EMPTY) {
-          setScData(other.getScData());
+        if (other.getIINPBFLAEEP() != com.google.protobuf.ByteString.EMPTY) {
+          setIINPBFLAEEP(other.getIINPBFLAEEP());
         }
         if (other.getNHLLKPHMFGP() != 0L) {
           setNHLLKPHMFGP(other.getNHLLKPHMFGP());
@@ -588,7 +670,7 @@ public final class PingReqOuterClass {
         if (other.getSeq() != 0) {
           setSeq(other.getSeq());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -603,70 +685,17 @@ public final class PingReqOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.PingReqOuterClass.PingReq parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 18: {
-                scData_ = input.readBytes();
-
-                break;
-              } // case 18
-              case 24: {
-                nHLLKPHMFGP_ = input.readUInt64();
-
-                break;
-              } // case 24
-              case 32: {
-                clientTime_ = input.readUInt32();
-
-                break;
-              } // case 32
-              case 57: {
-                totalTickTime_ = input.readDouble();
-
-                break;
-              } // case 57
-              case 69: {
-                ueTime_ = input.readFloat();
-
-                break;
-              } // case 69
-              case 80: {
-                dFALBBBCFMO_ = input.readUInt32();
-
-                break;
-              } // case 80
-              case 106: {
-                pDHFGJIBCLA_ = input.readBytes();
-
-                break;
-              } // case 106
-              case 120: {
-                seq_ = input.readUInt32();
-
-                break;
-              } // case 120
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.PingReqOuterClass.PingReq) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
 
@@ -704,36 +733,36 @@ public final class PingReqOuterClass {
         return this;
       }
 
-      private com.google.protobuf.ByteString scData_ = com.google.protobuf.ByteString.EMPTY;
+      private com.google.protobuf.ByteString iINPBFLAEEP_ = com.google.protobuf.ByteString.EMPTY;
       /**
-       * <code>bytes sc_data = 2;</code>
-       * @return The scData.
+       * <code>bytes IINPBFLAEEP = 2;</code>
+       * @return The iINPBFLAEEP.
        */
       @java.lang.Override
-      public com.google.protobuf.ByteString getScData() {
-        return scData_;
+      public com.google.protobuf.ByteString getIINPBFLAEEP() {
+        return iINPBFLAEEP_;
       }
       /**
-       * <code>bytes sc_data = 2;</code>
-       * @param value The scData to set.
+       * <code>bytes IINPBFLAEEP = 2;</code>
+       * @param value The iINPBFLAEEP to set.
        * @return This builder for chaining.
        */
-      public Builder setScData(com.google.protobuf.ByteString value) {
+      public Builder setIINPBFLAEEP(com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        scData_ = value;
+        iINPBFLAEEP_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>bytes sc_data = 2;</code>
+       * <code>bytes IINPBFLAEEP = 2;</code>
        * @return This builder for chaining.
        */
-      public Builder clearScData() {
+      public Builder clearIINPBFLAEEP() {
         
-        scData_ = getDefaultInstance().getScData();
+        iINPBFLAEEP_ = getDefaultInstance().getIINPBFLAEEP();
         onChanged();
         return this;
       }
@@ -956,18 +985,7 @@ public final class PingReqOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new PingReq(input, extensionRegistry);
       }
     };
 
@@ -1001,12 +1019,12 @@ public final class PingReqOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\rPingReq.proto\"\245\001\n\007PingReq\022\023\n\013PDHFGJIBC" +
-      "LA\030\r \001(\014\022\017\n\007sc_data\030\002 \001(\014\022\023\n\013NHLLKPHMFGP" +
-      "\030\003 \001(\004\022\027\n\017total_tick_time\030\007 \001(\001\022\023\n\013clien" +
-      "t_time\030\004 \001(\r\022\017\n\007ue_time\030\010 \001(\002\022\023\n\013DFALBBB" +
-      "CFMO\030\n \001(\r\022\013\n\003seq\030\017 \001(\rB\033\n\031emu.grasscutt" +
-      "er.net.protob\006proto3"
+      "\n\rPingReq.proto\"\251\001\n\007PingReq\022\023\n\013PDHFGJIBC" +
+      "LA\030\r \001(\014\022\023\n\013IINPBFLAEEP\030\002 \001(\014\022\023\n\013NHLLKPH" +
+      "MFGP\030\003 \001(\004\022\027\n\017total_tick_time\030\007 \001(\001\022\023\n\013c" +
+      "lient_time\030\004 \001(\r\022\017\n\007ue_time\030\010 \001(\002\022\023\n\013DFA" +
+      "LBBBCFMO\030\n \001(\r\022\013\n\003seq\030\017 \001(\rB\033\n\031emu.grass" +
+      "cutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1017,7 +1035,7 @@ public final class PingReqOuterClass {
     internal_static_PingReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_PingReq_descriptor,
-        new java.lang.String[] { "PDHFGJIBCLA", "ScData", "NHLLKPHMFGP", "TotalTickTime", "ClientTime", "UeTime", "DFALBBBCFMO", "Seq", });
+        new java.lang.String[] { "PDHFGJIBCLA", "IINPBFLAEEP", "NHLLKPHMFGP", "TotalTickTime", "ClientTime", "UeTime", "DFALBBBCFMO", "Seq", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

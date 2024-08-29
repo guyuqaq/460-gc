@@ -19,32 +19,33 @@ public final class DestroyMaterialReqOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .MaterialInfo material_list = 8;</code>
+     * <code>repeated .MaterialInfo material_list = 9;</code>
      */
     java.util.List<emu.grasscutter.net.proto.MaterialInfoOuterClass.MaterialInfo> 
         getMaterialListList();
     /**
-     * <code>repeated .MaterialInfo material_list = 8;</code>
+     * <code>repeated .MaterialInfo material_list = 9;</code>
      */
     emu.grasscutter.net.proto.MaterialInfoOuterClass.MaterialInfo getMaterialList(int index);
     /**
-     * <code>repeated .MaterialInfo material_list = 8;</code>
+     * <code>repeated .MaterialInfo material_list = 9;</code>
      */
     int getMaterialListCount();
     /**
-     * <code>repeated .MaterialInfo material_list = 8;</code>
+     * <code>repeated .MaterialInfo material_list = 9;</code>
      */
     java.util.List<? extends emu.grasscutter.net.proto.MaterialInfoOuterClass.MaterialInfoOrBuilder> 
         getMaterialListOrBuilderList();
     /**
-     * <code>repeated .MaterialInfo material_list = 8;</code>
+     * <code>repeated .MaterialInfo material_list = 9;</code>
      */
     emu.grasscutter.net.proto.MaterialInfoOuterClass.MaterialInfoOrBuilder getMaterialListOrBuilder(
         int index);
   }
   /**
    * <pre>
-   * 4.7.0
+   * CmdId: 6985
+   * Obf: MGALBJFALCL
    * </pre>
    *
    * Protobuf type {@code DestroyMaterialReq}
@@ -74,6 +75,56 @@ public final class DestroyMaterialReqOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private DestroyMaterialReq(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 74: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                materialList_ = new java.util.ArrayList<emu.grasscutter.net.proto.MaterialInfoOuterClass.MaterialInfo>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              materialList_.add(
+                  input.readMessage(emu.grasscutter.net.proto.MaterialInfoOuterClass.MaterialInfo.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          materialList_ = java.util.Collections.unmodifiableList(materialList_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.DestroyMaterialReqOuterClass.internal_static_DestroyMaterialReq_descriptor;
@@ -87,17 +138,17 @@ public final class DestroyMaterialReqOuterClass {
               emu.grasscutter.net.proto.DestroyMaterialReqOuterClass.DestroyMaterialReq.class, emu.grasscutter.net.proto.DestroyMaterialReqOuterClass.DestroyMaterialReq.Builder.class);
     }
 
-    public static final int MATERIAL_LIST_FIELD_NUMBER = 8;
+    public static final int MATERIAL_LIST_FIELD_NUMBER = 9;
     private java.util.List<emu.grasscutter.net.proto.MaterialInfoOuterClass.MaterialInfo> materialList_;
     /**
-     * <code>repeated .MaterialInfo material_list = 8;</code>
+     * <code>repeated .MaterialInfo material_list = 9;</code>
      */
     @java.lang.Override
     public java.util.List<emu.grasscutter.net.proto.MaterialInfoOuterClass.MaterialInfo> getMaterialListList() {
       return materialList_;
     }
     /**
-     * <code>repeated .MaterialInfo material_list = 8;</code>
+     * <code>repeated .MaterialInfo material_list = 9;</code>
      */
     @java.lang.Override
     public java.util.List<? extends emu.grasscutter.net.proto.MaterialInfoOuterClass.MaterialInfoOrBuilder> 
@@ -105,21 +156,21 @@ public final class DestroyMaterialReqOuterClass {
       return materialList_;
     }
     /**
-     * <code>repeated .MaterialInfo material_list = 8;</code>
+     * <code>repeated .MaterialInfo material_list = 9;</code>
      */
     @java.lang.Override
     public int getMaterialListCount() {
       return materialList_.size();
     }
     /**
-     * <code>repeated .MaterialInfo material_list = 8;</code>
+     * <code>repeated .MaterialInfo material_list = 9;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.MaterialInfoOuterClass.MaterialInfo getMaterialList(int index) {
       return materialList_.get(index);
     }
     /**
-     * <code>repeated .MaterialInfo material_list = 8;</code>
+     * <code>repeated .MaterialInfo material_list = 9;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.MaterialInfoOuterClass.MaterialInfoOrBuilder getMaterialListOrBuilder(
@@ -142,9 +193,9 @@ public final class DestroyMaterialReqOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       for (int i = 0; i < materialList_.size(); i++) {
-        output.writeMessage(8, materialList_.get(i));
+        output.writeMessage(9, materialList_.get(i));
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -155,9 +206,9 @@ public final class DestroyMaterialReqOuterClass {
       size = 0;
       for (int i = 0; i < materialList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(8, materialList_.get(i));
+          .computeMessageSize(9, materialList_.get(i));
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -174,7 +225,7 @@ public final class DestroyMaterialReqOuterClass {
 
       if (!getMaterialListList()
           .equals(other.getMaterialListList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -189,7 +240,7 @@ public final class DestroyMaterialReqOuterClass {
         hash = (37 * hash) + MATERIAL_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getMaterialListList().hashCode();
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -286,7 +337,8 @@ public final class DestroyMaterialReqOuterClass {
     }
     /**
      * <pre>
-     * 4.7.0
+     * CmdId: 6985
+     * Obf: MGALBJFALCL
      * </pre>
      *
      * Protobuf type {@code DestroyMaterialReq}
@@ -310,24 +362,29 @@ public final class DestroyMaterialReqOuterClass {
 
       // Construct using emu.grasscutter.net.proto.DestroyMaterialReqOuterClass.DestroyMaterialReq.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getMaterialListFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
         if (materialListBuilder_ == null) {
           materialList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
-          materialList_ = null;
           materialListBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -438,7 +495,7 @@ public final class DestroyMaterialReqOuterClass {
             }
           }
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -453,43 +510,17 @@ public final class DestroyMaterialReqOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.DestroyMaterialReqOuterClass.DestroyMaterialReq parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 66: {
-                emu.grasscutter.net.proto.MaterialInfoOuterClass.MaterialInfo m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.MaterialInfoOuterClass.MaterialInfo.parser(),
-                        extensionRegistry);
-                if (materialListBuilder_ == null) {
-                  ensureMaterialListIsMutable();
-                  materialList_.add(m);
-                } else {
-                  materialListBuilder_.addMessage(m);
-                }
-                break;
-              } // case 66
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.DestroyMaterialReqOuterClass.DestroyMaterialReq) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -507,7 +538,7 @@ public final class DestroyMaterialReqOuterClass {
           emu.grasscutter.net.proto.MaterialInfoOuterClass.MaterialInfo, emu.grasscutter.net.proto.MaterialInfoOuterClass.MaterialInfo.Builder, emu.grasscutter.net.proto.MaterialInfoOuterClass.MaterialInfoOrBuilder> materialListBuilder_;
 
       /**
-       * <code>repeated .MaterialInfo material_list = 8;</code>
+       * <code>repeated .MaterialInfo material_list = 9;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.MaterialInfoOuterClass.MaterialInfo> getMaterialListList() {
         if (materialListBuilder_ == null) {
@@ -517,7 +548,7 @@ public final class DestroyMaterialReqOuterClass {
         }
       }
       /**
-       * <code>repeated .MaterialInfo material_list = 8;</code>
+       * <code>repeated .MaterialInfo material_list = 9;</code>
        */
       public int getMaterialListCount() {
         if (materialListBuilder_ == null) {
@@ -527,7 +558,7 @@ public final class DestroyMaterialReqOuterClass {
         }
       }
       /**
-       * <code>repeated .MaterialInfo material_list = 8;</code>
+       * <code>repeated .MaterialInfo material_list = 9;</code>
        */
       public emu.grasscutter.net.proto.MaterialInfoOuterClass.MaterialInfo getMaterialList(int index) {
         if (materialListBuilder_ == null) {
@@ -537,7 +568,7 @@ public final class DestroyMaterialReqOuterClass {
         }
       }
       /**
-       * <code>repeated .MaterialInfo material_list = 8;</code>
+       * <code>repeated .MaterialInfo material_list = 9;</code>
        */
       public Builder setMaterialList(
           int index, emu.grasscutter.net.proto.MaterialInfoOuterClass.MaterialInfo value) {
@@ -554,7 +585,7 @@ public final class DestroyMaterialReqOuterClass {
         return this;
       }
       /**
-       * <code>repeated .MaterialInfo material_list = 8;</code>
+       * <code>repeated .MaterialInfo material_list = 9;</code>
        */
       public Builder setMaterialList(
           int index, emu.grasscutter.net.proto.MaterialInfoOuterClass.MaterialInfo.Builder builderForValue) {
@@ -568,7 +599,7 @@ public final class DestroyMaterialReqOuterClass {
         return this;
       }
       /**
-       * <code>repeated .MaterialInfo material_list = 8;</code>
+       * <code>repeated .MaterialInfo material_list = 9;</code>
        */
       public Builder addMaterialList(emu.grasscutter.net.proto.MaterialInfoOuterClass.MaterialInfo value) {
         if (materialListBuilder_ == null) {
@@ -584,7 +615,7 @@ public final class DestroyMaterialReqOuterClass {
         return this;
       }
       /**
-       * <code>repeated .MaterialInfo material_list = 8;</code>
+       * <code>repeated .MaterialInfo material_list = 9;</code>
        */
       public Builder addMaterialList(
           int index, emu.grasscutter.net.proto.MaterialInfoOuterClass.MaterialInfo value) {
@@ -601,7 +632,7 @@ public final class DestroyMaterialReqOuterClass {
         return this;
       }
       /**
-       * <code>repeated .MaterialInfo material_list = 8;</code>
+       * <code>repeated .MaterialInfo material_list = 9;</code>
        */
       public Builder addMaterialList(
           emu.grasscutter.net.proto.MaterialInfoOuterClass.MaterialInfo.Builder builderForValue) {
@@ -615,7 +646,7 @@ public final class DestroyMaterialReqOuterClass {
         return this;
       }
       /**
-       * <code>repeated .MaterialInfo material_list = 8;</code>
+       * <code>repeated .MaterialInfo material_list = 9;</code>
        */
       public Builder addMaterialList(
           int index, emu.grasscutter.net.proto.MaterialInfoOuterClass.MaterialInfo.Builder builderForValue) {
@@ -629,7 +660,7 @@ public final class DestroyMaterialReqOuterClass {
         return this;
       }
       /**
-       * <code>repeated .MaterialInfo material_list = 8;</code>
+       * <code>repeated .MaterialInfo material_list = 9;</code>
        */
       public Builder addAllMaterialList(
           java.lang.Iterable<? extends emu.grasscutter.net.proto.MaterialInfoOuterClass.MaterialInfo> values) {
@@ -644,7 +675,7 @@ public final class DestroyMaterialReqOuterClass {
         return this;
       }
       /**
-       * <code>repeated .MaterialInfo material_list = 8;</code>
+       * <code>repeated .MaterialInfo material_list = 9;</code>
        */
       public Builder clearMaterialList() {
         if (materialListBuilder_ == null) {
@@ -657,7 +688,7 @@ public final class DestroyMaterialReqOuterClass {
         return this;
       }
       /**
-       * <code>repeated .MaterialInfo material_list = 8;</code>
+       * <code>repeated .MaterialInfo material_list = 9;</code>
        */
       public Builder removeMaterialList(int index) {
         if (materialListBuilder_ == null) {
@@ -670,14 +701,14 @@ public final class DestroyMaterialReqOuterClass {
         return this;
       }
       /**
-       * <code>repeated .MaterialInfo material_list = 8;</code>
+       * <code>repeated .MaterialInfo material_list = 9;</code>
        */
       public emu.grasscutter.net.proto.MaterialInfoOuterClass.MaterialInfo.Builder getMaterialListBuilder(
           int index) {
         return getMaterialListFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .MaterialInfo material_list = 8;</code>
+       * <code>repeated .MaterialInfo material_list = 9;</code>
        */
       public emu.grasscutter.net.proto.MaterialInfoOuterClass.MaterialInfoOrBuilder getMaterialListOrBuilder(
           int index) {
@@ -687,7 +718,7 @@ public final class DestroyMaterialReqOuterClass {
         }
       }
       /**
-       * <code>repeated .MaterialInfo material_list = 8;</code>
+       * <code>repeated .MaterialInfo material_list = 9;</code>
        */
       public java.util.List<? extends emu.grasscutter.net.proto.MaterialInfoOuterClass.MaterialInfoOrBuilder> 
            getMaterialListOrBuilderList() {
@@ -698,14 +729,14 @@ public final class DestroyMaterialReqOuterClass {
         }
       }
       /**
-       * <code>repeated .MaterialInfo material_list = 8;</code>
+       * <code>repeated .MaterialInfo material_list = 9;</code>
        */
       public emu.grasscutter.net.proto.MaterialInfoOuterClass.MaterialInfo.Builder addMaterialListBuilder() {
         return getMaterialListFieldBuilder().addBuilder(
             emu.grasscutter.net.proto.MaterialInfoOuterClass.MaterialInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .MaterialInfo material_list = 8;</code>
+       * <code>repeated .MaterialInfo material_list = 9;</code>
        */
       public emu.grasscutter.net.proto.MaterialInfoOuterClass.MaterialInfo.Builder addMaterialListBuilder(
           int index) {
@@ -713,7 +744,7 @@ public final class DestroyMaterialReqOuterClass {
             index, emu.grasscutter.net.proto.MaterialInfoOuterClass.MaterialInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .MaterialInfo material_list = 8;</code>
+       * <code>repeated .MaterialInfo material_list = 9;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.MaterialInfoOuterClass.MaterialInfo.Builder> 
            getMaterialListBuilderList() {
@@ -766,18 +797,7 @@ public final class DestroyMaterialReqOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new DestroyMaterialReq(input, extensionRegistry);
       }
     };
 
@@ -813,7 +833,7 @@ public final class DestroyMaterialReqOuterClass {
     java.lang.String[] descriptorData = {
       "\n\030DestroyMaterialReq.proto\032\022MaterialInfo" +
       ".proto\":\n\022DestroyMaterialReq\022$\n\rmaterial" +
-      "_list\030\010 \003(\0132\r.MaterialInfoB\033\n\031emu.grassc" +
+      "_list\030\t \003(\0132\r.MaterialInfoB\033\n\031emu.grassc" +
       "utter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

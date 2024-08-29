@@ -19,22 +19,21 @@ public final class UnlockAvatarTalentReqOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint64 avatar_guid = 12;</code>
+     * <code>uint64 avatar_guid = 3;</code>
      * @return The avatarGuid.
      */
     long getAvatarGuid();
 
     /**
-     * <code>uint32 talent_id = 14;</code>
+     * <code>uint32 talent_id = 10;</code>
      * @return The talentId.
      */
     int getTalentId();
   }
   /**
    * <pre>
-   * 4.7.0
-   * CmdId: 21301
-   * POBPMGEKEEA
+   * 4.6.0
+   * CmdId: 4199
    * </pre>
    *
    * Protobuf type {@code UnlockAvatarTalentReq}
@@ -63,6 +62,53 @@ public final class UnlockAvatarTalentReqOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private UnlockAvatarTalentReq(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 24: {
+
+              avatarGuid_ = input.readUInt64();
+              break;
+            }
+            case 80: {
+
+              talentId_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.UnlockAvatarTalentReqOuterClass.internal_static_UnlockAvatarTalentReq_descriptor;
@@ -76,10 +122,10 @@ public final class UnlockAvatarTalentReqOuterClass {
               emu.grasscutter.net.proto.UnlockAvatarTalentReqOuterClass.UnlockAvatarTalentReq.class, emu.grasscutter.net.proto.UnlockAvatarTalentReqOuterClass.UnlockAvatarTalentReq.Builder.class);
     }
 
-    public static final int AVATAR_GUID_FIELD_NUMBER = 12;
+    public static final int AVATAR_GUID_FIELD_NUMBER = 3;
     private long avatarGuid_;
     /**
-     * <code>uint64 avatar_guid = 12;</code>
+     * <code>uint64 avatar_guid = 3;</code>
      * @return The avatarGuid.
      */
     @java.lang.Override
@@ -87,10 +133,10 @@ public final class UnlockAvatarTalentReqOuterClass {
       return avatarGuid_;
     }
 
-    public static final int TALENT_ID_FIELD_NUMBER = 14;
+    public static final int TALENT_ID_FIELD_NUMBER = 10;
     private int talentId_;
     /**
-     * <code>uint32 talent_id = 14;</code>
+     * <code>uint32 talent_id = 10;</code>
      * @return The talentId.
      */
     @java.lang.Override
@@ -113,12 +159,12 @@ public final class UnlockAvatarTalentReqOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (avatarGuid_ != 0L) {
-        output.writeUInt64(12, avatarGuid_);
+        output.writeUInt64(3, avatarGuid_);
       }
       if (talentId_ != 0) {
-        output.writeUInt32(14, talentId_);
+        output.writeUInt32(10, talentId_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -129,13 +175,13 @@ public final class UnlockAvatarTalentReqOuterClass {
       size = 0;
       if (avatarGuid_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(12, avatarGuid_);
+          .computeUInt64Size(3, avatarGuid_);
       }
       if (talentId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(14, talentId_);
+          .computeUInt32Size(10, talentId_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -154,7 +200,7 @@ public final class UnlockAvatarTalentReqOuterClass {
           != other.getAvatarGuid()) return false;
       if (getTalentId()
           != other.getTalentId()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -170,7 +216,7 @@ public final class UnlockAvatarTalentReqOuterClass {
           getAvatarGuid());
       hash = (37 * hash) + TALENT_ID_FIELD_NUMBER;
       hash = (53 * hash) + getTalentId();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -267,9 +313,8 @@ public final class UnlockAvatarTalentReqOuterClass {
     }
     /**
      * <pre>
-     * 4.7.0
-     * CmdId: 21301
-     * POBPMGEKEEA
+     * 4.6.0
+     * CmdId: 4199
      * </pre>
      *
      * Protobuf type {@code UnlockAvatarTalentReq}
@@ -293,13 +338,18 @@ public final class UnlockAvatarTalentReqOuterClass {
 
       // Construct using emu.grasscutter.net.proto.UnlockAvatarTalentReqOuterClass.UnlockAvatarTalentReq.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -390,7 +440,7 @@ public final class UnlockAvatarTalentReqOuterClass {
         if (other.getTalentId() != 0) {
           setTalentId(other.getTalentId());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -405,46 +455,23 @@ public final class UnlockAvatarTalentReqOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.UnlockAvatarTalentReqOuterClass.UnlockAvatarTalentReq parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 96: {
-                avatarGuid_ = input.readUInt64();
-
-                break;
-              } // case 96
-              case 112: {
-                talentId_ = input.readUInt32();
-
-                break;
-              } // case 112
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.UnlockAvatarTalentReqOuterClass.UnlockAvatarTalentReq) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
 
       private long avatarGuid_ ;
       /**
-       * <code>uint64 avatar_guid = 12;</code>
+       * <code>uint64 avatar_guid = 3;</code>
        * @return The avatarGuid.
        */
       @java.lang.Override
@@ -452,7 +479,7 @@ public final class UnlockAvatarTalentReqOuterClass {
         return avatarGuid_;
       }
       /**
-       * <code>uint64 avatar_guid = 12;</code>
+       * <code>uint64 avatar_guid = 3;</code>
        * @param value The avatarGuid to set.
        * @return This builder for chaining.
        */
@@ -463,7 +490,7 @@ public final class UnlockAvatarTalentReqOuterClass {
         return this;
       }
       /**
-       * <code>uint64 avatar_guid = 12;</code>
+       * <code>uint64 avatar_guid = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearAvatarGuid() {
@@ -475,7 +502,7 @@ public final class UnlockAvatarTalentReqOuterClass {
 
       private int talentId_ ;
       /**
-       * <code>uint32 talent_id = 14;</code>
+       * <code>uint32 talent_id = 10;</code>
        * @return The talentId.
        */
       @java.lang.Override
@@ -483,7 +510,7 @@ public final class UnlockAvatarTalentReqOuterClass {
         return talentId_;
       }
       /**
-       * <code>uint32 talent_id = 14;</code>
+       * <code>uint32 talent_id = 10;</code>
        * @param value The talentId to set.
        * @return This builder for chaining.
        */
@@ -494,7 +521,7 @@ public final class UnlockAvatarTalentReqOuterClass {
         return this;
       }
       /**
-       * <code>uint32 talent_id = 14;</code>
+       * <code>uint32 talent_id = 10;</code>
        * @return This builder for chaining.
        */
       public Builder clearTalentId() {
@@ -536,18 +563,7 @@ public final class UnlockAvatarTalentReqOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new UnlockAvatarTalentReq(input, extensionRegistry);
       }
     };
 
@@ -582,8 +598,8 @@ public final class UnlockAvatarTalentReqOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\033UnlockAvatarTalentReq.proto\"?\n\025UnlockA" +
-      "vatarTalentReq\022\023\n\013avatar_guid\030\014 \001(\004\022\021\n\tt" +
-      "alent_id\030\016 \001(\rB\033\n\031emu.grasscutter.net.pr" +
+      "vatarTalentReq\022\023\n\013avatar_guid\030\003 \001(\004\022\021\n\tt" +
+      "alent_id\030\n \001(\rB\033\n\031emu.grasscutter.net.pr" +
       "otob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

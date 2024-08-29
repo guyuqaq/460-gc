@@ -19,16 +19,15 @@ public final class DungeonSlipRevivePointActivateReqOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 slip_revive_point_id = 6;</code>
+     * <code>uint32 slip_revive_point_id = 11;</code>
      * @return The slipRevivePointId.
      */
     int getSlipRevivePointId();
   }
   /**
    * <pre>
-   * 4.7.0
-   * CmdId: 28862
-   * Obf: OILPFJDPOLB
+   * CmdId: 8945
+   * Obf: NMHIJGEDOLK
    * </pre>
    *
    * Protobuf type {@code DungeonSlipRevivePointActivateReq}
@@ -57,6 +56,48 @@ public final class DungeonSlipRevivePointActivateReqOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private DungeonSlipRevivePointActivateReq(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 88: {
+
+              slipRevivePointId_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.DungeonSlipRevivePointActivateReqOuterClass.internal_static_DungeonSlipRevivePointActivateReq_descriptor;
@@ -70,10 +111,10 @@ public final class DungeonSlipRevivePointActivateReqOuterClass {
               emu.grasscutter.net.proto.DungeonSlipRevivePointActivateReqOuterClass.DungeonSlipRevivePointActivateReq.class, emu.grasscutter.net.proto.DungeonSlipRevivePointActivateReqOuterClass.DungeonSlipRevivePointActivateReq.Builder.class);
     }
 
-    public static final int SLIP_REVIVE_POINT_ID_FIELD_NUMBER = 6;
+    public static final int SLIP_REVIVE_POINT_ID_FIELD_NUMBER = 11;
     private int slipRevivePointId_;
     /**
-     * <code>uint32 slip_revive_point_id = 6;</code>
+     * <code>uint32 slip_revive_point_id = 11;</code>
      * @return The slipRevivePointId.
      */
     @java.lang.Override
@@ -96,9 +137,9 @@ public final class DungeonSlipRevivePointActivateReqOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (slipRevivePointId_ != 0) {
-        output.writeUInt32(6, slipRevivePointId_);
+        output.writeUInt32(11, slipRevivePointId_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -109,9 +150,9 @@ public final class DungeonSlipRevivePointActivateReqOuterClass {
       size = 0;
       if (slipRevivePointId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(6, slipRevivePointId_);
+          .computeUInt32Size(11, slipRevivePointId_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -128,7 +169,7 @@ public final class DungeonSlipRevivePointActivateReqOuterClass {
 
       if (getSlipRevivePointId()
           != other.getSlipRevivePointId()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -141,7 +182,7 @@ public final class DungeonSlipRevivePointActivateReqOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + SLIP_REVIVE_POINT_ID_FIELD_NUMBER;
       hash = (53 * hash) + getSlipRevivePointId();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -238,9 +279,8 @@ public final class DungeonSlipRevivePointActivateReqOuterClass {
     }
     /**
      * <pre>
-     * 4.7.0
-     * CmdId: 28862
-     * Obf: OILPFJDPOLB
+     * CmdId: 8945
+     * Obf: NMHIJGEDOLK
      * </pre>
      *
      * Protobuf type {@code DungeonSlipRevivePointActivateReq}
@@ -264,13 +304,18 @@ public final class DungeonSlipRevivePointActivateReqOuterClass {
 
       // Construct using emu.grasscutter.net.proto.DungeonSlipRevivePointActivateReqOuterClass.DungeonSlipRevivePointActivateReq.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -355,7 +400,7 @@ public final class DungeonSlipRevivePointActivateReqOuterClass {
         if (other.getSlipRevivePointId() != 0) {
           setSlipRevivePointId(other.getSlipRevivePointId());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -370,41 +415,23 @@ public final class DungeonSlipRevivePointActivateReqOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.DungeonSlipRevivePointActivateReqOuterClass.DungeonSlipRevivePointActivateReq parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 48: {
-                slipRevivePointId_ = input.readUInt32();
-
-                break;
-              } // case 48
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.DungeonSlipRevivePointActivateReqOuterClass.DungeonSlipRevivePointActivateReq) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
 
       private int slipRevivePointId_ ;
       /**
-       * <code>uint32 slip_revive_point_id = 6;</code>
+       * <code>uint32 slip_revive_point_id = 11;</code>
        * @return The slipRevivePointId.
        */
       @java.lang.Override
@@ -412,7 +439,7 @@ public final class DungeonSlipRevivePointActivateReqOuterClass {
         return slipRevivePointId_;
       }
       /**
-       * <code>uint32 slip_revive_point_id = 6;</code>
+       * <code>uint32 slip_revive_point_id = 11;</code>
        * @param value The slipRevivePointId to set.
        * @return This builder for chaining.
        */
@@ -423,7 +450,7 @@ public final class DungeonSlipRevivePointActivateReqOuterClass {
         return this;
       }
       /**
-       * <code>uint32 slip_revive_point_id = 6;</code>
+       * <code>uint32 slip_revive_point_id = 11;</code>
        * @return This builder for chaining.
        */
       public Builder clearSlipRevivePointId() {
@@ -465,18 +492,7 @@ public final class DungeonSlipRevivePointActivateReqOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new DungeonSlipRevivePointActivateReq(input, extensionRegistry);
       }
     };
 
@@ -512,7 +528,7 @@ public final class DungeonSlipRevivePointActivateReqOuterClass {
     java.lang.String[] descriptorData = {
       "\n\'DungeonSlipRevivePointActivateReq.prot" +
       "o\"A\n!DungeonSlipRevivePointActivateReq\022\034" +
-      "\n\024slip_revive_point_id\030\006 \001(\rB\033\n\031emu.gras" +
+      "\n\024slip_revive_point_id\030\013 \001(\rB\033\n\031emu.gras" +
       "scutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

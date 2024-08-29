@@ -40,10 +40,6 @@ public final class HomeLimitedShopInfoRspOuterClass {
     emu.grasscutter.net.proto.HomeLimitedShopInfoOuterClass.HomeLimitedShopInfoOrBuilder getShopInfoOrBuilder();
   }
   /**
-   * <pre>
-   * CmdId: 23361
-   * </pre>
-   *
    * Protobuf type {@code HomeLimitedShopInfoRsp}
    */
   public static final class HomeLimitedShopInfoRsp extends
@@ -347,10 +343,6 @@ public final class HomeLimitedShopInfoRspOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 23361
-     * </pre>
-     *
      * Protobuf type {@code HomeLimitedShopInfoRsp}
      */
     public static final class Builder extends

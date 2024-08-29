@@ -19,11 +19,11 @@ public final class MonsterSummonTagNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>map&lt;uint32, uint32&gt; summon_tag_map = 1;</code>
+     * <code>map&lt;uint32, uint32&gt; summon_tag_map = 11;</code>
      */
     int getSummonTagMapCount();
     /**
-     * <code>map&lt;uint32, uint32&gt; summon_tag_map = 1;</code>
+     * <code>map&lt;uint32, uint32&gt; summon_tag_map = 11;</code>
      */
     boolean containsSummonTagMap(
         int key);
@@ -34,35 +34,34 @@ public final class MonsterSummonTagNotifyOuterClass {
     java.util.Map<java.lang.Integer, java.lang.Integer>
     getSummonTagMap();
     /**
-     * <code>map&lt;uint32, uint32&gt; summon_tag_map = 1;</code>
+     * <code>map&lt;uint32, uint32&gt; summon_tag_map = 11;</code>
      */
     java.util.Map<java.lang.Integer, java.lang.Integer>
     getSummonTagMapMap();
     /**
-     * <code>map&lt;uint32, uint32&gt; summon_tag_map = 1;</code>
+     * <code>map&lt;uint32, uint32&gt; summon_tag_map = 11;</code>
      */
 
     int getSummonTagMapOrDefault(
         int key,
         int defaultValue);
     /**
-     * <code>map&lt;uint32, uint32&gt; summon_tag_map = 1;</code>
+     * <code>map&lt;uint32, uint32&gt; summon_tag_map = 11;</code>
      */
 
     int getSummonTagMapOrThrow(
         int key);
 
     /**
-     * <code>uint32 monster_entity_id = 7;</code>
+     * <code>uint32 monster_entity_id = 12;</code>
      * @return The monsterEntityId.
      */
     int getMonsterEntityId();
   }
   /**
    * <pre>
-   * 4.7.0
-   * CmdId: 7831
-   * Obf: APONHDKOLKA
+   * CmdId: 26800
+   * Obf: NAILAGKGLBA
    * </pre>
    *
    * Protobuf type {@code MonsterSummonTagNotify}
@@ -91,6 +90,62 @@ public final class MonsterSummonTagNotifyOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private MonsterSummonTagNotify(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 90: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                summonTagMap_ = com.google.protobuf.MapField.newMapField(
+                    SummonTagMapDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
+              summonTagMap__ = input.readMessage(
+                  SummonTagMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              summonTagMap_.getMutableMap().put(
+                  summonTagMap__.getKey(), summonTagMap__.getValue());
+              break;
+            }
+            case 96: {
+
+              monsterEntityId_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.MonsterSummonTagNotifyOuterClass.internal_static_MonsterSummonTagNotify_descriptor;
@@ -101,7 +156,7 @@ public final class MonsterSummonTagNotifyOuterClass {
     protected com.google.protobuf.MapField internalGetMapField(
         int number) {
       switch (number) {
-        case 1:
+        case 11:
           return internalGetSummonTagMap();
         default:
           throw new RuntimeException(
@@ -116,7 +171,7 @@ public final class MonsterSummonTagNotifyOuterClass {
               emu.grasscutter.net.proto.MonsterSummonTagNotifyOuterClass.MonsterSummonTagNotify.class, emu.grasscutter.net.proto.MonsterSummonTagNotifyOuterClass.MonsterSummonTagNotify.Builder.class);
     }
 
-    public static final int SUMMON_TAG_MAP_FIELD_NUMBER = 1;
+    public static final int SUMMON_TAG_MAP_FIELD_NUMBER = 11;
     private static final class SummonTagMapDefaultEntryHolder {
       static final com.google.protobuf.MapEntry<
           java.lang.Integer, java.lang.Integer> defaultEntry =
@@ -143,7 +198,7 @@ public final class MonsterSummonTagNotifyOuterClass {
       return internalGetSummonTagMap().getMap().size();
     }
     /**
-     * <code>map&lt;uint32, uint32&gt; summon_tag_map = 1;</code>
+     * <code>map&lt;uint32, uint32&gt; summon_tag_map = 11;</code>
      */
 
     @java.lang.Override
@@ -161,7 +216,7 @@ public final class MonsterSummonTagNotifyOuterClass {
       return getSummonTagMapMap();
     }
     /**
-     * <code>map&lt;uint32, uint32&gt; summon_tag_map = 1;</code>
+     * <code>map&lt;uint32, uint32&gt; summon_tag_map = 11;</code>
      */
     @java.lang.Override
 
@@ -169,7 +224,7 @@ public final class MonsterSummonTagNotifyOuterClass {
       return internalGetSummonTagMap().getMap();
     }
     /**
-     * <code>map&lt;uint32, uint32&gt; summon_tag_map = 1;</code>
+     * <code>map&lt;uint32, uint32&gt; summon_tag_map = 11;</code>
      */
     @java.lang.Override
 
@@ -182,7 +237,7 @@ public final class MonsterSummonTagNotifyOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
-     * <code>map&lt;uint32, uint32&gt; summon_tag_map = 1;</code>
+     * <code>map&lt;uint32, uint32&gt; summon_tag_map = 11;</code>
      */
     @java.lang.Override
 
@@ -197,10 +252,10 @@ public final class MonsterSummonTagNotifyOuterClass {
       return map.get(key);
     }
 
-    public static final int MONSTER_ENTITY_ID_FIELD_NUMBER = 7;
+    public static final int MONSTER_ENTITY_ID_FIELD_NUMBER = 12;
     private int monsterEntityId_;
     /**
-     * <code>uint32 monster_entity_id = 7;</code>
+     * <code>uint32 monster_entity_id = 12;</code>
      * @return The monsterEntityId.
      */
     @java.lang.Override
@@ -227,11 +282,11 @@ public final class MonsterSummonTagNotifyOuterClass {
           output,
           internalGetSummonTagMap(),
           SummonTagMapDefaultEntryHolder.defaultEntry,
-          1);
+          11);
       if (monsterEntityId_ != 0) {
-        output.writeUInt32(7, monsterEntityId_);
+        output.writeUInt32(12, monsterEntityId_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -248,13 +303,13 @@ public final class MonsterSummonTagNotifyOuterClass {
             .setValue(entry.getValue())
             .build();
         size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(1, summonTagMap__);
+            .computeMessageSize(11, summonTagMap__);
       }
       if (monsterEntityId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(7, monsterEntityId_);
+          .computeUInt32Size(12, monsterEntityId_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -273,7 +328,7 @@ public final class MonsterSummonTagNotifyOuterClass {
           other.internalGetSummonTagMap())) return false;
       if (getMonsterEntityId()
           != other.getMonsterEntityId()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -290,7 +345,7 @@ public final class MonsterSummonTagNotifyOuterClass {
       }
       hash = (37 * hash) + MONSTER_ENTITY_ID_FIELD_NUMBER;
       hash = (53 * hash) + getMonsterEntityId();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -387,9 +442,8 @@ public final class MonsterSummonTagNotifyOuterClass {
     }
     /**
      * <pre>
-     * 4.7.0
-     * CmdId: 7831
-     * Obf: APONHDKOLKA
+     * CmdId: 26800
+     * Obf: NAILAGKGLBA
      * </pre>
      *
      * Protobuf type {@code MonsterSummonTagNotify}
@@ -407,7 +461,7 @@ public final class MonsterSummonTagNotifyOuterClass {
       protected com.google.protobuf.MapField internalGetMapField(
           int number) {
         switch (number) {
-          case 1:
+          case 11:
             return internalGetSummonTagMap();
           default:
             throw new RuntimeException(
@@ -418,7 +472,7 @@ public final class MonsterSummonTagNotifyOuterClass {
       protected com.google.protobuf.MapField internalGetMutableMapField(
           int number) {
         switch (number) {
-          case 1:
+          case 11:
             return internalGetMutableSummonTagMap();
           default:
             throw new RuntimeException(
@@ -435,13 +489,18 @@ public final class MonsterSummonTagNotifyOuterClass {
 
       // Construct using emu.grasscutter.net.proto.MonsterSummonTagNotifyOuterClass.MonsterSummonTagNotify.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -532,7 +591,7 @@ public final class MonsterSummonTagNotifyOuterClass {
         if (other.getMonsterEntityId() != 0) {
           setMonsterEntityId(other.getMonsterEntityId());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -547,43 +606,17 @@ public final class MonsterSummonTagNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.MonsterSummonTagNotifyOuterClass.MonsterSummonTagNotify parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
-                summonTagMap__ = input.readMessage(
-                    SummonTagMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-                internalGetMutableSummonTagMap().getMutableMap().put(
-                    summonTagMap__.getKey(), summonTagMap__.getValue());
-                break;
-              } // case 10
-              case 56: {
-                monsterEntityId_ = input.readUInt32();
-
-                break;
-              } // case 56
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.MonsterSummonTagNotifyOuterClass.MonsterSummonTagNotify) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -615,7 +648,7 @@ public final class MonsterSummonTagNotifyOuterClass {
         return internalGetSummonTagMap().getMap().size();
       }
       /**
-       * <code>map&lt;uint32, uint32&gt; summon_tag_map = 1;</code>
+       * <code>map&lt;uint32, uint32&gt; summon_tag_map = 11;</code>
        */
 
       @java.lang.Override
@@ -633,7 +666,7 @@ public final class MonsterSummonTagNotifyOuterClass {
         return getSummonTagMapMap();
       }
       /**
-       * <code>map&lt;uint32, uint32&gt; summon_tag_map = 1;</code>
+       * <code>map&lt;uint32, uint32&gt; summon_tag_map = 11;</code>
        */
       @java.lang.Override
 
@@ -641,7 +674,7 @@ public final class MonsterSummonTagNotifyOuterClass {
         return internalGetSummonTagMap().getMap();
       }
       /**
-       * <code>map&lt;uint32, uint32&gt; summon_tag_map = 1;</code>
+       * <code>map&lt;uint32, uint32&gt; summon_tag_map = 11;</code>
        */
       @java.lang.Override
 
@@ -654,7 +687,7 @@ public final class MonsterSummonTagNotifyOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
-       * <code>map&lt;uint32, uint32&gt; summon_tag_map = 1;</code>
+       * <code>map&lt;uint32, uint32&gt; summon_tag_map = 11;</code>
        */
       @java.lang.Override
 
@@ -675,7 +708,7 @@ public final class MonsterSummonTagNotifyOuterClass {
         return this;
       }
       /**
-       * <code>map&lt;uint32, uint32&gt; summon_tag_map = 1;</code>
+       * <code>map&lt;uint32, uint32&gt; summon_tag_map = 11;</code>
        */
 
       public Builder removeSummonTagMap(
@@ -694,7 +727,7 @@ public final class MonsterSummonTagNotifyOuterClass {
         return internalGetMutableSummonTagMap().getMutableMap();
       }
       /**
-       * <code>map&lt;uint32, uint32&gt; summon_tag_map = 1;</code>
+       * <code>map&lt;uint32, uint32&gt; summon_tag_map = 11;</code>
        */
       public Builder putSummonTagMap(
           int key,
@@ -706,7 +739,7 @@ public final class MonsterSummonTagNotifyOuterClass {
         return this;
       }
       /**
-       * <code>map&lt;uint32, uint32&gt; summon_tag_map = 1;</code>
+       * <code>map&lt;uint32, uint32&gt; summon_tag_map = 11;</code>
        */
 
       public Builder putAllSummonTagMap(
@@ -718,7 +751,7 @@ public final class MonsterSummonTagNotifyOuterClass {
 
       private int monsterEntityId_ ;
       /**
-       * <code>uint32 monster_entity_id = 7;</code>
+       * <code>uint32 monster_entity_id = 12;</code>
        * @return The monsterEntityId.
        */
       @java.lang.Override
@@ -726,7 +759,7 @@ public final class MonsterSummonTagNotifyOuterClass {
         return monsterEntityId_;
       }
       /**
-       * <code>uint32 monster_entity_id = 7;</code>
+       * <code>uint32 monster_entity_id = 12;</code>
        * @param value The monsterEntityId to set.
        * @return This builder for chaining.
        */
@@ -737,7 +770,7 @@ public final class MonsterSummonTagNotifyOuterClass {
         return this;
       }
       /**
-       * <code>uint32 monster_entity_id = 7;</code>
+       * <code>uint32 monster_entity_id = 12;</code>
        * @return This builder for chaining.
        */
       public Builder clearMonsterEntityId() {
@@ -779,18 +812,7 @@ public final class MonsterSummonTagNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new MonsterSummonTagNotify(input, extensionRegistry);
       }
     };
 
@@ -830,9 +852,9 @@ public final class MonsterSummonTagNotifyOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\034MonsterSummonTagNotify.proto\"\253\001\n\026Monst" +
-      "erSummonTagNotify\022A\n\016summon_tag_map\030\001 \003(" +
+      "erSummonTagNotify\022A\n\016summon_tag_map\030\013 \003(" +
       "\0132).MonsterSummonTagNotify.SummonTagMapE" +
-      "ntry\022\031\n\021monster_entity_id\030\007 \001(\r\0323\n\021Summo" +
+      "ntry\022\031\n\021monster_entity_id\030\014 \001(\r\0323\n\021Summo" +
       "nTagMapEntry\022\013\n\003key\030\001 \001(\r\022\r\n\005value\030\002 \001(\r" +
       ":\0028\001B\033\n\031emu.grasscutter.net.protob\006proto" +
       "3"

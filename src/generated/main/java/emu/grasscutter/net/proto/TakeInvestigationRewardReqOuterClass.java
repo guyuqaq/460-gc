@@ -19,16 +19,15 @@ public final class TakeInvestigationRewardReqOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 id = 7;</code>
+     * <code>uint32 id = 8;</code>
      * @return The id.
      */
     int getId();
   }
   /**
    * <pre>
-   * 4.7.0
-   * CmdId: 25416ok or 2516x or 25450 or 9438 or 20310 or 23959 or 20220
-   * Obf: MKCBNOMFKMB
+   * CmdId: 8462
+   * Obf: GBGKOACHBNE
    * </pre>
    *
    * Protobuf type {@code TakeInvestigationRewardReq}
@@ -57,6 +56,48 @@ public final class TakeInvestigationRewardReqOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private TakeInvestigationRewardReq(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 64: {
+
+              id_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.TakeInvestigationRewardReqOuterClass.internal_static_TakeInvestigationRewardReq_descriptor;
@@ -70,10 +111,10 @@ public final class TakeInvestigationRewardReqOuterClass {
               emu.grasscutter.net.proto.TakeInvestigationRewardReqOuterClass.TakeInvestigationRewardReq.class, emu.grasscutter.net.proto.TakeInvestigationRewardReqOuterClass.TakeInvestigationRewardReq.Builder.class);
     }
 
-    public static final int ID_FIELD_NUMBER = 7;
+    public static final int ID_FIELD_NUMBER = 8;
     private int id_;
     /**
-     * <code>uint32 id = 7;</code>
+     * <code>uint32 id = 8;</code>
      * @return The id.
      */
     @java.lang.Override
@@ -96,9 +137,9 @@ public final class TakeInvestigationRewardReqOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (id_ != 0) {
-        output.writeUInt32(7, id_);
+        output.writeUInt32(8, id_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -109,9 +150,9 @@ public final class TakeInvestigationRewardReqOuterClass {
       size = 0;
       if (id_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(7, id_);
+          .computeUInt32Size(8, id_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -128,7 +169,7 @@ public final class TakeInvestigationRewardReqOuterClass {
 
       if (getId()
           != other.getId()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -141,7 +182,7 @@ public final class TakeInvestigationRewardReqOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + ID_FIELD_NUMBER;
       hash = (53 * hash) + getId();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -238,9 +279,8 @@ public final class TakeInvestigationRewardReqOuterClass {
     }
     /**
      * <pre>
-     * 4.7.0
-     * CmdId: 25416ok or 2516x or 25450 or 9438 or 20310 or 23959 or 20220
-     * Obf: MKCBNOMFKMB
+     * CmdId: 8462
+     * Obf: GBGKOACHBNE
      * </pre>
      *
      * Protobuf type {@code TakeInvestigationRewardReq}
@@ -264,13 +304,18 @@ public final class TakeInvestigationRewardReqOuterClass {
 
       // Construct using emu.grasscutter.net.proto.TakeInvestigationRewardReqOuterClass.TakeInvestigationRewardReq.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -355,7 +400,7 @@ public final class TakeInvestigationRewardReqOuterClass {
         if (other.getId() != 0) {
           setId(other.getId());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -370,41 +415,23 @@ public final class TakeInvestigationRewardReqOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.TakeInvestigationRewardReqOuterClass.TakeInvestigationRewardReq parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 56: {
-                id_ = input.readUInt32();
-
-                break;
-              } // case 56
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.TakeInvestigationRewardReqOuterClass.TakeInvestigationRewardReq) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
 
       private int id_ ;
       /**
-       * <code>uint32 id = 7;</code>
+       * <code>uint32 id = 8;</code>
        * @return The id.
        */
       @java.lang.Override
@@ -412,7 +439,7 @@ public final class TakeInvestigationRewardReqOuterClass {
         return id_;
       }
       /**
-       * <code>uint32 id = 7;</code>
+       * <code>uint32 id = 8;</code>
        * @param value The id to set.
        * @return This builder for chaining.
        */
@@ -423,7 +450,7 @@ public final class TakeInvestigationRewardReqOuterClass {
         return this;
       }
       /**
-       * <code>uint32 id = 7;</code>
+       * <code>uint32 id = 8;</code>
        * @return This builder for chaining.
        */
       public Builder clearId() {
@@ -465,18 +492,7 @@ public final class TakeInvestigationRewardReqOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new TakeInvestigationRewardReq(input, extensionRegistry);
       }
     };
 
@@ -511,7 +527,7 @@ public final class TakeInvestigationRewardReqOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n TakeInvestigationRewardReq.proto\"(\n\032Ta" +
-      "keInvestigationRewardReq\022\n\n\002id\030\007 \001(\rB\033\n\031" +
+      "keInvestigationRewardReq\022\n\n\002id\030\010 \001(\rB\033\n\031" +
       "emu.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

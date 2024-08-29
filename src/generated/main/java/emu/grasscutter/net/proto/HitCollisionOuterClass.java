@@ -105,6 +105,90 @@ public final class HitCollisionOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private HitCollision(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 29: {
+
+              dDLIENJBAKB_ = input.readFloat();
+              break;
+            }
+            case 42: {
+              emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder subBuilder = null;
+              if (hitPoint_ != null) {
+                subBuilder = hitPoint_.toBuilder();
+              }
+              hitPoint_ = input.readMessage(emu.grasscutter.net.proto.VectorOuterClass.Vector.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(hitPoint_);
+                hitPoint_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 48: {
+              int rawValue = input.readEnum();
+
+              hitColliderType_ = rawValue;
+              break;
+            }
+            case 61: {
+
+              gGHMAHBOMKE_ = input.readFloat();
+              break;
+            }
+            case 82: {
+              emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder subBuilder = null;
+              if (eDOEECEACHH_ != null) {
+                subBuilder = eDOEECEACHH_.toBuilder();
+              }
+              eDOEECEACHH_ = input.readMessage(emu.grasscutter.net.proto.VectorOuterClass.Vector.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(eDOEECEACHH_);
+                eDOEECEACHH_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 96: {
+
+              hitBoxIndex_ = input.readInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.HitCollisionOuterClass.internal_static_HitCollision_descriptor;
@@ -236,7 +320,7 @@ public final class HitCollisionOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (java.lang.Float.floatToRawIntBits(dDLIENJBAKB_) != 0) {
+      if (dDLIENJBAKB_ != 0F) {
         output.writeFloat(3, dDLIENJBAKB_);
       }
       if (hitPoint_ != null) {
@@ -245,7 +329,7 @@ public final class HitCollisionOuterClass {
       if (hitColliderType_ != emu.grasscutter.net.proto.HitColliderTypeOuterClass.HitColliderType.HIT_COLLIDER_INVALID.getNumber()) {
         output.writeEnum(6, hitColliderType_);
       }
-      if (java.lang.Float.floatToRawIntBits(gGHMAHBOMKE_) != 0) {
+      if (gGHMAHBOMKE_ != 0F) {
         output.writeFloat(7, gGHMAHBOMKE_);
       }
       if (eDOEECEACHH_ != null) {
@@ -254,7 +338,7 @@ public final class HitCollisionOuterClass {
       if (hitBoxIndex_ != 0) {
         output.writeInt32(12, hitBoxIndex_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -263,7 +347,7 @@ public final class HitCollisionOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (java.lang.Float.floatToRawIntBits(dDLIENJBAKB_) != 0) {
+      if (dDLIENJBAKB_ != 0F) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(3, dDLIENJBAKB_);
       }
@@ -275,7 +359,7 @@ public final class HitCollisionOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(6, hitColliderType_);
       }
-      if (java.lang.Float.floatToRawIntBits(gGHMAHBOMKE_) != 0) {
+      if (gGHMAHBOMKE_ != 0F) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(7, gGHMAHBOMKE_);
       }
@@ -287,7 +371,7 @@ public final class HitCollisionOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(12, hitBoxIndex_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -321,7 +405,7 @@ public final class HitCollisionOuterClass {
       }
       if (getHitBoxIndex()
           != other.getHitBoxIndex()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -350,7 +434,7 @@ public final class HitCollisionOuterClass {
       }
       hash = (37 * hash) + HIT_BOX_INDEX_FIELD_NUMBER;
       hash = (53 * hash) + getHitBoxIndex();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -467,13 +551,18 @@ public final class HitCollisionOuterClass {
 
       // Construct using emu.grasscutter.net.proto.HitCollisionOuterClass.HitCollision.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -604,7 +693,7 @@ public final class HitCollisionOuterClass {
         if (other.getHitBoxIndex() != 0) {
           setHitBoxIndex(other.getHitBoxIndex());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -619,64 +708,17 @@ public final class HitCollisionOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.HitCollisionOuterClass.HitCollision parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 29: {
-                dDLIENJBAKB_ = input.readFloat();
-
-                break;
-              } // case 29
-              case 42: {
-                input.readMessage(
-                    getHitPointFieldBuilder().getBuilder(),
-                    extensionRegistry);
-
-                break;
-              } // case 42
-              case 48: {
-                hitColliderType_ = input.readEnum();
-
-                break;
-              } // case 48
-              case 61: {
-                gGHMAHBOMKE_ = input.readFloat();
-
-                break;
-              } // case 61
-              case 82: {
-                input.readMessage(
-                    getEDOEECEACHHFieldBuilder().getBuilder(),
-                    extensionRegistry);
-
-                break;
-              } // case 82
-              case 96: {
-                hitBoxIndex_ = input.readInt32();
-
-                break;
-              } // case 96
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.HitCollisionOuterClass.HitCollision) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
 
@@ -1097,18 +1139,7 @@ public final class HitCollisionOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new HitCollision(input, extensionRegistry);
       }
     };
 

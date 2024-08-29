@@ -19,22 +19,22 @@ public final class AvatarUpgradeRspOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int32 retcode = 13;</code>
-     * @return The retcode.
+     * <code>uint64 avatar_guid = 2;</code>
+     * @return The avatarGuid.
      */
-    int getRetcode();
+    long getAvatarGuid();
 
     /**
-     * <code>uint32 old_level = 1;</code>
+     * <code>uint32 old_level = 4;</code>
      * @return The oldLevel.
      */
     int getOldLevel();
 
     /**
-     * <code>uint64 avatar_guid = 2;</code>
-     * @return The avatarGuid.
+     * <code>int32 retcode = 9;</code>
+     * @return The retcode.
      */
-    long getAvatarGuid();
+    int getRetcode();
 
     /**
      * <code>uint32 cur_level = 12;</code>
@@ -44,9 +44,7 @@ public final class AvatarUpgradeRspOuterClass {
   }
   /**
    * <pre>
-   * 4.7.0
-   * CmdId: 24717
-   * BLLMLEOCFDA
+   * CmdId: 512
    * </pre>
    *
    * Protobuf type {@code AvatarUpgradeRsp}
@@ -75,6 +73,63 @@ public final class AvatarUpgradeRspOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private AvatarUpgradeRsp(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 16: {
+
+              avatarGuid_ = input.readUInt64();
+              break;
+            }
+            case 32: {
+
+              oldLevel_ = input.readUInt32();
+              break;
+            }
+            case 72: {
+
+              retcode_ = input.readInt32();
+              break;
+            }
+            case 96: {
+
+              curLevel_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.AvatarUpgradeRspOuterClass.internal_static_AvatarUpgradeRsp_descriptor;
@@ -88,28 +143,6 @@ public final class AvatarUpgradeRspOuterClass {
               emu.grasscutter.net.proto.AvatarUpgradeRspOuterClass.AvatarUpgradeRsp.class, emu.grasscutter.net.proto.AvatarUpgradeRspOuterClass.AvatarUpgradeRsp.Builder.class);
     }
 
-    public static final int RETCODE_FIELD_NUMBER = 13;
-    private int retcode_;
-    /**
-     * <code>int32 retcode = 13;</code>
-     * @return The retcode.
-     */
-    @java.lang.Override
-    public int getRetcode() {
-      return retcode_;
-    }
-
-    public static final int OLD_LEVEL_FIELD_NUMBER = 1;
-    private int oldLevel_;
-    /**
-     * <code>uint32 old_level = 1;</code>
-     * @return The oldLevel.
-     */
-    @java.lang.Override
-    public int getOldLevel() {
-      return oldLevel_;
-    }
-
     public static final int AVATAR_GUID_FIELD_NUMBER = 2;
     private long avatarGuid_;
     /**
@@ -119,6 +152,28 @@ public final class AvatarUpgradeRspOuterClass {
     @java.lang.Override
     public long getAvatarGuid() {
       return avatarGuid_;
+    }
+
+    public static final int OLD_LEVEL_FIELD_NUMBER = 4;
+    private int oldLevel_;
+    /**
+     * <code>uint32 old_level = 4;</code>
+     * @return The oldLevel.
+     */
+    @java.lang.Override
+    public int getOldLevel() {
+      return oldLevel_;
+    }
+
+    public static final int RETCODE_FIELD_NUMBER = 9;
+    private int retcode_;
+    /**
+     * <code>int32 retcode = 9;</code>
+     * @return The retcode.
+     */
+    @java.lang.Override
+    public int getRetcode() {
+      return retcode_;
     }
 
     public static final int CUR_LEVEL_FIELD_NUMBER = 12;
@@ -146,19 +201,19 @@ public final class AvatarUpgradeRspOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (oldLevel_ != 0) {
-        output.writeUInt32(1, oldLevel_);
-      }
       if (avatarGuid_ != 0L) {
         output.writeUInt64(2, avatarGuid_);
+      }
+      if (oldLevel_ != 0) {
+        output.writeUInt32(4, oldLevel_);
+      }
+      if (retcode_ != 0) {
+        output.writeInt32(9, retcode_);
       }
       if (curLevel_ != 0) {
         output.writeUInt32(12, curLevel_);
       }
-      if (retcode_ != 0) {
-        output.writeInt32(13, retcode_);
-      }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -167,23 +222,23 @@ public final class AvatarUpgradeRspOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (oldLevel_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(1, oldLevel_);
-      }
       if (avatarGuid_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(2, avatarGuid_);
+      }
+      if (oldLevel_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(4, oldLevel_);
+      }
+      if (retcode_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(9, retcode_);
       }
       if (curLevel_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(12, curLevel_);
       }
-      if (retcode_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(13, retcode_);
-      }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -198,15 +253,15 @@ public final class AvatarUpgradeRspOuterClass {
       }
       emu.grasscutter.net.proto.AvatarUpgradeRspOuterClass.AvatarUpgradeRsp other = (emu.grasscutter.net.proto.AvatarUpgradeRspOuterClass.AvatarUpgradeRsp) obj;
 
-      if (getRetcode()
-          != other.getRetcode()) return false;
-      if (getOldLevel()
-          != other.getOldLevel()) return false;
       if (getAvatarGuid()
           != other.getAvatarGuid()) return false;
+      if (getOldLevel()
+          != other.getOldLevel()) return false;
+      if (getRetcode()
+          != other.getRetcode()) return false;
       if (getCurLevel()
           != other.getCurLevel()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -217,16 +272,16 @@ public final class AvatarUpgradeRspOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + RETCODE_FIELD_NUMBER;
-      hash = (53 * hash) + getRetcode();
-      hash = (37 * hash) + OLD_LEVEL_FIELD_NUMBER;
-      hash = (53 * hash) + getOldLevel();
       hash = (37 * hash) + AVATAR_GUID_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getAvatarGuid());
+      hash = (37 * hash) + OLD_LEVEL_FIELD_NUMBER;
+      hash = (53 * hash) + getOldLevel();
+      hash = (37 * hash) + RETCODE_FIELD_NUMBER;
+      hash = (53 * hash) + getRetcode();
       hash = (37 * hash) + CUR_LEVEL_FIELD_NUMBER;
       hash = (53 * hash) + getCurLevel();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -323,9 +378,7 @@ public final class AvatarUpgradeRspOuterClass {
     }
     /**
      * <pre>
-     * 4.7.0
-     * CmdId: 24717
-     * BLLMLEOCFDA
+     * CmdId: 512
      * </pre>
      *
      * Protobuf type {@code AvatarUpgradeRsp}
@@ -349,22 +402,27 @@ public final class AvatarUpgradeRspOuterClass {
 
       // Construct using emu.grasscutter.net.proto.AvatarUpgradeRspOuterClass.AvatarUpgradeRsp.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        retcode_ = 0;
+        avatarGuid_ = 0L;
 
         oldLevel_ = 0;
 
-        avatarGuid_ = 0L;
+        retcode_ = 0;
 
         curLevel_ = 0;
 
@@ -394,9 +452,9 @@ public final class AvatarUpgradeRspOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.AvatarUpgradeRspOuterClass.AvatarUpgradeRsp buildPartial() {
         emu.grasscutter.net.proto.AvatarUpgradeRspOuterClass.AvatarUpgradeRsp result = new emu.grasscutter.net.proto.AvatarUpgradeRspOuterClass.AvatarUpgradeRsp(this);
-        result.retcode_ = retcode_;
-        result.oldLevel_ = oldLevel_;
         result.avatarGuid_ = avatarGuid_;
+        result.oldLevel_ = oldLevel_;
+        result.retcode_ = retcode_;
         result.curLevel_ = curLevel_;
         onBuilt();
         return result;
@@ -446,19 +504,19 @@ public final class AvatarUpgradeRspOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.AvatarUpgradeRspOuterClass.AvatarUpgradeRsp other) {
         if (other == emu.grasscutter.net.proto.AvatarUpgradeRspOuterClass.AvatarUpgradeRsp.getDefaultInstance()) return this;
-        if (other.getRetcode() != 0) {
-          setRetcode(other.getRetcode());
+        if (other.getAvatarGuid() != 0L) {
+          setAvatarGuid(other.getAvatarGuid());
         }
         if (other.getOldLevel() != 0) {
           setOldLevel(other.getOldLevel());
         }
-        if (other.getAvatarGuid() != 0L) {
-          setAvatarGuid(other.getAvatarGuid());
+        if (other.getRetcode() != 0) {
+          setRetcode(other.getRetcode());
         }
         if (other.getCurLevel() != 0) {
           setCurLevel(other.getCurLevel());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -473,112 +531,17 @@ public final class AvatarUpgradeRspOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.AvatarUpgradeRspOuterClass.AvatarUpgradeRsp parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                oldLevel_ = input.readUInt32();
-
-                break;
-              } // case 8
-              case 16: {
-                avatarGuid_ = input.readUInt64();
-
-                break;
-              } // case 16
-              case 96: {
-                curLevel_ = input.readUInt32();
-
-                break;
-              } // case 96
-              case 104: {
-                retcode_ = input.readInt32();
-
-                break;
-              } // case 104
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.AvatarUpgradeRspOuterClass.AvatarUpgradeRsp) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-
-      private int retcode_ ;
-      /**
-       * <code>int32 retcode = 13;</code>
-       * @return The retcode.
-       */
-      @java.lang.Override
-      public int getRetcode() {
-        return retcode_;
-      }
-      /**
-       * <code>int32 retcode = 13;</code>
-       * @param value The retcode to set.
-       * @return This builder for chaining.
-       */
-      public Builder setRetcode(int value) {
-        
-        retcode_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int32 retcode = 13;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearRetcode() {
-        
-        retcode_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int oldLevel_ ;
-      /**
-       * <code>uint32 old_level = 1;</code>
-       * @return The oldLevel.
-       */
-      @java.lang.Override
-      public int getOldLevel() {
-        return oldLevel_;
-      }
-      /**
-       * <code>uint32 old_level = 1;</code>
-       * @param value The oldLevel to set.
-       * @return This builder for chaining.
-       */
-      public Builder setOldLevel(int value) {
-        
-        oldLevel_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 old_level = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearOldLevel() {
-        
-        oldLevel_ = 0;
-        onChanged();
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
 
@@ -609,6 +572,68 @@ public final class AvatarUpgradeRspOuterClass {
       public Builder clearAvatarGuid() {
         
         avatarGuid_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int oldLevel_ ;
+      /**
+       * <code>uint32 old_level = 4;</code>
+       * @return The oldLevel.
+       */
+      @java.lang.Override
+      public int getOldLevel() {
+        return oldLevel_;
+      }
+      /**
+       * <code>uint32 old_level = 4;</code>
+       * @param value The oldLevel to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOldLevel(int value) {
+        
+        oldLevel_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 old_level = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOldLevel() {
+        
+        oldLevel_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int retcode_ ;
+      /**
+       * <code>int32 retcode = 9;</code>
+       * @return The retcode.
+       */
+      @java.lang.Override
+      public int getRetcode() {
+        return retcode_;
+      }
+      /**
+       * <code>int32 retcode = 9;</code>
+       * @param value The retcode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRetcode(int value) {
+        
+        retcode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 retcode = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRetcode() {
+        
+        retcode_ = 0;
         onChanged();
         return this;
       }
@@ -676,18 +701,7 @@ public final class AvatarUpgradeRspOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new AvatarUpgradeRsp(input, extensionRegistry);
       }
     };
 
@@ -722,8 +736,8 @@ public final class AvatarUpgradeRspOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\026AvatarUpgradeRsp.proto\"^\n\020AvatarUpgrad" +
-      "eRsp\022\017\n\007retcode\030\r \001(\005\022\021\n\told_level\030\001 \001(\r" +
-      "\022\023\n\013avatar_guid\030\002 \001(\004\022\021\n\tcur_level\030\014 \001(\r" +
+      "eRsp\022\023\n\013avatar_guid\030\002 \001(\004\022\021\n\told_level\030\004" +
+      " \001(\r\022\017\n\007retcode\030\t \001(\005\022\021\n\tcur_level\030\014 \001(\r" +
       "B\033\n\031emu.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -735,7 +749,7 @@ public final class AvatarUpgradeRspOuterClass {
     internal_static_AvatarUpgradeRsp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_AvatarUpgradeRsp_descriptor,
-        new java.lang.String[] { "Retcode", "OldLevel", "AvatarGuid", "CurLevel", });
+        new java.lang.String[] { "AvatarGuid", "OldLevel", "Retcode", "CurLevel", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

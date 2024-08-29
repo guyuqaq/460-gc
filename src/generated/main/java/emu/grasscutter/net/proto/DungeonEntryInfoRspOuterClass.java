@@ -113,6 +113,83 @@ public final class DungeonEntryInfoRspOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private DungeonEntryInfoRsp(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                dungeonEntryList_ = new java.util.ArrayList<emu.grasscutter.net.proto.DungeonEntryInfoOuterClass.DungeonEntryInfo>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              dungeonEntryList_.add(
+                  input.readMessage(emu.grasscutter.net.proto.DungeonEntryInfoOuterClass.DungeonEntryInfo.parser(), extensionRegistry));
+              break;
+            }
+            case 74: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                dungeonEntryPointList_ = new java.util.ArrayList<emu.grasscutter.net.proto.DungeonEntryPointInfoOuterClass.DungeonEntryPointInfo>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              dungeonEntryPointList_.add(
+                  input.readMessage(emu.grasscutter.net.proto.DungeonEntryPointInfoOuterClass.DungeonEntryPointInfo.parser(), extensionRegistry));
+              break;
+            }
+            case 80: {
+
+              recommendDungeonId_ = input.readUInt32();
+              break;
+            }
+            case 104: {
+
+              pointId_ = input.readUInt32();
+              break;
+            }
+            case 120: {
+
+              retcode_ = input.readInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          dungeonEntryList_ = java.util.Collections.unmodifiableList(dungeonEntryList_);
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          dungeonEntryPointList_ = java.util.Collections.unmodifiableList(dungeonEntryPointList_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.DungeonEntryInfoRspOuterClass.internal_static_DungeonEntryInfoRsp_descriptor;
@@ -268,7 +345,7 @@ public final class DungeonEntryInfoRspOuterClass {
       if (retcode_ != 0) {
         output.writeInt32(15, retcode_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -297,7 +374,7 @@ public final class DungeonEntryInfoRspOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(15, retcode_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -322,7 +399,7 @@ public final class DungeonEntryInfoRspOuterClass {
           != other.getPointId()) return false;
       if (getRetcode()
           != other.getRetcode()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -347,7 +424,7 @@ public final class DungeonEntryInfoRspOuterClass {
       hash = (53 * hash) + getPointId();
       hash = (37 * hash) + RETCODE_FIELD_NUMBER;
       hash = (53 * hash) + getRetcode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -464,31 +541,36 @@ public final class DungeonEntryInfoRspOuterClass {
 
       // Construct using emu.grasscutter.net.proto.DungeonEntryInfoRspOuterClass.DungeonEntryInfoRsp.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getDungeonEntryListFieldBuilder();
+          getDungeonEntryPointListFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
         if (dungeonEntryListBuilder_ == null) {
           dungeonEntryList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
-          dungeonEntryList_ = null;
           dungeonEntryListBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000001);
         if (dungeonEntryPointListBuilder_ == null) {
           dungeonEntryPointList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
-          dungeonEntryPointList_ = null;
           dungeonEntryPointListBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000002);
         recommendDungeonId_ = 0;
 
         pointId_ = 0;
@@ -652,7 +734,7 @@ public final class DungeonEntryInfoRspOuterClass {
         if (other.getRetcode() != 0) {
           setRetcode(other.getRetcode());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -667,71 +749,17 @@ public final class DungeonEntryInfoRspOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.DungeonEntryInfoRspOuterClass.DungeonEntryInfoRsp parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                emu.grasscutter.net.proto.DungeonEntryInfoOuterClass.DungeonEntryInfo m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.DungeonEntryInfoOuterClass.DungeonEntryInfo.parser(),
-                        extensionRegistry);
-                if (dungeonEntryListBuilder_ == null) {
-                  ensureDungeonEntryListIsMutable();
-                  dungeonEntryList_.add(m);
-                } else {
-                  dungeonEntryListBuilder_.addMessage(m);
-                }
-                break;
-              } // case 10
-              case 74: {
-                emu.grasscutter.net.proto.DungeonEntryPointInfoOuterClass.DungeonEntryPointInfo m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.DungeonEntryPointInfoOuterClass.DungeonEntryPointInfo.parser(),
-                        extensionRegistry);
-                if (dungeonEntryPointListBuilder_ == null) {
-                  ensureDungeonEntryPointListIsMutable();
-                  dungeonEntryPointList_.add(m);
-                } else {
-                  dungeonEntryPointListBuilder_.addMessage(m);
-                }
-                break;
-              } // case 74
-              case 80: {
-                recommendDungeonId_ = input.readUInt32();
-
-                break;
-              } // case 80
-              case 104: {
-                pointId_ = input.readUInt32();
-
-                break;
-              } // case 104
-              case 120: {
-                retcode_ = input.readInt32();
-
-                break;
-              } // case 120
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.DungeonEntryInfoRspOuterClass.DungeonEntryInfoRsp) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -1341,18 +1369,7 @@ public final class DungeonEntryInfoRspOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new DungeonEntryInfoRsp(input, extensionRegistry);
       }
     };
 

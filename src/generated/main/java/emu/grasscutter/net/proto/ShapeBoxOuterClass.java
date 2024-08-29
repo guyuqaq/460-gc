@@ -34,43 +34,16 @@ public final class ShapeBoxOuterClass {
     emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getCenterOrBuilder();
 
     /**
-     * <code>.Vector extents = 5;</code>
-     * @return Whether the extents field is set.
-     */
-    boolean hasExtents();
-    /**
-     * <code>.Vector extents = 5;</code>
-     * @return The extents.
-     */
-    emu.grasscutter.net.proto.VectorOuterClass.Vector getExtents();
-    /**
-     * <code>.Vector extents = 5;</code>
-     */
-    emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getExtentsOrBuilder();
-
-    /**
-     * <pre>
-     * sus
-     * </pre>
-     *
      * <code>.Vector axis0 = 2;</code>
      * @return Whether the axis0 field is set.
      */
     boolean hasAxis0();
     /**
-     * <pre>
-     * sus
-     * </pre>
-     *
      * <code>.Vector axis0 = 2;</code>
      * @return The axis0.
      */
     emu.grasscutter.net.proto.VectorOuterClass.Vector getAxis0();
     /**
-     * <pre>
-     * sus
-     * </pre>
-     *
      * <code>.Vector axis0 = 2;</code>
      */
     emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getAxis0OrBuilder();
@@ -104,11 +77,25 @@ public final class ShapeBoxOuterClass {
      * <code>.Vector axis4 = 4;</code>
      */
     emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getAxis4OrBuilder();
+
+    /**
+     * <code>.Vector extents = 5;</code>
+     * @return Whether the extents field is set.
+     */
+    boolean hasExtents();
+    /**
+     * <code>.Vector extents = 5;</code>
+     * @return The extents.
+     */
+    emu.grasscutter.net.proto.VectorOuterClass.Vector getExtents();
+    /**
+     * <code>.Vector extents = 5;</code>
+     */
+    emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getExtentsOrBuilder();
   }
   /**
    * <pre>
-   * 4.7.0
-   * obf: IEIAEKDEKPH
+   *obf: ACPDAEBLCBA
    * </pre>
    *
    * Protobuf type {@code ShapeBox}
@@ -136,6 +123,108 @@ public final class ShapeBoxOuterClass {
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
+    }
+    private ShapeBox(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder subBuilder = null;
+              if (center_ != null) {
+                subBuilder = center_.toBuilder();
+              }
+              center_ = input.readMessage(emu.grasscutter.net.proto.VectorOuterClass.Vector.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(center_);
+                center_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder subBuilder = null;
+              if (axis0_ != null) {
+                subBuilder = axis0_.toBuilder();
+              }
+              axis0_ = input.readMessage(emu.grasscutter.net.proto.VectorOuterClass.Vector.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(axis0_);
+                axis0_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder subBuilder = null;
+              if (axis1_ != null) {
+                subBuilder = axis1_.toBuilder();
+              }
+              axis1_ = input.readMessage(emu.grasscutter.net.proto.VectorOuterClass.Vector.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(axis1_);
+                axis1_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 34: {
+              emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder subBuilder = null;
+              if (axis4_ != null) {
+                subBuilder = axis4_.toBuilder();
+              }
+              axis4_ = input.readMessage(emu.grasscutter.net.proto.VectorOuterClass.Vector.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(axis4_);
+                axis4_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 42: {
+              emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder subBuilder = null;
+              if (extents_ != null) {
+                subBuilder = extents_.toBuilder();
+              }
+              extents_ = input.readMessage(emu.grasscutter.net.proto.VectorOuterClass.Vector.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(extents_);
+                extents_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -176,39 +265,9 @@ public final class ShapeBoxOuterClass {
       return getCenter();
     }
 
-    public static final int EXTENTS_FIELD_NUMBER = 5;
-    private emu.grasscutter.net.proto.VectorOuterClass.Vector extents_;
-    /**
-     * <code>.Vector extents = 5;</code>
-     * @return Whether the extents field is set.
-     */
-    @java.lang.Override
-    public boolean hasExtents() {
-      return extents_ != null;
-    }
-    /**
-     * <code>.Vector extents = 5;</code>
-     * @return The extents.
-     */
-    @java.lang.Override
-    public emu.grasscutter.net.proto.VectorOuterClass.Vector getExtents() {
-      return extents_ == null ? emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance() : extents_;
-    }
-    /**
-     * <code>.Vector extents = 5;</code>
-     */
-    @java.lang.Override
-    public emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getExtentsOrBuilder() {
-      return getExtents();
-    }
-
     public static final int AXIS0_FIELD_NUMBER = 2;
     private emu.grasscutter.net.proto.VectorOuterClass.Vector axis0_;
     /**
-     * <pre>
-     * sus
-     * </pre>
-     *
      * <code>.Vector axis0 = 2;</code>
      * @return Whether the axis0 field is set.
      */
@@ -217,10 +276,6 @@ public final class ShapeBoxOuterClass {
       return axis0_ != null;
     }
     /**
-     * <pre>
-     * sus
-     * </pre>
-     *
      * <code>.Vector axis0 = 2;</code>
      * @return The axis0.
      */
@@ -229,10 +284,6 @@ public final class ShapeBoxOuterClass {
       return axis0_ == null ? emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance() : axis0_;
     }
     /**
-     * <pre>
-     * sus
-     * </pre>
-     *
      * <code>.Vector axis0 = 2;</code>
      */
     @java.lang.Override
@@ -292,6 +343,32 @@ public final class ShapeBoxOuterClass {
       return getAxis4();
     }
 
+    public static final int EXTENTS_FIELD_NUMBER = 5;
+    private emu.grasscutter.net.proto.VectorOuterClass.Vector extents_;
+    /**
+     * <code>.Vector extents = 5;</code>
+     * @return Whether the extents field is set.
+     */
+    @java.lang.Override
+    public boolean hasExtents() {
+      return extents_ != null;
+    }
+    /**
+     * <code>.Vector extents = 5;</code>
+     * @return The extents.
+     */
+    @java.lang.Override
+    public emu.grasscutter.net.proto.VectorOuterClass.Vector getExtents() {
+      return extents_ == null ? emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance() : extents_;
+    }
+    /**
+     * <code>.Vector extents = 5;</code>
+     */
+    @java.lang.Override
+    public emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getExtentsOrBuilder() {
+      return getExtents();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -321,7 +398,7 @@ public final class ShapeBoxOuterClass {
       if (extents_ != null) {
         output.writeMessage(5, getExtents());
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -350,7 +427,7 @@ public final class ShapeBoxOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getExtents());
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -370,11 +447,6 @@ public final class ShapeBoxOuterClass {
         if (!getCenter()
             .equals(other.getCenter())) return false;
       }
-      if (hasExtents() != other.hasExtents()) return false;
-      if (hasExtents()) {
-        if (!getExtents()
-            .equals(other.getExtents())) return false;
-      }
       if (hasAxis0() != other.hasAxis0()) return false;
       if (hasAxis0()) {
         if (!getAxis0()
@@ -390,7 +462,12 @@ public final class ShapeBoxOuterClass {
         if (!getAxis4()
             .equals(other.getAxis4())) return false;
       }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (hasExtents() != other.hasExtents()) return false;
+      if (hasExtents()) {
+        if (!getExtents()
+            .equals(other.getExtents())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -405,10 +482,6 @@ public final class ShapeBoxOuterClass {
         hash = (37 * hash) + CENTER_FIELD_NUMBER;
         hash = (53 * hash) + getCenter().hashCode();
       }
-      if (hasExtents()) {
-        hash = (37 * hash) + EXTENTS_FIELD_NUMBER;
-        hash = (53 * hash) + getExtents().hashCode();
-      }
       if (hasAxis0()) {
         hash = (37 * hash) + AXIS0_FIELD_NUMBER;
         hash = (53 * hash) + getAxis0().hashCode();
@@ -421,7 +494,11 @@ public final class ShapeBoxOuterClass {
         hash = (37 * hash) + AXIS4_FIELD_NUMBER;
         hash = (53 * hash) + getAxis4().hashCode();
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      if (hasExtents()) {
+        hash = (37 * hash) + EXTENTS_FIELD_NUMBER;
+        hash = (53 * hash) + getExtents().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -518,8 +595,7 @@ public final class ShapeBoxOuterClass {
     }
     /**
      * <pre>
-     * 4.7.0
-     * obf: IEIAEKDEKPH
+     *obf: ACPDAEBLCBA
      * </pre>
      *
      * Protobuf type {@code ShapeBox}
@@ -543,13 +619,18 @@ public final class ShapeBoxOuterClass {
 
       // Construct using emu.grasscutter.net.proto.ShapeBoxOuterClass.ShapeBox.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -559,12 +640,6 @@ public final class ShapeBoxOuterClass {
         } else {
           center_ = null;
           centerBuilder_ = null;
-        }
-        if (extentsBuilder_ == null) {
-          extents_ = null;
-        } else {
-          extents_ = null;
-          extentsBuilder_ = null;
         }
         if (axis0Builder_ == null) {
           axis0_ = null;
@@ -583,6 +658,12 @@ public final class ShapeBoxOuterClass {
         } else {
           axis4_ = null;
           axis4Builder_ = null;
+        }
+        if (extentsBuilder_ == null) {
+          extents_ = null;
+        } else {
+          extents_ = null;
+          extentsBuilder_ = null;
         }
         return this;
       }
@@ -615,11 +696,6 @@ public final class ShapeBoxOuterClass {
         } else {
           result.center_ = centerBuilder_.build();
         }
-        if (extentsBuilder_ == null) {
-          result.extents_ = extents_;
-        } else {
-          result.extents_ = extentsBuilder_.build();
-        }
         if (axis0Builder_ == null) {
           result.axis0_ = axis0_;
         } else {
@@ -634,6 +710,11 @@ public final class ShapeBoxOuterClass {
           result.axis4_ = axis4_;
         } else {
           result.axis4_ = axis4Builder_.build();
+        }
+        if (extentsBuilder_ == null) {
+          result.extents_ = extents_;
+        } else {
+          result.extents_ = extentsBuilder_.build();
         }
         onBuilt();
         return result;
@@ -686,9 +767,6 @@ public final class ShapeBoxOuterClass {
         if (other.hasCenter()) {
           mergeCenter(other.getCenter());
         }
-        if (other.hasExtents()) {
-          mergeExtents(other.getExtents());
-        }
         if (other.hasAxis0()) {
           mergeAxis0(other.getAxis0());
         }
@@ -698,7 +776,10 @@ public final class ShapeBoxOuterClass {
         if (other.hasAxis4()) {
           mergeAxis4(other.getAxis4());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        if (other.hasExtents()) {
+          mergeExtents(other.getExtents());
+        }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -713,65 +794,17 @@ public final class ShapeBoxOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.ShapeBoxOuterClass.ShapeBox parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                input.readMessage(
-                    getCenterFieldBuilder().getBuilder(),
-                    extensionRegistry);
-
-                break;
-              } // case 10
-              case 18: {
-                input.readMessage(
-                    getAxis0FieldBuilder().getBuilder(),
-                    extensionRegistry);
-
-                break;
-              } // case 18
-              case 26: {
-                input.readMessage(
-                    getAxis1FieldBuilder().getBuilder(),
-                    extensionRegistry);
-
-                break;
-              } // case 26
-              case 34: {
-                input.readMessage(
-                    getAxis4FieldBuilder().getBuilder(),
-                    extensionRegistry);
-
-                break;
-              } // case 34
-              case 42: {
-                input.readMessage(
-                    getExtentsFieldBuilder().getBuilder(),
-                    extensionRegistry);
-
-                break;
-              } // case 42
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.ShapeBoxOuterClass.ShapeBox) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
 
@@ -894,133 +927,10 @@ public final class ShapeBoxOuterClass {
         return centerBuilder_;
       }
 
-      private emu.grasscutter.net.proto.VectorOuterClass.Vector extents_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder> extentsBuilder_;
-      /**
-       * <code>.Vector extents = 5;</code>
-       * @return Whether the extents field is set.
-       */
-      public boolean hasExtents() {
-        return extentsBuilder_ != null || extents_ != null;
-      }
-      /**
-       * <code>.Vector extents = 5;</code>
-       * @return The extents.
-       */
-      public emu.grasscutter.net.proto.VectorOuterClass.Vector getExtents() {
-        if (extentsBuilder_ == null) {
-          return extents_ == null ? emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance() : extents_;
-        } else {
-          return extentsBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>.Vector extents = 5;</code>
-       */
-      public Builder setExtents(emu.grasscutter.net.proto.VectorOuterClass.Vector value) {
-        if (extentsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          extents_ = value;
-          onChanged();
-        } else {
-          extentsBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.Vector extents = 5;</code>
-       */
-      public Builder setExtents(
-          emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder builderForValue) {
-        if (extentsBuilder_ == null) {
-          extents_ = builderForValue.build();
-          onChanged();
-        } else {
-          extentsBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <code>.Vector extents = 5;</code>
-       */
-      public Builder mergeExtents(emu.grasscutter.net.proto.VectorOuterClass.Vector value) {
-        if (extentsBuilder_ == null) {
-          if (extents_ != null) {
-            extents_ =
-              emu.grasscutter.net.proto.VectorOuterClass.Vector.newBuilder(extents_).mergeFrom(value).buildPartial();
-          } else {
-            extents_ = value;
-          }
-          onChanged();
-        } else {
-          extentsBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.Vector extents = 5;</code>
-       */
-      public Builder clearExtents() {
-        if (extentsBuilder_ == null) {
-          extents_ = null;
-          onChanged();
-        } else {
-          extents_ = null;
-          extentsBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <code>.Vector extents = 5;</code>
-       */
-      public emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder getExtentsBuilder() {
-        
-        onChanged();
-        return getExtentsFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.Vector extents = 5;</code>
-       */
-      public emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getExtentsOrBuilder() {
-        if (extentsBuilder_ != null) {
-          return extentsBuilder_.getMessageOrBuilder();
-        } else {
-          return extents_ == null ?
-              emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance() : extents_;
-        }
-      }
-      /**
-       * <code>.Vector extents = 5;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder> 
-          getExtentsFieldBuilder() {
-        if (extentsBuilder_ == null) {
-          extentsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder>(
-                  getExtents(),
-                  getParentForChildren(),
-                  isClean());
-          extents_ = null;
-        }
-        return extentsBuilder_;
-      }
-
       private emu.grasscutter.net.proto.VectorOuterClass.Vector axis0_;
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder> axis0Builder_;
       /**
-       * <pre>
-       * sus
-       * </pre>
-       *
        * <code>.Vector axis0 = 2;</code>
        * @return Whether the axis0 field is set.
        */
@@ -1028,10 +938,6 @@ public final class ShapeBoxOuterClass {
         return axis0Builder_ != null || axis0_ != null;
       }
       /**
-       * <pre>
-       * sus
-       * </pre>
-       *
        * <code>.Vector axis0 = 2;</code>
        * @return The axis0.
        */
@@ -1043,10 +949,6 @@ public final class ShapeBoxOuterClass {
         }
       }
       /**
-       * <pre>
-       * sus
-       * </pre>
-       *
        * <code>.Vector axis0 = 2;</code>
        */
       public Builder setAxis0(emu.grasscutter.net.proto.VectorOuterClass.Vector value) {
@@ -1063,10 +965,6 @@ public final class ShapeBoxOuterClass {
         return this;
       }
       /**
-       * <pre>
-       * sus
-       * </pre>
-       *
        * <code>.Vector axis0 = 2;</code>
        */
       public Builder setAxis0(
@@ -1081,10 +979,6 @@ public final class ShapeBoxOuterClass {
         return this;
       }
       /**
-       * <pre>
-       * sus
-       * </pre>
-       *
        * <code>.Vector axis0 = 2;</code>
        */
       public Builder mergeAxis0(emu.grasscutter.net.proto.VectorOuterClass.Vector value) {
@@ -1103,10 +997,6 @@ public final class ShapeBoxOuterClass {
         return this;
       }
       /**
-       * <pre>
-       * sus
-       * </pre>
-       *
        * <code>.Vector axis0 = 2;</code>
        */
       public Builder clearAxis0() {
@@ -1121,10 +1011,6 @@ public final class ShapeBoxOuterClass {
         return this;
       }
       /**
-       * <pre>
-       * sus
-       * </pre>
-       *
        * <code>.Vector axis0 = 2;</code>
        */
       public emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder getAxis0Builder() {
@@ -1133,10 +1019,6 @@ public final class ShapeBoxOuterClass {
         return getAxis0FieldBuilder().getBuilder();
       }
       /**
-       * <pre>
-       * sus
-       * </pre>
-       *
        * <code>.Vector axis0 = 2;</code>
        */
       public emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getAxis0OrBuilder() {
@@ -1148,10 +1030,6 @@ public final class ShapeBoxOuterClass {
         }
       }
       /**
-       * <pre>
-       * sus
-       * </pre>
-       *
        * <code>.Vector axis0 = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1405,6 +1283,125 @@ public final class ShapeBoxOuterClass {
         }
         return axis4Builder_;
       }
+
+      private emu.grasscutter.net.proto.VectorOuterClass.Vector extents_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder> extentsBuilder_;
+      /**
+       * <code>.Vector extents = 5;</code>
+       * @return Whether the extents field is set.
+       */
+      public boolean hasExtents() {
+        return extentsBuilder_ != null || extents_ != null;
+      }
+      /**
+       * <code>.Vector extents = 5;</code>
+       * @return The extents.
+       */
+      public emu.grasscutter.net.proto.VectorOuterClass.Vector getExtents() {
+        if (extentsBuilder_ == null) {
+          return extents_ == null ? emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance() : extents_;
+        } else {
+          return extentsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.Vector extents = 5;</code>
+       */
+      public Builder setExtents(emu.grasscutter.net.proto.VectorOuterClass.Vector value) {
+        if (extentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          extents_ = value;
+          onChanged();
+        } else {
+          extentsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.Vector extents = 5;</code>
+       */
+      public Builder setExtents(
+          emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder builderForValue) {
+        if (extentsBuilder_ == null) {
+          extents_ = builderForValue.build();
+          onChanged();
+        } else {
+          extentsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.Vector extents = 5;</code>
+       */
+      public Builder mergeExtents(emu.grasscutter.net.proto.VectorOuterClass.Vector value) {
+        if (extentsBuilder_ == null) {
+          if (extents_ != null) {
+            extents_ =
+              emu.grasscutter.net.proto.VectorOuterClass.Vector.newBuilder(extents_).mergeFrom(value).buildPartial();
+          } else {
+            extents_ = value;
+          }
+          onChanged();
+        } else {
+          extentsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.Vector extents = 5;</code>
+       */
+      public Builder clearExtents() {
+        if (extentsBuilder_ == null) {
+          extents_ = null;
+          onChanged();
+        } else {
+          extents_ = null;
+          extentsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.Vector extents = 5;</code>
+       */
+      public emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder getExtentsBuilder() {
+        
+        onChanged();
+        return getExtentsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.Vector extents = 5;</code>
+       */
+      public emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getExtentsOrBuilder() {
+        if (extentsBuilder_ != null) {
+          return extentsBuilder_.getMessageOrBuilder();
+        } else {
+          return extents_ == null ?
+              emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance() : extents_;
+        }
+      }
+      /**
+       * <code>.Vector extents = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder> 
+          getExtentsFieldBuilder() {
+        if (extentsBuilder_ == null) {
+          extentsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder>(
+                  getExtents(),
+                  getParentForChildren(),
+                  isClean());
+          extents_ = null;
+        }
+        return extentsBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -1438,18 +1435,7 @@ public final class ShapeBoxOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new ShapeBox(input, extensionRegistry);
       }
     };
 
@@ -1484,9 +1470,9 @@ public final class ShapeBoxOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\016ShapeBox.proto\032\014Vector.proto\"\205\001\n\010Shape" +
-      "Box\022\027\n\006center\030\001 \001(\0132\007.Vector\022\030\n\007extents\030" +
-      "\005 \001(\0132\007.Vector\022\026\n\005axis0\030\002 \001(\0132\007.Vector\022\026" +
-      "\n\005axis1\030\003 \001(\0132\007.Vector\022\026\n\005axis4\030\004 \001(\0132\007." +
+      "Box\022\027\n\006center\030\001 \001(\0132\007.Vector\022\026\n\005axis0\030\002 " +
+      "\001(\0132\007.Vector\022\026\n\005axis1\030\003 \001(\0132\007.Vector\022\026\n\005" +
+      "axis4\030\004 \001(\0132\007.Vector\022\030\n\007extents\030\005 \001(\0132\007." +
       "VectorB\033\n\031emu.grasscutter.net.protob\006pro" +
       "to3"
     };
@@ -1500,7 +1486,7 @@ public final class ShapeBoxOuterClass {
     internal_static_ShapeBox_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ShapeBox_descriptor,
-        new java.lang.String[] { "Center", "Extents", "Axis0", "Axis1", "Axis4", });
+        new java.lang.String[] { "Center", "Axis0", "Axis1", "Axis4", "Extents", });
     emu.grasscutter.net.proto.VectorOuterClass.getDescriptor();
   }
 

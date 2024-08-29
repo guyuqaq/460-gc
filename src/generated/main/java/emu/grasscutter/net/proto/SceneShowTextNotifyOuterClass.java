@@ -19,32 +19,38 @@ public final class SceneShowTextNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 text_id = 1;</code>
+     * <code>float HMONIADIBIL = 5;</code>
+     * @return The hMONIADIBIL.
+     */
+    float getHMONIADIBIL();
+
+    /**
+     * <code>float DBGPNDKPJJF = 9;</code>
+     * @return The dBGPNDKPJJF.
+     */
+    float getDBGPNDKPJJF();
+
+    /**
+     * <pre>
+     * FNGAHCBKJIK
+     * </pre>
+     *
+     * <code>uint32 text_id = 13;</code>
      * @return The textId.
      */
     int getTextId();
 
     /**
-     * <code>float duration = 2;</code>
+     * <code>float duration = 15;</code>
      * @return The duration.
      */
     float getDuration();
-
-    /**
-     * <code>float MIGDKKAEONI = 7;</code>
-     * @return The mIGDKKAEONI.
-     */
-    float getMIGDKKAEONI();
-
-    /**
-     * <code>float MHMOKMHMAKO = 13;</code>
-     * @return The mHMOKMHMAKO.
-     */
-    float getMHMOKMHMAKO();
   }
   /**
    * <pre>
-   * CmdId: 22295
+   * 4.6.0
+   * CmdId: 20149
+   * Obfs: CHABEBLCLGD
    * </pre>
    *
    * Protobuf type {@code SceneShowTextNotify}
@@ -91,24 +97,24 @@ public final class SceneShowTextNotifyOuterClass {
             case 0:
               done = true;
               break;
-            case 8: {
+            case 45: {
+
+              hMONIADIBIL_ = input.readFloat();
+              break;
+            }
+            case 77: {
+
+              dBGPNDKPJJF_ = input.readFloat();
+              break;
+            }
+            case 104: {
 
               textId_ = input.readUInt32();
               break;
             }
-            case 21: {
+            case 125: {
 
               duration_ = input.readFloat();
-              break;
-            }
-            case 61: {
-
-              mIGDKKAEONI_ = input.readFloat();
-              break;
-            }
-            case 109: {
-
-              mHMOKMHMAKO_ = input.readFloat();
               break;
             }
             default: {
@@ -143,10 +149,36 @@ public final class SceneShowTextNotifyOuterClass {
               emu.grasscutter.net.proto.SceneShowTextNotifyOuterClass.SceneShowTextNotify.class, emu.grasscutter.net.proto.SceneShowTextNotifyOuterClass.SceneShowTextNotify.Builder.class);
     }
 
-    public static final int TEXT_ID_FIELD_NUMBER = 1;
+    public static final int HMONIADIBIL_FIELD_NUMBER = 5;
+    private float hMONIADIBIL_;
+    /**
+     * <code>float HMONIADIBIL = 5;</code>
+     * @return The hMONIADIBIL.
+     */
+    @java.lang.Override
+    public float getHMONIADIBIL() {
+      return hMONIADIBIL_;
+    }
+
+    public static final int DBGPNDKPJJF_FIELD_NUMBER = 9;
+    private float dBGPNDKPJJF_;
+    /**
+     * <code>float DBGPNDKPJJF = 9;</code>
+     * @return The dBGPNDKPJJF.
+     */
+    @java.lang.Override
+    public float getDBGPNDKPJJF() {
+      return dBGPNDKPJJF_;
+    }
+
+    public static final int TEXT_ID_FIELD_NUMBER = 13;
     private int textId_;
     /**
-     * <code>uint32 text_id = 1;</code>
+     * <pre>
+     * FNGAHCBKJIK
+     * </pre>
+     *
+     * <code>uint32 text_id = 13;</code>
      * @return The textId.
      */
     @java.lang.Override
@@ -154,37 +186,15 @@ public final class SceneShowTextNotifyOuterClass {
       return textId_;
     }
 
-    public static final int DURATION_FIELD_NUMBER = 2;
+    public static final int DURATION_FIELD_NUMBER = 15;
     private float duration_;
     /**
-     * <code>float duration = 2;</code>
+     * <code>float duration = 15;</code>
      * @return The duration.
      */
     @java.lang.Override
     public float getDuration() {
       return duration_;
-    }
-
-    public static final int MIGDKKAEONI_FIELD_NUMBER = 7;
-    private float mIGDKKAEONI_;
-    /**
-     * <code>float MIGDKKAEONI = 7;</code>
-     * @return The mIGDKKAEONI.
-     */
-    @java.lang.Override
-    public float getMIGDKKAEONI() {
-      return mIGDKKAEONI_;
-    }
-
-    public static final int MHMOKMHMAKO_FIELD_NUMBER = 13;
-    private float mHMOKMHMAKO_;
-    /**
-     * <code>float MHMOKMHMAKO = 13;</code>
-     * @return The mHMOKMHMAKO.
-     */
-    @java.lang.Override
-    public float getMHMOKMHMAKO() {
-      return mHMOKMHMAKO_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -201,17 +211,17 @@ public final class SceneShowTextNotifyOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (hMONIADIBIL_ != 0F) {
+        output.writeFloat(5, hMONIADIBIL_);
+      }
+      if (dBGPNDKPJJF_ != 0F) {
+        output.writeFloat(9, dBGPNDKPJJF_);
+      }
       if (textId_ != 0) {
-        output.writeUInt32(1, textId_);
+        output.writeUInt32(13, textId_);
       }
       if (duration_ != 0F) {
-        output.writeFloat(2, duration_);
-      }
-      if (mIGDKKAEONI_ != 0F) {
-        output.writeFloat(7, mIGDKKAEONI_);
-      }
-      if (mHMOKMHMAKO_ != 0F) {
-        output.writeFloat(13, mHMOKMHMAKO_);
+        output.writeFloat(15, duration_);
       }
       unknownFields.writeTo(output);
     }
@@ -222,21 +232,21 @@ public final class SceneShowTextNotifyOuterClass {
       if (size != -1) return size;
 
       size = 0;
+      if (hMONIADIBIL_ != 0F) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(5, hMONIADIBIL_);
+      }
+      if (dBGPNDKPJJF_ != 0F) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(9, dBGPNDKPJJF_);
+      }
       if (textId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(1, textId_);
+          .computeUInt32Size(13, textId_);
       }
       if (duration_ != 0F) {
         size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(2, duration_);
-      }
-      if (mIGDKKAEONI_ != 0F) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(7, mIGDKKAEONI_);
-      }
-      if (mHMOKMHMAKO_ != 0F) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(13, mHMOKMHMAKO_);
+          .computeFloatSize(15, duration_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -253,17 +263,17 @@ public final class SceneShowTextNotifyOuterClass {
       }
       emu.grasscutter.net.proto.SceneShowTextNotifyOuterClass.SceneShowTextNotify other = (emu.grasscutter.net.proto.SceneShowTextNotifyOuterClass.SceneShowTextNotify) obj;
 
+      if (java.lang.Float.floatToIntBits(getHMONIADIBIL())
+          != java.lang.Float.floatToIntBits(
+              other.getHMONIADIBIL())) return false;
+      if (java.lang.Float.floatToIntBits(getDBGPNDKPJJF())
+          != java.lang.Float.floatToIntBits(
+              other.getDBGPNDKPJJF())) return false;
       if (getTextId()
           != other.getTextId()) return false;
       if (java.lang.Float.floatToIntBits(getDuration())
           != java.lang.Float.floatToIntBits(
               other.getDuration())) return false;
-      if (java.lang.Float.floatToIntBits(getMIGDKKAEONI())
-          != java.lang.Float.floatToIntBits(
-              other.getMIGDKKAEONI())) return false;
-      if (java.lang.Float.floatToIntBits(getMHMOKMHMAKO())
-          != java.lang.Float.floatToIntBits(
-              other.getMHMOKMHMAKO())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -275,17 +285,17 @@ public final class SceneShowTextNotifyOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + HMONIADIBIL_FIELD_NUMBER;
+      hash = (53 * hash) + java.lang.Float.floatToIntBits(
+          getHMONIADIBIL());
+      hash = (37 * hash) + DBGPNDKPJJF_FIELD_NUMBER;
+      hash = (53 * hash) + java.lang.Float.floatToIntBits(
+          getDBGPNDKPJJF());
       hash = (37 * hash) + TEXT_ID_FIELD_NUMBER;
       hash = (53 * hash) + getTextId();
       hash = (37 * hash) + DURATION_FIELD_NUMBER;
       hash = (53 * hash) + java.lang.Float.floatToIntBits(
           getDuration());
-      hash = (37 * hash) + MIGDKKAEONI_FIELD_NUMBER;
-      hash = (53 * hash) + java.lang.Float.floatToIntBits(
-          getMIGDKKAEONI());
-      hash = (37 * hash) + MHMOKMHMAKO_FIELD_NUMBER;
-      hash = (53 * hash) + java.lang.Float.floatToIntBits(
-          getMHMOKMHMAKO());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -383,7 +393,9 @@ public final class SceneShowTextNotifyOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 22295
+     * 4.6.0
+     * CmdId: 20149
+     * Obfs: CHABEBLCLGD
      * </pre>
      *
      * Protobuf type {@code SceneShowTextNotify}
@@ -423,13 +435,13 @@ public final class SceneShowTextNotifyOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        hMONIADIBIL_ = 0F;
+
+        dBGPNDKPJJF_ = 0F;
+
         textId_ = 0;
 
         duration_ = 0F;
-
-        mIGDKKAEONI_ = 0F;
-
-        mHMOKMHMAKO_ = 0F;
 
         return this;
       }
@@ -457,10 +469,10 @@ public final class SceneShowTextNotifyOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.SceneShowTextNotifyOuterClass.SceneShowTextNotify buildPartial() {
         emu.grasscutter.net.proto.SceneShowTextNotifyOuterClass.SceneShowTextNotify result = new emu.grasscutter.net.proto.SceneShowTextNotifyOuterClass.SceneShowTextNotify(this);
+        result.hMONIADIBIL_ = hMONIADIBIL_;
+        result.dBGPNDKPJJF_ = dBGPNDKPJJF_;
         result.textId_ = textId_;
         result.duration_ = duration_;
-        result.mIGDKKAEONI_ = mIGDKKAEONI_;
-        result.mHMOKMHMAKO_ = mHMOKMHMAKO_;
         onBuilt();
         return result;
       }
@@ -509,17 +521,17 @@ public final class SceneShowTextNotifyOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.SceneShowTextNotifyOuterClass.SceneShowTextNotify other) {
         if (other == emu.grasscutter.net.proto.SceneShowTextNotifyOuterClass.SceneShowTextNotify.getDefaultInstance()) return this;
+        if (other.getHMONIADIBIL() != 0F) {
+          setHMONIADIBIL(other.getHMONIADIBIL());
+        }
+        if (other.getDBGPNDKPJJF() != 0F) {
+          setDBGPNDKPJJF(other.getDBGPNDKPJJF());
+        }
         if (other.getTextId() != 0) {
           setTextId(other.getTextId());
         }
         if (other.getDuration() != 0F) {
           setDuration(other.getDuration());
-        }
-        if (other.getMIGDKKAEONI() != 0F) {
-          setMIGDKKAEONI(other.getMIGDKKAEONI());
-        }
-        if (other.getMHMOKMHMAKO() != 0F) {
-          setMHMOKMHMAKO(other.getMHMOKMHMAKO());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -550,9 +562,75 @@ public final class SceneShowTextNotifyOuterClass {
         return this;
       }
 
+      private float hMONIADIBIL_ ;
+      /**
+       * <code>float HMONIADIBIL = 5;</code>
+       * @return The hMONIADIBIL.
+       */
+      @java.lang.Override
+      public float getHMONIADIBIL() {
+        return hMONIADIBIL_;
+      }
+      /**
+       * <code>float HMONIADIBIL = 5;</code>
+       * @param value The hMONIADIBIL to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHMONIADIBIL(float value) {
+        
+        hMONIADIBIL_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>float HMONIADIBIL = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHMONIADIBIL() {
+        
+        hMONIADIBIL_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      private float dBGPNDKPJJF_ ;
+      /**
+       * <code>float DBGPNDKPJJF = 9;</code>
+       * @return The dBGPNDKPJJF.
+       */
+      @java.lang.Override
+      public float getDBGPNDKPJJF() {
+        return dBGPNDKPJJF_;
+      }
+      /**
+       * <code>float DBGPNDKPJJF = 9;</code>
+       * @param value The dBGPNDKPJJF to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDBGPNDKPJJF(float value) {
+        
+        dBGPNDKPJJF_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>float DBGPNDKPJJF = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDBGPNDKPJJF() {
+        
+        dBGPNDKPJJF_ = 0F;
+        onChanged();
+        return this;
+      }
+
       private int textId_ ;
       /**
-       * <code>uint32 text_id = 1;</code>
+       * <pre>
+       * FNGAHCBKJIK
+       * </pre>
+       *
+       * <code>uint32 text_id = 13;</code>
        * @return The textId.
        */
       @java.lang.Override
@@ -560,7 +638,11 @@ public final class SceneShowTextNotifyOuterClass {
         return textId_;
       }
       /**
-       * <code>uint32 text_id = 1;</code>
+       * <pre>
+       * FNGAHCBKJIK
+       * </pre>
+       *
+       * <code>uint32 text_id = 13;</code>
        * @param value The textId to set.
        * @return This builder for chaining.
        */
@@ -571,7 +653,11 @@ public final class SceneShowTextNotifyOuterClass {
         return this;
       }
       /**
-       * <code>uint32 text_id = 1;</code>
+       * <pre>
+       * FNGAHCBKJIK
+       * </pre>
+       *
+       * <code>uint32 text_id = 13;</code>
        * @return This builder for chaining.
        */
       public Builder clearTextId() {
@@ -583,7 +669,7 @@ public final class SceneShowTextNotifyOuterClass {
 
       private float duration_ ;
       /**
-       * <code>float duration = 2;</code>
+       * <code>float duration = 15;</code>
        * @return The duration.
        */
       @java.lang.Override
@@ -591,7 +677,7 @@ public final class SceneShowTextNotifyOuterClass {
         return duration_;
       }
       /**
-       * <code>float duration = 2;</code>
+       * <code>float duration = 15;</code>
        * @param value The duration to set.
        * @return This builder for chaining.
        */
@@ -602,74 +688,12 @@ public final class SceneShowTextNotifyOuterClass {
         return this;
       }
       /**
-       * <code>float duration = 2;</code>
+       * <code>float duration = 15;</code>
        * @return This builder for chaining.
        */
       public Builder clearDuration() {
         
         duration_ = 0F;
-        onChanged();
-        return this;
-      }
-
-      private float mIGDKKAEONI_ ;
-      /**
-       * <code>float MIGDKKAEONI = 7;</code>
-       * @return The mIGDKKAEONI.
-       */
-      @java.lang.Override
-      public float getMIGDKKAEONI() {
-        return mIGDKKAEONI_;
-      }
-      /**
-       * <code>float MIGDKKAEONI = 7;</code>
-       * @param value The mIGDKKAEONI to set.
-       * @return This builder for chaining.
-       */
-      public Builder setMIGDKKAEONI(float value) {
-        
-        mIGDKKAEONI_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>float MIGDKKAEONI = 7;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearMIGDKKAEONI() {
-        
-        mIGDKKAEONI_ = 0F;
-        onChanged();
-        return this;
-      }
-
-      private float mHMOKMHMAKO_ ;
-      /**
-       * <code>float MHMOKMHMAKO = 13;</code>
-       * @return The mHMOKMHMAKO.
-       */
-      @java.lang.Override
-      public float getMHMOKMHMAKO() {
-        return mHMOKMHMAKO_;
-      }
-      /**
-       * <code>float MHMOKMHMAKO = 13;</code>
-       * @param value The mHMOKMHMAKO to set.
-       * @return This builder for chaining.
-       */
-      public Builder setMHMOKMHMAKO(float value) {
-        
-        mHMOKMHMAKO_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>float MHMOKMHMAKO = 13;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearMHMOKMHMAKO() {
-        
-        mHMOKMHMAKO_ = 0F;
         onChanged();
         return this;
       }
@@ -740,24 +764,22 @@ public final class SceneShowTextNotifyOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\031SceneShowTextNotify.proto\032\013Quest.proto" +
-      "\"b\n\023SceneShowTextNotify\022\017\n\007text_id\030\001 \001(\r" +
-      "\022\020\n\010duration\030\002 \001(\002\022\023\n\013MIGDKKAEONI\030\007 \001(\002\022" +
-      "\023\n\013MHMOKMHMAKO\030\r \001(\002B\033\n\031emu.grasscutter." +
-      "net.protob\006proto3"
+      "\n\031SceneShowTextNotify.proto\"b\n\023SceneShow" +
+      "TextNotify\022\023\n\013HMONIADIBIL\030\005 \001(\002\022\023\n\013DBGPN" +
+      "DKPJJF\030\t \001(\002\022\017\n\007text_id\030\r \001(\r\022\020\n\010duratio" +
+      "n\030\017 \001(\002B\033\n\031emu.grasscutter.net.protob\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          emu.grasscutter.net.proto.QuestOuterClass.getDescriptor(),
         });
     internal_static_SceneShowTextNotify_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_SceneShowTextNotify_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_SceneShowTextNotify_descriptor,
-        new java.lang.String[] { "TextId", "Duration", "MIGDKKAEONI", "MHMOKMHMAKO", });
-    emu.grasscutter.net.proto.QuestOuterClass.getDescriptor();
+        new java.lang.String[] { "HMONIADIBIL", "DBGPNDKPJJF", "TextId", "Duration", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

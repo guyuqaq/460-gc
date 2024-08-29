@@ -75,6 +75,68 @@ public final class ActivityScheduleInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private ActivityScheduleInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 48: {
+
+              beginTime_ = input.readUInt32();
+              break;
+            }
+            case 56: {
+
+              activityId_ = input.readUInt32();
+              break;
+            }
+            case 72: {
+
+              isOpen_ = input.readBool();
+              break;
+            }
+            case 104: {
+
+              endTime_ = input.readUInt32();
+              break;
+            }
+            case 112: {
+
+              scheduleId_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.ActivityScheduleInfoOuterClass.internal_static_ActivityScheduleInfo_descriptor;
@@ -172,7 +234,7 @@ public final class ActivityScheduleInfoOuterClass {
       if (scheduleId_ != 0) {
         output.writeUInt32(14, scheduleId_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -201,7 +263,7 @@ public final class ActivityScheduleInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(14, scheduleId_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -226,7 +288,7 @@ public final class ActivityScheduleInfoOuterClass {
           != other.getEndTime()) return false;
       if (getScheduleId()
           != other.getScheduleId()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -248,7 +310,7 @@ public final class ActivityScheduleInfoOuterClass {
       hash = (53 * hash) + getEndTime();
       hash = (37 * hash) + SCHEDULE_ID_FIELD_NUMBER;
       hash = (53 * hash) + getScheduleId();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -365,13 +427,18 @@ public final class ActivityScheduleInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.ActivityScheduleInfoOuterClass.ActivityScheduleInfo.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -480,7 +547,7 @@ public final class ActivityScheduleInfoOuterClass {
         if (other.getScheduleId() != 0) {
           setScheduleId(other.getScheduleId());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -495,55 +562,17 @@ public final class ActivityScheduleInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.ActivityScheduleInfoOuterClass.ActivityScheduleInfo parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 48: {
-                beginTime_ = input.readUInt32();
-
-                break;
-              } // case 48
-              case 56: {
-                activityId_ = input.readUInt32();
-
-                break;
-              } // case 56
-              case 72: {
-                isOpen_ = input.readBool();
-
-                break;
-              } // case 72
-              case 104: {
-                endTime_ = input.readUInt32();
-
-                break;
-              } // case 104
-              case 112: {
-                scheduleId_ = input.readUInt32();
-
-                break;
-              } // case 112
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.ActivityScheduleInfoOuterClass.ActivityScheduleInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
 
@@ -734,18 +763,7 @@ public final class ActivityScheduleInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new ActivityScheduleInfo(input, extensionRegistry);
       }
     };
 

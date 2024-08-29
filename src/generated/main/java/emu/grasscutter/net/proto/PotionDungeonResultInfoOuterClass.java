@@ -49,10 +49,10 @@ public final class PotionDungeonResultInfoOuterClass {
     int getKDPLCBJGBAF();
 
     /**
-     * <code>uint32 KMAEHPAGKFK = 15;</code>
-     * @return The kMAEHPAGKFK.
+     * <code>uint32 final_score = 15;</code>
+     * @return The finalScore.
      */
-    int getKMAEHPAGKFK();
+    int getFinalScore();
   }
   /**
    * Protobuf type {@code PotionDungeonResultInfo}
@@ -80,6 +80,73 @@ public final class PotionDungeonResultInfoOuterClass {
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
+    }
+    private PotionDungeonResultInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 24: {
+
+              pJJAOILBFBN_ = input.readUInt32();
+              break;
+            }
+            case 40: {
+
+              lJEJEBELKMJ_ = input.readUInt32();
+              break;
+            }
+            case 56: {
+
+              lJFAFDHIKJD_ = input.readUInt32();
+              break;
+            }
+            case 72: {
+
+              mEMPKCGNNMF_ = input.readUInt32();
+              break;
+            }
+            case 96: {
+
+              kDPLCBJGBAF_ = input.readUInt32();
+              break;
+            }
+            case 120: {
+
+              finalScore_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -149,15 +216,15 @@ public final class PotionDungeonResultInfoOuterClass {
       return kDPLCBJGBAF_;
     }
 
-    public static final int KMAEHPAGKFK_FIELD_NUMBER = 15;
-    private int kMAEHPAGKFK_;
+    public static final int FINAL_SCORE_FIELD_NUMBER = 15;
+    private int finalScore_;
     /**
-     * <code>uint32 KMAEHPAGKFK = 15;</code>
-     * @return The kMAEHPAGKFK.
+     * <code>uint32 final_score = 15;</code>
+     * @return The finalScore.
      */
     @java.lang.Override
-    public int getKMAEHPAGKFK() {
-      return kMAEHPAGKFK_;
+    public int getFinalScore() {
+      return finalScore_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -189,10 +256,10 @@ public final class PotionDungeonResultInfoOuterClass {
       if (kDPLCBJGBAF_ != 0) {
         output.writeUInt32(12, kDPLCBJGBAF_);
       }
-      if (kMAEHPAGKFK_ != 0) {
-        output.writeUInt32(15, kMAEHPAGKFK_);
+      if (finalScore_ != 0) {
+        output.writeUInt32(15, finalScore_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -221,11 +288,11 @@ public final class PotionDungeonResultInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(12, kDPLCBJGBAF_);
       }
-      if (kMAEHPAGKFK_ != 0) {
+      if (finalScore_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(15, kMAEHPAGKFK_);
+          .computeUInt32Size(15, finalScore_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -250,9 +317,9 @@ public final class PotionDungeonResultInfoOuterClass {
           != other.getMEMPKCGNNMF()) return false;
       if (getKDPLCBJGBAF()
           != other.getKDPLCBJGBAF()) return false;
-      if (getKMAEHPAGKFK()
-          != other.getKMAEHPAGKFK()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (getFinalScore()
+          != other.getFinalScore()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -273,9 +340,9 @@ public final class PotionDungeonResultInfoOuterClass {
       hash = (53 * hash) + getMEMPKCGNNMF();
       hash = (37 * hash) + KDPLCBJGBAF_FIELD_NUMBER;
       hash = (53 * hash) + getKDPLCBJGBAF();
-      hash = (37 * hash) + KMAEHPAGKFK_FIELD_NUMBER;
-      hash = (53 * hash) + getKMAEHPAGKFK();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (37 * hash) + FINAL_SCORE_FIELD_NUMBER;
+      hash = (53 * hash) + getFinalScore();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -392,13 +459,18 @@ public final class PotionDungeonResultInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.PotionDungeonResultInfoOuterClass.PotionDungeonResultInfo.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -413,7 +485,7 @@ public final class PotionDungeonResultInfoOuterClass {
 
         kDPLCBJGBAF_ = 0;
 
-        kMAEHPAGKFK_ = 0;
+        finalScore_ = 0;
 
         return this;
       }
@@ -446,7 +518,7 @@ public final class PotionDungeonResultInfoOuterClass {
         result.lJFAFDHIKJD_ = lJFAFDHIKJD_;
         result.mEMPKCGNNMF_ = mEMPKCGNNMF_;
         result.kDPLCBJGBAF_ = kDPLCBJGBAF_;
-        result.kMAEHPAGKFK_ = kMAEHPAGKFK_;
+        result.finalScore_ = finalScore_;
         onBuilt();
         return result;
       }
@@ -510,10 +582,10 @@ public final class PotionDungeonResultInfoOuterClass {
         if (other.getKDPLCBJGBAF() != 0) {
           setKDPLCBJGBAF(other.getKDPLCBJGBAF());
         }
-        if (other.getKMAEHPAGKFK() != 0) {
-          setKMAEHPAGKFK(other.getKMAEHPAGKFK());
+        if (other.getFinalScore() != 0) {
+          setFinalScore(other.getFinalScore());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -528,60 +600,17 @@ public final class PotionDungeonResultInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.PotionDungeonResultInfoOuterClass.PotionDungeonResultInfo parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 24: {
-                pJJAOILBFBN_ = input.readUInt32();
-
-                break;
-              } // case 24
-              case 40: {
-                lJEJEBELKMJ_ = input.readUInt32();
-
-                break;
-              } // case 40
-              case 56: {
-                lJFAFDHIKJD_ = input.readUInt32();
-
-                break;
-              } // case 56
-              case 72: {
-                mEMPKCGNNMF_ = input.readUInt32();
-
-                break;
-              } // case 72
-              case 96: {
-                kDPLCBJGBAF_ = input.readUInt32();
-
-                break;
-              } // case 96
-              case 120: {
-                kMAEHPAGKFK_ = input.readUInt32();
-
-                break;
-              } // case 120
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.PotionDungeonResultInfoOuterClass.PotionDungeonResultInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
 
@@ -740,33 +769,33 @@ public final class PotionDungeonResultInfoOuterClass {
         return this;
       }
 
-      private int kMAEHPAGKFK_ ;
+      private int finalScore_ ;
       /**
-       * <code>uint32 KMAEHPAGKFK = 15;</code>
-       * @return The kMAEHPAGKFK.
+       * <code>uint32 final_score = 15;</code>
+       * @return The finalScore.
        */
       @java.lang.Override
-      public int getKMAEHPAGKFK() {
-        return kMAEHPAGKFK_;
+      public int getFinalScore() {
+        return finalScore_;
       }
       /**
-       * <code>uint32 KMAEHPAGKFK = 15;</code>
-       * @param value The kMAEHPAGKFK to set.
+       * <code>uint32 final_score = 15;</code>
+       * @param value The finalScore to set.
        * @return This builder for chaining.
        */
-      public Builder setKMAEHPAGKFK(int value) {
+      public Builder setFinalScore(int value) {
         
-        kMAEHPAGKFK_ = value;
+        finalScore_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 KMAEHPAGKFK = 15;</code>
+       * <code>uint32 final_score = 15;</code>
        * @return This builder for chaining.
        */
-      public Builder clearKMAEHPAGKFK() {
+      public Builder clearFinalScore() {
         
-        kMAEHPAGKFK_ = 0;
+        finalScore_ = 0;
         onChanged();
         return this;
       }
@@ -803,18 +832,7 @@ public final class PotionDungeonResultInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new PotionDungeonResultInfo(input, extensionRegistry);
       }
     };
 
@@ -852,7 +870,7 @@ public final class PotionDungeonResultInfoOuterClass {
       "onDungeonResultInfo\022\023\n\013PJJAOILBFBN\030\003 \001(\r" +
       "\022\023\n\013LJEJEBELKMJ\030\005 \001(\r\022\023\n\013LJFAFDHIKJD\030\007 \001" +
       "(\r\022\023\n\013MEMPKCGNNMF\030\t \001(\r\022\023\n\013KDPLCBJGBAF\030\014" +
-      " \001(\r\022\023\n\013KMAEHPAGKFK\030\017 \001(\rB\033\n\031emu.grasscu" +
+      " \001(\r\022\023\n\013final_score\030\017 \001(\rB\033\n\031emu.grasscu" +
       "tter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -864,7 +882,7 @@ public final class PotionDungeonResultInfoOuterClass {
     internal_static_PotionDungeonResultInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_PotionDungeonResultInfo_descriptor,
-        new java.lang.String[] { "PJJAOILBFBN", "LJEJEBELKMJ", "LJFAFDHIKJD", "MEMPKCGNNMF", "KDPLCBJGBAF", "KMAEHPAGKFK", });
+        new java.lang.String[] { "PJJAOILBFBN", "LJEJEBELKMJ", "LJFAFDHIKJD", "MEMPKCGNNMF", "KDPLCBJGBAF", "FinalScore", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

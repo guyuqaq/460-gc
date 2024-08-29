@@ -120,6 +120,93 @@ public final class ChatInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private ChatInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 32: {
+
+              isRead_ = input.readBool();
+              break;
+            }
+            case 40: {
+
+              toUid_ = input.readUInt32();
+              break;
+            }
+            case 56: {
+
+              sequence_ = input.readUInt32();
+              break;
+            }
+            case 64: {
+
+              time_ = input.readUInt32();
+              break;
+            }
+            case 80: {
+
+              uid_ = input.readUInt32();
+              break;
+            }
+            case 168: {
+              contentCase_ = 21;
+              content_ = input.readUInt32();
+              break;
+            }
+            case 2858: {
+              java.lang.String s = input.readStringRequireUtf8();
+              contentCase_ = 357;
+              content_ = s;
+              break;
+            }
+            case 7378: {
+              emu.grasscutter.net.proto.ChatInfoOuterClass.ChatInfo.SystemHint.Builder subBuilder = null;
+              if (contentCase_ == 922) {
+                subBuilder = ((emu.grasscutter.net.proto.ChatInfoOuterClass.ChatInfo.SystemHint) content_).toBuilder();
+              }
+              content_ =
+                  input.readMessage(emu.grasscutter.net.proto.ChatInfoOuterClass.ChatInfo.SystemHint.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((emu.grasscutter.net.proto.ChatInfoOuterClass.ChatInfo.SystemHint) content_);
+                content_ = subBuilder.buildPartial();
+              }
+              contentCase_ = 922;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.ChatInfoOuterClass.internal_static_ChatInfo_descriptor;
@@ -255,7 +342,7 @@ public final class ChatInfoOuterClass {
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       * <code>uint32 type = 7;</code>
+       * <code>uint32 type = 15;</code>
        * @return The type.
        */
       int getType();
@@ -287,6 +374,48 @@ public final class ChatInfoOuterClass {
       getUnknownFields() {
         return this.unknownFields;
       }
+      private SystemHint(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 120: {
+
+                type_ = input.readUInt32();
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return emu.grasscutter.net.proto.ChatInfoOuterClass.internal_static_ChatInfo_SystemHint_descriptor;
@@ -300,10 +429,10 @@ public final class ChatInfoOuterClass {
                 emu.grasscutter.net.proto.ChatInfoOuterClass.ChatInfo.SystemHint.class, emu.grasscutter.net.proto.ChatInfoOuterClass.ChatInfo.SystemHint.Builder.class);
       }
 
-      public static final int TYPE_FIELD_NUMBER = 7;
+      public static final int TYPE_FIELD_NUMBER = 15;
       private int type_;
       /**
-       * <code>uint32 type = 7;</code>
+       * <code>uint32 type = 15;</code>
        * @return The type.
        */
       @java.lang.Override
@@ -326,9 +455,9 @@ public final class ChatInfoOuterClass {
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
         if (type_ != 0) {
-          output.writeUInt32(7, type_);
+          output.writeUInt32(15, type_);
         }
-        getUnknownFields().writeTo(output);
+        unknownFields.writeTo(output);
       }
 
       @java.lang.Override
@@ -339,9 +468,9 @@ public final class ChatInfoOuterClass {
         size = 0;
         if (type_ != 0) {
           size += com.google.protobuf.CodedOutputStream
-            .computeUInt32Size(7, type_);
+            .computeUInt32Size(15, type_);
         }
-        size += getUnknownFields().getSerializedSize();
+        size += unknownFields.getSerializedSize();
         memoizedSize = size;
         return size;
       }
@@ -358,7 +487,7 @@ public final class ChatInfoOuterClass {
 
         if (getType()
             != other.getType()) return false;
-        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
 
@@ -371,7 +500,7 @@ public final class ChatInfoOuterClass {
         hash = (19 * hash) + getDescriptor().hashCode();
         hash = (37 * hash) + TYPE_FIELD_NUMBER;
         hash = (53 * hash) + getType();
-        hash = (29 * hash) + getUnknownFields().hashCode();
+        hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
         return hash;
       }
@@ -488,13 +617,18 @@ public final class ChatInfoOuterClass {
 
         // Construct using emu.grasscutter.net.proto.ChatInfoOuterClass.ChatInfo.SystemHint.newBuilder()
         private Builder() {
-
+          maybeForceBuilderInitialization();
         }
 
         private Builder(
             com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
           super(parent);
-
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
         }
         @java.lang.Override
         public Builder clear() {
@@ -579,7 +713,7 @@ public final class ChatInfoOuterClass {
           if (other.getType() != 0) {
             setType(other.getType());
           }
-          this.mergeUnknownFields(other.getUnknownFields());
+          this.mergeUnknownFields(other.unknownFields);
           onChanged();
           return this;
         }
@@ -594,41 +728,23 @@ public final class ChatInfoOuterClass {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
-          if (extensionRegistry == null) {
-            throw new java.lang.NullPointerException();
-          }
+          emu.grasscutter.net.proto.ChatInfoOuterClass.ChatInfo.SystemHint parsedMessage = null;
           try {
-            boolean done = false;
-            while (!done) {
-              int tag = input.readTag();
-              switch (tag) {
-                case 0:
-                  done = true;
-                  break;
-                case 56: {
-                  type_ = input.readUInt32();
-
-                  break;
-                } // case 56
-                default: {
-                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                    done = true; // was an endgroup tag
-                  }
-                  break;
-                } // default:
-              } // switch (tag)
-            } // while (!done)
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (emu.grasscutter.net.proto.ChatInfoOuterClass.ChatInfo.SystemHint) e.getUnfinishedMessage();
             throw e.unwrapIOException();
           } finally {
-            onChanged();
-          } // finally
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
           return this;
         }
 
         private int type_ ;
         /**
-         * <code>uint32 type = 7;</code>
+         * <code>uint32 type = 15;</code>
          * @return The type.
          */
         @java.lang.Override
@@ -636,7 +752,7 @@ public final class ChatInfoOuterClass {
           return type_;
         }
         /**
-         * <code>uint32 type = 7;</code>
+         * <code>uint32 type = 15;</code>
          * @param value The type to set.
          * @return This builder for chaining.
          */
@@ -647,7 +763,7 @@ public final class ChatInfoOuterClass {
           return this;
         }
         /**
-         * <code>uint32 type = 7;</code>
+         * <code>uint32 type = 15;</code>
          * @return This builder for chaining.
          */
         public Builder clearType() {
@@ -689,18 +805,7 @@ public final class ChatInfoOuterClass {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          Builder builder = newBuilder();
-          try {
-            builder.mergeFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            throw e.setUnfinishedMessage(builder.buildPartial());
-          } catch (com.google.protobuf.UninitializedMessageException e) {
-            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-          } catch (java.io.IOException e) {
-            throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                .setUnfinishedMessage(builder.buildPartial());
-          }
-          return builder.buildPartial();
+          return new SystemHint(input, extensionRegistry);
         }
       };
 
@@ -961,7 +1066,7 @@ public final class ChatInfoOuterClass {
       if (contentCase_ == 922) {
         output.writeMessage(922, (emu.grasscutter.net.proto.ChatInfoOuterClass.ChatInfo.SystemHint) content_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -1002,7 +1107,7 @@ public final class ChatInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(922, (emu.grasscutter.net.proto.ChatInfoOuterClass.ChatInfo.SystemHint) content_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -1044,7 +1149,7 @@ public final class ChatInfoOuterClass {
         case 0:
         default:
       }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -1082,7 +1187,7 @@ public final class ChatInfoOuterClass {
         case 0:
         default:
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -1199,13 +1304,18 @@ public final class ChatInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.ChatInfoOuterClass.ChatInfo.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1220,9 +1330,6 @@ public final class ChatInfoOuterClass {
 
         uid_ = 0;
 
-        if (systemHintBuilder_ != null) {
-          systemHintBuilder_.clear();
-        }
         contentCase_ = 0;
         content_ = null;
         return this;
@@ -1352,7 +1459,7 @@ public final class ChatInfoOuterClass {
             break;
           }
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -1367,73 +1474,17 @@ public final class ChatInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.ChatInfoOuterClass.ChatInfo parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 32: {
-                isRead_ = input.readBool();
-
-                break;
-              } // case 32
-              case 40: {
-                toUid_ = input.readUInt32();
-
-                break;
-              } // case 40
-              case 56: {
-                sequence_ = input.readUInt32();
-
-                break;
-              } // case 56
-              case 64: {
-                time_ = input.readUInt32();
-
-                break;
-              } // case 64
-              case 80: {
-                uid_ = input.readUInt32();
-
-                break;
-              } // case 80
-              case 168: {
-                content_ = input.readUInt32();
-                contentCase_ = 21;
-                break;
-              } // case 168
-              case 2858: {
-                java.lang.String s = input.readStringRequireUtf8();
-                contentCase_ = 357;
-                content_ = s;
-                break;
-              } // case 2858
-              case 7378: {
-                input.readMessage(
-                    getSystemHintFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                contentCase_ = 922;
-                break;
-              } // case 7378
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.ChatInfoOuterClass.ChatInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int contentCase_ = 0;
@@ -1918,18 +1969,7 @@ public final class ChatInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new ChatInfo(input, extensionRegistry);
       }
     };
 
@@ -1973,7 +2013,7 @@ public final class ChatInfoOuterClass {
       "sequence\030\007 \001(\r\022\013\n\003uid\030\n \001(\r\022\016\n\004icon\030\025 \001(" +
       "\rH\000\022\017\n\004text\030\345\002 \001(\tH\000\022,\n\013system_hint\030\232\007 \001" +
       "(\0132\024.ChatInfo.SystemHintH\000\032\032\n\nSystemHint" +
-      "\022\014\n\004type\030\007 \001(\r\"~\n\016SystemHintType\022\036\n\032SYST" +
+      "\022\014\n\004type\030\017 \001(\r\"~\n\016SystemHintType\022\036\n\032SYST" +
       "EM_HINT_TYPE_CHAT_NONE\020\000\022%\n!SYSTEM_HINT_" +
       "TYPE_CHAT_ENTER_WORLD\020\001\022%\n!SYSTEM_HINT_T" +
       "YPE_CHAT_LEAVE_WORLD\020\002B\t\n\007contentB\033\n\031emu" +

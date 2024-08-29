@@ -19,17 +19,17 @@ public final class CombineDataNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated uint32 combine_id_list = 8;</code>
+     * <code>repeated uint32 combine_id_list = 6;</code>
      * @return A list containing the combineIdList.
      */
     java.util.List<java.lang.Integer> getCombineIdListList();
     /**
-     * <code>repeated uint32 combine_id_list = 8;</code>
+     * <code>repeated uint32 combine_id_list = 6;</code>
      * @return The count of combineIdList.
      */
     int getCombineIdListCount();
     /**
-     * <code>repeated uint32 combine_id_list = 8;</code>
+     * <code>repeated uint32 combine_id_list = 6;</code>
      * @param index The index of the element to return.
      * @return The combineIdList at the given index.
      */
@@ -37,9 +37,8 @@ public final class CombineDataNotifyOuterClass {
   }
   /**
    * <pre>
-   * 4.7.0
-   * CmdId: 23746 ?
-   * Obf: IGNLCELCBAG
+   * CmdId: 4969
+   * Obf: HNCKJCIOCPI
    * </pre>
    *
    * Protobuf type {@code CombineDataNotify}
@@ -69,6 +68,68 @@ public final class CombineDataNotifyOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private CombineDataNotify(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 48: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                combineIdList_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              combineIdList_.addInt(input.readUInt32());
+              break;
+            }
+            case 50: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
+                combineIdList_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                combineIdList_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          combineIdList_.makeImmutable(); // C
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.CombineDataNotifyOuterClass.internal_static_CombineDataNotify_descriptor;
@@ -82,10 +143,10 @@ public final class CombineDataNotifyOuterClass {
               emu.grasscutter.net.proto.CombineDataNotifyOuterClass.CombineDataNotify.class, emu.grasscutter.net.proto.CombineDataNotifyOuterClass.CombineDataNotify.Builder.class);
     }
 
-    public static final int COMBINE_ID_LIST_FIELD_NUMBER = 8;
+    public static final int COMBINE_ID_LIST_FIELD_NUMBER = 6;
     private com.google.protobuf.Internal.IntList combineIdList_;
     /**
-     * <code>repeated uint32 combine_id_list = 8;</code>
+     * <code>repeated uint32 combine_id_list = 6;</code>
      * @return A list containing the combineIdList.
      */
     @java.lang.Override
@@ -94,14 +155,14 @@ public final class CombineDataNotifyOuterClass {
       return combineIdList_;
     }
     /**
-     * <code>repeated uint32 combine_id_list = 8;</code>
+     * <code>repeated uint32 combine_id_list = 6;</code>
      * @return The count of combineIdList.
      */
     public int getCombineIdListCount() {
       return combineIdList_.size();
     }
     /**
-     * <code>repeated uint32 combine_id_list = 8;</code>
+     * <code>repeated uint32 combine_id_list = 6;</code>
      * @param index The index of the element to return.
      * @return The combineIdList at the given index.
      */
@@ -126,13 +187,13 @@ public final class CombineDataNotifyOuterClass {
                         throws java.io.IOException {
       getSerializedSize();
       if (getCombineIdListList().size() > 0) {
-        output.writeUInt32NoTag(66);
+        output.writeUInt32NoTag(50);
         output.writeUInt32NoTag(combineIdListMemoizedSerializedSize);
       }
       for (int i = 0; i < combineIdList_.size(); i++) {
         output.writeUInt32NoTag(combineIdList_.getInt(i));
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -155,7 +216,7 @@ public final class CombineDataNotifyOuterClass {
         }
         combineIdListMemoizedSerializedSize = dataSize;
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -172,7 +233,7 @@ public final class CombineDataNotifyOuterClass {
 
       if (!getCombineIdListList()
           .equals(other.getCombineIdListList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -187,7 +248,7 @@ public final class CombineDataNotifyOuterClass {
         hash = (37 * hash) + COMBINE_ID_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getCombineIdListList().hashCode();
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -284,9 +345,8 @@ public final class CombineDataNotifyOuterClass {
     }
     /**
      * <pre>
-     * 4.7.0
-     * CmdId: 23746 ?
-     * Obf: IGNLCELCBAG
+     * CmdId: 4969
+     * Obf: HNCKJCIOCPI
      * </pre>
      *
      * Protobuf type {@code CombineDataNotify}
@@ -310,13 +370,18 @@ public final class CombineDataNotifyOuterClass {
 
       // Construct using emu.grasscutter.net.proto.CombineDataNotifyOuterClass.CombineDataNotify.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -413,7 +478,7 @@ public final class CombineDataNotifyOuterClass {
           }
           onChanged();
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -428,46 +493,17 @@ public final class CombineDataNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.CombineDataNotifyOuterClass.CombineDataNotify parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 64: {
-                int v = input.readUInt32();
-                ensureCombineIdListIsMutable();
-                combineIdList_.addInt(v);
-                break;
-              } // case 64
-              case 66: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureCombineIdListIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  combineIdList_.addInt(input.readUInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 66
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.CombineDataNotifyOuterClass.CombineDataNotify) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -480,7 +516,7 @@ public final class CombineDataNotifyOuterClass {
          }
       }
       /**
-       * <code>repeated uint32 combine_id_list = 8;</code>
+       * <code>repeated uint32 combine_id_list = 6;</code>
        * @return A list containing the combineIdList.
        */
       public java.util.List<java.lang.Integer>
@@ -489,14 +525,14 @@ public final class CombineDataNotifyOuterClass {
                  java.util.Collections.unmodifiableList(combineIdList_) : combineIdList_;
       }
       /**
-       * <code>repeated uint32 combine_id_list = 8;</code>
+       * <code>repeated uint32 combine_id_list = 6;</code>
        * @return The count of combineIdList.
        */
       public int getCombineIdListCount() {
         return combineIdList_.size();
       }
       /**
-       * <code>repeated uint32 combine_id_list = 8;</code>
+       * <code>repeated uint32 combine_id_list = 6;</code>
        * @param index The index of the element to return.
        * @return The combineIdList at the given index.
        */
@@ -504,7 +540,7 @@ public final class CombineDataNotifyOuterClass {
         return combineIdList_.getInt(index);
       }
       /**
-       * <code>repeated uint32 combine_id_list = 8;</code>
+       * <code>repeated uint32 combine_id_list = 6;</code>
        * @param index The index to set the value at.
        * @param value The combineIdList to set.
        * @return This builder for chaining.
@@ -517,7 +553,7 @@ public final class CombineDataNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 combine_id_list = 8;</code>
+       * <code>repeated uint32 combine_id_list = 6;</code>
        * @param value The combineIdList to add.
        * @return This builder for chaining.
        */
@@ -528,7 +564,7 @@ public final class CombineDataNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 combine_id_list = 8;</code>
+       * <code>repeated uint32 combine_id_list = 6;</code>
        * @param values The combineIdList to add.
        * @return This builder for chaining.
        */
@@ -541,7 +577,7 @@ public final class CombineDataNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 combine_id_list = 8;</code>
+       * <code>repeated uint32 combine_id_list = 6;</code>
        * @return This builder for chaining.
        */
       public Builder clearCombineIdList() {
@@ -583,18 +619,7 @@ public final class CombineDataNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new CombineDataNotify(input, extensionRegistry);
       }
     };
 
@@ -629,7 +654,7 @@ public final class CombineDataNotifyOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\027CombineDataNotify.proto\",\n\021CombineData" +
-      "Notify\022\027\n\017combine_id_list\030\010 \003(\rB\033\n\031emu.g" +
+      "Notify\022\027\n\017combine_id_list\030\006 \003(\rB\033\n\031emu.g" +
       "rasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
