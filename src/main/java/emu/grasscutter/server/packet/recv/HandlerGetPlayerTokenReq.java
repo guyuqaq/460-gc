@@ -149,11 +149,5 @@ public class HandlerGetPlayerTokenReq extends PacketHandler {
                 // Send packet
                 session.send(new PacketGetPlayerTokenRsp(session, req.getKeyId()));
             }
-        } else {
-            // Set session state
-            // session.setUseSecretKey(true);
-            session.setState(SessionState.WAITING_FOR_LOGIN);
-
-            session.send(new PacketGetPlayerTokenRsp(session, req.getKeyId()));
-        }
-}
+        } 
+    }
