@@ -281,7 +281,8 @@ public final class PlayerProgressManager extends BasePlayerDataManager {
         }
     }
 
-    /*private void addStatueQuestsOnLogin() {
+    /*
+    private void addStatueQuestsOnLogin() {
         // Get all currently existing subquests for the "unlock all statues" main quest.
         var statueMainQuest = GameData.getMainQuestDataMap().get(354);
         var statueSubQuests = statueMainQuest.getSubQuests();
@@ -302,8 +303,7 @@ public final class PlayerProgressManager extends BasePlayerDataManager {
                 this.player.getQuestManager().addQuest(subData.getSubId());
             }
         }
-		*/
-    }*/
+	*/
 
     public boolean unlockTransPoint(int sceneId, int pointId, boolean isStatue) {
         // Check whether the unlocked point exists and whether it is still locked.
