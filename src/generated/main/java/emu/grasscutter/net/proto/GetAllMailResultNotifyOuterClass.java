@@ -19,24 +19,16 @@ public final class GetAllMailResultNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <pre>
-     *sus 6
-     * </pre>
-     *
-     * <code>uint32 packet_num = 4;</code>
-     * @return The packetNum.
+     * <code>uint32 total_page_count = 4;</code>
+     * @return The totalPageCount.
      */
-    int getPacketNum();
+    int getTotalPageCount();
 
     /**
-     * <pre>
-     *sus 4
-     * </pre>
-     *
-     * <code>uint32 packet_be_sent_num = 6;</code>
-     * @return The packetBeSentNum.
+     * <code>uint32 page_index = 6;</code>
+     * @return The pageIndex.
      */
-    int getPacketBeSentNum();
+    int getPageIndex();
 
     /**
      * <code>string transaction = 8;</code>
@@ -87,6 +79,10 @@ public final class GetAllMailResultNotifyOuterClass {
         int index);
   }
   /**
+   * <pre>
+   * CmdId: 20649
+   * </pre>
+   *
    * Protobuf type {@code GetAllMailResultNotify}
    */
   public static final class GetAllMailResultNotify extends
@@ -136,12 +132,12 @@ public final class GetAllMailResultNotifyOuterClass {
               break;
             case 32: {
 
-              packetNum_ = input.readUInt32();
+              totalPageCount_ = input.readUInt32();
               break;
             }
             case 48: {
 
-              packetBeSentNum_ = input.readUInt32();
+              pageIndex_ = input.readUInt32();
               break;
             }
             case 66: {
@@ -204,34 +200,26 @@ public final class GetAllMailResultNotifyOuterClass {
               emu.grasscutter.net.proto.GetAllMailResultNotifyOuterClass.GetAllMailResultNotify.class, emu.grasscutter.net.proto.GetAllMailResultNotifyOuterClass.GetAllMailResultNotify.Builder.class);
     }
 
-    public static final int PACKET_NUM_FIELD_NUMBER = 4;
-    private int packetNum_;
+    public static final int TOTAL_PAGE_COUNT_FIELD_NUMBER = 4;
+    private int totalPageCount_;
     /**
-     * <pre>
-     *sus 6
-     * </pre>
-     *
-     * <code>uint32 packet_num = 4;</code>
-     * @return The packetNum.
+     * <code>uint32 total_page_count = 4;</code>
+     * @return The totalPageCount.
      */
     @java.lang.Override
-    public int getPacketNum() {
-      return packetNum_;
+    public int getTotalPageCount() {
+      return totalPageCount_;
     }
 
-    public static final int PACKET_BE_SENT_NUM_FIELD_NUMBER = 6;
-    private int packetBeSentNum_;
+    public static final int PAGE_INDEX_FIELD_NUMBER = 6;
+    private int pageIndex_;
     /**
-     * <pre>
-     *sus 4
-     * </pre>
-     *
-     * <code>uint32 packet_be_sent_num = 6;</code>
-     * @return The packetBeSentNum.
+     * <code>uint32 page_index = 6;</code>
+     * @return The pageIndex.
      */
     @java.lang.Override
-    public int getPacketBeSentNum() {
-      return packetBeSentNum_;
+    public int getPageIndex() {
+      return pageIndex_;
     }
 
     public static final int TRANSACTION_FIELD_NUMBER = 8;
@@ -348,11 +336,11 @@ public final class GetAllMailResultNotifyOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (packetNum_ != 0) {
-        output.writeUInt32(4, packetNum_);
+      if (totalPageCount_ != 0) {
+        output.writeUInt32(4, totalPageCount_);
       }
-      if (packetBeSentNum_ != 0) {
-        output.writeUInt32(6, packetBeSentNum_);
+      if (pageIndex_ != 0) {
+        output.writeUInt32(6, pageIndex_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(transaction_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, transaction_);
@@ -375,13 +363,13 @@ public final class GetAllMailResultNotifyOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (packetNum_ != 0) {
+      if (totalPageCount_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(4, packetNum_);
+          .computeUInt32Size(4, totalPageCount_);
       }
-      if (packetBeSentNum_ != 0) {
+      if (pageIndex_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(6, packetBeSentNum_);
+          .computeUInt32Size(6, pageIndex_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(transaction_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, transaction_);
@@ -413,10 +401,10 @@ public final class GetAllMailResultNotifyOuterClass {
       }
       emu.grasscutter.net.proto.GetAllMailResultNotifyOuterClass.GetAllMailResultNotify other = (emu.grasscutter.net.proto.GetAllMailResultNotifyOuterClass.GetAllMailResultNotify) obj;
 
-      if (getPacketNum()
-          != other.getPacketNum()) return false;
-      if (getPacketBeSentNum()
-          != other.getPacketBeSentNum()) return false;
+      if (getTotalPageCount()
+          != other.getTotalPageCount()) return false;
+      if (getPageIndex()
+          != other.getPageIndex()) return false;
       if (!getTransaction()
           .equals(other.getTransaction())) return false;
       if (getIsCollected()
@@ -436,10 +424,10 @@ public final class GetAllMailResultNotifyOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + PACKET_NUM_FIELD_NUMBER;
-      hash = (53 * hash) + getPacketNum();
-      hash = (37 * hash) + PACKET_BE_SENT_NUM_FIELD_NUMBER;
-      hash = (53 * hash) + getPacketBeSentNum();
+      hash = (37 * hash) + TOTAL_PAGE_COUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getTotalPageCount();
+      hash = (37 * hash) + PAGE_INDEX_FIELD_NUMBER;
+      hash = (53 * hash) + getPageIndex();
       hash = (37 * hash) + TRANSACTION_FIELD_NUMBER;
       hash = (53 * hash) + getTransaction().hashCode();
       hash = (37 * hash) + IS_COLLECTED_FIELD_NUMBER;
@@ -547,6 +535,10 @@ public final class GetAllMailResultNotifyOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * CmdId: 20649
+     * </pre>
+     *
      * Protobuf type {@code GetAllMailResultNotify}
      */
     public static final class Builder extends
@@ -585,9 +577,9 @@ public final class GetAllMailResultNotifyOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        packetNum_ = 0;
+        totalPageCount_ = 0;
 
-        packetBeSentNum_ = 0;
+        pageIndex_ = 0;
 
         transaction_ = "";
 
@@ -628,8 +620,8 @@ public final class GetAllMailResultNotifyOuterClass {
       public emu.grasscutter.net.proto.GetAllMailResultNotifyOuterClass.GetAllMailResultNotify buildPartial() {
         emu.grasscutter.net.proto.GetAllMailResultNotifyOuterClass.GetAllMailResultNotify result = new emu.grasscutter.net.proto.GetAllMailResultNotifyOuterClass.GetAllMailResultNotify(this);
         int from_bitField0_ = bitField0_;
-        result.packetNum_ = packetNum_;
-        result.packetBeSentNum_ = packetBeSentNum_;
+        result.totalPageCount_ = totalPageCount_;
+        result.pageIndex_ = pageIndex_;
         result.transaction_ = transaction_;
         result.isCollected_ = isCollected_;
         result.retcode_ = retcode_;
@@ -690,11 +682,11 @@ public final class GetAllMailResultNotifyOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.GetAllMailResultNotifyOuterClass.GetAllMailResultNotify other) {
         if (other == emu.grasscutter.net.proto.GetAllMailResultNotifyOuterClass.GetAllMailResultNotify.getDefaultInstance()) return this;
-        if (other.getPacketNum() != 0) {
-          setPacketNum(other.getPacketNum());
+        if (other.getTotalPageCount() != 0) {
+          setTotalPageCount(other.getTotalPageCount());
         }
-        if (other.getPacketBeSentNum() != 0) {
-          setPacketBeSentNum(other.getPacketBeSentNum());
+        if (other.getPageIndex() != 0) {
+          setPageIndex(other.getPageIndex());
         }
         if (!other.getTransaction().isEmpty()) {
           transaction_ = other.transaction_;
@@ -762,88 +754,64 @@ public final class GetAllMailResultNotifyOuterClass {
       }
       private int bitField0_;
 
-      private int packetNum_ ;
+      private int totalPageCount_ ;
       /**
-       * <pre>
-       *sus 6
-       * </pre>
-       *
-       * <code>uint32 packet_num = 4;</code>
-       * @return The packetNum.
+       * <code>uint32 total_page_count = 4;</code>
+       * @return The totalPageCount.
        */
       @java.lang.Override
-      public int getPacketNum() {
-        return packetNum_;
+      public int getTotalPageCount() {
+        return totalPageCount_;
       }
       /**
-       * <pre>
-       *sus 6
-       * </pre>
-       *
-       * <code>uint32 packet_num = 4;</code>
-       * @param value The packetNum to set.
+       * <code>uint32 total_page_count = 4;</code>
+       * @param value The totalPageCount to set.
        * @return This builder for chaining.
        */
-      public Builder setPacketNum(int value) {
+      public Builder setTotalPageCount(int value) {
         
-        packetNum_ = value;
+        totalPageCount_ = value;
         onChanged();
         return this;
       }
       /**
-       * <pre>
-       *sus 6
-       * </pre>
-       *
-       * <code>uint32 packet_num = 4;</code>
+       * <code>uint32 total_page_count = 4;</code>
        * @return This builder for chaining.
        */
-      public Builder clearPacketNum() {
+      public Builder clearTotalPageCount() {
         
-        packetNum_ = 0;
+        totalPageCount_ = 0;
         onChanged();
         return this;
       }
 
-      private int packetBeSentNum_ ;
+      private int pageIndex_ ;
       /**
-       * <pre>
-       *sus 4
-       * </pre>
-       *
-       * <code>uint32 packet_be_sent_num = 6;</code>
-       * @return The packetBeSentNum.
+       * <code>uint32 page_index = 6;</code>
+       * @return The pageIndex.
        */
       @java.lang.Override
-      public int getPacketBeSentNum() {
-        return packetBeSentNum_;
+      public int getPageIndex() {
+        return pageIndex_;
       }
       /**
-       * <pre>
-       *sus 4
-       * </pre>
-       *
-       * <code>uint32 packet_be_sent_num = 6;</code>
-       * @param value The packetBeSentNum to set.
+       * <code>uint32 page_index = 6;</code>
+       * @param value The pageIndex to set.
        * @return This builder for chaining.
        */
-      public Builder setPacketBeSentNum(int value) {
+      public Builder setPageIndex(int value) {
         
-        packetBeSentNum_ = value;
+        pageIndex_ = value;
         onChanged();
         return this;
       }
       /**
-       * <pre>
-       *sus 4
-       * </pre>
-       *
-       * <code>uint32 packet_be_sent_num = 6;</code>
+       * <code>uint32 page_index = 6;</code>
        * @return This builder for chaining.
        */
-      public Builder clearPacketBeSentNum() {
+      public Builder clearPageIndex() {
         
-        packetBeSentNum_ = 0;
+        pageIndex_ = 0;
         onChanged();
         return this;
       }
@@ -1293,12 +1261,12 @@ public final class GetAllMailResultNotifyOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\034GetAllMailResultNotify.proto\032\016MailData" +
-      ".proto\"\242\001\n\026GetAllMailResultNotify\022\022\n\npac" +
-      "ket_num\030\004 \001(\r\022\032\n\022packet_be_sent_num\030\006 \001(" +
-      "\r\022\023\n\013transaction\030\010 \001(\t\022\024\n\014is_collected\030\n" +
-      " \001(\010\022\017\n\007retcode\030\013 \001(\005\022\034\n\tmail_list\030\r \003(\013" +
-      "2\t.MailDataB\033\n\031emu.grasscutter.net.proto" +
-      "b\006proto3"
+      ".proto\"\240\001\n\026GetAllMailResultNotify\022\030\n\020tot" +
+      "al_page_count\030\004 \001(\r\022\022\n\npage_index\030\006 \001(\r\022" +
+      "\023\n\013transaction\030\010 \001(\t\022\024\n\014is_collected\030\n \001" +
+      "(\010\022\017\n\007retcode\030\013 \001(\005\022\034\n\tmail_list\030\r \003(\0132\t" +
+      ".MailDataB\033\n\031emu.grasscutter.net.protob\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1310,7 +1278,7 @@ public final class GetAllMailResultNotifyOuterClass {
     internal_static_GetAllMailResultNotify_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_GetAllMailResultNotify_descriptor,
-        new java.lang.String[] { "PacketNum", "PacketBeSentNum", "Transaction", "IsCollected", "Retcode", "MailList", });
+        new java.lang.String[] { "TotalPageCount", "PageIndex", "Transaction", "IsCollected", "Retcode", "MailList", });
     emu.grasscutter.net.proto.MailDataOuterClass.getDescriptor();
   }
 

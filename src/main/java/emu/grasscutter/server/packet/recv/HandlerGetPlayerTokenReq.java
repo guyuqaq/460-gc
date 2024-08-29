@@ -107,6 +107,7 @@ public class HandlerGetPlayerTokenReq extends PacketHandler {
         // Load player from database
         player.loadFromDatabase();
 
+        if (Grasscutter.getConfig().server.game.useXorEncryption) {
             // Set session state
             session.setUseSecretKey(true);
             session.setState(SessionState.WAITING_FOR_LOGIN);
@@ -149,5 +150,13 @@ public class HandlerGetPlayerTokenReq extends PacketHandler {
                 // Send packet
                 session.send(new PacketGetPlayerTokenRsp(session, req.getKeyId()));
             }
-        } 
+        } else {
+            // Set session state
+            // session.setUseSecretKey(true);
+            session.setState(SessionState.WAITING_FOR_LOGIN);
+
+            session.send(new PacketGetPlayerTokenRsp(session, req.getKeyId()));
+        }
     }
+
+}
