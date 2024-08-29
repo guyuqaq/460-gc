@@ -168,8 +168,8 @@ public class GameSession implements KcpChannel {
         // Decrypt and turn back into a packet
         if (Grasscutter.getConfig().server.game.useXorEncryption) {
             Crypto.xor(bytes, useSecretKey() ? this.encryptKey : Crypto.DISPATCH_KEY);
-        ByteBuf packet = Unpooled.wrappedBuffer(bytes);
         }
+        ByteBuf packet = Unpooled.wrappedBuffer(bytes);
         // Log
         // logPacket(packet);
         // Handle
