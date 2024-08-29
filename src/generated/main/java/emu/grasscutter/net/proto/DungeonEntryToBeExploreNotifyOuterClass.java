@@ -19,27 +19,28 @@ public final class DungeonEntryToBeExploreNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 scene_id = 15;</code>
-     * @return The sceneId.
+     * <code>uint32 dungeon_entry_config_id = 6;</code>
+     * @return The dungeonEntryConfigId.
      */
-    int getSceneId();
+    int getDungeonEntryConfigId();
 
     /**
-     * <code>uint32 dungeon_entry_scene_point_id = 13;</code>
+     * <code>uint32 dungeon_entry_scene_point_id = 14;</code>
      * @return The dungeonEntryScenePointId.
      */
     int getDungeonEntryScenePointId();
 
     /**
-     * <code>uint32 dungeon_entry_config_id = 5;</code>
-     * @return The dungeonEntryConfigId.
+     * <code>uint32 scene_id = 3;</code>
+     * @return The sceneId.
      */
-    int getDungeonEntryConfigId();
+    int getSceneId();
   }
   /**
    * <pre>
-   * CmdId: 22366
-   * Obf: IIPOKPCHEKL
+   * 4.7.0
+   * cmdid: 26162 or 
+   * DAFAPKGFIBA
    * </pre>
    *
    * Protobuf type {@code DungeonEntryToBeExploreNotify}
@@ -68,58 +69,6 @@ public final class DungeonEntryToBeExploreNotifyOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private DungeonEntryToBeExploreNotify(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 40: {
-
-              dungeonEntryConfigId_ = input.readUInt32();
-              break;
-            }
-            case 104: {
-
-              dungeonEntryScenePointId_ = input.readUInt32();
-              break;
-            }
-            case 120: {
-
-              sceneId_ = input.readUInt32();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.DungeonEntryToBeExploreNotifyOuterClass.internal_static_DungeonEntryToBeExploreNotify_descriptor;
@@ -133,21 +82,21 @@ public final class DungeonEntryToBeExploreNotifyOuterClass {
               emu.grasscutter.net.proto.DungeonEntryToBeExploreNotifyOuterClass.DungeonEntryToBeExploreNotify.class, emu.grasscutter.net.proto.DungeonEntryToBeExploreNotifyOuterClass.DungeonEntryToBeExploreNotify.Builder.class);
     }
 
-    public static final int SCENE_ID_FIELD_NUMBER = 15;
-    private int sceneId_;
+    public static final int DUNGEON_ENTRY_CONFIG_ID_FIELD_NUMBER = 6;
+    private int dungeonEntryConfigId_;
     /**
-     * <code>uint32 scene_id = 15;</code>
-     * @return The sceneId.
+     * <code>uint32 dungeon_entry_config_id = 6;</code>
+     * @return The dungeonEntryConfigId.
      */
     @java.lang.Override
-    public int getSceneId() {
-      return sceneId_;
+    public int getDungeonEntryConfigId() {
+      return dungeonEntryConfigId_;
     }
 
-    public static final int DUNGEON_ENTRY_SCENE_POINT_ID_FIELD_NUMBER = 13;
+    public static final int DUNGEON_ENTRY_SCENE_POINT_ID_FIELD_NUMBER = 14;
     private int dungeonEntryScenePointId_;
     /**
-     * <code>uint32 dungeon_entry_scene_point_id = 13;</code>
+     * <code>uint32 dungeon_entry_scene_point_id = 14;</code>
      * @return The dungeonEntryScenePointId.
      */
     @java.lang.Override
@@ -155,15 +104,15 @@ public final class DungeonEntryToBeExploreNotifyOuterClass {
       return dungeonEntryScenePointId_;
     }
 
-    public static final int DUNGEON_ENTRY_CONFIG_ID_FIELD_NUMBER = 5;
-    private int dungeonEntryConfigId_;
+    public static final int SCENE_ID_FIELD_NUMBER = 3;
+    private int sceneId_;
     /**
-     * <code>uint32 dungeon_entry_config_id = 5;</code>
-     * @return The dungeonEntryConfigId.
+     * <code>uint32 scene_id = 3;</code>
+     * @return The sceneId.
      */
     @java.lang.Override
-    public int getDungeonEntryConfigId() {
-      return dungeonEntryConfigId_;
+    public int getSceneId() {
+      return sceneId_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -180,16 +129,16 @@ public final class DungeonEntryToBeExploreNotifyOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (sceneId_ != 0) {
+        output.writeUInt32(3, sceneId_);
+      }
       if (dungeonEntryConfigId_ != 0) {
-        output.writeUInt32(5, dungeonEntryConfigId_);
+        output.writeUInt32(6, dungeonEntryConfigId_);
       }
       if (dungeonEntryScenePointId_ != 0) {
-        output.writeUInt32(13, dungeonEntryScenePointId_);
+        output.writeUInt32(14, dungeonEntryScenePointId_);
       }
-      if (sceneId_ != 0) {
-        output.writeUInt32(15, sceneId_);
-      }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -198,19 +147,19 @@ public final class DungeonEntryToBeExploreNotifyOuterClass {
       if (size != -1) return size;
 
       size = 0;
+      if (sceneId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(3, sceneId_);
+      }
       if (dungeonEntryConfigId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(5, dungeonEntryConfigId_);
+          .computeUInt32Size(6, dungeonEntryConfigId_);
       }
       if (dungeonEntryScenePointId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(13, dungeonEntryScenePointId_);
+          .computeUInt32Size(14, dungeonEntryScenePointId_);
       }
-      if (sceneId_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(15, sceneId_);
-      }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -225,13 +174,13 @@ public final class DungeonEntryToBeExploreNotifyOuterClass {
       }
       emu.grasscutter.net.proto.DungeonEntryToBeExploreNotifyOuterClass.DungeonEntryToBeExploreNotify other = (emu.grasscutter.net.proto.DungeonEntryToBeExploreNotifyOuterClass.DungeonEntryToBeExploreNotify) obj;
 
-      if (getSceneId()
-          != other.getSceneId()) return false;
-      if (getDungeonEntryScenePointId()
-          != other.getDungeonEntryScenePointId()) return false;
       if (getDungeonEntryConfigId()
           != other.getDungeonEntryConfigId()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (getDungeonEntryScenePointId()
+          != other.getDungeonEntryScenePointId()) return false;
+      if (getSceneId()
+          != other.getSceneId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -242,13 +191,13 @@ public final class DungeonEntryToBeExploreNotifyOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + SCENE_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getSceneId();
-      hash = (37 * hash) + DUNGEON_ENTRY_SCENE_POINT_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getDungeonEntryScenePointId();
       hash = (37 * hash) + DUNGEON_ENTRY_CONFIG_ID_FIELD_NUMBER;
       hash = (53 * hash) + getDungeonEntryConfigId();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (37 * hash) + DUNGEON_ENTRY_SCENE_POINT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getDungeonEntryScenePointId();
+      hash = (37 * hash) + SCENE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSceneId();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -345,8 +294,9 @@ public final class DungeonEntryToBeExploreNotifyOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 22366
-     * Obf: IIPOKPCHEKL
+     * 4.7.0
+     * cmdid: 26162 or 
+     * DAFAPKGFIBA
      * </pre>
      *
      * Protobuf type {@code DungeonEntryToBeExploreNotify}
@@ -370,27 +320,22 @@ public final class DungeonEntryToBeExploreNotifyOuterClass {
 
       // Construct using emu.grasscutter.net.proto.DungeonEntryToBeExploreNotifyOuterClass.DungeonEntryToBeExploreNotify.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        sceneId_ = 0;
+        dungeonEntryConfigId_ = 0;
 
         dungeonEntryScenePointId_ = 0;
 
-        dungeonEntryConfigId_ = 0;
+        sceneId_ = 0;
 
         return this;
       }
@@ -418,9 +363,9 @@ public final class DungeonEntryToBeExploreNotifyOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.DungeonEntryToBeExploreNotifyOuterClass.DungeonEntryToBeExploreNotify buildPartial() {
         emu.grasscutter.net.proto.DungeonEntryToBeExploreNotifyOuterClass.DungeonEntryToBeExploreNotify result = new emu.grasscutter.net.proto.DungeonEntryToBeExploreNotifyOuterClass.DungeonEntryToBeExploreNotify(this);
-        result.sceneId_ = sceneId_;
-        result.dungeonEntryScenePointId_ = dungeonEntryScenePointId_;
         result.dungeonEntryConfigId_ = dungeonEntryConfigId_;
+        result.dungeonEntryScenePointId_ = dungeonEntryScenePointId_;
+        result.sceneId_ = sceneId_;
         onBuilt();
         return result;
       }
@@ -469,16 +414,16 @@ public final class DungeonEntryToBeExploreNotifyOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.DungeonEntryToBeExploreNotifyOuterClass.DungeonEntryToBeExploreNotify other) {
         if (other == emu.grasscutter.net.proto.DungeonEntryToBeExploreNotifyOuterClass.DungeonEntryToBeExploreNotify.getDefaultInstance()) return this;
-        if (other.getSceneId() != 0) {
-          setSceneId(other.getSceneId());
+        if (other.getDungeonEntryConfigId() != 0) {
+          setDungeonEntryConfigId(other.getDungeonEntryConfigId());
         }
         if (other.getDungeonEntryScenePointId() != 0) {
           setDungeonEntryScenePointId(other.getDungeonEntryScenePointId());
         }
-        if (other.getDungeonEntryConfigId() != 0) {
-          setDungeonEntryConfigId(other.getDungeonEntryConfigId());
+        if (other.getSceneId() != 0) {
+          setSceneId(other.getSceneId());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -493,85 +438,51 @@ public final class DungeonEntryToBeExploreNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.DungeonEntryToBeExploreNotifyOuterClass.DungeonEntryToBeExploreNotify parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 24: {
+                sceneId_ = input.readUInt32();
+
+                break;
+              } // case 24
+              case 48: {
+                dungeonEntryConfigId_ = input.readUInt32();
+
+                break;
+              } // case 48
+              case 112: {
+                dungeonEntryScenePointId_ = input.readUInt32();
+
+                break;
+              } // case 112
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.DungeonEntryToBeExploreNotifyOuterClass.DungeonEntryToBeExploreNotify) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private int sceneId_ ;
-      /**
-       * <code>uint32 scene_id = 15;</code>
-       * @return The sceneId.
-       */
-      @java.lang.Override
-      public int getSceneId() {
-        return sceneId_;
-      }
-      /**
-       * <code>uint32 scene_id = 15;</code>
-       * @param value The sceneId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSceneId(int value) {
-        
-        sceneId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 scene_id = 15;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearSceneId() {
-        
-        sceneId_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int dungeonEntryScenePointId_ ;
-      /**
-       * <code>uint32 dungeon_entry_scene_point_id = 13;</code>
-       * @return The dungeonEntryScenePointId.
-       */
-      @java.lang.Override
-      public int getDungeonEntryScenePointId() {
-        return dungeonEntryScenePointId_;
-      }
-      /**
-       * <code>uint32 dungeon_entry_scene_point_id = 13;</code>
-       * @param value The dungeonEntryScenePointId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setDungeonEntryScenePointId(int value) {
-        
-        dungeonEntryScenePointId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 dungeon_entry_scene_point_id = 13;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearDungeonEntryScenePointId() {
-        
-        dungeonEntryScenePointId_ = 0;
-        onChanged();
+          onChanged();
+        } // finally
         return this;
       }
 
       private int dungeonEntryConfigId_ ;
       /**
-       * <code>uint32 dungeon_entry_config_id = 5;</code>
+       * <code>uint32 dungeon_entry_config_id = 6;</code>
        * @return The dungeonEntryConfigId.
        */
       @java.lang.Override
@@ -579,7 +490,7 @@ public final class DungeonEntryToBeExploreNotifyOuterClass {
         return dungeonEntryConfigId_;
       }
       /**
-       * <code>uint32 dungeon_entry_config_id = 5;</code>
+       * <code>uint32 dungeon_entry_config_id = 6;</code>
        * @param value The dungeonEntryConfigId to set.
        * @return This builder for chaining.
        */
@@ -590,12 +501,74 @@ public final class DungeonEntryToBeExploreNotifyOuterClass {
         return this;
       }
       /**
-       * <code>uint32 dungeon_entry_config_id = 5;</code>
+       * <code>uint32 dungeon_entry_config_id = 6;</code>
        * @return This builder for chaining.
        */
       public Builder clearDungeonEntryConfigId() {
         
         dungeonEntryConfigId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int dungeonEntryScenePointId_ ;
+      /**
+       * <code>uint32 dungeon_entry_scene_point_id = 14;</code>
+       * @return The dungeonEntryScenePointId.
+       */
+      @java.lang.Override
+      public int getDungeonEntryScenePointId() {
+        return dungeonEntryScenePointId_;
+      }
+      /**
+       * <code>uint32 dungeon_entry_scene_point_id = 14;</code>
+       * @param value The dungeonEntryScenePointId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDungeonEntryScenePointId(int value) {
+        
+        dungeonEntryScenePointId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 dungeon_entry_scene_point_id = 14;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDungeonEntryScenePointId() {
+        
+        dungeonEntryScenePointId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int sceneId_ ;
+      /**
+       * <code>uint32 scene_id = 3;</code>
+       * @return The sceneId.
+       */
+      @java.lang.Override
+      public int getSceneId() {
+        return sceneId_;
+      }
+      /**
+       * <code>uint32 scene_id = 3;</code>
+       * @param value The sceneId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSceneId(int value) {
+        
+        sceneId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 scene_id = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSceneId() {
+        
+        sceneId_ = 0;
         onChanged();
         return this;
       }
@@ -632,7 +605,18 @@ public final class DungeonEntryToBeExploreNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new DungeonEntryToBeExploreNotify(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -667,9 +651,9 @@ public final class DungeonEntryToBeExploreNotifyOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n#DungeonEntryToBeExploreNotify.proto\"x\n" +
-      "\035DungeonEntryToBeExploreNotify\022\020\n\010scene_" +
-      "id\030\017 \001(\r\022$\n\034dungeon_entry_scene_point_id" +
-      "\030\r \001(\r\022\037\n\027dungeon_entry_config_id\030\005 \001(\rB" +
+      "\035DungeonEntryToBeExploreNotify\022\037\n\027dungeo" +
+      "n_entry_config_id\030\006 \001(\r\022$\n\034dungeon_entry" +
+      "_scene_point_id\030\016 \001(\r\022\020\n\010scene_id\030\003 \001(\rB" +
       "\033\n\031emu.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -681,7 +665,7 @@ public final class DungeonEntryToBeExploreNotifyOuterClass {
     internal_static_DungeonEntryToBeExploreNotify_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_DungeonEntryToBeExploreNotify_descriptor,
-        new java.lang.String[] { "SceneId", "DungeonEntryScenePointId", "DungeonEntryConfigId", });
+        new java.lang.String[] { "DungeonEntryConfigId", "DungeonEntryScenePointId", "SceneId", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

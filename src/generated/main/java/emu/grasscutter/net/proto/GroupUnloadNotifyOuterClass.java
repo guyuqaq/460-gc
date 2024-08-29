@@ -19,17 +19,17 @@ public final class GroupUnloadNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated uint32 group_list = 9;</code>
+     * <code>repeated uint32 group_list = 3;</code>
      * @return A list containing the groupList.
      */
     java.util.List<java.lang.Integer> getGroupListList();
     /**
-     * <code>repeated uint32 group_list = 9;</code>
+     * <code>repeated uint32 group_list = 3;</code>
      * @return The count of groupList.
      */
     int getGroupListCount();
     /**
-     * <code>repeated uint32 group_list = 9;</code>
+     * <code>repeated uint32 group_list = 3;</code>
      * @param index The index of the element to return.
      * @return The groupList at the given index.
      */
@@ -37,8 +37,9 @@ public final class GroupUnloadNotifyOuterClass {
   }
   /**
    * <pre>
-   * CmdId: 27542
-   * Obf: NDCHDNICDBF
+   * 4.7.0 ?
+   * CmdId: 23831 or 25365 (?)
+   * Obf: PJEMNKAGMMH
    * </pre>
    *
    * Protobuf type {@code GroupUnloadNotify}
@@ -68,68 +69,6 @@ public final class GroupUnloadNotifyOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private GroupUnloadNotify(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 72: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                groupList_ = newIntList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              groupList_.addInt(input.readUInt32());
-              break;
-            }
-            case 74: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
-                groupList_ = newIntList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                groupList_.addInt(input.readUInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          groupList_.makeImmutable(); // C
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.GroupUnloadNotifyOuterClass.internal_static_GroupUnloadNotify_descriptor;
@@ -143,10 +82,10 @@ public final class GroupUnloadNotifyOuterClass {
               emu.grasscutter.net.proto.GroupUnloadNotifyOuterClass.GroupUnloadNotify.class, emu.grasscutter.net.proto.GroupUnloadNotifyOuterClass.GroupUnloadNotify.Builder.class);
     }
 
-    public static final int GROUP_LIST_FIELD_NUMBER = 9;
+    public static final int GROUP_LIST_FIELD_NUMBER = 3;
     private com.google.protobuf.Internal.IntList groupList_;
     /**
-     * <code>repeated uint32 group_list = 9;</code>
+     * <code>repeated uint32 group_list = 3;</code>
      * @return A list containing the groupList.
      */
     @java.lang.Override
@@ -155,14 +94,14 @@ public final class GroupUnloadNotifyOuterClass {
       return groupList_;
     }
     /**
-     * <code>repeated uint32 group_list = 9;</code>
+     * <code>repeated uint32 group_list = 3;</code>
      * @return The count of groupList.
      */
     public int getGroupListCount() {
       return groupList_.size();
     }
     /**
-     * <code>repeated uint32 group_list = 9;</code>
+     * <code>repeated uint32 group_list = 3;</code>
      * @param index The index of the element to return.
      * @return The groupList at the given index.
      */
@@ -187,13 +126,13 @@ public final class GroupUnloadNotifyOuterClass {
                         throws java.io.IOException {
       getSerializedSize();
       if (getGroupListList().size() > 0) {
-        output.writeUInt32NoTag(74);
+        output.writeUInt32NoTag(26);
         output.writeUInt32NoTag(groupListMemoizedSerializedSize);
       }
       for (int i = 0; i < groupList_.size(); i++) {
         output.writeUInt32NoTag(groupList_.getInt(i));
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -216,7 +155,7 @@ public final class GroupUnloadNotifyOuterClass {
         }
         groupListMemoizedSerializedSize = dataSize;
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -233,7 +172,7 @@ public final class GroupUnloadNotifyOuterClass {
 
       if (!getGroupListList()
           .equals(other.getGroupListList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -248,7 +187,7 @@ public final class GroupUnloadNotifyOuterClass {
         hash = (37 * hash) + GROUP_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getGroupListList().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -345,8 +284,9 @@ public final class GroupUnloadNotifyOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 27542
-     * Obf: NDCHDNICDBF
+     * 4.7.0 ?
+     * CmdId: 23831 or 25365 (?)
+     * Obf: PJEMNKAGMMH
      * </pre>
      *
      * Protobuf type {@code GroupUnloadNotify}
@@ -370,18 +310,13 @@ public final class GroupUnloadNotifyOuterClass {
 
       // Construct using emu.grasscutter.net.proto.GroupUnloadNotifyOuterClass.GroupUnloadNotify.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -478,7 +413,7 @@ public final class GroupUnloadNotifyOuterClass {
           }
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -493,17 +428,46 @@ public final class GroupUnloadNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.GroupUnloadNotifyOuterClass.GroupUnloadNotify parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 24: {
+                int v = input.readUInt32();
+                ensureGroupListIsMutable();
+                groupList_.addInt(v);
+                break;
+              } // case 24
+              case 26: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureGroupListIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  groupList_.addInt(input.readUInt32());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.GroupUnloadNotifyOuterClass.GroupUnloadNotify) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -516,7 +480,7 @@ public final class GroupUnloadNotifyOuterClass {
          }
       }
       /**
-       * <code>repeated uint32 group_list = 9;</code>
+       * <code>repeated uint32 group_list = 3;</code>
        * @return A list containing the groupList.
        */
       public java.util.List<java.lang.Integer>
@@ -525,14 +489,14 @@ public final class GroupUnloadNotifyOuterClass {
                  java.util.Collections.unmodifiableList(groupList_) : groupList_;
       }
       /**
-       * <code>repeated uint32 group_list = 9;</code>
+       * <code>repeated uint32 group_list = 3;</code>
        * @return The count of groupList.
        */
       public int getGroupListCount() {
         return groupList_.size();
       }
       /**
-       * <code>repeated uint32 group_list = 9;</code>
+       * <code>repeated uint32 group_list = 3;</code>
        * @param index The index of the element to return.
        * @return The groupList at the given index.
        */
@@ -540,7 +504,7 @@ public final class GroupUnloadNotifyOuterClass {
         return groupList_.getInt(index);
       }
       /**
-       * <code>repeated uint32 group_list = 9;</code>
+       * <code>repeated uint32 group_list = 3;</code>
        * @param index The index to set the value at.
        * @param value The groupList to set.
        * @return This builder for chaining.
@@ -553,7 +517,7 @@ public final class GroupUnloadNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 group_list = 9;</code>
+       * <code>repeated uint32 group_list = 3;</code>
        * @param value The groupList to add.
        * @return This builder for chaining.
        */
@@ -564,7 +528,7 @@ public final class GroupUnloadNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 group_list = 9;</code>
+       * <code>repeated uint32 group_list = 3;</code>
        * @param values The groupList to add.
        * @return This builder for chaining.
        */
@@ -577,7 +541,7 @@ public final class GroupUnloadNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 group_list = 9;</code>
+       * <code>repeated uint32 group_list = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearGroupList() {
@@ -619,7 +583,18 @@ public final class GroupUnloadNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new GroupUnloadNotify(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -654,7 +629,7 @@ public final class GroupUnloadNotifyOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\027GroupUnloadNotify.proto\"\'\n\021GroupUnload" +
-      "Notify\022\022\n\ngroup_list\030\t \003(\rB\033\n\031emu.grassc" +
+      "Notify\022\022\n\ngroup_list\030\003 \003(\rB\033\n\031emu.grassc" +
       "utter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

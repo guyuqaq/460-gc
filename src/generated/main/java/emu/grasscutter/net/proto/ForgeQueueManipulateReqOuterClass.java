@@ -25,20 +25,21 @@ public final class ForgeQueueManipulateReqOuterClass {
     int getForgeQueueId();
 
     /**
-     * <code>.ForgeQueueManipulateType manipulate_type = 5;</code>
+     * <code>.ForgeQueueManipulateType manipulate_type = 9;</code>
      * @return The enum numeric value on the wire for manipulateType.
      */
     int getManipulateTypeValue();
     /**
-     * <code>.ForgeQueueManipulateType manipulate_type = 5;</code>
+     * <code>.ForgeQueueManipulateType manipulate_type = 9;</code>
      * @return The manipulateType.
      */
     emu.grasscutter.net.proto.ForgeQueueManipulateTypeOuterClass.ForgeQueueManipulateType getManipulateType();
   }
   /**
    * <pre>
-   * CmdId: 25920
-   * Obf: KLKEPLGJNFI
+   * 4.7.0
+   * CmdId: 23681
+   * Obf: OJHGCEMACGN
    * </pre>
    *
    * Protobuf type {@code ForgeQueueManipulateReq}
@@ -68,54 +69,6 @@ public final class ForgeQueueManipulateReqOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private ForgeQueueManipulateReq(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-
-              forgeQueueId_ = input.readUInt32();
-              break;
-            }
-            case 40: {
-              int rawValue = input.readEnum();
-
-              manipulateType_ = rawValue;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.ForgeQueueManipulateReqOuterClass.internal_static_ForgeQueueManipulateReq_descriptor;
@@ -140,17 +93,17 @@ public final class ForgeQueueManipulateReqOuterClass {
       return forgeQueueId_;
     }
 
-    public static final int MANIPULATE_TYPE_FIELD_NUMBER = 5;
+    public static final int MANIPULATE_TYPE_FIELD_NUMBER = 9;
     private int manipulateType_;
     /**
-     * <code>.ForgeQueueManipulateType manipulate_type = 5;</code>
+     * <code>.ForgeQueueManipulateType manipulate_type = 9;</code>
      * @return The enum numeric value on the wire for manipulateType.
      */
     @java.lang.Override public int getManipulateTypeValue() {
       return manipulateType_;
     }
     /**
-     * <code>.ForgeQueueManipulateType manipulate_type = 5;</code>
+     * <code>.ForgeQueueManipulateType manipulate_type = 9;</code>
      * @return The manipulateType.
      */
     @java.lang.Override public emu.grasscutter.net.proto.ForgeQueueManipulateTypeOuterClass.ForgeQueueManipulateType getManipulateType() {
@@ -177,9 +130,9 @@ public final class ForgeQueueManipulateReqOuterClass {
         output.writeUInt32(1, forgeQueueId_);
       }
       if (manipulateType_ != emu.grasscutter.net.proto.ForgeQueueManipulateTypeOuterClass.ForgeQueueManipulateType.FORGE_QUEUE_MANIPULATE_TYPE_RECEIVE_OUTPUT.getNumber()) {
-        output.writeEnum(5, manipulateType_);
+        output.writeEnum(9, manipulateType_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -194,9 +147,9 @@ public final class ForgeQueueManipulateReqOuterClass {
       }
       if (manipulateType_ != emu.grasscutter.net.proto.ForgeQueueManipulateTypeOuterClass.ForgeQueueManipulateType.FORGE_QUEUE_MANIPULATE_TYPE_RECEIVE_OUTPUT.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(5, manipulateType_);
+          .computeEnumSize(9, manipulateType_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -214,7 +167,7 @@ public final class ForgeQueueManipulateReqOuterClass {
       if (getForgeQueueId()
           != other.getForgeQueueId()) return false;
       if (manipulateType_ != other.manipulateType_) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -229,7 +182,7 @@ public final class ForgeQueueManipulateReqOuterClass {
       hash = (53 * hash) + getForgeQueueId();
       hash = (37 * hash) + MANIPULATE_TYPE_FIELD_NUMBER;
       hash = (53 * hash) + manipulateType_;
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -326,8 +279,9 @@ public final class ForgeQueueManipulateReqOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 25920
-     * Obf: KLKEPLGJNFI
+     * 4.7.0
+     * CmdId: 23681
+     * Obf: OJHGCEMACGN
      * </pre>
      *
      * Protobuf type {@code ForgeQueueManipulateReq}
@@ -351,18 +305,13 @@ public final class ForgeQueueManipulateReqOuterClass {
 
       // Construct using emu.grasscutter.net.proto.ForgeQueueManipulateReqOuterClass.ForgeQueueManipulateReq.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -453,7 +402,7 @@ public final class ForgeQueueManipulateReqOuterClass {
         if (other.manipulateType_ != 0) {
           setManipulateTypeValue(other.getManipulateTypeValue());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -468,17 +417,40 @@ public final class ForgeQueueManipulateReqOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.ForgeQueueManipulateReqOuterClass.ForgeQueueManipulateReq parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                forgeQueueId_ = input.readUInt32();
+
+                break;
+              } // case 8
+              case 72: {
+                manipulateType_ = input.readEnum();
+
+                break;
+              } // case 72
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.ForgeQueueManipulateReqOuterClass.ForgeQueueManipulateReq) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -515,14 +487,14 @@ public final class ForgeQueueManipulateReqOuterClass {
 
       private int manipulateType_ = 0;
       /**
-       * <code>.ForgeQueueManipulateType manipulate_type = 5;</code>
+       * <code>.ForgeQueueManipulateType manipulate_type = 9;</code>
        * @return The enum numeric value on the wire for manipulateType.
        */
       @java.lang.Override public int getManipulateTypeValue() {
         return manipulateType_;
       }
       /**
-       * <code>.ForgeQueueManipulateType manipulate_type = 5;</code>
+       * <code>.ForgeQueueManipulateType manipulate_type = 9;</code>
        * @param value The enum numeric value on the wire for manipulateType to set.
        * @return This builder for chaining.
        */
@@ -533,7 +505,7 @@ public final class ForgeQueueManipulateReqOuterClass {
         return this;
       }
       /**
-       * <code>.ForgeQueueManipulateType manipulate_type = 5;</code>
+       * <code>.ForgeQueueManipulateType manipulate_type = 9;</code>
        * @return The manipulateType.
        */
       @java.lang.Override
@@ -543,7 +515,7 @@ public final class ForgeQueueManipulateReqOuterClass {
         return result == null ? emu.grasscutter.net.proto.ForgeQueueManipulateTypeOuterClass.ForgeQueueManipulateType.UNRECOGNIZED : result;
       }
       /**
-       * <code>.ForgeQueueManipulateType manipulate_type = 5;</code>
+       * <code>.ForgeQueueManipulateType manipulate_type = 9;</code>
        * @param value The manipulateType to set.
        * @return This builder for chaining.
        */
@@ -557,7 +529,7 @@ public final class ForgeQueueManipulateReqOuterClass {
         return this;
       }
       /**
-       * <code>.ForgeQueueManipulateType manipulate_type = 5;</code>
+       * <code>.ForgeQueueManipulateType manipulate_type = 9;</code>
        * @return This builder for chaining.
        */
       public Builder clearManipulateType() {
@@ -599,7 +571,18 @@ public final class ForgeQueueManipulateReqOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new ForgeQueueManipulateReq(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -636,7 +619,7 @@ public final class ForgeQueueManipulateReqOuterClass {
       "\n\035ForgeQueueManipulateReq.proto\032\036ForgeQu" +
       "eueManipulateType.proto\"e\n\027ForgeQueueMan" +
       "ipulateReq\022\026\n\016forge_queue_id\030\001 \001(\r\0222\n\017ma" +
-      "nipulate_type\030\005 \001(\0162\031.ForgeQueueManipula" +
+      "nipulate_type\030\t \001(\0162\031.ForgeQueueManipula" +
       "teTypeB\033\n\031emu.grasscutter.net.protob\006pro" +
       "to3"
     };

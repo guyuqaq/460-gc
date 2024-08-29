@@ -19,22 +19,22 @@ public final class AvatarPromoteRspOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint64 guid = 13;</code>
+     * <code>uint64 guid = 1;</code>
      * @return The guid.
      */
     long getGuid();
 
     /**
-     * <code>int32 retcode = 15;</code>
+     * <code>int32 retcode = 12;</code>
      * @return The retcode.
      */
     int getRetcode();
   }
   /**
    * <pre>
-   *AvatarPromoteRsp
-   * 4.6.0
-   * CmdId: 3564
+   * 4.7.0
+   * CmdId: 26563 or 21074 or 29410 or 20328 (t1) or 26699
+   * PJPDLMEIEKL
    * </pre>
    *
    * Protobuf type {@code AvatarPromoteRsp}
@@ -63,53 +63,6 @@ public final class AvatarPromoteRspOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private AvatarPromoteRsp(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 104: {
-
-              guid_ = input.readUInt64();
-              break;
-            }
-            case 120: {
-
-              retcode_ = input.readInt32();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.AvatarPromoteRspOuterClass.internal_static_AvatarPromoteRsp_descriptor;
@@ -123,10 +76,10 @@ public final class AvatarPromoteRspOuterClass {
               emu.grasscutter.net.proto.AvatarPromoteRspOuterClass.AvatarPromoteRsp.class, emu.grasscutter.net.proto.AvatarPromoteRspOuterClass.AvatarPromoteRsp.Builder.class);
     }
 
-    public static final int GUID_FIELD_NUMBER = 13;
+    public static final int GUID_FIELD_NUMBER = 1;
     private long guid_;
     /**
-     * <code>uint64 guid = 13;</code>
+     * <code>uint64 guid = 1;</code>
      * @return The guid.
      */
     @java.lang.Override
@@ -134,10 +87,10 @@ public final class AvatarPromoteRspOuterClass {
       return guid_;
     }
 
-    public static final int RETCODE_FIELD_NUMBER = 15;
+    public static final int RETCODE_FIELD_NUMBER = 12;
     private int retcode_;
     /**
-     * <code>int32 retcode = 15;</code>
+     * <code>int32 retcode = 12;</code>
      * @return The retcode.
      */
     @java.lang.Override
@@ -160,12 +113,12 @@ public final class AvatarPromoteRspOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (guid_ != 0L) {
-        output.writeUInt64(13, guid_);
+        output.writeUInt64(1, guid_);
       }
       if (retcode_ != 0) {
-        output.writeInt32(15, retcode_);
+        output.writeInt32(12, retcode_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -176,13 +129,13 @@ public final class AvatarPromoteRspOuterClass {
       size = 0;
       if (guid_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(13, guid_);
+          .computeUInt64Size(1, guid_);
       }
       if (retcode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(15, retcode_);
+          .computeInt32Size(12, retcode_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -201,7 +154,7 @@ public final class AvatarPromoteRspOuterClass {
           != other.getGuid()) return false;
       if (getRetcode()
           != other.getRetcode()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -217,7 +170,7 @@ public final class AvatarPromoteRspOuterClass {
           getGuid());
       hash = (37 * hash) + RETCODE_FIELD_NUMBER;
       hash = (53 * hash) + getRetcode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -314,9 +267,9 @@ public final class AvatarPromoteRspOuterClass {
     }
     /**
      * <pre>
-     *AvatarPromoteRsp
-     * 4.6.0
-     * CmdId: 3564
+     * 4.7.0
+     * CmdId: 26563 or 21074 or 29410 or 20328 (t1) or 26699
+     * PJPDLMEIEKL
      * </pre>
      *
      * Protobuf type {@code AvatarPromoteRsp}
@@ -340,18 +293,13 @@ public final class AvatarPromoteRspOuterClass {
 
       // Construct using emu.grasscutter.net.proto.AvatarPromoteRspOuterClass.AvatarPromoteRsp.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -442,7 +390,7 @@ public final class AvatarPromoteRspOuterClass {
         if (other.getRetcode() != 0) {
           setRetcode(other.getRetcode());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -457,23 +405,46 @@ public final class AvatarPromoteRspOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.AvatarPromoteRspOuterClass.AvatarPromoteRsp parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                guid_ = input.readUInt64();
+
+                break;
+              } // case 8
+              case 96: {
+                retcode_ = input.readInt32();
+
+                break;
+              } // case 96
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.AvatarPromoteRspOuterClass.AvatarPromoteRsp) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
       private long guid_ ;
       /**
-       * <code>uint64 guid = 13;</code>
+       * <code>uint64 guid = 1;</code>
        * @return The guid.
        */
       @java.lang.Override
@@ -481,7 +452,7 @@ public final class AvatarPromoteRspOuterClass {
         return guid_;
       }
       /**
-       * <code>uint64 guid = 13;</code>
+       * <code>uint64 guid = 1;</code>
        * @param value The guid to set.
        * @return This builder for chaining.
        */
@@ -492,7 +463,7 @@ public final class AvatarPromoteRspOuterClass {
         return this;
       }
       /**
-       * <code>uint64 guid = 13;</code>
+       * <code>uint64 guid = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearGuid() {
@@ -504,7 +475,7 @@ public final class AvatarPromoteRspOuterClass {
 
       private int retcode_ ;
       /**
-       * <code>int32 retcode = 15;</code>
+       * <code>int32 retcode = 12;</code>
        * @return The retcode.
        */
       @java.lang.Override
@@ -512,7 +483,7 @@ public final class AvatarPromoteRspOuterClass {
         return retcode_;
       }
       /**
-       * <code>int32 retcode = 15;</code>
+       * <code>int32 retcode = 12;</code>
        * @param value The retcode to set.
        * @return This builder for chaining.
        */
@@ -523,7 +494,7 @@ public final class AvatarPromoteRspOuterClass {
         return this;
       }
       /**
-       * <code>int32 retcode = 15;</code>
+       * <code>int32 retcode = 12;</code>
        * @return This builder for chaining.
        */
       public Builder clearRetcode() {
@@ -565,7 +536,18 @@ public final class AvatarPromoteRspOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new AvatarPromoteRsp(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -600,7 +582,7 @@ public final class AvatarPromoteRspOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\026AvatarPromoteRsp.proto\"1\n\020AvatarPromot" +
-      "eRsp\022\014\n\004guid\030\r \001(\004\022\017\n\007retcode\030\017 \001(\005B\033\n\031e" +
+      "eRsp\022\014\n\004guid\030\001 \001(\004\022\017\n\007retcode\030\014 \001(\005B\033\n\031e" +
       "mu.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
