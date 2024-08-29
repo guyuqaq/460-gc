@@ -43,21 +43,12 @@ public final class SceneTeamUpdateNotifyOuterClass {
         int index);
 
     /**
-     * <pre>
-     *tentativeID
-     * </pre>
-     *
-     * <code>bool is_in_mp = 88;</code>
+     * <code>bool is_in_mp = 11;</code>
      * @return The isInMp.
      */
     boolean getIsInMp();
   }
   /**
-   * <pre>
-   * 4.6.0
-   * CmdId: 28422
-   * </pre>
-   *
    * Protobuf type {@code SceneTeamUpdateNotify}
    */
   public static final class SceneTeamUpdateNotify extends
@@ -84,61 +75,6 @@ public final class SceneTeamUpdateNotifyOuterClass {
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
-    }
-    private SceneTeamUpdateNotify(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 42: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                sceneTeamAvatarList_ = new java.util.ArrayList<emu.grasscutter.net.proto.SceneTeamAvatarOuterClass.SceneTeamAvatar>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              sceneTeamAvatarList_.add(
-                  input.readMessage(emu.grasscutter.net.proto.SceneTeamAvatarOuterClass.SceneTeamAvatar.parser(), extensionRegistry));
-              break;
-            }
-            case 704: {
-
-              isInMp_ = input.readBool();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          sceneTeamAvatarList_ = java.util.Collections.unmodifiableList(sceneTeamAvatarList_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -193,14 +129,10 @@ public final class SceneTeamUpdateNotifyOuterClass {
       return sceneTeamAvatarList_.get(index);
     }
 
-    public static final int IS_IN_MP_FIELD_NUMBER = 88;
+    public static final int IS_IN_MP_FIELD_NUMBER = 11;
     private boolean isInMp_;
     /**
-     * <pre>
-     *tentativeID
-     * </pre>
-     *
-     * <code>bool is_in_mp = 88;</code>
+     * <code>bool is_in_mp = 11;</code>
      * @return The isInMp.
      */
     @java.lang.Override
@@ -226,9 +158,9 @@ public final class SceneTeamUpdateNotifyOuterClass {
         output.writeMessage(5, sceneTeamAvatarList_.get(i));
       }
       if (isInMp_ != false) {
-        output.writeBool(88, isInMp_);
+        output.writeBool(11, isInMp_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -243,9 +175,9 @@ public final class SceneTeamUpdateNotifyOuterClass {
       }
       if (isInMp_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(88, isInMp_);
+          .computeBoolSize(11, isInMp_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -264,7 +196,7 @@ public final class SceneTeamUpdateNotifyOuterClass {
           .equals(other.getSceneTeamAvatarListList())) return false;
       if (getIsInMp()
           != other.getIsInMp()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -282,7 +214,7 @@ public final class SceneTeamUpdateNotifyOuterClass {
       hash = (37 * hash) + IS_IN_MP_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsInMp());
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -378,11 +310,6 @@ public final class SceneTeamUpdateNotifyOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * 4.6.0
-     * CmdId: 28422
-     * </pre>
-     *
      * Protobuf type {@code SceneTeamUpdateNotify}
      */
     public static final class Builder extends
@@ -404,29 +331,24 @@ public final class SceneTeamUpdateNotifyOuterClass {
 
       // Construct using emu.grasscutter.net.proto.SceneTeamUpdateNotifyOuterClass.SceneTeamUpdateNotify.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getSceneTeamAvatarListFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
         if (sceneTeamAvatarListBuilder_ == null) {
           sceneTeamAvatarList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          sceneTeamAvatarList_ = null;
           sceneTeamAvatarListBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000001);
         isInMp_ = false;
 
         return this;
@@ -543,7 +465,7 @@ public final class SceneTeamUpdateNotifyOuterClass {
         if (other.getIsInMp() != false) {
           setIsInMp(other.getIsInMp());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -558,17 +480,48 @@ public final class SceneTeamUpdateNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.SceneTeamUpdateNotifyOuterClass.SceneTeamUpdateNotify parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 42: {
+                emu.grasscutter.net.proto.SceneTeamAvatarOuterClass.SceneTeamAvatar m =
+                    input.readMessage(
+                        emu.grasscutter.net.proto.SceneTeamAvatarOuterClass.SceneTeamAvatar.parser(),
+                        extensionRegistry);
+                if (sceneTeamAvatarListBuilder_ == null) {
+                  ensureSceneTeamAvatarListIsMutable();
+                  sceneTeamAvatarList_.add(m);
+                } else {
+                  sceneTeamAvatarListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 42
+              case 88: {
+                isInMp_ = input.readBool();
+
+                break;
+              } // case 88
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.SceneTeamUpdateNotifyOuterClass.SceneTeamUpdateNotify) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -815,11 +768,7 @@ public final class SceneTeamUpdateNotifyOuterClass {
 
       private boolean isInMp_ ;
       /**
-       * <pre>
-       *tentativeID
-       * </pre>
-       *
-       * <code>bool is_in_mp = 88;</code>
+       * <code>bool is_in_mp = 11;</code>
        * @return The isInMp.
        */
       @java.lang.Override
@@ -827,11 +776,7 @@ public final class SceneTeamUpdateNotifyOuterClass {
         return isInMp_;
       }
       /**
-       * <pre>
-       *tentativeID
-       * </pre>
-       *
-       * <code>bool is_in_mp = 88;</code>
+       * <code>bool is_in_mp = 11;</code>
        * @param value The isInMp to set.
        * @return This builder for chaining.
        */
@@ -842,11 +787,7 @@ public final class SceneTeamUpdateNotifyOuterClass {
         return this;
       }
       /**
-       * <pre>
-       *tentativeID
-       * </pre>
-       *
-       * <code>bool is_in_mp = 88;</code>
+       * <code>bool is_in_mp = 11;</code>
        * @return This builder for chaining.
        */
       public Builder clearIsInMp() {
@@ -888,7 +829,18 @@ public final class SceneTeamUpdateNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new SceneTeamUpdateNotify(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -925,7 +877,7 @@ public final class SceneTeamUpdateNotifyOuterClass {
       "\n\033SceneTeamUpdateNotify.proto\032\025SceneTeam" +
       "Avatar.proto\"[\n\025SceneTeamUpdateNotify\0220\n" +
       "\026scene_team_avatar_list\030\005 \003(\0132\020.SceneTea" +
-      "mAvatar\022\020\n\010is_in_mp\030X \001(\010B\033\n\031emu.grasscu" +
+      "mAvatar\022\020\n\010is_in_mp\030\013 \001(\010B\033\n\031emu.grasscu" +
       "tter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

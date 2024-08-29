@@ -19,21 +19,22 @@ public final class ClientAIStateNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 cur_tactic = 5;</code>
+     * <code>uint32 cur_tactic = 6;</code>
      * @return The curTactic.
      */
     int getCurTactic();
 
     /**
-     * <code>uint32 entity_id = 13;</code>
+     * <code>uint32 entity_id = 15;</code>
      * @return The entityId.
      */
     int getEntityId();
   }
   /**
    * <pre>
-   * CmdId: 6944
-   * Obf: FCKHNNLKPOI
+   * 4.7.0
+   * CmdId: 22734
+   * Obf: NLIDKBFBKEB
    * </pre>
    *
    * Protobuf type {@code ClientAIStateNotify}
@@ -62,53 +63,6 @@ public final class ClientAIStateNotifyOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private ClientAIStateNotify(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 40: {
-
-              curTactic_ = input.readUInt32();
-              break;
-            }
-            case 104: {
-
-              entityId_ = input.readUInt32();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.ClientAIStateNotifyOuterClass.internal_static_ClientAIStateNotify_descriptor;
@@ -122,10 +76,10 @@ public final class ClientAIStateNotifyOuterClass {
               emu.grasscutter.net.proto.ClientAIStateNotifyOuterClass.ClientAIStateNotify.class, emu.grasscutter.net.proto.ClientAIStateNotifyOuterClass.ClientAIStateNotify.Builder.class);
     }
 
-    public static final int CUR_TACTIC_FIELD_NUMBER = 5;
+    public static final int CUR_TACTIC_FIELD_NUMBER = 6;
     private int curTactic_;
     /**
-     * <code>uint32 cur_tactic = 5;</code>
+     * <code>uint32 cur_tactic = 6;</code>
      * @return The curTactic.
      */
     @java.lang.Override
@@ -133,10 +87,10 @@ public final class ClientAIStateNotifyOuterClass {
       return curTactic_;
     }
 
-    public static final int ENTITY_ID_FIELD_NUMBER = 13;
+    public static final int ENTITY_ID_FIELD_NUMBER = 15;
     private int entityId_;
     /**
-     * <code>uint32 entity_id = 13;</code>
+     * <code>uint32 entity_id = 15;</code>
      * @return The entityId.
      */
     @java.lang.Override
@@ -159,12 +113,12 @@ public final class ClientAIStateNotifyOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (curTactic_ != 0) {
-        output.writeUInt32(5, curTactic_);
+        output.writeUInt32(6, curTactic_);
       }
       if (entityId_ != 0) {
-        output.writeUInt32(13, entityId_);
+        output.writeUInt32(15, entityId_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -175,13 +129,13 @@ public final class ClientAIStateNotifyOuterClass {
       size = 0;
       if (curTactic_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(5, curTactic_);
+          .computeUInt32Size(6, curTactic_);
       }
       if (entityId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(13, entityId_);
+          .computeUInt32Size(15, entityId_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -200,7 +154,7 @@ public final class ClientAIStateNotifyOuterClass {
           != other.getCurTactic()) return false;
       if (getEntityId()
           != other.getEntityId()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -215,7 +169,7 @@ public final class ClientAIStateNotifyOuterClass {
       hash = (53 * hash) + getCurTactic();
       hash = (37 * hash) + ENTITY_ID_FIELD_NUMBER;
       hash = (53 * hash) + getEntityId();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -312,8 +266,9 @@ public final class ClientAIStateNotifyOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 6944
-     * Obf: FCKHNNLKPOI
+     * 4.7.0
+     * CmdId: 22734
+     * Obf: NLIDKBFBKEB
      * </pre>
      *
      * Protobuf type {@code ClientAIStateNotify}
@@ -337,18 +292,13 @@ public final class ClientAIStateNotifyOuterClass {
 
       // Construct using emu.grasscutter.net.proto.ClientAIStateNotifyOuterClass.ClientAIStateNotify.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -439,7 +389,7 @@ public final class ClientAIStateNotifyOuterClass {
         if (other.getEntityId() != 0) {
           setEntityId(other.getEntityId());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -454,23 +404,46 @@ public final class ClientAIStateNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.ClientAIStateNotifyOuterClass.ClientAIStateNotify parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 48: {
+                curTactic_ = input.readUInt32();
+
+                break;
+              } // case 48
+              case 120: {
+                entityId_ = input.readUInt32();
+
+                break;
+              } // case 120
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.ClientAIStateNotifyOuterClass.ClientAIStateNotify) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
       private int curTactic_ ;
       /**
-       * <code>uint32 cur_tactic = 5;</code>
+       * <code>uint32 cur_tactic = 6;</code>
        * @return The curTactic.
        */
       @java.lang.Override
@@ -478,7 +451,7 @@ public final class ClientAIStateNotifyOuterClass {
         return curTactic_;
       }
       /**
-       * <code>uint32 cur_tactic = 5;</code>
+       * <code>uint32 cur_tactic = 6;</code>
        * @param value The curTactic to set.
        * @return This builder for chaining.
        */
@@ -489,7 +462,7 @@ public final class ClientAIStateNotifyOuterClass {
         return this;
       }
       /**
-       * <code>uint32 cur_tactic = 5;</code>
+       * <code>uint32 cur_tactic = 6;</code>
        * @return This builder for chaining.
        */
       public Builder clearCurTactic() {
@@ -501,7 +474,7 @@ public final class ClientAIStateNotifyOuterClass {
 
       private int entityId_ ;
       /**
-       * <code>uint32 entity_id = 13;</code>
+       * <code>uint32 entity_id = 15;</code>
        * @return The entityId.
        */
       @java.lang.Override
@@ -509,7 +482,7 @@ public final class ClientAIStateNotifyOuterClass {
         return entityId_;
       }
       /**
-       * <code>uint32 entity_id = 13;</code>
+       * <code>uint32 entity_id = 15;</code>
        * @param value The entityId to set.
        * @return This builder for chaining.
        */
@@ -520,7 +493,7 @@ public final class ClientAIStateNotifyOuterClass {
         return this;
       }
       /**
-       * <code>uint32 entity_id = 13;</code>
+       * <code>uint32 entity_id = 15;</code>
        * @return This builder for chaining.
        */
       public Builder clearEntityId() {
@@ -562,7 +535,18 @@ public final class ClientAIStateNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new ClientAIStateNotify(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -597,8 +581,8 @@ public final class ClientAIStateNotifyOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\031ClientAIStateNotify.proto\"<\n\023ClientAIS" +
-      "tateNotify\022\022\n\ncur_tactic\030\005 \001(\r\022\021\n\tentity" +
-      "_id\030\r \001(\rB\033\n\031emu.grasscutter.net.protob\006" +
+      "tateNotify\022\022\n\ncur_tactic\030\006 \001(\r\022\021\n\tentity" +
+      "_id\030\017 \001(\rB\033\n\031emu.grasscutter.net.protob\006" +
       "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

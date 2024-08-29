@@ -19,11 +19,11 @@ public final class EvtAiSyncSkillCdNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>map&lt;uint32, .AiSkillCdInfo&gt; ai_cd_map = 1;</code>
+     * <code>map&lt;uint32, .AiSkillCdInfo&gt; ai_cd_map = 11;</code>
      */
     int getAiCdMapCount();
     /**
-     * <code>map&lt;uint32, .AiSkillCdInfo&gt; ai_cd_map = 1;</code>
+     * <code>map&lt;uint32, .AiSkillCdInfo&gt; ai_cd_map = 11;</code>
      */
     boolean containsAiCdMap(
         int key);
@@ -34,29 +34,25 @@ public final class EvtAiSyncSkillCdNotifyOuterClass {
     java.util.Map<java.lang.Integer, emu.grasscutter.net.proto.AiSkillCdInfoOuterClass.AiSkillCdInfo>
     getAiCdMap();
     /**
-     * <code>map&lt;uint32, .AiSkillCdInfo&gt; ai_cd_map = 1;</code>
+     * <code>map&lt;uint32, .AiSkillCdInfo&gt; ai_cd_map = 11;</code>
      */
     java.util.Map<java.lang.Integer, emu.grasscutter.net.proto.AiSkillCdInfoOuterClass.AiSkillCdInfo>
     getAiCdMapMap();
     /**
-     * <code>map&lt;uint32, .AiSkillCdInfo&gt; ai_cd_map = 1;</code>
+     * <code>map&lt;uint32, .AiSkillCdInfo&gt; ai_cd_map = 11;</code>
      */
 
     emu.grasscutter.net.proto.AiSkillCdInfoOuterClass.AiSkillCdInfo getAiCdMapOrDefault(
         int key,
         emu.grasscutter.net.proto.AiSkillCdInfoOuterClass.AiSkillCdInfo defaultValue);
     /**
-     * <code>map&lt;uint32, .AiSkillCdInfo&gt; ai_cd_map = 1;</code>
+     * <code>map&lt;uint32, .AiSkillCdInfo&gt; ai_cd_map = 11;</code>
      */
 
     emu.grasscutter.net.proto.AiSkillCdInfoOuterClass.AiSkillCdInfo getAiCdMapOrThrow(
         int key);
   }
   /**
-   * <pre>
-   * CmdId: 2783
-   * </pre>
-   *
    * Protobuf type {@code EvtAiSyncSkillCdNotify}
    */
   public static final class EvtAiSyncSkillCdNotify extends
@@ -83,57 +79,6 @@ public final class EvtAiSyncSkillCdNotifyOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private EvtAiSyncSkillCdNotify(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                aiCdMap_ = com.google.protobuf.MapField.newMapField(
-                    AiCdMapDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000001;
-              }
-              com.google.protobuf.MapEntry<java.lang.Integer, emu.grasscutter.net.proto.AiSkillCdInfoOuterClass.AiSkillCdInfo>
-              aiCdMap__ = input.readMessage(
-                  AiCdMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              aiCdMap_.getMutableMap().put(
-                  aiCdMap__.getKey(), aiCdMap__.getValue());
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.EvtAiSyncSkillCdNotifyOuterClass.internal_static_EvtAiSyncSkillCdNotify_descriptor;
@@ -144,7 +89,7 @@ public final class EvtAiSyncSkillCdNotifyOuterClass {
     protected com.google.protobuf.MapField internalGetMapField(
         int number) {
       switch (number) {
-        case 1:
+        case 11:
           return internalGetAiCdMap();
         default:
           throw new RuntimeException(
@@ -159,7 +104,7 @@ public final class EvtAiSyncSkillCdNotifyOuterClass {
               emu.grasscutter.net.proto.EvtAiSyncSkillCdNotifyOuterClass.EvtAiSyncSkillCdNotify.class, emu.grasscutter.net.proto.EvtAiSyncSkillCdNotifyOuterClass.EvtAiSyncSkillCdNotify.Builder.class);
     }
 
-    public static final int AI_CD_MAP_FIELD_NUMBER = 1;
+    public static final int AI_CD_MAP_FIELD_NUMBER = 11;
     private static final class AiCdMapDefaultEntryHolder {
       static final com.google.protobuf.MapEntry<
           java.lang.Integer, emu.grasscutter.net.proto.AiSkillCdInfoOuterClass.AiSkillCdInfo> defaultEntry =
@@ -186,7 +131,7 @@ public final class EvtAiSyncSkillCdNotifyOuterClass {
       return internalGetAiCdMap().getMap().size();
     }
     /**
-     * <code>map&lt;uint32, .AiSkillCdInfo&gt; ai_cd_map = 1;</code>
+     * <code>map&lt;uint32, .AiSkillCdInfo&gt; ai_cd_map = 11;</code>
      */
 
     @java.lang.Override
@@ -204,7 +149,7 @@ public final class EvtAiSyncSkillCdNotifyOuterClass {
       return getAiCdMapMap();
     }
     /**
-     * <code>map&lt;uint32, .AiSkillCdInfo&gt; ai_cd_map = 1;</code>
+     * <code>map&lt;uint32, .AiSkillCdInfo&gt; ai_cd_map = 11;</code>
      */
     @java.lang.Override
 
@@ -212,7 +157,7 @@ public final class EvtAiSyncSkillCdNotifyOuterClass {
       return internalGetAiCdMap().getMap();
     }
     /**
-     * <code>map&lt;uint32, .AiSkillCdInfo&gt; ai_cd_map = 1;</code>
+     * <code>map&lt;uint32, .AiSkillCdInfo&gt; ai_cd_map = 11;</code>
      */
     @java.lang.Override
 
@@ -225,7 +170,7 @@ public final class EvtAiSyncSkillCdNotifyOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
-     * <code>map&lt;uint32, .AiSkillCdInfo&gt; ai_cd_map = 1;</code>
+     * <code>map&lt;uint32, .AiSkillCdInfo&gt; ai_cd_map = 11;</code>
      */
     @java.lang.Override
 
@@ -259,8 +204,8 @@ public final class EvtAiSyncSkillCdNotifyOuterClass {
           output,
           internalGetAiCdMap(),
           AiCdMapDefaultEntryHolder.defaultEntry,
-          1);
-      unknownFields.writeTo(output);
+          11);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -277,9 +222,9 @@ public final class EvtAiSyncSkillCdNotifyOuterClass {
             .setValue(entry.getValue())
             .build();
         size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(1, aiCdMap__);
+            .computeMessageSize(11, aiCdMap__);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -296,7 +241,7 @@ public final class EvtAiSyncSkillCdNotifyOuterClass {
 
       if (!internalGetAiCdMap().equals(
           other.internalGetAiCdMap())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -311,7 +256,7 @@ public final class EvtAiSyncSkillCdNotifyOuterClass {
         hash = (37 * hash) + AI_CD_MAP_FIELD_NUMBER;
         hash = (53 * hash) + internalGetAiCdMap().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -407,10 +352,6 @@ public final class EvtAiSyncSkillCdNotifyOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 2783
-     * </pre>
-     *
      * Protobuf type {@code EvtAiSyncSkillCdNotify}
      */
     public static final class Builder extends
@@ -426,7 +367,7 @@ public final class EvtAiSyncSkillCdNotifyOuterClass {
       protected com.google.protobuf.MapField internalGetMapField(
           int number) {
         switch (number) {
-          case 1:
+          case 11:
             return internalGetAiCdMap();
           default:
             throw new RuntimeException(
@@ -437,7 +378,7 @@ public final class EvtAiSyncSkillCdNotifyOuterClass {
       protected com.google.protobuf.MapField internalGetMutableMapField(
           int number) {
         switch (number) {
-          case 1:
+          case 11:
             return internalGetMutableAiCdMap();
           default:
             throw new RuntimeException(
@@ -454,18 +395,13 @@ public final class EvtAiSyncSkillCdNotifyOuterClass {
 
       // Construct using emu.grasscutter.net.proto.EvtAiSyncSkillCdNotifyOuterClass.EvtAiSyncSkillCdNotify.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -550,7 +486,7 @@ public final class EvtAiSyncSkillCdNotifyOuterClass {
         if (other == emu.grasscutter.net.proto.EvtAiSyncSkillCdNotifyOuterClass.EvtAiSyncSkillCdNotify.getDefaultInstance()) return this;
         internalGetMutableAiCdMap().mergeFrom(
             other.internalGetAiCdMap());
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -565,17 +501,38 @@ public final class EvtAiSyncSkillCdNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.EvtAiSyncSkillCdNotifyOuterClass.EvtAiSyncSkillCdNotify parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 90: {
+                com.google.protobuf.MapEntry<java.lang.Integer, emu.grasscutter.net.proto.AiSkillCdInfoOuterClass.AiSkillCdInfo>
+                aiCdMap__ = input.readMessage(
+                    AiCdMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutableAiCdMap().getMutableMap().put(
+                    aiCdMap__.getKey(), aiCdMap__.getValue());
+                break;
+              } // case 90
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.EvtAiSyncSkillCdNotifyOuterClass.EvtAiSyncSkillCdNotify) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -607,7 +564,7 @@ public final class EvtAiSyncSkillCdNotifyOuterClass {
         return internalGetAiCdMap().getMap().size();
       }
       /**
-       * <code>map&lt;uint32, .AiSkillCdInfo&gt; ai_cd_map = 1;</code>
+       * <code>map&lt;uint32, .AiSkillCdInfo&gt; ai_cd_map = 11;</code>
        */
 
       @java.lang.Override
@@ -625,7 +582,7 @@ public final class EvtAiSyncSkillCdNotifyOuterClass {
         return getAiCdMapMap();
       }
       /**
-       * <code>map&lt;uint32, .AiSkillCdInfo&gt; ai_cd_map = 1;</code>
+       * <code>map&lt;uint32, .AiSkillCdInfo&gt; ai_cd_map = 11;</code>
        */
       @java.lang.Override
 
@@ -633,7 +590,7 @@ public final class EvtAiSyncSkillCdNotifyOuterClass {
         return internalGetAiCdMap().getMap();
       }
       /**
-       * <code>map&lt;uint32, .AiSkillCdInfo&gt; ai_cd_map = 1;</code>
+       * <code>map&lt;uint32, .AiSkillCdInfo&gt; ai_cd_map = 11;</code>
        */
       @java.lang.Override
 
@@ -646,7 +603,7 @@ public final class EvtAiSyncSkillCdNotifyOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
-       * <code>map&lt;uint32, .AiSkillCdInfo&gt; ai_cd_map = 1;</code>
+       * <code>map&lt;uint32, .AiSkillCdInfo&gt; ai_cd_map = 11;</code>
        */
       @java.lang.Override
 
@@ -667,7 +624,7 @@ public final class EvtAiSyncSkillCdNotifyOuterClass {
         return this;
       }
       /**
-       * <code>map&lt;uint32, .AiSkillCdInfo&gt; ai_cd_map = 1;</code>
+       * <code>map&lt;uint32, .AiSkillCdInfo&gt; ai_cd_map = 11;</code>
        */
 
       public Builder removeAiCdMap(
@@ -686,19 +643,22 @@ public final class EvtAiSyncSkillCdNotifyOuterClass {
         return internalGetMutableAiCdMap().getMutableMap();
       }
       /**
-       * <code>map&lt;uint32, .AiSkillCdInfo&gt; ai_cd_map = 1;</code>
+       * <code>map&lt;uint32, .AiSkillCdInfo&gt; ai_cd_map = 11;</code>
        */
       public Builder putAiCdMap(
           int key,
           emu.grasscutter.net.proto.AiSkillCdInfoOuterClass.AiSkillCdInfo value) {
         
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableAiCdMap().getMutableMap()
             .put(key, value);
         return this;
       }
       /**
-       * <code>map&lt;uint32, .AiSkillCdInfo&gt; ai_cd_map = 1;</code>
+       * <code>map&lt;uint32, .AiSkillCdInfo&gt; ai_cd_map = 11;</code>
        */
 
       public Builder putAllAiCdMap(
@@ -740,7 +700,18 @@ public final class EvtAiSyncSkillCdNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new EvtAiSyncSkillCdNotify(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -781,7 +752,7 @@ public final class EvtAiSyncSkillCdNotifyOuterClass {
     java.lang.String[] descriptorData = {
       "\n\034EvtAiSyncSkillCdNotify.proto\032\023AiSkillC" +
       "dInfo.proto\"\221\001\n\026EvtAiSyncSkillCdNotify\0227" +
-      "\n\tai_cd_map\030\001 \003(\0132$.EvtAiSyncSkillCdNoti" +
+      "\n\tai_cd_map\030\013 \003(\0132$.EvtAiSyncSkillCdNoti" +
       "fy.AiCdMapEntry\032>\n\014AiCdMapEntry\022\013\n\003key\030\001" +
       " \001(\r\022\035\n\005value\030\002 \001(\0132\016.AiSkillCdInfo:\0028\001B" +
       "\033\n\031emu.grasscutter.net.protob\006proto3"

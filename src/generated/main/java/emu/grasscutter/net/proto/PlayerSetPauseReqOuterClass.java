@@ -19,18 +19,12 @@ public final class PlayerSetPauseReqOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>bool is_paused = 1;</code>
+     * <code>bool is_paused = 9;</code>
      * @return The isPaused.
      */
     boolean getIsPaused();
   }
   /**
-   * <pre>
-   * CmdId: 853
-   * Version: 4.6.0
-   * Obfs: INJOCNKNOAP
-   * </pre>
-   *
    * Protobuf type {@code PlayerSetPauseReq}
    */
   public static final class PlayerSetPauseReq extends
@@ -57,48 +51,6 @@ public final class PlayerSetPauseReqOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private PlayerSetPauseReq(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-
-              isPaused_ = input.readBool();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.PlayerSetPauseReqOuterClass.internal_static_PlayerSetPauseReq_descriptor;
@@ -112,10 +64,10 @@ public final class PlayerSetPauseReqOuterClass {
               emu.grasscutter.net.proto.PlayerSetPauseReqOuterClass.PlayerSetPauseReq.class, emu.grasscutter.net.proto.PlayerSetPauseReqOuterClass.PlayerSetPauseReq.Builder.class);
     }
 
-    public static final int IS_PAUSED_FIELD_NUMBER = 1;
+    public static final int IS_PAUSED_FIELD_NUMBER = 9;
     private boolean isPaused_;
     /**
-     * <code>bool is_paused = 1;</code>
+     * <code>bool is_paused = 9;</code>
      * @return The isPaused.
      */
     @java.lang.Override
@@ -138,9 +90,9 @@ public final class PlayerSetPauseReqOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (isPaused_ != false) {
-        output.writeBool(1, isPaused_);
+        output.writeBool(9, isPaused_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -151,9 +103,9 @@ public final class PlayerSetPauseReqOuterClass {
       size = 0;
       if (isPaused_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(1, isPaused_);
+          .computeBoolSize(9, isPaused_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -170,7 +122,7 @@ public final class PlayerSetPauseReqOuterClass {
 
       if (getIsPaused()
           != other.getIsPaused()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -184,7 +136,7 @@ public final class PlayerSetPauseReqOuterClass {
       hash = (37 * hash) + IS_PAUSED_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsPaused());
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -280,12 +232,6 @@ public final class PlayerSetPauseReqOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 853
-     * Version: 4.6.0
-     * Obfs: INJOCNKNOAP
-     * </pre>
-     *
      * Protobuf type {@code PlayerSetPauseReq}
      */
     public static final class Builder extends
@@ -307,18 +253,13 @@ public final class PlayerSetPauseReqOuterClass {
 
       // Construct using emu.grasscutter.net.proto.PlayerSetPauseReqOuterClass.PlayerSetPauseReq.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -403,7 +344,7 @@ public final class PlayerSetPauseReqOuterClass {
         if (other.getIsPaused() != false) {
           setIsPaused(other.getIsPaused());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -418,23 +359,41 @@ public final class PlayerSetPauseReqOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.PlayerSetPauseReqOuterClass.PlayerSetPauseReq parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 72: {
+                isPaused_ = input.readBool();
+
+                break;
+              } // case 72
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.PlayerSetPauseReqOuterClass.PlayerSetPauseReq) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
       private boolean isPaused_ ;
       /**
-       * <code>bool is_paused = 1;</code>
+       * <code>bool is_paused = 9;</code>
        * @return The isPaused.
        */
       @java.lang.Override
@@ -442,7 +401,7 @@ public final class PlayerSetPauseReqOuterClass {
         return isPaused_;
       }
       /**
-       * <code>bool is_paused = 1;</code>
+       * <code>bool is_paused = 9;</code>
        * @param value The isPaused to set.
        * @return This builder for chaining.
        */
@@ -453,7 +412,7 @@ public final class PlayerSetPauseReqOuterClass {
         return this;
       }
       /**
-       * <code>bool is_paused = 1;</code>
+       * <code>bool is_paused = 9;</code>
        * @return This builder for chaining.
        */
       public Builder clearIsPaused() {
@@ -495,7 +454,18 @@ public final class PlayerSetPauseReqOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new PlayerSetPauseReq(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -530,7 +500,7 @@ public final class PlayerSetPauseReqOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\027PlayerSetPauseReq.proto\"&\n\021PlayerSetPa" +
-      "useReq\022\021\n\tis_paused\030\001 \001(\010B\033\n\031emu.grasscu" +
+      "useReq\022\021\n\tis_paused\030\t \001(\010B\033\n\031emu.grasscu" +
       "tter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

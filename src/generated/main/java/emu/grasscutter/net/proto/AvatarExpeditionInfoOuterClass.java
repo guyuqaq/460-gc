@@ -54,10 +54,6 @@ public final class AvatarExpeditionInfoOuterClass {
     float getShortenRatio();
   }
   /**
-   * <pre>
-   * Obf: MBBNGLKDKFD
-   * </pre>
-   *
    * Protobuf type {@code AvatarExpeditionInfo}
    */
   public static final class AvatarExpeditionInfo extends
@@ -84,69 +80,6 @@ public final class AvatarExpeditionInfoOuterClass {
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
-    }
-    private AvatarExpeditionInfo(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              int rawValue = input.readEnum();
-
-              state_ = rawValue;
-              break;
-            }
-            case 16: {
-
-              expId_ = input.readUInt32();
-              break;
-            }
-            case 24: {
-
-              hourTime_ = input.readUInt32();
-              break;
-            }
-            case 32: {
-
-              startTime_ = input.readUInt32();
-              break;
-            }
-            case 45: {
-
-              shortenRatio_ = input.readFloat();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -238,7 +171,7 @@ public final class AvatarExpeditionInfoOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (state_ != emu.grasscutter.net.proto.AvatarExpeditionStateOuterClass.AvatarExpeditionState.AVATAR_EXPEDITION_NONE.getNumber()) {
+      if (state_ != emu.grasscutter.net.proto.AvatarExpeditionStateOuterClass.AvatarExpeditionState.AVATAR_EXPEDITION_STATE_AVATAR_EXPEDITION_NONE.getNumber()) {
         output.writeEnum(1, state_);
       }
       if (expId_ != 0) {
@@ -250,10 +183,10 @@ public final class AvatarExpeditionInfoOuterClass {
       if (startTime_ != 0) {
         output.writeUInt32(4, startTime_);
       }
-      if (shortenRatio_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(shortenRatio_) != 0) {
         output.writeFloat(5, shortenRatio_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -262,7 +195,7 @@ public final class AvatarExpeditionInfoOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (state_ != emu.grasscutter.net.proto.AvatarExpeditionStateOuterClass.AvatarExpeditionState.AVATAR_EXPEDITION_NONE.getNumber()) {
+      if (state_ != emu.grasscutter.net.proto.AvatarExpeditionStateOuterClass.AvatarExpeditionState.AVATAR_EXPEDITION_STATE_AVATAR_EXPEDITION_NONE.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, state_);
       }
@@ -278,11 +211,11 @@ public final class AvatarExpeditionInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(4, startTime_);
       }
-      if (shortenRatio_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(shortenRatio_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(5, shortenRatio_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -307,7 +240,7 @@ public final class AvatarExpeditionInfoOuterClass {
       if (java.lang.Float.floatToIntBits(getShortenRatio())
           != java.lang.Float.floatToIntBits(
               other.getShortenRatio())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -329,7 +262,7 @@ public final class AvatarExpeditionInfoOuterClass {
       hash = (37 * hash) + SHORTEN_RATIO_FIELD_NUMBER;
       hash = (53 * hash) + java.lang.Float.floatToIntBits(
           getShortenRatio());
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -425,10 +358,6 @@ public final class AvatarExpeditionInfoOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * Obf: MBBNGLKDKFD
-     * </pre>
-     *
      * Protobuf type {@code AvatarExpeditionInfo}
      */
     public static final class Builder extends
@@ -450,18 +379,13 @@ public final class AvatarExpeditionInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.AvatarExpeditionInfoOuterClass.AvatarExpeditionInfo.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -570,7 +494,7 @@ public final class AvatarExpeditionInfoOuterClass {
         if (other.getShortenRatio() != 0F) {
           setShortenRatio(other.getShortenRatio());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -585,17 +509,55 @@ public final class AvatarExpeditionInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.AvatarExpeditionInfoOuterClass.AvatarExpeditionInfo parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                state_ = input.readEnum();
+
+                break;
+              } // case 8
+              case 16: {
+                expId_ = input.readUInt32();
+
+                break;
+              } // case 16
+              case 24: {
+                hourTime_ = input.readUInt32();
+
+                break;
+              } // case 24
+              case 32: {
+                startTime_ = input.readUInt32();
+
+                break;
+              } // case 32
+              case 45: {
+                shortenRatio_ = input.readFloat();
+
+                break;
+              } // case 45
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.AvatarExpeditionInfoOuterClass.AvatarExpeditionInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -809,7 +771,18 @@ public final class AvatarExpeditionInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new AvatarExpeditionInfo(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

@@ -19,18 +19,12 @@ public final class GetAllMailNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>bool is_collected = 4;</code>
+     * <code>bool is_collected = 8;</code>
      * @return The isCollected.
      */
     boolean getIsCollected();
   }
   /**
-   * <pre>
-   * CmdId: 20077
-   * Version: 4.6.0
-   * Obfs: PANJGIHEJFO
-   * </pre>
-   *
    * Protobuf type {@code GetAllMailNotify}
    */
   public static final class GetAllMailNotify extends
@@ -57,48 +51,6 @@ public final class GetAllMailNotifyOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private GetAllMailNotify(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 32: {
-
-              isCollected_ = input.readBool();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.GetAllMailNotifyOuterClass.internal_static_GetAllMailNotify_descriptor;
@@ -112,10 +64,10 @@ public final class GetAllMailNotifyOuterClass {
               emu.grasscutter.net.proto.GetAllMailNotifyOuterClass.GetAllMailNotify.class, emu.grasscutter.net.proto.GetAllMailNotifyOuterClass.GetAllMailNotify.Builder.class);
     }
 
-    public static final int IS_COLLECTED_FIELD_NUMBER = 4;
+    public static final int IS_COLLECTED_FIELD_NUMBER = 8;
     private boolean isCollected_;
     /**
-     * <code>bool is_collected = 4;</code>
+     * <code>bool is_collected = 8;</code>
      * @return The isCollected.
      */
     @java.lang.Override
@@ -138,9 +90,9 @@ public final class GetAllMailNotifyOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (isCollected_ != false) {
-        output.writeBool(4, isCollected_);
+        output.writeBool(8, isCollected_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -151,9 +103,9 @@ public final class GetAllMailNotifyOuterClass {
       size = 0;
       if (isCollected_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(4, isCollected_);
+          .computeBoolSize(8, isCollected_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -170,7 +122,7 @@ public final class GetAllMailNotifyOuterClass {
 
       if (getIsCollected()
           != other.getIsCollected()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -184,7 +136,7 @@ public final class GetAllMailNotifyOuterClass {
       hash = (37 * hash) + IS_COLLECTED_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsCollected());
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -280,12 +232,6 @@ public final class GetAllMailNotifyOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 20077
-     * Version: 4.6.0
-     * Obfs: PANJGIHEJFO
-     * </pre>
-     *
      * Protobuf type {@code GetAllMailNotify}
      */
     public static final class Builder extends
@@ -307,18 +253,13 @@ public final class GetAllMailNotifyOuterClass {
 
       // Construct using emu.grasscutter.net.proto.GetAllMailNotifyOuterClass.GetAllMailNotify.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -403,7 +344,7 @@ public final class GetAllMailNotifyOuterClass {
         if (other.getIsCollected() != false) {
           setIsCollected(other.getIsCollected());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -418,23 +359,41 @@ public final class GetAllMailNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.GetAllMailNotifyOuterClass.GetAllMailNotify parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 64: {
+                isCollected_ = input.readBool();
+
+                break;
+              } // case 64
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.GetAllMailNotifyOuterClass.GetAllMailNotify) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
       private boolean isCollected_ ;
       /**
-       * <code>bool is_collected = 4;</code>
+       * <code>bool is_collected = 8;</code>
        * @return The isCollected.
        */
       @java.lang.Override
@@ -442,7 +401,7 @@ public final class GetAllMailNotifyOuterClass {
         return isCollected_;
       }
       /**
-       * <code>bool is_collected = 4;</code>
+       * <code>bool is_collected = 8;</code>
        * @param value The isCollected to set.
        * @return This builder for chaining.
        */
@@ -453,7 +412,7 @@ public final class GetAllMailNotifyOuterClass {
         return this;
       }
       /**
-       * <code>bool is_collected = 4;</code>
+       * <code>bool is_collected = 8;</code>
        * @return This builder for chaining.
        */
       public Builder clearIsCollected() {
@@ -495,7 +454,18 @@ public final class GetAllMailNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new GetAllMailNotify(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -530,7 +500,7 @@ public final class GetAllMailNotifyOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\026GetAllMailNotify.proto\"(\n\020GetAllMailNo" +
-      "tify\022\024\n\014is_collected\030\004 \001(\010B\033\n\031emu.grassc" +
+      "tify\022\024\n\014is_collected\030\010 \001(\010B\033\n\031emu.grassc" +
       "utter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

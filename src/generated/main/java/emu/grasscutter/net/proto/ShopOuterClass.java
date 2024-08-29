@@ -19,94 +19,80 @@ public final class ShopOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .ShopMcoinProduct mcoin_product_list = 3;</code>
-     */
-    java.util.List<emu.grasscutter.net.proto.ShopMcoinProductOuterClass.ShopMcoinProduct> 
-        getMcoinProductListList();
-    /**
-     * <code>repeated .ShopMcoinProduct mcoin_product_list = 3;</code>
-     */
-    emu.grasscutter.net.proto.ShopMcoinProductOuterClass.ShopMcoinProduct getMcoinProductList(int index);
-    /**
-     * <code>repeated .ShopMcoinProduct mcoin_product_list = 3;</code>
-     */
-    int getMcoinProductListCount();
-    /**
-     * <code>repeated .ShopMcoinProduct mcoin_product_list = 3;</code>
-     */
-    java.util.List<? extends emu.grasscutter.net.proto.ShopMcoinProductOuterClass.ShopMcoinProductOrBuilder> 
-        getMcoinProductListOrBuilderList();
-    /**
-     * <code>repeated .ShopMcoinProduct mcoin_product_list = 3;</code>
-     */
-    emu.grasscutter.net.proto.ShopMcoinProductOuterClass.ShopMcoinProductOrBuilder getMcoinProductListOrBuilder(
-        int index);
-
-    /**
-     * <code>uint32 shop_type = 4;</code>
-     * @return The shopType.
-     */
-    int getShopType();
-
-    /**
-     * <code>uint32 city_reputation_level = 6;</code>
+     * <pre>
+     * 5
+     * </pre>
+     *
+     * <code>uint32 city_reputation_level = 2;</code>
      * @return The cityReputationLevel.
      */
     int getCityReputationLevel();
 
     /**
-     * <code>repeated .ShopCardProduct card_product_list = 7;</code>
+     * <code>uint32 shop_type = 3;</code>
+     * @return The shopType.
+     */
+    int getShopType();
+
+    /**
+     * <code>uint32 next_refresh_time = 4;</code>
+     * @return The nextRefreshTime.
+     */
+    int getNextRefreshTime();
+
+    /**
+     * <code>uint32 DGEAKOFNGDN = 5;</code>
+     * @return The dGEAKOFNGDN.
+     */
+    int getDGEAKOFNGDN();
+
+    /**
+     * <code>repeated .ShopMcoinProduct mcoin_product_list = 7;</code>
+     */
+    java.util.List<emu.grasscutter.net.proto.ShopMcoinProductOuterClass.ShopMcoinProduct> 
+        getMcoinProductListList();
+    /**
+     * <code>repeated .ShopMcoinProduct mcoin_product_list = 7;</code>
+     */
+    emu.grasscutter.net.proto.ShopMcoinProductOuterClass.ShopMcoinProduct getMcoinProductList(int index);
+    /**
+     * <code>repeated .ShopMcoinProduct mcoin_product_list = 7;</code>
+     */
+    int getMcoinProductListCount();
+    /**
+     * <code>repeated .ShopMcoinProduct mcoin_product_list = 7;</code>
+     */
+    java.util.List<? extends emu.grasscutter.net.proto.ShopMcoinProductOuterClass.ShopMcoinProductOrBuilder> 
+        getMcoinProductListOrBuilderList();
+    /**
+     * <code>repeated .ShopMcoinProduct mcoin_product_list = 7;</code>
+     */
+    emu.grasscutter.net.proto.ShopMcoinProductOuterClass.ShopMcoinProductOrBuilder getMcoinProductListOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .ShopCardProduct card_product_list = 9;</code>
      */
     java.util.List<emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct> 
         getCardProductListList();
     /**
-     * <code>repeated .ShopCardProduct card_product_list = 7;</code>
+     * <code>repeated .ShopCardProduct card_product_list = 9;</code>
      */
     emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct getCardProductList(int index);
     /**
-     * <code>repeated .ShopCardProduct card_product_list = 7;</code>
+     * <code>repeated .ShopCardProduct card_product_list = 9;</code>
      */
     int getCardProductListCount();
     /**
-     * <code>repeated .ShopCardProduct card_product_list = 7;</code>
+     * <code>repeated .ShopCardProduct card_product_list = 9;</code>
      */
     java.util.List<? extends emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProductOrBuilder> 
         getCardProductListOrBuilderList();
     /**
-     * <code>repeated .ShopCardProduct card_product_list = 7;</code>
+     * <code>repeated .ShopCardProduct card_product_list = 9;</code>
      */
     emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProductOrBuilder getCardProductListOrBuilder(
         int index);
-
-    /**
-     * <code>repeated .ShopConcertProduct concert_product_list = 8;</code>
-     */
-    java.util.List<emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProduct> 
-        getConcertProductListList();
-    /**
-     * <code>repeated .ShopConcertProduct concert_product_list = 8;</code>
-     */
-    emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProduct getConcertProductList(int index);
-    /**
-     * <code>repeated .ShopConcertProduct concert_product_list = 8;</code>
-     */
-    int getConcertProductListCount();
-    /**
-     * <code>repeated .ShopConcertProduct concert_product_list = 8;</code>
-     */
-    java.util.List<? extends emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProductOrBuilder> 
-        getConcertProductListOrBuilderList();
-    /**
-     * <code>repeated .ShopConcertProduct concert_product_list = 8;</code>
-     */
-    emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProductOrBuilder getConcertProductListOrBuilder(
-        int index);
-
-    /**
-     * <code>uint32 city_id = 9;</code>
-     * @return The cityId.
-     */
-    int getCityId();
 
     /**
      * <code>repeated .ShopGoods goods_list = 10;</code>
@@ -133,16 +119,36 @@ public final class ShopOuterClass {
         int index);
 
     /**
-     * <code>uint32 next_refresh_time = 14;</code>
-     * @return The nextRefreshTime.
+     * <code>repeated .ShopConcertProduct concert_product_list = 12;</code>
      */
-    int getNextRefreshTime();
+    java.util.List<emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProduct> 
+        getConcertProductListList();
+    /**
+     * <code>repeated .ShopConcertProduct concert_product_list = 12;</code>
+     */
+    emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProduct getConcertProductList(int index);
+    /**
+     * <code>repeated .ShopConcertProduct concert_product_list = 12;</code>
+     */
+    int getConcertProductListCount();
+    /**
+     * <code>repeated .ShopConcertProduct concert_product_list = 12;</code>
+     */
+    java.util.List<? extends emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProductOrBuilder> 
+        getConcertProductListOrBuilderList();
+    /**
+     * <code>repeated .ShopConcertProduct concert_product_list = 12;</code>
+     */
+    emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProductOrBuilder getConcertProductListOrBuilder(
+        int index);
+
+    /**
+     * <code>uint32 city_id = 14;</code>
+     * @return The cityId.
+     */
+    int getCityId();
   }
   /**
-   * <pre>
-   * 4.6.0
-   * </pre>
-   *
    * Protobuf type {@code Shop}
    */
   public static final class Shop extends
@@ -157,8 +163,8 @@ public final class ShopOuterClass {
     private Shop() {
       mcoinProductList_ = java.util.Collections.emptyList();
       cardProductList_ = java.util.Collections.emptyList();
-      concertProductList_ = java.util.Collections.emptyList();
       goodsList_ = java.util.Collections.emptyList();
+      concertProductList_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -173,112 +179,6 @@ public final class ShopOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private Shop(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 26: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                mcoinProductList_ = new java.util.ArrayList<emu.grasscutter.net.proto.ShopMcoinProductOuterClass.ShopMcoinProduct>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              mcoinProductList_.add(
-                  input.readMessage(emu.grasscutter.net.proto.ShopMcoinProductOuterClass.ShopMcoinProduct.parser(), extensionRegistry));
-              break;
-            }
-            case 32: {
-
-              shopType_ = input.readUInt32();
-              break;
-            }
-            case 48: {
-
-              cityReputationLevel_ = input.readUInt32();
-              break;
-            }
-            case 58: {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                cardProductList_ = new java.util.ArrayList<emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct>();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              cardProductList_.add(
-                  input.readMessage(emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct.parser(), extensionRegistry));
-              break;
-            }
-            case 66: {
-              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-                concertProductList_ = new java.util.ArrayList<emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProduct>();
-                mutable_bitField0_ |= 0x00000004;
-              }
-              concertProductList_.add(
-                  input.readMessage(emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProduct.parser(), extensionRegistry));
-              break;
-            }
-            case 72: {
-
-              cityId_ = input.readUInt32();
-              break;
-            }
-            case 82: {
-              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
-                goodsList_ = new java.util.ArrayList<emu.grasscutter.net.proto.ShopGoodsOuterClass.ShopGoods>();
-                mutable_bitField0_ |= 0x00000008;
-              }
-              goodsList_.add(
-                  input.readMessage(emu.grasscutter.net.proto.ShopGoodsOuterClass.ShopGoods.parser(), extensionRegistry));
-              break;
-            }
-            case 112: {
-
-              nextRefreshTime_ = input.readUInt32();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          mcoinProductList_ = java.util.Collections.unmodifiableList(mcoinProductList_);
-        }
-        if (((mutable_bitField0_ & 0x00000002) != 0)) {
-          cardProductList_ = java.util.Collections.unmodifiableList(cardProductList_);
-        }
-        if (((mutable_bitField0_ & 0x00000004) != 0)) {
-          concertProductList_ = java.util.Collections.unmodifiableList(concertProductList_);
-        }
-        if (((mutable_bitField0_ & 0x00000008) != 0)) {
-          goodsList_ = java.util.Collections.unmodifiableList(goodsList_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.ShopOuterClass.internal_static_Shop_descriptor;
@@ -292,61 +192,14 @@ public final class ShopOuterClass {
               emu.grasscutter.net.proto.ShopOuterClass.Shop.class, emu.grasscutter.net.proto.ShopOuterClass.Shop.Builder.class);
     }
 
-    public static final int MCOIN_PRODUCT_LIST_FIELD_NUMBER = 3;
-    private java.util.List<emu.grasscutter.net.proto.ShopMcoinProductOuterClass.ShopMcoinProduct> mcoinProductList_;
-    /**
-     * <code>repeated .ShopMcoinProduct mcoin_product_list = 3;</code>
-     */
-    @java.lang.Override
-    public java.util.List<emu.grasscutter.net.proto.ShopMcoinProductOuterClass.ShopMcoinProduct> getMcoinProductListList() {
-      return mcoinProductList_;
-    }
-    /**
-     * <code>repeated .ShopMcoinProduct mcoin_product_list = 3;</code>
-     */
-    @java.lang.Override
-    public java.util.List<? extends emu.grasscutter.net.proto.ShopMcoinProductOuterClass.ShopMcoinProductOrBuilder> 
-        getMcoinProductListOrBuilderList() {
-      return mcoinProductList_;
-    }
-    /**
-     * <code>repeated .ShopMcoinProduct mcoin_product_list = 3;</code>
-     */
-    @java.lang.Override
-    public int getMcoinProductListCount() {
-      return mcoinProductList_.size();
-    }
-    /**
-     * <code>repeated .ShopMcoinProduct mcoin_product_list = 3;</code>
-     */
-    @java.lang.Override
-    public emu.grasscutter.net.proto.ShopMcoinProductOuterClass.ShopMcoinProduct getMcoinProductList(int index) {
-      return mcoinProductList_.get(index);
-    }
-    /**
-     * <code>repeated .ShopMcoinProduct mcoin_product_list = 3;</code>
-     */
-    @java.lang.Override
-    public emu.grasscutter.net.proto.ShopMcoinProductOuterClass.ShopMcoinProductOrBuilder getMcoinProductListOrBuilder(
-        int index) {
-      return mcoinProductList_.get(index);
-    }
-
-    public static final int SHOP_TYPE_FIELD_NUMBER = 4;
-    private int shopType_;
-    /**
-     * <code>uint32 shop_type = 4;</code>
-     * @return The shopType.
-     */
-    @java.lang.Override
-    public int getShopType() {
-      return shopType_;
-    }
-
-    public static final int CITY_REPUTATION_LEVEL_FIELD_NUMBER = 6;
+    public static final int CITY_REPUTATION_LEVEL_FIELD_NUMBER = 2;
     private int cityReputationLevel_;
     /**
-     * <code>uint32 city_reputation_level = 6;</code>
+     * <pre>
+     * 5
+     * </pre>
+     *
+     * <code>uint32 city_reputation_level = 2;</code>
      * @return The cityReputationLevel.
      */
     @java.lang.Override
@@ -354,17 +207,90 @@ public final class ShopOuterClass {
       return cityReputationLevel_;
     }
 
-    public static final int CARD_PRODUCT_LIST_FIELD_NUMBER = 7;
+    public static final int SHOP_TYPE_FIELD_NUMBER = 3;
+    private int shopType_;
+    /**
+     * <code>uint32 shop_type = 3;</code>
+     * @return The shopType.
+     */
+    @java.lang.Override
+    public int getShopType() {
+      return shopType_;
+    }
+
+    public static final int NEXT_REFRESH_TIME_FIELD_NUMBER = 4;
+    private int nextRefreshTime_;
+    /**
+     * <code>uint32 next_refresh_time = 4;</code>
+     * @return The nextRefreshTime.
+     */
+    @java.lang.Override
+    public int getNextRefreshTime() {
+      return nextRefreshTime_;
+    }
+
+    public static final int DGEAKOFNGDN_FIELD_NUMBER = 5;
+    private int dGEAKOFNGDN_;
+    /**
+     * <code>uint32 DGEAKOFNGDN = 5;</code>
+     * @return The dGEAKOFNGDN.
+     */
+    @java.lang.Override
+    public int getDGEAKOFNGDN() {
+      return dGEAKOFNGDN_;
+    }
+
+    public static final int MCOIN_PRODUCT_LIST_FIELD_NUMBER = 7;
+    private java.util.List<emu.grasscutter.net.proto.ShopMcoinProductOuterClass.ShopMcoinProduct> mcoinProductList_;
+    /**
+     * <code>repeated .ShopMcoinProduct mcoin_product_list = 7;</code>
+     */
+    @java.lang.Override
+    public java.util.List<emu.grasscutter.net.proto.ShopMcoinProductOuterClass.ShopMcoinProduct> getMcoinProductListList() {
+      return mcoinProductList_;
+    }
+    /**
+     * <code>repeated .ShopMcoinProduct mcoin_product_list = 7;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends emu.grasscutter.net.proto.ShopMcoinProductOuterClass.ShopMcoinProductOrBuilder> 
+        getMcoinProductListOrBuilderList() {
+      return mcoinProductList_;
+    }
+    /**
+     * <code>repeated .ShopMcoinProduct mcoin_product_list = 7;</code>
+     */
+    @java.lang.Override
+    public int getMcoinProductListCount() {
+      return mcoinProductList_.size();
+    }
+    /**
+     * <code>repeated .ShopMcoinProduct mcoin_product_list = 7;</code>
+     */
+    @java.lang.Override
+    public emu.grasscutter.net.proto.ShopMcoinProductOuterClass.ShopMcoinProduct getMcoinProductList(int index) {
+      return mcoinProductList_.get(index);
+    }
+    /**
+     * <code>repeated .ShopMcoinProduct mcoin_product_list = 7;</code>
+     */
+    @java.lang.Override
+    public emu.grasscutter.net.proto.ShopMcoinProductOuterClass.ShopMcoinProductOrBuilder getMcoinProductListOrBuilder(
+        int index) {
+      return mcoinProductList_.get(index);
+    }
+
+    public static final int CARD_PRODUCT_LIST_FIELD_NUMBER = 9;
     private java.util.List<emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct> cardProductList_;
     /**
-     * <code>repeated .ShopCardProduct card_product_list = 7;</code>
+     * <code>repeated .ShopCardProduct card_product_list = 9;</code>
      */
     @java.lang.Override
     public java.util.List<emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct> getCardProductListList() {
       return cardProductList_;
     }
     /**
-     * <code>repeated .ShopCardProduct card_product_list = 7;</code>
+     * <code>repeated .ShopCardProduct card_product_list = 9;</code>
      */
     @java.lang.Override
     public java.util.List<? extends emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProductOrBuilder> 
@@ -372,77 +298,26 @@ public final class ShopOuterClass {
       return cardProductList_;
     }
     /**
-     * <code>repeated .ShopCardProduct card_product_list = 7;</code>
+     * <code>repeated .ShopCardProduct card_product_list = 9;</code>
      */
     @java.lang.Override
     public int getCardProductListCount() {
       return cardProductList_.size();
     }
     /**
-     * <code>repeated .ShopCardProduct card_product_list = 7;</code>
+     * <code>repeated .ShopCardProduct card_product_list = 9;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct getCardProductList(int index) {
       return cardProductList_.get(index);
     }
     /**
-     * <code>repeated .ShopCardProduct card_product_list = 7;</code>
+     * <code>repeated .ShopCardProduct card_product_list = 9;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProductOrBuilder getCardProductListOrBuilder(
         int index) {
       return cardProductList_.get(index);
-    }
-
-    public static final int CONCERT_PRODUCT_LIST_FIELD_NUMBER = 8;
-    private java.util.List<emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProduct> concertProductList_;
-    /**
-     * <code>repeated .ShopConcertProduct concert_product_list = 8;</code>
-     */
-    @java.lang.Override
-    public java.util.List<emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProduct> getConcertProductListList() {
-      return concertProductList_;
-    }
-    /**
-     * <code>repeated .ShopConcertProduct concert_product_list = 8;</code>
-     */
-    @java.lang.Override
-    public java.util.List<? extends emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProductOrBuilder> 
-        getConcertProductListOrBuilderList() {
-      return concertProductList_;
-    }
-    /**
-     * <code>repeated .ShopConcertProduct concert_product_list = 8;</code>
-     */
-    @java.lang.Override
-    public int getConcertProductListCount() {
-      return concertProductList_.size();
-    }
-    /**
-     * <code>repeated .ShopConcertProduct concert_product_list = 8;</code>
-     */
-    @java.lang.Override
-    public emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProduct getConcertProductList(int index) {
-      return concertProductList_.get(index);
-    }
-    /**
-     * <code>repeated .ShopConcertProduct concert_product_list = 8;</code>
-     */
-    @java.lang.Override
-    public emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProductOrBuilder getConcertProductListOrBuilder(
-        int index) {
-      return concertProductList_.get(index);
-    }
-
-    public static final int CITY_ID_FIELD_NUMBER = 9;
-    private int cityId_;
-    /**
-     * <code>uint32 city_id = 9;</code>
-     * @return The cityId.
-     */
-    @java.lang.Override
-    public int getCityId() {
-      return cityId_;
     }
 
     public static final int GOODS_LIST_FIELD_NUMBER = 10;
@@ -485,15 +360,55 @@ public final class ShopOuterClass {
       return goodsList_.get(index);
     }
 
-    public static final int NEXT_REFRESH_TIME_FIELD_NUMBER = 14;
-    private int nextRefreshTime_;
+    public static final int CONCERT_PRODUCT_LIST_FIELD_NUMBER = 12;
+    private java.util.List<emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProduct> concertProductList_;
     /**
-     * <code>uint32 next_refresh_time = 14;</code>
-     * @return The nextRefreshTime.
+     * <code>repeated .ShopConcertProduct concert_product_list = 12;</code>
      */
     @java.lang.Override
-    public int getNextRefreshTime() {
-      return nextRefreshTime_;
+    public java.util.List<emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProduct> getConcertProductListList() {
+      return concertProductList_;
+    }
+    /**
+     * <code>repeated .ShopConcertProduct concert_product_list = 12;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProductOrBuilder> 
+        getConcertProductListOrBuilderList() {
+      return concertProductList_;
+    }
+    /**
+     * <code>repeated .ShopConcertProduct concert_product_list = 12;</code>
+     */
+    @java.lang.Override
+    public int getConcertProductListCount() {
+      return concertProductList_.size();
+    }
+    /**
+     * <code>repeated .ShopConcertProduct concert_product_list = 12;</code>
+     */
+    @java.lang.Override
+    public emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProduct getConcertProductList(int index) {
+      return concertProductList_.get(index);
+    }
+    /**
+     * <code>repeated .ShopConcertProduct concert_product_list = 12;</code>
+     */
+    @java.lang.Override
+    public emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProductOrBuilder getConcertProductListOrBuilder(
+        int index) {
+      return concertProductList_.get(index);
+    }
+
+    public static final int CITY_ID_FIELD_NUMBER = 14;
+    private int cityId_;
+    /**
+     * <code>uint32 city_id = 14;</code>
+     * @return The cityId.
+     */
+    @java.lang.Override
+    public int getCityId() {
+      return cityId_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -510,31 +425,34 @@ public final class ShopOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      for (int i = 0; i < mcoinProductList_.size(); i++) {
-        output.writeMessage(3, mcoinProductList_.get(i));
+      if (cityReputationLevel_ != 0) {
+        output.writeUInt32(2, cityReputationLevel_);
       }
       if (shopType_ != 0) {
-        output.writeUInt32(4, shopType_);
+        output.writeUInt32(3, shopType_);
       }
-      if (cityReputationLevel_ != 0) {
-        output.writeUInt32(6, cityReputationLevel_);
+      if (nextRefreshTime_ != 0) {
+        output.writeUInt32(4, nextRefreshTime_);
+      }
+      if (dGEAKOFNGDN_ != 0) {
+        output.writeUInt32(5, dGEAKOFNGDN_);
+      }
+      for (int i = 0; i < mcoinProductList_.size(); i++) {
+        output.writeMessage(7, mcoinProductList_.get(i));
       }
       for (int i = 0; i < cardProductList_.size(); i++) {
-        output.writeMessage(7, cardProductList_.get(i));
-      }
-      for (int i = 0; i < concertProductList_.size(); i++) {
-        output.writeMessage(8, concertProductList_.get(i));
-      }
-      if (cityId_ != 0) {
-        output.writeUInt32(9, cityId_);
+        output.writeMessage(9, cardProductList_.get(i));
       }
       for (int i = 0; i < goodsList_.size(); i++) {
         output.writeMessage(10, goodsList_.get(i));
       }
-      if (nextRefreshTime_ != 0) {
-        output.writeUInt32(14, nextRefreshTime_);
+      for (int i = 0; i < concertProductList_.size(); i++) {
+        output.writeMessage(12, concertProductList_.get(i));
       }
-      unknownFields.writeTo(output);
+      if (cityId_ != 0) {
+        output.writeUInt32(14, cityId_);
+      }
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -543,39 +461,43 @@ public final class ShopOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      for (int i = 0; i < mcoinProductList_.size(); i++) {
+      if (cityReputationLevel_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, mcoinProductList_.get(i));
+          .computeUInt32Size(2, cityReputationLevel_);
       }
       if (shopType_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(4, shopType_);
+          .computeUInt32Size(3, shopType_);
       }
-      if (cityReputationLevel_ != 0) {
+      if (nextRefreshTime_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(6, cityReputationLevel_);
+          .computeUInt32Size(4, nextRefreshTime_);
+      }
+      if (dGEAKOFNGDN_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(5, dGEAKOFNGDN_);
+      }
+      for (int i = 0; i < mcoinProductList_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, mcoinProductList_.get(i));
       }
       for (int i = 0; i < cardProductList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(7, cardProductList_.get(i));
-      }
-      for (int i = 0; i < concertProductList_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(8, concertProductList_.get(i));
-      }
-      if (cityId_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(9, cityId_);
+          .computeMessageSize(9, cardProductList_.get(i));
       }
       for (int i = 0; i < goodsList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, goodsList_.get(i));
       }
-      if (nextRefreshTime_ != 0) {
+      for (int i = 0; i < concertProductList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(14, nextRefreshTime_);
+          .computeMessageSize(12, concertProductList_.get(i));
       }
-      size += unknownFields.getSerializedSize();
+      if (cityId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(14, cityId_);
+      }
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -590,23 +512,25 @@ public final class ShopOuterClass {
       }
       emu.grasscutter.net.proto.ShopOuterClass.Shop other = (emu.grasscutter.net.proto.ShopOuterClass.Shop) obj;
 
-      if (!getMcoinProductListList()
-          .equals(other.getMcoinProductListList())) return false;
-      if (getShopType()
-          != other.getShopType()) return false;
       if (getCityReputationLevel()
           != other.getCityReputationLevel()) return false;
+      if (getShopType()
+          != other.getShopType()) return false;
+      if (getNextRefreshTime()
+          != other.getNextRefreshTime()) return false;
+      if (getDGEAKOFNGDN()
+          != other.getDGEAKOFNGDN()) return false;
+      if (!getMcoinProductListList()
+          .equals(other.getMcoinProductListList())) return false;
       if (!getCardProductListList()
           .equals(other.getCardProductListList())) return false;
+      if (!getGoodsListList()
+          .equals(other.getGoodsListList())) return false;
       if (!getConcertProductListList()
           .equals(other.getConcertProductListList())) return false;
       if (getCityId()
           != other.getCityId()) return false;
-      if (!getGoodsListList()
-          .equals(other.getGoodsListList())) return false;
-      if (getNextRefreshTime()
-          != other.getNextRefreshTime()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -617,17 +541,25 @@ public final class ShopOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CITY_REPUTATION_LEVEL_FIELD_NUMBER;
+      hash = (53 * hash) + getCityReputationLevel();
+      hash = (37 * hash) + SHOP_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getShopType();
+      hash = (37 * hash) + NEXT_REFRESH_TIME_FIELD_NUMBER;
+      hash = (53 * hash) + getNextRefreshTime();
+      hash = (37 * hash) + DGEAKOFNGDN_FIELD_NUMBER;
+      hash = (53 * hash) + getDGEAKOFNGDN();
       if (getMcoinProductListCount() > 0) {
         hash = (37 * hash) + MCOIN_PRODUCT_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getMcoinProductListList().hashCode();
       }
-      hash = (37 * hash) + SHOP_TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + getShopType();
-      hash = (37 * hash) + CITY_REPUTATION_LEVEL_FIELD_NUMBER;
-      hash = (53 * hash) + getCityReputationLevel();
       if (getCardProductListCount() > 0) {
         hash = (37 * hash) + CARD_PRODUCT_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getCardProductListList().hashCode();
+      }
+      if (getGoodsListCount() > 0) {
+        hash = (37 * hash) + GOODS_LIST_FIELD_NUMBER;
+        hash = (53 * hash) + getGoodsListList().hashCode();
       }
       if (getConcertProductListCount() > 0) {
         hash = (37 * hash) + CONCERT_PRODUCT_LIST_FIELD_NUMBER;
@@ -635,13 +567,7 @@ public final class ShopOuterClass {
       }
       hash = (37 * hash) + CITY_ID_FIELD_NUMBER;
       hash = (53 * hash) + getCityId();
-      if (getGoodsListCount() > 0) {
-        hash = (37 * hash) + GOODS_LIST_FIELD_NUMBER;
-        hash = (53 * hash) + getGoodsListList().hashCode();
-      }
-      hash = (37 * hash) + NEXT_REFRESH_TIME_FIELD_NUMBER;
-      hash = (53 * hash) + getNextRefreshTime();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -737,10 +663,6 @@ public final class ShopOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * 4.6.0
-     * </pre>
-     *
      * Protobuf type {@code Shop}
      */
     public static final class Builder extends
@@ -762,57 +684,54 @@ public final class ShopOuterClass {
 
       // Construct using emu.grasscutter.net.proto.ShopOuterClass.Shop.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getMcoinProductListFieldBuilder();
-          getCardProductListFieldBuilder();
-          getConcertProductListFieldBuilder();
-          getGoodsListFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (mcoinProductListBuilder_ == null) {
-          mcoinProductList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        } else {
-          mcoinProductListBuilder_.clear();
-        }
-        shopType_ = 0;
-
         cityReputationLevel_ = 0;
 
+        shopType_ = 0;
+
+        nextRefreshTime_ = 0;
+
+        dGEAKOFNGDN_ = 0;
+
+        if (mcoinProductListBuilder_ == null) {
+          mcoinProductList_ = java.util.Collections.emptyList();
+        } else {
+          mcoinProductList_ = null;
+          mcoinProductListBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
         if (cardProductListBuilder_ == null) {
           cardProductList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
+          cardProductList_ = null;
           cardProductListBuilder_.clear();
         }
-        if (concertProductListBuilder_ == null) {
-          concertProductList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
-        } else {
-          concertProductListBuilder_.clear();
-        }
-        cityId_ = 0;
-
+        bitField0_ = (bitField0_ & ~0x00000002);
         if (goodsListBuilder_ == null) {
           goodsList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
         } else {
+          goodsList_ = null;
           goodsListBuilder_.clear();
         }
-        nextRefreshTime_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        if (concertProductListBuilder_ == null) {
+          concertProductList_ = java.util.Collections.emptyList();
+        } else {
+          concertProductList_ = null;
+          concertProductListBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        cityId_ = 0;
 
         return this;
       }
@@ -841,6 +760,10 @@ public final class ShopOuterClass {
       public emu.grasscutter.net.proto.ShopOuterClass.Shop buildPartial() {
         emu.grasscutter.net.proto.ShopOuterClass.Shop result = new emu.grasscutter.net.proto.ShopOuterClass.Shop(this);
         int from_bitField0_ = bitField0_;
+        result.cityReputationLevel_ = cityReputationLevel_;
+        result.shopType_ = shopType_;
+        result.nextRefreshTime_ = nextRefreshTime_;
+        result.dGEAKOFNGDN_ = dGEAKOFNGDN_;
         if (mcoinProductListBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             mcoinProductList_ = java.util.Collections.unmodifiableList(mcoinProductList_);
@@ -850,8 +773,6 @@ public final class ShopOuterClass {
         } else {
           result.mcoinProductList_ = mcoinProductListBuilder_.build();
         }
-        result.shopType_ = shopType_;
-        result.cityReputationLevel_ = cityReputationLevel_;
         if (cardProductListBuilder_ == null) {
           if (((bitField0_ & 0x00000002) != 0)) {
             cardProductList_ = java.util.Collections.unmodifiableList(cardProductList_);
@@ -861,26 +782,25 @@ public final class ShopOuterClass {
         } else {
           result.cardProductList_ = cardProductListBuilder_.build();
         }
-        if (concertProductListBuilder_ == null) {
+        if (goodsListBuilder_ == null) {
           if (((bitField0_ & 0x00000004) != 0)) {
-            concertProductList_ = java.util.Collections.unmodifiableList(concertProductList_);
+            goodsList_ = java.util.Collections.unmodifiableList(goodsList_);
             bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.goodsList_ = goodsList_;
+        } else {
+          result.goodsList_ = goodsListBuilder_.build();
+        }
+        if (concertProductListBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            concertProductList_ = java.util.Collections.unmodifiableList(concertProductList_);
+            bitField0_ = (bitField0_ & ~0x00000008);
           }
           result.concertProductList_ = concertProductList_;
         } else {
           result.concertProductList_ = concertProductListBuilder_.build();
         }
         result.cityId_ = cityId_;
-        if (goodsListBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) != 0)) {
-            goodsList_ = java.util.Collections.unmodifiableList(goodsList_);
-            bitField0_ = (bitField0_ & ~0x00000008);
-          }
-          result.goodsList_ = goodsList_;
-        } else {
-          result.goodsList_ = goodsListBuilder_.build();
-        }
-        result.nextRefreshTime_ = nextRefreshTime_;
         onBuilt();
         return result;
       }
@@ -929,6 +849,18 @@ public final class ShopOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.ShopOuterClass.Shop other) {
         if (other == emu.grasscutter.net.proto.ShopOuterClass.Shop.getDefaultInstance()) return this;
+        if (other.getCityReputationLevel() != 0) {
+          setCityReputationLevel(other.getCityReputationLevel());
+        }
+        if (other.getShopType() != 0) {
+          setShopType(other.getShopType());
+        }
+        if (other.getNextRefreshTime() != 0) {
+          setNextRefreshTime(other.getNextRefreshTime());
+        }
+        if (other.getDGEAKOFNGDN() != 0) {
+          setDGEAKOFNGDN(other.getDGEAKOFNGDN());
+        }
         if (mcoinProductListBuilder_ == null) {
           if (!other.mcoinProductList_.isEmpty()) {
             if (mcoinProductList_.isEmpty()) {
@@ -954,12 +886,6 @@ public final class ShopOuterClass {
               mcoinProductListBuilder_.addAllMessages(other.mcoinProductList_);
             }
           }
-        }
-        if (other.getShopType() != 0) {
-          setShopType(other.getShopType());
-        }
-        if (other.getCityReputationLevel() != 0) {
-          setCityReputationLevel(other.getCityReputationLevel());
         }
         if (cardProductListBuilder_ == null) {
           if (!other.cardProductList_.isEmpty()) {
@@ -987,40 +913,11 @@ public final class ShopOuterClass {
             }
           }
         }
-        if (concertProductListBuilder_ == null) {
-          if (!other.concertProductList_.isEmpty()) {
-            if (concertProductList_.isEmpty()) {
-              concertProductList_ = other.concertProductList_;
-              bitField0_ = (bitField0_ & ~0x00000004);
-            } else {
-              ensureConcertProductListIsMutable();
-              concertProductList_.addAll(other.concertProductList_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.concertProductList_.isEmpty()) {
-            if (concertProductListBuilder_.isEmpty()) {
-              concertProductListBuilder_.dispose();
-              concertProductListBuilder_ = null;
-              concertProductList_ = other.concertProductList_;
-              bitField0_ = (bitField0_ & ~0x00000004);
-              concertProductListBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getConcertProductListFieldBuilder() : null;
-            } else {
-              concertProductListBuilder_.addAllMessages(other.concertProductList_);
-            }
-          }
-        }
-        if (other.getCityId() != 0) {
-          setCityId(other.getCityId());
-        }
         if (goodsListBuilder_ == null) {
           if (!other.goodsList_.isEmpty()) {
             if (goodsList_.isEmpty()) {
               goodsList_ = other.goodsList_;
-              bitField0_ = (bitField0_ & ~0x00000008);
+              bitField0_ = (bitField0_ & ~0x00000004);
             } else {
               ensureGoodsListIsMutable();
               goodsList_.addAll(other.goodsList_);
@@ -1033,7 +930,7 @@ public final class ShopOuterClass {
               goodsListBuilder_.dispose();
               goodsListBuilder_ = null;
               goodsList_ = other.goodsList_;
-              bitField0_ = (bitField0_ & ~0x00000008);
+              bitField0_ = (bitField0_ & ~0x00000004);
               goodsListBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getGoodsListFieldBuilder() : null;
@@ -1042,10 +939,36 @@ public final class ShopOuterClass {
             }
           }
         }
-        if (other.getNextRefreshTime() != 0) {
-          setNextRefreshTime(other.getNextRefreshTime());
+        if (concertProductListBuilder_ == null) {
+          if (!other.concertProductList_.isEmpty()) {
+            if (concertProductList_.isEmpty()) {
+              concertProductList_ = other.concertProductList_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureConcertProductListIsMutable();
+              concertProductList_.addAll(other.concertProductList_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.concertProductList_.isEmpty()) {
+            if (concertProductListBuilder_.isEmpty()) {
+              concertProductListBuilder_.dispose();
+              concertProductListBuilder_ = null;
+              concertProductList_ = other.concertProductList_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              concertProductListBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getConcertProductListFieldBuilder() : null;
+            } else {
+              concertProductListBuilder_.addAllMessages(other.concertProductList_);
+            }
+          }
         }
-        this.mergeUnknownFields(other.unknownFields);
+        if (other.getCityId() != 0) {
+          setCityId(other.getCityId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -1060,20 +983,246 @@ public final class ShopOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.ShopOuterClass.Shop parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 16: {
+                cityReputationLevel_ = input.readUInt32();
+
+                break;
+              } // case 16
+              case 24: {
+                shopType_ = input.readUInt32();
+
+                break;
+              } // case 24
+              case 32: {
+                nextRefreshTime_ = input.readUInt32();
+
+                break;
+              } // case 32
+              case 40: {
+                dGEAKOFNGDN_ = input.readUInt32();
+
+                break;
+              } // case 40
+              case 58: {
+                emu.grasscutter.net.proto.ShopMcoinProductOuterClass.ShopMcoinProduct m =
+                    input.readMessage(
+                        emu.grasscutter.net.proto.ShopMcoinProductOuterClass.ShopMcoinProduct.parser(),
+                        extensionRegistry);
+                if (mcoinProductListBuilder_ == null) {
+                  ensureMcoinProductListIsMutable();
+                  mcoinProductList_.add(m);
+                } else {
+                  mcoinProductListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 58
+              case 74: {
+                emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct m =
+                    input.readMessage(
+                        emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct.parser(),
+                        extensionRegistry);
+                if (cardProductListBuilder_ == null) {
+                  ensureCardProductListIsMutable();
+                  cardProductList_.add(m);
+                } else {
+                  cardProductListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 74
+              case 82: {
+                emu.grasscutter.net.proto.ShopGoodsOuterClass.ShopGoods m =
+                    input.readMessage(
+                        emu.grasscutter.net.proto.ShopGoodsOuterClass.ShopGoods.parser(),
+                        extensionRegistry);
+                if (goodsListBuilder_ == null) {
+                  ensureGoodsListIsMutable();
+                  goodsList_.add(m);
+                } else {
+                  goodsListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 82
+              case 98: {
+                emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProduct m =
+                    input.readMessage(
+                        emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProduct.parser(),
+                        extensionRegistry);
+                if (concertProductListBuilder_ == null) {
+                  ensureConcertProductListIsMutable();
+                  concertProductList_.add(m);
+                } else {
+                  concertProductListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 98
+              case 112: {
+                cityId_ = input.readUInt32();
+
+                break;
+              } // case 112
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.ShopOuterClass.Shop) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
+
+      private int cityReputationLevel_ ;
+      /**
+       * <pre>
+       * 5
+       * </pre>
+       *
+       * <code>uint32 city_reputation_level = 2;</code>
+       * @return The cityReputationLevel.
+       */
+      @java.lang.Override
+      public int getCityReputationLevel() {
+        return cityReputationLevel_;
+      }
+      /**
+       * <pre>
+       * 5
+       * </pre>
+       *
+       * <code>uint32 city_reputation_level = 2;</code>
+       * @param value The cityReputationLevel to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCityReputationLevel(int value) {
+        
+        cityReputationLevel_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 5
+       * </pre>
+       *
+       * <code>uint32 city_reputation_level = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCityReputationLevel() {
+        
+        cityReputationLevel_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int shopType_ ;
+      /**
+       * <code>uint32 shop_type = 3;</code>
+       * @return The shopType.
+       */
+      @java.lang.Override
+      public int getShopType() {
+        return shopType_;
+      }
+      /**
+       * <code>uint32 shop_type = 3;</code>
+       * @param value The shopType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setShopType(int value) {
+        
+        shopType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 shop_type = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearShopType() {
+        
+        shopType_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int nextRefreshTime_ ;
+      /**
+       * <code>uint32 next_refresh_time = 4;</code>
+       * @return The nextRefreshTime.
+       */
+      @java.lang.Override
+      public int getNextRefreshTime() {
+        return nextRefreshTime_;
+      }
+      /**
+       * <code>uint32 next_refresh_time = 4;</code>
+       * @param value The nextRefreshTime to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNextRefreshTime(int value) {
+        
+        nextRefreshTime_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 next_refresh_time = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNextRefreshTime() {
+        
+        nextRefreshTime_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int dGEAKOFNGDN_ ;
+      /**
+       * <code>uint32 DGEAKOFNGDN = 5;</code>
+       * @return The dGEAKOFNGDN.
+       */
+      @java.lang.Override
+      public int getDGEAKOFNGDN() {
+        return dGEAKOFNGDN_;
+      }
+      /**
+       * <code>uint32 DGEAKOFNGDN = 5;</code>
+       * @param value The dGEAKOFNGDN to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDGEAKOFNGDN(int value) {
+        
+        dGEAKOFNGDN_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 DGEAKOFNGDN = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDGEAKOFNGDN() {
+        
+        dGEAKOFNGDN_ = 0;
+        onChanged();
+        return this;
+      }
 
       private java.util.List<emu.grasscutter.net.proto.ShopMcoinProductOuterClass.ShopMcoinProduct> mcoinProductList_ =
         java.util.Collections.emptyList();
@@ -1088,7 +1237,7 @@ public final class ShopOuterClass {
           emu.grasscutter.net.proto.ShopMcoinProductOuterClass.ShopMcoinProduct, emu.grasscutter.net.proto.ShopMcoinProductOuterClass.ShopMcoinProduct.Builder, emu.grasscutter.net.proto.ShopMcoinProductOuterClass.ShopMcoinProductOrBuilder> mcoinProductListBuilder_;
 
       /**
-       * <code>repeated .ShopMcoinProduct mcoin_product_list = 3;</code>
+       * <code>repeated .ShopMcoinProduct mcoin_product_list = 7;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.ShopMcoinProductOuterClass.ShopMcoinProduct> getMcoinProductListList() {
         if (mcoinProductListBuilder_ == null) {
@@ -1098,7 +1247,7 @@ public final class ShopOuterClass {
         }
       }
       /**
-       * <code>repeated .ShopMcoinProduct mcoin_product_list = 3;</code>
+       * <code>repeated .ShopMcoinProduct mcoin_product_list = 7;</code>
        */
       public int getMcoinProductListCount() {
         if (mcoinProductListBuilder_ == null) {
@@ -1108,7 +1257,7 @@ public final class ShopOuterClass {
         }
       }
       /**
-       * <code>repeated .ShopMcoinProduct mcoin_product_list = 3;</code>
+       * <code>repeated .ShopMcoinProduct mcoin_product_list = 7;</code>
        */
       public emu.grasscutter.net.proto.ShopMcoinProductOuterClass.ShopMcoinProduct getMcoinProductList(int index) {
         if (mcoinProductListBuilder_ == null) {
@@ -1118,7 +1267,7 @@ public final class ShopOuterClass {
         }
       }
       /**
-       * <code>repeated .ShopMcoinProduct mcoin_product_list = 3;</code>
+       * <code>repeated .ShopMcoinProduct mcoin_product_list = 7;</code>
        */
       public Builder setMcoinProductList(
           int index, emu.grasscutter.net.proto.ShopMcoinProductOuterClass.ShopMcoinProduct value) {
@@ -1135,7 +1284,7 @@ public final class ShopOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ShopMcoinProduct mcoin_product_list = 3;</code>
+       * <code>repeated .ShopMcoinProduct mcoin_product_list = 7;</code>
        */
       public Builder setMcoinProductList(
           int index, emu.grasscutter.net.proto.ShopMcoinProductOuterClass.ShopMcoinProduct.Builder builderForValue) {
@@ -1149,7 +1298,7 @@ public final class ShopOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ShopMcoinProduct mcoin_product_list = 3;</code>
+       * <code>repeated .ShopMcoinProduct mcoin_product_list = 7;</code>
        */
       public Builder addMcoinProductList(emu.grasscutter.net.proto.ShopMcoinProductOuterClass.ShopMcoinProduct value) {
         if (mcoinProductListBuilder_ == null) {
@@ -1165,7 +1314,7 @@ public final class ShopOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ShopMcoinProduct mcoin_product_list = 3;</code>
+       * <code>repeated .ShopMcoinProduct mcoin_product_list = 7;</code>
        */
       public Builder addMcoinProductList(
           int index, emu.grasscutter.net.proto.ShopMcoinProductOuterClass.ShopMcoinProduct value) {
@@ -1182,7 +1331,7 @@ public final class ShopOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ShopMcoinProduct mcoin_product_list = 3;</code>
+       * <code>repeated .ShopMcoinProduct mcoin_product_list = 7;</code>
        */
       public Builder addMcoinProductList(
           emu.grasscutter.net.proto.ShopMcoinProductOuterClass.ShopMcoinProduct.Builder builderForValue) {
@@ -1196,7 +1345,7 @@ public final class ShopOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ShopMcoinProduct mcoin_product_list = 3;</code>
+       * <code>repeated .ShopMcoinProduct mcoin_product_list = 7;</code>
        */
       public Builder addMcoinProductList(
           int index, emu.grasscutter.net.proto.ShopMcoinProductOuterClass.ShopMcoinProduct.Builder builderForValue) {
@@ -1210,7 +1359,7 @@ public final class ShopOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ShopMcoinProduct mcoin_product_list = 3;</code>
+       * <code>repeated .ShopMcoinProduct mcoin_product_list = 7;</code>
        */
       public Builder addAllMcoinProductList(
           java.lang.Iterable<? extends emu.grasscutter.net.proto.ShopMcoinProductOuterClass.ShopMcoinProduct> values) {
@@ -1225,7 +1374,7 @@ public final class ShopOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ShopMcoinProduct mcoin_product_list = 3;</code>
+       * <code>repeated .ShopMcoinProduct mcoin_product_list = 7;</code>
        */
       public Builder clearMcoinProductList() {
         if (mcoinProductListBuilder_ == null) {
@@ -1238,7 +1387,7 @@ public final class ShopOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ShopMcoinProduct mcoin_product_list = 3;</code>
+       * <code>repeated .ShopMcoinProduct mcoin_product_list = 7;</code>
        */
       public Builder removeMcoinProductList(int index) {
         if (mcoinProductListBuilder_ == null) {
@@ -1251,14 +1400,14 @@ public final class ShopOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ShopMcoinProduct mcoin_product_list = 3;</code>
+       * <code>repeated .ShopMcoinProduct mcoin_product_list = 7;</code>
        */
       public emu.grasscutter.net.proto.ShopMcoinProductOuterClass.ShopMcoinProduct.Builder getMcoinProductListBuilder(
           int index) {
         return getMcoinProductListFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .ShopMcoinProduct mcoin_product_list = 3;</code>
+       * <code>repeated .ShopMcoinProduct mcoin_product_list = 7;</code>
        */
       public emu.grasscutter.net.proto.ShopMcoinProductOuterClass.ShopMcoinProductOrBuilder getMcoinProductListOrBuilder(
           int index) {
@@ -1268,7 +1417,7 @@ public final class ShopOuterClass {
         }
       }
       /**
-       * <code>repeated .ShopMcoinProduct mcoin_product_list = 3;</code>
+       * <code>repeated .ShopMcoinProduct mcoin_product_list = 7;</code>
        */
       public java.util.List<? extends emu.grasscutter.net.proto.ShopMcoinProductOuterClass.ShopMcoinProductOrBuilder> 
            getMcoinProductListOrBuilderList() {
@@ -1279,14 +1428,14 @@ public final class ShopOuterClass {
         }
       }
       /**
-       * <code>repeated .ShopMcoinProduct mcoin_product_list = 3;</code>
+       * <code>repeated .ShopMcoinProduct mcoin_product_list = 7;</code>
        */
       public emu.grasscutter.net.proto.ShopMcoinProductOuterClass.ShopMcoinProduct.Builder addMcoinProductListBuilder() {
         return getMcoinProductListFieldBuilder().addBuilder(
             emu.grasscutter.net.proto.ShopMcoinProductOuterClass.ShopMcoinProduct.getDefaultInstance());
       }
       /**
-       * <code>repeated .ShopMcoinProduct mcoin_product_list = 3;</code>
+       * <code>repeated .ShopMcoinProduct mcoin_product_list = 7;</code>
        */
       public emu.grasscutter.net.proto.ShopMcoinProductOuterClass.ShopMcoinProduct.Builder addMcoinProductListBuilder(
           int index) {
@@ -1294,7 +1443,7 @@ public final class ShopOuterClass {
             index, emu.grasscutter.net.proto.ShopMcoinProductOuterClass.ShopMcoinProduct.getDefaultInstance());
       }
       /**
-       * <code>repeated .ShopMcoinProduct mcoin_product_list = 3;</code>
+       * <code>repeated .ShopMcoinProduct mcoin_product_list = 7;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.ShopMcoinProductOuterClass.ShopMcoinProduct.Builder> 
            getMcoinProductListBuilderList() {
@@ -1315,68 +1464,6 @@ public final class ShopOuterClass {
         return mcoinProductListBuilder_;
       }
 
-      private int shopType_ ;
-      /**
-       * <code>uint32 shop_type = 4;</code>
-       * @return The shopType.
-       */
-      @java.lang.Override
-      public int getShopType() {
-        return shopType_;
-      }
-      /**
-       * <code>uint32 shop_type = 4;</code>
-       * @param value The shopType to set.
-       * @return This builder for chaining.
-       */
-      public Builder setShopType(int value) {
-        
-        shopType_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 shop_type = 4;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearShopType() {
-        
-        shopType_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int cityReputationLevel_ ;
-      /**
-       * <code>uint32 city_reputation_level = 6;</code>
-       * @return The cityReputationLevel.
-       */
-      @java.lang.Override
-      public int getCityReputationLevel() {
-        return cityReputationLevel_;
-      }
-      /**
-       * <code>uint32 city_reputation_level = 6;</code>
-       * @param value The cityReputationLevel to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCityReputationLevel(int value) {
-        
-        cityReputationLevel_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 city_reputation_level = 6;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCityReputationLevel() {
-        
-        cityReputationLevel_ = 0;
-        onChanged();
-        return this;
-      }
-
       private java.util.List<emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct> cardProductList_ =
         java.util.Collections.emptyList();
       private void ensureCardProductListIsMutable() {
@@ -1390,7 +1477,7 @@ public final class ShopOuterClass {
           emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct, emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct.Builder, emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProductOrBuilder> cardProductListBuilder_;
 
       /**
-       * <code>repeated .ShopCardProduct card_product_list = 7;</code>
+       * <code>repeated .ShopCardProduct card_product_list = 9;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct> getCardProductListList() {
         if (cardProductListBuilder_ == null) {
@@ -1400,7 +1487,7 @@ public final class ShopOuterClass {
         }
       }
       /**
-       * <code>repeated .ShopCardProduct card_product_list = 7;</code>
+       * <code>repeated .ShopCardProduct card_product_list = 9;</code>
        */
       public int getCardProductListCount() {
         if (cardProductListBuilder_ == null) {
@@ -1410,7 +1497,7 @@ public final class ShopOuterClass {
         }
       }
       /**
-       * <code>repeated .ShopCardProduct card_product_list = 7;</code>
+       * <code>repeated .ShopCardProduct card_product_list = 9;</code>
        */
       public emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct getCardProductList(int index) {
         if (cardProductListBuilder_ == null) {
@@ -1420,7 +1507,7 @@ public final class ShopOuterClass {
         }
       }
       /**
-       * <code>repeated .ShopCardProduct card_product_list = 7;</code>
+       * <code>repeated .ShopCardProduct card_product_list = 9;</code>
        */
       public Builder setCardProductList(
           int index, emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct value) {
@@ -1437,7 +1524,7 @@ public final class ShopOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ShopCardProduct card_product_list = 7;</code>
+       * <code>repeated .ShopCardProduct card_product_list = 9;</code>
        */
       public Builder setCardProductList(
           int index, emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct.Builder builderForValue) {
@@ -1451,7 +1538,7 @@ public final class ShopOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ShopCardProduct card_product_list = 7;</code>
+       * <code>repeated .ShopCardProduct card_product_list = 9;</code>
        */
       public Builder addCardProductList(emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct value) {
         if (cardProductListBuilder_ == null) {
@@ -1467,7 +1554,7 @@ public final class ShopOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ShopCardProduct card_product_list = 7;</code>
+       * <code>repeated .ShopCardProduct card_product_list = 9;</code>
        */
       public Builder addCardProductList(
           int index, emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct value) {
@@ -1484,7 +1571,7 @@ public final class ShopOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ShopCardProduct card_product_list = 7;</code>
+       * <code>repeated .ShopCardProduct card_product_list = 9;</code>
        */
       public Builder addCardProductList(
           emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct.Builder builderForValue) {
@@ -1498,7 +1585,7 @@ public final class ShopOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ShopCardProduct card_product_list = 7;</code>
+       * <code>repeated .ShopCardProduct card_product_list = 9;</code>
        */
       public Builder addCardProductList(
           int index, emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct.Builder builderForValue) {
@@ -1512,7 +1599,7 @@ public final class ShopOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ShopCardProduct card_product_list = 7;</code>
+       * <code>repeated .ShopCardProduct card_product_list = 9;</code>
        */
       public Builder addAllCardProductList(
           java.lang.Iterable<? extends emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct> values) {
@@ -1527,7 +1614,7 @@ public final class ShopOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ShopCardProduct card_product_list = 7;</code>
+       * <code>repeated .ShopCardProduct card_product_list = 9;</code>
        */
       public Builder clearCardProductList() {
         if (cardProductListBuilder_ == null) {
@@ -1540,7 +1627,7 @@ public final class ShopOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ShopCardProduct card_product_list = 7;</code>
+       * <code>repeated .ShopCardProduct card_product_list = 9;</code>
        */
       public Builder removeCardProductList(int index) {
         if (cardProductListBuilder_ == null) {
@@ -1553,14 +1640,14 @@ public final class ShopOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ShopCardProduct card_product_list = 7;</code>
+       * <code>repeated .ShopCardProduct card_product_list = 9;</code>
        */
       public emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct.Builder getCardProductListBuilder(
           int index) {
         return getCardProductListFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .ShopCardProduct card_product_list = 7;</code>
+       * <code>repeated .ShopCardProduct card_product_list = 9;</code>
        */
       public emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProductOrBuilder getCardProductListOrBuilder(
           int index) {
@@ -1570,7 +1657,7 @@ public final class ShopOuterClass {
         }
       }
       /**
-       * <code>repeated .ShopCardProduct card_product_list = 7;</code>
+       * <code>repeated .ShopCardProduct card_product_list = 9;</code>
        */
       public java.util.List<? extends emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProductOrBuilder> 
            getCardProductListOrBuilderList() {
@@ -1581,14 +1668,14 @@ public final class ShopOuterClass {
         }
       }
       /**
-       * <code>repeated .ShopCardProduct card_product_list = 7;</code>
+       * <code>repeated .ShopCardProduct card_product_list = 9;</code>
        */
       public emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct.Builder addCardProductListBuilder() {
         return getCardProductListFieldBuilder().addBuilder(
             emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct.getDefaultInstance());
       }
       /**
-       * <code>repeated .ShopCardProduct card_product_list = 7;</code>
+       * <code>repeated .ShopCardProduct card_product_list = 9;</code>
        */
       public emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct.Builder addCardProductListBuilder(
           int index) {
@@ -1596,7 +1683,7 @@ public final class ShopOuterClass {
             index, emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct.getDefaultInstance());
       }
       /**
-       * <code>repeated .ShopCardProduct card_product_list = 7;</code>
+       * <code>repeated .ShopCardProduct card_product_list = 9;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct.Builder> 
            getCardProductListBuilderList() {
@@ -1617,283 +1704,12 @@ public final class ShopOuterClass {
         return cardProductListBuilder_;
       }
 
-      private java.util.List<emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProduct> concertProductList_ =
-        java.util.Collections.emptyList();
-      private void ensureConcertProductListIsMutable() {
-        if (!((bitField0_ & 0x00000004) != 0)) {
-          concertProductList_ = new java.util.ArrayList<emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProduct>(concertProductList_);
-          bitField0_ |= 0x00000004;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProduct, emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProduct.Builder, emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProductOrBuilder> concertProductListBuilder_;
-
-      /**
-       * <code>repeated .ShopConcertProduct concert_product_list = 8;</code>
-       */
-      public java.util.List<emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProduct> getConcertProductListList() {
-        if (concertProductListBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(concertProductList_);
-        } else {
-          return concertProductListBuilder_.getMessageList();
-        }
-      }
-      /**
-       * <code>repeated .ShopConcertProduct concert_product_list = 8;</code>
-       */
-      public int getConcertProductListCount() {
-        if (concertProductListBuilder_ == null) {
-          return concertProductList_.size();
-        } else {
-          return concertProductListBuilder_.getCount();
-        }
-      }
-      /**
-       * <code>repeated .ShopConcertProduct concert_product_list = 8;</code>
-       */
-      public emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProduct getConcertProductList(int index) {
-        if (concertProductListBuilder_ == null) {
-          return concertProductList_.get(index);
-        } else {
-          return concertProductListBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <code>repeated .ShopConcertProduct concert_product_list = 8;</code>
-       */
-      public Builder setConcertProductList(
-          int index, emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProduct value) {
-        if (concertProductListBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureConcertProductListIsMutable();
-          concertProductList_.set(index, value);
-          onChanged();
-        } else {
-          concertProductListBuilder_.setMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .ShopConcertProduct concert_product_list = 8;</code>
-       */
-      public Builder setConcertProductList(
-          int index, emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProduct.Builder builderForValue) {
-        if (concertProductListBuilder_ == null) {
-          ensureConcertProductListIsMutable();
-          concertProductList_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          concertProductListBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .ShopConcertProduct concert_product_list = 8;</code>
-       */
-      public Builder addConcertProductList(emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProduct value) {
-        if (concertProductListBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureConcertProductListIsMutable();
-          concertProductList_.add(value);
-          onChanged();
-        } else {
-          concertProductListBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .ShopConcertProduct concert_product_list = 8;</code>
-       */
-      public Builder addConcertProductList(
-          int index, emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProduct value) {
-        if (concertProductListBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureConcertProductListIsMutable();
-          concertProductList_.add(index, value);
-          onChanged();
-        } else {
-          concertProductListBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .ShopConcertProduct concert_product_list = 8;</code>
-       */
-      public Builder addConcertProductList(
-          emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProduct.Builder builderForValue) {
-        if (concertProductListBuilder_ == null) {
-          ensureConcertProductListIsMutable();
-          concertProductList_.add(builderForValue.build());
-          onChanged();
-        } else {
-          concertProductListBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .ShopConcertProduct concert_product_list = 8;</code>
-       */
-      public Builder addConcertProductList(
-          int index, emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProduct.Builder builderForValue) {
-        if (concertProductListBuilder_ == null) {
-          ensureConcertProductListIsMutable();
-          concertProductList_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          concertProductListBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .ShopConcertProduct concert_product_list = 8;</code>
-       */
-      public Builder addAllConcertProductList(
-          java.lang.Iterable<? extends emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProduct> values) {
-        if (concertProductListBuilder_ == null) {
-          ensureConcertProductListIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, concertProductList_);
-          onChanged();
-        } else {
-          concertProductListBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .ShopConcertProduct concert_product_list = 8;</code>
-       */
-      public Builder clearConcertProductList() {
-        if (concertProductListBuilder_ == null) {
-          concertProductList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
-          onChanged();
-        } else {
-          concertProductListBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .ShopConcertProduct concert_product_list = 8;</code>
-       */
-      public Builder removeConcertProductList(int index) {
-        if (concertProductListBuilder_ == null) {
-          ensureConcertProductListIsMutable();
-          concertProductList_.remove(index);
-          onChanged();
-        } else {
-          concertProductListBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .ShopConcertProduct concert_product_list = 8;</code>
-       */
-      public emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProduct.Builder getConcertProductListBuilder(
-          int index) {
-        return getConcertProductListFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .ShopConcertProduct concert_product_list = 8;</code>
-       */
-      public emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProductOrBuilder getConcertProductListOrBuilder(
-          int index) {
-        if (concertProductListBuilder_ == null) {
-          return concertProductList_.get(index);  } else {
-          return concertProductListBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .ShopConcertProduct concert_product_list = 8;</code>
-       */
-      public java.util.List<? extends emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProductOrBuilder> 
-           getConcertProductListOrBuilderList() {
-        if (concertProductListBuilder_ != null) {
-          return concertProductListBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(concertProductList_);
-        }
-      }
-      /**
-       * <code>repeated .ShopConcertProduct concert_product_list = 8;</code>
-       */
-      public emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProduct.Builder addConcertProductListBuilder() {
-        return getConcertProductListFieldBuilder().addBuilder(
-            emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProduct.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .ShopConcertProduct concert_product_list = 8;</code>
-       */
-      public emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProduct.Builder addConcertProductListBuilder(
-          int index) {
-        return getConcertProductListFieldBuilder().addBuilder(
-            index, emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProduct.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .ShopConcertProduct concert_product_list = 8;</code>
-       */
-      public java.util.List<emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProduct.Builder> 
-           getConcertProductListBuilderList() {
-        return getConcertProductListFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProduct, emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProduct.Builder, emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProductOrBuilder> 
-          getConcertProductListFieldBuilder() {
-        if (concertProductListBuilder_ == null) {
-          concertProductListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProduct, emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProduct.Builder, emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProductOrBuilder>(
-                  concertProductList_,
-                  ((bitField0_ & 0x00000004) != 0),
-                  getParentForChildren(),
-                  isClean());
-          concertProductList_ = null;
-        }
-        return concertProductListBuilder_;
-      }
-
-      private int cityId_ ;
-      /**
-       * <code>uint32 city_id = 9;</code>
-       * @return The cityId.
-       */
-      @java.lang.Override
-      public int getCityId() {
-        return cityId_;
-      }
-      /**
-       * <code>uint32 city_id = 9;</code>
-       * @param value The cityId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCityId(int value) {
-        
-        cityId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 city_id = 9;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCityId() {
-        
-        cityId_ = 0;
-        onChanged();
-        return this;
-      }
-
       private java.util.List<emu.grasscutter.net.proto.ShopGoodsOuterClass.ShopGoods> goodsList_ =
         java.util.Collections.emptyList();
       private void ensureGoodsListIsMutable() {
-        if (!((bitField0_ & 0x00000008) != 0)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           goodsList_ = new java.util.ArrayList<emu.grasscutter.net.proto.ShopGoodsOuterClass.ShopGoods>(goodsList_);
-          bitField0_ |= 0x00000008;
+          bitField0_ |= 0x00000004;
          }
       }
 
@@ -2043,7 +1859,7 @@ public final class ShopOuterClass {
       public Builder clearGoodsList() {
         if (goodsListBuilder_ == null) {
           goodsList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000004);
           onChanged();
         } else {
           goodsListBuilder_.clear();
@@ -2120,7 +1936,7 @@ public final class ShopOuterClass {
           goodsListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               emu.grasscutter.net.proto.ShopGoodsOuterClass.ShopGoods, emu.grasscutter.net.proto.ShopGoodsOuterClass.ShopGoods.Builder, emu.grasscutter.net.proto.ShopGoodsOuterClass.ShopGoodsOrBuilder>(
                   goodsList_,
-                  ((bitField0_ & 0x00000008) != 0),
+                  ((bitField0_ & 0x00000004) != 0),
                   getParentForChildren(),
                   isClean());
           goodsList_ = null;
@@ -2128,33 +1944,273 @@ public final class ShopOuterClass {
         return goodsListBuilder_;
       }
 
-      private int nextRefreshTime_ ;
+      private java.util.List<emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProduct> concertProductList_ =
+        java.util.Collections.emptyList();
+      private void ensureConcertProductListIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          concertProductList_ = new java.util.ArrayList<emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProduct>(concertProductList_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProduct, emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProduct.Builder, emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProductOrBuilder> concertProductListBuilder_;
+
       /**
-       * <code>uint32 next_refresh_time = 14;</code>
-       * @return The nextRefreshTime.
+       * <code>repeated .ShopConcertProduct concert_product_list = 12;</code>
        */
-      @java.lang.Override
-      public int getNextRefreshTime() {
-        return nextRefreshTime_;
+      public java.util.List<emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProduct> getConcertProductListList() {
+        if (concertProductListBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(concertProductList_);
+        } else {
+          return concertProductListBuilder_.getMessageList();
+        }
       }
       /**
-       * <code>uint32 next_refresh_time = 14;</code>
-       * @param value The nextRefreshTime to set.
+       * <code>repeated .ShopConcertProduct concert_product_list = 12;</code>
+       */
+      public int getConcertProductListCount() {
+        if (concertProductListBuilder_ == null) {
+          return concertProductList_.size();
+        } else {
+          return concertProductListBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .ShopConcertProduct concert_product_list = 12;</code>
+       */
+      public emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProduct getConcertProductList(int index) {
+        if (concertProductListBuilder_ == null) {
+          return concertProductList_.get(index);
+        } else {
+          return concertProductListBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .ShopConcertProduct concert_product_list = 12;</code>
+       */
+      public Builder setConcertProductList(
+          int index, emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProduct value) {
+        if (concertProductListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureConcertProductListIsMutable();
+          concertProductList_.set(index, value);
+          onChanged();
+        } else {
+          concertProductListBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ShopConcertProduct concert_product_list = 12;</code>
+       */
+      public Builder setConcertProductList(
+          int index, emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProduct.Builder builderForValue) {
+        if (concertProductListBuilder_ == null) {
+          ensureConcertProductListIsMutable();
+          concertProductList_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          concertProductListBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ShopConcertProduct concert_product_list = 12;</code>
+       */
+      public Builder addConcertProductList(emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProduct value) {
+        if (concertProductListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureConcertProductListIsMutable();
+          concertProductList_.add(value);
+          onChanged();
+        } else {
+          concertProductListBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ShopConcertProduct concert_product_list = 12;</code>
+       */
+      public Builder addConcertProductList(
+          int index, emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProduct value) {
+        if (concertProductListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureConcertProductListIsMutable();
+          concertProductList_.add(index, value);
+          onChanged();
+        } else {
+          concertProductListBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ShopConcertProduct concert_product_list = 12;</code>
+       */
+      public Builder addConcertProductList(
+          emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProduct.Builder builderForValue) {
+        if (concertProductListBuilder_ == null) {
+          ensureConcertProductListIsMutable();
+          concertProductList_.add(builderForValue.build());
+          onChanged();
+        } else {
+          concertProductListBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ShopConcertProduct concert_product_list = 12;</code>
+       */
+      public Builder addConcertProductList(
+          int index, emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProduct.Builder builderForValue) {
+        if (concertProductListBuilder_ == null) {
+          ensureConcertProductListIsMutable();
+          concertProductList_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          concertProductListBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ShopConcertProduct concert_product_list = 12;</code>
+       */
+      public Builder addAllConcertProductList(
+          java.lang.Iterable<? extends emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProduct> values) {
+        if (concertProductListBuilder_ == null) {
+          ensureConcertProductListIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, concertProductList_);
+          onChanged();
+        } else {
+          concertProductListBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ShopConcertProduct concert_product_list = 12;</code>
+       */
+      public Builder clearConcertProductList() {
+        if (concertProductListBuilder_ == null) {
+          concertProductList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          concertProductListBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ShopConcertProduct concert_product_list = 12;</code>
+       */
+      public Builder removeConcertProductList(int index) {
+        if (concertProductListBuilder_ == null) {
+          ensureConcertProductListIsMutable();
+          concertProductList_.remove(index);
+          onChanged();
+        } else {
+          concertProductListBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ShopConcertProduct concert_product_list = 12;</code>
+       */
+      public emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProduct.Builder getConcertProductListBuilder(
+          int index) {
+        return getConcertProductListFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .ShopConcertProduct concert_product_list = 12;</code>
+       */
+      public emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProductOrBuilder getConcertProductListOrBuilder(
+          int index) {
+        if (concertProductListBuilder_ == null) {
+          return concertProductList_.get(index);  } else {
+          return concertProductListBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .ShopConcertProduct concert_product_list = 12;</code>
+       */
+      public java.util.List<? extends emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProductOrBuilder> 
+           getConcertProductListOrBuilderList() {
+        if (concertProductListBuilder_ != null) {
+          return concertProductListBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(concertProductList_);
+        }
+      }
+      /**
+       * <code>repeated .ShopConcertProduct concert_product_list = 12;</code>
+       */
+      public emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProduct.Builder addConcertProductListBuilder() {
+        return getConcertProductListFieldBuilder().addBuilder(
+            emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProduct.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .ShopConcertProduct concert_product_list = 12;</code>
+       */
+      public emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProduct.Builder addConcertProductListBuilder(
+          int index) {
+        return getConcertProductListFieldBuilder().addBuilder(
+            index, emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProduct.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .ShopConcertProduct concert_product_list = 12;</code>
+       */
+      public java.util.List<emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProduct.Builder> 
+           getConcertProductListBuilderList() {
+        return getConcertProductListFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProduct, emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProduct.Builder, emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProductOrBuilder> 
+          getConcertProductListFieldBuilder() {
+        if (concertProductListBuilder_ == null) {
+          concertProductListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProduct, emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProduct.Builder, emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProductOrBuilder>(
+                  concertProductList_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          concertProductList_ = null;
+        }
+        return concertProductListBuilder_;
+      }
+
+      private int cityId_ ;
+      /**
+       * <code>uint32 city_id = 14;</code>
+       * @return The cityId.
+       */
+      @java.lang.Override
+      public int getCityId() {
+        return cityId_;
+      }
+      /**
+       * <code>uint32 city_id = 14;</code>
+       * @param value The cityId to set.
        * @return This builder for chaining.
        */
-      public Builder setNextRefreshTime(int value) {
+      public Builder setCityId(int value) {
         
-        nextRefreshTime_ = value;
+        cityId_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 next_refresh_time = 14;</code>
+       * <code>uint32 city_id = 14;</code>
        * @return This builder for chaining.
        */
-      public Builder clearNextRefreshTime() {
+      public Builder clearCityId() {
         
-        nextRefreshTime_ = 0;
+        cityId_ = 0;
         onChanged();
         return this;
       }
@@ -2191,7 +2247,18 @@ public final class ShopOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Shop(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -2226,35 +2293,35 @@ public final class ShopOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\nShop.proto\032\026ShopMcoinProduct.proto\032\025Sh" +
-      "opCardProduct.proto\032\030ShopConcertProduct." +
-      "proto\032\017ShopGoods.proto\"\223\002\n\004Shop\022-\n\022mcoin" +
-      "_product_list\030\003 \003(\0132\021.ShopMcoinProduct\022\021" +
-      "\n\tshop_type\030\004 \001(\r\022\035\n\025city_reputation_lev" +
-      "el\030\006 \001(\r\022+\n\021card_product_list\030\007 \003(\0132\020.Sh" +
-      "opCardProduct\0221\n\024concert_product_list\030\010 " +
-      "\003(\0132\023.ShopConcertProduct\022\017\n\007city_id\030\t \001(" +
-      "\r\022\036\n\ngoods_list\030\n \003(\0132\n.ShopGoods\022\031\n\021nex" +
-      "t_refresh_time\030\016 \001(\rB\033\n\031emu.grasscutter." +
-      "net.protob\006proto3"
+      "opCardProduct.proto\032\017ShopGoods.proto\032\030Sh" +
+      "opConcertProduct.proto\"\250\002\n\004Shop\022\035\n\025city_" +
+      "reputation_level\030\002 \001(\r\022\021\n\tshop_type\030\003 \001(" +
+      "\r\022\031\n\021next_refresh_time\030\004 \001(\r\022\023\n\013DGEAKOFN" +
+      "GDN\030\005 \001(\r\022-\n\022mcoin_product_list\030\007 \003(\0132\021." +
+      "ShopMcoinProduct\022+\n\021card_product_list\030\t " +
+      "\003(\0132\020.ShopCardProduct\022\036\n\ngoods_list\030\n \003(" +
+      "\0132\n.ShopGoods\0221\n\024concert_product_list\030\014 " +
+      "\003(\0132\023.ShopConcertProduct\022\017\n\007city_id\030\016 \001(" +
+      "\rB\033\n\031emu.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           emu.grasscutter.net.proto.ShopMcoinProductOuterClass.getDescriptor(),
           emu.grasscutter.net.proto.ShopCardProductOuterClass.getDescriptor(),
-          emu.grasscutter.net.proto.ShopConcertProductOuterClass.getDescriptor(),
           emu.grasscutter.net.proto.ShopGoodsOuterClass.getDescriptor(),
+          emu.grasscutter.net.proto.ShopConcertProductOuterClass.getDescriptor(),
         });
     internal_static_Shop_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_Shop_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_Shop_descriptor,
-        new java.lang.String[] { "McoinProductList", "ShopType", "CityReputationLevel", "CardProductList", "ConcertProductList", "CityId", "GoodsList", "NextRefreshTime", });
+        new java.lang.String[] { "CityReputationLevel", "ShopType", "NextRefreshTime", "DGEAKOFNGDN", "McoinProductList", "CardProductList", "GoodsList", "ConcertProductList", "CityId", });
     emu.grasscutter.net.proto.ShopMcoinProductOuterClass.getDescriptor();
     emu.grasscutter.net.proto.ShopCardProductOuterClass.getDescriptor();
-    emu.grasscutter.net.proto.ShopConcertProductOuterClass.getDescriptor();
     emu.grasscutter.net.proto.ShopGoodsOuterClass.getDescriptor();
+    emu.grasscutter.net.proto.ShopConcertProductOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -19,29 +19,29 @@ public final class ModifierPropertyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.AbilityString key = 10;</code>
+     * <code>.AbilityString key = 11;</code>
      * @return Whether the key field is set.
      */
     boolean hasKey();
     /**
-     * <code>.AbilityString key = 10;</code>
+     * <code>.AbilityString key = 11;</code>
      * @return The key.
      */
     emu.grasscutter.net.proto.AbilityStringOuterClass.AbilityString getKey();
     /**
-     * <code>.AbilityString key = 10;</code>
+     * <code>.AbilityString key = 11;</code>
      */
     emu.grasscutter.net.proto.AbilityStringOuterClass.AbilityStringOrBuilder getKeyOrBuilder();
 
     /**
-     * <code>float value = 14;</code>
+     * <code>float value = 1;</code>
      * @return The value.
      */
     float getValue();
   }
   /**
    * <pre>
-   * Obf: HFHFECKAJGB
+   * 4.7.0
    * </pre>
    *
    * Protobuf type {@code ModifierProperty}
@@ -70,61 +70,6 @@ public final class ModifierPropertyOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private ModifierProperty(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 82: {
-              emu.grasscutter.net.proto.AbilityStringOuterClass.AbilityString.Builder subBuilder = null;
-              if (key_ != null) {
-                subBuilder = key_.toBuilder();
-              }
-              key_ = input.readMessage(emu.grasscutter.net.proto.AbilityStringOuterClass.AbilityString.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(key_);
-                key_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 117: {
-
-              value_ = input.readFloat();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.ModifierPropertyOuterClass.internal_static_ModifierProperty_descriptor;
@@ -138,10 +83,10 @@ public final class ModifierPropertyOuterClass {
               emu.grasscutter.net.proto.ModifierPropertyOuterClass.ModifierProperty.class, emu.grasscutter.net.proto.ModifierPropertyOuterClass.ModifierProperty.Builder.class);
     }
 
-    public static final int KEY_FIELD_NUMBER = 10;
+    public static final int KEY_FIELD_NUMBER = 11;
     private emu.grasscutter.net.proto.AbilityStringOuterClass.AbilityString key_;
     /**
-     * <code>.AbilityString key = 10;</code>
+     * <code>.AbilityString key = 11;</code>
      * @return Whether the key field is set.
      */
     @java.lang.Override
@@ -149,7 +94,7 @@ public final class ModifierPropertyOuterClass {
       return key_ != null;
     }
     /**
-     * <code>.AbilityString key = 10;</code>
+     * <code>.AbilityString key = 11;</code>
      * @return The key.
      */
     @java.lang.Override
@@ -157,17 +102,17 @@ public final class ModifierPropertyOuterClass {
       return key_ == null ? emu.grasscutter.net.proto.AbilityStringOuterClass.AbilityString.getDefaultInstance() : key_;
     }
     /**
-     * <code>.AbilityString key = 10;</code>
+     * <code>.AbilityString key = 11;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.AbilityStringOuterClass.AbilityStringOrBuilder getKeyOrBuilder() {
       return getKey();
     }
 
-    public static final int VALUE_FIELD_NUMBER = 14;
+    public static final int VALUE_FIELD_NUMBER = 1;
     private float value_;
     /**
-     * <code>float value = 14;</code>
+     * <code>float value = 1;</code>
      * @return The value.
      */
     @java.lang.Override
@@ -189,13 +134,13 @@ public final class ModifierPropertyOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (java.lang.Float.floatToRawIntBits(value_) != 0) {
+        output.writeFloat(1, value_);
+      }
       if (key_ != null) {
-        output.writeMessage(10, getKey());
+        output.writeMessage(11, getKey());
       }
-      if (value_ != 0F) {
-        output.writeFloat(14, value_);
-      }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -204,15 +149,15 @@ public final class ModifierPropertyOuterClass {
       if (size != -1) return size;
 
       size = 0;
+      if (java.lang.Float.floatToRawIntBits(value_) != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(1, value_);
+      }
       if (key_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(10, getKey());
+          .computeMessageSize(11, getKey());
       }
-      if (value_ != 0F) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(14, value_);
-      }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -235,7 +180,7 @@ public final class ModifierPropertyOuterClass {
       if (java.lang.Float.floatToIntBits(getValue())
           != java.lang.Float.floatToIntBits(
               other.getValue())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -253,7 +198,7 @@ public final class ModifierPropertyOuterClass {
       hash = (37 * hash) + VALUE_FIELD_NUMBER;
       hash = (53 * hash) + java.lang.Float.floatToIntBits(
           getValue());
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -350,7 +295,7 @@ public final class ModifierPropertyOuterClass {
     }
     /**
      * <pre>
-     * Obf: HFHFECKAJGB
+     * 4.7.0
      * </pre>
      *
      * Protobuf type {@code ModifierProperty}
@@ -374,18 +319,13 @@ public final class ModifierPropertyOuterClass {
 
       // Construct using emu.grasscutter.net.proto.ModifierPropertyOuterClass.ModifierProperty.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -484,7 +424,7 @@ public final class ModifierPropertyOuterClass {
         if (other.getValue() != 0F) {
           setValue(other.getValue());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -499,17 +439,42 @@ public final class ModifierPropertyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.ModifierPropertyOuterClass.ModifierProperty parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 13: {
+                value_ = input.readFloat();
+
+                break;
+              } // case 13
+              case 90: {
+                input.readMessage(
+                    getKeyFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 90
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.ModifierPropertyOuterClass.ModifierProperty) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -517,14 +482,14 @@ public final class ModifierPropertyOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.AbilityStringOuterClass.AbilityString, emu.grasscutter.net.proto.AbilityStringOuterClass.AbilityString.Builder, emu.grasscutter.net.proto.AbilityStringOuterClass.AbilityStringOrBuilder> keyBuilder_;
       /**
-       * <code>.AbilityString key = 10;</code>
+       * <code>.AbilityString key = 11;</code>
        * @return Whether the key field is set.
        */
       public boolean hasKey() {
         return keyBuilder_ != null || key_ != null;
       }
       /**
-       * <code>.AbilityString key = 10;</code>
+       * <code>.AbilityString key = 11;</code>
        * @return The key.
        */
       public emu.grasscutter.net.proto.AbilityStringOuterClass.AbilityString getKey() {
@@ -535,7 +500,7 @@ public final class ModifierPropertyOuterClass {
         }
       }
       /**
-       * <code>.AbilityString key = 10;</code>
+       * <code>.AbilityString key = 11;</code>
        */
       public Builder setKey(emu.grasscutter.net.proto.AbilityStringOuterClass.AbilityString value) {
         if (keyBuilder_ == null) {
@@ -551,7 +516,7 @@ public final class ModifierPropertyOuterClass {
         return this;
       }
       /**
-       * <code>.AbilityString key = 10;</code>
+       * <code>.AbilityString key = 11;</code>
        */
       public Builder setKey(
           emu.grasscutter.net.proto.AbilityStringOuterClass.AbilityString.Builder builderForValue) {
@@ -565,7 +530,7 @@ public final class ModifierPropertyOuterClass {
         return this;
       }
       /**
-       * <code>.AbilityString key = 10;</code>
+       * <code>.AbilityString key = 11;</code>
        */
       public Builder mergeKey(emu.grasscutter.net.proto.AbilityStringOuterClass.AbilityString value) {
         if (keyBuilder_ == null) {
@@ -583,7 +548,7 @@ public final class ModifierPropertyOuterClass {
         return this;
       }
       /**
-       * <code>.AbilityString key = 10;</code>
+       * <code>.AbilityString key = 11;</code>
        */
       public Builder clearKey() {
         if (keyBuilder_ == null) {
@@ -597,7 +562,7 @@ public final class ModifierPropertyOuterClass {
         return this;
       }
       /**
-       * <code>.AbilityString key = 10;</code>
+       * <code>.AbilityString key = 11;</code>
        */
       public emu.grasscutter.net.proto.AbilityStringOuterClass.AbilityString.Builder getKeyBuilder() {
         
@@ -605,7 +570,7 @@ public final class ModifierPropertyOuterClass {
         return getKeyFieldBuilder().getBuilder();
       }
       /**
-       * <code>.AbilityString key = 10;</code>
+       * <code>.AbilityString key = 11;</code>
        */
       public emu.grasscutter.net.proto.AbilityStringOuterClass.AbilityStringOrBuilder getKeyOrBuilder() {
         if (keyBuilder_ != null) {
@@ -616,7 +581,7 @@ public final class ModifierPropertyOuterClass {
         }
       }
       /**
-       * <code>.AbilityString key = 10;</code>
+       * <code>.AbilityString key = 11;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.AbilityStringOuterClass.AbilityString, emu.grasscutter.net.proto.AbilityStringOuterClass.AbilityString.Builder, emu.grasscutter.net.proto.AbilityStringOuterClass.AbilityStringOrBuilder> 
@@ -634,7 +599,7 @@ public final class ModifierPropertyOuterClass {
 
       private float value_ ;
       /**
-       * <code>float value = 14;</code>
+       * <code>float value = 1;</code>
        * @return The value.
        */
       @java.lang.Override
@@ -642,7 +607,7 @@ public final class ModifierPropertyOuterClass {
         return value_;
       }
       /**
-       * <code>float value = 14;</code>
+       * <code>float value = 1;</code>
        * @param value The value to set.
        * @return This builder for chaining.
        */
@@ -653,7 +618,7 @@ public final class ModifierPropertyOuterClass {
         return this;
       }
       /**
-       * <code>float value = 14;</code>
+       * <code>float value = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearValue() {
@@ -695,7 +660,18 @@ public final class ModifierPropertyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new ModifierProperty(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -730,8 +706,8 @@ public final class ModifierPropertyOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\026ModifierProperty.proto\032\023AbilityString." +
-      "proto\">\n\020ModifierProperty\022\033\n\003key\030\n \001(\0132\016" +
-      ".AbilityString\022\r\n\005value\030\016 \001(\002B\033\n\031emu.gra" +
+      "proto\">\n\020ModifierProperty\022\033\n\003key\030\013 \001(\0132\016" +
+      ".AbilityString\022\r\n\005value\030\001 \001(\002B\033\n\031emu.gra" +
       "sscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

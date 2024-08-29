@@ -19,48 +19,42 @@ public final class GetInvestigationMonsterRspOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int32 retcode = 11;</code>
-     * @return The retcode.
-     */
-    int getRetcode();
-
-    /**
-     * <code>repeated .InvestigationMonster monster_list = 13;</code>
+     * <code>repeated .InvestigationMonster monster_list = 4;</code>
      */
     java.util.List<emu.grasscutter.net.proto.InvestigationMonsterOuterClass.InvestigationMonster> 
         getMonsterListList();
     /**
-     * <code>repeated .InvestigationMonster monster_list = 13;</code>
+     * <code>repeated .InvestigationMonster monster_list = 4;</code>
      */
     emu.grasscutter.net.proto.InvestigationMonsterOuterClass.InvestigationMonster getMonsterList(int index);
     /**
-     * <code>repeated .InvestigationMonster monster_list = 13;</code>
+     * <code>repeated .InvestigationMonster monster_list = 4;</code>
      */
     int getMonsterListCount();
     /**
-     * <code>repeated .InvestigationMonster monster_list = 13;</code>
+     * <code>repeated .InvestigationMonster monster_list = 4;</code>
      */
     java.util.List<? extends emu.grasscutter.net.proto.InvestigationMonsterOuterClass.InvestigationMonsterOrBuilder> 
         getMonsterListOrBuilderList();
     /**
-     * <code>repeated .InvestigationMonster monster_list = 13;</code>
+     * <code>repeated .InvestigationMonster monster_list = 4;</code>
      */
     emu.grasscutter.net.proto.InvestigationMonsterOuterClass.InvestigationMonsterOrBuilder getMonsterListOrBuilder(
         int index);
 
     /**
-     * <code>bool is_for_mark = 15;</code>
-     * @return The isForMark.
+     * <code>bool kis_for_mark = 13;</code>
+     * @return The kisForMark.
      */
-    boolean getIsForMark();
+    boolean getKisForMark();
+
+    /**
+     * <code>int32 retcode = 15;</code>
+     * @return The retcode.
+     */
+    int getRetcode();
   }
   /**
-   * <pre>
-   * CmdId: 27061
-   * Version: 4.6.0
-   * Obfs: OOADKBLCCJN
-   * </pre>
-   *
    * Protobuf type {@code GetInvestigationMonsterRsp}
    */
   public static final class GetInvestigationMonsterRsp extends
@@ -88,66 +82,6 @@ public final class GetInvestigationMonsterRspOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private GetInvestigationMonsterRsp(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 88: {
-
-              retcode_ = input.readInt32();
-              break;
-            }
-            case 106: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                monsterList_ = new java.util.ArrayList<emu.grasscutter.net.proto.InvestigationMonsterOuterClass.InvestigationMonster>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              monsterList_.add(
-                  input.readMessage(emu.grasscutter.net.proto.InvestigationMonsterOuterClass.InvestigationMonster.parser(), extensionRegistry));
-              break;
-            }
-            case 120: {
-
-              isForMark_ = input.readBool();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          monsterList_ = java.util.Collections.unmodifiableList(monsterList_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.GetInvestigationMonsterRspOuterClass.internal_static_GetInvestigationMonsterRsp_descriptor;
@@ -161,28 +95,17 @@ public final class GetInvestigationMonsterRspOuterClass {
               emu.grasscutter.net.proto.GetInvestigationMonsterRspOuterClass.GetInvestigationMonsterRsp.class, emu.grasscutter.net.proto.GetInvestigationMonsterRspOuterClass.GetInvestigationMonsterRsp.Builder.class);
     }
 
-    public static final int RETCODE_FIELD_NUMBER = 11;
-    private int retcode_;
-    /**
-     * <code>int32 retcode = 11;</code>
-     * @return The retcode.
-     */
-    @java.lang.Override
-    public int getRetcode() {
-      return retcode_;
-    }
-
-    public static final int MONSTER_LIST_FIELD_NUMBER = 13;
+    public static final int MONSTER_LIST_FIELD_NUMBER = 4;
     private java.util.List<emu.grasscutter.net.proto.InvestigationMonsterOuterClass.InvestigationMonster> monsterList_;
     /**
-     * <code>repeated .InvestigationMonster monster_list = 13;</code>
+     * <code>repeated .InvestigationMonster monster_list = 4;</code>
      */
     @java.lang.Override
     public java.util.List<emu.grasscutter.net.proto.InvestigationMonsterOuterClass.InvestigationMonster> getMonsterListList() {
       return monsterList_;
     }
     /**
-     * <code>repeated .InvestigationMonster monster_list = 13;</code>
+     * <code>repeated .InvestigationMonster monster_list = 4;</code>
      */
     @java.lang.Override
     public java.util.List<? extends emu.grasscutter.net.proto.InvestigationMonsterOuterClass.InvestigationMonsterOrBuilder> 
@@ -190,21 +113,21 @@ public final class GetInvestigationMonsterRspOuterClass {
       return monsterList_;
     }
     /**
-     * <code>repeated .InvestigationMonster monster_list = 13;</code>
+     * <code>repeated .InvestigationMonster monster_list = 4;</code>
      */
     @java.lang.Override
     public int getMonsterListCount() {
       return monsterList_.size();
     }
     /**
-     * <code>repeated .InvestigationMonster monster_list = 13;</code>
+     * <code>repeated .InvestigationMonster monster_list = 4;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.InvestigationMonsterOuterClass.InvestigationMonster getMonsterList(int index) {
       return monsterList_.get(index);
     }
     /**
-     * <code>repeated .InvestigationMonster monster_list = 13;</code>
+     * <code>repeated .InvestigationMonster monster_list = 4;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.InvestigationMonsterOuterClass.InvestigationMonsterOrBuilder getMonsterListOrBuilder(
@@ -212,15 +135,26 @@ public final class GetInvestigationMonsterRspOuterClass {
       return monsterList_.get(index);
     }
 
-    public static final int IS_FOR_MARK_FIELD_NUMBER = 15;
-    private boolean isForMark_;
+    public static final int KIS_FOR_MARK_FIELD_NUMBER = 13;
+    private boolean kisForMark_;
     /**
-     * <code>bool is_for_mark = 15;</code>
-     * @return The isForMark.
+     * <code>bool kis_for_mark = 13;</code>
+     * @return The kisForMark.
      */
     @java.lang.Override
-    public boolean getIsForMark() {
-      return isForMark_;
+    public boolean getKisForMark() {
+      return kisForMark_;
+    }
+
+    public static final int RETCODE_FIELD_NUMBER = 15;
+    private int retcode_;
+    /**
+     * <code>int32 retcode = 15;</code>
+     * @return The retcode.
+     */
+    @java.lang.Override
+    public int getRetcode() {
+      return retcode_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -237,16 +171,16 @@ public final class GetInvestigationMonsterRspOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (retcode_ != 0) {
-        output.writeInt32(11, retcode_);
-      }
       for (int i = 0; i < monsterList_.size(); i++) {
-        output.writeMessage(13, monsterList_.get(i));
+        output.writeMessage(4, monsterList_.get(i));
       }
-      if (isForMark_ != false) {
-        output.writeBool(15, isForMark_);
+      if (kisForMark_ != false) {
+        output.writeBool(13, kisForMark_);
       }
-      unknownFields.writeTo(output);
+      if (retcode_ != 0) {
+        output.writeInt32(15, retcode_);
+      }
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -255,19 +189,19 @@ public final class GetInvestigationMonsterRspOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (retcode_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(11, retcode_);
-      }
       for (int i = 0; i < monsterList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(13, monsterList_.get(i));
+          .computeMessageSize(4, monsterList_.get(i));
       }
-      if (isForMark_ != false) {
+      if (kisForMark_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(15, isForMark_);
+          .computeBoolSize(13, kisForMark_);
       }
-      size += unknownFields.getSerializedSize();
+      if (retcode_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(15, retcode_);
+      }
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -282,13 +216,13 @@ public final class GetInvestigationMonsterRspOuterClass {
       }
       emu.grasscutter.net.proto.GetInvestigationMonsterRspOuterClass.GetInvestigationMonsterRsp other = (emu.grasscutter.net.proto.GetInvestigationMonsterRspOuterClass.GetInvestigationMonsterRsp) obj;
 
-      if (getRetcode()
-          != other.getRetcode()) return false;
       if (!getMonsterListList()
           .equals(other.getMonsterListList())) return false;
-      if (getIsForMark()
-          != other.getIsForMark()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (getKisForMark()
+          != other.getKisForMark()) return false;
+      if (getRetcode()
+          != other.getRetcode()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -299,16 +233,16 @@ public final class GetInvestigationMonsterRspOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + RETCODE_FIELD_NUMBER;
-      hash = (53 * hash) + getRetcode();
       if (getMonsterListCount() > 0) {
         hash = (37 * hash) + MONSTER_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getMonsterListList().hashCode();
       }
-      hash = (37 * hash) + IS_FOR_MARK_FIELD_NUMBER;
+      hash = (37 * hash) + KIS_FOR_MARK_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getIsForMark());
-      hash = (29 * hash) + unknownFields.hashCode();
+          getKisForMark());
+      hash = (37 * hash) + RETCODE_FIELD_NUMBER;
+      hash = (53 * hash) + getRetcode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -404,12 +338,6 @@ public final class GetInvestigationMonsterRspOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 27061
-     * Version: 4.6.0
-     * Obfs: OOADKBLCCJN
-     * </pre>
-     *
      * Protobuf type {@code GetInvestigationMonsterRsp}
      */
     public static final class Builder extends
@@ -431,32 +359,27 @@ public final class GetInvestigationMonsterRspOuterClass {
 
       // Construct using emu.grasscutter.net.proto.GetInvestigationMonsterRspOuterClass.GetInvestigationMonsterRsp.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getMonsterListFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        retcode_ = 0;
-
         if (monsterListBuilder_ == null) {
           monsterList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          monsterList_ = null;
           monsterListBuilder_.clear();
         }
-        isForMark_ = false;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        kisForMark_ = false;
+
+        retcode_ = 0;
 
         return this;
       }
@@ -485,7 +408,6 @@ public final class GetInvestigationMonsterRspOuterClass {
       public emu.grasscutter.net.proto.GetInvestigationMonsterRspOuterClass.GetInvestigationMonsterRsp buildPartial() {
         emu.grasscutter.net.proto.GetInvestigationMonsterRspOuterClass.GetInvestigationMonsterRsp result = new emu.grasscutter.net.proto.GetInvestigationMonsterRspOuterClass.GetInvestigationMonsterRsp(this);
         int from_bitField0_ = bitField0_;
-        result.retcode_ = retcode_;
         if (monsterListBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             monsterList_ = java.util.Collections.unmodifiableList(monsterList_);
@@ -495,7 +417,8 @@ public final class GetInvestigationMonsterRspOuterClass {
         } else {
           result.monsterList_ = monsterListBuilder_.build();
         }
-        result.isForMark_ = isForMark_;
+        result.kisForMark_ = kisForMark_;
+        result.retcode_ = retcode_;
         onBuilt();
         return result;
       }
@@ -544,9 +467,6 @@ public final class GetInvestigationMonsterRspOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.GetInvestigationMonsterRspOuterClass.GetInvestigationMonsterRsp other) {
         if (other == emu.grasscutter.net.proto.GetInvestigationMonsterRspOuterClass.GetInvestigationMonsterRsp.getDefaultInstance()) return this;
-        if (other.getRetcode() != 0) {
-          setRetcode(other.getRetcode());
-        }
         if (monsterListBuilder_ == null) {
           if (!other.monsterList_.isEmpty()) {
             if (monsterList_.isEmpty()) {
@@ -573,10 +493,13 @@ public final class GetInvestigationMonsterRspOuterClass {
             }
           }
         }
-        if (other.getIsForMark() != false) {
-          setIsForMark(other.getIsForMark());
+        if (other.getKisForMark() != false) {
+          setKisForMark(other.getKisForMark());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        if (other.getRetcode() != 0) {
+          setRetcode(other.getRetcode());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -591,51 +514,56 @@ public final class GetInvestigationMonsterRspOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.GetInvestigationMonsterRspOuterClass.GetInvestigationMonsterRsp parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 34: {
+                emu.grasscutter.net.proto.InvestigationMonsterOuterClass.InvestigationMonster m =
+                    input.readMessage(
+                        emu.grasscutter.net.proto.InvestigationMonsterOuterClass.InvestigationMonster.parser(),
+                        extensionRegistry);
+                if (monsterListBuilder_ == null) {
+                  ensureMonsterListIsMutable();
+                  monsterList_.add(m);
+                } else {
+                  monsterListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 34
+              case 104: {
+                kisForMark_ = input.readBool();
+
+                break;
+              } // case 104
+              case 120: {
+                retcode_ = input.readInt32();
+
+                break;
+              } // case 120
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.GetInvestigationMonsterRspOuterClass.GetInvestigationMonsterRsp) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
-
-      private int retcode_ ;
-      /**
-       * <code>int32 retcode = 11;</code>
-       * @return The retcode.
-       */
-      @java.lang.Override
-      public int getRetcode() {
-        return retcode_;
-      }
-      /**
-       * <code>int32 retcode = 11;</code>
-       * @param value The retcode to set.
-       * @return This builder for chaining.
-       */
-      public Builder setRetcode(int value) {
-        
-        retcode_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int32 retcode = 11;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearRetcode() {
-        
-        retcode_ = 0;
-        onChanged();
-        return this;
-      }
 
       private java.util.List<emu.grasscutter.net.proto.InvestigationMonsterOuterClass.InvestigationMonster> monsterList_ =
         java.util.Collections.emptyList();
@@ -650,7 +578,7 @@ public final class GetInvestigationMonsterRspOuterClass {
           emu.grasscutter.net.proto.InvestigationMonsterOuterClass.InvestigationMonster, emu.grasscutter.net.proto.InvestigationMonsterOuterClass.InvestigationMonster.Builder, emu.grasscutter.net.proto.InvestigationMonsterOuterClass.InvestigationMonsterOrBuilder> monsterListBuilder_;
 
       /**
-       * <code>repeated .InvestigationMonster monster_list = 13;</code>
+       * <code>repeated .InvestigationMonster monster_list = 4;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.InvestigationMonsterOuterClass.InvestigationMonster> getMonsterListList() {
         if (monsterListBuilder_ == null) {
@@ -660,7 +588,7 @@ public final class GetInvestigationMonsterRspOuterClass {
         }
       }
       /**
-       * <code>repeated .InvestigationMonster monster_list = 13;</code>
+       * <code>repeated .InvestigationMonster monster_list = 4;</code>
        */
       public int getMonsterListCount() {
         if (monsterListBuilder_ == null) {
@@ -670,7 +598,7 @@ public final class GetInvestigationMonsterRspOuterClass {
         }
       }
       /**
-       * <code>repeated .InvestigationMonster monster_list = 13;</code>
+       * <code>repeated .InvestigationMonster monster_list = 4;</code>
        */
       public emu.grasscutter.net.proto.InvestigationMonsterOuterClass.InvestigationMonster getMonsterList(int index) {
         if (monsterListBuilder_ == null) {
@@ -680,7 +608,7 @@ public final class GetInvestigationMonsterRspOuterClass {
         }
       }
       /**
-       * <code>repeated .InvestigationMonster monster_list = 13;</code>
+       * <code>repeated .InvestigationMonster monster_list = 4;</code>
        */
       public Builder setMonsterList(
           int index, emu.grasscutter.net.proto.InvestigationMonsterOuterClass.InvestigationMonster value) {
@@ -697,7 +625,7 @@ public final class GetInvestigationMonsterRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .InvestigationMonster monster_list = 13;</code>
+       * <code>repeated .InvestigationMonster monster_list = 4;</code>
        */
       public Builder setMonsterList(
           int index, emu.grasscutter.net.proto.InvestigationMonsterOuterClass.InvestigationMonster.Builder builderForValue) {
@@ -711,7 +639,7 @@ public final class GetInvestigationMonsterRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .InvestigationMonster monster_list = 13;</code>
+       * <code>repeated .InvestigationMonster monster_list = 4;</code>
        */
       public Builder addMonsterList(emu.grasscutter.net.proto.InvestigationMonsterOuterClass.InvestigationMonster value) {
         if (monsterListBuilder_ == null) {
@@ -727,7 +655,7 @@ public final class GetInvestigationMonsterRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .InvestigationMonster monster_list = 13;</code>
+       * <code>repeated .InvestigationMonster monster_list = 4;</code>
        */
       public Builder addMonsterList(
           int index, emu.grasscutter.net.proto.InvestigationMonsterOuterClass.InvestigationMonster value) {
@@ -744,7 +672,7 @@ public final class GetInvestigationMonsterRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .InvestigationMonster monster_list = 13;</code>
+       * <code>repeated .InvestigationMonster monster_list = 4;</code>
        */
       public Builder addMonsterList(
           emu.grasscutter.net.proto.InvestigationMonsterOuterClass.InvestigationMonster.Builder builderForValue) {
@@ -758,7 +686,7 @@ public final class GetInvestigationMonsterRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .InvestigationMonster monster_list = 13;</code>
+       * <code>repeated .InvestigationMonster monster_list = 4;</code>
        */
       public Builder addMonsterList(
           int index, emu.grasscutter.net.proto.InvestigationMonsterOuterClass.InvestigationMonster.Builder builderForValue) {
@@ -772,7 +700,7 @@ public final class GetInvestigationMonsterRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .InvestigationMonster monster_list = 13;</code>
+       * <code>repeated .InvestigationMonster monster_list = 4;</code>
        */
       public Builder addAllMonsterList(
           java.lang.Iterable<? extends emu.grasscutter.net.proto.InvestigationMonsterOuterClass.InvestigationMonster> values) {
@@ -787,7 +715,7 @@ public final class GetInvestigationMonsterRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .InvestigationMonster monster_list = 13;</code>
+       * <code>repeated .InvestigationMonster monster_list = 4;</code>
        */
       public Builder clearMonsterList() {
         if (monsterListBuilder_ == null) {
@@ -800,7 +728,7 @@ public final class GetInvestigationMonsterRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .InvestigationMonster monster_list = 13;</code>
+       * <code>repeated .InvestigationMonster monster_list = 4;</code>
        */
       public Builder removeMonsterList(int index) {
         if (monsterListBuilder_ == null) {
@@ -813,14 +741,14 @@ public final class GetInvestigationMonsterRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .InvestigationMonster monster_list = 13;</code>
+       * <code>repeated .InvestigationMonster monster_list = 4;</code>
        */
       public emu.grasscutter.net.proto.InvestigationMonsterOuterClass.InvestigationMonster.Builder getMonsterListBuilder(
           int index) {
         return getMonsterListFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .InvestigationMonster monster_list = 13;</code>
+       * <code>repeated .InvestigationMonster monster_list = 4;</code>
        */
       public emu.grasscutter.net.proto.InvestigationMonsterOuterClass.InvestigationMonsterOrBuilder getMonsterListOrBuilder(
           int index) {
@@ -830,7 +758,7 @@ public final class GetInvestigationMonsterRspOuterClass {
         }
       }
       /**
-       * <code>repeated .InvestigationMonster monster_list = 13;</code>
+       * <code>repeated .InvestigationMonster monster_list = 4;</code>
        */
       public java.util.List<? extends emu.grasscutter.net.proto.InvestigationMonsterOuterClass.InvestigationMonsterOrBuilder> 
            getMonsterListOrBuilderList() {
@@ -841,14 +769,14 @@ public final class GetInvestigationMonsterRspOuterClass {
         }
       }
       /**
-       * <code>repeated .InvestigationMonster monster_list = 13;</code>
+       * <code>repeated .InvestigationMonster monster_list = 4;</code>
        */
       public emu.grasscutter.net.proto.InvestigationMonsterOuterClass.InvestigationMonster.Builder addMonsterListBuilder() {
         return getMonsterListFieldBuilder().addBuilder(
             emu.grasscutter.net.proto.InvestigationMonsterOuterClass.InvestigationMonster.getDefaultInstance());
       }
       /**
-       * <code>repeated .InvestigationMonster monster_list = 13;</code>
+       * <code>repeated .InvestigationMonster monster_list = 4;</code>
        */
       public emu.grasscutter.net.proto.InvestigationMonsterOuterClass.InvestigationMonster.Builder addMonsterListBuilder(
           int index) {
@@ -856,7 +784,7 @@ public final class GetInvestigationMonsterRspOuterClass {
             index, emu.grasscutter.net.proto.InvestigationMonsterOuterClass.InvestigationMonster.getDefaultInstance());
       }
       /**
-       * <code>repeated .InvestigationMonster monster_list = 13;</code>
+       * <code>repeated .InvestigationMonster monster_list = 4;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.InvestigationMonsterOuterClass.InvestigationMonster.Builder> 
            getMonsterListBuilderList() {
@@ -877,33 +805,64 @@ public final class GetInvestigationMonsterRspOuterClass {
         return monsterListBuilder_;
       }
 
-      private boolean isForMark_ ;
+      private boolean kisForMark_ ;
       /**
-       * <code>bool is_for_mark = 15;</code>
-       * @return The isForMark.
+       * <code>bool kis_for_mark = 13;</code>
+       * @return The kisForMark.
        */
       @java.lang.Override
-      public boolean getIsForMark() {
-        return isForMark_;
+      public boolean getKisForMark() {
+        return kisForMark_;
       }
       /**
-       * <code>bool is_for_mark = 15;</code>
-       * @param value The isForMark to set.
+       * <code>bool kis_for_mark = 13;</code>
+       * @param value The kisForMark to set.
        * @return This builder for chaining.
        */
-      public Builder setIsForMark(boolean value) {
+      public Builder setKisForMark(boolean value) {
         
-        isForMark_ = value;
+        kisForMark_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>bool is_for_mark = 15;</code>
+       * <code>bool kis_for_mark = 13;</code>
        * @return This builder for chaining.
        */
-      public Builder clearIsForMark() {
+      public Builder clearKisForMark() {
         
-        isForMark_ = false;
+        kisForMark_ = false;
+        onChanged();
+        return this;
+      }
+
+      private int retcode_ ;
+      /**
+       * <code>int32 retcode = 15;</code>
+       * @return The retcode.
+       */
+      @java.lang.Override
+      public int getRetcode() {
+        return retcode_;
+      }
+      /**
+       * <code>int32 retcode = 15;</code>
+       * @param value The retcode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRetcode(int value) {
+        
+        retcode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 retcode = 15;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRetcode() {
+        
+        retcode_ = 0;
         onChanged();
         return this;
       }
@@ -940,7 +899,18 @@ public final class GetInvestigationMonsterRspOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new GetInvestigationMonsterRsp(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -975,11 +945,11 @@ public final class GetInvestigationMonsterRspOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n GetInvestigationMonsterRsp.proto\032\032Inve" +
-      "stigationMonster.proto\"o\n\032GetInvestigati" +
-      "onMonsterRsp\022\017\n\007retcode\030\013 \001(\005\022+\n\014monster" +
-      "_list\030\r \003(\0132\025.InvestigationMonster\022\023\n\013is" +
-      "_for_mark\030\017 \001(\010B\033\n\031emu.grasscutter.net.p" +
-      "rotob\006proto3"
+      "stigationMonster.proto\"p\n\032GetInvestigati" +
+      "onMonsterRsp\022+\n\014monster_list\030\004 \003(\0132\025.Inv" +
+      "estigationMonster\022\024\n\014kis_for_mark\030\r \001(\010\022" +
+      "\017\n\007retcode\030\017 \001(\005B\033\n\031emu.grasscutter.net." +
+      "protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -991,7 +961,7 @@ public final class GetInvestigationMonsterRspOuterClass {
     internal_static_GetInvestigationMonsterRsp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_GetInvestigationMonsterRsp_descriptor,
-        new java.lang.String[] { "Retcode", "MonsterList", "IsForMark", });
+        new java.lang.String[] { "MonsterList", "KisForMark", "Retcode", });
     emu.grasscutter.net.proto.InvestigationMonsterOuterClass.getDescriptor();
   }
 

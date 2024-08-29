@@ -53,12 +53,26 @@ public final class VehicleInfoOuterClass {
      * @return The curStamina.
      */
     float getCurStamina();
+
+    /**
+     * <code>uint32 GPMPAEGBEJE = 4;</code>
+     * @return The gPMPAEGBEJE.
+     */
+    int getGPMPAEGBEJE();
+
+    /**
+     * <code>float LLGKENMIENL = 5;</code>
+     * @return The lLGKENMIENL.
+     */
+    float getLLGKENMIENL();
+
+    /**
+     * <code>uint32 anim_hash = 6;</code>
+     * @return The animHash.
+     */
+    int getAnimHash();
   }
   /**
-   * <pre>
-   * Obf: ICCEPDBOFHC
-   * </pre>
-   *
    * Protobuf type {@code VehicleInfo}
    */
   public static final class VehicleInfo extends
@@ -85,66 +99,6 @@ public final class VehicleInfoOuterClass {
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
-    }
-    private VehicleInfo(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                memberList_ = new java.util.ArrayList<emu.grasscutter.net.proto.VehicleMemberOuterClass.VehicleMember>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              memberList_.add(
-                  input.readMessage(emu.grasscutter.net.proto.VehicleMemberOuterClass.VehicleMember.parser(), extensionRegistry));
-              break;
-            }
-            case 16: {
-
-              ownerUid_ = input.readUInt32();
-              break;
-            }
-            case 29: {
-
-              curStamina_ = input.readFloat();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          memberList_ = java.util.Collections.unmodifiableList(memberList_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -221,6 +175,39 @@ public final class VehicleInfoOuterClass {
       return curStamina_;
     }
 
+    public static final int GPMPAEGBEJE_FIELD_NUMBER = 4;
+    private int gPMPAEGBEJE_;
+    /**
+     * <code>uint32 GPMPAEGBEJE = 4;</code>
+     * @return The gPMPAEGBEJE.
+     */
+    @java.lang.Override
+    public int getGPMPAEGBEJE() {
+      return gPMPAEGBEJE_;
+    }
+
+    public static final int LLGKENMIENL_FIELD_NUMBER = 5;
+    private float lLGKENMIENL_;
+    /**
+     * <code>float LLGKENMIENL = 5;</code>
+     * @return The lLGKENMIENL.
+     */
+    @java.lang.Override
+    public float getLLGKENMIENL() {
+      return lLGKENMIENL_;
+    }
+
+    public static final int ANIM_HASH_FIELD_NUMBER = 6;
+    private int animHash_;
+    /**
+     * <code>uint32 anim_hash = 6;</code>
+     * @return The animHash.
+     */
+    @java.lang.Override
+    public int getAnimHash() {
+      return animHash_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -241,10 +228,19 @@ public final class VehicleInfoOuterClass {
       if (ownerUid_ != 0) {
         output.writeUInt32(2, ownerUid_);
       }
-      if (curStamina_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(curStamina_) != 0) {
         output.writeFloat(3, curStamina_);
       }
-      unknownFields.writeTo(output);
+      if (gPMPAEGBEJE_ != 0) {
+        output.writeUInt32(4, gPMPAEGBEJE_);
+      }
+      if (java.lang.Float.floatToRawIntBits(lLGKENMIENL_) != 0) {
+        output.writeFloat(5, lLGKENMIENL_);
+      }
+      if (animHash_ != 0) {
+        output.writeUInt32(6, animHash_);
+      }
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -261,11 +257,23 @@ public final class VehicleInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(2, ownerUid_);
       }
-      if (curStamina_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(curStamina_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(3, curStamina_);
       }
-      size += unknownFields.getSerializedSize();
+      if (gPMPAEGBEJE_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(4, gPMPAEGBEJE_);
+      }
+      if (java.lang.Float.floatToRawIntBits(lLGKENMIENL_) != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(5, lLGKENMIENL_);
+      }
+      if (animHash_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(6, animHash_);
+      }
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -287,7 +295,14 @@ public final class VehicleInfoOuterClass {
       if (java.lang.Float.floatToIntBits(getCurStamina())
           != java.lang.Float.floatToIntBits(
               other.getCurStamina())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (getGPMPAEGBEJE()
+          != other.getGPMPAEGBEJE()) return false;
+      if (java.lang.Float.floatToIntBits(getLLGKENMIENL())
+          != java.lang.Float.floatToIntBits(
+              other.getLLGKENMIENL())) return false;
+      if (getAnimHash()
+          != other.getAnimHash()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -307,7 +322,14 @@ public final class VehicleInfoOuterClass {
       hash = (37 * hash) + CUR_STAMINA_FIELD_NUMBER;
       hash = (53 * hash) + java.lang.Float.floatToIntBits(
           getCurStamina());
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (37 * hash) + GPMPAEGBEJE_FIELD_NUMBER;
+      hash = (53 * hash) + getGPMPAEGBEJE();
+      hash = (37 * hash) + LLGKENMIENL_FIELD_NUMBER;
+      hash = (53 * hash) + java.lang.Float.floatToIntBits(
+          getLLGKENMIENL());
+      hash = (37 * hash) + ANIM_HASH_FIELD_NUMBER;
+      hash = (53 * hash) + getAnimHash();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -403,10 +425,6 @@ public final class VehicleInfoOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * Obf: ICCEPDBOFHC
-     * </pre>
-     *
      * Protobuf type {@code VehicleInfo}
      */
     public static final class Builder extends
@@ -428,32 +446,33 @@ public final class VehicleInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.VehicleInfoOuterClass.VehicleInfo.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getMemberListFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
         if (memberListBuilder_ == null) {
           memberList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          memberList_ = null;
           memberListBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000001);
         ownerUid_ = 0;
 
         curStamina_ = 0F;
+
+        gPMPAEGBEJE_ = 0;
+
+        lLGKENMIENL_ = 0F;
+
+        animHash_ = 0;
 
         return this;
       }
@@ -493,6 +512,9 @@ public final class VehicleInfoOuterClass {
         }
         result.ownerUid_ = ownerUid_;
         result.curStamina_ = curStamina_;
+        result.gPMPAEGBEJE_ = gPMPAEGBEJE_;
+        result.lLGKENMIENL_ = lLGKENMIENL_;
+        result.animHash_ = animHash_;
         onBuilt();
         return result;
       }
@@ -573,7 +595,16 @@ public final class VehicleInfoOuterClass {
         if (other.getCurStamina() != 0F) {
           setCurStamina(other.getCurStamina());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        if (other.getGPMPAEGBEJE() != 0) {
+          setGPMPAEGBEJE(other.getGPMPAEGBEJE());
+        }
+        if (other.getLLGKENMIENL() != 0F) {
+          setLLGKENMIENL(other.getLLGKENMIENL());
+        }
+        if (other.getAnimHash() != 0) {
+          setAnimHash(other.getAnimHash());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -588,17 +619,68 @@ public final class VehicleInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.VehicleInfoOuterClass.VehicleInfo parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                emu.grasscutter.net.proto.VehicleMemberOuterClass.VehicleMember m =
+                    input.readMessage(
+                        emu.grasscutter.net.proto.VehicleMemberOuterClass.VehicleMember.parser(),
+                        extensionRegistry);
+                if (memberListBuilder_ == null) {
+                  ensureMemberListIsMutable();
+                  memberList_.add(m);
+                } else {
+                  memberListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 16: {
+                ownerUid_ = input.readUInt32();
+
+                break;
+              } // case 16
+              case 29: {
+                curStamina_ = input.readFloat();
+
+                break;
+              } // case 29
+              case 32: {
+                gPMPAEGBEJE_ = input.readUInt32();
+
+                break;
+              } // case 32
+              case 45: {
+                lLGKENMIENL_ = input.readFloat();
+
+                break;
+              } // case 45
+              case 48: {
+                animHash_ = input.readUInt32();
+
+                break;
+              } // case 48
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.VehicleInfoOuterClass.VehicleInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -904,6 +986,99 @@ public final class VehicleInfoOuterClass {
         onChanged();
         return this;
       }
+
+      private int gPMPAEGBEJE_ ;
+      /**
+       * <code>uint32 GPMPAEGBEJE = 4;</code>
+       * @return The gPMPAEGBEJE.
+       */
+      @java.lang.Override
+      public int getGPMPAEGBEJE() {
+        return gPMPAEGBEJE_;
+      }
+      /**
+       * <code>uint32 GPMPAEGBEJE = 4;</code>
+       * @param value The gPMPAEGBEJE to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGPMPAEGBEJE(int value) {
+        
+        gPMPAEGBEJE_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 GPMPAEGBEJE = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGPMPAEGBEJE() {
+        
+        gPMPAEGBEJE_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private float lLGKENMIENL_ ;
+      /**
+       * <code>float LLGKENMIENL = 5;</code>
+       * @return The lLGKENMIENL.
+       */
+      @java.lang.Override
+      public float getLLGKENMIENL() {
+        return lLGKENMIENL_;
+      }
+      /**
+       * <code>float LLGKENMIENL = 5;</code>
+       * @param value The lLGKENMIENL to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLLGKENMIENL(float value) {
+        
+        lLGKENMIENL_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>float LLGKENMIENL = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLLGKENMIENL() {
+        
+        lLGKENMIENL_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      private int animHash_ ;
+      /**
+       * <code>uint32 anim_hash = 6;</code>
+       * @return The animHash.
+       */
+      @java.lang.Override
+      public int getAnimHash() {
+        return animHash_;
+      }
+      /**
+       * <code>uint32 anim_hash = 6;</code>
+       * @param value The animHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAnimHash(int value) {
+        
+        animHash_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 anim_hash = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAnimHash() {
+        
+        animHash_ = 0;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -937,7 +1112,18 @@ public final class VehicleInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new VehicleInfo(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -972,10 +1158,11 @@ public final class VehicleInfoOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\021VehicleInfo.proto\032\023VehicleMember.proto" +
-      "\"Z\n\013VehicleInfo\022#\n\013member_list\030\001 \003(\0132\016.V" +
-      "ehicleMember\022\021\n\towner_uid\030\002 \001(\r\022\023\n\013cur_s" +
-      "tamina\030\003 \001(\002B\033\n\031emu.grasscutter.net.prot" +
-      "ob\006proto3"
+      "\"\227\001\n\013VehicleInfo\022#\n\013member_list\030\001 \003(\0132\016." +
+      "VehicleMember\022\021\n\towner_uid\030\002 \001(\r\022\023\n\013cur_" +
+      "stamina\030\003 \001(\002\022\023\n\013GPMPAEGBEJE\030\004 \001(\r\022\023\n\013LL" +
+      "GKENMIENL\030\005 \001(\002\022\021\n\tanim_hash\030\006 \001(\rB\033\n\031em" +
+      "u.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -987,7 +1174,7 @@ public final class VehicleInfoOuterClass {
     internal_static_VehicleInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_VehicleInfo_descriptor,
-        new java.lang.String[] { "MemberList", "OwnerUid", "CurStamina", });
+        new java.lang.String[] { "MemberList", "OwnerUid", "CurStamina", "GPMPAEGBEJE", "LLGKENMIENL", "AnimHash", });
     emu.grasscutter.net.proto.VehicleMemberOuterClass.getDescriptor();
   }
 

@@ -19,34 +19,29 @@ public final class WorktopOptionNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated uint32 option_list = 7;</code>
+     * <code>uint32 gadget_entity_id = 7;</code>
+     * @return The gadgetEntityId.
+     */
+    int getGadgetEntityId();
+
+    /**
+     * <code>repeated uint32 option_list = 11;</code>
      * @return A list containing the optionList.
      */
     java.util.List<java.lang.Integer> getOptionListList();
     /**
-     * <code>repeated uint32 option_list = 7;</code>
+     * <code>repeated uint32 option_list = 11;</code>
      * @return The count of optionList.
      */
     int getOptionListCount();
     /**
-     * <code>repeated uint32 option_list = 7;</code>
+     * <code>repeated uint32 option_list = 11;</code>
      * @param index The index of the element to return.
      * @return The optionList at the given index.
      */
     int getOptionList(int index);
-
-    /**
-     * <code>uint32 gadget_entity_id = 3;</code>
-     * @return The gadgetEntityId.
-     */
-    int getGadgetEntityId();
   }
   /**
-   * <pre>
-   * CmdId: 925
-   * Obf: AMKENHADEJN
-   * </pre>
-   *
    * Protobuf type {@code WorktopOptionNotify}
    */
   public static final class WorktopOptionNotify extends
@@ -74,73 +69,6 @@ public final class WorktopOptionNotifyOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private WorktopOptionNotify(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 24: {
-
-              gadgetEntityId_ = input.readUInt32();
-              break;
-            }
-            case 56: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                optionList_ = newIntList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              optionList_.addInt(input.readUInt32());
-              break;
-            }
-            case 58: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
-                optionList_ = newIntList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                optionList_.addInt(input.readUInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          optionList_.makeImmutable(); // C
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.WorktopOptionNotifyOuterClass.internal_static_WorktopOptionNotify_descriptor;
@@ -154,10 +82,21 @@ public final class WorktopOptionNotifyOuterClass {
               emu.grasscutter.net.proto.WorktopOptionNotifyOuterClass.WorktopOptionNotify.class, emu.grasscutter.net.proto.WorktopOptionNotifyOuterClass.WorktopOptionNotify.Builder.class);
     }
 
-    public static final int OPTION_LIST_FIELD_NUMBER = 7;
+    public static final int GADGET_ENTITY_ID_FIELD_NUMBER = 7;
+    private int gadgetEntityId_;
+    /**
+     * <code>uint32 gadget_entity_id = 7;</code>
+     * @return The gadgetEntityId.
+     */
+    @java.lang.Override
+    public int getGadgetEntityId() {
+      return gadgetEntityId_;
+    }
+
+    public static final int OPTION_LIST_FIELD_NUMBER = 11;
     private com.google.protobuf.Internal.IntList optionList_;
     /**
-     * <code>repeated uint32 option_list = 7;</code>
+     * <code>repeated uint32 option_list = 11;</code>
      * @return A list containing the optionList.
      */
     @java.lang.Override
@@ -166,14 +105,14 @@ public final class WorktopOptionNotifyOuterClass {
       return optionList_;
     }
     /**
-     * <code>repeated uint32 option_list = 7;</code>
+     * <code>repeated uint32 option_list = 11;</code>
      * @return The count of optionList.
      */
     public int getOptionListCount() {
       return optionList_.size();
     }
     /**
-     * <code>repeated uint32 option_list = 7;</code>
+     * <code>repeated uint32 option_list = 11;</code>
      * @param index The index of the element to return.
      * @return The optionList at the given index.
      */
@@ -181,17 +120,6 @@ public final class WorktopOptionNotifyOuterClass {
       return optionList_.getInt(index);
     }
     private int optionListMemoizedSerializedSize = -1;
-
-    public static final int GADGET_ENTITY_ID_FIELD_NUMBER = 3;
-    private int gadgetEntityId_;
-    /**
-     * <code>uint32 gadget_entity_id = 3;</code>
-     * @return The gadgetEntityId.
-     */
-    @java.lang.Override
-    public int getGadgetEntityId() {
-      return gadgetEntityId_;
-    }
 
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
@@ -209,16 +137,16 @@ public final class WorktopOptionNotifyOuterClass {
                         throws java.io.IOException {
       getSerializedSize();
       if (gadgetEntityId_ != 0) {
-        output.writeUInt32(3, gadgetEntityId_);
+        output.writeUInt32(7, gadgetEntityId_);
       }
       if (getOptionListList().size() > 0) {
-        output.writeUInt32NoTag(58);
+        output.writeUInt32NoTag(90);
         output.writeUInt32NoTag(optionListMemoizedSerializedSize);
       }
       for (int i = 0; i < optionList_.size(); i++) {
         output.writeUInt32NoTag(optionList_.getInt(i));
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -229,7 +157,7 @@ public final class WorktopOptionNotifyOuterClass {
       size = 0;
       if (gadgetEntityId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(3, gadgetEntityId_);
+          .computeUInt32Size(7, gadgetEntityId_);
       }
       {
         int dataSize = 0;
@@ -245,7 +173,7 @@ public final class WorktopOptionNotifyOuterClass {
         }
         optionListMemoizedSerializedSize = dataSize;
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -260,11 +188,11 @@ public final class WorktopOptionNotifyOuterClass {
       }
       emu.grasscutter.net.proto.WorktopOptionNotifyOuterClass.WorktopOptionNotify other = (emu.grasscutter.net.proto.WorktopOptionNotifyOuterClass.WorktopOptionNotify) obj;
 
-      if (!getOptionListList()
-          .equals(other.getOptionListList())) return false;
       if (getGadgetEntityId()
           != other.getGadgetEntityId()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getOptionListList()
+          .equals(other.getOptionListList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -275,13 +203,13 @@ public final class WorktopOptionNotifyOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + GADGET_ENTITY_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getGadgetEntityId();
       if (getOptionListCount() > 0) {
         hash = (37 * hash) + OPTION_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getOptionListList().hashCode();
       }
-      hash = (37 * hash) + GADGET_ENTITY_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getGadgetEntityId();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -377,11 +305,6 @@ public final class WorktopOptionNotifyOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 925
-     * Obf: AMKENHADEJN
-     * </pre>
-     *
      * Protobuf type {@code WorktopOptionNotify}
      */
     public static final class Builder extends
@@ -403,26 +326,21 @@ public final class WorktopOptionNotifyOuterClass {
 
       // Construct using emu.grasscutter.net.proto.WorktopOptionNotifyOuterClass.WorktopOptionNotify.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        optionList_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000001);
         gadgetEntityId_ = 0;
 
+        optionList_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -450,12 +368,12 @@ public final class WorktopOptionNotifyOuterClass {
       public emu.grasscutter.net.proto.WorktopOptionNotifyOuterClass.WorktopOptionNotify buildPartial() {
         emu.grasscutter.net.proto.WorktopOptionNotifyOuterClass.WorktopOptionNotify result = new emu.grasscutter.net.proto.WorktopOptionNotifyOuterClass.WorktopOptionNotify(this);
         int from_bitField0_ = bitField0_;
+        result.gadgetEntityId_ = gadgetEntityId_;
         if (((bitField0_ & 0x00000001) != 0)) {
           optionList_.makeImmutable();
           bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.optionList_ = optionList_;
-        result.gadgetEntityId_ = gadgetEntityId_;
         onBuilt();
         return result;
       }
@@ -504,6 +422,9 @@ public final class WorktopOptionNotifyOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.WorktopOptionNotifyOuterClass.WorktopOptionNotify other) {
         if (other == emu.grasscutter.net.proto.WorktopOptionNotifyOuterClass.WorktopOptionNotify.getDefaultInstance()) return this;
+        if (other.getGadgetEntityId() != 0) {
+          setGadgetEntityId(other.getGadgetEntityId());
+        }
         if (!other.optionList_.isEmpty()) {
           if (optionList_.isEmpty()) {
             optionList_ = other.optionList_;
@@ -514,10 +435,7 @@ public final class WorktopOptionNotifyOuterClass {
           }
           onChanged();
         }
-        if (other.getGadgetEntityId() != 0) {
-          setGadgetEntityId(other.getGadgetEntityId());
-        }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -532,20 +450,85 @@ public final class WorktopOptionNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.WorktopOptionNotifyOuterClass.WorktopOptionNotify parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 56: {
+                gadgetEntityId_ = input.readUInt32();
+
+                break;
+              } // case 56
+              case 88: {
+                int v = input.readUInt32();
+                ensureOptionListIsMutable();
+                optionList_.addInt(v);
+                break;
+              } // case 88
+              case 90: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureOptionListIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  optionList_.addInt(input.readUInt32());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 90
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.WorktopOptionNotifyOuterClass.WorktopOptionNotify) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
+
+      private int gadgetEntityId_ ;
+      /**
+       * <code>uint32 gadget_entity_id = 7;</code>
+       * @return The gadgetEntityId.
+       */
+      @java.lang.Override
+      public int getGadgetEntityId() {
+        return gadgetEntityId_;
+      }
+      /**
+       * <code>uint32 gadget_entity_id = 7;</code>
+       * @param value The gadgetEntityId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGadgetEntityId(int value) {
+        
+        gadgetEntityId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 gadget_entity_id = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGadgetEntityId() {
+        
+        gadgetEntityId_ = 0;
+        onChanged();
+        return this;
+      }
 
       private com.google.protobuf.Internal.IntList optionList_ = emptyIntList();
       private void ensureOptionListIsMutable() {
@@ -555,7 +538,7 @@ public final class WorktopOptionNotifyOuterClass {
          }
       }
       /**
-       * <code>repeated uint32 option_list = 7;</code>
+       * <code>repeated uint32 option_list = 11;</code>
        * @return A list containing the optionList.
        */
       public java.util.List<java.lang.Integer>
@@ -564,14 +547,14 @@ public final class WorktopOptionNotifyOuterClass {
                  java.util.Collections.unmodifiableList(optionList_) : optionList_;
       }
       /**
-       * <code>repeated uint32 option_list = 7;</code>
+       * <code>repeated uint32 option_list = 11;</code>
        * @return The count of optionList.
        */
       public int getOptionListCount() {
         return optionList_.size();
       }
       /**
-       * <code>repeated uint32 option_list = 7;</code>
+       * <code>repeated uint32 option_list = 11;</code>
        * @param index The index of the element to return.
        * @return The optionList at the given index.
        */
@@ -579,7 +562,7 @@ public final class WorktopOptionNotifyOuterClass {
         return optionList_.getInt(index);
       }
       /**
-       * <code>repeated uint32 option_list = 7;</code>
+       * <code>repeated uint32 option_list = 11;</code>
        * @param index The index to set the value at.
        * @param value The optionList to set.
        * @return This builder for chaining.
@@ -592,7 +575,7 @@ public final class WorktopOptionNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 option_list = 7;</code>
+       * <code>repeated uint32 option_list = 11;</code>
        * @param value The optionList to add.
        * @return This builder for chaining.
        */
@@ -603,7 +586,7 @@ public final class WorktopOptionNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 option_list = 7;</code>
+       * <code>repeated uint32 option_list = 11;</code>
        * @param values The optionList to add.
        * @return This builder for chaining.
        */
@@ -616,43 +599,12 @@ public final class WorktopOptionNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 option_list = 7;</code>
+       * <code>repeated uint32 option_list = 11;</code>
        * @return This builder for chaining.
        */
       public Builder clearOptionList() {
         optionList_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
-        return this;
-      }
-
-      private int gadgetEntityId_ ;
-      /**
-       * <code>uint32 gadget_entity_id = 3;</code>
-       * @return The gadgetEntityId.
-       */
-      @java.lang.Override
-      public int getGadgetEntityId() {
-        return gadgetEntityId_;
-      }
-      /**
-       * <code>uint32 gadget_entity_id = 3;</code>
-       * @param value The gadgetEntityId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setGadgetEntityId(int value) {
-        
-        gadgetEntityId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 gadget_entity_id = 3;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearGadgetEntityId() {
-        
-        gadgetEntityId_ = 0;
         onChanged();
         return this;
       }
@@ -689,7 +641,18 @@ public final class WorktopOptionNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new WorktopOptionNotify(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -724,8 +687,8 @@ public final class WorktopOptionNotifyOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\031WorktopOptionNotify.proto\"D\n\023WorktopOp" +
-      "tionNotify\022\023\n\013option_list\030\007 \003(\r\022\030\n\020gadge" +
-      "t_entity_id\030\003 \001(\rB\033\n\031emu.grasscutter.net" +
+      "tionNotify\022\030\n\020gadget_entity_id\030\007 \001(\r\022\023\n\013" +
+      "option_list\030\013 \003(\rB\033\n\031emu.grasscutter.net" +
       ".protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -737,7 +700,7 @@ public final class WorktopOptionNotifyOuterClass {
     internal_static_WorktopOptionNotify_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_WorktopOptionNotify_descriptor,
-        new java.lang.String[] { "OptionList", "GadgetEntityId", });
+        new java.lang.String[] { "GadgetEntityId", "OptionList", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

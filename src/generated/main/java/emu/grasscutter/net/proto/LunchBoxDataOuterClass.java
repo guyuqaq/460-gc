@@ -19,11 +19,11 @@ public final class LunchBoxDataOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>map&lt;uint32, uint32&gt; slot_material_map = 10;</code>
+     * <code>map&lt;uint32, uint32&gt; slot_material_map = 5;</code>
      */
     int getSlotMaterialMapCount();
     /**
-     * <code>map&lt;uint32, uint32&gt; slot_material_map = 10;</code>
+     * <code>map&lt;uint32, uint32&gt; slot_material_map = 5;</code>
      */
     boolean containsSlotMaterialMap(
         int key);
@@ -34,19 +34,19 @@ public final class LunchBoxDataOuterClass {
     java.util.Map<java.lang.Integer, java.lang.Integer>
     getSlotMaterialMap();
     /**
-     * <code>map&lt;uint32, uint32&gt; slot_material_map = 10;</code>
+     * <code>map&lt;uint32, uint32&gt; slot_material_map = 5;</code>
      */
     java.util.Map<java.lang.Integer, java.lang.Integer>
     getSlotMaterialMapMap();
     /**
-     * <code>map&lt;uint32, uint32&gt; slot_material_map = 10;</code>
+     * <code>map&lt;uint32, uint32&gt; slot_material_map = 5;</code>
      */
 
     int getSlotMaterialMapOrDefault(
         int key,
         int defaultValue);
     /**
-     * <code>map&lt;uint32, uint32&gt; slot_material_map = 10;</code>
+     * <code>map&lt;uint32, uint32&gt; slot_material_map = 5;</code>
      */
 
     int getSlotMaterialMapOrThrow(
@@ -54,7 +54,8 @@ public final class LunchBoxDataOuterClass {
   }
   /**
    * <pre>
-   * Obf: NKDOHGNGCLG
+   * 4.7.0
+   * Obf: FFDHGEAEOND
    * </pre>
    *
    * Protobuf type {@code LunchBoxData}
@@ -83,57 +84,6 @@ public final class LunchBoxDataOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private LunchBoxData(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 82: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                slotMaterialMap_ = com.google.protobuf.MapField.newMapField(
-                    SlotMaterialMapDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000001;
-              }
-              com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
-              slotMaterialMap__ = input.readMessage(
-                  SlotMaterialMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              slotMaterialMap_.getMutableMap().put(
-                  slotMaterialMap__.getKey(), slotMaterialMap__.getValue());
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.LunchBoxDataOuterClass.internal_static_LunchBoxData_descriptor;
@@ -144,7 +94,7 @@ public final class LunchBoxDataOuterClass {
     protected com.google.protobuf.MapField internalGetMapField(
         int number) {
       switch (number) {
-        case 10:
+        case 5:
           return internalGetSlotMaterialMap();
         default:
           throw new RuntimeException(
@@ -159,7 +109,7 @@ public final class LunchBoxDataOuterClass {
               emu.grasscutter.net.proto.LunchBoxDataOuterClass.LunchBoxData.class, emu.grasscutter.net.proto.LunchBoxDataOuterClass.LunchBoxData.Builder.class);
     }
 
-    public static final int SLOT_MATERIAL_MAP_FIELD_NUMBER = 10;
+    public static final int SLOT_MATERIAL_MAP_FIELD_NUMBER = 5;
     private static final class SlotMaterialMapDefaultEntryHolder {
       static final com.google.protobuf.MapEntry<
           java.lang.Integer, java.lang.Integer> defaultEntry =
@@ -186,7 +136,7 @@ public final class LunchBoxDataOuterClass {
       return internalGetSlotMaterialMap().getMap().size();
     }
     /**
-     * <code>map&lt;uint32, uint32&gt; slot_material_map = 10;</code>
+     * <code>map&lt;uint32, uint32&gt; slot_material_map = 5;</code>
      */
 
     @java.lang.Override
@@ -204,7 +154,7 @@ public final class LunchBoxDataOuterClass {
       return getSlotMaterialMapMap();
     }
     /**
-     * <code>map&lt;uint32, uint32&gt; slot_material_map = 10;</code>
+     * <code>map&lt;uint32, uint32&gt; slot_material_map = 5;</code>
      */
     @java.lang.Override
 
@@ -212,7 +162,7 @@ public final class LunchBoxDataOuterClass {
       return internalGetSlotMaterialMap().getMap();
     }
     /**
-     * <code>map&lt;uint32, uint32&gt; slot_material_map = 10;</code>
+     * <code>map&lt;uint32, uint32&gt; slot_material_map = 5;</code>
      */
     @java.lang.Override
 
@@ -225,7 +175,7 @@ public final class LunchBoxDataOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
-     * <code>map&lt;uint32, uint32&gt; slot_material_map = 10;</code>
+     * <code>map&lt;uint32, uint32&gt; slot_material_map = 5;</code>
      */
     @java.lang.Override
 
@@ -259,8 +209,8 @@ public final class LunchBoxDataOuterClass {
           output,
           internalGetSlotMaterialMap(),
           SlotMaterialMapDefaultEntryHolder.defaultEntry,
-          10);
-      unknownFields.writeTo(output);
+          5);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -277,9 +227,9 @@ public final class LunchBoxDataOuterClass {
             .setValue(entry.getValue())
             .build();
         size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(10, slotMaterialMap__);
+            .computeMessageSize(5, slotMaterialMap__);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -296,7 +246,7 @@ public final class LunchBoxDataOuterClass {
 
       if (!internalGetSlotMaterialMap().equals(
           other.internalGetSlotMaterialMap())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -311,7 +261,7 @@ public final class LunchBoxDataOuterClass {
         hash = (37 * hash) + SLOT_MATERIAL_MAP_FIELD_NUMBER;
         hash = (53 * hash) + internalGetSlotMaterialMap().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -408,7 +358,8 @@ public final class LunchBoxDataOuterClass {
     }
     /**
      * <pre>
-     * Obf: NKDOHGNGCLG
+     * 4.7.0
+     * Obf: FFDHGEAEOND
      * </pre>
      *
      * Protobuf type {@code LunchBoxData}
@@ -426,7 +377,7 @@ public final class LunchBoxDataOuterClass {
       protected com.google.protobuf.MapField internalGetMapField(
           int number) {
         switch (number) {
-          case 10:
+          case 5:
             return internalGetSlotMaterialMap();
           default:
             throw new RuntimeException(
@@ -437,7 +388,7 @@ public final class LunchBoxDataOuterClass {
       protected com.google.protobuf.MapField internalGetMutableMapField(
           int number) {
         switch (number) {
-          case 10:
+          case 5:
             return internalGetMutableSlotMaterialMap();
           default:
             throw new RuntimeException(
@@ -454,18 +405,13 @@ public final class LunchBoxDataOuterClass {
 
       // Construct using emu.grasscutter.net.proto.LunchBoxDataOuterClass.LunchBoxData.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -550,7 +496,7 @@ public final class LunchBoxDataOuterClass {
         if (other == emu.grasscutter.net.proto.LunchBoxDataOuterClass.LunchBoxData.getDefaultInstance()) return this;
         internalGetMutableSlotMaterialMap().mergeFrom(
             other.internalGetSlotMaterialMap());
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -565,17 +511,38 @@ public final class LunchBoxDataOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.LunchBoxDataOuterClass.LunchBoxData parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 42: {
+                com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
+                slotMaterialMap__ = input.readMessage(
+                    SlotMaterialMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutableSlotMaterialMap().getMutableMap().put(
+                    slotMaterialMap__.getKey(), slotMaterialMap__.getValue());
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.LunchBoxDataOuterClass.LunchBoxData) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -607,7 +574,7 @@ public final class LunchBoxDataOuterClass {
         return internalGetSlotMaterialMap().getMap().size();
       }
       /**
-       * <code>map&lt;uint32, uint32&gt; slot_material_map = 10;</code>
+       * <code>map&lt;uint32, uint32&gt; slot_material_map = 5;</code>
        */
 
       @java.lang.Override
@@ -625,7 +592,7 @@ public final class LunchBoxDataOuterClass {
         return getSlotMaterialMapMap();
       }
       /**
-       * <code>map&lt;uint32, uint32&gt; slot_material_map = 10;</code>
+       * <code>map&lt;uint32, uint32&gt; slot_material_map = 5;</code>
        */
       @java.lang.Override
 
@@ -633,7 +600,7 @@ public final class LunchBoxDataOuterClass {
         return internalGetSlotMaterialMap().getMap();
       }
       /**
-       * <code>map&lt;uint32, uint32&gt; slot_material_map = 10;</code>
+       * <code>map&lt;uint32, uint32&gt; slot_material_map = 5;</code>
        */
       @java.lang.Override
 
@@ -646,7 +613,7 @@ public final class LunchBoxDataOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
-       * <code>map&lt;uint32, uint32&gt; slot_material_map = 10;</code>
+       * <code>map&lt;uint32, uint32&gt; slot_material_map = 5;</code>
        */
       @java.lang.Override
 
@@ -667,7 +634,7 @@ public final class LunchBoxDataOuterClass {
         return this;
       }
       /**
-       * <code>map&lt;uint32, uint32&gt; slot_material_map = 10;</code>
+       * <code>map&lt;uint32, uint32&gt; slot_material_map = 5;</code>
        */
 
       public Builder removeSlotMaterialMap(
@@ -686,7 +653,7 @@ public final class LunchBoxDataOuterClass {
         return internalGetMutableSlotMaterialMap().getMutableMap();
       }
       /**
-       * <code>map&lt;uint32, uint32&gt; slot_material_map = 10;</code>
+       * <code>map&lt;uint32, uint32&gt; slot_material_map = 5;</code>
        */
       public Builder putSlotMaterialMap(
           int key,
@@ -698,7 +665,7 @@ public final class LunchBoxDataOuterClass {
         return this;
       }
       /**
-       * <code>map&lt;uint32, uint32&gt; slot_material_map = 10;</code>
+       * <code>map&lt;uint32, uint32&gt; slot_material_map = 5;</code>
        */
 
       public Builder putAllSlotMaterialMap(
@@ -740,7 +707,18 @@ public final class LunchBoxDataOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new LunchBoxData(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -780,7 +758,7 @@ public final class LunchBoxDataOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\022LunchBoxData.proto\"\205\001\n\014LunchBoxData\022=\n" +
-      "\021slot_material_map\030\n \003(\0132\".LunchBoxData." +
+      "\021slot_material_map\030\005 \003(\0132\".LunchBoxData." +
       "SlotMaterialMapEntry\0326\n\024SlotMaterialMapE" +
       "ntry\022\013\n\003key\030\001 \001(\r\022\r\n\005value\030\002 \001(\r:\0028\001B\033\n\031" +
       "emu.grasscutter.net.protob\006proto3"

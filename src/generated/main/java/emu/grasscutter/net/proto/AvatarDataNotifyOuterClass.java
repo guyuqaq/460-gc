@@ -19,76 +19,92 @@ public final class AvatarDataNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated uint32 owned_flycloak_list = 13;</code>
-     * @return A list containing the ownedFlycloakList.
+     * <code>repeated uint32 ONAODHDMILI = 2;</code>
+     * @return A list containing the oNAODHDMILI.
      */
-    java.util.List<java.lang.Integer> getOwnedFlycloakListList();
+    java.util.List<java.lang.Integer> getONAODHDMILIList();
     /**
-     * <code>repeated uint32 owned_flycloak_list = 13;</code>
-     * @return The count of ownedFlycloakList.
+     * <code>repeated uint32 ONAODHDMILI = 2;</code>
+     * @return The count of oNAODHDMILI.
      */
-    int getOwnedFlycloakListCount();
+    int getONAODHDMILICount();
     /**
-     * <code>repeated uint32 owned_flycloak_list = 13;</code>
+     * <code>repeated uint32 ONAODHDMILI = 2;</code>
      * @param index The index of the element to return.
-     * @return The ownedFlycloakList at the given index.
+     * @return The oNAODHDMILI at the given index.
      */
-    int getOwnedFlycloakList(int index);
+    int getONAODHDMILI(int index);
 
     /**
-     * <code>repeated .AvatarRenameInfo avatar_rename_list = 10;</code>
+     * <code>repeated uint64 temp_avatar_guid_list = 4;</code>
+     * @return A list containing the tempAvatarGuidList.
      */
-    java.util.List<emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo> 
-        getAvatarRenameListList();
+    java.util.List<java.lang.Long> getTempAvatarGuidListList();
     /**
-     * <code>repeated .AvatarRenameInfo avatar_rename_list = 10;</code>
+     * <code>repeated uint64 temp_avatar_guid_list = 4;</code>
+     * @return The count of tempAvatarGuidList.
      */
-    emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo getAvatarRenameList(int index);
+    int getTempAvatarGuidListCount();
     /**
-     * <code>repeated .AvatarRenameInfo avatar_rename_list = 10;</code>
+     * <code>repeated uint64 temp_avatar_guid_list = 4;</code>
+     * @param index The index of the element to return.
+     * @return The tempAvatarGuidList at the given index.
      */
-    int getAvatarRenameListCount();
-    /**
-     * <code>repeated .AvatarRenameInfo avatar_rename_list = 10;</code>
-     */
-    java.util.List<? extends emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfoOrBuilder> 
-        getAvatarRenameListOrBuilderList();
-    /**
-     * <code>repeated .AvatarRenameInfo avatar_rename_list = 10;</code>
-     */
-    emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfoOrBuilder getAvatarRenameListOrBuilder(
-        int index);
+    long getTempAvatarGuidList(int index);
 
     /**
-     * <code>repeated .AvatarInfo avatar_list = 5;</code>
+     * <code>uint32 cur_avatar_team_id = 7;</code>
+     * @return The curAvatarTeamId.
+     */
+    int getCurAvatarTeamId();
+
+    /**
+     * <code>repeated .AvatarInfo avatar_list = 8;</code>
      */
     java.util.List<emu.grasscutter.net.proto.AvatarInfoOuterClass.AvatarInfo> 
         getAvatarListList();
     /**
-     * <code>repeated .AvatarInfo avatar_list = 5;</code>
+     * <code>repeated .AvatarInfo avatar_list = 8;</code>
      */
     emu.grasscutter.net.proto.AvatarInfoOuterClass.AvatarInfo getAvatarList(int index);
     /**
-     * <code>repeated .AvatarInfo avatar_list = 5;</code>
+     * <code>repeated .AvatarInfo avatar_list = 8;</code>
      */
     int getAvatarListCount();
     /**
-     * <code>repeated .AvatarInfo avatar_list = 5;</code>
+     * <code>repeated .AvatarInfo avatar_list = 8;</code>
      */
     java.util.List<? extends emu.grasscutter.net.proto.AvatarInfoOuterClass.AvatarInfoOrBuilder> 
         getAvatarListOrBuilderList();
     /**
-     * <code>repeated .AvatarInfo avatar_list = 5;</code>
+     * <code>repeated .AvatarInfo avatar_list = 8;</code>
      */
     emu.grasscutter.net.proto.AvatarInfoOuterClass.AvatarInfoOrBuilder getAvatarListOrBuilder(
         int index);
 
     /**
-     * <code>map&lt;uint32, .AvatarTeam&gt; avatar_team_map = 15;</code>
+     * <code>repeated uint32 backup_avatar_team_order_list = 9;</code>
+     * @return A list containing the backupAvatarTeamOrderList.
+     */
+    java.util.List<java.lang.Integer> getBackupAvatarTeamOrderListList();
+    /**
+     * <code>repeated uint32 backup_avatar_team_order_list = 9;</code>
+     * @return The count of backupAvatarTeamOrderList.
+     */
+    int getBackupAvatarTeamOrderListCount();
+    /**
+     * <code>repeated uint32 backup_avatar_team_order_list = 9;</code>
+     * @param index The index of the element to return.
+     * @return The backupAvatarTeamOrderList at the given index.
+     */
+    int getBackupAvatarTeamOrderList(int index);
+
+    /**
+     * <code>map&lt;uint32, .AvatarTeam&gt; avatar_team_map = 10;</code>
      */
     int getAvatarTeamMapCount();
     /**
-     * <code>map&lt;uint32, .AvatarTeam&gt; avatar_team_map = 15;</code>
+     * <code>map&lt;uint32, .AvatarTeam&gt; avatar_team_map = 10;</code>
      */
     boolean containsAvatarTeamMap(
         int key);
@@ -99,75 +115,89 @@ public final class AvatarDataNotifyOuterClass {
     java.util.Map<java.lang.Integer, emu.grasscutter.net.proto.AvatarTeamOuterClass.AvatarTeam>
     getAvatarTeamMap();
     /**
-     * <code>map&lt;uint32, .AvatarTeam&gt; avatar_team_map = 15;</code>
+     * <code>map&lt;uint32, .AvatarTeam&gt; avatar_team_map = 10;</code>
      */
     java.util.Map<java.lang.Integer, emu.grasscutter.net.proto.AvatarTeamOuterClass.AvatarTeam>
     getAvatarTeamMapMap();
     /**
-     * <code>map&lt;uint32, .AvatarTeam&gt; avatar_team_map = 15;</code>
+     * <code>map&lt;uint32, .AvatarTeam&gt; avatar_team_map = 10;</code>
      */
 
     emu.grasscutter.net.proto.AvatarTeamOuterClass.AvatarTeam getAvatarTeamMapOrDefault(
         int key,
         emu.grasscutter.net.proto.AvatarTeamOuterClass.AvatarTeam defaultValue);
     /**
-     * <code>map&lt;uint32, .AvatarTeam&gt; avatar_team_map = 15;</code>
+     * <code>map&lt;uint32, .AvatarTeam&gt; avatar_team_map = 10;</code>
      */
 
     emu.grasscutter.net.proto.AvatarTeamOuterClass.AvatarTeam getAvatarTeamMapOrThrow(
         int key);
 
     /**
-     * <pre>
-     *repeated uint32 backup_avatar_team_order_list = 9;//sus
-     * </pre>
-     *
-     * <code>repeated uint32 owned_costume_list = 2;</code>
+     * <code>repeated uint32 owned_flycloak_list = 11;</code>
+     * @return A list containing the ownedFlycloakList.
+     */
+    java.util.List<java.lang.Integer> getOwnedFlycloakListList();
+    /**
+     * <code>repeated uint32 owned_flycloak_list = 11;</code>
+     * @return The count of ownedFlycloakList.
+     */
+    int getOwnedFlycloakListCount();
+    /**
+     * <code>repeated uint32 owned_flycloak_list = 11;</code>
+     * @param index The index of the element to return.
+     * @return The ownedFlycloakList at the given index.
+     */
+    int getOwnedFlycloakList(int index);
+
+    /**
+     * <code>repeated uint32 owned_costume_list = 12;</code>
      * @return A list containing the ownedCostumeList.
      */
     java.util.List<java.lang.Integer> getOwnedCostumeListList();
     /**
-     * <pre>
-     *repeated uint32 backup_avatar_team_order_list = 9;//sus
-     * </pre>
-     *
-     * <code>repeated uint32 owned_costume_list = 2;</code>
+     * <code>repeated uint32 owned_costume_list = 12;</code>
      * @return The count of ownedCostumeList.
      */
     int getOwnedCostumeListCount();
     /**
-     * <pre>
-     *repeated uint32 backup_avatar_team_order_list = 9;//sus
-     * </pre>
-     *
-     * <code>repeated uint32 owned_costume_list = 2;</code>
+     * <code>repeated uint32 owned_costume_list = 12;</code>
      * @param index The index of the element to return.
      * @return The ownedCostumeList at the given index.
      */
     int getOwnedCostumeList(int index);
 
     /**
-     * <pre>
-     *repeated uint64 temp_avatar_guid_list = 999;//Wrong
-     * </pre>
-     *
-     * <code>uint32 cur_avatar_team_id = 1;</code>
-     * @return The curAvatarTeamId.
+     * <code>repeated .AvatarRenameInfo avatar_rename_list = 13;</code>
      */
-    int getCurAvatarTeamId();
+    java.util.List<emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo> 
+        getAvatarRenameListList();
+    /**
+     * <code>repeated .AvatarRenameInfo avatar_rename_list = 13;</code>
+     */
+    emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo getAvatarRenameList(int index);
+    /**
+     * <code>repeated .AvatarRenameInfo avatar_rename_list = 13;</code>
+     */
+    int getAvatarRenameListCount();
+    /**
+     * <code>repeated .AvatarRenameInfo avatar_rename_list = 13;</code>
+     */
+    java.util.List<? extends emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfoOrBuilder> 
+        getAvatarRenameListOrBuilderList();
+    /**
+     * <code>repeated .AvatarRenameInfo avatar_rename_list = 13;</code>
+     */
+    emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfoOrBuilder getAvatarRenameListOrBuilder(
+        int index);
 
     /**
-     * <code>uint64 choose_avatar_guid = 11;</code>
+     * <code>uint64 choose_avatar_guid = 14;</code>
      * @return The chooseAvatarGuid.
      */
     long getChooseAvatarGuid();
   }
   /**
-   * <pre>
-   * 4.6.0
-   * CmdId: 24452
-   * </pre>
-   *
    * Protobuf type {@code AvatarDataNotify}
    */
   public static final class AvatarDataNotify extends
@@ -180,10 +210,13 @@ public final class AvatarDataNotifyOuterClass {
       super(builder);
     }
     private AvatarDataNotify() {
-      ownedFlycloakList_ = emptyIntList();
-      avatarRenameList_ = java.util.Collections.emptyList();
+      oNAODHDMILI_ = emptyIntList();
+      tempAvatarGuidList_ = emptyLongList();
       avatarList_ = java.util.Collections.emptyList();
+      backupAvatarTeamOrderList_ = emptyIntList();
+      ownedFlycloakList_ = emptyIntList();
       ownedCostumeList_ = emptyIntList();
+      avatarRenameList_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -198,139 +231,6 @@ public final class AvatarDataNotifyOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private AvatarDataNotify(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-
-              curAvatarTeamId_ = input.readUInt32();
-              break;
-            }
-            case 16: {
-              if (!((mutable_bitField0_ & 0x00000010) != 0)) {
-                ownedCostumeList_ = newIntList();
-                mutable_bitField0_ |= 0x00000010;
-              }
-              ownedCostumeList_.addInt(input.readUInt32());
-              break;
-            }
-            case 18: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000010) != 0) && input.getBytesUntilLimit() > 0) {
-                ownedCostumeList_ = newIntList();
-                mutable_bitField0_ |= 0x00000010;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                ownedCostumeList_.addInt(input.readUInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            case 42: {
-              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-                avatarList_ = new java.util.ArrayList<emu.grasscutter.net.proto.AvatarInfoOuterClass.AvatarInfo>();
-                mutable_bitField0_ |= 0x00000004;
-              }
-              avatarList_.add(
-                  input.readMessage(emu.grasscutter.net.proto.AvatarInfoOuterClass.AvatarInfo.parser(), extensionRegistry));
-              break;
-            }
-            case 82: {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                avatarRenameList_ = new java.util.ArrayList<emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo>();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              avatarRenameList_.add(
-                  input.readMessage(emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo.parser(), extensionRegistry));
-              break;
-            }
-            case 88: {
-
-              chooseAvatarGuid_ = input.readUInt64();
-              break;
-            }
-            case 104: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                ownedFlycloakList_ = newIntList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              ownedFlycloakList_.addInt(input.readUInt32());
-              break;
-            }
-            case 106: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
-                ownedFlycloakList_ = newIntList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                ownedFlycloakList_.addInt(input.readUInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            case 122: {
-              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
-                avatarTeamMap_ = com.google.protobuf.MapField.newMapField(
-                    AvatarTeamMapDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000008;
-              }
-              com.google.protobuf.MapEntry<java.lang.Integer, emu.grasscutter.net.proto.AvatarTeamOuterClass.AvatarTeam>
-              avatarTeamMap__ = input.readMessage(
-                  AvatarTeamMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              avatarTeamMap_.getMutableMap().put(
-                  avatarTeamMap__.getKey(), avatarTeamMap__.getValue());
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000010) != 0)) {
-          ownedCostumeList_.makeImmutable(); // C
-        }
-        if (((mutable_bitField0_ & 0x00000004) != 0)) {
-          avatarList_ = java.util.Collections.unmodifiableList(avatarList_);
-        }
-        if (((mutable_bitField0_ & 0x00000002) != 0)) {
-          avatarRenameList_ = java.util.Collections.unmodifiableList(avatarRenameList_);
-        }
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          ownedFlycloakList_.makeImmutable(); // C
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.AvatarDataNotifyOuterClass.internal_static_AvatarDataNotify_descriptor;
@@ -341,7 +241,7 @@ public final class AvatarDataNotifyOuterClass {
     protected com.google.protobuf.MapField internalGetMapField(
         int number) {
       switch (number) {
-        case 15:
+        case 10:
           return internalGetAvatarTeamMap();
         default:
           throw new RuntimeException(
@@ -356,85 +256,84 @@ public final class AvatarDataNotifyOuterClass {
               emu.grasscutter.net.proto.AvatarDataNotifyOuterClass.AvatarDataNotify.class, emu.grasscutter.net.proto.AvatarDataNotifyOuterClass.AvatarDataNotify.Builder.class);
     }
 
-    public static final int OWNED_FLYCLOAK_LIST_FIELD_NUMBER = 13;
-    private com.google.protobuf.Internal.IntList ownedFlycloakList_;
+    public static final int ONAODHDMILI_FIELD_NUMBER = 2;
+    private com.google.protobuf.Internal.IntList oNAODHDMILI_;
     /**
-     * <code>repeated uint32 owned_flycloak_list = 13;</code>
-     * @return A list containing the ownedFlycloakList.
+     * <code>repeated uint32 ONAODHDMILI = 2;</code>
+     * @return A list containing the oNAODHDMILI.
      */
     @java.lang.Override
     public java.util.List<java.lang.Integer>
-        getOwnedFlycloakListList() {
-      return ownedFlycloakList_;
+        getONAODHDMILIList() {
+      return oNAODHDMILI_;
     }
     /**
-     * <code>repeated uint32 owned_flycloak_list = 13;</code>
-     * @return The count of ownedFlycloakList.
+     * <code>repeated uint32 ONAODHDMILI = 2;</code>
+     * @return The count of oNAODHDMILI.
      */
-    public int getOwnedFlycloakListCount() {
-      return ownedFlycloakList_.size();
+    public int getONAODHDMILICount() {
+      return oNAODHDMILI_.size();
     }
     /**
-     * <code>repeated uint32 owned_flycloak_list = 13;</code>
+     * <code>repeated uint32 ONAODHDMILI = 2;</code>
      * @param index The index of the element to return.
-     * @return The ownedFlycloakList at the given index.
+     * @return The oNAODHDMILI at the given index.
      */
-    public int getOwnedFlycloakList(int index) {
-      return ownedFlycloakList_.getInt(index);
+    public int getONAODHDMILI(int index) {
+      return oNAODHDMILI_.getInt(index);
     }
-    private int ownedFlycloakListMemoizedSerializedSize = -1;
+    private int oNAODHDMILIMemoizedSerializedSize = -1;
 
-    public static final int AVATAR_RENAME_LIST_FIELD_NUMBER = 10;
-    private java.util.List<emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo> avatarRenameList_;
+    public static final int TEMP_AVATAR_GUID_LIST_FIELD_NUMBER = 4;
+    private com.google.protobuf.Internal.LongList tempAvatarGuidList_;
     /**
-     * <code>repeated .AvatarRenameInfo avatar_rename_list = 10;</code>
+     * <code>repeated uint64 temp_avatar_guid_list = 4;</code>
+     * @return A list containing the tempAvatarGuidList.
      */
     @java.lang.Override
-    public java.util.List<emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo> getAvatarRenameListList() {
-      return avatarRenameList_;
+    public java.util.List<java.lang.Long>
+        getTempAvatarGuidListList() {
+      return tempAvatarGuidList_;
     }
     /**
-     * <code>repeated .AvatarRenameInfo avatar_rename_list = 10;</code>
+     * <code>repeated uint64 temp_avatar_guid_list = 4;</code>
+     * @return The count of tempAvatarGuidList.
      */
-    @java.lang.Override
-    public java.util.List<? extends emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfoOrBuilder> 
-        getAvatarRenameListOrBuilderList() {
-      return avatarRenameList_;
+    public int getTempAvatarGuidListCount() {
+      return tempAvatarGuidList_.size();
     }
     /**
-     * <code>repeated .AvatarRenameInfo avatar_rename_list = 10;</code>
+     * <code>repeated uint64 temp_avatar_guid_list = 4;</code>
+     * @param index The index of the element to return.
+     * @return The tempAvatarGuidList at the given index.
      */
-    @java.lang.Override
-    public int getAvatarRenameListCount() {
-      return avatarRenameList_.size();
+    public long getTempAvatarGuidList(int index) {
+      return tempAvatarGuidList_.getLong(index);
     }
+    private int tempAvatarGuidListMemoizedSerializedSize = -1;
+
+    public static final int CUR_AVATAR_TEAM_ID_FIELD_NUMBER = 7;
+    private int curAvatarTeamId_;
     /**
-     * <code>repeated .AvatarRenameInfo avatar_rename_list = 10;</code>
+     * <code>uint32 cur_avatar_team_id = 7;</code>
+     * @return The curAvatarTeamId.
      */
     @java.lang.Override
-    public emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo getAvatarRenameList(int index) {
-      return avatarRenameList_.get(index);
-    }
-    /**
-     * <code>repeated .AvatarRenameInfo avatar_rename_list = 10;</code>
-     */
-    @java.lang.Override
-    public emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfoOrBuilder getAvatarRenameListOrBuilder(
-        int index) {
-      return avatarRenameList_.get(index);
+    public int getCurAvatarTeamId() {
+      return curAvatarTeamId_;
     }
 
-    public static final int AVATAR_LIST_FIELD_NUMBER = 5;
+    public static final int AVATAR_LIST_FIELD_NUMBER = 8;
     private java.util.List<emu.grasscutter.net.proto.AvatarInfoOuterClass.AvatarInfo> avatarList_;
     /**
-     * <code>repeated .AvatarInfo avatar_list = 5;</code>
+     * <code>repeated .AvatarInfo avatar_list = 8;</code>
      */
     @java.lang.Override
     public java.util.List<emu.grasscutter.net.proto.AvatarInfoOuterClass.AvatarInfo> getAvatarListList() {
       return avatarList_;
     }
     /**
-     * <code>repeated .AvatarInfo avatar_list = 5;</code>
+     * <code>repeated .AvatarInfo avatar_list = 8;</code>
      */
     @java.lang.Override
     public java.util.List<? extends emu.grasscutter.net.proto.AvatarInfoOuterClass.AvatarInfoOrBuilder> 
@@ -442,21 +341,21 @@ public final class AvatarDataNotifyOuterClass {
       return avatarList_;
     }
     /**
-     * <code>repeated .AvatarInfo avatar_list = 5;</code>
+     * <code>repeated .AvatarInfo avatar_list = 8;</code>
      */
     @java.lang.Override
     public int getAvatarListCount() {
       return avatarList_.size();
     }
     /**
-     * <code>repeated .AvatarInfo avatar_list = 5;</code>
+     * <code>repeated .AvatarInfo avatar_list = 8;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.AvatarInfoOuterClass.AvatarInfo getAvatarList(int index) {
       return avatarList_.get(index);
     }
     /**
-     * <code>repeated .AvatarInfo avatar_list = 5;</code>
+     * <code>repeated .AvatarInfo avatar_list = 8;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.AvatarInfoOuterClass.AvatarInfoOrBuilder getAvatarListOrBuilder(
@@ -464,7 +363,35 @@ public final class AvatarDataNotifyOuterClass {
       return avatarList_.get(index);
     }
 
-    public static final int AVATAR_TEAM_MAP_FIELD_NUMBER = 15;
+    public static final int BACKUP_AVATAR_TEAM_ORDER_LIST_FIELD_NUMBER = 9;
+    private com.google.protobuf.Internal.IntList backupAvatarTeamOrderList_;
+    /**
+     * <code>repeated uint32 backup_avatar_team_order_list = 9;</code>
+     * @return A list containing the backupAvatarTeamOrderList.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Integer>
+        getBackupAvatarTeamOrderListList() {
+      return backupAvatarTeamOrderList_;
+    }
+    /**
+     * <code>repeated uint32 backup_avatar_team_order_list = 9;</code>
+     * @return The count of backupAvatarTeamOrderList.
+     */
+    public int getBackupAvatarTeamOrderListCount() {
+      return backupAvatarTeamOrderList_.size();
+    }
+    /**
+     * <code>repeated uint32 backup_avatar_team_order_list = 9;</code>
+     * @param index The index of the element to return.
+     * @return The backupAvatarTeamOrderList at the given index.
+     */
+    public int getBackupAvatarTeamOrderList(int index) {
+      return backupAvatarTeamOrderList_.getInt(index);
+    }
+    private int backupAvatarTeamOrderListMemoizedSerializedSize = -1;
+
+    public static final int AVATAR_TEAM_MAP_FIELD_NUMBER = 10;
     private static final class AvatarTeamMapDefaultEntryHolder {
       static final com.google.protobuf.MapEntry<
           java.lang.Integer, emu.grasscutter.net.proto.AvatarTeamOuterClass.AvatarTeam> defaultEntry =
@@ -491,7 +418,7 @@ public final class AvatarDataNotifyOuterClass {
       return internalGetAvatarTeamMap().getMap().size();
     }
     /**
-     * <code>map&lt;uint32, .AvatarTeam&gt; avatar_team_map = 15;</code>
+     * <code>map&lt;uint32, .AvatarTeam&gt; avatar_team_map = 10;</code>
      */
 
     @java.lang.Override
@@ -509,7 +436,7 @@ public final class AvatarDataNotifyOuterClass {
       return getAvatarTeamMapMap();
     }
     /**
-     * <code>map&lt;uint32, .AvatarTeam&gt; avatar_team_map = 15;</code>
+     * <code>map&lt;uint32, .AvatarTeam&gt; avatar_team_map = 10;</code>
      */
     @java.lang.Override
 
@@ -517,7 +444,7 @@ public final class AvatarDataNotifyOuterClass {
       return internalGetAvatarTeamMap().getMap();
     }
     /**
-     * <code>map&lt;uint32, .AvatarTeam&gt; avatar_team_map = 15;</code>
+     * <code>map&lt;uint32, .AvatarTeam&gt; avatar_team_map = 10;</code>
      */
     @java.lang.Override
 
@@ -530,7 +457,7 @@ public final class AvatarDataNotifyOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
-     * <code>map&lt;uint32, .AvatarTeam&gt; avatar_team_map = 15;</code>
+     * <code>map&lt;uint32, .AvatarTeam&gt; avatar_team_map = 10;</code>
      */
     @java.lang.Override
 
@@ -545,14 +472,38 @@ public final class AvatarDataNotifyOuterClass {
       return map.get(key);
     }
 
-    public static final int OWNED_COSTUME_LIST_FIELD_NUMBER = 2;
+    public static final int OWNED_FLYCLOAK_LIST_FIELD_NUMBER = 11;
+    private com.google.protobuf.Internal.IntList ownedFlycloakList_;
+    /**
+     * <code>repeated uint32 owned_flycloak_list = 11;</code>
+     * @return A list containing the ownedFlycloakList.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Integer>
+        getOwnedFlycloakListList() {
+      return ownedFlycloakList_;
+    }
+    /**
+     * <code>repeated uint32 owned_flycloak_list = 11;</code>
+     * @return The count of ownedFlycloakList.
+     */
+    public int getOwnedFlycloakListCount() {
+      return ownedFlycloakList_.size();
+    }
+    /**
+     * <code>repeated uint32 owned_flycloak_list = 11;</code>
+     * @param index The index of the element to return.
+     * @return The ownedFlycloakList at the given index.
+     */
+    public int getOwnedFlycloakList(int index) {
+      return ownedFlycloakList_.getInt(index);
+    }
+    private int ownedFlycloakListMemoizedSerializedSize = -1;
+
+    public static final int OWNED_COSTUME_LIST_FIELD_NUMBER = 12;
     private com.google.protobuf.Internal.IntList ownedCostumeList_;
     /**
-     * <pre>
-     *repeated uint32 backup_avatar_team_order_list = 9;//sus
-     * </pre>
-     *
-     * <code>repeated uint32 owned_costume_list = 2;</code>
+     * <code>repeated uint32 owned_costume_list = 12;</code>
      * @return A list containing the ownedCostumeList.
      */
     @java.lang.Override
@@ -561,22 +512,14 @@ public final class AvatarDataNotifyOuterClass {
       return ownedCostumeList_;
     }
     /**
-     * <pre>
-     *repeated uint32 backup_avatar_team_order_list = 9;//sus
-     * </pre>
-     *
-     * <code>repeated uint32 owned_costume_list = 2;</code>
+     * <code>repeated uint32 owned_costume_list = 12;</code>
      * @return The count of ownedCostumeList.
      */
     public int getOwnedCostumeListCount() {
       return ownedCostumeList_.size();
     }
     /**
-     * <pre>
-     *repeated uint32 backup_avatar_team_order_list = 9;//sus
-     * </pre>
-     *
-     * <code>repeated uint32 owned_costume_list = 2;</code>
+     * <code>repeated uint32 owned_costume_list = 12;</code>
      * @param index The index of the element to return.
      * @return The ownedCostumeList at the given index.
      */
@@ -585,25 +528,50 @@ public final class AvatarDataNotifyOuterClass {
     }
     private int ownedCostumeListMemoizedSerializedSize = -1;
 
-    public static final int CUR_AVATAR_TEAM_ID_FIELD_NUMBER = 1;
-    private int curAvatarTeamId_;
+    public static final int AVATAR_RENAME_LIST_FIELD_NUMBER = 13;
+    private java.util.List<emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo> avatarRenameList_;
     /**
-     * <pre>
-     *repeated uint64 temp_avatar_guid_list = 999;//Wrong
-     * </pre>
-     *
-     * <code>uint32 cur_avatar_team_id = 1;</code>
-     * @return The curAvatarTeamId.
+     * <code>repeated .AvatarRenameInfo avatar_rename_list = 13;</code>
      */
     @java.lang.Override
-    public int getCurAvatarTeamId() {
-      return curAvatarTeamId_;
+    public java.util.List<emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo> getAvatarRenameListList() {
+      return avatarRenameList_;
+    }
+    /**
+     * <code>repeated .AvatarRenameInfo avatar_rename_list = 13;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfoOrBuilder> 
+        getAvatarRenameListOrBuilderList() {
+      return avatarRenameList_;
+    }
+    /**
+     * <code>repeated .AvatarRenameInfo avatar_rename_list = 13;</code>
+     */
+    @java.lang.Override
+    public int getAvatarRenameListCount() {
+      return avatarRenameList_.size();
+    }
+    /**
+     * <code>repeated .AvatarRenameInfo avatar_rename_list = 13;</code>
+     */
+    @java.lang.Override
+    public emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo getAvatarRenameList(int index) {
+      return avatarRenameList_.get(index);
+    }
+    /**
+     * <code>repeated .AvatarRenameInfo avatar_rename_list = 13;</code>
+     */
+    @java.lang.Override
+    public emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfoOrBuilder getAvatarRenameListOrBuilder(
+        int index) {
+      return avatarRenameList_.get(index);
     }
 
-    public static final int CHOOSE_AVATAR_GUID_FIELD_NUMBER = 11;
+    public static final int CHOOSE_AVATAR_GUID_FIELD_NUMBER = 14;
     private long chooseAvatarGuid_;
     /**
-     * <code>uint64 choose_avatar_guid = 11;</code>
+     * <code>uint64 choose_avatar_guid = 14;</code>
      * @return The chooseAvatarGuid.
      */
     @java.lang.Override
@@ -626,39 +594,60 @@ public final class AvatarDataNotifyOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
-      if (curAvatarTeamId_ != 0) {
-        output.writeUInt32(1, curAvatarTeamId_);
-      }
-      if (getOwnedCostumeListList().size() > 0) {
+      if (getONAODHDMILIList().size() > 0) {
         output.writeUInt32NoTag(18);
-        output.writeUInt32NoTag(ownedCostumeListMemoizedSerializedSize);
+        output.writeUInt32NoTag(oNAODHDMILIMemoizedSerializedSize);
       }
-      for (int i = 0; i < ownedCostumeList_.size(); i++) {
-        output.writeUInt32NoTag(ownedCostumeList_.getInt(i));
+      for (int i = 0; i < oNAODHDMILI_.size(); i++) {
+        output.writeUInt32NoTag(oNAODHDMILI_.getInt(i));
+      }
+      if (getTempAvatarGuidListList().size() > 0) {
+        output.writeUInt32NoTag(34);
+        output.writeUInt32NoTag(tempAvatarGuidListMemoizedSerializedSize);
+      }
+      for (int i = 0; i < tempAvatarGuidList_.size(); i++) {
+        output.writeUInt64NoTag(tempAvatarGuidList_.getLong(i));
+      }
+      if (curAvatarTeamId_ != 0) {
+        output.writeUInt32(7, curAvatarTeamId_);
       }
       for (int i = 0; i < avatarList_.size(); i++) {
-        output.writeMessage(5, avatarList_.get(i));
+        output.writeMessage(8, avatarList_.get(i));
       }
-      for (int i = 0; i < avatarRenameList_.size(); i++) {
-        output.writeMessage(10, avatarRenameList_.get(i));
+      if (getBackupAvatarTeamOrderListList().size() > 0) {
+        output.writeUInt32NoTag(74);
+        output.writeUInt32NoTag(backupAvatarTeamOrderListMemoizedSerializedSize);
       }
-      if (chooseAvatarGuid_ != 0L) {
-        output.writeUInt64(11, chooseAvatarGuid_);
-      }
-      if (getOwnedFlycloakListList().size() > 0) {
-        output.writeUInt32NoTag(106);
-        output.writeUInt32NoTag(ownedFlycloakListMemoizedSerializedSize);
-      }
-      for (int i = 0; i < ownedFlycloakList_.size(); i++) {
-        output.writeUInt32NoTag(ownedFlycloakList_.getInt(i));
+      for (int i = 0; i < backupAvatarTeamOrderList_.size(); i++) {
+        output.writeUInt32NoTag(backupAvatarTeamOrderList_.getInt(i));
       }
       com.google.protobuf.GeneratedMessageV3
         .serializeIntegerMapTo(
           output,
           internalGetAvatarTeamMap(),
           AvatarTeamMapDefaultEntryHolder.defaultEntry,
-          15);
-      unknownFields.writeTo(output);
+          10);
+      if (getOwnedFlycloakListList().size() > 0) {
+        output.writeUInt32NoTag(90);
+        output.writeUInt32NoTag(ownedFlycloakListMemoizedSerializedSize);
+      }
+      for (int i = 0; i < ownedFlycloakList_.size(); i++) {
+        output.writeUInt32NoTag(ownedFlycloakList_.getInt(i));
+      }
+      if (getOwnedCostumeListList().size() > 0) {
+        output.writeUInt32NoTag(98);
+        output.writeUInt32NoTag(ownedCostumeListMemoizedSerializedSize);
+      }
+      for (int i = 0; i < ownedCostumeList_.size(); i++) {
+        output.writeUInt32NoTag(ownedCostumeList_.getInt(i));
+      }
+      for (int i = 0; i < avatarRenameList_.size(); i++) {
+        output.writeMessage(13, avatarRenameList_.get(i));
+      }
+      if (chooseAvatarGuid_ != 0L) {
+        output.writeUInt64(14, chooseAvatarGuid_);
+      }
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -667,35 +656,65 @@ public final class AvatarDataNotifyOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (curAvatarTeamId_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(1, curAvatarTeamId_);
-      }
       {
         int dataSize = 0;
-        for (int i = 0; i < ownedCostumeList_.size(); i++) {
+        for (int i = 0; i < oNAODHDMILI_.size(); i++) {
           dataSize += com.google.protobuf.CodedOutputStream
-            .computeUInt32SizeNoTag(ownedCostumeList_.getInt(i));
+            .computeUInt32SizeNoTag(oNAODHDMILI_.getInt(i));
         }
         size += dataSize;
-        if (!getOwnedCostumeListList().isEmpty()) {
+        if (!getONAODHDMILIList().isEmpty()) {
           size += 1;
           size += com.google.protobuf.CodedOutputStream
               .computeInt32SizeNoTag(dataSize);
         }
-        ownedCostumeListMemoizedSerializedSize = dataSize;
+        oNAODHDMILIMemoizedSerializedSize = dataSize;
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < tempAvatarGuidList_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeUInt64SizeNoTag(tempAvatarGuidList_.getLong(i));
+        }
+        size += dataSize;
+        if (!getTempAvatarGuidListList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        tempAvatarGuidListMemoizedSerializedSize = dataSize;
+      }
+      if (curAvatarTeamId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(7, curAvatarTeamId_);
       }
       for (int i = 0; i < avatarList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, avatarList_.get(i));
+          .computeMessageSize(8, avatarList_.get(i));
       }
-      for (int i = 0; i < avatarRenameList_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(10, avatarRenameList_.get(i));
+      {
+        int dataSize = 0;
+        for (int i = 0; i < backupAvatarTeamOrderList_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(backupAvatarTeamOrderList_.getInt(i));
+        }
+        size += dataSize;
+        if (!getBackupAvatarTeamOrderListList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        backupAvatarTeamOrderListMemoizedSerializedSize = dataSize;
       }
-      if (chooseAvatarGuid_ != 0L) {
+      for (java.util.Map.Entry<java.lang.Integer, emu.grasscutter.net.proto.AvatarTeamOuterClass.AvatarTeam> entry
+           : internalGetAvatarTeamMap().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.Integer, emu.grasscutter.net.proto.AvatarTeamOuterClass.AvatarTeam>
+        avatarTeamMap__ = AvatarTeamMapDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(11, chooseAvatarGuid_);
+            .computeMessageSize(10, avatarTeamMap__);
       }
       {
         int dataSize = 0;
@@ -711,17 +730,29 @@ public final class AvatarDataNotifyOuterClass {
         }
         ownedFlycloakListMemoizedSerializedSize = dataSize;
       }
-      for (java.util.Map.Entry<java.lang.Integer, emu.grasscutter.net.proto.AvatarTeamOuterClass.AvatarTeam> entry
-           : internalGetAvatarTeamMap().getMap().entrySet()) {
-        com.google.protobuf.MapEntry<java.lang.Integer, emu.grasscutter.net.proto.AvatarTeamOuterClass.AvatarTeam>
-        avatarTeamMap__ = AvatarTeamMapDefaultEntryHolder.defaultEntry.newBuilderForType()
-            .setKey(entry.getKey())
-            .setValue(entry.getValue())
-            .build();
-        size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(15, avatarTeamMap__);
+      {
+        int dataSize = 0;
+        for (int i = 0; i < ownedCostumeList_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(ownedCostumeList_.getInt(i));
+        }
+        size += dataSize;
+        if (!getOwnedCostumeListList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        ownedCostumeListMemoizedSerializedSize = dataSize;
       }
-      size += unknownFields.getSerializedSize();
+      for (int i = 0; i < avatarRenameList_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(13, avatarRenameList_.get(i));
+      }
+      if (chooseAvatarGuid_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(14, chooseAvatarGuid_);
+      }
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -736,21 +767,27 @@ public final class AvatarDataNotifyOuterClass {
       }
       emu.grasscutter.net.proto.AvatarDataNotifyOuterClass.AvatarDataNotify other = (emu.grasscutter.net.proto.AvatarDataNotifyOuterClass.AvatarDataNotify) obj;
 
-      if (!getOwnedFlycloakListList()
-          .equals(other.getOwnedFlycloakListList())) return false;
-      if (!getAvatarRenameListList()
-          .equals(other.getAvatarRenameListList())) return false;
-      if (!getAvatarListList()
-          .equals(other.getAvatarListList())) return false;
-      if (!internalGetAvatarTeamMap().equals(
-          other.internalGetAvatarTeamMap())) return false;
-      if (!getOwnedCostumeListList()
-          .equals(other.getOwnedCostumeListList())) return false;
+      if (!getONAODHDMILIList()
+          .equals(other.getONAODHDMILIList())) return false;
+      if (!getTempAvatarGuidListList()
+          .equals(other.getTempAvatarGuidListList())) return false;
       if (getCurAvatarTeamId()
           != other.getCurAvatarTeamId()) return false;
+      if (!getAvatarListList()
+          .equals(other.getAvatarListList())) return false;
+      if (!getBackupAvatarTeamOrderListList()
+          .equals(other.getBackupAvatarTeamOrderListList())) return false;
+      if (!internalGetAvatarTeamMap().equals(
+          other.internalGetAvatarTeamMap())) return false;
+      if (!getOwnedFlycloakListList()
+          .equals(other.getOwnedFlycloakListList())) return false;
+      if (!getOwnedCostumeListList()
+          .equals(other.getOwnedCostumeListList())) return false;
+      if (!getAvatarRenameListList()
+          .equals(other.getAvatarRenameListList())) return false;
       if (getChooseAvatarGuid()
           != other.getChooseAvatarGuid()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -761,32 +798,44 @@ public final class AvatarDataNotifyOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (getOwnedFlycloakListCount() > 0) {
-        hash = (37 * hash) + OWNED_FLYCLOAK_LIST_FIELD_NUMBER;
-        hash = (53 * hash) + getOwnedFlycloakListList().hashCode();
+      if (getONAODHDMILICount() > 0) {
+        hash = (37 * hash) + ONAODHDMILI_FIELD_NUMBER;
+        hash = (53 * hash) + getONAODHDMILIList().hashCode();
       }
-      if (getAvatarRenameListCount() > 0) {
-        hash = (37 * hash) + AVATAR_RENAME_LIST_FIELD_NUMBER;
-        hash = (53 * hash) + getAvatarRenameListList().hashCode();
+      if (getTempAvatarGuidListCount() > 0) {
+        hash = (37 * hash) + TEMP_AVATAR_GUID_LIST_FIELD_NUMBER;
+        hash = (53 * hash) + getTempAvatarGuidListList().hashCode();
       }
+      hash = (37 * hash) + CUR_AVATAR_TEAM_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getCurAvatarTeamId();
       if (getAvatarListCount() > 0) {
         hash = (37 * hash) + AVATAR_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getAvatarListList().hashCode();
+      }
+      if (getBackupAvatarTeamOrderListCount() > 0) {
+        hash = (37 * hash) + BACKUP_AVATAR_TEAM_ORDER_LIST_FIELD_NUMBER;
+        hash = (53 * hash) + getBackupAvatarTeamOrderListList().hashCode();
       }
       if (!internalGetAvatarTeamMap().getMap().isEmpty()) {
         hash = (37 * hash) + AVATAR_TEAM_MAP_FIELD_NUMBER;
         hash = (53 * hash) + internalGetAvatarTeamMap().hashCode();
       }
+      if (getOwnedFlycloakListCount() > 0) {
+        hash = (37 * hash) + OWNED_FLYCLOAK_LIST_FIELD_NUMBER;
+        hash = (53 * hash) + getOwnedFlycloakListList().hashCode();
+      }
       if (getOwnedCostumeListCount() > 0) {
         hash = (37 * hash) + OWNED_COSTUME_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getOwnedCostumeListList().hashCode();
       }
-      hash = (37 * hash) + CUR_AVATAR_TEAM_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getCurAvatarTeamId();
+      if (getAvatarRenameListCount() > 0) {
+        hash = (37 * hash) + AVATAR_RENAME_LIST_FIELD_NUMBER;
+        hash = (53 * hash) + getAvatarRenameListList().hashCode();
+      }
       hash = (37 * hash) + CHOOSE_AVATAR_GUID_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getChooseAvatarGuid());
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -882,11 +931,6 @@ public final class AvatarDataNotifyOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * 4.6.0
-     * CmdId: 24452
-     * </pre>
-     *
      * Protobuf type {@code AvatarDataNotify}
      */
     public static final class Builder extends
@@ -902,7 +946,7 @@ public final class AvatarDataNotifyOuterClass {
       protected com.google.protobuf.MapField internalGetMapField(
           int number) {
         switch (number) {
-          case 15:
+          case 10:
             return internalGetAvatarTeamMap();
           default:
             throw new RuntimeException(
@@ -913,7 +957,7 @@ public final class AvatarDataNotifyOuterClass {
       protected com.google.protobuf.MapField internalGetMutableMapField(
           int number) {
         switch (number) {
-          case 15:
+          case 10:
             return internalGetMutableAvatarTeamMap();
           default:
             throw new RuntimeException(
@@ -930,43 +974,44 @@ public final class AvatarDataNotifyOuterClass {
 
       // Construct using emu.grasscutter.net.proto.AvatarDataNotifyOuterClass.AvatarDataNotify.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getAvatarRenameListFieldBuilder();
-          getAvatarListFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        ownedFlycloakList_ = emptyIntList();
+        oNAODHDMILI_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000001);
-        if (avatarRenameListBuilder_ == null) {
-          avatarRenameList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
-        } else {
-          avatarRenameListBuilder_.clear();
-        }
-        if (avatarListBuilder_ == null) {
-          avatarList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
-        } else {
-          avatarListBuilder_.clear();
-        }
-        internalGetMutableAvatarTeamMap().clear();
-        ownedCostumeList_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000010);
+        tempAvatarGuidList_ = emptyLongList();
+        bitField0_ = (bitField0_ & ~0x00000002);
         curAvatarTeamId_ = 0;
 
+        if (avatarListBuilder_ == null) {
+          avatarList_ = java.util.Collections.emptyList();
+        } else {
+          avatarList_ = null;
+          avatarListBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        backupAvatarTeamOrderList_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        internalGetMutableAvatarTeamMap().clear();
+        ownedFlycloakList_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        ownedCostumeList_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000040);
+        if (avatarRenameListBuilder_ == null) {
+          avatarRenameList_ = java.util.Collections.emptyList();
+        } else {
+          avatarRenameList_ = null;
+          avatarRenameListBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000080);
         chooseAvatarGuid_ = 0L;
 
         return this;
@@ -997,19 +1042,16 @@ public final class AvatarDataNotifyOuterClass {
         emu.grasscutter.net.proto.AvatarDataNotifyOuterClass.AvatarDataNotify result = new emu.grasscutter.net.proto.AvatarDataNotifyOuterClass.AvatarDataNotify(this);
         int from_bitField0_ = bitField0_;
         if (((bitField0_ & 0x00000001) != 0)) {
-          ownedFlycloakList_.makeImmutable();
+          oNAODHDMILI_.makeImmutable();
           bitField0_ = (bitField0_ & ~0x00000001);
         }
-        result.ownedFlycloakList_ = ownedFlycloakList_;
-        if (avatarRenameListBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0)) {
-            avatarRenameList_ = java.util.Collections.unmodifiableList(avatarRenameList_);
-            bitField0_ = (bitField0_ & ~0x00000002);
-          }
-          result.avatarRenameList_ = avatarRenameList_;
-        } else {
-          result.avatarRenameList_ = avatarRenameListBuilder_.build();
+        result.oNAODHDMILI_ = oNAODHDMILI_;
+        if (((bitField0_ & 0x00000002) != 0)) {
+          tempAvatarGuidList_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
+        result.tempAvatarGuidList_ = tempAvatarGuidList_;
+        result.curAvatarTeamId_ = curAvatarTeamId_;
         if (avatarListBuilder_ == null) {
           if (((bitField0_ & 0x00000004) != 0)) {
             avatarList_ = java.util.Collections.unmodifiableList(avatarList_);
@@ -1019,14 +1061,32 @@ public final class AvatarDataNotifyOuterClass {
         } else {
           result.avatarList_ = avatarListBuilder_.build();
         }
+        if (((bitField0_ & 0x00000008) != 0)) {
+          backupAvatarTeamOrderList_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000008);
+        }
+        result.backupAvatarTeamOrderList_ = backupAvatarTeamOrderList_;
         result.avatarTeamMap_ = internalGetAvatarTeamMap();
         result.avatarTeamMap_.makeImmutable();
-        if (((bitField0_ & 0x00000010) != 0)) {
+        if (((bitField0_ & 0x00000020) != 0)) {
+          ownedFlycloakList_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000020);
+        }
+        result.ownedFlycloakList_ = ownedFlycloakList_;
+        if (((bitField0_ & 0x00000040) != 0)) {
           ownedCostumeList_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000040);
         }
         result.ownedCostumeList_ = ownedCostumeList_;
-        result.curAvatarTeamId_ = curAvatarTeamId_;
+        if (avatarRenameListBuilder_ == null) {
+          if (((bitField0_ & 0x00000080) != 0)) {
+            avatarRenameList_ = java.util.Collections.unmodifiableList(avatarRenameList_);
+            bitField0_ = (bitField0_ & ~0x00000080);
+          }
+          result.avatarRenameList_ = avatarRenameList_;
+        } else {
+          result.avatarRenameList_ = avatarRenameListBuilder_.build();
+        }
         result.chooseAvatarGuid_ = chooseAvatarGuid_;
         onBuilt();
         return result;
@@ -1076,41 +1136,28 @@ public final class AvatarDataNotifyOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.AvatarDataNotifyOuterClass.AvatarDataNotify other) {
         if (other == emu.grasscutter.net.proto.AvatarDataNotifyOuterClass.AvatarDataNotify.getDefaultInstance()) return this;
-        if (!other.ownedFlycloakList_.isEmpty()) {
-          if (ownedFlycloakList_.isEmpty()) {
-            ownedFlycloakList_ = other.ownedFlycloakList_;
+        if (!other.oNAODHDMILI_.isEmpty()) {
+          if (oNAODHDMILI_.isEmpty()) {
+            oNAODHDMILI_ = other.oNAODHDMILI_;
             bitField0_ = (bitField0_ & ~0x00000001);
           } else {
-            ensureOwnedFlycloakListIsMutable();
-            ownedFlycloakList_.addAll(other.ownedFlycloakList_);
+            ensureONAODHDMILIIsMutable();
+            oNAODHDMILI_.addAll(other.oNAODHDMILI_);
           }
           onChanged();
         }
-        if (avatarRenameListBuilder_ == null) {
-          if (!other.avatarRenameList_.isEmpty()) {
-            if (avatarRenameList_.isEmpty()) {
-              avatarRenameList_ = other.avatarRenameList_;
-              bitField0_ = (bitField0_ & ~0x00000002);
-            } else {
-              ensureAvatarRenameListIsMutable();
-              avatarRenameList_.addAll(other.avatarRenameList_);
-            }
-            onChanged();
+        if (!other.tempAvatarGuidList_.isEmpty()) {
+          if (tempAvatarGuidList_.isEmpty()) {
+            tempAvatarGuidList_ = other.tempAvatarGuidList_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureTempAvatarGuidListIsMutable();
+            tempAvatarGuidList_.addAll(other.tempAvatarGuidList_);
           }
-        } else {
-          if (!other.avatarRenameList_.isEmpty()) {
-            if (avatarRenameListBuilder_.isEmpty()) {
-              avatarRenameListBuilder_.dispose();
-              avatarRenameListBuilder_ = null;
-              avatarRenameList_ = other.avatarRenameList_;
-              bitField0_ = (bitField0_ & ~0x00000002);
-              avatarRenameListBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getAvatarRenameListFieldBuilder() : null;
-            } else {
-              avatarRenameListBuilder_.addAllMessages(other.avatarRenameList_);
-            }
-          }
+          onChanged();
+        }
+        if (other.getCurAvatarTeamId() != 0) {
+          setCurAvatarTeamId(other.getCurAvatarTeamId());
         }
         if (avatarListBuilder_ == null) {
           if (!other.avatarList_.isEmpty()) {
@@ -1138,25 +1185,68 @@ public final class AvatarDataNotifyOuterClass {
             }
           }
         }
+        if (!other.backupAvatarTeamOrderList_.isEmpty()) {
+          if (backupAvatarTeamOrderList_.isEmpty()) {
+            backupAvatarTeamOrderList_ = other.backupAvatarTeamOrderList_;
+            bitField0_ = (bitField0_ & ~0x00000008);
+          } else {
+            ensureBackupAvatarTeamOrderListIsMutable();
+            backupAvatarTeamOrderList_.addAll(other.backupAvatarTeamOrderList_);
+          }
+          onChanged();
+        }
         internalGetMutableAvatarTeamMap().mergeFrom(
             other.internalGetAvatarTeamMap());
+        if (!other.ownedFlycloakList_.isEmpty()) {
+          if (ownedFlycloakList_.isEmpty()) {
+            ownedFlycloakList_ = other.ownedFlycloakList_;
+            bitField0_ = (bitField0_ & ~0x00000020);
+          } else {
+            ensureOwnedFlycloakListIsMutable();
+            ownedFlycloakList_.addAll(other.ownedFlycloakList_);
+          }
+          onChanged();
+        }
         if (!other.ownedCostumeList_.isEmpty()) {
           if (ownedCostumeList_.isEmpty()) {
             ownedCostumeList_ = other.ownedCostumeList_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000040);
           } else {
             ensureOwnedCostumeListIsMutable();
             ownedCostumeList_.addAll(other.ownedCostumeList_);
           }
           onChanged();
         }
-        if (other.getCurAvatarTeamId() != 0) {
-          setCurAvatarTeamId(other.getCurAvatarTeamId());
+        if (avatarRenameListBuilder_ == null) {
+          if (!other.avatarRenameList_.isEmpty()) {
+            if (avatarRenameList_.isEmpty()) {
+              avatarRenameList_ = other.avatarRenameList_;
+              bitField0_ = (bitField0_ & ~0x00000080);
+            } else {
+              ensureAvatarRenameListIsMutable();
+              avatarRenameList_.addAll(other.avatarRenameList_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.avatarRenameList_.isEmpty()) {
+            if (avatarRenameListBuilder_.isEmpty()) {
+              avatarRenameListBuilder_.dispose();
+              avatarRenameListBuilder_ = null;
+              avatarRenameList_ = other.avatarRenameList_;
+              bitField0_ = (bitField0_ & ~0x00000080);
+              avatarRenameListBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAvatarRenameListFieldBuilder() : null;
+            } else {
+              avatarRenameListBuilder_.addAllMessages(other.avatarRenameList_);
+            }
+          }
         }
         if (other.getChooseAvatarGuid() != 0L) {
           setChooseAvatarGuid(other.getChooseAvatarGuid());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -1171,338 +1261,345 @@ public final class AvatarDataNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.AvatarDataNotifyOuterClass.AvatarDataNotify parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 16: {
+                int v = input.readUInt32();
+                ensureONAODHDMILIIsMutable();
+                oNAODHDMILI_.addInt(v);
+                break;
+              } // case 16
+              case 18: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureONAODHDMILIIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  oNAODHDMILI_.addInt(input.readUInt32());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 18
+              case 32: {
+                long v = input.readUInt64();
+                ensureTempAvatarGuidListIsMutable();
+                tempAvatarGuidList_.addLong(v);
+                break;
+              } // case 32
+              case 34: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureTempAvatarGuidListIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  tempAvatarGuidList_.addLong(input.readUInt64());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 34
+              case 56: {
+                curAvatarTeamId_ = input.readUInt32();
+
+                break;
+              } // case 56
+              case 66: {
+                emu.grasscutter.net.proto.AvatarInfoOuterClass.AvatarInfo m =
+                    input.readMessage(
+                        emu.grasscutter.net.proto.AvatarInfoOuterClass.AvatarInfo.parser(),
+                        extensionRegistry);
+                if (avatarListBuilder_ == null) {
+                  ensureAvatarListIsMutable();
+                  avatarList_.add(m);
+                } else {
+                  avatarListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 66
+              case 72: {
+                int v = input.readUInt32();
+                ensureBackupAvatarTeamOrderListIsMutable();
+                backupAvatarTeamOrderList_.addInt(v);
+                break;
+              } // case 72
+              case 74: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureBackupAvatarTeamOrderListIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  backupAvatarTeamOrderList_.addInt(input.readUInt32());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 74
+              case 82: {
+                com.google.protobuf.MapEntry<java.lang.Integer, emu.grasscutter.net.proto.AvatarTeamOuterClass.AvatarTeam>
+                avatarTeamMap__ = input.readMessage(
+                    AvatarTeamMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutableAvatarTeamMap().getMutableMap().put(
+                    avatarTeamMap__.getKey(), avatarTeamMap__.getValue());
+                break;
+              } // case 82
+              case 88: {
+                int v = input.readUInt32();
+                ensureOwnedFlycloakListIsMutable();
+                ownedFlycloakList_.addInt(v);
+                break;
+              } // case 88
+              case 90: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureOwnedFlycloakListIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  ownedFlycloakList_.addInt(input.readUInt32());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 90
+              case 96: {
+                int v = input.readUInt32();
+                ensureOwnedCostumeListIsMutable();
+                ownedCostumeList_.addInt(v);
+                break;
+              } // case 96
+              case 98: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureOwnedCostumeListIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  ownedCostumeList_.addInt(input.readUInt32());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 98
+              case 106: {
+                emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo m =
+                    input.readMessage(
+                        emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo.parser(),
+                        extensionRegistry);
+                if (avatarRenameListBuilder_ == null) {
+                  ensureAvatarRenameListIsMutable();
+                  avatarRenameList_.add(m);
+                } else {
+                  avatarRenameListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 106
+              case 112: {
+                chooseAvatarGuid_ = input.readUInt64();
+
+                break;
+              } // case 112
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.AvatarDataNotifyOuterClass.AvatarDataNotify) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
 
-      private com.google.protobuf.Internal.IntList ownedFlycloakList_ = emptyIntList();
-      private void ensureOwnedFlycloakListIsMutable() {
+      private com.google.protobuf.Internal.IntList oNAODHDMILI_ = emptyIntList();
+      private void ensureONAODHDMILIIsMutable() {
         if (!((bitField0_ & 0x00000001) != 0)) {
-          ownedFlycloakList_ = mutableCopy(ownedFlycloakList_);
+          oNAODHDMILI_ = mutableCopy(oNAODHDMILI_);
           bitField0_ |= 0x00000001;
          }
       }
       /**
-       * <code>repeated uint32 owned_flycloak_list = 13;</code>
-       * @return A list containing the ownedFlycloakList.
+       * <code>repeated uint32 ONAODHDMILI = 2;</code>
+       * @return A list containing the oNAODHDMILI.
        */
       public java.util.List<java.lang.Integer>
-          getOwnedFlycloakListList() {
+          getONAODHDMILIList() {
         return ((bitField0_ & 0x00000001) != 0) ?
-                 java.util.Collections.unmodifiableList(ownedFlycloakList_) : ownedFlycloakList_;
+                 java.util.Collections.unmodifiableList(oNAODHDMILI_) : oNAODHDMILI_;
       }
       /**
-       * <code>repeated uint32 owned_flycloak_list = 13;</code>
-       * @return The count of ownedFlycloakList.
+       * <code>repeated uint32 ONAODHDMILI = 2;</code>
+       * @return The count of oNAODHDMILI.
        */
-      public int getOwnedFlycloakListCount() {
-        return ownedFlycloakList_.size();
+      public int getONAODHDMILICount() {
+        return oNAODHDMILI_.size();
       }
       /**
-       * <code>repeated uint32 owned_flycloak_list = 13;</code>
+       * <code>repeated uint32 ONAODHDMILI = 2;</code>
        * @param index The index of the element to return.
-       * @return The ownedFlycloakList at the given index.
+       * @return The oNAODHDMILI at the given index.
        */
-      public int getOwnedFlycloakList(int index) {
-        return ownedFlycloakList_.getInt(index);
+      public int getONAODHDMILI(int index) {
+        return oNAODHDMILI_.getInt(index);
       }
       /**
-       * <code>repeated uint32 owned_flycloak_list = 13;</code>
+       * <code>repeated uint32 ONAODHDMILI = 2;</code>
        * @param index The index to set the value at.
-       * @param value The ownedFlycloakList to set.
+       * @param value The oNAODHDMILI to set.
        * @return This builder for chaining.
        */
-      public Builder setOwnedFlycloakList(
+      public Builder setONAODHDMILI(
           int index, int value) {
-        ensureOwnedFlycloakListIsMutable();
-        ownedFlycloakList_.setInt(index, value);
+        ensureONAODHDMILIIsMutable();
+        oNAODHDMILI_.setInt(index, value);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated uint32 owned_flycloak_list = 13;</code>
-       * @param value The ownedFlycloakList to add.
+       * <code>repeated uint32 ONAODHDMILI = 2;</code>
+       * @param value The oNAODHDMILI to add.
        * @return This builder for chaining.
        */
-      public Builder addOwnedFlycloakList(int value) {
-        ensureOwnedFlycloakListIsMutable();
-        ownedFlycloakList_.addInt(value);
+      public Builder addONAODHDMILI(int value) {
+        ensureONAODHDMILIIsMutable();
+        oNAODHDMILI_.addInt(value);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated uint32 owned_flycloak_list = 13;</code>
-       * @param values The ownedFlycloakList to add.
+       * <code>repeated uint32 ONAODHDMILI = 2;</code>
+       * @param values The oNAODHDMILI to add.
        * @return This builder for chaining.
        */
-      public Builder addAllOwnedFlycloakList(
+      public Builder addAllONAODHDMILI(
           java.lang.Iterable<? extends java.lang.Integer> values) {
-        ensureOwnedFlycloakListIsMutable();
+        ensureONAODHDMILIIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, ownedFlycloakList_);
+            values, oNAODHDMILI_);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated uint32 owned_flycloak_list = 13;</code>
+       * <code>repeated uint32 ONAODHDMILI = 2;</code>
        * @return This builder for chaining.
        */
-      public Builder clearOwnedFlycloakList() {
-        ownedFlycloakList_ = emptyIntList();
+      public Builder clearONAODHDMILI() {
+        oNAODHDMILI_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
 
-      private java.util.List<emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo> avatarRenameList_ =
-        java.util.Collections.emptyList();
-      private void ensureAvatarRenameListIsMutable() {
+      private com.google.protobuf.Internal.LongList tempAvatarGuidList_ = emptyLongList();
+      private void ensureTempAvatarGuidListIsMutable() {
         if (!((bitField0_ & 0x00000002) != 0)) {
-          avatarRenameList_ = new java.util.ArrayList<emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo>(avatarRenameList_);
+          tempAvatarGuidList_ = mutableCopy(tempAvatarGuidList_);
           bitField0_ |= 0x00000002;
          }
       }
+      /**
+       * <code>repeated uint64 temp_avatar_guid_list = 4;</code>
+       * @return A list containing the tempAvatarGuidList.
+       */
+      public java.util.List<java.lang.Long>
+          getTempAvatarGuidListList() {
+        return ((bitField0_ & 0x00000002) != 0) ?
+                 java.util.Collections.unmodifiableList(tempAvatarGuidList_) : tempAvatarGuidList_;
+      }
+      /**
+       * <code>repeated uint64 temp_avatar_guid_list = 4;</code>
+       * @return The count of tempAvatarGuidList.
+       */
+      public int getTempAvatarGuidListCount() {
+        return tempAvatarGuidList_.size();
+      }
+      /**
+       * <code>repeated uint64 temp_avatar_guid_list = 4;</code>
+       * @param index The index of the element to return.
+       * @return The tempAvatarGuidList at the given index.
+       */
+      public long getTempAvatarGuidList(int index) {
+        return tempAvatarGuidList_.getLong(index);
+      }
+      /**
+       * <code>repeated uint64 temp_avatar_guid_list = 4;</code>
+       * @param index The index to set the value at.
+       * @param value The tempAvatarGuidList to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTempAvatarGuidList(
+          int index, long value) {
+        ensureTempAvatarGuidListIsMutable();
+        tempAvatarGuidList_.setLong(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint64 temp_avatar_guid_list = 4;</code>
+       * @param value The tempAvatarGuidList to add.
+       * @return This builder for chaining.
+       */
+      public Builder addTempAvatarGuidList(long value) {
+        ensureTempAvatarGuidListIsMutable();
+        tempAvatarGuidList_.addLong(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint64 temp_avatar_guid_list = 4;</code>
+       * @param values The tempAvatarGuidList to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllTempAvatarGuidList(
+          java.lang.Iterable<? extends java.lang.Long> values) {
+        ensureTempAvatarGuidListIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, tempAvatarGuidList_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint64 temp_avatar_guid_list = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTempAvatarGuidList() {
+        tempAvatarGuidList_ = emptyLongList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
 
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo, emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo.Builder, emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfoOrBuilder> avatarRenameListBuilder_;
-
+      private int curAvatarTeamId_ ;
       /**
-       * <code>repeated .AvatarRenameInfo avatar_rename_list = 10;</code>
+       * <code>uint32 cur_avatar_team_id = 7;</code>
+       * @return The curAvatarTeamId.
        */
-      public java.util.List<emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo> getAvatarRenameListList() {
-        if (avatarRenameListBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(avatarRenameList_);
-        } else {
-          return avatarRenameListBuilder_.getMessageList();
-        }
+      @java.lang.Override
+      public int getCurAvatarTeamId() {
+        return curAvatarTeamId_;
       }
       /**
-       * <code>repeated .AvatarRenameInfo avatar_rename_list = 10;</code>
+       * <code>uint32 cur_avatar_team_id = 7;</code>
+       * @param value The curAvatarTeamId to set.
+       * @return This builder for chaining.
        */
-      public int getAvatarRenameListCount() {
-        if (avatarRenameListBuilder_ == null) {
-          return avatarRenameList_.size();
-        } else {
-          return avatarRenameListBuilder_.getCount();
-        }
-      }
-      /**
-       * <code>repeated .AvatarRenameInfo avatar_rename_list = 10;</code>
-       */
-      public emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo getAvatarRenameList(int index) {
-        if (avatarRenameListBuilder_ == null) {
-          return avatarRenameList_.get(index);
-        } else {
-          return avatarRenameListBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <code>repeated .AvatarRenameInfo avatar_rename_list = 10;</code>
-       */
-      public Builder setAvatarRenameList(
-          int index, emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo value) {
-        if (avatarRenameListBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureAvatarRenameListIsMutable();
-          avatarRenameList_.set(index, value);
-          onChanged();
-        } else {
-          avatarRenameListBuilder_.setMessage(index, value);
-        }
+      public Builder setCurAvatarTeamId(int value) {
+        
+        curAvatarTeamId_ = value;
+        onChanged();
         return this;
       }
       /**
-       * <code>repeated .AvatarRenameInfo avatar_rename_list = 10;</code>
+       * <code>uint32 cur_avatar_team_id = 7;</code>
+       * @return This builder for chaining.
        */
-      public Builder setAvatarRenameList(
-          int index, emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo.Builder builderForValue) {
-        if (avatarRenameListBuilder_ == null) {
-          ensureAvatarRenameListIsMutable();
-          avatarRenameList_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          avatarRenameListBuilder_.setMessage(index, builderForValue.build());
-        }
+      public Builder clearCurAvatarTeamId() {
+        
+        curAvatarTeamId_ = 0;
+        onChanged();
         return this;
-      }
-      /**
-       * <code>repeated .AvatarRenameInfo avatar_rename_list = 10;</code>
-       */
-      public Builder addAvatarRenameList(emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo value) {
-        if (avatarRenameListBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureAvatarRenameListIsMutable();
-          avatarRenameList_.add(value);
-          onChanged();
-        } else {
-          avatarRenameListBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .AvatarRenameInfo avatar_rename_list = 10;</code>
-       */
-      public Builder addAvatarRenameList(
-          int index, emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo value) {
-        if (avatarRenameListBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureAvatarRenameListIsMutable();
-          avatarRenameList_.add(index, value);
-          onChanged();
-        } else {
-          avatarRenameListBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .AvatarRenameInfo avatar_rename_list = 10;</code>
-       */
-      public Builder addAvatarRenameList(
-          emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo.Builder builderForValue) {
-        if (avatarRenameListBuilder_ == null) {
-          ensureAvatarRenameListIsMutable();
-          avatarRenameList_.add(builderForValue.build());
-          onChanged();
-        } else {
-          avatarRenameListBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .AvatarRenameInfo avatar_rename_list = 10;</code>
-       */
-      public Builder addAvatarRenameList(
-          int index, emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo.Builder builderForValue) {
-        if (avatarRenameListBuilder_ == null) {
-          ensureAvatarRenameListIsMutable();
-          avatarRenameList_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          avatarRenameListBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .AvatarRenameInfo avatar_rename_list = 10;</code>
-       */
-      public Builder addAllAvatarRenameList(
-          java.lang.Iterable<? extends emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo> values) {
-        if (avatarRenameListBuilder_ == null) {
-          ensureAvatarRenameListIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, avatarRenameList_);
-          onChanged();
-        } else {
-          avatarRenameListBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .AvatarRenameInfo avatar_rename_list = 10;</code>
-       */
-      public Builder clearAvatarRenameList() {
-        if (avatarRenameListBuilder_ == null) {
-          avatarRenameList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
-          onChanged();
-        } else {
-          avatarRenameListBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .AvatarRenameInfo avatar_rename_list = 10;</code>
-       */
-      public Builder removeAvatarRenameList(int index) {
-        if (avatarRenameListBuilder_ == null) {
-          ensureAvatarRenameListIsMutable();
-          avatarRenameList_.remove(index);
-          onChanged();
-        } else {
-          avatarRenameListBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .AvatarRenameInfo avatar_rename_list = 10;</code>
-       */
-      public emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo.Builder getAvatarRenameListBuilder(
-          int index) {
-        return getAvatarRenameListFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .AvatarRenameInfo avatar_rename_list = 10;</code>
-       */
-      public emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfoOrBuilder getAvatarRenameListOrBuilder(
-          int index) {
-        if (avatarRenameListBuilder_ == null) {
-          return avatarRenameList_.get(index);  } else {
-          return avatarRenameListBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .AvatarRenameInfo avatar_rename_list = 10;</code>
-       */
-      public java.util.List<? extends emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfoOrBuilder> 
-           getAvatarRenameListOrBuilderList() {
-        if (avatarRenameListBuilder_ != null) {
-          return avatarRenameListBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(avatarRenameList_);
-        }
-      }
-      /**
-       * <code>repeated .AvatarRenameInfo avatar_rename_list = 10;</code>
-       */
-      public emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo.Builder addAvatarRenameListBuilder() {
-        return getAvatarRenameListFieldBuilder().addBuilder(
-            emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .AvatarRenameInfo avatar_rename_list = 10;</code>
-       */
-      public emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo.Builder addAvatarRenameListBuilder(
-          int index) {
-        return getAvatarRenameListFieldBuilder().addBuilder(
-            index, emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .AvatarRenameInfo avatar_rename_list = 10;</code>
-       */
-      public java.util.List<emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo.Builder> 
-           getAvatarRenameListBuilderList() {
-        return getAvatarRenameListFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo, emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo.Builder, emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfoOrBuilder> 
-          getAvatarRenameListFieldBuilder() {
-        if (avatarRenameListBuilder_ == null) {
-          avatarRenameListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo, emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo.Builder, emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfoOrBuilder>(
-                  avatarRenameList_,
-                  ((bitField0_ & 0x00000002) != 0),
-                  getParentForChildren(),
-                  isClean());
-          avatarRenameList_ = null;
-        }
-        return avatarRenameListBuilder_;
       }
 
       private java.util.List<emu.grasscutter.net.proto.AvatarInfoOuterClass.AvatarInfo> avatarList_ =
@@ -1518,7 +1615,7 @@ public final class AvatarDataNotifyOuterClass {
           emu.grasscutter.net.proto.AvatarInfoOuterClass.AvatarInfo, emu.grasscutter.net.proto.AvatarInfoOuterClass.AvatarInfo.Builder, emu.grasscutter.net.proto.AvatarInfoOuterClass.AvatarInfoOrBuilder> avatarListBuilder_;
 
       /**
-       * <code>repeated .AvatarInfo avatar_list = 5;</code>
+       * <code>repeated .AvatarInfo avatar_list = 8;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.AvatarInfoOuterClass.AvatarInfo> getAvatarListList() {
         if (avatarListBuilder_ == null) {
@@ -1528,7 +1625,7 @@ public final class AvatarDataNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .AvatarInfo avatar_list = 5;</code>
+       * <code>repeated .AvatarInfo avatar_list = 8;</code>
        */
       public int getAvatarListCount() {
         if (avatarListBuilder_ == null) {
@@ -1538,7 +1635,7 @@ public final class AvatarDataNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .AvatarInfo avatar_list = 5;</code>
+       * <code>repeated .AvatarInfo avatar_list = 8;</code>
        */
       public emu.grasscutter.net.proto.AvatarInfoOuterClass.AvatarInfo getAvatarList(int index) {
         if (avatarListBuilder_ == null) {
@@ -1548,7 +1645,7 @@ public final class AvatarDataNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .AvatarInfo avatar_list = 5;</code>
+       * <code>repeated .AvatarInfo avatar_list = 8;</code>
        */
       public Builder setAvatarList(
           int index, emu.grasscutter.net.proto.AvatarInfoOuterClass.AvatarInfo value) {
@@ -1565,7 +1662,7 @@ public final class AvatarDataNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .AvatarInfo avatar_list = 5;</code>
+       * <code>repeated .AvatarInfo avatar_list = 8;</code>
        */
       public Builder setAvatarList(
           int index, emu.grasscutter.net.proto.AvatarInfoOuterClass.AvatarInfo.Builder builderForValue) {
@@ -1579,7 +1676,7 @@ public final class AvatarDataNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .AvatarInfo avatar_list = 5;</code>
+       * <code>repeated .AvatarInfo avatar_list = 8;</code>
        */
       public Builder addAvatarList(emu.grasscutter.net.proto.AvatarInfoOuterClass.AvatarInfo value) {
         if (avatarListBuilder_ == null) {
@@ -1595,7 +1692,7 @@ public final class AvatarDataNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .AvatarInfo avatar_list = 5;</code>
+       * <code>repeated .AvatarInfo avatar_list = 8;</code>
        */
       public Builder addAvatarList(
           int index, emu.grasscutter.net.proto.AvatarInfoOuterClass.AvatarInfo value) {
@@ -1612,7 +1709,7 @@ public final class AvatarDataNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .AvatarInfo avatar_list = 5;</code>
+       * <code>repeated .AvatarInfo avatar_list = 8;</code>
        */
       public Builder addAvatarList(
           emu.grasscutter.net.proto.AvatarInfoOuterClass.AvatarInfo.Builder builderForValue) {
@@ -1626,7 +1723,7 @@ public final class AvatarDataNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .AvatarInfo avatar_list = 5;</code>
+       * <code>repeated .AvatarInfo avatar_list = 8;</code>
        */
       public Builder addAvatarList(
           int index, emu.grasscutter.net.proto.AvatarInfoOuterClass.AvatarInfo.Builder builderForValue) {
@@ -1640,7 +1737,7 @@ public final class AvatarDataNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .AvatarInfo avatar_list = 5;</code>
+       * <code>repeated .AvatarInfo avatar_list = 8;</code>
        */
       public Builder addAllAvatarList(
           java.lang.Iterable<? extends emu.grasscutter.net.proto.AvatarInfoOuterClass.AvatarInfo> values) {
@@ -1655,7 +1752,7 @@ public final class AvatarDataNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .AvatarInfo avatar_list = 5;</code>
+       * <code>repeated .AvatarInfo avatar_list = 8;</code>
        */
       public Builder clearAvatarList() {
         if (avatarListBuilder_ == null) {
@@ -1668,7 +1765,7 @@ public final class AvatarDataNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .AvatarInfo avatar_list = 5;</code>
+       * <code>repeated .AvatarInfo avatar_list = 8;</code>
        */
       public Builder removeAvatarList(int index) {
         if (avatarListBuilder_ == null) {
@@ -1681,14 +1778,14 @@ public final class AvatarDataNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .AvatarInfo avatar_list = 5;</code>
+       * <code>repeated .AvatarInfo avatar_list = 8;</code>
        */
       public emu.grasscutter.net.proto.AvatarInfoOuterClass.AvatarInfo.Builder getAvatarListBuilder(
           int index) {
         return getAvatarListFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .AvatarInfo avatar_list = 5;</code>
+       * <code>repeated .AvatarInfo avatar_list = 8;</code>
        */
       public emu.grasscutter.net.proto.AvatarInfoOuterClass.AvatarInfoOrBuilder getAvatarListOrBuilder(
           int index) {
@@ -1698,7 +1795,7 @@ public final class AvatarDataNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .AvatarInfo avatar_list = 5;</code>
+       * <code>repeated .AvatarInfo avatar_list = 8;</code>
        */
       public java.util.List<? extends emu.grasscutter.net.proto.AvatarInfoOuterClass.AvatarInfoOrBuilder> 
            getAvatarListOrBuilderList() {
@@ -1709,14 +1806,14 @@ public final class AvatarDataNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .AvatarInfo avatar_list = 5;</code>
+       * <code>repeated .AvatarInfo avatar_list = 8;</code>
        */
       public emu.grasscutter.net.proto.AvatarInfoOuterClass.AvatarInfo.Builder addAvatarListBuilder() {
         return getAvatarListFieldBuilder().addBuilder(
             emu.grasscutter.net.proto.AvatarInfoOuterClass.AvatarInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .AvatarInfo avatar_list = 5;</code>
+       * <code>repeated .AvatarInfo avatar_list = 8;</code>
        */
       public emu.grasscutter.net.proto.AvatarInfoOuterClass.AvatarInfo.Builder addAvatarListBuilder(
           int index) {
@@ -1724,7 +1821,7 @@ public final class AvatarDataNotifyOuterClass {
             index, emu.grasscutter.net.proto.AvatarInfoOuterClass.AvatarInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .AvatarInfo avatar_list = 5;</code>
+       * <code>repeated .AvatarInfo avatar_list = 8;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.AvatarInfoOuterClass.AvatarInfo.Builder> 
            getAvatarListBuilderList() {
@@ -1743,6 +1840,85 @@ public final class AvatarDataNotifyOuterClass {
           avatarList_ = null;
         }
         return avatarListBuilder_;
+      }
+
+      private com.google.protobuf.Internal.IntList backupAvatarTeamOrderList_ = emptyIntList();
+      private void ensureBackupAvatarTeamOrderListIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          backupAvatarTeamOrderList_ = mutableCopy(backupAvatarTeamOrderList_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+      /**
+       * <code>repeated uint32 backup_avatar_team_order_list = 9;</code>
+       * @return A list containing the backupAvatarTeamOrderList.
+       */
+      public java.util.List<java.lang.Integer>
+          getBackupAvatarTeamOrderListList() {
+        return ((bitField0_ & 0x00000008) != 0) ?
+                 java.util.Collections.unmodifiableList(backupAvatarTeamOrderList_) : backupAvatarTeamOrderList_;
+      }
+      /**
+       * <code>repeated uint32 backup_avatar_team_order_list = 9;</code>
+       * @return The count of backupAvatarTeamOrderList.
+       */
+      public int getBackupAvatarTeamOrderListCount() {
+        return backupAvatarTeamOrderList_.size();
+      }
+      /**
+       * <code>repeated uint32 backup_avatar_team_order_list = 9;</code>
+       * @param index The index of the element to return.
+       * @return The backupAvatarTeamOrderList at the given index.
+       */
+      public int getBackupAvatarTeamOrderList(int index) {
+        return backupAvatarTeamOrderList_.getInt(index);
+      }
+      /**
+       * <code>repeated uint32 backup_avatar_team_order_list = 9;</code>
+       * @param index The index to set the value at.
+       * @param value The backupAvatarTeamOrderList to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBackupAvatarTeamOrderList(
+          int index, int value) {
+        ensureBackupAvatarTeamOrderListIsMutable();
+        backupAvatarTeamOrderList_.setInt(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 backup_avatar_team_order_list = 9;</code>
+       * @param value The backupAvatarTeamOrderList to add.
+       * @return This builder for chaining.
+       */
+      public Builder addBackupAvatarTeamOrderList(int value) {
+        ensureBackupAvatarTeamOrderListIsMutable();
+        backupAvatarTeamOrderList_.addInt(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 backup_avatar_team_order_list = 9;</code>
+       * @param values The backupAvatarTeamOrderList to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllBackupAvatarTeamOrderList(
+          java.lang.Iterable<? extends java.lang.Integer> values) {
+        ensureBackupAvatarTeamOrderListIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, backupAvatarTeamOrderList_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 backup_avatar_team_order_list = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBackupAvatarTeamOrderList() {
+        backupAvatarTeamOrderList_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
       }
 
       private com.google.protobuf.MapField<
@@ -1772,7 +1948,7 @@ public final class AvatarDataNotifyOuterClass {
         return internalGetAvatarTeamMap().getMap().size();
       }
       /**
-       * <code>map&lt;uint32, .AvatarTeam&gt; avatar_team_map = 15;</code>
+       * <code>map&lt;uint32, .AvatarTeam&gt; avatar_team_map = 10;</code>
        */
 
       @java.lang.Override
@@ -1790,7 +1966,7 @@ public final class AvatarDataNotifyOuterClass {
         return getAvatarTeamMapMap();
       }
       /**
-       * <code>map&lt;uint32, .AvatarTeam&gt; avatar_team_map = 15;</code>
+       * <code>map&lt;uint32, .AvatarTeam&gt; avatar_team_map = 10;</code>
        */
       @java.lang.Override
 
@@ -1798,7 +1974,7 @@ public final class AvatarDataNotifyOuterClass {
         return internalGetAvatarTeamMap().getMap();
       }
       /**
-       * <code>map&lt;uint32, .AvatarTeam&gt; avatar_team_map = 15;</code>
+       * <code>map&lt;uint32, .AvatarTeam&gt; avatar_team_map = 10;</code>
        */
       @java.lang.Override
 
@@ -1811,7 +1987,7 @@ public final class AvatarDataNotifyOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
-       * <code>map&lt;uint32, .AvatarTeam&gt; avatar_team_map = 15;</code>
+       * <code>map&lt;uint32, .AvatarTeam&gt; avatar_team_map = 10;</code>
        */
       @java.lang.Override
 
@@ -1832,7 +2008,7 @@ public final class AvatarDataNotifyOuterClass {
         return this;
       }
       /**
-       * <code>map&lt;uint32, .AvatarTeam&gt; avatar_team_map = 15;</code>
+       * <code>map&lt;uint32, .AvatarTeam&gt; avatar_team_map = 10;</code>
        */
 
       public Builder removeAvatarTeamMap(
@@ -1851,19 +2027,22 @@ public final class AvatarDataNotifyOuterClass {
         return internalGetMutableAvatarTeamMap().getMutableMap();
       }
       /**
-       * <code>map&lt;uint32, .AvatarTeam&gt; avatar_team_map = 15;</code>
+       * <code>map&lt;uint32, .AvatarTeam&gt; avatar_team_map = 10;</code>
        */
       public Builder putAvatarTeamMap(
           int key,
           emu.grasscutter.net.proto.AvatarTeamOuterClass.AvatarTeam value) {
         
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableAvatarTeamMap().getMutableMap()
             .put(key, value);
         return this;
       }
       /**
-       * <code>map&lt;uint32, .AvatarTeam&gt; avatar_team_map = 15;</code>
+       * <code>map&lt;uint32, .AvatarTeam&gt; avatar_team_map = 10;</code>
        */
 
       public Builder putAllAvatarTeamMap(
@@ -1873,43 +2052,110 @@ public final class AvatarDataNotifyOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Internal.IntList ownedCostumeList_ = emptyIntList();
-      private void ensureOwnedCostumeListIsMutable() {
-        if (!((bitField0_ & 0x00000010) != 0)) {
-          ownedCostumeList_ = mutableCopy(ownedCostumeList_);
-          bitField0_ |= 0x00000010;
+      private com.google.protobuf.Internal.IntList ownedFlycloakList_ = emptyIntList();
+      private void ensureOwnedFlycloakListIsMutable() {
+        if (!((bitField0_ & 0x00000020) != 0)) {
+          ownedFlycloakList_ = mutableCopy(ownedFlycloakList_);
+          bitField0_ |= 0x00000020;
          }
       }
       /**
-       * <pre>
-       *repeated uint32 backup_avatar_team_order_list = 9;//sus
-       * </pre>
-       *
-       * <code>repeated uint32 owned_costume_list = 2;</code>
+       * <code>repeated uint32 owned_flycloak_list = 11;</code>
+       * @return A list containing the ownedFlycloakList.
+       */
+      public java.util.List<java.lang.Integer>
+          getOwnedFlycloakListList() {
+        return ((bitField0_ & 0x00000020) != 0) ?
+                 java.util.Collections.unmodifiableList(ownedFlycloakList_) : ownedFlycloakList_;
+      }
+      /**
+       * <code>repeated uint32 owned_flycloak_list = 11;</code>
+       * @return The count of ownedFlycloakList.
+       */
+      public int getOwnedFlycloakListCount() {
+        return ownedFlycloakList_.size();
+      }
+      /**
+       * <code>repeated uint32 owned_flycloak_list = 11;</code>
+       * @param index The index of the element to return.
+       * @return The ownedFlycloakList at the given index.
+       */
+      public int getOwnedFlycloakList(int index) {
+        return ownedFlycloakList_.getInt(index);
+      }
+      /**
+       * <code>repeated uint32 owned_flycloak_list = 11;</code>
+       * @param index The index to set the value at.
+       * @param value The ownedFlycloakList to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnedFlycloakList(
+          int index, int value) {
+        ensureOwnedFlycloakListIsMutable();
+        ownedFlycloakList_.setInt(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 owned_flycloak_list = 11;</code>
+       * @param value The ownedFlycloakList to add.
+       * @return This builder for chaining.
+       */
+      public Builder addOwnedFlycloakList(int value) {
+        ensureOwnedFlycloakListIsMutable();
+        ownedFlycloakList_.addInt(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 owned_flycloak_list = 11;</code>
+       * @param values The ownedFlycloakList to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllOwnedFlycloakList(
+          java.lang.Iterable<? extends java.lang.Integer> values) {
+        ensureOwnedFlycloakListIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, ownedFlycloakList_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 owned_flycloak_list = 11;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwnedFlycloakList() {
+        ownedFlycloakList_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Internal.IntList ownedCostumeList_ = emptyIntList();
+      private void ensureOwnedCostumeListIsMutable() {
+        if (!((bitField0_ & 0x00000040) != 0)) {
+          ownedCostumeList_ = mutableCopy(ownedCostumeList_);
+          bitField0_ |= 0x00000040;
+         }
+      }
+      /**
+       * <code>repeated uint32 owned_costume_list = 12;</code>
        * @return A list containing the ownedCostumeList.
        */
       public java.util.List<java.lang.Integer>
           getOwnedCostumeListList() {
-        return ((bitField0_ & 0x00000010) != 0) ?
+        return ((bitField0_ & 0x00000040) != 0) ?
                  java.util.Collections.unmodifiableList(ownedCostumeList_) : ownedCostumeList_;
       }
       /**
-       * <pre>
-       *repeated uint32 backup_avatar_team_order_list = 9;//sus
-       * </pre>
-       *
-       * <code>repeated uint32 owned_costume_list = 2;</code>
+       * <code>repeated uint32 owned_costume_list = 12;</code>
        * @return The count of ownedCostumeList.
        */
       public int getOwnedCostumeListCount() {
         return ownedCostumeList_.size();
       }
       /**
-       * <pre>
-       *repeated uint32 backup_avatar_team_order_list = 9;//sus
-       * </pre>
-       *
-       * <code>repeated uint32 owned_costume_list = 2;</code>
+       * <code>repeated uint32 owned_costume_list = 12;</code>
        * @param index The index of the element to return.
        * @return The ownedCostumeList at the given index.
        */
@@ -1917,11 +2163,7 @@ public final class AvatarDataNotifyOuterClass {
         return ownedCostumeList_.getInt(index);
       }
       /**
-       * <pre>
-       *repeated uint32 backup_avatar_team_order_list = 9;//sus
-       * </pre>
-       *
-       * <code>repeated uint32 owned_costume_list = 2;</code>
+       * <code>repeated uint32 owned_costume_list = 12;</code>
        * @param index The index to set the value at.
        * @param value The ownedCostumeList to set.
        * @return This builder for chaining.
@@ -1934,11 +2176,7 @@ public final class AvatarDataNotifyOuterClass {
         return this;
       }
       /**
-       * <pre>
-       *repeated uint32 backup_avatar_team_order_list = 9;//sus
-       * </pre>
-       *
-       * <code>repeated uint32 owned_costume_list = 2;</code>
+       * <code>repeated uint32 owned_costume_list = 12;</code>
        * @param value The ownedCostumeList to add.
        * @return This builder for chaining.
        */
@@ -1949,11 +2187,7 @@ public final class AvatarDataNotifyOuterClass {
         return this;
       }
       /**
-       * <pre>
-       *repeated uint32 backup_avatar_team_order_list = 9;//sus
-       * </pre>
-       *
-       * <code>repeated uint32 owned_costume_list = 2;</code>
+       * <code>repeated uint32 owned_costume_list = 12;</code>
        * @param values The ownedCostumeList to add.
        * @return This builder for chaining.
        */
@@ -1966,66 +2200,259 @@ public final class AvatarDataNotifyOuterClass {
         return this;
       }
       /**
-       * <pre>
-       *repeated uint32 backup_avatar_team_order_list = 9;//sus
-       * </pre>
-       *
-       * <code>repeated uint32 owned_costume_list = 2;</code>
+       * <code>repeated uint32 owned_costume_list = 12;</code>
        * @return This builder for chaining.
        */
       public Builder clearOwnedCostumeList() {
         ownedCostumeList_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000040);
         onChanged();
         return this;
       }
 
-      private int curAvatarTeamId_ ;
+      private java.util.List<emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo> avatarRenameList_ =
+        java.util.Collections.emptyList();
+      private void ensureAvatarRenameListIsMutable() {
+        if (!((bitField0_ & 0x00000080) != 0)) {
+          avatarRenameList_ = new java.util.ArrayList<emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo>(avatarRenameList_);
+          bitField0_ |= 0x00000080;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo, emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo.Builder, emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfoOrBuilder> avatarRenameListBuilder_;
+
       /**
-       * <pre>
-       *repeated uint64 temp_avatar_guid_list = 999;//Wrong
-       * </pre>
-       *
-       * <code>uint32 cur_avatar_team_id = 1;</code>
-       * @return The curAvatarTeamId.
+       * <code>repeated .AvatarRenameInfo avatar_rename_list = 13;</code>
        */
-      @java.lang.Override
-      public int getCurAvatarTeamId() {
-        return curAvatarTeamId_;
+      public java.util.List<emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo> getAvatarRenameListList() {
+        if (avatarRenameListBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(avatarRenameList_);
+        } else {
+          return avatarRenameListBuilder_.getMessageList();
+        }
       }
       /**
-       * <pre>
-       *repeated uint64 temp_avatar_guid_list = 999;//Wrong
-       * </pre>
-       *
-       * <code>uint32 cur_avatar_team_id = 1;</code>
-       * @param value The curAvatarTeamId to set.
-       * @return This builder for chaining.
+       * <code>repeated .AvatarRenameInfo avatar_rename_list = 13;</code>
        */
-      public Builder setCurAvatarTeamId(int value) {
-        
-        curAvatarTeamId_ = value;
-        onChanged();
+      public int getAvatarRenameListCount() {
+        if (avatarRenameListBuilder_ == null) {
+          return avatarRenameList_.size();
+        } else {
+          return avatarRenameListBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .AvatarRenameInfo avatar_rename_list = 13;</code>
+       */
+      public emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo getAvatarRenameList(int index) {
+        if (avatarRenameListBuilder_ == null) {
+          return avatarRenameList_.get(index);
+        } else {
+          return avatarRenameListBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .AvatarRenameInfo avatar_rename_list = 13;</code>
+       */
+      public Builder setAvatarRenameList(
+          int index, emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo value) {
+        if (avatarRenameListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAvatarRenameListIsMutable();
+          avatarRenameList_.set(index, value);
+          onChanged();
+        } else {
+          avatarRenameListBuilder_.setMessage(index, value);
+        }
         return this;
       }
       /**
-       * <pre>
-       *repeated uint64 temp_avatar_guid_list = 999;//Wrong
-       * </pre>
-       *
-       * <code>uint32 cur_avatar_team_id = 1;</code>
-       * @return This builder for chaining.
+       * <code>repeated .AvatarRenameInfo avatar_rename_list = 13;</code>
        */
-      public Builder clearCurAvatarTeamId() {
-        
-        curAvatarTeamId_ = 0;
-        onChanged();
+      public Builder setAvatarRenameList(
+          int index, emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo.Builder builderForValue) {
+        if (avatarRenameListBuilder_ == null) {
+          ensureAvatarRenameListIsMutable();
+          avatarRenameList_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          avatarRenameListBuilder_.setMessage(index, builderForValue.build());
+        }
         return this;
+      }
+      /**
+       * <code>repeated .AvatarRenameInfo avatar_rename_list = 13;</code>
+       */
+      public Builder addAvatarRenameList(emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo value) {
+        if (avatarRenameListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAvatarRenameListIsMutable();
+          avatarRenameList_.add(value);
+          onChanged();
+        } else {
+          avatarRenameListBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .AvatarRenameInfo avatar_rename_list = 13;</code>
+       */
+      public Builder addAvatarRenameList(
+          int index, emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo value) {
+        if (avatarRenameListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAvatarRenameListIsMutable();
+          avatarRenameList_.add(index, value);
+          onChanged();
+        } else {
+          avatarRenameListBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .AvatarRenameInfo avatar_rename_list = 13;</code>
+       */
+      public Builder addAvatarRenameList(
+          emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo.Builder builderForValue) {
+        if (avatarRenameListBuilder_ == null) {
+          ensureAvatarRenameListIsMutable();
+          avatarRenameList_.add(builderForValue.build());
+          onChanged();
+        } else {
+          avatarRenameListBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .AvatarRenameInfo avatar_rename_list = 13;</code>
+       */
+      public Builder addAvatarRenameList(
+          int index, emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo.Builder builderForValue) {
+        if (avatarRenameListBuilder_ == null) {
+          ensureAvatarRenameListIsMutable();
+          avatarRenameList_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          avatarRenameListBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .AvatarRenameInfo avatar_rename_list = 13;</code>
+       */
+      public Builder addAllAvatarRenameList(
+          java.lang.Iterable<? extends emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo> values) {
+        if (avatarRenameListBuilder_ == null) {
+          ensureAvatarRenameListIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, avatarRenameList_);
+          onChanged();
+        } else {
+          avatarRenameListBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .AvatarRenameInfo avatar_rename_list = 13;</code>
+       */
+      public Builder clearAvatarRenameList() {
+        if (avatarRenameListBuilder_ == null) {
+          avatarRenameList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000080);
+          onChanged();
+        } else {
+          avatarRenameListBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .AvatarRenameInfo avatar_rename_list = 13;</code>
+       */
+      public Builder removeAvatarRenameList(int index) {
+        if (avatarRenameListBuilder_ == null) {
+          ensureAvatarRenameListIsMutable();
+          avatarRenameList_.remove(index);
+          onChanged();
+        } else {
+          avatarRenameListBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .AvatarRenameInfo avatar_rename_list = 13;</code>
+       */
+      public emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo.Builder getAvatarRenameListBuilder(
+          int index) {
+        return getAvatarRenameListFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .AvatarRenameInfo avatar_rename_list = 13;</code>
+       */
+      public emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfoOrBuilder getAvatarRenameListOrBuilder(
+          int index) {
+        if (avatarRenameListBuilder_ == null) {
+          return avatarRenameList_.get(index);  } else {
+          return avatarRenameListBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .AvatarRenameInfo avatar_rename_list = 13;</code>
+       */
+      public java.util.List<? extends emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfoOrBuilder> 
+           getAvatarRenameListOrBuilderList() {
+        if (avatarRenameListBuilder_ != null) {
+          return avatarRenameListBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(avatarRenameList_);
+        }
+      }
+      /**
+       * <code>repeated .AvatarRenameInfo avatar_rename_list = 13;</code>
+       */
+      public emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo.Builder addAvatarRenameListBuilder() {
+        return getAvatarRenameListFieldBuilder().addBuilder(
+            emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .AvatarRenameInfo avatar_rename_list = 13;</code>
+       */
+      public emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo.Builder addAvatarRenameListBuilder(
+          int index) {
+        return getAvatarRenameListFieldBuilder().addBuilder(
+            index, emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .AvatarRenameInfo avatar_rename_list = 13;</code>
+       */
+      public java.util.List<emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo.Builder> 
+           getAvatarRenameListBuilderList() {
+        return getAvatarRenameListFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo, emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo.Builder, emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfoOrBuilder> 
+          getAvatarRenameListFieldBuilder() {
+        if (avatarRenameListBuilder_ == null) {
+          avatarRenameListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo, emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo.Builder, emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfoOrBuilder>(
+                  avatarRenameList_,
+                  ((bitField0_ & 0x00000080) != 0),
+                  getParentForChildren(),
+                  isClean());
+          avatarRenameList_ = null;
+        }
+        return avatarRenameListBuilder_;
       }
 
       private long chooseAvatarGuid_ ;
       /**
-       * <code>uint64 choose_avatar_guid = 11;</code>
+       * <code>uint64 choose_avatar_guid = 14;</code>
        * @return The chooseAvatarGuid.
        */
       @java.lang.Override
@@ -2033,7 +2460,7 @@ public final class AvatarDataNotifyOuterClass {
         return chooseAvatarGuid_;
       }
       /**
-       * <code>uint64 choose_avatar_guid = 11;</code>
+       * <code>uint64 choose_avatar_guid = 14;</code>
        * @param value The chooseAvatarGuid to set.
        * @return This builder for chaining.
        */
@@ -2044,7 +2471,7 @@ public final class AvatarDataNotifyOuterClass {
         return this;
       }
       /**
-       * <code>uint64 choose_avatar_guid = 11;</code>
+       * <code>uint64 choose_avatar_guid = 14;</code>
        * @return This builder for chaining.
        */
       public Builder clearChooseAvatarGuid() {
@@ -2086,7 +2513,18 @@ public final class AvatarDataNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new AvatarDataNotify(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -2127,16 +2565,18 @@ public final class AvatarDataNotifyOuterClass {
     java.lang.String[] descriptorData = {
       "\n\026AvatarDataNotify.proto\032\020AvatarInfo.pro" +
       "to\032\020AvatarTeam.proto\032\026AvatarRenameInfo.p" +
-      "roto\"\326\002\n\020AvatarDataNotify\022\033\n\023owned_flycl" +
-      "oak_list\030\r \003(\r\022-\n\022avatar_rename_list\030\n \003" +
-      "(\0132\021.AvatarRenameInfo\022 \n\013avatar_list\030\005 \003" +
-      "(\0132\013.AvatarInfo\022=\n\017avatar_team_map\030\017 \003(\013" +
-      "2$.AvatarDataNotify.AvatarTeamMapEntry\022\032" +
-      "\n\022owned_costume_list\030\002 \003(\r\022\032\n\022cur_avatar" +
-      "_team_id\030\001 \001(\r\022\032\n\022choose_avatar_guid\030\013 \001" +
-      "(\004\032A\n\022AvatarTeamMapEntry\022\013\n\003key\030\001 \001(\r\022\032\n" +
-      "\005value\030\002 \001(\0132\013.AvatarTeam:\0028\001B\033\n\031emu.gra" +
-      "sscutter.net.protob\006proto3"
+      "roto\"\261\003\n\020AvatarDataNotify\022\023\n\013ONAODHDMILI" +
+      "\030\002 \003(\r\022\035\n\025temp_avatar_guid_list\030\004 \003(\004\022\032\n" +
+      "\022cur_avatar_team_id\030\007 \001(\r\022 \n\013avatar_list" +
+      "\030\010 \003(\0132\013.AvatarInfo\022%\n\035backup_avatar_tea" +
+      "m_order_list\030\t \003(\r\022=\n\017avatar_team_map\030\n " +
+      "\003(\0132$.AvatarDataNotify.AvatarTeamMapEntr" +
+      "y\022\033\n\023owned_flycloak_list\030\013 \003(\r\022\032\n\022owned_" +
+      "costume_list\030\014 \003(\r\022-\n\022avatar_rename_list" +
+      "\030\r \003(\0132\021.AvatarRenameInfo\022\032\n\022choose_avat" +
+      "ar_guid\030\016 \001(\004\032A\n\022AvatarTeamMapEntry\022\013\n\003k" +
+      "ey\030\001 \001(\r\022\032\n\005value\030\002 \001(\0132\013.AvatarTeam:\0028\001" +
+      "B\033\n\031emu.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2150,7 +2590,7 @@ public final class AvatarDataNotifyOuterClass {
     internal_static_AvatarDataNotify_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_AvatarDataNotify_descriptor,
-        new java.lang.String[] { "OwnedFlycloakList", "AvatarRenameList", "AvatarList", "AvatarTeamMap", "OwnedCostumeList", "CurAvatarTeamId", "ChooseAvatarGuid", });
+        new java.lang.String[] { "ONAODHDMILI", "TempAvatarGuidList", "CurAvatarTeamId", "AvatarList", "BackupAvatarTeamOrderList", "AvatarTeamMap", "OwnedFlycloakList", "OwnedCostumeList", "AvatarRenameList", "ChooseAvatarGuid", });
     internal_static_AvatarDataNotify_AvatarTeamMapEntry_descriptor =
       internal_static_AvatarDataNotify_descriptor.getNestedTypes().get(0);
     internal_static_AvatarDataNotify_AvatarTeamMapEntry_fieldAccessorTable = new

@@ -19,25 +19,26 @@ public final class DungeonEntryCondOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.DungeonEntryBlockReason cond_reason = 4;</code>
+     * <code>.DungeonEntryBlockReason cond_reason = 15;</code>
      * @return The enum numeric value on the wire for condReason.
      */
     int getCondReasonValue();
     /**
-     * <code>.DungeonEntryBlockReason cond_reason = 4;</code>
+     * <code>.DungeonEntryBlockReason cond_reason = 15;</code>
      * @return The condReason.
      */
     emu.grasscutter.net.proto.DungeonEntryBlockReasonOuterClass.DungeonEntryBlockReason getCondReason();
 
     /**
-     * <code>uint32 param1 = 12;</code>
+     * <code>uint32 param1 = 13;</code>
      * @return The param1.
      */
     int getParam1();
   }
   /**
    * <pre>
-   * Obf: MGMEPMHEJEA
+   * 4.7.0
+   * HFNABBHGPAC
    * </pre>
    *
    * Protobuf type {@code DungeonEntryCond}
@@ -67,54 +68,6 @@ public final class DungeonEntryCondOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private DungeonEntryCond(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 32: {
-              int rawValue = input.readEnum();
-
-              condReason_ = rawValue;
-              break;
-            }
-            case 96: {
-
-              param1_ = input.readUInt32();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.DungeonEntryCondOuterClass.internal_static_DungeonEntryCond_descriptor;
@@ -128,17 +81,17 @@ public final class DungeonEntryCondOuterClass {
               emu.grasscutter.net.proto.DungeonEntryCondOuterClass.DungeonEntryCond.class, emu.grasscutter.net.proto.DungeonEntryCondOuterClass.DungeonEntryCond.Builder.class);
     }
 
-    public static final int COND_REASON_FIELD_NUMBER = 4;
+    public static final int COND_REASON_FIELD_NUMBER = 15;
     private int condReason_;
     /**
-     * <code>.DungeonEntryBlockReason cond_reason = 4;</code>
+     * <code>.DungeonEntryBlockReason cond_reason = 15;</code>
      * @return The enum numeric value on the wire for condReason.
      */
     @java.lang.Override public int getCondReasonValue() {
       return condReason_;
     }
     /**
-     * <code>.DungeonEntryBlockReason cond_reason = 4;</code>
+     * <code>.DungeonEntryBlockReason cond_reason = 15;</code>
      * @return The condReason.
      */
     @java.lang.Override public emu.grasscutter.net.proto.DungeonEntryBlockReasonOuterClass.DungeonEntryBlockReason getCondReason() {
@@ -147,10 +100,10 @@ public final class DungeonEntryCondOuterClass {
       return result == null ? emu.grasscutter.net.proto.DungeonEntryBlockReasonOuterClass.DungeonEntryBlockReason.UNRECOGNIZED : result;
     }
 
-    public static final int PARAM1_FIELD_NUMBER = 12;
+    public static final int PARAM1_FIELD_NUMBER = 13;
     private int param1_;
     /**
-     * <code>uint32 param1 = 12;</code>
+     * <code>uint32 param1 = 13;</code>
      * @return The param1.
      */
     @java.lang.Override
@@ -172,13 +125,13 @@ public final class DungeonEntryCondOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (condReason_ != emu.grasscutter.net.proto.DungeonEntryBlockReasonOuterClass.DungeonEntryBlockReason.DUNGEON_ENTRY_REASON_NONE.getNumber()) {
-        output.writeEnum(4, condReason_);
-      }
       if (param1_ != 0) {
-        output.writeUInt32(12, param1_);
+        output.writeUInt32(13, param1_);
       }
-      unknownFields.writeTo(output);
+      if (condReason_ != emu.grasscutter.net.proto.DungeonEntryBlockReasonOuterClass.DungeonEntryBlockReason.DUNGEON_ENTRY_REASON_NONE.getNumber()) {
+        output.writeEnum(15, condReason_);
+      }
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -187,15 +140,15 @@ public final class DungeonEntryCondOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (condReason_ != emu.grasscutter.net.proto.DungeonEntryBlockReasonOuterClass.DungeonEntryBlockReason.DUNGEON_ENTRY_REASON_NONE.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(4, condReason_);
-      }
       if (param1_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(12, param1_);
+          .computeUInt32Size(13, param1_);
       }
-      size += unknownFields.getSerializedSize();
+      if (condReason_ != emu.grasscutter.net.proto.DungeonEntryBlockReasonOuterClass.DungeonEntryBlockReason.DUNGEON_ENTRY_REASON_NONE.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(15, condReason_);
+      }
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -213,7 +166,7 @@ public final class DungeonEntryCondOuterClass {
       if (condReason_ != other.condReason_) return false;
       if (getParam1()
           != other.getParam1()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -228,7 +181,7 @@ public final class DungeonEntryCondOuterClass {
       hash = (53 * hash) + condReason_;
       hash = (37 * hash) + PARAM1_FIELD_NUMBER;
       hash = (53 * hash) + getParam1();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -325,7 +278,8 @@ public final class DungeonEntryCondOuterClass {
     }
     /**
      * <pre>
-     * Obf: MGMEPMHEJEA
+     * 4.7.0
+     * HFNABBHGPAC
      * </pre>
      *
      * Protobuf type {@code DungeonEntryCond}
@@ -349,18 +303,13 @@ public final class DungeonEntryCondOuterClass {
 
       // Construct using emu.grasscutter.net.proto.DungeonEntryCondOuterClass.DungeonEntryCond.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -451,7 +400,7 @@ public final class DungeonEntryCondOuterClass {
         if (other.getParam1() != 0) {
           setParam1(other.getParam1());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -466,30 +415,53 @@ public final class DungeonEntryCondOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.DungeonEntryCondOuterClass.DungeonEntryCond parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 104: {
+                param1_ = input.readUInt32();
+
+                break;
+              } // case 104
+              case 120: {
+                condReason_ = input.readEnum();
+
+                break;
+              } // case 120
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.DungeonEntryCondOuterClass.DungeonEntryCond) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
       private int condReason_ = 0;
       /**
-       * <code>.DungeonEntryBlockReason cond_reason = 4;</code>
+       * <code>.DungeonEntryBlockReason cond_reason = 15;</code>
        * @return The enum numeric value on the wire for condReason.
        */
       @java.lang.Override public int getCondReasonValue() {
         return condReason_;
       }
       /**
-       * <code>.DungeonEntryBlockReason cond_reason = 4;</code>
+       * <code>.DungeonEntryBlockReason cond_reason = 15;</code>
        * @param value The enum numeric value on the wire for condReason to set.
        * @return This builder for chaining.
        */
@@ -500,7 +472,7 @@ public final class DungeonEntryCondOuterClass {
         return this;
       }
       /**
-       * <code>.DungeonEntryBlockReason cond_reason = 4;</code>
+       * <code>.DungeonEntryBlockReason cond_reason = 15;</code>
        * @return The condReason.
        */
       @java.lang.Override
@@ -510,7 +482,7 @@ public final class DungeonEntryCondOuterClass {
         return result == null ? emu.grasscutter.net.proto.DungeonEntryBlockReasonOuterClass.DungeonEntryBlockReason.UNRECOGNIZED : result;
       }
       /**
-       * <code>.DungeonEntryBlockReason cond_reason = 4;</code>
+       * <code>.DungeonEntryBlockReason cond_reason = 15;</code>
        * @param value The condReason to set.
        * @return This builder for chaining.
        */
@@ -524,7 +496,7 @@ public final class DungeonEntryCondOuterClass {
         return this;
       }
       /**
-       * <code>.DungeonEntryBlockReason cond_reason = 4;</code>
+       * <code>.DungeonEntryBlockReason cond_reason = 15;</code>
        * @return This builder for chaining.
        */
       public Builder clearCondReason() {
@@ -536,7 +508,7 @@ public final class DungeonEntryCondOuterClass {
 
       private int param1_ ;
       /**
-       * <code>uint32 param1 = 12;</code>
+       * <code>uint32 param1 = 13;</code>
        * @return The param1.
        */
       @java.lang.Override
@@ -544,7 +516,7 @@ public final class DungeonEntryCondOuterClass {
         return param1_;
       }
       /**
-       * <code>uint32 param1 = 12;</code>
+       * <code>uint32 param1 = 13;</code>
        * @param value The param1 to set.
        * @return This builder for chaining.
        */
@@ -555,7 +527,7 @@ public final class DungeonEntryCondOuterClass {
         return this;
       }
       /**
-       * <code>uint32 param1 = 12;</code>
+       * <code>uint32 param1 = 13;</code>
        * @return This builder for chaining.
        */
       public Builder clearParam1() {
@@ -597,7 +569,18 @@ public final class DungeonEntryCondOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new DungeonEntryCond(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -633,8 +616,8 @@ public final class DungeonEntryCondOuterClass {
     java.lang.String[] descriptorData = {
       "\n\026DungeonEntryCond.proto\032\035DungeonEntryBl" +
       "ockReason.proto\"Q\n\020DungeonEntryCond\022-\n\013c" +
-      "ond_reason\030\004 \001(\0162\030.DungeonEntryBlockReas" +
-      "on\022\016\n\006param1\030\014 \001(\rB\033\n\031emu.grasscutter.ne" +
+      "ond_reason\030\017 \001(\0162\030.DungeonEntryBlockReas" +
+      "on\022\016\n\006param1\030\r \001(\rB\033\n\031emu.grasscutter.ne" +
       "t.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

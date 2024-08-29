@@ -19,7 +19,25 @@ public final class PlayerDataNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 region_id = 3;</code>
+     * <code>string nick_name = 1;</code>
+     * @return The nickName.
+     */
+    java.lang.String getNickName();
+    /**
+     * <code>string nick_name = 1;</code>
+     * @return The bytes for nickName.
+     */
+    com.google.protobuf.ByteString
+        getNickNameBytes();
+
+    /**
+     * <code>bool is_first_login_today = 2;</code>
+     * @return The isFirstLoginToday.
+     */
+    boolean getIsFirstLoginToday();
+
+    /**
+     * <code>uint32 region_id = 5;</code>
      * @return The regionId.
      */
     int getRegionId();
@@ -59,35 +77,12 @@ public final class PlayerDataNotifyOuterClass {
         int key);
 
     /**
-     * <code>uint64 server_time = 9;</code>
+     * <code>uint64 server_time = 11;</code>
      * @return The serverTime.
      */
     long getServerTime();
-
-    /**
-     * <code>bool is_first_login_today = 10;</code>
-     * @return The isFirstLoginToday.
-     */
-    boolean getIsFirstLoginToday();
-
-    /**
-     * <code>string nick_name = 12;</code>
-     * @return The nickName.
-     */
-    java.lang.String getNickName();
-    /**
-     * <code>string nick_name = 12;</code>
-     * @return The bytes for nickName.
-     */
-    com.google.protobuf.ByteString
-        getNickNameBytes();
   }
   /**
-   * <pre>
-   * 4.6.0
-   * CmdId: 2408
-   * </pre>
-   *
    * Protobuf type {@code PlayerDataNotify}
    */
   public static final class PlayerDataNotify extends
@@ -115,78 +110,6 @@ public final class PlayerDataNotifyOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private PlayerDataNotify(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 24: {
-
-              regionId_ = input.readUInt32();
-              break;
-            }
-            case 66: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                propMap_ = com.google.protobuf.MapField.newMapField(
-                    PropMapDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000001;
-              }
-              com.google.protobuf.MapEntry<java.lang.Integer, emu.grasscutter.net.proto.PropValueOuterClass.PropValue>
-              propMap__ = input.readMessage(
-                  PropMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              propMap_.getMutableMap().put(
-                  propMap__.getKey(), propMap__.getValue());
-              break;
-            }
-            case 72: {
-
-              serverTime_ = input.readUInt64();
-              break;
-            }
-            case 80: {
-
-              isFirstLoginToday_ = input.readBool();
-              break;
-            }
-            case 98: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              nickName_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.PlayerDataNotifyOuterClass.internal_static_PlayerDataNotify_descriptor;
@@ -212,10 +135,59 @@ public final class PlayerDataNotifyOuterClass {
               emu.grasscutter.net.proto.PlayerDataNotifyOuterClass.PlayerDataNotify.class, emu.grasscutter.net.proto.PlayerDataNotifyOuterClass.PlayerDataNotify.Builder.class);
     }
 
-    public static final int REGION_ID_FIELD_NUMBER = 3;
+    public static final int NICK_NAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object nickName_;
+    /**
+     * <code>string nick_name = 1;</code>
+     * @return The nickName.
+     */
+    @java.lang.Override
+    public java.lang.String getNickName() {
+      java.lang.Object ref = nickName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nickName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string nick_name = 1;</code>
+     * @return The bytes for nickName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNickNameBytes() {
+      java.lang.Object ref = nickName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nickName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int IS_FIRST_LOGIN_TODAY_FIELD_NUMBER = 2;
+    private boolean isFirstLoginToday_;
+    /**
+     * <code>bool is_first_login_today = 2;</code>
+     * @return The isFirstLoginToday.
+     */
+    @java.lang.Override
+    public boolean getIsFirstLoginToday() {
+      return isFirstLoginToday_;
+    }
+
+    public static final int REGION_ID_FIELD_NUMBER = 5;
     private int regionId_;
     /**
-     * <code>uint32 region_id = 3;</code>
+     * <code>uint32 region_id = 5;</code>
      * @return The regionId.
      */
     @java.lang.Override
@@ -304,64 +276,15 @@ public final class PlayerDataNotifyOuterClass {
       return map.get(key);
     }
 
-    public static final int SERVER_TIME_FIELD_NUMBER = 9;
+    public static final int SERVER_TIME_FIELD_NUMBER = 11;
     private long serverTime_;
     /**
-     * <code>uint64 server_time = 9;</code>
+     * <code>uint64 server_time = 11;</code>
      * @return The serverTime.
      */
     @java.lang.Override
     public long getServerTime() {
       return serverTime_;
-    }
-
-    public static final int IS_FIRST_LOGIN_TODAY_FIELD_NUMBER = 10;
-    private boolean isFirstLoginToday_;
-    /**
-     * <code>bool is_first_login_today = 10;</code>
-     * @return The isFirstLoginToday.
-     */
-    @java.lang.Override
-    public boolean getIsFirstLoginToday() {
-      return isFirstLoginToday_;
-    }
-
-    public static final int NICK_NAME_FIELD_NUMBER = 12;
-    private volatile java.lang.Object nickName_;
-    /**
-     * <code>string nick_name = 12;</code>
-     * @return The nickName.
-     */
-    @java.lang.Override
-    public java.lang.String getNickName() {
-      java.lang.Object ref = nickName_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        nickName_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string nick_name = 12;</code>
-     * @return The bytes for nickName.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getNickNameBytes() {
-      java.lang.Object ref = nickName_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        nickName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
     }
 
     private byte memoizedIsInitialized = -1;
@@ -378,8 +301,14 @@ public final class PlayerDataNotifyOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nickName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, nickName_);
+      }
+      if (isFirstLoginToday_ != false) {
+        output.writeBool(2, isFirstLoginToday_);
+      }
       if (regionId_ != 0) {
-        output.writeUInt32(3, regionId_);
+        output.writeUInt32(5, regionId_);
       }
       com.google.protobuf.GeneratedMessageV3
         .serializeIntegerMapTo(
@@ -388,15 +317,9 @@ public final class PlayerDataNotifyOuterClass {
           PropMapDefaultEntryHolder.defaultEntry,
           8);
       if (serverTime_ != 0L) {
-        output.writeUInt64(9, serverTime_);
+        output.writeUInt64(11, serverTime_);
       }
-      if (isFirstLoginToday_ != false) {
-        output.writeBool(10, isFirstLoginToday_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nickName_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 12, nickName_);
-      }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -405,9 +328,16 @@ public final class PlayerDataNotifyOuterClass {
       if (size != -1) return size;
 
       size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nickName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, nickName_);
+      }
+      if (isFirstLoginToday_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, isFirstLoginToday_);
+      }
       if (regionId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(3, regionId_);
+          .computeUInt32Size(5, regionId_);
       }
       for (java.util.Map.Entry<java.lang.Integer, emu.grasscutter.net.proto.PropValueOuterClass.PropValue> entry
            : internalGetPropMap().getMap().entrySet()) {
@@ -421,16 +351,9 @@ public final class PlayerDataNotifyOuterClass {
       }
       if (serverTime_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(9, serverTime_);
+          .computeUInt64Size(11, serverTime_);
       }
-      if (isFirstLoginToday_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(10, isFirstLoginToday_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nickName_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, nickName_);
-      }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -445,17 +368,17 @@ public final class PlayerDataNotifyOuterClass {
       }
       emu.grasscutter.net.proto.PlayerDataNotifyOuterClass.PlayerDataNotify other = (emu.grasscutter.net.proto.PlayerDataNotifyOuterClass.PlayerDataNotify) obj;
 
+      if (!getNickName()
+          .equals(other.getNickName())) return false;
+      if (getIsFirstLoginToday()
+          != other.getIsFirstLoginToday()) return false;
       if (getRegionId()
           != other.getRegionId()) return false;
       if (!internalGetPropMap().equals(
           other.internalGetPropMap())) return false;
       if (getServerTime()
           != other.getServerTime()) return false;
-      if (getIsFirstLoginToday()
-          != other.getIsFirstLoginToday()) return false;
-      if (!getNickName()
-          .equals(other.getNickName())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -466,6 +389,11 @@ public final class PlayerDataNotifyOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NICK_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getNickName().hashCode();
+      hash = (37 * hash) + IS_FIRST_LOGIN_TODAY_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsFirstLoginToday());
       hash = (37 * hash) + REGION_ID_FIELD_NUMBER;
       hash = (53 * hash) + getRegionId();
       if (!internalGetPropMap().getMap().isEmpty()) {
@@ -475,12 +403,7 @@ public final class PlayerDataNotifyOuterClass {
       hash = (37 * hash) + SERVER_TIME_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getServerTime());
-      hash = (37 * hash) + IS_FIRST_LOGIN_TODAY_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getIsFirstLoginToday());
-      hash = (37 * hash) + NICK_NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getNickName().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -576,11 +499,6 @@ public final class PlayerDataNotifyOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * 4.6.0
-     * CmdId: 2408
-     * </pre>
-     *
      * Protobuf type {@code PlayerDataNotify}
      */
     public static final class Builder extends
@@ -624,30 +542,25 @@ public final class PlayerDataNotifyOuterClass {
 
       // Construct using emu.grasscutter.net.proto.PlayerDataNotifyOuterClass.PlayerDataNotify.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        nickName_ = "";
+
+        isFirstLoginToday_ = false;
+
         regionId_ = 0;
 
         internalGetMutablePropMap().clear();
         serverTime_ = 0L;
-
-        isFirstLoginToday_ = false;
-
-        nickName_ = "";
 
         return this;
       }
@@ -676,12 +589,12 @@ public final class PlayerDataNotifyOuterClass {
       public emu.grasscutter.net.proto.PlayerDataNotifyOuterClass.PlayerDataNotify buildPartial() {
         emu.grasscutter.net.proto.PlayerDataNotifyOuterClass.PlayerDataNotify result = new emu.grasscutter.net.proto.PlayerDataNotifyOuterClass.PlayerDataNotify(this);
         int from_bitField0_ = bitField0_;
+        result.nickName_ = nickName_;
+        result.isFirstLoginToday_ = isFirstLoginToday_;
         result.regionId_ = regionId_;
         result.propMap_ = internalGetPropMap();
         result.propMap_.makeImmutable();
         result.serverTime_ = serverTime_;
-        result.isFirstLoginToday_ = isFirstLoginToday_;
-        result.nickName_ = nickName_;
         onBuilt();
         return result;
       }
@@ -730,6 +643,13 @@ public final class PlayerDataNotifyOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.PlayerDataNotifyOuterClass.PlayerDataNotify other) {
         if (other == emu.grasscutter.net.proto.PlayerDataNotifyOuterClass.PlayerDataNotify.getDefaultInstance()) return this;
+        if (!other.getNickName().isEmpty()) {
+          nickName_ = other.nickName_;
+          onChanged();
+        }
+        if (other.getIsFirstLoginToday() != false) {
+          setIsFirstLoginToday(other.getIsFirstLoginToday());
+        }
         if (other.getRegionId() != 0) {
           setRegionId(other.getRegionId());
         }
@@ -738,14 +658,7 @@ public final class PlayerDataNotifyOuterClass {
         if (other.getServerTime() != 0L) {
           setServerTime(other.getServerTime());
         }
-        if (other.getIsFirstLoginToday() != false) {
-          setIsFirstLoginToday(other.getIsFirstLoginToday());
-        }
-        if (!other.getNickName().isEmpty()) {
-          nickName_ = other.nickName_;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -760,24 +673,172 @@ public final class PlayerDataNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.PlayerDataNotifyOuterClass.PlayerDataNotify parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                nickName_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+              case 16: {
+                isFirstLoginToday_ = input.readBool();
+
+                break;
+              } // case 16
+              case 40: {
+                regionId_ = input.readUInt32();
+
+                break;
+              } // case 40
+              case 66: {
+                com.google.protobuf.MapEntry<java.lang.Integer, emu.grasscutter.net.proto.PropValueOuterClass.PropValue>
+                propMap__ = input.readMessage(
+                    PropMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutablePropMap().getMutableMap().put(
+                    propMap__.getKey(), propMap__.getValue());
+                break;
+              } // case 66
+              case 88: {
+                serverTime_ = input.readUInt64();
+
+                break;
+              } // case 88
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.PlayerDataNotifyOuterClass.PlayerDataNotify) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
 
+      private java.lang.Object nickName_ = "";
+      /**
+       * <code>string nick_name = 1;</code>
+       * @return The nickName.
+       */
+      public java.lang.String getNickName() {
+        java.lang.Object ref = nickName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nickName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string nick_name = 1;</code>
+       * @return The bytes for nickName.
+       */
+      public com.google.protobuf.ByteString
+          getNickNameBytes() {
+        java.lang.Object ref = nickName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nickName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string nick_name = 1;</code>
+       * @param value The nickName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNickName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        nickName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string nick_name = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNickName() {
+        
+        nickName_ = getDefaultInstance().getNickName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string nick_name = 1;</code>
+       * @param value The bytes for nickName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNickNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        nickName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private boolean isFirstLoginToday_ ;
+      /**
+       * <code>bool is_first_login_today = 2;</code>
+       * @return The isFirstLoginToday.
+       */
+      @java.lang.Override
+      public boolean getIsFirstLoginToday() {
+        return isFirstLoginToday_;
+      }
+      /**
+       * <code>bool is_first_login_today = 2;</code>
+       * @param value The isFirstLoginToday to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsFirstLoginToday(boolean value) {
+        
+        isFirstLoginToday_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool is_first_login_today = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsFirstLoginToday() {
+        
+        isFirstLoginToday_ = false;
+        onChanged();
+        return this;
+      }
+
       private int regionId_ ;
       /**
-       * <code>uint32 region_id = 3;</code>
+       * <code>uint32 region_id = 5;</code>
        * @return The regionId.
        */
       @java.lang.Override
@@ -785,7 +846,7 @@ public final class PlayerDataNotifyOuterClass {
         return regionId_;
       }
       /**
-       * <code>uint32 region_id = 3;</code>
+       * <code>uint32 region_id = 5;</code>
        * @param value The regionId to set.
        * @return This builder for chaining.
        */
@@ -796,7 +857,7 @@ public final class PlayerDataNotifyOuterClass {
         return this;
       }
       /**
-       * <code>uint32 region_id = 3;</code>
+       * <code>uint32 region_id = 5;</code>
        * @return This builder for chaining.
        */
       public Builder clearRegionId() {
@@ -918,7 +979,10 @@ public final class PlayerDataNotifyOuterClass {
           int key,
           emu.grasscutter.net.proto.PropValueOuterClass.PropValue value) {
         
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutablePropMap().getMutableMap()
             .put(key, value);
         return this;
@@ -936,7 +1000,7 @@ public final class PlayerDataNotifyOuterClass {
 
       private long serverTime_ ;
       /**
-       * <code>uint64 server_time = 9;</code>
+       * <code>uint64 server_time = 11;</code>
        * @return The serverTime.
        */
       @java.lang.Override
@@ -944,7 +1008,7 @@ public final class PlayerDataNotifyOuterClass {
         return serverTime_;
       }
       /**
-       * <code>uint64 server_time = 9;</code>
+       * <code>uint64 server_time = 11;</code>
        * @param value The serverTime to set.
        * @return This builder for chaining.
        */
@@ -955,119 +1019,12 @@ public final class PlayerDataNotifyOuterClass {
         return this;
       }
       /**
-       * <code>uint64 server_time = 9;</code>
+       * <code>uint64 server_time = 11;</code>
        * @return This builder for chaining.
        */
       public Builder clearServerTime() {
         
         serverTime_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      private boolean isFirstLoginToday_ ;
-      /**
-       * <code>bool is_first_login_today = 10;</code>
-       * @return The isFirstLoginToday.
-       */
-      @java.lang.Override
-      public boolean getIsFirstLoginToday() {
-        return isFirstLoginToday_;
-      }
-      /**
-       * <code>bool is_first_login_today = 10;</code>
-       * @param value The isFirstLoginToday to set.
-       * @return This builder for chaining.
-       */
-      public Builder setIsFirstLoginToday(boolean value) {
-        
-        isFirstLoginToday_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bool is_first_login_today = 10;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearIsFirstLoginToday() {
-        
-        isFirstLoginToday_ = false;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object nickName_ = "";
-      /**
-       * <code>string nick_name = 12;</code>
-       * @return The nickName.
-       */
-      public java.lang.String getNickName() {
-        java.lang.Object ref = nickName_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          nickName_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string nick_name = 12;</code>
-       * @return The bytes for nickName.
-       */
-      public com.google.protobuf.ByteString
-          getNickNameBytes() {
-        java.lang.Object ref = nickName_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          nickName_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string nick_name = 12;</code>
-       * @param value The nickName to set.
-       * @return This builder for chaining.
-       */
-      public Builder setNickName(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        nickName_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string nick_name = 12;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearNickName() {
-        
-        nickName_ = getDefaultInstance().getNickName();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string nick_name = 12;</code>
-       * @param value The bytes for nickName to set.
-       * @return This builder for chaining.
-       */
-      public Builder setNickNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        nickName_ = value;
         onChanged();
         return this;
       }
@@ -1104,7 +1061,18 @@ public final class PlayerDataNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new PlayerDataNotify(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -1144,11 +1112,11 @@ public final class PlayerDataNotifyOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\026PlayerDataNotify.proto\032\017PropValue.prot" +
-      "o\"\331\001\n\020PlayerDataNotify\022\021\n\tregion_id\030\003 \001(" +
-      "\r\0220\n\010prop_map\030\010 \003(\0132\036.PlayerDataNotify.P" +
-      "ropMapEntry\022\023\n\013server_time\030\t \001(\004\022\034\n\024is_f" +
-      "irst_login_today\030\n \001(\010\022\021\n\tnick_name\030\014 \001(" +
-      "\t\032:\n\014PropMapEntry\022\013\n\003key\030\001 \001(\r\022\031\n\005value\030" +
+      "o\"\331\001\n\020PlayerDataNotify\022\021\n\tnick_name\030\001 \001(" +
+      "\t\022\034\n\024is_first_login_today\030\002 \001(\010\022\021\n\tregio" +
+      "n_id\030\005 \001(\r\0220\n\010prop_map\030\010 \003(\0132\036.PlayerDat" +
+      "aNotify.PropMapEntry\022\023\n\013server_time\030\013 \001(" +
+      "\004\032:\n\014PropMapEntry\022\013\n\003key\030\001 \001(\r\022\031\n\005value\030" +
       "\002 \001(\0132\n.PropValue:\0028\001B\033\n\031emu.grasscutter" +
       ".net.protob\006proto3"
     };
@@ -1162,7 +1130,7 @@ public final class PlayerDataNotifyOuterClass {
     internal_static_PlayerDataNotify_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_PlayerDataNotify_descriptor,
-        new java.lang.String[] { "RegionId", "PropMap", "ServerTime", "IsFirstLoginToday", "NickName", });
+        new java.lang.String[] { "NickName", "IsFirstLoginToday", "RegionId", "PropMap", "ServerTime", });
     internal_static_PlayerDataNotify_PropMapEntry_descriptor =
       internal_static_PlayerDataNotify_descriptor.getNestedTypes().get(0);
     internal_static_PlayerDataNotify_PropMapEntry_fieldAccessorTable = new

@@ -19,7 +19,7 @@ public final class WidgetCoolDownDataOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 id = 1;</code>
+     * <code>uint32 id = 4;</code>
      * @return The id.
      */
     int getId();
@@ -31,14 +31,15 @@ public final class WidgetCoolDownDataOuterClass {
     long getCoolDownTime();
 
     /**
-     * <code>bool is_success = 2;</code>
+     * <code>bool is_success = 10;</code>
      * @return The isSuccess.
      */
     boolean getIsSuccess();
   }
   /**
    * <pre>
-   * Obf: ANGGPDIPOFF
+   * 4.7.0
+   * Obf: AHMDJOHBEFF ?
    * </pre>
    *
    * Protobuf type {@code WidgetCoolDownData}
@@ -67,58 +68,6 @@ public final class WidgetCoolDownDataOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private WidgetCoolDownData(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-
-              id_ = input.readUInt32();
-              break;
-            }
-            case 16: {
-
-              isSuccess_ = input.readBool();
-              break;
-            }
-            case 112: {
-
-              coolDownTime_ = input.readUInt64();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.WidgetCoolDownDataOuterClass.internal_static_WidgetCoolDownData_descriptor;
@@ -132,10 +81,10 @@ public final class WidgetCoolDownDataOuterClass {
               emu.grasscutter.net.proto.WidgetCoolDownDataOuterClass.WidgetCoolDownData.class, emu.grasscutter.net.proto.WidgetCoolDownDataOuterClass.WidgetCoolDownData.Builder.class);
     }
 
-    public static final int ID_FIELD_NUMBER = 1;
+    public static final int ID_FIELD_NUMBER = 4;
     private int id_;
     /**
-     * <code>uint32 id = 1;</code>
+     * <code>uint32 id = 4;</code>
      * @return The id.
      */
     @java.lang.Override
@@ -154,10 +103,10 @@ public final class WidgetCoolDownDataOuterClass {
       return coolDownTime_;
     }
 
-    public static final int IS_SUCCESS_FIELD_NUMBER = 2;
+    public static final int IS_SUCCESS_FIELD_NUMBER = 10;
     private boolean isSuccess_;
     /**
-     * <code>bool is_success = 2;</code>
+     * <code>bool is_success = 10;</code>
      * @return The isSuccess.
      */
     @java.lang.Override
@@ -180,15 +129,15 @@ public final class WidgetCoolDownDataOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (id_ != 0) {
-        output.writeUInt32(1, id_);
+        output.writeUInt32(4, id_);
       }
       if (isSuccess_ != false) {
-        output.writeBool(2, isSuccess_);
+        output.writeBool(10, isSuccess_);
       }
       if (coolDownTime_ != 0L) {
         output.writeUInt64(14, coolDownTime_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -199,17 +148,17 @@ public final class WidgetCoolDownDataOuterClass {
       size = 0;
       if (id_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(1, id_);
+          .computeUInt32Size(4, id_);
       }
       if (isSuccess_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(2, isSuccess_);
+          .computeBoolSize(10, isSuccess_);
       }
       if (coolDownTime_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(14, coolDownTime_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -230,7 +179,7 @@ public final class WidgetCoolDownDataOuterClass {
           != other.getCoolDownTime()) return false;
       if (getIsSuccess()
           != other.getIsSuccess()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -249,7 +198,7 @@ public final class WidgetCoolDownDataOuterClass {
       hash = (37 * hash) + IS_SUCCESS_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsSuccess());
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -346,7 +295,8 @@ public final class WidgetCoolDownDataOuterClass {
     }
     /**
      * <pre>
-     * Obf: ANGGPDIPOFF
+     * 4.7.0
+     * Obf: AHMDJOHBEFF ?
      * </pre>
      *
      * Protobuf type {@code WidgetCoolDownData}
@@ -370,18 +320,13 @@ public final class WidgetCoolDownDataOuterClass {
 
       // Construct using emu.grasscutter.net.proto.WidgetCoolDownDataOuterClass.WidgetCoolDownData.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -478,7 +423,7 @@ public final class WidgetCoolDownDataOuterClass {
         if (other.getIsSuccess() != false) {
           setIsSuccess(other.getIsSuccess());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -493,23 +438,51 @@ public final class WidgetCoolDownDataOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.WidgetCoolDownDataOuterClass.WidgetCoolDownData parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 32: {
+                id_ = input.readUInt32();
+
+                break;
+              } // case 32
+              case 80: {
+                isSuccess_ = input.readBool();
+
+                break;
+              } // case 80
+              case 112: {
+                coolDownTime_ = input.readUInt64();
+
+                break;
+              } // case 112
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.WidgetCoolDownDataOuterClass.WidgetCoolDownData) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
       private int id_ ;
       /**
-       * <code>uint32 id = 1;</code>
+       * <code>uint32 id = 4;</code>
        * @return The id.
        */
       @java.lang.Override
@@ -517,7 +490,7 @@ public final class WidgetCoolDownDataOuterClass {
         return id_;
       }
       /**
-       * <code>uint32 id = 1;</code>
+       * <code>uint32 id = 4;</code>
        * @param value The id to set.
        * @return This builder for chaining.
        */
@@ -528,7 +501,7 @@ public final class WidgetCoolDownDataOuterClass {
         return this;
       }
       /**
-       * <code>uint32 id = 1;</code>
+       * <code>uint32 id = 4;</code>
        * @return This builder for chaining.
        */
       public Builder clearId() {
@@ -571,7 +544,7 @@ public final class WidgetCoolDownDataOuterClass {
 
       private boolean isSuccess_ ;
       /**
-       * <code>bool is_success = 2;</code>
+       * <code>bool is_success = 10;</code>
        * @return The isSuccess.
        */
       @java.lang.Override
@@ -579,7 +552,7 @@ public final class WidgetCoolDownDataOuterClass {
         return isSuccess_;
       }
       /**
-       * <code>bool is_success = 2;</code>
+       * <code>bool is_success = 10;</code>
        * @param value The isSuccess to set.
        * @return This builder for chaining.
        */
@@ -590,7 +563,7 @@ public final class WidgetCoolDownDataOuterClass {
         return this;
       }
       /**
-       * <code>bool is_success = 2;</code>
+       * <code>bool is_success = 10;</code>
        * @return This builder for chaining.
        */
       public Builder clearIsSuccess() {
@@ -632,7 +605,18 @@ public final class WidgetCoolDownDataOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new WidgetCoolDownData(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -667,8 +651,8 @@ public final class WidgetCoolDownDataOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\030WidgetCoolDownData.proto\"L\n\022WidgetCool" +
-      "DownData\022\n\n\002id\030\001 \001(\r\022\026\n\016cool_down_time\030\016" +
-      " \001(\004\022\022\n\nis_success\030\002 \001(\010B\033\n\031emu.grasscut" +
+      "DownData\022\n\n\002id\030\004 \001(\r\022\026\n\016cool_down_time\030\016" +
+      " \001(\004\022\022\n\nis_success\030\n \001(\010B\033\n\031emu.grasscut" +
       "ter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

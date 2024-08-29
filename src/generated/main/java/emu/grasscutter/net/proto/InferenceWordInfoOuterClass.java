@@ -19,10 +19,22 @@ public final class InferenceWordInfoOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>bool LHPCEHJMDNF = 3;</code>
-     * @return The lHPCEHJMDNF.
+     * <code>bool DHBPEBDBMNK = 1;</code>
+     * @return The dHBPEBDBMNK.
      */
-    boolean getLHPCEHJMDNF();
+    boolean getDHBPEBDBMNK();
+
+    /**
+     * <code>bool CAJHCPIPBOO = 2;</code>
+     * @return The cAJHCPIPBOO.
+     */
+    boolean getCAJHCPIPBOO();
+
+    /**
+     * <code>uint32 word_id = 4;</code>
+     * @return The wordId.
+     */
+    int getWordId();
 
     /**
      * <code>uint32 unlock_by_word_id = 5;</code>
@@ -31,29 +43,12 @@ public final class InferenceWordInfoOuterClass {
     int getUnlockByWordId();
 
     /**
-     * <code>bool PFHIFFLGPKK = 10;</code>
-     * @return The pFHIFFLGPKK.
+     * <code>bool ENFPKOPNHKK = 11;</code>
+     * @return The eNFPKOPNHKK.
      */
-    boolean getPFHIFFLGPKK();
-
-    /**
-     * <code>bool NLJGIIJPNJP = 11;</code>
-     * @return The nLJGIIJPNJP.
-     */
-    boolean getNLJGIIJPNJP();
-
-    /**
-     * <code>uint32 word_id = 13;</code>
-     * @return The wordId.
-     */
-    int getWordId();
+    boolean getENFPKOPNHKK();
   }
   /**
-   * <pre>
-   * Version: 4.6.0
-   * Obfs: IMHNIMEAFKE
-   * </pre>
-   *
    * Protobuf type {@code InferenceWordInfo}
    */
   public static final class InferenceWordInfo extends
@@ -80,68 +75,6 @@ public final class InferenceWordInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private InferenceWordInfo(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 24: {
-
-              lHPCEHJMDNF_ = input.readBool();
-              break;
-            }
-            case 40: {
-
-              unlockByWordId_ = input.readUInt32();
-              break;
-            }
-            case 80: {
-
-              pFHIFFLGPKK_ = input.readBool();
-              break;
-            }
-            case 88: {
-
-              nLJGIIJPNJP_ = input.readBool();
-              break;
-            }
-            case 104: {
-
-              wordId_ = input.readUInt32();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.InferenceWordInfoOuterClass.internal_static_InferenceWordInfo_descriptor;
@@ -155,15 +88,37 @@ public final class InferenceWordInfoOuterClass {
               emu.grasscutter.net.proto.InferenceWordInfoOuterClass.InferenceWordInfo.class, emu.grasscutter.net.proto.InferenceWordInfoOuterClass.InferenceWordInfo.Builder.class);
     }
 
-    public static final int LHPCEHJMDNF_FIELD_NUMBER = 3;
-    private boolean lHPCEHJMDNF_;
+    public static final int DHBPEBDBMNK_FIELD_NUMBER = 1;
+    private boolean dHBPEBDBMNK_;
     /**
-     * <code>bool LHPCEHJMDNF = 3;</code>
-     * @return The lHPCEHJMDNF.
+     * <code>bool DHBPEBDBMNK = 1;</code>
+     * @return The dHBPEBDBMNK.
      */
     @java.lang.Override
-    public boolean getLHPCEHJMDNF() {
-      return lHPCEHJMDNF_;
+    public boolean getDHBPEBDBMNK() {
+      return dHBPEBDBMNK_;
+    }
+
+    public static final int CAJHCPIPBOO_FIELD_NUMBER = 2;
+    private boolean cAJHCPIPBOO_;
+    /**
+     * <code>bool CAJHCPIPBOO = 2;</code>
+     * @return The cAJHCPIPBOO.
+     */
+    @java.lang.Override
+    public boolean getCAJHCPIPBOO() {
+      return cAJHCPIPBOO_;
+    }
+
+    public static final int WORD_ID_FIELD_NUMBER = 4;
+    private int wordId_;
+    /**
+     * <code>uint32 word_id = 4;</code>
+     * @return The wordId.
+     */
+    @java.lang.Override
+    public int getWordId() {
+      return wordId_;
     }
 
     public static final int UNLOCK_BY_WORD_ID_FIELD_NUMBER = 5;
@@ -177,37 +132,15 @@ public final class InferenceWordInfoOuterClass {
       return unlockByWordId_;
     }
 
-    public static final int PFHIFFLGPKK_FIELD_NUMBER = 10;
-    private boolean pFHIFFLGPKK_;
+    public static final int ENFPKOPNHKK_FIELD_NUMBER = 11;
+    private boolean eNFPKOPNHKK_;
     /**
-     * <code>bool PFHIFFLGPKK = 10;</code>
-     * @return The pFHIFFLGPKK.
+     * <code>bool ENFPKOPNHKK = 11;</code>
+     * @return The eNFPKOPNHKK.
      */
     @java.lang.Override
-    public boolean getPFHIFFLGPKK() {
-      return pFHIFFLGPKK_;
-    }
-
-    public static final int NLJGIIJPNJP_FIELD_NUMBER = 11;
-    private boolean nLJGIIJPNJP_;
-    /**
-     * <code>bool NLJGIIJPNJP = 11;</code>
-     * @return The nLJGIIJPNJP.
-     */
-    @java.lang.Override
-    public boolean getNLJGIIJPNJP() {
-      return nLJGIIJPNJP_;
-    }
-
-    public static final int WORD_ID_FIELD_NUMBER = 13;
-    private int wordId_;
-    /**
-     * <code>uint32 word_id = 13;</code>
-     * @return The wordId.
-     */
-    @java.lang.Override
-    public int getWordId() {
-      return wordId_;
+    public boolean getENFPKOPNHKK() {
+      return eNFPKOPNHKK_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -224,22 +157,22 @@ public final class InferenceWordInfoOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (lHPCEHJMDNF_ != false) {
-        output.writeBool(3, lHPCEHJMDNF_);
+      if (dHBPEBDBMNK_ != false) {
+        output.writeBool(1, dHBPEBDBMNK_);
+      }
+      if (cAJHCPIPBOO_ != false) {
+        output.writeBool(2, cAJHCPIPBOO_);
+      }
+      if (wordId_ != 0) {
+        output.writeUInt32(4, wordId_);
       }
       if (unlockByWordId_ != 0) {
         output.writeUInt32(5, unlockByWordId_);
       }
-      if (pFHIFFLGPKK_ != false) {
-        output.writeBool(10, pFHIFFLGPKK_);
+      if (eNFPKOPNHKK_ != false) {
+        output.writeBool(11, eNFPKOPNHKK_);
       }
-      if (nLJGIIJPNJP_ != false) {
-        output.writeBool(11, nLJGIIJPNJP_);
-      }
-      if (wordId_ != 0) {
-        output.writeUInt32(13, wordId_);
-      }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -248,27 +181,27 @@ public final class InferenceWordInfoOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (lHPCEHJMDNF_ != false) {
+      if (dHBPEBDBMNK_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(3, lHPCEHJMDNF_);
+          .computeBoolSize(1, dHBPEBDBMNK_);
+      }
+      if (cAJHCPIPBOO_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, cAJHCPIPBOO_);
+      }
+      if (wordId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(4, wordId_);
       }
       if (unlockByWordId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(5, unlockByWordId_);
       }
-      if (pFHIFFLGPKK_ != false) {
+      if (eNFPKOPNHKK_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(10, pFHIFFLGPKK_);
+          .computeBoolSize(11, eNFPKOPNHKK_);
       }
-      if (nLJGIIJPNJP_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(11, nLJGIIJPNJP_);
-      }
-      if (wordId_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(13, wordId_);
-      }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -283,17 +216,17 @@ public final class InferenceWordInfoOuterClass {
       }
       emu.grasscutter.net.proto.InferenceWordInfoOuterClass.InferenceWordInfo other = (emu.grasscutter.net.proto.InferenceWordInfoOuterClass.InferenceWordInfo) obj;
 
-      if (getLHPCEHJMDNF()
-          != other.getLHPCEHJMDNF()) return false;
-      if (getUnlockByWordId()
-          != other.getUnlockByWordId()) return false;
-      if (getPFHIFFLGPKK()
-          != other.getPFHIFFLGPKK()) return false;
-      if (getNLJGIIJPNJP()
-          != other.getNLJGIIJPNJP()) return false;
+      if (getDHBPEBDBMNK()
+          != other.getDHBPEBDBMNK()) return false;
+      if (getCAJHCPIPBOO()
+          != other.getCAJHCPIPBOO()) return false;
       if (getWordId()
           != other.getWordId()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (getUnlockByWordId()
+          != other.getUnlockByWordId()) return false;
+      if (getENFPKOPNHKK()
+          != other.getENFPKOPNHKK()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -304,20 +237,20 @@ public final class InferenceWordInfoOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + LHPCEHJMDNF_FIELD_NUMBER;
+      hash = (37 * hash) + DHBPEBDBMNK_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getLHPCEHJMDNF());
-      hash = (37 * hash) + UNLOCK_BY_WORD_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getUnlockByWordId();
-      hash = (37 * hash) + PFHIFFLGPKK_FIELD_NUMBER;
+          getDHBPEBDBMNK());
+      hash = (37 * hash) + CAJHCPIPBOO_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getPFHIFFLGPKK());
-      hash = (37 * hash) + NLJGIIJPNJP_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getNLJGIIJPNJP());
+          getCAJHCPIPBOO());
       hash = (37 * hash) + WORD_ID_FIELD_NUMBER;
       hash = (53 * hash) + getWordId();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (37 * hash) + UNLOCK_BY_WORD_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getUnlockByWordId();
+      hash = (37 * hash) + ENFPKOPNHKK_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getENFPKOPNHKK());
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -413,11 +346,6 @@ public final class InferenceWordInfoOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * Version: 4.6.0
-     * Obfs: IMHNIMEAFKE
-     * </pre>
-     *
      * Protobuf type {@code InferenceWordInfo}
      */
     public static final class Builder extends
@@ -439,31 +367,26 @@ public final class InferenceWordInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.InferenceWordInfoOuterClass.InferenceWordInfo.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        lHPCEHJMDNF_ = false;
+        dHBPEBDBMNK_ = false;
+
+        cAJHCPIPBOO_ = false;
+
+        wordId_ = 0;
 
         unlockByWordId_ = 0;
 
-        pFHIFFLGPKK_ = false;
-
-        nLJGIIJPNJP_ = false;
-
-        wordId_ = 0;
+        eNFPKOPNHKK_ = false;
 
         return this;
       }
@@ -491,11 +414,11 @@ public final class InferenceWordInfoOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.InferenceWordInfoOuterClass.InferenceWordInfo buildPartial() {
         emu.grasscutter.net.proto.InferenceWordInfoOuterClass.InferenceWordInfo result = new emu.grasscutter.net.proto.InferenceWordInfoOuterClass.InferenceWordInfo(this);
-        result.lHPCEHJMDNF_ = lHPCEHJMDNF_;
-        result.unlockByWordId_ = unlockByWordId_;
-        result.pFHIFFLGPKK_ = pFHIFFLGPKK_;
-        result.nLJGIIJPNJP_ = nLJGIIJPNJP_;
+        result.dHBPEBDBMNK_ = dHBPEBDBMNK_;
+        result.cAJHCPIPBOO_ = cAJHCPIPBOO_;
         result.wordId_ = wordId_;
+        result.unlockByWordId_ = unlockByWordId_;
+        result.eNFPKOPNHKK_ = eNFPKOPNHKK_;
         onBuilt();
         return result;
       }
@@ -544,22 +467,22 @@ public final class InferenceWordInfoOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.InferenceWordInfoOuterClass.InferenceWordInfo other) {
         if (other == emu.grasscutter.net.proto.InferenceWordInfoOuterClass.InferenceWordInfo.getDefaultInstance()) return this;
-        if (other.getLHPCEHJMDNF() != false) {
-          setLHPCEHJMDNF(other.getLHPCEHJMDNF());
+        if (other.getDHBPEBDBMNK() != false) {
+          setDHBPEBDBMNK(other.getDHBPEBDBMNK());
         }
-        if (other.getUnlockByWordId() != 0) {
-          setUnlockByWordId(other.getUnlockByWordId());
-        }
-        if (other.getPFHIFFLGPKK() != false) {
-          setPFHIFFLGPKK(other.getPFHIFFLGPKK());
-        }
-        if (other.getNLJGIIJPNJP() != false) {
-          setNLJGIIJPNJP(other.getNLJGIIJPNJP());
+        if (other.getCAJHCPIPBOO() != false) {
+          setCAJHCPIPBOO(other.getCAJHCPIPBOO());
         }
         if (other.getWordId() != 0) {
           setWordId(other.getWordId());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        if (other.getUnlockByWordId() != 0) {
+          setUnlockByWordId(other.getUnlockByWordId());
+        }
+        if (other.getENFPKOPNHKK() != false) {
+          setENFPKOPNHKK(other.getENFPKOPNHKK());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -574,47 +497,147 @@ public final class InferenceWordInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.InferenceWordInfoOuterClass.InferenceWordInfo parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                dHBPEBDBMNK_ = input.readBool();
+
+                break;
+              } // case 8
+              case 16: {
+                cAJHCPIPBOO_ = input.readBool();
+
+                break;
+              } // case 16
+              case 32: {
+                wordId_ = input.readUInt32();
+
+                break;
+              } // case 32
+              case 40: {
+                unlockByWordId_ = input.readUInt32();
+
+                break;
+              } // case 40
+              case 88: {
+                eNFPKOPNHKK_ = input.readBool();
+
+                break;
+              } // case 88
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.InferenceWordInfoOuterClass.InferenceWordInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
-      private boolean lHPCEHJMDNF_ ;
+      private boolean dHBPEBDBMNK_ ;
       /**
-       * <code>bool LHPCEHJMDNF = 3;</code>
-       * @return The lHPCEHJMDNF.
+       * <code>bool DHBPEBDBMNK = 1;</code>
+       * @return The dHBPEBDBMNK.
        */
       @java.lang.Override
-      public boolean getLHPCEHJMDNF() {
-        return lHPCEHJMDNF_;
+      public boolean getDHBPEBDBMNK() {
+        return dHBPEBDBMNK_;
       }
       /**
-       * <code>bool LHPCEHJMDNF = 3;</code>
-       * @param value The lHPCEHJMDNF to set.
+       * <code>bool DHBPEBDBMNK = 1;</code>
+       * @param value The dHBPEBDBMNK to set.
        * @return This builder for chaining.
        */
-      public Builder setLHPCEHJMDNF(boolean value) {
+      public Builder setDHBPEBDBMNK(boolean value) {
         
-        lHPCEHJMDNF_ = value;
+        dHBPEBDBMNK_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>bool LHPCEHJMDNF = 3;</code>
+       * <code>bool DHBPEBDBMNK = 1;</code>
        * @return This builder for chaining.
        */
-      public Builder clearLHPCEHJMDNF() {
+      public Builder clearDHBPEBDBMNK() {
         
-        lHPCEHJMDNF_ = false;
+        dHBPEBDBMNK_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean cAJHCPIPBOO_ ;
+      /**
+       * <code>bool CAJHCPIPBOO = 2;</code>
+       * @return The cAJHCPIPBOO.
+       */
+      @java.lang.Override
+      public boolean getCAJHCPIPBOO() {
+        return cAJHCPIPBOO_;
+      }
+      /**
+       * <code>bool CAJHCPIPBOO = 2;</code>
+       * @param value The cAJHCPIPBOO to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCAJHCPIPBOO(boolean value) {
+        
+        cAJHCPIPBOO_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool CAJHCPIPBOO = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCAJHCPIPBOO() {
+        
+        cAJHCPIPBOO_ = false;
+        onChanged();
+        return this;
+      }
+
+      private int wordId_ ;
+      /**
+       * <code>uint32 word_id = 4;</code>
+       * @return The wordId.
+       */
+      @java.lang.Override
+      public int getWordId() {
+        return wordId_;
+      }
+      /**
+       * <code>uint32 word_id = 4;</code>
+       * @param value The wordId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWordId(int value) {
+        
+        wordId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 word_id = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWordId() {
+        
+        wordId_ = 0;
         onChanged();
         return this;
       }
@@ -650,95 +673,33 @@ public final class InferenceWordInfoOuterClass {
         return this;
       }
 
-      private boolean pFHIFFLGPKK_ ;
+      private boolean eNFPKOPNHKK_ ;
       /**
-       * <code>bool PFHIFFLGPKK = 10;</code>
-       * @return The pFHIFFLGPKK.
+       * <code>bool ENFPKOPNHKK = 11;</code>
+       * @return The eNFPKOPNHKK.
        */
       @java.lang.Override
-      public boolean getPFHIFFLGPKK() {
-        return pFHIFFLGPKK_;
+      public boolean getENFPKOPNHKK() {
+        return eNFPKOPNHKK_;
       }
       /**
-       * <code>bool PFHIFFLGPKK = 10;</code>
-       * @param value The pFHIFFLGPKK to set.
+       * <code>bool ENFPKOPNHKK = 11;</code>
+       * @param value The eNFPKOPNHKK to set.
        * @return This builder for chaining.
        */
-      public Builder setPFHIFFLGPKK(boolean value) {
+      public Builder setENFPKOPNHKK(boolean value) {
         
-        pFHIFFLGPKK_ = value;
+        eNFPKOPNHKK_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>bool PFHIFFLGPKK = 10;</code>
+       * <code>bool ENFPKOPNHKK = 11;</code>
        * @return This builder for chaining.
        */
-      public Builder clearPFHIFFLGPKK() {
+      public Builder clearENFPKOPNHKK() {
         
-        pFHIFFLGPKK_ = false;
-        onChanged();
-        return this;
-      }
-
-      private boolean nLJGIIJPNJP_ ;
-      /**
-       * <code>bool NLJGIIJPNJP = 11;</code>
-       * @return The nLJGIIJPNJP.
-       */
-      @java.lang.Override
-      public boolean getNLJGIIJPNJP() {
-        return nLJGIIJPNJP_;
-      }
-      /**
-       * <code>bool NLJGIIJPNJP = 11;</code>
-       * @param value The nLJGIIJPNJP to set.
-       * @return This builder for chaining.
-       */
-      public Builder setNLJGIIJPNJP(boolean value) {
-        
-        nLJGIIJPNJP_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bool NLJGIIJPNJP = 11;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearNLJGIIJPNJP() {
-        
-        nLJGIIJPNJP_ = false;
-        onChanged();
-        return this;
-      }
-
-      private int wordId_ ;
-      /**
-       * <code>uint32 word_id = 13;</code>
-       * @return The wordId.
-       */
-      @java.lang.Override
-      public int getWordId() {
-        return wordId_;
-      }
-      /**
-       * <code>uint32 word_id = 13;</code>
-       * @param value The wordId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setWordId(int value) {
-        
-        wordId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 word_id = 13;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearWordId() {
-        
-        wordId_ = 0;
+        eNFPKOPNHKK_ = false;
         onChanged();
         return this;
       }
@@ -775,7 +736,18 @@ public final class InferenceWordInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new InferenceWordInfo(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -810,9 +782,9 @@ public final class InferenceWordInfoOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\027InferenceWordInfo.proto\"~\n\021InferenceWo" +
-      "rdInfo\022\023\n\013LHPCEHJMDNF\030\003 \001(\010\022\031\n\021unlock_by" +
-      "_word_id\030\005 \001(\r\022\023\n\013PFHIFFLGPKK\030\n \001(\010\022\023\n\013N" +
-      "LJGIIJPNJP\030\013 \001(\010\022\017\n\007word_id\030\r \001(\rB\033\n\031emu" +
+      "rdInfo\022\023\n\013DHBPEBDBMNK\030\001 \001(\010\022\023\n\013CAJHCPIPB" +
+      "OO\030\002 \001(\010\022\017\n\007word_id\030\004 \001(\r\022\031\n\021unlock_by_w" +
+      "ord_id\030\005 \001(\r\022\023\n\013ENFPKOPNHKK\030\013 \001(\010B\033\n\031emu" +
       ".grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -824,7 +796,7 @@ public final class InferenceWordInfoOuterClass {
     internal_static_InferenceWordInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_InferenceWordInfo_descriptor,
-        new java.lang.String[] { "LHPCEHJMDNF", "UnlockByWordId", "PFHIFFLGPKK", "NLJGIIJPNJP", "WordId", });
+        new java.lang.String[] { "DHBPEBDBMNK", "CAJHCPIPBOO", "WordId", "UnlockByWordId", "ENFPKOPNHKK", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

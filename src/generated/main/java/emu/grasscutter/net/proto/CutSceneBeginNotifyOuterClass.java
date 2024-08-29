@@ -19,47 +19,42 @@ public final class CutSceneBeginNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .CutSceneExtraParam extra_param_list = 2;</code>
+     * <code>uint32 cutscene_id = 2;</code>
+     * @return The cutsceneId.
      */
-    java.util.List<emu.grasscutter.net.proto.CutSceneExtraParamOuterClass.CutSceneExtraParam> 
-        getExtraParamListList();
-    /**
-     * <code>repeated .CutSceneExtraParam extra_param_list = 2;</code>
-     */
-    emu.grasscutter.net.proto.CutSceneExtraParamOuterClass.CutSceneExtraParam getExtraParamList(int index);
-    /**
-     * <code>repeated .CutSceneExtraParam extra_param_list = 2;</code>
-     */
-    int getExtraParamListCount();
-    /**
-     * <code>repeated .CutSceneExtraParam extra_param_list = 2;</code>
-     */
-    java.util.List<? extends emu.grasscutter.net.proto.CutSceneExtraParamOuterClass.CutSceneExtraParamOrBuilder> 
-        getExtraParamListOrBuilderList();
-    /**
-     * <code>repeated .CutSceneExtraParam extra_param_list = 2;</code>
-     */
-    emu.grasscutter.net.proto.CutSceneExtraParamOuterClass.CutSceneExtraParamOrBuilder getExtraParamListOrBuilder(
-        int index);
+    int getCutsceneId();
 
     /**
-     * <code>bool is_wait_others = 6;</code>
+     * <code>bool is_wait_others = 7;</code>
      * @return The isWaitOthers.
      */
     boolean getIsWaitOthers();
 
     /**
-     * <code>uint32 cutscene_id = 12;</code>
-     * @return The cutsceneId.
+     * <code>repeated .CutSceneExtraParam extra_param_list = 14;</code>
      */
-    int getCutsceneId();
+    java.util.List<emu.grasscutter.net.proto.CutSceneExtraParamOuterClass.CutSceneExtraParam> 
+        getExtraParamListList();
+    /**
+     * <code>repeated .CutSceneExtraParam extra_param_list = 14;</code>
+     */
+    emu.grasscutter.net.proto.CutSceneExtraParamOuterClass.CutSceneExtraParam getExtraParamList(int index);
+    /**
+     * <code>repeated .CutSceneExtraParam extra_param_list = 14;</code>
+     */
+    int getExtraParamListCount();
+    /**
+     * <code>repeated .CutSceneExtraParam extra_param_list = 14;</code>
+     */
+    java.util.List<? extends emu.grasscutter.net.proto.CutSceneExtraParamOuterClass.CutSceneExtraParamOrBuilder> 
+        getExtraParamListOrBuilderList();
+    /**
+     * <code>repeated .CutSceneExtraParam extra_param_list = 14;</code>
+     */
+    emu.grasscutter.net.proto.CutSceneExtraParamOuterClass.CutSceneExtraParamOrBuilder getExtraParamListOrBuilder(
+        int index);
   }
   /**
-   * <pre>
-   * 4.6.0
-   * CmdId: 28649
-   * </pre>
-   *
    * Protobuf type {@code CutSceneBeginNotify}
    */
   public static final class CutSceneBeginNotify extends
@@ -87,66 +82,6 @@ public final class CutSceneBeginNotifyOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private CutSceneBeginNotify(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 18: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                extraParamList_ = new java.util.ArrayList<emu.grasscutter.net.proto.CutSceneExtraParamOuterClass.CutSceneExtraParam>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              extraParamList_.add(
-                  input.readMessage(emu.grasscutter.net.proto.CutSceneExtraParamOuterClass.CutSceneExtraParam.parser(), extensionRegistry));
-              break;
-            }
-            case 48: {
-
-              isWaitOthers_ = input.readBool();
-              break;
-            }
-            case 96: {
-
-              cutsceneId_ = input.readUInt32();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          extraParamList_ = java.util.Collections.unmodifiableList(extraParamList_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.CutSceneBeginNotifyOuterClass.internal_static_CutSceneBeginNotify_descriptor;
@@ -160,50 +95,21 @@ public final class CutSceneBeginNotifyOuterClass {
               emu.grasscutter.net.proto.CutSceneBeginNotifyOuterClass.CutSceneBeginNotify.class, emu.grasscutter.net.proto.CutSceneBeginNotifyOuterClass.CutSceneBeginNotify.Builder.class);
     }
 
-    public static final int EXTRA_PARAM_LIST_FIELD_NUMBER = 2;
-    private java.util.List<emu.grasscutter.net.proto.CutSceneExtraParamOuterClass.CutSceneExtraParam> extraParamList_;
+    public static final int CUTSCENE_ID_FIELD_NUMBER = 2;
+    private int cutsceneId_;
     /**
-     * <code>repeated .CutSceneExtraParam extra_param_list = 2;</code>
+     * <code>uint32 cutscene_id = 2;</code>
+     * @return The cutsceneId.
      */
     @java.lang.Override
-    public java.util.List<emu.grasscutter.net.proto.CutSceneExtraParamOuterClass.CutSceneExtraParam> getExtraParamListList() {
-      return extraParamList_;
-    }
-    /**
-     * <code>repeated .CutSceneExtraParam extra_param_list = 2;</code>
-     */
-    @java.lang.Override
-    public java.util.List<? extends emu.grasscutter.net.proto.CutSceneExtraParamOuterClass.CutSceneExtraParamOrBuilder> 
-        getExtraParamListOrBuilderList() {
-      return extraParamList_;
-    }
-    /**
-     * <code>repeated .CutSceneExtraParam extra_param_list = 2;</code>
-     */
-    @java.lang.Override
-    public int getExtraParamListCount() {
-      return extraParamList_.size();
-    }
-    /**
-     * <code>repeated .CutSceneExtraParam extra_param_list = 2;</code>
-     */
-    @java.lang.Override
-    public emu.grasscutter.net.proto.CutSceneExtraParamOuterClass.CutSceneExtraParam getExtraParamList(int index) {
-      return extraParamList_.get(index);
-    }
-    /**
-     * <code>repeated .CutSceneExtraParam extra_param_list = 2;</code>
-     */
-    @java.lang.Override
-    public emu.grasscutter.net.proto.CutSceneExtraParamOuterClass.CutSceneExtraParamOrBuilder getExtraParamListOrBuilder(
-        int index) {
-      return extraParamList_.get(index);
+    public int getCutsceneId() {
+      return cutsceneId_;
     }
 
-    public static final int IS_WAIT_OTHERS_FIELD_NUMBER = 6;
+    public static final int IS_WAIT_OTHERS_FIELD_NUMBER = 7;
     private boolean isWaitOthers_;
     /**
-     * <code>bool is_wait_others = 6;</code>
+     * <code>bool is_wait_others = 7;</code>
      * @return The isWaitOthers.
      */
     @java.lang.Override
@@ -211,15 +117,44 @@ public final class CutSceneBeginNotifyOuterClass {
       return isWaitOthers_;
     }
 
-    public static final int CUTSCENE_ID_FIELD_NUMBER = 12;
-    private int cutsceneId_;
+    public static final int EXTRA_PARAM_LIST_FIELD_NUMBER = 14;
+    private java.util.List<emu.grasscutter.net.proto.CutSceneExtraParamOuterClass.CutSceneExtraParam> extraParamList_;
     /**
-     * <code>uint32 cutscene_id = 12;</code>
-     * @return The cutsceneId.
+     * <code>repeated .CutSceneExtraParam extra_param_list = 14;</code>
      */
     @java.lang.Override
-    public int getCutsceneId() {
-      return cutsceneId_;
+    public java.util.List<emu.grasscutter.net.proto.CutSceneExtraParamOuterClass.CutSceneExtraParam> getExtraParamListList() {
+      return extraParamList_;
+    }
+    /**
+     * <code>repeated .CutSceneExtraParam extra_param_list = 14;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends emu.grasscutter.net.proto.CutSceneExtraParamOuterClass.CutSceneExtraParamOrBuilder> 
+        getExtraParamListOrBuilderList() {
+      return extraParamList_;
+    }
+    /**
+     * <code>repeated .CutSceneExtraParam extra_param_list = 14;</code>
+     */
+    @java.lang.Override
+    public int getExtraParamListCount() {
+      return extraParamList_.size();
+    }
+    /**
+     * <code>repeated .CutSceneExtraParam extra_param_list = 14;</code>
+     */
+    @java.lang.Override
+    public emu.grasscutter.net.proto.CutSceneExtraParamOuterClass.CutSceneExtraParam getExtraParamList(int index) {
+      return extraParamList_.get(index);
+    }
+    /**
+     * <code>repeated .CutSceneExtraParam extra_param_list = 14;</code>
+     */
+    @java.lang.Override
+    public emu.grasscutter.net.proto.CutSceneExtraParamOuterClass.CutSceneExtraParamOrBuilder getExtraParamListOrBuilder(
+        int index) {
+      return extraParamList_.get(index);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -236,16 +171,16 @@ public final class CutSceneBeginNotifyOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      for (int i = 0; i < extraParamList_.size(); i++) {
-        output.writeMessage(2, extraParamList_.get(i));
+      if (cutsceneId_ != 0) {
+        output.writeUInt32(2, cutsceneId_);
       }
       if (isWaitOthers_ != false) {
-        output.writeBool(6, isWaitOthers_);
+        output.writeBool(7, isWaitOthers_);
       }
-      if (cutsceneId_ != 0) {
-        output.writeUInt32(12, cutsceneId_);
+      for (int i = 0; i < extraParamList_.size(); i++) {
+        output.writeMessage(14, extraParamList_.get(i));
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -254,19 +189,19 @@ public final class CutSceneBeginNotifyOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      for (int i = 0; i < extraParamList_.size(); i++) {
+      if (cutsceneId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, extraParamList_.get(i));
+          .computeUInt32Size(2, cutsceneId_);
       }
       if (isWaitOthers_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(6, isWaitOthers_);
+          .computeBoolSize(7, isWaitOthers_);
       }
-      if (cutsceneId_ != 0) {
+      for (int i = 0; i < extraParamList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(12, cutsceneId_);
+          .computeMessageSize(14, extraParamList_.get(i));
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -281,13 +216,13 @@ public final class CutSceneBeginNotifyOuterClass {
       }
       emu.grasscutter.net.proto.CutSceneBeginNotifyOuterClass.CutSceneBeginNotify other = (emu.grasscutter.net.proto.CutSceneBeginNotifyOuterClass.CutSceneBeginNotify) obj;
 
-      if (!getExtraParamListList()
-          .equals(other.getExtraParamListList())) return false;
-      if (getIsWaitOthers()
-          != other.getIsWaitOthers()) return false;
       if (getCutsceneId()
           != other.getCutsceneId()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (getIsWaitOthers()
+          != other.getIsWaitOthers()) return false;
+      if (!getExtraParamListList()
+          .equals(other.getExtraParamListList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -298,16 +233,16 @@ public final class CutSceneBeginNotifyOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CUTSCENE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getCutsceneId();
+      hash = (37 * hash) + IS_WAIT_OTHERS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsWaitOthers());
       if (getExtraParamListCount() > 0) {
         hash = (37 * hash) + EXTRA_PARAM_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getExtraParamListList().hashCode();
       }
-      hash = (37 * hash) + IS_WAIT_OTHERS_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getIsWaitOthers());
-      hash = (37 * hash) + CUTSCENE_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getCutsceneId();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -403,11 +338,6 @@ public final class CutSceneBeginNotifyOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * 4.6.0
-     * CmdId: 28649
-     * </pre>
-     *
      * Protobuf type {@code CutSceneBeginNotify}
      */
     public static final class Builder extends
@@ -429,33 +359,28 @@ public final class CutSceneBeginNotifyOuterClass {
 
       // Construct using emu.grasscutter.net.proto.CutSceneBeginNotifyOuterClass.CutSceneBeginNotify.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getExtraParamListFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (extraParamListBuilder_ == null) {
-          extraParamList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        } else {
-          extraParamListBuilder_.clear();
-        }
-        isWaitOthers_ = false;
-
         cutsceneId_ = 0;
 
+        isWaitOthers_ = false;
+
+        if (extraParamListBuilder_ == null) {
+          extraParamList_ = java.util.Collections.emptyList();
+        } else {
+          extraParamList_ = null;
+          extraParamListBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -483,6 +408,8 @@ public final class CutSceneBeginNotifyOuterClass {
       public emu.grasscutter.net.proto.CutSceneBeginNotifyOuterClass.CutSceneBeginNotify buildPartial() {
         emu.grasscutter.net.proto.CutSceneBeginNotifyOuterClass.CutSceneBeginNotify result = new emu.grasscutter.net.proto.CutSceneBeginNotifyOuterClass.CutSceneBeginNotify(this);
         int from_bitField0_ = bitField0_;
+        result.cutsceneId_ = cutsceneId_;
+        result.isWaitOthers_ = isWaitOthers_;
         if (extraParamListBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             extraParamList_ = java.util.Collections.unmodifiableList(extraParamList_);
@@ -492,8 +419,6 @@ public final class CutSceneBeginNotifyOuterClass {
         } else {
           result.extraParamList_ = extraParamListBuilder_.build();
         }
-        result.isWaitOthers_ = isWaitOthers_;
-        result.cutsceneId_ = cutsceneId_;
         onBuilt();
         return result;
       }
@@ -542,6 +467,12 @@ public final class CutSceneBeginNotifyOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.CutSceneBeginNotifyOuterClass.CutSceneBeginNotify other) {
         if (other == emu.grasscutter.net.proto.CutSceneBeginNotifyOuterClass.CutSceneBeginNotify.getDefaultInstance()) return this;
+        if (other.getCutsceneId() != 0) {
+          setCutsceneId(other.getCutsceneId());
+        }
+        if (other.getIsWaitOthers() != false) {
+          setIsWaitOthers(other.getIsWaitOthers());
+        }
         if (extraParamListBuilder_ == null) {
           if (!other.extraParamList_.isEmpty()) {
             if (extraParamList_.isEmpty()) {
@@ -568,13 +499,7 @@ public final class CutSceneBeginNotifyOuterClass {
             }
           }
         }
-        if (other.getIsWaitOthers() != false) {
-          setIsWaitOthers(other.getIsWaitOthers());
-        }
-        if (other.getCutsceneId() != 0) {
-          setCutsceneId(other.getCutsceneId());
-        }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -589,20 +514,118 @@ public final class CutSceneBeginNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.CutSceneBeginNotifyOuterClass.CutSceneBeginNotify parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 16: {
+                cutsceneId_ = input.readUInt32();
+
+                break;
+              } // case 16
+              case 56: {
+                isWaitOthers_ = input.readBool();
+
+                break;
+              } // case 56
+              case 114: {
+                emu.grasscutter.net.proto.CutSceneExtraParamOuterClass.CutSceneExtraParam m =
+                    input.readMessage(
+                        emu.grasscutter.net.proto.CutSceneExtraParamOuterClass.CutSceneExtraParam.parser(),
+                        extensionRegistry);
+                if (extraParamListBuilder_ == null) {
+                  ensureExtraParamListIsMutable();
+                  extraParamList_.add(m);
+                } else {
+                  extraParamListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 114
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.CutSceneBeginNotifyOuterClass.CutSceneBeginNotify) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
+
+      private int cutsceneId_ ;
+      /**
+       * <code>uint32 cutscene_id = 2;</code>
+       * @return The cutsceneId.
+       */
+      @java.lang.Override
+      public int getCutsceneId() {
+        return cutsceneId_;
+      }
+      /**
+       * <code>uint32 cutscene_id = 2;</code>
+       * @param value The cutsceneId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCutsceneId(int value) {
+        
+        cutsceneId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 cutscene_id = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCutsceneId() {
+        
+        cutsceneId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean isWaitOthers_ ;
+      /**
+       * <code>bool is_wait_others = 7;</code>
+       * @return The isWaitOthers.
+       */
+      @java.lang.Override
+      public boolean getIsWaitOthers() {
+        return isWaitOthers_;
+      }
+      /**
+       * <code>bool is_wait_others = 7;</code>
+       * @param value The isWaitOthers to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsWaitOthers(boolean value) {
+        
+        isWaitOthers_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool is_wait_others = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsWaitOthers() {
+        
+        isWaitOthers_ = false;
+        onChanged();
+        return this;
+      }
 
       private java.util.List<emu.grasscutter.net.proto.CutSceneExtraParamOuterClass.CutSceneExtraParam> extraParamList_ =
         java.util.Collections.emptyList();
@@ -617,7 +640,7 @@ public final class CutSceneBeginNotifyOuterClass {
           emu.grasscutter.net.proto.CutSceneExtraParamOuterClass.CutSceneExtraParam, emu.grasscutter.net.proto.CutSceneExtraParamOuterClass.CutSceneExtraParam.Builder, emu.grasscutter.net.proto.CutSceneExtraParamOuterClass.CutSceneExtraParamOrBuilder> extraParamListBuilder_;
 
       /**
-       * <code>repeated .CutSceneExtraParam extra_param_list = 2;</code>
+       * <code>repeated .CutSceneExtraParam extra_param_list = 14;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.CutSceneExtraParamOuterClass.CutSceneExtraParam> getExtraParamListList() {
         if (extraParamListBuilder_ == null) {
@@ -627,7 +650,7 @@ public final class CutSceneBeginNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .CutSceneExtraParam extra_param_list = 2;</code>
+       * <code>repeated .CutSceneExtraParam extra_param_list = 14;</code>
        */
       public int getExtraParamListCount() {
         if (extraParamListBuilder_ == null) {
@@ -637,7 +660,7 @@ public final class CutSceneBeginNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .CutSceneExtraParam extra_param_list = 2;</code>
+       * <code>repeated .CutSceneExtraParam extra_param_list = 14;</code>
        */
       public emu.grasscutter.net.proto.CutSceneExtraParamOuterClass.CutSceneExtraParam getExtraParamList(int index) {
         if (extraParamListBuilder_ == null) {
@@ -647,7 +670,7 @@ public final class CutSceneBeginNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .CutSceneExtraParam extra_param_list = 2;</code>
+       * <code>repeated .CutSceneExtraParam extra_param_list = 14;</code>
        */
       public Builder setExtraParamList(
           int index, emu.grasscutter.net.proto.CutSceneExtraParamOuterClass.CutSceneExtraParam value) {
@@ -664,7 +687,7 @@ public final class CutSceneBeginNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .CutSceneExtraParam extra_param_list = 2;</code>
+       * <code>repeated .CutSceneExtraParam extra_param_list = 14;</code>
        */
       public Builder setExtraParamList(
           int index, emu.grasscutter.net.proto.CutSceneExtraParamOuterClass.CutSceneExtraParam.Builder builderForValue) {
@@ -678,7 +701,7 @@ public final class CutSceneBeginNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .CutSceneExtraParam extra_param_list = 2;</code>
+       * <code>repeated .CutSceneExtraParam extra_param_list = 14;</code>
        */
       public Builder addExtraParamList(emu.grasscutter.net.proto.CutSceneExtraParamOuterClass.CutSceneExtraParam value) {
         if (extraParamListBuilder_ == null) {
@@ -694,7 +717,7 @@ public final class CutSceneBeginNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .CutSceneExtraParam extra_param_list = 2;</code>
+       * <code>repeated .CutSceneExtraParam extra_param_list = 14;</code>
        */
       public Builder addExtraParamList(
           int index, emu.grasscutter.net.proto.CutSceneExtraParamOuterClass.CutSceneExtraParam value) {
@@ -711,7 +734,7 @@ public final class CutSceneBeginNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .CutSceneExtraParam extra_param_list = 2;</code>
+       * <code>repeated .CutSceneExtraParam extra_param_list = 14;</code>
        */
       public Builder addExtraParamList(
           emu.grasscutter.net.proto.CutSceneExtraParamOuterClass.CutSceneExtraParam.Builder builderForValue) {
@@ -725,7 +748,7 @@ public final class CutSceneBeginNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .CutSceneExtraParam extra_param_list = 2;</code>
+       * <code>repeated .CutSceneExtraParam extra_param_list = 14;</code>
        */
       public Builder addExtraParamList(
           int index, emu.grasscutter.net.proto.CutSceneExtraParamOuterClass.CutSceneExtraParam.Builder builderForValue) {
@@ -739,7 +762,7 @@ public final class CutSceneBeginNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .CutSceneExtraParam extra_param_list = 2;</code>
+       * <code>repeated .CutSceneExtraParam extra_param_list = 14;</code>
        */
       public Builder addAllExtraParamList(
           java.lang.Iterable<? extends emu.grasscutter.net.proto.CutSceneExtraParamOuterClass.CutSceneExtraParam> values) {
@@ -754,7 +777,7 @@ public final class CutSceneBeginNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .CutSceneExtraParam extra_param_list = 2;</code>
+       * <code>repeated .CutSceneExtraParam extra_param_list = 14;</code>
        */
       public Builder clearExtraParamList() {
         if (extraParamListBuilder_ == null) {
@@ -767,7 +790,7 @@ public final class CutSceneBeginNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .CutSceneExtraParam extra_param_list = 2;</code>
+       * <code>repeated .CutSceneExtraParam extra_param_list = 14;</code>
        */
       public Builder removeExtraParamList(int index) {
         if (extraParamListBuilder_ == null) {
@@ -780,14 +803,14 @@ public final class CutSceneBeginNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .CutSceneExtraParam extra_param_list = 2;</code>
+       * <code>repeated .CutSceneExtraParam extra_param_list = 14;</code>
        */
       public emu.grasscutter.net.proto.CutSceneExtraParamOuterClass.CutSceneExtraParam.Builder getExtraParamListBuilder(
           int index) {
         return getExtraParamListFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .CutSceneExtraParam extra_param_list = 2;</code>
+       * <code>repeated .CutSceneExtraParam extra_param_list = 14;</code>
        */
       public emu.grasscutter.net.proto.CutSceneExtraParamOuterClass.CutSceneExtraParamOrBuilder getExtraParamListOrBuilder(
           int index) {
@@ -797,7 +820,7 @@ public final class CutSceneBeginNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .CutSceneExtraParam extra_param_list = 2;</code>
+       * <code>repeated .CutSceneExtraParam extra_param_list = 14;</code>
        */
       public java.util.List<? extends emu.grasscutter.net.proto.CutSceneExtraParamOuterClass.CutSceneExtraParamOrBuilder> 
            getExtraParamListOrBuilderList() {
@@ -808,14 +831,14 @@ public final class CutSceneBeginNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .CutSceneExtraParam extra_param_list = 2;</code>
+       * <code>repeated .CutSceneExtraParam extra_param_list = 14;</code>
        */
       public emu.grasscutter.net.proto.CutSceneExtraParamOuterClass.CutSceneExtraParam.Builder addExtraParamListBuilder() {
         return getExtraParamListFieldBuilder().addBuilder(
             emu.grasscutter.net.proto.CutSceneExtraParamOuterClass.CutSceneExtraParam.getDefaultInstance());
       }
       /**
-       * <code>repeated .CutSceneExtraParam extra_param_list = 2;</code>
+       * <code>repeated .CutSceneExtraParam extra_param_list = 14;</code>
        */
       public emu.grasscutter.net.proto.CutSceneExtraParamOuterClass.CutSceneExtraParam.Builder addExtraParamListBuilder(
           int index) {
@@ -823,7 +846,7 @@ public final class CutSceneBeginNotifyOuterClass {
             index, emu.grasscutter.net.proto.CutSceneExtraParamOuterClass.CutSceneExtraParam.getDefaultInstance());
       }
       /**
-       * <code>repeated .CutSceneExtraParam extra_param_list = 2;</code>
+       * <code>repeated .CutSceneExtraParam extra_param_list = 14;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.CutSceneExtraParamOuterClass.CutSceneExtraParam.Builder> 
            getExtraParamListBuilderList() {
@@ -842,68 +865,6 @@ public final class CutSceneBeginNotifyOuterClass {
           extraParamList_ = null;
         }
         return extraParamListBuilder_;
-      }
-
-      private boolean isWaitOthers_ ;
-      /**
-       * <code>bool is_wait_others = 6;</code>
-       * @return The isWaitOthers.
-       */
-      @java.lang.Override
-      public boolean getIsWaitOthers() {
-        return isWaitOthers_;
-      }
-      /**
-       * <code>bool is_wait_others = 6;</code>
-       * @param value The isWaitOthers to set.
-       * @return This builder for chaining.
-       */
-      public Builder setIsWaitOthers(boolean value) {
-        
-        isWaitOthers_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bool is_wait_others = 6;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearIsWaitOthers() {
-        
-        isWaitOthers_ = false;
-        onChanged();
-        return this;
-      }
-
-      private int cutsceneId_ ;
-      /**
-       * <code>uint32 cutscene_id = 12;</code>
-       * @return The cutsceneId.
-       */
-      @java.lang.Override
-      public int getCutsceneId() {
-        return cutsceneId_;
-      }
-      /**
-       * <code>uint32 cutscene_id = 12;</code>
-       * @param value The cutsceneId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCutsceneId(int value) {
-        
-        cutsceneId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 cutscene_id = 12;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCutsceneId() {
-        
-        cutsceneId_ = 0;
-        onChanged();
-        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -938,7 +899,18 @@ public final class CutSceneBeginNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new CutSceneBeginNotify(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -973,10 +945,10 @@ public final class CutSceneBeginNotifyOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\031CutSceneBeginNotify.proto\032\030CutSceneExt" +
-      "raParam.proto\"q\n\023CutSceneBeginNotify\022-\n\020" +
-      "extra_param_list\030\002 \003(\0132\023.CutSceneExtraPa" +
-      "ram\022\026\n\016is_wait_others\030\006 \001(\010\022\023\n\013cutscene_" +
-      "id\030\014 \001(\rB\033\n\031emu.grasscutter.net.protob\006p" +
+      "raParam.proto\"q\n\023CutSceneBeginNotify\022\023\n\013" +
+      "cutscene_id\030\002 \001(\r\022\026\n\016is_wait_others\030\007 \001(" +
+      "\010\022-\n\020extra_param_list\030\016 \003(\0132\023.CutSceneEx" +
+      "traParamB\033\n\031emu.grasscutter.net.protob\006p" +
       "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -989,7 +961,7 @@ public final class CutSceneBeginNotifyOuterClass {
     internal_static_CutSceneBeginNotify_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CutSceneBeginNotify_descriptor,
-        new java.lang.String[] { "ExtraParamList", "IsWaitOthers", "CutsceneId", });
+        new java.lang.String[] { "CutsceneId", "IsWaitOthers", "ExtraParamList", });
     emu.grasscutter.net.proto.CutSceneExtraParamOuterClass.getDescriptor();
   }
 

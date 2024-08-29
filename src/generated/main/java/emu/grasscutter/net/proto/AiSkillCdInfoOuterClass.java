@@ -19,45 +19,11 @@ public final class AiSkillCdInfoOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>map&lt;uint32, uint32&gt; skill_cd_map = 1;</code>
-     */
-    int getSkillCdMapCount();
-    /**
-     * <code>map&lt;uint32, uint32&gt; skill_cd_map = 1;</code>
-     */
-    boolean containsSkillCdMap(
-        int key);
-    /**
-     * Use {@link #getSkillCdMapMap()} instead.
-     */
-    @java.lang.Deprecated
-    java.util.Map<java.lang.Integer, java.lang.Integer>
-    getSkillCdMap();
-    /**
-     * <code>map&lt;uint32, uint32&gt; skill_cd_map = 1;</code>
-     */
-    java.util.Map<java.lang.Integer, java.lang.Integer>
-    getSkillCdMapMap();
-    /**
-     * <code>map&lt;uint32, uint32&gt; skill_cd_map = 1;</code>
-     */
-
-    int getSkillCdMapOrDefault(
-        int key,
-        int defaultValue);
-    /**
-     * <code>map&lt;uint32, uint32&gt; skill_cd_map = 1;</code>
-     */
-
-    int getSkillCdMapOrThrow(
-        int key);
-
-    /**
-     * <code>map&lt;uint32, uint32&gt; skill_group_cd_map = 8;</code>
+     * <code>map&lt;uint32, uint32&gt; skill_group_cd_map = 12;</code>
      */
     int getSkillGroupCdMapCount();
     /**
-     * <code>map&lt;uint32, uint32&gt; skill_group_cd_map = 8;</code>
+     * <code>map&lt;uint32, uint32&gt; skill_group_cd_map = 12;</code>
      */
     boolean containsSkillGroupCdMap(
         int key);
@@ -68,29 +34,59 @@ public final class AiSkillCdInfoOuterClass {
     java.util.Map<java.lang.Integer, java.lang.Integer>
     getSkillGroupCdMap();
     /**
-     * <code>map&lt;uint32, uint32&gt; skill_group_cd_map = 8;</code>
+     * <code>map&lt;uint32, uint32&gt; skill_group_cd_map = 12;</code>
      */
     java.util.Map<java.lang.Integer, java.lang.Integer>
     getSkillGroupCdMapMap();
     /**
-     * <code>map&lt;uint32, uint32&gt; skill_group_cd_map = 8;</code>
+     * <code>map&lt;uint32, uint32&gt; skill_group_cd_map = 12;</code>
      */
 
     int getSkillGroupCdMapOrDefault(
         int key,
         int defaultValue);
     /**
-     * <code>map&lt;uint32, uint32&gt; skill_group_cd_map = 8;</code>
+     * <code>map&lt;uint32, uint32&gt; skill_group_cd_map = 12;</code>
      */
 
     int getSkillGroupCdMapOrThrow(
         int key);
+
+    /**
+     * <code>map&lt;uint32, uint32&gt; skill_cd_map = 14;</code>
+     */
+    int getSkillCdMapCount();
+    /**
+     * <code>map&lt;uint32, uint32&gt; skill_cd_map = 14;</code>
+     */
+    boolean containsSkillCdMap(
+        int key);
+    /**
+     * Use {@link #getSkillCdMapMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.Integer, java.lang.Integer>
+    getSkillCdMap();
+    /**
+     * <code>map&lt;uint32, uint32&gt; skill_cd_map = 14;</code>
+     */
+    java.util.Map<java.lang.Integer, java.lang.Integer>
+    getSkillCdMapMap();
+    /**
+     * <code>map&lt;uint32, uint32&gt; skill_cd_map = 14;</code>
+     */
+
+    int getSkillCdMapOrDefault(
+        int key,
+        int defaultValue);
+    /**
+     * <code>map&lt;uint32, uint32&gt; skill_cd_map = 14;</code>
+     */
+
+    int getSkillCdMapOrThrow(
+        int key);
   }
   /**
-   * <pre>
-   * 4.6.0
-   * </pre>
-   *
    * Protobuf type {@code AiSkillCdInfo}
    */
   public static final class AiSkillCdInfo extends
@@ -117,70 +113,6 @@ public final class AiSkillCdInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private AiSkillCdInfo(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                skillCdMap_ = com.google.protobuf.MapField.newMapField(
-                    SkillCdMapDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000001;
-              }
-              com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
-              skillCdMap__ = input.readMessage(
-                  SkillCdMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              skillCdMap_.getMutableMap().put(
-                  skillCdMap__.getKey(), skillCdMap__.getValue());
-              break;
-            }
-            case 66: {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                skillGroupCdMap_ = com.google.protobuf.MapField.newMapField(
-                    SkillGroupCdMapDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000002;
-              }
-              com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
-              skillGroupCdMap__ = input.readMessage(
-                  SkillGroupCdMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              skillGroupCdMap_.getMutableMap().put(
-                  skillGroupCdMap__.getKey(), skillGroupCdMap__.getValue());
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.AiSkillCdInfoOuterClass.internal_static_AiSkillCdInfo_descriptor;
@@ -191,10 +123,10 @@ public final class AiSkillCdInfoOuterClass {
     protected com.google.protobuf.MapField internalGetMapField(
         int number) {
       switch (number) {
-        case 1:
-          return internalGetSkillCdMap();
-        case 8:
+        case 12:
           return internalGetSkillGroupCdMap();
+        case 14:
+          return internalGetSkillCdMap();
         default:
           throw new RuntimeException(
               "Invalid map field number: " + number);
@@ -208,88 +140,7 @@ public final class AiSkillCdInfoOuterClass {
               emu.grasscutter.net.proto.AiSkillCdInfoOuterClass.AiSkillCdInfo.class, emu.grasscutter.net.proto.AiSkillCdInfoOuterClass.AiSkillCdInfo.Builder.class);
     }
 
-    public static final int SKILL_CD_MAP_FIELD_NUMBER = 1;
-    private static final class SkillCdMapDefaultEntryHolder {
-      static final com.google.protobuf.MapEntry<
-          java.lang.Integer, java.lang.Integer> defaultEntry =
-              com.google.protobuf.MapEntry
-              .<java.lang.Integer, java.lang.Integer>newDefaultInstance(
-                  emu.grasscutter.net.proto.AiSkillCdInfoOuterClass.internal_static_AiSkillCdInfo_SkillCdMapEntry_descriptor, 
-                  com.google.protobuf.WireFormat.FieldType.UINT32,
-                  0,
-                  com.google.protobuf.WireFormat.FieldType.UINT32,
-                  0);
-    }
-    private com.google.protobuf.MapField<
-        java.lang.Integer, java.lang.Integer> skillCdMap_;
-    private com.google.protobuf.MapField<java.lang.Integer, java.lang.Integer>
-    internalGetSkillCdMap() {
-      if (skillCdMap_ == null) {
-        return com.google.protobuf.MapField.emptyMapField(
-            SkillCdMapDefaultEntryHolder.defaultEntry);
-      }
-      return skillCdMap_;
-    }
-
-    public int getSkillCdMapCount() {
-      return internalGetSkillCdMap().getMap().size();
-    }
-    /**
-     * <code>map&lt;uint32, uint32&gt; skill_cd_map = 1;</code>
-     */
-
-    @java.lang.Override
-    public boolean containsSkillCdMap(
-        int key) {
-      
-      return internalGetSkillCdMap().getMap().containsKey(key);
-    }
-    /**
-     * Use {@link #getSkillCdMapMap()} instead.
-     */
-    @java.lang.Override
-    @java.lang.Deprecated
-    public java.util.Map<java.lang.Integer, java.lang.Integer> getSkillCdMap() {
-      return getSkillCdMapMap();
-    }
-    /**
-     * <code>map&lt;uint32, uint32&gt; skill_cd_map = 1;</code>
-     */
-    @java.lang.Override
-
-    public java.util.Map<java.lang.Integer, java.lang.Integer> getSkillCdMapMap() {
-      return internalGetSkillCdMap().getMap();
-    }
-    /**
-     * <code>map&lt;uint32, uint32&gt; skill_cd_map = 1;</code>
-     */
-    @java.lang.Override
-
-    public int getSkillCdMapOrDefault(
-        int key,
-        int defaultValue) {
-      
-      java.util.Map<java.lang.Integer, java.lang.Integer> map =
-          internalGetSkillCdMap().getMap();
-      return map.containsKey(key) ? map.get(key) : defaultValue;
-    }
-    /**
-     * <code>map&lt;uint32, uint32&gt; skill_cd_map = 1;</code>
-     */
-    @java.lang.Override
-
-    public int getSkillCdMapOrThrow(
-        int key) {
-      
-      java.util.Map<java.lang.Integer, java.lang.Integer> map =
-          internalGetSkillCdMap().getMap();
-      if (!map.containsKey(key)) {
-        throw new java.lang.IllegalArgumentException();
-      }
-      return map.get(key);
-    }
-
-    public static final int SKILL_GROUP_CD_MAP_FIELD_NUMBER = 8;
+    public static final int SKILL_GROUP_CD_MAP_FIELD_NUMBER = 12;
     private static final class SkillGroupCdMapDefaultEntryHolder {
       static final com.google.protobuf.MapEntry<
           java.lang.Integer, java.lang.Integer> defaultEntry =
@@ -316,7 +167,7 @@ public final class AiSkillCdInfoOuterClass {
       return internalGetSkillGroupCdMap().getMap().size();
     }
     /**
-     * <code>map&lt;uint32, uint32&gt; skill_group_cd_map = 8;</code>
+     * <code>map&lt;uint32, uint32&gt; skill_group_cd_map = 12;</code>
      */
 
     @java.lang.Override
@@ -334,7 +185,7 @@ public final class AiSkillCdInfoOuterClass {
       return getSkillGroupCdMapMap();
     }
     /**
-     * <code>map&lt;uint32, uint32&gt; skill_group_cd_map = 8;</code>
+     * <code>map&lt;uint32, uint32&gt; skill_group_cd_map = 12;</code>
      */
     @java.lang.Override
 
@@ -342,7 +193,7 @@ public final class AiSkillCdInfoOuterClass {
       return internalGetSkillGroupCdMap().getMap();
     }
     /**
-     * <code>map&lt;uint32, uint32&gt; skill_group_cd_map = 8;</code>
+     * <code>map&lt;uint32, uint32&gt; skill_group_cd_map = 12;</code>
      */
     @java.lang.Override
 
@@ -355,7 +206,7 @@ public final class AiSkillCdInfoOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
-     * <code>map&lt;uint32, uint32&gt; skill_group_cd_map = 8;</code>
+     * <code>map&lt;uint32, uint32&gt; skill_group_cd_map = 12;</code>
      */
     @java.lang.Override
 
@@ -364,6 +215,87 @@ public final class AiSkillCdInfoOuterClass {
       
       java.util.Map<java.lang.Integer, java.lang.Integer> map =
           internalGetSkillGroupCdMap().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    public static final int SKILL_CD_MAP_FIELD_NUMBER = 14;
+    private static final class SkillCdMapDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.Integer, java.lang.Integer> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.Integer, java.lang.Integer>newDefaultInstance(
+                  emu.grasscutter.net.proto.AiSkillCdInfoOuterClass.internal_static_AiSkillCdInfo_SkillCdMapEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.UINT32,
+                  0,
+                  com.google.protobuf.WireFormat.FieldType.UINT32,
+                  0);
+    }
+    private com.google.protobuf.MapField<
+        java.lang.Integer, java.lang.Integer> skillCdMap_;
+    private com.google.protobuf.MapField<java.lang.Integer, java.lang.Integer>
+    internalGetSkillCdMap() {
+      if (skillCdMap_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            SkillCdMapDefaultEntryHolder.defaultEntry);
+      }
+      return skillCdMap_;
+    }
+
+    public int getSkillCdMapCount() {
+      return internalGetSkillCdMap().getMap().size();
+    }
+    /**
+     * <code>map&lt;uint32, uint32&gt; skill_cd_map = 14;</code>
+     */
+
+    @java.lang.Override
+    public boolean containsSkillCdMap(
+        int key) {
+      
+      return internalGetSkillCdMap().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getSkillCdMapMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.Integer, java.lang.Integer> getSkillCdMap() {
+      return getSkillCdMapMap();
+    }
+    /**
+     * <code>map&lt;uint32, uint32&gt; skill_cd_map = 14;</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.Integer, java.lang.Integer> getSkillCdMapMap() {
+      return internalGetSkillCdMap().getMap();
+    }
+    /**
+     * <code>map&lt;uint32, uint32&gt; skill_cd_map = 14;</code>
+     */
+    @java.lang.Override
+
+    public int getSkillCdMapOrDefault(
+        int key,
+        int defaultValue) {
+      
+      java.util.Map<java.lang.Integer, java.lang.Integer> map =
+          internalGetSkillCdMap().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;uint32, uint32&gt; skill_cd_map = 14;</code>
+     */
+    @java.lang.Override
+
+    public int getSkillCdMapOrThrow(
+        int key) {
+      
+      java.util.Map<java.lang.Integer, java.lang.Integer> map =
+          internalGetSkillCdMap().getMap();
       if (!map.containsKey(key)) {
         throw new java.lang.IllegalArgumentException();
       }
@@ -387,16 +319,16 @@ public final class AiSkillCdInfoOuterClass {
       com.google.protobuf.GeneratedMessageV3
         .serializeIntegerMapTo(
           output,
-          internalGetSkillCdMap(),
-          SkillCdMapDefaultEntryHolder.defaultEntry,
-          1);
+          internalGetSkillGroupCdMap(),
+          SkillGroupCdMapDefaultEntryHolder.defaultEntry,
+          12);
       com.google.protobuf.GeneratedMessageV3
         .serializeIntegerMapTo(
           output,
-          internalGetSkillGroupCdMap(),
-          SkillGroupCdMapDefaultEntryHolder.defaultEntry,
-          8);
-      unknownFields.writeTo(output);
+          internalGetSkillCdMap(),
+          SkillCdMapDefaultEntryHolder.defaultEntry,
+          14);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -406,16 +338,6 @@ public final class AiSkillCdInfoOuterClass {
 
       size = 0;
       for (java.util.Map.Entry<java.lang.Integer, java.lang.Integer> entry
-           : internalGetSkillCdMap().getMap().entrySet()) {
-        com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
-        skillCdMap__ = SkillCdMapDefaultEntryHolder.defaultEntry.newBuilderForType()
-            .setKey(entry.getKey())
-            .setValue(entry.getValue())
-            .build();
-        size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(1, skillCdMap__);
-      }
-      for (java.util.Map.Entry<java.lang.Integer, java.lang.Integer> entry
            : internalGetSkillGroupCdMap().getMap().entrySet()) {
         com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
         skillGroupCdMap__ = SkillGroupCdMapDefaultEntryHolder.defaultEntry.newBuilderForType()
@@ -423,9 +345,19 @@ public final class AiSkillCdInfoOuterClass {
             .setValue(entry.getValue())
             .build();
         size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(8, skillGroupCdMap__);
+            .computeMessageSize(12, skillGroupCdMap__);
       }
-      size += unknownFields.getSerializedSize();
+      for (java.util.Map.Entry<java.lang.Integer, java.lang.Integer> entry
+           : internalGetSkillCdMap().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
+        skillCdMap__ = SkillCdMapDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(14, skillCdMap__);
+      }
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -440,11 +372,11 @@ public final class AiSkillCdInfoOuterClass {
       }
       emu.grasscutter.net.proto.AiSkillCdInfoOuterClass.AiSkillCdInfo other = (emu.grasscutter.net.proto.AiSkillCdInfoOuterClass.AiSkillCdInfo) obj;
 
-      if (!internalGetSkillCdMap().equals(
-          other.internalGetSkillCdMap())) return false;
       if (!internalGetSkillGroupCdMap().equals(
           other.internalGetSkillGroupCdMap())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!internalGetSkillCdMap().equals(
+          other.internalGetSkillCdMap())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -455,15 +387,15 @@ public final class AiSkillCdInfoOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (!internalGetSkillCdMap().getMap().isEmpty()) {
-        hash = (37 * hash) + SKILL_CD_MAP_FIELD_NUMBER;
-        hash = (53 * hash) + internalGetSkillCdMap().hashCode();
-      }
       if (!internalGetSkillGroupCdMap().getMap().isEmpty()) {
         hash = (37 * hash) + SKILL_GROUP_CD_MAP_FIELD_NUMBER;
         hash = (53 * hash) + internalGetSkillGroupCdMap().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      if (!internalGetSkillCdMap().getMap().isEmpty()) {
+        hash = (37 * hash) + SKILL_CD_MAP_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetSkillCdMap().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -559,10 +491,6 @@ public final class AiSkillCdInfoOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * 4.6.0
-     * </pre>
-     *
      * Protobuf type {@code AiSkillCdInfo}
      */
     public static final class Builder extends
@@ -578,10 +506,10 @@ public final class AiSkillCdInfoOuterClass {
       protected com.google.protobuf.MapField internalGetMapField(
           int number) {
         switch (number) {
-          case 1:
-            return internalGetSkillCdMap();
-          case 8:
+          case 12:
             return internalGetSkillGroupCdMap();
+          case 14:
+            return internalGetSkillCdMap();
           default:
             throw new RuntimeException(
                 "Invalid map field number: " + number);
@@ -591,10 +519,10 @@ public final class AiSkillCdInfoOuterClass {
       protected com.google.protobuf.MapField internalGetMutableMapField(
           int number) {
         switch (number) {
-          case 1:
-            return internalGetMutableSkillCdMap();
-          case 8:
+          case 12:
             return internalGetMutableSkillGroupCdMap();
+          case 14:
+            return internalGetMutableSkillCdMap();
           default:
             throw new RuntimeException(
                 "Invalid map field number: " + number);
@@ -610,24 +538,19 @@ public final class AiSkillCdInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.AiSkillCdInfoOuterClass.AiSkillCdInfo.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        internalGetMutableSkillCdMap().clear();
         internalGetMutableSkillGroupCdMap().clear();
+        internalGetMutableSkillCdMap().clear();
         return this;
       }
 
@@ -655,10 +578,10 @@ public final class AiSkillCdInfoOuterClass {
       public emu.grasscutter.net.proto.AiSkillCdInfoOuterClass.AiSkillCdInfo buildPartial() {
         emu.grasscutter.net.proto.AiSkillCdInfoOuterClass.AiSkillCdInfo result = new emu.grasscutter.net.proto.AiSkillCdInfoOuterClass.AiSkillCdInfo(this);
         int from_bitField0_ = bitField0_;
-        result.skillCdMap_ = internalGetSkillCdMap();
-        result.skillCdMap_.makeImmutable();
         result.skillGroupCdMap_ = internalGetSkillGroupCdMap();
         result.skillGroupCdMap_.makeImmutable();
+        result.skillCdMap_ = internalGetSkillCdMap();
+        result.skillCdMap_.makeImmutable();
         onBuilt();
         return result;
       }
@@ -707,11 +630,11 @@ public final class AiSkillCdInfoOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.AiSkillCdInfoOuterClass.AiSkillCdInfo other) {
         if (other == emu.grasscutter.net.proto.AiSkillCdInfoOuterClass.AiSkillCdInfo.getDefaultInstance()) return this;
-        internalGetMutableSkillCdMap().mergeFrom(
-            other.internalGetSkillCdMap());
         internalGetMutableSkillGroupCdMap().mergeFrom(
             other.internalGetSkillGroupCdMap());
-        this.mergeUnknownFields(other.unknownFields);
+        internalGetMutableSkillCdMap().mergeFrom(
+            other.internalGetSkillCdMap());
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -726,148 +649,49 @@ public final class AiSkillCdInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.AiSkillCdInfoOuterClass.AiSkillCdInfo parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 98: {
+                com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
+                skillGroupCdMap__ = input.readMessage(
+                    SkillGroupCdMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutableSkillGroupCdMap().getMutableMap().put(
+                    skillGroupCdMap__.getKey(), skillGroupCdMap__.getValue());
+                break;
+              } // case 98
+              case 114: {
+                com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
+                skillCdMap__ = input.readMessage(
+                    SkillCdMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutableSkillCdMap().getMutableMap().put(
+                    skillCdMap__.getKey(), skillCdMap__.getValue());
+                break;
+              } // case 114
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.AiSkillCdInfoOuterClass.AiSkillCdInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
-
-      private com.google.protobuf.MapField<
-          java.lang.Integer, java.lang.Integer> skillCdMap_;
-      private com.google.protobuf.MapField<java.lang.Integer, java.lang.Integer>
-      internalGetSkillCdMap() {
-        if (skillCdMap_ == null) {
-          return com.google.protobuf.MapField.emptyMapField(
-              SkillCdMapDefaultEntryHolder.defaultEntry);
-        }
-        return skillCdMap_;
-      }
-      private com.google.protobuf.MapField<java.lang.Integer, java.lang.Integer>
-      internalGetMutableSkillCdMap() {
-        onChanged();;
-        if (skillCdMap_ == null) {
-          skillCdMap_ = com.google.protobuf.MapField.newMapField(
-              SkillCdMapDefaultEntryHolder.defaultEntry);
-        }
-        if (!skillCdMap_.isMutable()) {
-          skillCdMap_ = skillCdMap_.copy();
-        }
-        return skillCdMap_;
-      }
-
-      public int getSkillCdMapCount() {
-        return internalGetSkillCdMap().getMap().size();
-      }
-      /**
-       * <code>map&lt;uint32, uint32&gt; skill_cd_map = 1;</code>
-       */
-
-      @java.lang.Override
-      public boolean containsSkillCdMap(
-          int key) {
-        
-        return internalGetSkillCdMap().getMap().containsKey(key);
-      }
-      /**
-       * Use {@link #getSkillCdMapMap()} instead.
-       */
-      @java.lang.Override
-      @java.lang.Deprecated
-      public java.util.Map<java.lang.Integer, java.lang.Integer> getSkillCdMap() {
-        return getSkillCdMapMap();
-      }
-      /**
-       * <code>map&lt;uint32, uint32&gt; skill_cd_map = 1;</code>
-       */
-      @java.lang.Override
-
-      public java.util.Map<java.lang.Integer, java.lang.Integer> getSkillCdMapMap() {
-        return internalGetSkillCdMap().getMap();
-      }
-      /**
-       * <code>map&lt;uint32, uint32&gt; skill_cd_map = 1;</code>
-       */
-      @java.lang.Override
-
-      public int getSkillCdMapOrDefault(
-          int key,
-          int defaultValue) {
-        
-        java.util.Map<java.lang.Integer, java.lang.Integer> map =
-            internalGetSkillCdMap().getMap();
-        return map.containsKey(key) ? map.get(key) : defaultValue;
-      }
-      /**
-       * <code>map&lt;uint32, uint32&gt; skill_cd_map = 1;</code>
-       */
-      @java.lang.Override
-
-      public int getSkillCdMapOrThrow(
-          int key) {
-        
-        java.util.Map<java.lang.Integer, java.lang.Integer> map =
-            internalGetSkillCdMap().getMap();
-        if (!map.containsKey(key)) {
-          throw new java.lang.IllegalArgumentException();
-        }
-        return map.get(key);
-      }
-
-      public Builder clearSkillCdMap() {
-        internalGetMutableSkillCdMap().getMutableMap()
-            .clear();
-        return this;
-      }
-      /**
-       * <code>map&lt;uint32, uint32&gt; skill_cd_map = 1;</code>
-       */
-
-      public Builder removeSkillCdMap(
-          int key) {
-        
-        internalGetMutableSkillCdMap().getMutableMap()
-            .remove(key);
-        return this;
-      }
-      /**
-       * Use alternate mutation accessors instead.
-       */
-      @java.lang.Deprecated
-      public java.util.Map<java.lang.Integer, java.lang.Integer>
-      getMutableSkillCdMap() {
-        return internalGetMutableSkillCdMap().getMutableMap();
-      }
-      /**
-       * <code>map&lt;uint32, uint32&gt; skill_cd_map = 1;</code>
-       */
-      public Builder putSkillCdMap(
-          int key,
-          int value) {
-        
-        
-        internalGetMutableSkillCdMap().getMutableMap()
-            .put(key, value);
-        return this;
-      }
-      /**
-       * <code>map&lt;uint32, uint32&gt; skill_cd_map = 1;</code>
-       */
-
-      public Builder putAllSkillCdMap(
-          java.util.Map<java.lang.Integer, java.lang.Integer> values) {
-        internalGetMutableSkillCdMap().getMutableMap()
-            .putAll(values);
-        return this;
-      }
 
       private com.google.protobuf.MapField<
           java.lang.Integer, java.lang.Integer> skillGroupCdMap_;
@@ -896,7 +720,7 @@ public final class AiSkillCdInfoOuterClass {
         return internalGetSkillGroupCdMap().getMap().size();
       }
       /**
-       * <code>map&lt;uint32, uint32&gt; skill_group_cd_map = 8;</code>
+       * <code>map&lt;uint32, uint32&gt; skill_group_cd_map = 12;</code>
        */
 
       @java.lang.Override
@@ -914,7 +738,7 @@ public final class AiSkillCdInfoOuterClass {
         return getSkillGroupCdMapMap();
       }
       /**
-       * <code>map&lt;uint32, uint32&gt; skill_group_cd_map = 8;</code>
+       * <code>map&lt;uint32, uint32&gt; skill_group_cd_map = 12;</code>
        */
       @java.lang.Override
 
@@ -922,7 +746,7 @@ public final class AiSkillCdInfoOuterClass {
         return internalGetSkillGroupCdMap().getMap();
       }
       /**
-       * <code>map&lt;uint32, uint32&gt; skill_group_cd_map = 8;</code>
+       * <code>map&lt;uint32, uint32&gt; skill_group_cd_map = 12;</code>
        */
       @java.lang.Override
 
@@ -935,7 +759,7 @@ public final class AiSkillCdInfoOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
-       * <code>map&lt;uint32, uint32&gt; skill_group_cd_map = 8;</code>
+       * <code>map&lt;uint32, uint32&gt; skill_group_cd_map = 12;</code>
        */
       @java.lang.Override
 
@@ -956,7 +780,7 @@ public final class AiSkillCdInfoOuterClass {
         return this;
       }
       /**
-       * <code>map&lt;uint32, uint32&gt; skill_group_cd_map = 8;</code>
+       * <code>map&lt;uint32, uint32&gt; skill_group_cd_map = 12;</code>
        */
 
       public Builder removeSkillGroupCdMap(
@@ -975,7 +799,7 @@ public final class AiSkillCdInfoOuterClass {
         return internalGetMutableSkillGroupCdMap().getMutableMap();
       }
       /**
-       * <code>map&lt;uint32, uint32&gt; skill_group_cd_map = 8;</code>
+       * <code>map&lt;uint32, uint32&gt; skill_group_cd_map = 12;</code>
        */
       public Builder putSkillGroupCdMap(
           int key,
@@ -987,12 +811,140 @@ public final class AiSkillCdInfoOuterClass {
         return this;
       }
       /**
-       * <code>map&lt;uint32, uint32&gt; skill_group_cd_map = 8;</code>
+       * <code>map&lt;uint32, uint32&gt; skill_group_cd_map = 12;</code>
        */
 
       public Builder putAllSkillGroupCdMap(
           java.util.Map<java.lang.Integer, java.lang.Integer> values) {
         internalGetMutableSkillGroupCdMap().getMutableMap()
+            .putAll(values);
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.Integer, java.lang.Integer> skillCdMap_;
+      private com.google.protobuf.MapField<java.lang.Integer, java.lang.Integer>
+      internalGetSkillCdMap() {
+        if (skillCdMap_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              SkillCdMapDefaultEntryHolder.defaultEntry);
+        }
+        return skillCdMap_;
+      }
+      private com.google.protobuf.MapField<java.lang.Integer, java.lang.Integer>
+      internalGetMutableSkillCdMap() {
+        onChanged();;
+        if (skillCdMap_ == null) {
+          skillCdMap_ = com.google.protobuf.MapField.newMapField(
+              SkillCdMapDefaultEntryHolder.defaultEntry);
+        }
+        if (!skillCdMap_.isMutable()) {
+          skillCdMap_ = skillCdMap_.copy();
+        }
+        return skillCdMap_;
+      }
+
+      public int getSkillCdMapCount() {
+        return internalGetSkillCdMap().getMap().size();
+      }
+      /**
+       * <code>map&lt;uint32, uint32&gt; skill_cd_map = 14;</code>
+       */
+
+      @java.lang.Override
+      public boolean containsSkillCdMap(
+          int key) {
+        
+        return internalGetSkillCdMap().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getSkillCdMapMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.Integer, java.lang.Integer> getSkillCdMap() {
+        return getSkillCdMapMap();
+      }
+      /**
+       * <code>map&lt;uint32, uint32&gt; skill_cd_map = 14;</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.Integer, java.lang.Integer> getSkillCdMapMap() {
+        return internalGetSkillCdMap().getMap();
+      }
+      /**
+       * <code>map&lt;uint32, uint32&gt; skill_cd_map = 14;</code>
+       */
+      @java.lang.Override
+
+      public int getSkillCdMapOrDefault(
+          int key,
+          int defaultValue) {
+        
+        java.util.Map<java.lang.Integer, java.lang.Integer> map =
+            internalGetSkillCdMap().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;uint32, uint32&gt; skill_cd_map = 14;</code>
+       */
+      @java.lang.Override
+
+      public int getSkillCdMapOrThrow(
+          int key) {
+        
+        java.util.Map<java.lang.Integer, java.lang.Integer> map =
+            internalGetSkillCdMap().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearSkillCdMap() {
+        internalGetMutableSkillCdMap().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;uint32, uint32&gt; skill_cd_map = 14;</code>
+       */
+
+      public Builder removeSkillCdMap(
+          int key) {
+        
+        internalGetMutableSkillCdMap().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.Integer, java.lang.Integer>
+      getMutableSkillCdMap() {
+        return internalGetMutableSkillCdMap().getMutableMap();
+      }
+      /**
+       * <code>map&lt;uint32, uint32&gt; skill_cd_map = 14;</code>
+       */
+      public Builder putSkillCdMap(
+          int key,
+          int value) {
+        
+        
+        internalGetMutableSkillCdMap().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <code>map&lt;uint32, uint32&gt; skill_cd_map = 14;</code>
+       */
+
+      public Builder putAllSkillCdMap(
+          java.util.Map<java.lang.Integer, java.lang.Integer> values) {
+        internalGetMutableSkillCdMap().getMutableMap()
             .putAll(values);
         return this;
       }
@@ -1029,7 +981,18 @@ public final class AiSkillCdInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new AiSkillCdInfo(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -1055,15 +1018,15 @@ public final class AiSkillCdInfoOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_AiSkillCdInfo_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_AiSkillCdInfo_SkillCdMapEntry_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_AiSkillCdInfo_SkillCdMapEntry_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_AiSkillCdInfo_SkillGroupCdMapEntry_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_AiSkillCdInfo_SkillGroupCdMapEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_AiSkillCdInfo_SkillCdMapEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_AiSkillCdInfo_SkillCdMapEntry_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1074,11 +1037,11 @@ public final class AiSkillCdInfoOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\023AiSkillCdInfo.proto\"\361\001\n\rAiSkillCdInfo\022" +
-      "4\n\014skill_cd_map\030\001 \003(\0132\036.AiSkillCdInfo.Sk" +
-      "illCdMapEntry\022?\n\022skill_group_cd_map\030\010 \003(" +
-      "\0132#.AiSkillCdInfo.SkillGroupCdMapEntry\0321" +
-      "\n\017SkillCdMapEntry\022\013\n\003key\030\001 \001(\r\022\r\n\005value\030" +
-      "\002 \001(\r:\0028\001\0326\n\024SkillGroupCdMapEntry\022\013\n\003key" +
+      "?\n\022skill_group_cd_map\030\014 \003(\0132#.AiSkillCdI" +
+      "nfo.SkillGroupCdMapEntry\0224\n\014skill_cd_map" +
+      "\030\016 \003(\0132\036.AiSkillCdInfo.SkillCdMapEntry\0326" +
+      "\n\024SkillGroupCdMapEntry\022\013\n\003key\030\001 \001(\r\022\r\n\005v" +
+      "alue\030\002 \001(\r:\0028\001\0321\n\017SkillCdMapEntry\022\013\n\003key" +
       "\030\001 \001(\r\022\r\n\005value\030\002 \001(\r:\0028\001B\033\n\031emu.grasscu" +
       "tter.net.protob\006proto3"
     };
@@ -1091,18 +1054,18 @@ public final class AiSkillCdInfoOuterClass {
     internal_static_AiSkillCdInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_AiSkillCdInfo_descriptor,
-        new java.lang.String[] { "SkillCdMap", "SkillGroupCdMap", });
-    internal_static_AiSkillCdInfo_SkillCdMapEntry_descriptor =
-      internal_static_AiSkillCdInfo_descriptor.getNestedTypes().get(0);
-    internal_static_AiSkillCdInfo_SkillCdMapEntry_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_AiSkillCdInfo_SkillCdMapEntry_descriptor,
-        new java.lang.String[] { "Key", "Value", });
+        new java.lang.String[] { "SkillGroupCdMap", "SkillCdMap", });
     internal_static_AiSkillCdInfo_SkillGroupCdMapEntry_descriptor =
-      internal_static_AiSkillCdInfo_descriptor.getNestedTypes().get(1);
+      internal_static_AiSkillCdInfo_descriptor.getNestedTypes().get(0);
     internal_static_AiSkillCdInfo_SkillGroupCdMapEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_AiSkillCdInfo_SkillGroupCdMapEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_AiSkillCdInfo_SkillCdMapEntry_descriptor =
+      internal_static_AiSkillCdInfo_descriptor.getNestedTypes().get(1);
+    internal_static_AiSkillCdInfo_SkillCdMapEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_AiSkillCdInfo_SkillCdMapEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
   }
 

@@ -19,17 +19,17 @@ public final class WidgetThunderBirdFeatherInfoOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated uint32 entity_id_list = 9;</code>
+     * <code>repeated uint32 entity_id_list = 8;</code>
      * @return A list containing the entityIdList.
      */
     java.util.List<java.lang.Integer> getEntityIdListList();
     /**
-     * <code>repeated uint32 entity_id_list = 9;</code>
+     * <code>repeated uint32 entity_id_list = 8;</code>
      * @return The count of entityIdList.
      */
     int getEntityIdListCount();
     /**
-     * <code>repeated uint32 entity_id_list = 9;</code>
+     * <code>repeated uint32 entity_id_list = 8;</code>
      * @param index The index of the element to return.
      * @return The entityIdList at the given index.
      */
@@ -37,7 +37,8 @@ public final class WidgetThunderBirdFeatherInfoOuterClass {
   }
   /**
    * <pre>
-   * Obf: PCGCBLHFCEC
+   * 4.7.0
+   * Obf: KNJBADPIGFN
    * </pre>
    *
    * Protobuf type {@code WidgetThunderBirdFeatherInfo}
@@ -67,68 +68,6 @@ public final class WidgetThunderBirdFeatherInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private WidgetThunderBirdFeatherInfo(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 72: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                entityIdList_ = newIntList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              entityIdList_.addInt(input.readUInt32());
-              break;
-            }
-            case 74: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
-                entityIdList_ = newIntList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                entityIdList_.addInt(input.readUInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          entityIdList_.makeImmutable(); // C
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.WidgetThunderBirdFeatherInfoOuterClass.internal_static_WidgetThunderBirdFeatherInfo_descriptor;
@@ -142,10 +81,10 @@ public final class WidgetThunderBirdFeatherInfoOuterClass {
               emu.grasscutter.net.proto.WidgetThunderBirdFeatherInfoOuterClass.WidgetThunderBirdFeatherInfo.class, emu.grasscutter.net.proto.WidgetThunderBirdFeatherInfoOuterClass.WidgetThunderBirdFeatherInfo.Builder.class);
     }
 
-    public static final int ENTITY_ID_LIST_FIELD_NUMBER = 9;
+    public static final int ENTITY_ID_LIST_FIELD_NUMBER = 8;
     private com.google.protobuf.Internal.IntList entityIdList_;
     /**
-     * <code>repeated uint32 entity_id_list = 9;</code>
+     * <code>repeated uint32 entity_id_list = 8;</code>
      * @return A list containing the entityIdList.
      */
     @java.lang.Override
@@ -154,14 +93,14 @@ public final class WidgetThunderBirdFeatherInfoOuterClass {
       return entityIdList_;
     }
     /**
-     * <code>repeated uint32 entity_id_list = 9;</code>
+     * <code>repeated uint32 entity_id_list = 8;</code>
      * @return The count of entityIdList.
      */
     public int getEntityIdListCount() {
       return entityIdList_.size();
     }
     /**
-     * <code>repeated uint32 entity_id_list = 9;</code>
+     * <code>repeated uint32 entity_id_list = 8;</code>
      * @param index The index of the element to return.
      * @return The entityIdList at the given index.
      */
@@ -186,13 +125,13 @@ public final class WidgetThunderBirdFeatherInfoOuterClass {
                         throws java.io.IOException {
       getSerializedSize();
       if (getEntityIdListList().size() > 0) {
-        output.writeUInt32NoTag(74);
+        output.writeUInt32NoTag(66);
         output.writeUInt32NoTag(entityIdListMemoizedSerializedSize);
       }
       for (int i = 0; i < entityIdList_.size(); i++) {
         output.writeUInt32NoTag(entityIdList_.getInt(i));
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -215,7 +154,7 @@ public final class WidgetThunderBirdFeatherInfoOuterClass {
         }
         entityIdListMemoizedSerializedSize = dataSize;
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -232,7 +171,7 @@ public final class WidgetThunderBirdFeatherInfoOuterClass {
 
       if (!getEntityIdListList()
           .equals(other.getEntityIdListList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -247,7 +186,7 @@ public final class WidgetThunderBirdFeatherInfoOuterClass {
         hash = (37 * hash) + ENTITY_ID_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getEntityIdListList().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -344,7 +283,8 @@ public final class WidgetThunderBirdFeatherInfoOuterClass {
     }
     /**
      * <pre>
-     * Obf: PCGCBLHFCEC
+     * 4.7.0
+     * Obf: KNJBADPIGFN
      * </pre>
      *
      * Protobuf type {@code WidgetThunderBirdFeatherInfo}
@@ -368,18 +308,13 @@ public final class WidgetThunderBirdFeatherInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.WidgetThunderBirdFeatherInfoOuterClass.WidgetThunderBirdFeatherInfo.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -476,7 +411,7 @@ public final class WidgetThunderBirdFeatherInfoOuterClass {
           }
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -491,17 +426,46 @@ public final class WidgetThunderBirdFeatherInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.WidgetThunderBirdFeatherInfoOuterClass.WidgetThunderBirdFeatherInfo parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 64: {
+                int v = input.readUInt32();
+                ensureEntityIdListIsMutable();
+                entityIdList_.addInt(v);
+                break;
+              } // case 64
+              case 66: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureEntityIdListIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  entityIdList_.addInt(input.readUInt32());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 66
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.WidgetThunderBirdFeatherInfoOuterClass.WidgetThunderBirdFeatherInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -514,7 +478,7 @@ public final class WidgetThunderBirdFeatherInfoOuterClass {
          }
       }
       /**
-       * <code>repeated uint32 entity_id_list = 9;</code>
+       * <code>repeated uint32 entity_id_list = 8;</code>
        * @return A list containing the entityIdList.
        */
       public java.util.List<java.lang.Integer>
@@ -523,14 +487,14 @@ public final class WidgetThunderBirdFeatherInfoOuterClass {
                  java.util.Collections.unmodifiableList(entityIdList_) : entityIdList_;
       }
       /**
-       * <code>repeated uint32 entity_id_list = 9;</code>
+       * <code>repeated uint32 entity_id_list = 8;</code>
        * @return The count of entityIdList.
        */
       public int getEntityIdListCount() {
         return entityIdList_.size();
       }
       /**
-       * <code>repeated uint32 entity_id_list = 9;</code>
+       * <code>repeated uint32 entity_id_list = 8;</code>
        * @param index The index of the element to return.
        * @return The entityIdList at the given index.
        */
@@ -538,7 +502,7 @@ public final class WidgetThunderBirdFeatherInfoOuterClass {
         return entityIdList_.getInt(index);
       }
       /**
-       * <code>repeated uint32 entity_id_list = 9;</code>
+       * <code>repeated uint32 entity_id_list = 8;</code>
        * @param index The index to set the value at.
        * @param value The entityIdList to set.
        * @return This builder for chaining.
@@ -551,7 +515,7 @@ public final class WidgetThunderBirdFeatherInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 entity_id_list = 9;</code>
+       * <code>repeated uint32 entity_id_list = 8;</code>
        * @param value The entityIdList to add.
        * @return This builder for chaining.
        */
@@ -562,7 +526,7 @@ public final class WidgetThunderBirdFeatherInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 entity_id_list = 9;</code>
+       * <code>repeated uint32 entity_id_list = 8;</code>
        * @param values The entityIdList to add.
        * @return This builder for chaining.
        */
@@ -575,7 +539,7 @@ public final class WidgetThunderBirdFeatherInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 entity_id_list = 9;</code>
+       * <code>repeated uint32 entity_id_list = 8;</code>
        * @return This builder for chaining.
        */
       public Builder clearEntityIdList() {
@@ -617,7 +581,18 @@ public final class WidgetThunderBirdFeatherInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new WidgetThunderBirdFeatherInfo(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -653,7 +628,7 @@ public final class WidgetThunderBirdFeatherInfoOuterClass {
     java.lang.String[] descriptorData = {
       "\n\"WidgetThunderBirdFeatherInfo.proto\"6\n\034" +
       "WidgetThunderBirdFeatherInfo\022\026\n\016entity_i" +
-      "d_list\030\t \003(\rB\033\n\031emu.grasscutter.net.prot" +
+      "d_list\030\010 \003(\rB\033\n\031emu.grasscutter.net.prot" +
       "ob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

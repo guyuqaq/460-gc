@@ -67,10 +67,6 @@ public final class QueryRegionListHttpRspOuterClass {
     boolean getEnableLoginPc();
   }
   /**
-   * <pre>
-   * Obf: BFDHIPNAGPP
-   * </pre>
-   *
    * Protobuf type {@code QueryRegionListHttpRsp}
    */
   public static final class QueryRegionListHttpRsp extends
@@ -99,76 +95,6 @@ public final class QueryRegionListHttpRspOuterClass {
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
-    }
-    private QueryRegionListHttpRsp(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-
-              retcode_ = input.readInt32();
-              break;
-            }
-            case 18: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                regionList_ = new java.util.ArrayList<emu.grasscutter.net.proto.RegionSimpleInfoOuterClass.RegionSimpleInfo>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              regionList_.add(
-                  input.readMessage(emu.grasscutter.net.proto.RegionSimpleInfoOuterClass.RegionSimpleInfo.parser(), extensionRegistry));
-              break;
-            }
-            case 42: {
-
-              clientSecretKey_ = input.readBytes();
-              break;
-            }
-            case 50: {
-
-              clientCustomConfigEncrypted_ = input.readBytes();
-              break;
-            }
-            case 56: {
-
-              enableLoginPc_ = input.readBool();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          regionList_ = java.util.Collections.unmodifiableList(regionList_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -296,7 +222,7 @@ public final class QueryRegionListHttpRspOuterClass {
       if (enableLoginPc_ != false) {
         output.writeBool(7, enableLoginPc_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -325,7 +251,7 @@ public final class QueryRegionListHttpRspOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(7, enableLoginPc_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -350,7 +276,7 @@ public final class QueryRegionListHttpRspOuterClass {
           .equals(other.getClientCustomConfigEncrypted())) return false;
       if (getEnableLoginPc()
           != other.getEnableLoginPc()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -374,7 +300,7 @@ public final class QueryRegionListHttpRspOuterClass {
       hash = (37 * hash) + ENABLE_LOGIN_PC_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getEnableLoginPc());
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -470,10 +396,6 @@ public final class QueryRegionListHttpRspOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * Obf: BFDHIPNAGPP
-     * </pre>
-     *
      * Protobuf type {@code QueryRegionListHttpRsp}
      */
     public static final class Builder extends
@@ -495,19 +417,13 @@ public final class QueryRegionListHttpRspOuterClass {
 
       // Construct using emu.grasscutter.net.proto.QueryRegionListHttpRspOuterClass.QueryRegionListHttpRsp.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getRegionListFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -516,10 +432,11 @@ public final class QueryRegionListHttpRspOuterClass {
 
         if (regionListBuilder_ == null) {
           regionList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          regionList_ = null;
           regionListBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000001);
         clientSecretKey_ = com.google.protobuf.ByteString.EMPTY;
 
         clientCustomConfigEncrypted_ = com.google.protobuf.ByteString.EMPTY;
@@ -652,7 +569,7 @@ public final class QueryRegionListHttpRspOuterClass {
         if (other.getEnableLoginPc() != false) {
           setEnableLoginPc(other.getEnableLoginPc());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -667,17 +584,63 @@ public final class QueryRegionListHttpRspOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.QueryRegionListHttpRspOuterClass.QueryRegionListHttpRsp parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                retcode_ = input.readInt32();
+
+                break;
+              } // case 8
+              case 18: {
+                emu.grasscutter.net.proto.RegionSimpleInfoOuterClass.RegionSimpleInfo m =
+                    input.readMessage(
+                        emu.grasscutter.net.proto.RegionSimpleInfoOuterClass.RegionSimpleInfo.parser(),
+                        extensionRegistry);
+                if (regionListBuilder_ == null) {
+                  ensureRegionListIsMutable();
+                  regionList_.add(m);
+                } else {
+                  regionListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              case 42: {
+                clientSecretKey_ = input.readBytes();
+
+                break;
+              } // case 42
+              case 50: {
+                clientCustomConfigEncrypted_ = input.readBytes();
+
+                break;
+              } // case 50
+              case 56: {
+                enableLoginPc_ = input.readBool();
+
+                break;
+              } // case 56
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.QueryRegionListHttpRspOuterClass.QueryRegionListHttpRsp) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -1084,7 +1047,18 @@ public final class QueryRegionListHttpRspOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new QueryRegionListHttpRsp(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

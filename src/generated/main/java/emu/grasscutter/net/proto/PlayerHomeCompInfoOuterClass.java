@@ -19,66 +19,66 @@ public final class PlayerHomeCompInfoOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.FriendEnterHomeOption friend_enter_home_option = 7;</code>
+     * <code>.FriendEnterHomeOption friend_enter_home_option = 8;</code>
      * @return The enum numeric value on the wire for friendEnterHomeOption.
      */
     int getFriendEnterHomeOptionValue();
     /**
-     * <code>.FriendEnterHomeOption friend_enter_home_option = 7;</code>
+     * <code>.FriendEnterHomeOption friend_enter_home_option = 8;</code>
      * @return The friendEnterHomeOption.
      */
     emu.grasscutter.net.proto.FriendEnterHomeOptionOuterClass.FriendEnterHomeOption getFriendEnterHomeOption();
 
     /**
-     * <code>repeated uint32 levelup_reward_got_level_list = 9;</code>
-     * @return A list containing the levelupRewardGotLevelList.
-     */
-    java.util.List<java.lang.Integer> getLevelupRewardGotLevelListList();
-    /**
-     * <code>repeated uint32 levelup_reward_got_level_list = 9;</code>
-     * @return The count of levelupRewardGotLevelList.
-     */
-    int getLevelupRewardGotLevelListCount();
-    /**
-     * <code>repeated uint32 levelup_reward_got_level_list = 9;</code>
-     * @param index The index of the element to return.
-     * @return The levelupRewardGotLevelList at the given index.
-     */
-    int getLevelupRewardGotLevelList(int index);
-
-    /**
-     * <code>repeated uint32 seen_module_id_list = 13;</code>
+     * <code>repeated uint32 seen_module_id_list = 10;</code>
      * @return A list containing the seenModuleIdList.
      */
     java.util.List<java.lang.Integer> getSeenModuleIdListList();
     /**
-     * <code>repeated uint32 seen_module_id_list = 13;</code>
+     * <code>repeated uint32 seen_module_id_list = 10;</code>
      * @return The count of seenModuleIdList.
      */
     int getSeenModuleIdListCount();
     /**
-     * <code>repeated uint32 seen_module_id_list = 13;</code>
+     * <code>repeated uint32 seen_module_id_list = 10;</code>
      * @param index The index of the element to return.
      * @return The seenModuleIdList at the given index.
      */
     int getSeenModuleIdList(int index);
 
     /**
-     * <code>repeated uint32 unlocked_module_id_list = 15;</code>
+     * <code>repeated uint32 unlocked_module_id_list = 11;</code>
      * @return A list containing the unlockedModuleIdList.
      */
     java.util.List<java.lang.Integer> getUnlockedModuleIdListList();
     /**
-     * <code>repeated uint32 unlocked_module_id_list = 15;</code>
+     * <code>repeated uint32 unlocked_module_id_list = 11;</code>
      * @return The count of unlockedModuleIdList.
      */
     int getUnlockedModuleIdListCount();
     /**
-     * <code>repeated uint32 unlocked_module_id_list = 15;</code>
+     * <code>repeated uint32 unlocked_module_id_list = 11;</code>
      * @param index The index of the element to return.
      * @return The unlockedModuleIdList at the given index.
      */
     int getUnlockedModuleIdList(int index);
+
+    /**
+     * <code>repeated uint32 levelup_reward_got_level_list = 12;</code>
+     * @return A list containing the levelupRewardGotLevelList.
+     */
+    java.util.List<java.lang.Integer> getLevelupRewardGotLevelListList();
+    /**
+     * <code>repeated uint32 levelup_reward_got_level_list = 12;</code>
+     * @return The count of levelupRewardGotLevelList.
+     */
+    int getLevelupRewardGotLevelListCount();
+    /**
+     * <code>repeated uint32 levelup_reward_got_level_list = 12;</code>
+     * @param index The index of the element to return.
+     * @return The levelupRewardGotLevelList at the given index.
+     */
+    int getLevelupRewardGotLevelList(int index);
   }
   /**
    * Protobuf type {@code PlayerHomeCompInfo}
@@ -94,9 +94,9 @@ public final class PlayerHomeCompInfoOuterClass {
     }
     private PlayerHomeCompInfo() {
       friendEnterHomeOption_ = 0;
-      levelupRewardGotLevelList_ = emptyIntList();
       seenModuleIdList_ = emptyIntList();
       unlockedModuleIdList_ = emptyIntList();
+      levelupRewardGotLevelList_ = emptyIntList();
     }
 
     @java.lang.Override
@@ -111,122 +111,6 @@ public final class PlayerHomeCompInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private PlayerHomeCompInfo(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 56: {
-              int rawValue = input.readEnum();
-
-              friendEnterHomeOption_ = rawValue;
-              break;
-            }
-            case 72: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                levelupRewardGotLevelList_ = newIntList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              levelupRewardGotLevelList_.addInt(input.readUInt32());
-              break;
-            }
-            case 74: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
-                levelupRewardGotLevelList_ = newIntList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                levelupRewardGotLevelList_.addInt(input.readUInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            case 104: {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                seenModuleIdList_ = newIntList();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              seenModuleIdList_.addInt(input.readUInt32());
-              break;
-            }
-            case 106: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000002) != 0) && input.getBytesUntilLimit() > 0) {
-                seenModuleIdList_ = newIntList();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                seenModuleIdList_.addInt(input.readUInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            case 120: {
-              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-                unlockedModuleIdList_ = newIntList();
-                mutable_bitField0_ |= 0x00000004;
-              }
-              unlockedModuleIdList_.addInt(input.readUInt32());
-              break;
-            }
-            case 122: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000004) != 0) && input.getBytesUntilLimit() > 0) {
-                unlockedModuleIdList_ = newIntList();
-                mutable_bitField0_ |= 0x00000004;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                unlockedModuleIdList_.addInt(input.readUInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          levelupRewardGotLevelList_.makeImmutable(); // C
-        }
-        if (((mutable_bitField0_ & 0x00000002) != 0)) {
-          seenModuleIdList_.makeImmutable(); // C
-        }
-        if (((mutable_bitField0_ & 0x00000004) != 0)) {
-          unlockedModuleIdList_.makeImmutable(); // C
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.PlayerHomeCompInfoOuterClass.internal_static_PlayerHomeCompInfo_descriptor;
@@ -240,17 +124,17 @@ public final class PlayerHomeCompInfoOuterClass {
               emu.grasscutter.net.proto.PlayerHomeCompInfoOuterClass.PlayerHomeCompInfo.class, emu.grasscutter.net.proto.PlayerHomeCompInfoOuterClass.PlayerHomeCompInfo.Builder.class);
     }
 
-    public static final int FRIEND_ENTER_HOME_OPTION_FIELD_NUMBER = 7;
+    public static final int FRIEND_ENTER_HOME_OPTION_FIELD_NUMBER = 8;
     private int friendEnterHomeOption_;
     /**
-     * <code>.FriendEnterHomeOption friend_enter_home_option = 7;</code>
+     * <code>.FriendEnterHomeOption friend_enter_home_option = 8;</code>
      * @return The enum numeric value on the wire for friendEnterHomeOption.
      */
     @java.lang.Override public int getFriendEnterHomeOptionValue() {
       return friendEnterHomeOption_;
     }
     /**
-     * <code>.FriendEnterHomeOption friend_enter_home_option = 7;</code>
+     * <code>.FriendEnterHomeOption friend_enter_home_option = 8;</code>
      * @return The friendEnterHomeOption.
      */
     @java.lang.Override public emu.grasscutter.net.proto.FriendEnterHomeOptionOuterClass.FriendEnterHomeOption getFriendEnterHomeOption() {
@@ -259,38 +143,10 @@ public final class PlayerHomeCompInfoOuterClass {
       return result == null ? emu.grasscutter.net.proto.FriendEnterHomeOptionOuterClass.FriendEnterHomeOption.UNRECOGNIZED : result;
     }
 
-    public static final int LEVELUP_REWARD_GOT_LEVEL_LIST_FIELD_NUMBER = 9;
-    private com.google.protobuf.Internal.IntList levelupRewardGotLevelList_;
-    /**
-     * <code>repeated uint32 levelup_reward_got_level_list = 9;</code>
-     * @return A list containing the levelupRewardGotLevelList.
-     */
-    @java.lang.Override
-    public java.util.List<java.lang.Integer>
-        getLevelupRewardGotLevelListList() {
-      return levelupRewardGotLevelList_;
-    }
-    /**
-     * <code>repeated uint32 levelup_reward_got_level_list = 9;</code>
-     * @return The count of levelupRewardGotLevelList.
-     */
-    public int getLevelupRewardGotLevelListCount() {
-      return levelupRewardGotLevelList_.size();
-    }
-    /**
-     * <code>repeated uint32 levelup_reward_got_level_list = 9;</code>
-     * @param index The index of the element to return.
-     * @return The levelupRewardGotLevelList at the given index.
-     */
-    public int getLevelupRewardGotLevelList(int index) {
-      return levelupRewardGotLevelList_.getInt(index);
-    }
-    private int levelupRewardGotLevelListMemoizedSerializedSize = -1;
-
-    public static final int SEEN_MODULE_ID_LIST_FIELD_NUMBER = 13;
+    public static final int SEEN_MODULE_ID_LIST_FIELD_NUMBER = 10;
     private com.google.protobuf.Internal.IntList seenModuleIdList_;
     /**
-     * <code>repeated uint32 seen_module_id_list = 13;</code>
+     * <code>repeated uint32 seen_module_id_list = 10;</code>
      * @return A list containing the seenModuleIdList.
      */
     @java.lang.Override
@@ -299,14 +155,14 @@ public final class PlayerHomeCompInfoOuterClass {
       return seenModuleIdList_;
     }
     /**
-     * <code>repeated uint32 seen_module_id_list = 13;</code>
+     * <code>repeated uint32 seen_module_id_list = 10;</code>
      * @return The count of seenModuleIdList.
      */
     public int getSeenModuleIdListCount() {
       return seenModuleIdList_.size();
     }
     /**
-     * <code>repeated uint32 seen_module_id_list = 13;</code>
+     * <code>repeated uint32 seen_module_id_list = 10;</code>
      * @param index The index of the element to return.
      * @return The seenModuleIdList at the given index.
      */
@@ -315,10 +171,10 @@ public final class PlayerHomeCompInfoOuterClass {
     }
     private int seenModuleIdListMemoizedSerializedSize = -1;
 
-    public static final int UNLOCKED_MODULE_ID_LIST_FIELD_NUMBER = 15;
+    public static final int UNLOCKED_MODULE_ID_LIST_FIELD_NUMBER = 11;
     private com.google.protobuf.Internal.IntList unlockedModuleIdList_;
     /**
-     * <code>repeated uint32 unlocked_module_id_list = 15;</code>
+     * <code>repeated uint32 unlocked_module_id_list = 11;</code>
      * @return A list containing the unlockedModuleIdList.
      */
     @java.lang.Override
@@ -327,14 +183,14 @@ public final class PlayerHomeCompInfoOuterClass {
       return unlockedModuleIdList_;
     }
     /**
-     * <code>repeated uint32 unlocked_module_id_list = 15;</code>
+     * <code>repeated uint32 unlocked_module_id_list = 11;</code>
      * @return The count of unlockedModuleIdList.
      */
     public int getUnlockedModuleIdListCount() {
       return unlockedModuleIdList_.size();
     }
     /**
-     * <code>repeated uint32 unlocked_module_id_list = 15;</code>
+     * <code>repeated uint32 unlocked_module_id_list = 11;</code>
      * @param index The index of the element to return.
      * @return The unlockedModuleIdList at the given index.
      */
@@ -342,6 +198,34 @@ public final class PlayerHomeCompInfoOuterClass {
       return unlockedModuleIdList_.getInt(index);
     }
     private int unlockedModuleIdListMemoizedSerializedSize = -1;
+
+    public static final int LEVELUP_REWARD_GOT_LEVEL_LIST_FIELD_NUMBER = 12;
+    private com.google.protobuf.Internal.IntList levelupRewardGotLevelList_;
+    /**
+     * <code>repeated uint32 levelup_reward_got_level_list = 12;</code>
+     * @return A list containing the levelupRewardGotLevelList.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Integer>
+        getLevelupRewardGotLevelListList() {
+      return levelupRewardGotLevelList_;
+    }
+    /**
+     * <code>repeated uint32 levelup_reward_got_level_list = 12;</code>
+     * @return The count of levelupRewardGotLevelList.
+     */
+    public int getLevelupRewardGotLevelListCount() {
+      return levelupRewardGotLevelList_.size();
+    }
+    /**
+     * <code>repeated uint32 levelup_reward_got_level_list = 12;</code>
+     * @param index The index of the element to return.
+     * @return The levelupRewardGotLevelList at the given index.
+     */
+    public int getLevelupRewardGotLevelList(int index) {
+      return levelupRewardGotLevelList_.getInt(index);
+    }
+    private int levelupRewardGotLevelListMemoizedSerializedSize = -1;
 
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
@@ -359,30 +243,30 @@ public final class PlayerHomeCompInfoOuterClass {
                         throws java.io.IOException {
       getSerializedSize();
       if (friendEnterHomeOption_ != emu.grasscutter.net.proto.FriendEnterHomeOptionOuterClass.FriendEnterHomeOption.FRIEND_ENTER_HOME_OPTION_NEED_CONFIRM.getNumber()) {
-        output.writeEnum(7, friendEnterHomeOption_);
-      }
-      if (getLevelupRewardGotLevelListList().size() > 0) {
-        output.writeUInt32NoTag(74);
-        output.writeUInt32NoTag(levelupRewardGotLevelListMemoizedSerializedSize);
-      }
-      for (int i = 0; i < levelupRewardGotLevelList_.size(); i++) {
-        output.writeUInt32NoTag(levelupRewardGotLevelList_.getInt(i));
+        output.writeEnum(8, friendEnterHomeOption_);
       }
       if (getSeenModuleIdListList().size() > 0) {
-        output.writeUInt32NoTag(106);
+        output.writeUInt32NoTag(82);
         output.writeUInt32NoTag(seenModuleIdListMemoizedSerializedSize);
       }
       for (int i = 0; i < seenModuleIdList_.size(); i++) {
         output.writeUInt32NoTag(seenModuleIdList_.getInt(i));
       }
       if (getUnlockedModuleIdListList().size() > 0) {
-        output.writeUInt32NoTag(122);
+        output.writeUInt32NoTag(90);
         output.writeUInt32NoTag(unlockedModuleIdListMemoizedSerializedSize);
       }
       for (int i = 0; i < unlockedModuleIdList_.size(); i++) {
         output.writeUInt32NoTag(unlockedModuleIdList_.getInt(i));
       }
-      unknownFields.writeTo(output);
+      if (getLevelupRewardGotLevelListList().size() > 0) {
+        output.writeUInt32NoTag(98);
+        output.writeUInt32NoTag(levelupRewardGotLevelListMemoizedSerializedSize);
+      }
+      for (int i = 0; i < levelupRewardGotLevelList_.size(); i++) {
+        output.writeUInt32NoTag(levelupRewardGotLevelList_.getInt(i));
+      }
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -393,21 +277,7 @@ public final class PlayerHomeCompInfoOuterClass {
       size = 0;
       if (friendEnterHomeOption_ != emu.grasscutter.net.proto.FriendEnterHomeOptionOuterClass.FriendEnterHomeOption.FRIEND_ENTER_HOME_OPTION_NEED_CONFIRM.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(7, friendEnterHomeOption_);
-      }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < levelupRewardGotLevelList_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
-            .computeUInt32SizeNoTag(levelupRewardGotLevelList_.getInt(i));
-        }
-        size += dataSize;
-        if (!getLevelupRewardGotLevelListList().isEmpty()) {
-          size += 1;
-          size += com.google.protobuf.CodedOutputStream
-              .computeInt32SizeNoTag(dataSize);
-        }
-        levelupRewardGotLevelListMemoizedSerializedSize = dataSize;
+          .computeEnumSize(8, friendEnterHomeOption_);
       }
       {
         int dataSize = 0;
@@ -437,7 +307,21 @@ public final class PlayerHomeCompInfoOuterClass {
         }
         unlockedModuleIdListMemoizedSerializedSize = dataSize;
       }
-      size += unknownFields.getSerializedSize();
+      {
+        int dataSize = 0;
+        for (int i = 0; i < levelupRewardGotLevelList_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(levelupRewardGotLevelList_.getInt(i));
+        }
+        size += dataSize;
+        if (!getLevelupRewardGotLevelListList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        levelupRewardGotLevelListMemoizedSerializedSize = dataSize;
+      }
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -453,13 +337,13 @@ public final class PlayerHomeCompInfoOuterClass {
       emu.grasscutter.net.proto.PlayerHomeCompInfoOuterClass.PlayerHomeCompInfo other = (emu.grasscutter.net.proto.PlayerHomeCompInfoOuterClass.PlayerHomeCompInfo) obj;
 
       if (friendEnterHomeOption_ != other.friendEnterHomeOption_) return false;
-      if (!getLevelupRewardGotLevelListList()
-          .equals(other.getLevelupRewardGotLevelListList())) return false;
       if (!getSeenModuleIdListList()
           .equals(other.getSeenModuleIdListList())) return false;
       if (!getUnlockedModuleIdListList()
           .equals(other.getUnlockedModuleIdListList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getLevelupRewardGotLevelListList()
+          .equals(other.getLevelupRewardGotLevelListList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -472,10 +356,6 @@ public final class PlayerHomeCompInfoOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + FRIEND_ENTER_HOME_OPTION_FIELD_NUMBER;
       hash = (53 * hash) + friendEnterHomeOption_;
-      if (getLevelupRewardGotLevelListCount() > 0) {
-        hash = (37 * hash) + LEVELUP_REWARD_GOT_LEVEL_LIST_FIELD_NUMBER;
-        hash = (53 * hash) + getLevelupRewardGotLevelListList().hashCode();
-      }
       if (getSeenModuleIdListCount() > 0) {
         hash = (37 * hash) + SEEN_MODULE_ID_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getSeenModuleIdListList().hashCode();
@@ -484,7 +364,11 @@ public final class PlayerHomeCompInfoOuterClass {
         hash = (37 * hash) + UNLOCKED_MODULE_ID_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getUnlockedModuleIdListList().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      if (getLevelupRewardGotLevelListCount() > 0) {
+        hash = (37 * hash) + LEVELUP_REWARD_GOT_LEVEL_LIST_FIELD_NUMBER;
+        hash = (53 * hash) + getLevelupRewardGotLevelListList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -601,29 +485,24 @@ public final class PlayerHomeCompInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.PlayerHomeCompInfoOuterClass.PlayerHomeCompInfo.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
         friendEnterHomeOption_ = 0;
 
-        levelupRewardGotLevelList_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000001);
         seenModuleIdList_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         unlockedModuleIdList_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        levelupRewardGotLevelList_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
@@ -654,20 +533,20 @@ public final class PlayerHomeCompInfoOuterClass {
         int from_bitField0_ = bitField0_;
         result.friendEnterHomeOption_ = friendEnterHomeOption_;
         if (((bitField0_ & 0x00000001) != 0)) {
-          levelupRewardGotLevelList_.makeImmutable();
+          seenModuleIdList_.makeImmutable();
           bitField0_ = (bitField0_ & ~0x00000001);
         }
-        result.levelupRewardGotLevelList_ = levelupRewardGotLevelList_;
+        result.seenModuleIdList_ = seenModuleIdList_;
         if (((bitField0_ & 0x00000002) != 0)) {
-          seenModuleIdList_.makeImmutable();
+          unlockedModuleIdList_.makeImmutable();
           bitField0_ = (bitField0_ & ~0x00000002);
         }
-        result.seenModuleIdList_ = seenModuleIdList_;
+        result.unlockedModuleIdList_ = unlockedModuleIdList_;
         if (((bitField0_ & 0x00000004) != 0)) {
-          unlockedModuleIdList_.makeImmutable();
+          levelupRewardGotLevelList_.makeImmutable();
           bitField0_ = (bitField0_ & ~0x00000004);
         }
-        result.unlockedModuleIdList_ = unlockedModuleIdList_;
+        result.levelupRewardGotLevelList_ = levelupRewardGotLevelList_;
         onBuilt();
         return result;
       }
@@ -719,20 +598,10 @@ public final class PlayerHomeCompInfoOuterClass {
         if (other.friendEnterHomeOption_ != 0) {
           setFriendEnterHomeOptionValue(other.getFriendEnterHomeOptionValue());
         }
-        if (!other.levelupRewardGotLevelList_.isEmpty()) {
-          if (levelupRewardGotLevelList_.isEmpty()) {
-            levelupRewardGotLevelList_ = other.levelupRewardGotLevelList_;
-            bitField0_ = (bitField0_ & ~0x00000001);
-          } else {
-            ensureLevelupRewardGotLevelListIsMutable();
-            levelupRewardGotLevelList_.addAll(other.levelupRewardGotLevelList_);
-          }
-          onChanged();
-        }
         if (!other.seenModuleIdList_.isEmpty()) {
           if (seenModuleIdList_.isEmpty()) {
             seenModuleIdList_ = other.seenModuleIdList_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureSeenModuleIdListIsMutable();
             seenModuleIdList_.addAll(other.seenModuleIdList_);
@@ -742,14 +611,24 @@ public final class PlayerHomeCompInfoOuterClass {
         if (!other.unlockedModuleIdList_.isEmpty()) {
           if (unlockedModuleIdList_.isEmpty()) {
             unlockedModuleIdList_ = other.unlockedModuleIdList_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureUnlockedModuleIdListIsMutable();
             unlockedModuleIdList_.addAll(other.unlockedModuleIdList_);
           }
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        if (!other.levelupRewardGotLevelList_.isEmpty()) {
+          if (levelupRewardGotLevelList_.isEmpty()) {
+            levelupRewardGotLevelList_ = other.levelupRewardGotLevelList_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            ensureLevelupRewardGotLevelListIsMutable();
+            levelupRewardGotLevelList_.addAll(other.levelupRewardGotLevelList_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -764,31 +643,97 @@ public final class PlayerHomeCompInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.PlayerHomeCompInfoOuterClass.PlayerHomeCompInfo parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 64: {
+                friendEnterHomeOption_ = input.readEnum();
+
+                break;
+              } // case 64
+              case 80: {
+                int v = input.readUInt32();
+                ensureSeenModuleIdListIsMutable();
+                seenModuleIdList_.addInt(v);
+                break;
+              } // case 80
+              case 82: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureSeenModuleIdListIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  seenModuleIdList_.addInt(input.readUInt32());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 82
+              case 88: {
+                int v = input.readUInt32();
+                ensureUnlockedModuleIdListIsMutable();
+                unlockedModuleIdList_.addInt(v);
+                break;
+              } // case 88
+              case 90: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureUnlockedModuleIdListIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  unlockedModuleIdList_.addInt(input.readUInt32());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 90
+              case 96: {
+                int v = input.readUInt32();
+                ensureLevelupRewardGotLevelListIsMutable();
+                levelupRewardGotLevelList_.addInt(v);
+                break;
+              } // case 96
+              case 98: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureLevelupRewardGotLevelListIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  levelupRewardGotLevelList_.addInt(input.readUInt32());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 98
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.PlayerHomeCompInfoOuterClass.PlayerHomeCompInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
 
       private int friendEnterHomeOption_ = 0;
       /**
-       * <code>.FriendEnterHomeOption friend_enter_home_option = 7;</code>
+       * <code>.FriendEnterHomeOption friend_enter_home_option = 8;</code>
        * @return The enum numeric value on the wire for friendEnterHomeOption.
        */
       @java.lang.Override public int getFriendEnterHomeOptionValue() {
         return friendEnterHomeOption_;
       }
       /**
-       * <code>.FriendEnterHomeOption friend_enter_home_option = 7;</code>
+       * <code>.FriendEnterHomeOption friend_enter_home_option = 8;</code>
        * @param value The enum numeric value on the wire for friendEnterHomeOption to set.
        * @return This builder for chaining.
        */
@@ -799,7 +744,7 @@ public final class PlayerHomeCompInfoOuterClass {
         return this;
       }
       /**
-       * <code>.FriendEnterHomeOption friend_enter_home_option = 7;</code>
+       * <code>.FriendEnterHomeOption friend_enter_home_option = 8;</code>
        * @return The friendEnterHomeOption.
        */
       @java.lang.Override
@@ -809,7 +754,7 @@ public final class PlayerHomeCompInfoOuterClass {
         return result == null ? emu.grasscutter.net.proto.FriendEnterHomeOptionOuterClass.FriendEnterHomeOption.UNRECOGNIZED : result;
       }
       /**
-       * <code>.FriendEnterHomeOption friend_enter_home_option = 7;</code>
+       * <code>.FriendEnterHomeOption friend_enter_home_option = 8;</code>
        * @param value The friendEnterHomeOption to set.
        * @return This builder for chaining.
        */
@@ -823,7 +768,7 @@ public final class PlayerHomeCompInfoOuterClass {
         return this;
       }
       /**
-       * <code>.FriendEnterHomeOption friend_enter_home_option = 7;</code>
+       * <code>.FriendEnterHomeOption friend_enter_home_option = 8;</code>
        * @return This builder for chaining.
        */
       public Builder clearFriendEnterHomeOption() {
@@ -833,110 +778,31 @@ public final class PlayerHomeCompInfoOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Internal.IntList levelupRewardGotLevelList_ = emptyIntList();
-      private void ensureLevelupRewardGotLevelListIsMutable() {
+      private com.google.protobuf.Internal.IntList seenModuleIdList_ = emptyIntList();
+      private void ensureSeenModuleIdListIsMutable() {
         if (!((bitField0_ & 0x00000001) != 0)) {
-          levelupRewardGotLevelList_ = mutableCopy(levelupRewardGotLevelList_);
+          seenModuleIdList_ = mutableCopy(seenModuleIdList_);
           bitField0_ |= 0x00000001;
          }
       }
       /**
-       * <code>repeated uint32 levelup_reward_got_level_list = 9;</code>
-       * @return A list containing the levelupRewardGotLevelList.
-       */
-      public java.util.List<java.lang.Integer>
-          getLevelupRewardGotLevelListList() {
-        return ((bitField0_ & 0x00000001) != 0) ?
-                 java.util.Collections.unmodifiableList(levelupRewardGotLevelList_) : levelupRewardGotLevelList_;
-      }
-      /**
-       * <code>repeated uint32 levelup_reward_got_level_list = 9;</code>
-       * @return The count of levelupRewardGotLevelList.
-       */
-      public int getLevelupRewardGotLevelListCount() {
-        return levelupRewardGotLevelList_.size();
-      }
-      /**
-       * <code>repeated uint32 levelup_reward_got_level_list = 9;</code>
-       * @param index The index of the element to return.
-       * @return The levelupRewardGotLevelList at the given index.
-       */
-      public int getLevelupRewardGotLevelList(int index) {
-        return levelupRewardGotLevelList_.getInt(index);
-      }
-      /**
-       * <code>repeated uint32 levelup_reward_got_level_list = 9;</code>
-       * @param index The index to set the value at.
-       * @param value The levelupRewardGotLevelList to set.
-       * @return This builder for chaining.
-       */
-      public Builder setLevelupRewardGotLevelList(
-          int index, int value) {
-        ensureLevelupRewardGotLevelListIsMutable();
-        levelupRewardGotLevelList_.setInt(index, value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated uint32 levelup_reward_got_level_list = 9;</code>
-       * @param value The levelupRewardGotLevelList to add.
-       * @return This builder for chaining.
-       */
-      public Builder addLevelupRewardGotLevelList(int value) {
-        ensureLevelupRewardGotLevelListIsMutable();
-        levelupRewardGotLevelList_.addInt(value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated uint32 levelup_reward_got_level_list = 9;</code>
-       * @param values The levelupRewardGotLevelList to add.
-       * @return This builder for chaining.
-       */
-      public Builder addAllLevelupRewardGotLevelList(
-          java.lang.Iterable<? extends java.lang.Integer> values) {
-        ensureLevelupRewardGotLevelListIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, levelupRewardGotLevelList_);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated uint32 levelup_reward_got_level_list = 9;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearLevelupRewardGotLevelList() {
-        levelupRewardGotLevelList_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
-        return this;
-      }
-
-      private com.google.protobuf.Internal.IntList seenModuleIdList_ = emptyIntList();
-      private void ensureSeenModuleIdListIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
-          seenModuleIdList_ = mutableCopy(seenModuleIdList_);
-          bitField0_ |= 0x00000002;
-         }
-      }
-      /**
-       * <code>repeated uint32 seen_module_id_list = 13;</code>
+       * <code>repeated uint32 seen_module_id_list = 10;</code>
        * @return A list containing the seenModuleIdList.
        */
       public java.util.List<java.lang.Integer>
           getSeenModuleIdListList() {
-        return ((bitField0_ & 0x00000002) != 0) ?
+        return ((bitField0_ & 0x00000001) != 0) ?
                  java.util.Collections.unmodifiableList(seenModuleIdList_) : seenModuleIdList_;
       }
       /**
-       * <code>repeated uint32 seen_module_id_list = 13;</code>
+       * <code>repeated uint32 seen_module_id_list = 10;</code>
        * @return The count of seenModuleIdList.
        */
       public int getSeenModuleIdListCount() {
         return seenModuleIdList_.size();
       }
       /**
-       * <code>repeated uint32 seen_module_id_list = 13;</code>
+       * <code>repeated uint32 seen_module_id_list = 10;</code>
        * @param index The index of the element to return.
        * @return The seenModuleIdList at the given index.
        */
@@ -944,7 +810,7 @@ public final class PlayerHomeCompInfoOuterClass {
         return seenModuleIdList_.getInt(index);
       }
       /**
-       * <code>repeated uint32 seen_module_id_list = 13;</code>
+       * <code>repeated uint32 seen_module_id_list = 10;</code>
        * @param index The index to set the value at.
        * @param value The seenModuleIdList to set.
        * @return This builder for chaining.
@@ -957,7 +823,7 @@ public final class PlayerHomeCompInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 seen_module_id_list = 13;</code>
+       * <code>repeated uint32 seen_module_id_list = 10;</code>
        * @param value The seenModuleIdList to add.
        * @return This builder for chaining.
        */
@@ -968,7 +834,7 @@ public final class PlayerHomeCompInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 seen_module_id_list = 13;</code>
+       * <code>repeated uint32 seen_module_id_list = 10;</code>
        * @param values The seenModuleIdList to add.
        * @return This builder for chaining.
        */
@@ -981,41 +847,41 @@ public final class PlayerHomeCompInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 seen_module_id_list = 13;</code>
+       * <code>repeated uint32 seen_module_id_list = 10;</code>
        * @return This builder for chaining.
        */
       public Builder clearSeenModuleIdList() {
         seenModuleIdList_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
 
       private com.google.protobuf.Internal.IntList unlockedModuleIdList_ = emptyIntList();
       private void ensureUnlockedModuleIdListIsMutable() {
-        if (!((bitField0_ & 0x00000004) != 0)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           unlockedModuleIdList_ = mutableCopy(unlockedModuleIdList_);
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000002;
          }
       }
       /**
-       * <code>repeated uint32 unlocked_module_id_list = 15;</code>
+       * <code>repeated uint32 unlocked_module_id_list = 11;</code>
        * @return A list containing the unlockedModuleIdList.
        */
       public java.util.List<java.lang.Integer>
           getUnlockedModuleIdListList() {
-        return ((bitField0_ & 0x00000004) != 0) ?
+        return ((bitField0_ & 0x00000002) != 0) ?
                  java.util.Collections.unmodifiableList(unlockedModuleIdList_) : unlockedModuleIdList_;
       }
       /**
-       * <code>repeated uint32 unlocked_module_id_list = 15;</code>
+       * <code>repeated uint32 unlocked_module_id_list = 11;</code>
        * @return The count of unlockedModuleIdList.
        */
       public int getUnlockedModuleIdListCount() {
         return unlockedModuleIdList_.size();
       }
       /**
-       * <code>repeated uint32 unlocked_module_id_list = 15;</code>
+       * <code>repeated uint32 unlocked_module_id_list = 11;</code>
        * @param index The index of the element to return.
        * @return The unlockedModuleIdList at the given index.
        */
@@ -1023,7 +889,7 @@ public final class PlayerHomeCompInfoOuterClass {
         return unlockedModuleIdList_.getInt(index);
       }
       /**
-       * <code>repeated uint32 unlocked_module_id_list = 15;</code>
+       * <code>repeated uint32 unlocked_module_id_list = 11;</code>
        * @param index The index to set the value at.
        * @param value The unlockedModuleIdList to set.
        * @return This builder for chaining.
@@ -1036,7 +902,7 @@ public final class PlayerHomeCompInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 unlocked_module_id_list = 15;</code>
+       * <code>repeated uint32 unlocked_module_id_list = 11;</code>
        * @param value The unlockedModuleIdList to add.
        * @return This builder for chaining.
        */
@@ -1047,7 +913,7 @@ public final class PlayerHomeCompInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 unlocked_module_id_list = 15;</code>
+       * <code>repeated uint32 unlocked_module_id_list = 11;</code>
        * @param values The unlockedModuleIdList to add.
        * @return This builder for chaining.
        */
@@ -1060,11 +926,90 @@ public final class PlayerHomeCompInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 unlocked_module_id_list = 15;</code>
+       * <code>repeated uint32 unlocked_module_id_list = 11;</code>
        * @return This builder for chaining.
        */
       public Builder clearUnlockedModuleIdList() {
         unlockedModuleIdList_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Internal.IntList levelupRewardGotLevelList_ = emptyIntList();
+      private void ensureLevelupRewardGotLevelListIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          levelupRewardGotLevelList_ = mutableCopy(levelupRewardGotLevelList_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+      /**
+       * <code>repeated uint32 levelup_reward_got_level_list = 12;</code>
+       * @return A list containing the levelupRewardGotLevelList.
+       */
+      public java.util.List<java.lang.Integer>
+          getLevelupRewardGotLevelListList() {
+        return ((bitField0_ & 0x00000004) != 0) ?
+                 java.util.Collections.unmodifiableList(levelupRewardGotLevelList_) : levelupRewardGotLevelList_;
+      }
+      /**
+       * <code>repeated uint32 levelup_reward_got_level_list = 12;</code>
+       * @return The count of levelupRewardGotLevelList.
+       */
+      public int getLevelupRewardGotLevelListCount() {
+        return levelupRewardGotLevelList_.size();
+      }
+      /**
+       * <code>repeated uint32 levelup_reward_got_level_list = 12;</code>
+       * @param index The index of the element to return.
+       * @return The levelupRewardGotLevelList at the given index.
+       */
+      public int getLevelupRewardGotLevelList(int index) {
+        return levelupRewardGotLevelList_.getInt(index);
+      }
+      /**
+       * <code>repeated uint32 levelup_reward_got_level_list = 12;</code>
+       * @param index The index to set the value at.
+       * @param value The levelupRewardGotLevelList to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLevelupRewardGotLevelList(
+          int index, int value) {
+        ensureLevelupRewardGotLevelListIsMutable();
+        levelupRewardGotLevelList_.setInt(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 levelup_reward_got_level_list = 12;</code>
+       * @param value The levelupRewardGotLevelList to add.
+       * @return This builder for chaining.
+       */
+      public Builder addLevelupRewardGotLevelList(int value) {
+        ensureLevelupRewardGotLevelListIsMutable();
+        levelupRewardGotLevelList_.addInt(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 levelup_reward_got_level_list = 12;</code>
+       * @param values The levelupRewardGotLevelList to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllLevelupRewardGotLevelList(
+          java.lang.Iterable<? extends java.lang.Integer> values) {
+        ensureLevelupRewardGotLevelListIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, levelupRewardGotLevelList_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 levelup_reward_got_level_list = 12;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLevelupRewardGotLevelList() {
+        levelupRewardGotLevelList_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
@@ -1102,7 +1047,18 @@ public final class PlayerHomeCompInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new PlayerHomeCompInfo(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -1138,10 +1094,10 @@ public final class PlayerHomeCompInfoOuterClass {
     java.lang.String[] descriptorData = {
       "\n\030PlayerHomeCompInfo.proto\032\033FriendEnterH" +
       "omeOption.proto\"\263\001\n\022PlayerHomeCompInfo\0228" +
-      "\n\030friend_enter_home_option\030\007 \001(\0162\026.Frien" +
-      "dEnterHomeOption\022%\n\035levelup_reward_got_l" +
-      "evel_list\030\t \003(\r\022\033\n\023seen_module_id_list\030\r" +
-      " \003(\r\022\037\n\027unlocked_module_id_list\030\017 \003(\rB\033\n" +
+      "\n\030friend_enter_home_option\030\010 \001(\0162\026.Frien" +
+      "dEnterHomeOption\022\033\n\023seen_module_id_list\030" +
+      "\n \003(\r\022\037\n\027unlocked_module_id_list\030\013 \003(\r\022%" +
+      "\n\035levelup_reward_got_level_list\030\014 \003(\rB\033\n" +
       "\031emu.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -1154,7 +1110,7 @@ public final class PlayerHomeCompInfoOuterClass {
     internal_static_PlayerHomeCompInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_PlayerHomeCompInfo_descriptor,
-        new java.lang.String[] { "FriendEnterHomeOption", "LevelupRewardGotLevelList", "SeenModuleIdList", "UnlockedModuleIdList", });
+        new java.lang.String[] { "FriendEnterHomeOption", "SeenModuleIdList", "UnlockedModuleIdList", "LevelupRewardGotLevelList", });
     emu.grasscutter.net.proto.FriendEnterHomeOptionOuterClass.getDescriptor();
   }
 

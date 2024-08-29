@@ -60,10 +60,10 @@ public final class SceneGadgetInfoOuterClass {
     int getGadgetState();
 
     /**
-     * <code>uint32 KPKNNJLPMFP = 7;</code>
-     * @return The kPKNNJLPMFP.
+     * <code>uint32 gadget_type = 7;</code>
+     * @return The gadgetType.
      */
-    int getKPKNNJLPMFP();
+    int getGadgetType();
 
     /**
      * <code>bool is_show_cutscene = 8;</code>
@@ -84,10 +84,91 @@ public final class SceneGadgetInfoOuterClass {
     boolean getIsEnableInteract();
 
     /**
-     * <code>uint32 CLICILNBKDD = 11;</code>
-     * @return The cLICILNBKDD.
+     * <code>uint32 interact_id = 11;</code>
+     * @return The interactId.
      */
-    int getCLICILNBKDD();
+    int getInteractId();
+
+    /**
+     * <code>uint32 mark_flag = 21;</code>
+     * @return The markFlag.
+     */
+    int getMarkFlag();
+
+    /**
+     * <code>uint32 prop_owner_entity_id = 22;</code>
+     * @return The propOwnerEntityId.
+     */
+    int getPropOwnerEntityId();
+
+    /**
+     * <code>.PlatformInfo platform = 23;</code>
+     * @return Whether the platform field is set.
+     */
+    boolean hasPlatform();
+    /**
+     * <code>.PlatformInfo platform = 23;</code>
+     * @return The platform.
+     */
+    emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfo getPlatform();
+    /**
+     * <code>.PlatformInfo platform = 23;</code>
+     */
+    emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfoOrBuilder getPlatformOrBuilder();
+
+    /**
+     * <code>repeated uint32 interact_uid_list = 24;</code>
+     * @return A list containing the interactUidList.
+     */
+    java.util.List<java.lang.Integer> getInteractUidListList();
+    /**
+     * <code>repeated uint32 interact_uid_list = 24;</code>
+     * @return The count of interactUidList.
+     */
+    int getInteractUidListCount();
+    /**
+     * <code>repeated uint32 interact_uid_list = 24;</code>
+     * @param index The index of the element to return.
+     * @return The interactUidList at the given index.
+     */
+    int getInteractUidList(int index);
+
+    /**
+     * <code>uint32 draft_id = 25;</code>
+     * @return The draftId.
+     */
+    int getDraftId();
+
+    /**
+     * <code>uint32 gadget_talk_state = 26;</code>
+     * @return The gadgetTalkState.
+     */
+    int getGadgetTalkState();
+
+    /**
+     * <pre>
+     *OKJCNOADKMM IGMDELMIHMA = 27;
+     * </pre>
+     *
+     * <code>uint32 init_pose_id = 28;</code>
+     * @return The initPoseId.
+     */
+    int getInitPoseId();
+
+    /**
+     * <code>.GadgetPlayInfo play_info = 100;</code>
+     * @return Whether the playInfo field is set.
+     */
+    boolean hasPlayInfo();
+    /**
+     * <code>.GadgetPlayInfo play_info = 100;</code>
+     * @return The playInfo.
+     */
+    emu.grasscutter.net.proto.GadgetPlayInfoOuterClass.GadgetPlayInfo getPlayInfo();
+    /**
+     * <code>.GadgetPlayInfo play_info = 100;</code>
+     */
+    emu.grasscutter.net.proto.GadgetPlayInfoOuterClass.GadgetPlayInfoOrBuilder getPlayInfoOrBuilder();
 
     /**
      * <code>.GatherGadgetInfo gather_gadget = 13;</code>
@@ -405,124 +486,23 @@ public final class SceneGadgetInfoOuterClass {
     emu.grasscutter.net.proto.CoinCollectOperatorInfoOuterClass.CoinCollectOperatorInfoOrBuilder getCoinCollectOperatorInfoOrBuilder();
 
     /**
-     * <pre>
-     *Item trifle_item = 67;
-     * </pre>
-     *
      * <code>.TrifleGadget trifle_gadget = 67;</code>
      * @return Whether the trifleGadget field is set.
      */
     boolean hasTrifleGadget();
     /**
-     * <pre>
-     *Item trifle_item = 67;
-     * </pre>
-     *
      * <code>.TrifleGadget trifle_gadget = 67;</code>
      * @return The trifleGadget.
      */
     emu.grasscutter.net.proto.TrifleGadgetOuterClass.TrifleGadget getTrifleGadget();
     /**
-     * <pre>
-     *Item trifle_item = 67;
-     * </pre>
-     *
      * <code>.TrifleGadget trifle_gadget = 67;</code>
      */
     emu.grasscutter.net.proto.TrifleGadgetOuterClass.TrifleGadgetOrBuilder getTrifleGadgetOrBuilder();
 
-    /**
-     * <code>uint32 mark_flag = 21;</code>
-     * @return The markFlag.
-     */
-    int getMarkFlag();
-
-    /**
-     * <code>uint32 prop_owner_entity_id = 22;</code>
-     * @return The propOwnerEntityId.
-     */
-    int getPropOwnerEntityId();
-
-    /**
-     * <code>.PlatformInfo platform = 23;</code>
-     * @return Whether the platform field is set.
-     */
-    boolean hasPlatform();
-    /**
-     * <code>.PlatformInfo platform = 23;</code>
-     * @return The platform.
-     */
-    emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfo getPlatform();
-    /**
-     * <code>.PlatformInfo platform = 23;</code>
-     */
-    emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfoOrBuilder getPlatformOrBuilder();
-
-    /**
-     * <code>repeated uint32 interact_uid_list = 24;</code>
-     * @return A list containing the interactUidList.
-     */
-    java.util.List<java.lang.Integer> getInteractUidListList();
-    /**
-     * <code>repeated uint32 interact_uid_list = 24;</code>
-     * @return The count of interactUidList.
-     */
-    int getInteractUidListCount();
-    /**
-     * <code>repeated uint32 interact_uid_list = 24;</code>
-     * @param index The index of the element to return.
-     * @return The interactUidList at the given index.
-     */
-    int getInteractUidList(int index);
-
-    /**
-     * <code>uint32 draft_id = 25;</code>
-     * @return The draftId.
-     */
-    int getDraftId();
-
-    /**
-     * <code>uint32 KHICBPFFAII = 26;</code>
-     * @return The kHICBPFFAII.
-     */
-    int getKHICBPFFAII();
-
-    /**
-     * <pre>
-     *JMFPBNKNHED GPOHBBPBBEC = 27;
-     * </pre>
-     *
-     * <code>.GadgetPlayInfo play_info = 100;</code>
-     * @return Whether the playInfo field is set.
-     */
-    boolean hasPlayInfo();
-    /**
-     * <pre>
-     *JMFPBNKNHED GPOHBBPBBEC = 27;
-     * </pre>
-     *
-     * <code>.GadgetPlayInfo play_info = 100;</code>
-     * @return The playInfo.
-     */
-    emu.grasscutter.net.proto.GadgetPlayInfoOuterClass.GadgetPlayInfo getPlayInfo();
-    /**
-     * <pre>
-     *JMFPBNKNHED GPOHBBPBBEC = 27;
-     * </pre>
-     *
-     * <code>.GadgetPlayInfo play_info = 100;</code>
-     */
-    emu.grasscutter.net.proto.GadgetPlayInfoOuterClass.GadgetPlayInfoOrBuilder getPlayInfoOrBuilder();
-
     public emu.grasscutter.net.proto.SceneGadgetInfoOuterClass.SceneGadgetInfo.ContentCase getContentCase();
   }
   /**
-   * <pre>
-   *import "GDGKKLFMJKH.proto";
-   *import "OMBIJJLAHFB.proto";
-   *import "BDOCPDNCIEF.proto";
-   * </pre>
-   *
    * Protobuf type {@code SceneGadgetInfo}
    */
   public static final class SceneGadgetInfo extends
@@ -550,478 +530,6 @@ public final class SceneGadgetInfoOuterClass {
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
-    }
-    private SceneGadgetInfo(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-
-              gadgetId_ = input.readUInt32();
-              break;
-            }
-            case 16: {
-
-              groupId_ = input.readUInt32();
-              break;
-            }
-            case 24: {
-
-              configId_ = input.readUInt32();
-              break;
-            }
-            case 32: {
-
-              ownerEntityId_ = input.readUInt32();
-              break;
-            }
-            case 40: {
-              int rawValue = input.readEnum();
-
-              bornType_ = rawValue;
-              break;
-            }
-            case 48: {
-
-              gadgetState_ = input.readUInt32();
-              break;
-            }
-            case 56: {
-
-              kPKNNJLPMFP_ = input.readUInt32();
-              break;
-            }
-            case 64: {
-
-              isShowCutscene_ = input.readBool();
-              break;
-            }
-            case 72: {
-
-              authorityPeerId_ = input.readUInt32();
-              break;
-            }
-            case 80: {
-
-              isEnableInteract_ = input.readBool();
-              break;
-            }
-            case 88: {
-
-              cLICILNBKDD_ = input.readUInt32();
-              break;
-            }
-            case 106: {
-              emu.grasscutter.net.proto.GatherGadgetInfoOuterClass.GatherGadgetInfo.Builder subBuilder = null;
-              if (contentCase_ == 13) {
-                subBuilder = ((emu.grasscutter.net.proto.GatherGadgetInfoOuterClass.GatherGadgetInfo) content_).toBuilder();
-              }
-              content_ =
-                  input.readMessage(emu.grasscutter.net.proto.GatherGadgetInfoOuterClass.GatherGadgetInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.GatherGadgetInfoOuterClass.GatherGadgetInfo) content_);
-                content_ = subBuilder.buildPartial();
-              }
-              contentCase_ = 13;
-              break;
-            }
-            case 114: {
-              emu.grasscutter.net.proto.WorktopInfoOuterClass.WorktopInfo.Builder subBuilder = null;
-              if (contentCase_ == 14) {
-                subBuilder = ((emu.grasscutter.net.proto.WorktopInfoOuterClass.WorktopInfo) content_).toBuilder();
-              }
-              content_ =
-                  input.readMessage(emu.grasscutter.net.proto.WorktopInfoOuterClass.WorktopInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.WorktopInfoOuterClass.WorktopInfo) content_);
-                content_ = subBuilder.buildPartial();
-              }
-              contentCase_ = 14;
-              break;
-            }
-            case 122: {
-              emu.grasscutter.net.proto.ClientGadgetInfoOuterClass.ClientGadgetInfo.Builder subBuilder = null;
-              if (contentCase_ == 15) {
-                subBuilder = ((emu.grasscutter.net.proto.ClientGadgetInfoOuterClass.ClientGadgetInfo) content_).toBuilder();
-              }
-              content_ =
-                  input.readMessage(emu.grasscutter.net.proto.ClientGadgetInfoOuterClass.ClientGadgetInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.ClientGadgetInfoOuterClass.ClientGadgetInfo) content_);
-                content_ = subBuilder.buildPartial();
-              }
-              contentCase_ = 15;
-              break;
-            }
-            case 138: {
-              emu.grasscutter.net.proto.WeatherInfoOuterClass.WeatherInfo.Builder subBuilder = null;
-              if (contentCase_ == 17) {
-                subBuilder = ((emu.grasscutter.net.proto.WeatherInfoOuterClass.WeatherInfo) content_).toBuilder();
-              }
-              content_ =
-                  input.readMessage(emu.grasscutter.net.proto.WeatherInfoOuterClass.WeatherInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.WeatherInfoOuterClass.WeatherInfo) content_);
-                content_ = subBuilder.buildPartial();
-              }
-              contentCase_ = 17;
-              break;
-            }
-            case 146: {
-              emu.grasscutter.net.proto.AbilityGadgetInfoOuterClass.AbilityGadgetInfo.Builder subBuilder = null;
-              if (contentCase_ == 18) {
-                subBuilder = ((emu.grasscutter.net.proto.AbilityGadgetInfoOuterClass.AbilityGadgetInfo) content_).toBuilder();
-              }
-              content_ =
-                  input.readMessage(emu.grasscutter.net.proto.AbilityGadgetInfoOuterClass.AbilityGadgetInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.AbilityGadgetInfoOuterClass.AbilityGadgetInfo) content_);
-                content_ = subBuilder.buildPartial();
-              }
-              contentCase_ = 18;
-              break;
-            }
-            case 154: {
-              emu.grasscutter.net.proto.StatueGadgetInfoOuterClass.StatueGadgetInfo.Builder subBuilder = null;
-              if (contentCase_ == 19) {
-                subBuilder = ((emu.grasscutter.net.proto.StatueGadgetInfoOuterClass.StatueGadgetInfo) content_).toBuilder();
-              }
-              content_ =
-                  input.readMessage(emu.grasscutter.net.proto.StatueGadgetInfoOuterClass.StatueGadgetInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.StatueGadgetInfoOuterClass.StatueGadgetInfo) content_);
-                content_ = subBuilder.buildPartial();
-              }
-              contentCase_ = 19;
-              break;
-            }
-            case 162: {
-              emu.grasscutter.net.proto.BossChestInfoOuterClass.BossChestInfo.Builder subBuilder = null;
-              if (contentCase_ == 20) {
-                subBuilder = ((emu.grasscutter.net.proto.BossChestInfoOuterClass.BossChestInfo) content_).toBuilder();
-              }
-              content_ =
-                  input.readMessage(emu.grasscutter.net.proto.BossChestInfoOuterClass.BossChestInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.BossChestInfoOuterClass.BossChestInfo) content_);
-                content_ = subBuilder.buildPartial();
-              }
-              contentCase_ = 20;
-              break;
-            }
-            case 168: {
-
-              markFlag_ = input.readUInt32();
-              break;
-            }
-            case 176: {
-
-              propOwnerEntityId_ = input.readUInt32();
-              break;
-            }
-            case 186: {
-              emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfo.Builder subBuilder = null;
-              if (platform_ != null) {
-                subBuilder = platform_.toBuilder();
-              }
-              platform_ = input.readMessage(emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(platform_);
-                platform_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 192: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                interactUidList_ = newIntList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              interactUidList_.addInt(input.readUInt32());
-              break;
-            }
-            case 194: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
-                interactUidList_ = newIntList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                interactUidList_.addInt(input.readUInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            case 200: {
-
-              draftId_ = input.readUInt32();
-              break;
-            }
-            case 208: {
-
-              kHICBPFFAII_ = input.readUInt32();
-              break;
-            }
-            case 330: {
-              emu.grasscutter.net.proto.BlossomChestInfoOuterClass.BlossomChestInfo.Builder subBuilder = null;
-              if (contentCase_ == 41) {
-                subBuilder = ((emu.grasscutter.net.proto.BlossomChestInfoOuterClass.BlossomChestInfo) content_).toBuilder();
-              }
-              content_ =
-                  input.readMessage(emu.grasscutter.net.proto.BlossomChestInfoOuterClass.BlossomChestInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.BlossomChestInfoOuterClass.BlossomChestInfo) content_);
-                content_ = subBuilder.buildPartial();
-              }
-              contentCase_ = 41;
-              break;
-            }
-            case 338: {
-              emu.grasscutter.net.proto.MpPlayRewardInfoOuterClass.MpPlayRewardInfo.Builder subBuilder = null;
-              if (contentCase_ == 42) {
-                subBuilder = ((emu.grasscutter.net.proto.MpPlayRewardInfoOuterClass.MpPlayRewardInfo) content_).toBuilder();
-              }
-              content_ =
-                  input.readMessage(emu.grasscutter.net.proto.MpPlayRewardInfoOuterClass.MpPlayRewardInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.MpPlayRewardInfoOuterClass.MpPlayRewardInfo) content_);
-                content_ = subBuilder.buildPartial();
-              }
-              contentCase_ = 42;
-              break;
-            }
-            case 346: {
-              emu.grasscutter.net.proto.GadgetGeneralRewardInfoOuterClass.GadgetGeneralRewardInfo.Builder subBuilder = null;
-              if (contentCase_ == 43) {
-                subBuilder = ((emu.grasscutter.net.proto.GadgetGeneralRewardInfoOuterClass.GadgetGeneralRewardInfo) content_).toBuilder();
-              }
-              content_ =
-                  input.readMessage(emu.grasscutter.net.proto.GadgetGeneralRewardInfoOuterClass.GadgetGeneralRewardInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.GadgetGeneralRewardInfoOuterClass.GadgetGeneralRewardInfo) content_);
-                content_ = subBuilder.buildPartial();
-              }
-              contentCase_ = 43;
-              break;
-            }
-            case 354: {
-              emu.grasscutter.net.proto.OfferingInfoOuterClass.OfferingInfo.Builder subBuilder = null;
-              if (contentCase_ == 44) {
-                subBuilder = ((emu.grasscutter.net.proto.OfferingInfoOuterClass.OfferingInfo) content_).toBuilder();
-              }
-              content_ =
-                  input.readMessage(emu.grasscutter.net.proto.OfferingInfoOuterClass.OfferingInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.OfferingInfoOuterClass.OfferingInfo) content_);
-                content_ = subBuilder.buildPartial();
-              }
-              contentCase_ = 44;
-              break;
-            }
-            case 362: {
-              emu.grasscutter.net.proto.FoundationInfoOuterClass.FoundationInfo.Builder subBuilder = null;
-              if (contentCase_ == 45) {
-                subBuilder = ((emu.grasscutter.net.proto.FoundationInfoOuterClass.FoundationInfo) content_).toBuilder();
-              }
-              content_ =
-                  input.readMessage(emu.grasscutter.net.proto.FoundationInfoOuterClass.FoundationInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.FoundationInfoOuterClass.FoundationInfo) content_);
-                content_ = subBuilder.buildPartial();
-              }
-              contentCase_ = 45;
-              break;
-            }
-            case 370: {
-              emu.grasscutter.net.proto.VehicleInfoOuterClass.VehicleInfo.Builder subBuilder = null;
-              if (contentCase_ == 46) {
-                subBuilder = ((emu.grasscutter.net.proto.VehicleInfoOuterClass.VehicleInfo) content_).toBuilder();
-              }
-              content_ =
-                  input.readMessage(emu.grasscutter.net.proto.VehicleInfoOuterClass.VehicleInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.VehicleInfoOuterClass.VehicleInfo) content_);
-                content_ = subBuilder.buildPartial();
-              }
-              contentCase_ = 46;
-              break;
-            }
-            case 378: {
-              emu.grasscutter.net.proto.EchoShellInfoOuterClass.EchoShellInfo.Builder subBuilder = null;
-              if (contentCase_ == 47) {
-                subBuilder = ((emu.grasscutter.net.proto.EchoShellInfoOuterClass.EchoShellInfo) content_).toBuilder();
-              }
-              content_ =
-                  input.readMessage(emu.grasscutter.net.proto.EchoShellInfoOuterClass.EchoShellInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.EchoShellInfoOuterClass.EchoShellInfo) content_);
-                content_ = subBuilder.buildPartial();
-              }
-              contentCase_ = 47;
-              break;
-            }
-            case 386: {
-              emu.grasscutter.net.proto.ScreenInfoOuterClass.ScreenInfo.Builder subBuilder = null;
-              if (contentCase_ == 48) {
-                subBuilder = ((emu.grasscutter.net.proto.ScreenInfoOuterClass.ScreenInfo) content_).toBuilder();
-              }
-              content_ =
-                  input.readMessage(emu.grasscutter.net.proto.ScreenInfoOuterClass.ScreenInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.ScreenInfoOuterClass.ScreenInfo) content_);
-                content_ = subBuilder.buildPartial();
-              }
-              contentCase_ = 48;
-              break;
-            }
-            case 474: {
-              emu.grasscutter.net.proto.FishPoolInfoOuterClass.FishPoolInfo.Builder subBuilder = null;
-              if (contentCase_ == 59) {
-                subBuilder = ((emu.grasscutter.net.proto.FishPoolInfoOuterClass.FishPoolInfo) content_).toBuilder();
-              }
-              content_ =
-                  input.readMessage(emu.grasscutter.net.proto.FishPoolInfoOuterClass.FishPoolInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.FishPoolInfoOuterClass.FishPoolInfo) content_);
-                content_ = subBuilder.buildPartial();
-              }
-              contentCase_ = 59;
-              break;
-            }
-            case 482: {
-              emu.grasscutter.net.proto.CustomGadgetTreeInfoOuterClass.CustomGadgetTreeInfo.Builder subBuilder = null;
-              if (contentCase_ == 60) {
-                subBuilder = ((emu.grasscutter.net.proto.CustomGadgetTreeInfoOuterClass.CustomGadgetTreeInfo) content_).toBuilder();
-              }
-              content_ =
-                  input.readMessage(emu.grasscutter.net.proto.CustomGadgetTreeInfoOuterClass.CustomGadgetTreeInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.CustomGadgetTreeInfoOuterClass.CustomGadgetTreeInfo) content_);
-                content_ = subBuilder.buildPartial();
-              }
-              contentCase_ = 60;
-              break;
-            }
-            case 490: {
-              emu.grasscutter.net.proto.RoguelikeGadgetInfoOuterClass.RoguelikeGadgetInfo.Builder subBuilder = null;
-              if (contentCase_ == 61) {
-                subBuilder = ((emu.grasscutter.net.proto.RoguelikeGadgetInfoOuterClass.RoguelikeGadgetInfo) content_).toBuilder();
-              }
-              content_ =
-                  input.readMessage(emu.grasscutter.net.proto.RoguelikeGadgetInfoOuterClass.RoguelikeGadgetInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.RoguelikeGadgetInfoOuterClass.RoguelikeGadgetInfo) content_);
-                content_ = subBuilder.buildPartial();
-              }
-              contentCase_ = 61;
-              break;
-            }
-            case 498: {
-              emu.grasscutter.net.proto.NightCrowGadgetInfoOuterClass.NightCrowGadgetInfo.Builder subBuilder = null;
-              if (contentCase_ == 62) {
-                subBuilder = ((emu.grasscutter.net.proto.NightCrowGadgetInfoOuterClass.NightCrowGadgetInfo) content_).toBuilder();
-              }
-              content_ =
-                  input.readMessage(emu.grasscutter.net.proto.NightCrowGadgetInfoOuterClass.NightCrowGadgetInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.NightCrowGadgetInfoOuterClass.NightCrowGadgetInfo) content_);
-                content_ = subBuilder.buildPartial();
-              }
-              contentCase_ = 62;
-              break;
-            }
-            case 506: {
-              emu.grasscutter.net.proto.DeshretObeliskGadgetInfoOuterClass.DeshretObeliskGadgetInfo.Builder subBuilder = null;
-              if (contentCase_ == 63) {
-                subBuilder = ((emu.grasscutter.net.proto.DeshretObeliskGadgetInfoOuterClass.DeshretObeliskGadgetInfo) content_).toBuilder();
-              }
-              content_ =
-                  input.readMessage(emu.grasscutter.net.proto.DeshretObeliskGadgetInfoOuterClass.DeshretObeliskGadgetInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.DeshretObeliskGadgetInfoOuterClass.DeshretObeliskGadgetInfo) content_);
-                content_ = subBuilder.buildPartial();
-              }
-              contentCase_ = 63;
-              break;
-            }
-            case 514: {
-              emu.grasscutter.net.proto.CoinCollectOperatorInfoOuterClass.CoinCollectOperatorInfo.Builder subBuilder = null;
-              if (contentCase_ == 64) {
-                subBuilder = ((emu.grasscutter.net.proto.CoinCollectOperatorInfoOuterClass.CoinCollectOperatorInfo) content_).toBuilder();
-              }
-              content_ =
-                  input.readMessage(emu.grasscutter.net.proto.CoinCollectOperatorInfoOuterClass.CoinCollectOperatorInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.CoinCollectOperatorInfoOuterClass.CoinCollectOperatorInfo) content_);
-                content_ = subBuilder.buildPartial();
-              }
-              contentCase_ = 64;
-              break;
-            }
-            case 538: {
-              emu.grasscutter.net.proto.TrifleGadgetOuterClass.TrifleGadget.Builder subBuilder = null;
-              if (contentCase_ == 67) {
-                subBuilder = ((emu.grasscutter.net.proto.TrifleGadgetOuterClass.TrifleGadget) content_).toBuilder();
-              }
-              content_ =
-                  input.readMessage(emu.grasscutter.net.proto.TrifleGadgetOuterClass.TrifleGadget.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.TrifleGadgetOuterClass.TrifleGadget) content_);
-                content_ = subBuilder.buildPartial();
-              }
-              contentCase_ = 67;
-              break;
-            }
-            case 802: {
-              emu.grasscutter.net.proto.GadgetPlayInfoOuterClass.GadgetPlayInfo.Builder subBuilder = null;
-              if (playInfo_ != null) {
-                subBuilder = playInfo_.toBuilder();
-              }
-              playInfo_ = input.readMessage(emu.grasscutter.net.proto.GadgetPlayInfoOuterClass.GadgetPlayInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(playInfo_);
-                playInfo_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          interactUidList_.makeImmutable(); // C
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -1191,15 +699,15 @@ public final class SceneGadgetInfoOuterClass {
       return gadgetState_;
     }
 
-    public static final int KPKNNJLPMFP_FIELD_NUMBER = 7;
-    private int kPKNNJLPMFP_;
+    public static final int GADGET_TYPE_FIELD_NUMBER = 7;
+    private int gadgetType_;
     /**
-     * <code>uint32 KPKNNJLPMFP = 7;</code>
-     * @return The kPKNNJLPMFP.
+     * <code>uint32 gadget_type = 7;</code>
+     * @return The gadgetType.
      */
     @java.lang.Override
-    public int getKPKNNJLPMFP() {
-      return kPKNNJLPMFP_;
+    public int getGadgetType() {
+      return gadgetType_;
     }
 
     public static final int IS_SHOW_CUTSCENE_FIELD_NUMBER = 8;
@@ -1235,15 +743,154 @@ public final class SceneGadgetInfoOuterClass {
       return isEnableInteract_;
     }
 
-    public static final int CLICILNBKDD_FIELD_NUMBER = 11;
-    private int cLICILNBKDD_;
+    public static final int INTERACT_ID_FIELD_NUMBER = 11;
+    private int interactId_;
     /**
-     * <code>uint32 CLICILNBKDD = 11;</code>
-     * @return The cLICILNBKDD.
+     * <code>uint32 interact_id = 11;</code>
+     * @return The interactId.
      */
     @java.lang.Override
-    public int getCLICILNBKDD() {
-      return cLICILNBKDD_;
+    public int getInteractId() {
+      return interactId_;
+    }
+
+    public static final int MARK_FLAG_FIELD_NUMBER = 21;
+    private int markFlag_;
+    /**
+     * <code>uint32 mark_flag = 21;</code>
+     * @return The markFlag.
+     */
+    @java.lang.Override
+    public int getMarkFlag() {
+      return markFlag_;
+    }
+
+    public static final int PROP_OWNER_ENTITY_ID_FIELD_NUMBER = 22;
+    private int propOwnerEntityId_;
+    /**
+     * <code>uint32 prop_owner_entity_id = 22;</code>
+     * @return The propOwnerEntityId.
+     */
+    @java.lang.Override
+    public int getPropOwnerEntityId() {
+      return propOwnerEntityId_;
+    }
+
+    public static final int PLATFORM_FIELD_NUMBER = 23;
+    private emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfo platform_;
+    /**
+     * <code>.PlatformInfo platform = 23;</code>
+     * @return Whether the platform field is set.
+     */
+    @java.lang.Override
+    public boolean hasPlatform() {
+      return platform_ != null;
+    }
+    /**
+     * <code>.PlatformInfo platform = 23;</code>
+     * @return The platform.
+     */
+    @java.lang.Override
+    public emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfo getPlatform() {
+      return platform_ == null ? emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfo.getDefaultInstance() : platform_;
+    }
+    /**
+     * <code>.PlatformInfo platform = 23;</code>
+     */
+    @java.lang.Override
+    public emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfoOrBuilder getPlatformOrBuilder() {
+      return getPlatform();
+    }
+
+    public static final int INTERACT_UID_LIST_FIELD_NUMBER = 24;
+    private com.google.protobuf.Internal.IntList interactUidList_;
+    /**
+     * <code>repeated uint32 interact_uid_list = 24;</code>
+     * @return A list containing the interactUidList.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Integer>
+        getInteractUidListList() {
+      return interactUidList_;
+    }
+    /**
+     * <code>repeated uint32 interact_uid_list = 24;</code>
+     * @return The count of interactUidList.
+     */
+    public int getInteractUidListCount() {
+      return interactUidList_.size();
+    }
+    /**
+     * <code>repeated uint32 interact_uid_list = 24;</code>
+     * @param index The index of the element to return.
+     * @return The interactUidList at the given index.
+     */
+    public int getInteractUidList(int index) {
+      return interactUidList_.getInt(index);
+    }
+    private int interactUidListMemoizedSerializedSize = -1;
+
+    public static final int DRAFT_ID_FIELD_NUMBER = 25;
+    private int draftId_;
+    /**
+     * <code>uint32 draft_id = 25;</code>
+     * @return The draftId.
+     */
+    @java.lang.Override
+    public int getDraftId() {
+      return draftId_;
+    }
+
+    public static final int GADGET_TALK_STATE_FIELD_NUMBER = 26;
+    private int gadgetTalkState_;
+    /**
+     * <code>uint32 gadget_talk_state = 26;</code>
+     * @return The gadgetTalkState.
+     */
+    @java.lang.Override
+    public int getGadgetTalkState() {
+      return gadgetTalkState_;
+    }
+
+    public static final int INIT_POSE_ID_FIELD_NUMBER = 28;
+    private int initPoseId_;
+    /**
+     * <pre>
+     *OKJCNOADKMM IGMDELMIHMA = 27;
+     * </pre>
+     *
+     * <code>uint32 init_pose_id = 28;</code>
+     * @return The initPoseId.
+     */
+    @java.lang.Override
+    public int getInitPoseId() {
+      return initPoseId_;
+    }
+
+    public static final int PLAY_INFO_FIELD_NUMBER = 100;
+    private emu.grasscutter.net.proto.GadgetPlayInfoOuterClass.GadgetPlayInfo playInfo_;
+    /**
+     * <code>.GadgetPlayInfo play_info = 100;</code>
+     * @return Whether the playInfo field is set.
+     */
+    @java.lang.Override
+    public boolean hasPlayInfo() {
+      return playInfo_ != null;
+    }
+    /**
+     * <code>.GadgetPlayInfo play_info = 100;</code>
+     * @return The playInfo.
+     */
+    @java.lang.Override
+    public emu.grasscutter.net.proto.GadgetPlayInfoOuterClass.GadgetPlayInfo getPlayInfo() {
+      return playInfo_ == null ? emu.grasscutter.net.proto.GadgetPlayInfoOuterClass.GadgetPlayInfo.getDefaultInstance() : playInfo_;
+    }
+    /**
+     * <code>.GadgetPlayInfo play_info = 100;</code>
+     */
+    @java.lang.Override
+    public emu.grasscutter.net.proto.GadgetPlayInfoOuterClass.GadgetPlayInfoOrBuilder getPlayInfoOrBuilder() {
+      return getPlayInfo();
     }
 
     public static final int GATHER_GADGET_FIELD_NUMBER = 13;
@@ -1899,10 +1546,6 @@ public final class SceneGadgetInfoOuterClass {
 
     public static final int TRIFLE_GADGET_FIELD_NUMBER = 67;
     /**
-     * <pre>
-     *Item trifle_item = 67;
-     * </pre>
-     *
      * <code>.TrifleGadget trifle_gadget = 67;</code>
      * @return Whether the trifleGadget field is set.
      */
@@ -1911,10 +1554,6 @@ public final class SceneGadgetInfoOuterClass {
       return contentCase_ == 67;
     }
     /**
-     * <pre>
-     *Item trifle_item = 67;
-     * </pre>
-     *
      * <code>.TrifleGadget trifle_gadget = 67;</code>
      * @return The trifleGadget.
      */
@@ -1926,10 +1565,6 @@ public final class SceneGadgetInfoOuterClass {
       return emu.grasscutter.net.proto.TrifleGadgetOuterClass.TrifleGadget.getDefaultInstance();
     }
     /**
-     * <pre>
-     *Item trifle_item = 67;
-     * </pre>
-     *
      * <code>.TrifleGadget trifle_gadget = 67;</code>
      */
     @java.lang.Override
@@ -1938,142 +1573,6 @@ public final class SceneGadgetInfoOuterClass {
          return (emu.grasscutter.net.proto.TrifleGadgetOuterClass.TrifleGadget) content_;
       }
       return emu.grasscutter.net.proto.TrifleGadgetOuterClass.TrifleGadget.getDefaultInstance();
-    }
-
-    public static final int MARK_FLAG_FIELD_NUMBER = 21;
-    private int markFlag_;
-    /**
-     * <code>uint32 mark_flag = 21;</code>
-     * @return The markFlag.
-     */
-    @java.lang.Override
-    public int getMarkFlag() {
-      return markFlag_;
-    }
-
-    public static final int PROP_OWNER_ENTITY_ID_FIELD_NUMBER = 22;
-    private int propOwnerEntityId_;
-    /**
-     * <code>uint32 prop_owner_entity_id = 22;</code>
-     * @return The propOwnerEntityId.
-     */
-    @java.lang.Override
-    public int getPropOwnerEntityId() {
-      return propOwnerEntityId_;
-    }
-
-    public static final int PLATFORM_FIELD_NUMBER = 23;
-    private emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfo platform_;
-    /**
-     * <code>.PlatformInfo platform = 23;</code>
-     * @return Whether the platform field is set.
-     */
-    @java.lang.Override
-    public boolean hasPlatform() {
-      return platform_ != null;
-    }
-    /**
-     * <code>.PlatformInfo platform = 23;</code>
-     * @return The platform.
-     */
-    @java.lang.Override
-    public emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfo getPlatform() {
-      return platform_ == null ? emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfo.getDefaultInstance() : platform_;
-    }
-    /**
-     * <code>.PlatformInfo platform = 23;</code>
-     */
-    @java.lang.Override
-    public emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfoOrBuilder getPlatformOrBuilder() {
-      return getPlatform();
-    }
-
-    public static final int INTERACT_UID_LIST_FIELD_NUMBER = 24;
-    private com.google.protobuf.Internal.IntList interactUidList_;
-    /**
-     * <code>repeated uint32 interact_uid_list = 24;</code>
-     * @return A list containing the interactUidList.
-     */
-    @java.lang.Override
-    public java.util.List<java.lang.Integer>
-        getInteractUidListList() {
-      return interactUidList_;
-    }
-    /**
-     * <code>repeated uint32 interact_uid_list = 24;</code>
-     * @return The count of interactUidList.
-     */
-    public int getInteractUidListCount() {
-      return interactUidList_.size();
-    }
-    /**
-     * <code>repeated uint32 interact_uid_list = 24;</code>
-     * @param index The index of the element to return.
-     * @return The interactUidList at the given index.
-     */
-    public int getInteractUidList(int index) {
-      return interactUidList_.getInt(index);
-    }
-    private int interactUidListMemoizedSerializedSize = -1;
-
-    public static final int DRAFT_ID_FIELD_NUMBER = 25;
-    private int draftId_;
-    /**
-     * <code>uint32 draft_id = 25;</code>
-     * @return The draftId.
-     */
-    @java.lang.Override
-    public int getDraftId() {
-      return draftId_;
-    }
-
-    public static final int KHICBPFFAII_FIELD_NUMBER = 26;
-    private int kHICBPFFAII_;
-    /**
-     * <code>uint32 KHICBPFFAII = 26;</code>
-     * @return The kHICBPFFAII.
-     */
-    @java.lang.Override
-    public int getKHICBPFFAII() {
-      return kHICBPFFAII_;
-    }
-
-    public static final int PLAY_INFO_FIELD_NUMBER = 100;
-    private emu.grasscutter.net.proto.GadgetPlayInfoOuterClass.GadgetPlayInfo playInfo_;
-    /**
-     * <pre>
-     *JMFPBNKNHED GPOHBBPBBEC = 27;
-     * </pre>
-     *
-     * <code>.GadgetPlayInfo play_info = 100;</code>
-     * @return Whether the playInfo field is set.
-     */
-    @java.lang.Override
-    public boolean hasPlayInfo() {
-      return playInfo_ != null;
-    }
-    /**
-     * <pre>
-     *JMFPBNKNHED GPOHBBPBBEC = 27;
-     * </pre>
-     *
-     * <code>.GadgetPlayInfo play_info = 100;</code>
-     * @return The playInfo.
-     */
-    @java.lang.Override
-    public emu.grasscutter.net.proto.GadgetPlayInfoOuterClass.GadgetPlayInfo getPlayInfo() {
-      return playInfo_ == null ? emu.grasscutter.net.proto.GadgetPlayInfoOuterClass.GadgetPlayInfo.getDefaultInstance() : playInfo_;
-    }
-    /**
-     * <pre>
-     *JMFPBNKNHED GPOHBBPBBEC = 27;
-     * </pre>
-     *
-     * <code>.GadgetPlayInfo play_info = 100;</code>
-     */
-    @java.lang.Override
-    public emu.grasscutter.net.proto.GadgetPlayInfoOuterClass.GadgetPlayInfoOrBuilder getPlayInfoOrBuilder() {
-      return getPlayInfo();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -2109,8 +1608,8 @@ public final class SceneGadgetInfoOuterClass {
       if (gadgetState_ != 0) {
         output.writeUInt32(6, gadgetState_);
       }
-      if (kPKNNJLPMFP_ != 0) {
-        output.writeUInt32(7, kPKNNJLPMFP_);
+      if (gadgetType_ != 0) {
+        output.writeUInt32(7, gadgetType_);
       }
       if (isShowCutscene_ != false) {
         output.writeBool(8, isShowCutscene_);
@@ -2121,8 +1620,8 @@ public final class SceneGadgetInfoOuterClass {
       if (isEnableInteract_ != false) {
         output.writeBool(10, isEnableInteract_);
       }
-      if (cLICILNBKDD_ != 0) {
-        output.writeUInt32(11, cLICILNBKDD_);
+      if (interactId_ != 0) {
+        output.writeUInt32(11, interactId_);
       }
       if (contentCase_ == 13) {
         output.writeMessage(13, (emu.grasscutter.net.proto.GatherGadgetInfoOuterClass.GatherGadgetInfo) content_);
@@ -2164,8 +1663,11 @@ public final class SceneGadgetInfoOuterClass {
       if (draftId_ != 0) {
         output.writeUInt32(25, draftId_);
       }
-      if (kHICBPFFAII_ != 0) {
-        output.writeUInt32(26, kHICBPFFAII_);
+      if (gadgetTalkState_ != 0) {
+        output.writeUInt32(26, gadgetTalkState_);
+      }
+      if (initPoseId_ != 0) {
+        output.writeUInt32(28, initPoseId_);
       }
       if (contentCase_ == 41) {
         output.writeMessage(41, (emu.grasscutter.net.proto.BlossomChestInfoOuterClass.BlossomChestInfo) content_);
@@ -2215,7 +1717,7 @@ public final class SceneGadgetInfoOuterClass {
       if (playInfo_ != null) {
         output.writeMessage(100, getPlayInfo());
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -2248,9 +1750,9 @@ public final class SceneGadgetInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(6, gadgetState_);
       }
-      if (kPKNNJLPMFP_ != 0) {
+      if (gadgetType_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(7, kPKNNJLPMFP_);
+          .computeUInt32Size(7, gadgetType_);
       }
       if (isShowCutscene_ != false) {
         size += com.google.protobuf.CodedOutputStream
@@ -2264,9 +1766,9 @@ public final class SceneGadgetInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(10, isEnableInteract_);
       }
-      if (cLICILNBKDD_ != 0) {
+      if (interactId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(11, cLICILNBKDD_);
+          .computeUInt32Size(11, interactId_);
       }
       if (contentCase_ == 13) {
         size += com.google.protobuf.CodedOutputStream
@@ -2326,9 +1828,13 @@ public final class SceneGadgetInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(25, draftId_);
       }
-      if (kHICBPFFAII_ != 0) {
+      if (gadgetTalkState_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(26, kHICBPFFAII_);
+          .computeUInt32Size(26, gadgetTalkState_);
+      }
+      if (initPoseId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(28, initPoseId_);
       }
       if (contentCase_ == 41) {
         size += com.google.protobuf.CodedOutputStream
@@ -2394,7 +1900,7 @@ public final class SceneGadgetInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(100, getPlayInfo());
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -2420,16 +1926,16 @@ public final class SceneGadgetInfoOuterClass {
       if (bornType_ != other.bornType_) return false;
       if (getGadgetState()
           != other.getGadgetState()) return false;
-      if (getKPKNNJLPMFP()
-          != other.getKPKNNJLPMFP()) return false;
+      if (getGadgetType()
+          != other.getGadgetType()) return false;
       if (getIsShowCutscene()
           != other.getIsShowCutscene()) return false;
       if (getAuthorityPeerId()
           != other.getAuthorityPeerId()) return false;
       if (getIsEnableInteract()
           != other.getIsEnableInteract()) return false;
-      if (getCLICILNBKDD()
-          != other.getCLICILNBKDD()) return false;
+      if (getInteractId()
+          != other.getInteractId()) return false;
       if (getMarkFlag()
           != other.getMarkFlag()) return false;
       if (getPropOwnerEntityId()
@@ -2443,8 +1949,10 @@ public final class SceneGadgetInfoOuterClass {
           .equals(other.getInteractUidListList())) return false;
       if (getDraftId()
           != other.getDraftId()) return false;
-      if (getKHICBPFFAII()
-          != other.getKHICBPFFAII()) return false;
+      if (getGadgetTalkState()
+          != other.getGadgetTalkState()) return false;
+      if (getInitPoseId()
+          != other.getInitPoseId()) return false;
       if (hasPlayInfo() != other.hasPlayInfo()) return false;
       if (hasPlayInfo()) {
         if (!getPlayInfo()
@@ -2543,7 +2051,7 @@ public final class SceneGadgetInfoOuterClass {
         case 0:
         default:
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -2566,8 +2074,8 @@ public final class SceneGadgetInfoOuterClass {
       hash = (53 * hash) + bornType_;
       hash = (37 * hash) + GADGET_STATE_FIELD_NUMBER;
       hash = (53 * hash) + getGadgetState();
-      hash = (37 * hash) + KPKNNJLPMFP_FIELD_NUMBER;
-      hash = (53 * hash) + getKPKNNJLPMFP();
+      hash = (37 * hash) + GADGET_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getGadgetType();
       hash = (37 * hash) + IS_SHOW_CUTSCENE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsShowCutscene());
@@ -2576,8 +2084,8 @@ public final class SceneGadgetInfoOuterClass {
       hash = (37 * hash) + IS_ENABLE_INTERACT_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsEnableInteract());
-      hash = (37 * hash) + CLICILNBKDD_FIELD_NUMBER;
-      hash = (53 * hash) + getCLICILNBKDD();
+      hash = (37 * hash) + INTERACT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getInteractId();
       hash = (37 * hash) + MARK_FLAG_FIELD_NUMBER;
       hash = (53 * hash) + getMarkFlag();
       hash = (37 * hash) + PROP_OWNER_ENTITY_ID_FIELD_NUMBER;
@@ -2592,8 +2100,10 @@ public final class SceneGadgetInfoOuterClass {
       }
       hash = (37 * hash) + DRAFT_ID_FIELD_NUMBER;
       hash = (53 * hash) + getDraftId();
-      hash = (37 * hash) + KHICBPFFAII_FIELD_NUMBER;
-      hash = (53 * hash) + getKHICBPFFAII();
+      hash = (37 * hash) + GADGET_TALK_STATE_FIELD_NUMBER;
+      hash = (53 * hash) + getGadgetTalkState();
+      hash = (37 * hash) + INIT_POSE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getInitPoseId();
       if (hasPlayInfo()) {
         hash = (37 * hash) + PLAY_INFO_FIELD_NUMBER;
         hash = (53 * hash) + getPlayInfo().hashCode();
@@ -2690,7 +2200,7 @@ public final class SceneGadgetInfoOuterClass {
         case 0:
         default:
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -2786,12 +2296,6 @@ public final class SceneGadgetInfoOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     *import "GDGKKLFMJKH.proto";
-     *import "OMBIJJLAHFB.proto";
-     *import "BDOCPDNCIEF.proto";
-     * </pre>
-     *
      * Protobuf type {@code SceneGadgetInfo}
      */
     public static final class Builder extends
@@ -2813,18 +2317,13 @@ public final class SceneGadgetInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.SceneGadgetInfoOuterClass.SceneGadgetInfo.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2841,7 +2340,7 @@ public final class SceneGadgetInfoOuterClass {
 
         gadgetState_ = 0;
 
-        kPKNNJLPMFP_ = 0;
+        gadgetType_ = 0;
 
         isShowCutscene_ = false;
 
@@ -2849,7 +2348,7 @@ public final class SceneGadgetInfoOuterClass {
 
         isEnableInteract_ = false;
 
-        cLICILNBKDD_ = 0;
+        interactId_ = 0;
 
         markFlag_ = 0;
 
@@ -2865,13 +2364,81 @@ public final class SceneGadgetInfoOuterClass {
         bitField0_ = (bitField0_ & ~0x00000001);
         draftId_ = 0;
 
-        kHICBPFFAII_ = 0;
+        gadgetTalkState_ = 0;
+
+        initPoseId_ = 0;
 
         if (playInfoBuilder_ == null) {
           playInfo_ = null;
         } else {
           playInfo_ = null;
           playInfoBuilder_ = null;
+        }
+        if (gatherGadgetBuilder_ != null) {
+          gatherGadgetBuilder_.clear();
+        }
+        if (worktopBuilder_ != null) {
+          worktopBuilder_.clear();
+        }
+        if (clientGadgetBuilder_ != null) {
+          clientGadgetBuilder_.clear();
+        }
+        if (weatherBuilder_ != null) {
+          weatherBuilder_.clear();
+        }
+        if (abilityGadgetBuilder_ != null) {
+          abilityGadgetBuilder_.clear();
+        }
+        if (statueGadgetBuilder_ != null) {
+          statueGadgetBuilder_.clear();
+        }
+        if (bossChestBuilder_ != null) {
+          bossChestBuilder_.clear();
+        }
+        if (blossomChestBuilder_ != null) {
+          blossomChestBuilder_.clear();
+        }
+        if (mpPlayRewardBuilder_ != null) {
+          mpPlayRewardBuilder_.clear();
+        }
+        if (generalRewardBuilder_ != null) {
+          generalRewardBuilder_.clear();
+        }
+        if (offeringInfoBuilder_ != null) {
+          offeringInfoBuilder_.clear();
+        }
+        if (foundationInfoBuilder_ != null) {
+          foundationInfoBuilder_.clear();
+        }
+        if (vehicleInfoBuilder_ != null) {
+          vehicleInfoBuilder_.clear();
+        }
+        if (shellInfoBuilder_ != null) {
+          shellInfoBuilder_.clear();
+        }
+        if (screenInfoBuilder_ != null) {
+          screenInfoBuilder_.clear();
+        }
+        if (fishPoolInfoBuilder_ != null) {
+          fishPoolInfoBuilder_.clear();
+        }
+        if (customGadgetTreeInfoBuilder_ != null) {
+          customGadgetTreeInfoBuilder_.clear();
+        }
+        if (roguelikeGadgetInfoBuilder_ != null) {
+          roguelikeGadgetInfoBuilder_.clear();
+        }
+        if (nightCrowGadgetInfoBuilder_ != null) {
+          nightCrowGadgetInfoBuilder_.clear();
+        }
+        if (deshretObeliskGadgetInfoBuilder_ != null) {
+          deshretObeliskGadgetInfoBuilder_.clear();
+        }
+        if (coinCollectOperatorInfoBuilder_ != null) {
+          coinCollectOperatorInfoBuilder_.clear();
+        }
+        if (trifleGadgetBuilder_ != null) {
+          trifleGadgetBuilder_.clear();
         }
         contentCase_ = 0;
         content_ = null;
@@ -2908,11 +2475,31 @@ public final class SceneGadgetInfoOuterClass {
         result.ownerEntityId_ = ownerEntityId_;
         result.bornType_ = bornType_;
         result.gadgetState_ = gadgetState_;
-        result.kPKNNJLPMFP_ = kPKNNJLPMFP_;
+        result.gadgetType_ = gadgetType_;
         result.isShowCutscene_ = isShowCutscene_;
         result.authorityPeerId_ = authorityPeerId_;
         result.isEnableInteract_ = isEnableInteract_;
-        result.cLICILNBKDD_ = cLICILNBKDD_;
+        result.interactId_ = interactId_;
+        result.markFlag_ = markFlag_;
+        result.propOwnerEntityId_ = propOwnerEntityId_;
+        if (platformBuilder_ == null) {
+          result.platform_ = platform_;
+        } else {
+          result.platform_ = platformBuilder_.build();
+        }
+        if (((bitField0_ & 0x00000001) != 0)) {
+          interactUidList_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.interactUidList_ = interactUidList_;
+        result.draftId_ = draftId_;
+        result.gadgetTalkState_ = gadgetTalkState_;
+        result.initPoseId_ = initPoseId_;
+        if (playInfoBuilder_ == null) {
+          result.playInfo_ = playInfo_;
+        } else {
+          result.playInfo_ = playInfoBuilder_.build();
+        }
         if (contentCase_ == 13) {
           if (gatherGadgetBuilder_ == null) {
             result.content_ = content_;
@@ -3067,25 +2654,6 @@ public final class SceneGadgetInfoOuterClass {
             result.content_ = trifleGadgetBuilder_.build();
           }
         }
-        result.markFlag_ = markFlag_;
-        result.propOwnerEntityId_ = propOwnerEntityId_;
-        if (platformBuilder_ == null) {
-          result.platform_ = platform_;
-        } else {
-          result.platform_ = platformBuilder_.build();
-        }
-        if (((bitField0_ & 0x00000001) != 0)) {
-          interactUidList_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.interactUidList_ = interactUidList_;
-        result.draftId_ = draftId_;
-        result.kHICBPFFAII_ = kHICBPFFAII_;
-        if (playInfoBuilder_ == null) {
-          result.playInfo_ = playInfo_;
-        } else {
-          result.playInfo_ = playInfoBuilder_.build();
-        }
         result.contentCase_ = contentCase_;
         onBuilt();
         return result;
@@ -3153,8 +2721,8 @@ public final class SceneGadgetInfoOuterClass {
         if (other.getGadgetState() != 0) {
           setGadgetState(other.getGadgetState());
         }
-        if (other.getKPKNNJLPMFP() != 0) {
-          setKPKNNJLPMFP(other.getKPKNNJLPMFP());
+        if (other.getGadgetType() != 0) {
+          setGadgetType(other.getGadgetType());
         }
         if (other.getIsShowCutscene() != false) {
           setIsShowCutscene(other.getIsShowCutscene());
@@ -3165,8 +2733,8 @@ public final class SceneGadgetInfoOuterClass {
         if (other.getIsEnableInteract() != false) {
           setIsEnableInteract(other.getIsEnableInteract());
         }
-        if (other.getCLICILNBKDD() != 0) {
-          setCLICILNBKDD(other.getCLICILNBKDD());
+        if (other.getInteractId() != 0) {
+          setInteractId(other.getInteractId());
         }
         if (other.getMarkFlag() != 0) {
           setMarkFlag(other.getMarkFlag());
@@ -3190,8 +2758,11 @@ public final class SceneGadgetInfoOuterClass {
         if (other.getDraftId() != 0) {
           setDraftId(other.getDraftId());
         }
-        if (other.getKHICBPFFAII() != 0) {
-          setKHICBPFFAII(other.getKHICBPFFAII());
+        if (other.getGadgetTalkState() != 0) {
+          setGadgetTalkState(other.getGadgetTalkState());
+        }
+        if (other.getInitPoseId() != 0) {
+          setInitPoseId(other.getInitPoseId());
         }
         if (other.hasPlayInfo()) {
           mergePlayInfo(other.getPlayInfo());
@@ -3289,7 +2860,7 @@ public final class SceneGadgetInfoOuterClass {
             break;
           }
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -3304,17 +2875,294 @@ public final class SceneGadgetInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.SceneGadgetInfoOuterClass.SceneGadgetInfo parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                gadgetId_ = input.readUInt32();
+
+                break;
+              } // case 8
+              case 16: {
+                groupId_ = input.readUInt32();
+
+                break;
+              } // case 16
+              case 24: {
+                configId_ = input.readUInt32();
+
+                break;
+              } // case 24
+              case 32: {
+                ownerEntityId_ = input.readUInt32();
+
+                break;
+              } // case 32
+              case 40: {
+                bornType_ = input.readEnum();
+
+                break;
+              } // case 40
+              case 48: {
+                gadgetState_ = input.readUInt32();
+
+                break;
+              } // case 48
+              case 56: {
+                gadgetType_ = input.readUInt32();
+
+                break;
+              } // case 56
+              case 64: {
+                isShowCutscene_ = input.readBool();
+
+                break;
+              } // case 64
+              case 72: {
+                authorityPeerId_ = input.readUInt32();
+
+                break;
+              } // case 72
+              case 80: {
+                isEnableInteract_ = input.readBool();
+
+                break;
+              } // case 80
+              case 88: {
+                interactId_ = input.readUInt32();
+
+                break;
+              } // case 88
+              case 106: {
+                input.readMessage(
+                    getGatherGadgetFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                contentCase_ = 13;
+                break;
+              } // case 106
+              case 114: {
+                input.readMessage(
+                    getWorktopFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                contentCase_ = 14;
+                break;
+              } // case 114
+              case 122: {
+                input.readMessage(
+                    getClientGadgetFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                contentCase_ = 15;
+                break;
+              } // case 122
+              case 138: {
+                input.readMessage(
+                    getWeatherFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                contentCase_ = 17;
+                break;
+              } // case 138
+              case 146: {
+                input.readMessage(
+                    getAbilityGadgetFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                contentCase_ = 18;
+                break;
+              } // case 146
+              case 154: {
+                input.readMessage(
+                    getStatueGadgetFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                contentCase_ = 19;
+                break;
+              } // case 154
+              case 162: {
+                input.readMessage(
+                    getBossChestFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                contentCase_ = 20;
+                break;
+              } // case 162
+              case 168: {
+                markFlag_ = input.readUInt32();
+
+                break;
+              } // case 168
+              case 176: {
+                propOwnerEntityId_ = input.readUInt32();
+
+                break;
+              } // case 176
+              case 186: {
+                input.readMessage(
+                    getPlatformFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 186
+              case 192: {
+                int v = input.readUInt32();
+                ensureInteractUidListIsMutable();
+                interactUidList_.addInt(v);
+                break;
+              } // case 192
+              case 194: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureInteractUidListIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  interactUidList_.addInt(input.readUInt32());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 194
+              case 200: {
+                draftId_ = input.readUInt32();
+
+                break;
+              } // case 200
+              case 208: {
+                gadgetTalkState_ = input.readUInt32();
+
+                break;
+              } // case 208
+              case 224: {
+                initPoseId_ = input.readUInt32();
+
+                break;
+              } // case 224
+              case 330: {
+                input.readMessage(
+                    getBlossomChestFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                contentCase_ = 41;
+                break;
+              } // case 330
+              case 338: {
+                input.readMessage(
+                    getMpPlayRewardFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                contentCase_ = 42;
+                break;
+              } // case 338
+              case 346: {
+                input.readMessage(
+                    getGeneralRewardFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                contentCase_ = 43;
+                break;
+              } // case 346
+              case 354: {
+                input.readMessage(
+                    getOfferingInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                contentCase_ = 44;
+                break;
+              } // case 354
+              case 362: {
+                input.readMessage(
+                    getFoundationInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                contentCase_ = 45;
+                break;
+              } // case 362
+              case 370: {
+                input.readMessage(
+                    getVehicleInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                contentCase_ = 46;
+                break;
+              } // case 370
+              case 378: {
+                input.readMessage(
+                    getShellInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                contentCase_ = 47;
+                break;
+              } // case 378
+              case 386: {
+                input.readMessage(
+                    getScreenInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                contentCase_ = 48;
+                break;
+              } // case 386
+              case 474: {
+                input.readMessage(
+                    getFishPoolInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                contentCase_ = 59;
+                break;
+              } // case 474
+              case 482: {
+                input.readMessage(
+                    getCustomGadgetTreeInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                contentCase_ = 60;
+                break;
+              } // case 482
+              case 490: {
+                input.readMessage(
+                    getRoguelikeGadgetInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                contentCase_ = 61;
+                break;
+              } // case 490
+              case 498: {
+                input.readMessage(
+                    getNightCrowGadgetInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                contentCase_ = 62;
+                break;
+              } // case 498
+              case 506: {
+                input.readMessage(
+                    getDeshretObeliskGadgetInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                contentCase_ = 63;
+                break;
+              } // case 506
+              case 514: {
+                input.readMessage(
+                    getCoinCollectOperatorInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                contentCase_ = 64;
+                break;
+              } // case 514
+              case 538: {
+                input.readMessage(
+                    getTrifleGadgetFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                contentCase_ = 67;
+                break;
+              } // case 538
+              case 802: {
+                input.readMessage(
+                    getPlayInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 802
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.SceneGadgetInfoOuterClass.SceneGadgetInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int contentCase_ = 0;
@@ -3543,33 +3391,33 @@ public final class SceneGadgetInfoOuterClass {
         return this;
       }
 
-      private int kPKNNJLPMFP_ ;
+      private int gadgetType_ ;
       /**
-       * <code>uint32 KPKNNJLPMFP = 7;</code>
-       * @return The kPKNNJLPMFP.
+       * <code>uint32 gadget_type = 7;</code>
+       * @return The gadgetType.
        */
       @java.lang.Override
-      public int getKPKNNJLPMFP() {
-        return kPKNNJLPMFP_;
+      public int getGadgetType() {
+        return gadgetType_;
       }
       /**
-       * <code>uint32 KPKNNJLPMFP = 7;</code>
-       * @param value The kPKNNJLPMFP to set.
+       * <code>uint32 gadget_type = 7;</code>
+       * @param value The gadgetType to set.
        * @return This builder for chaining.
        */
-      public Builder setKPKNNJLPMFP(int value) {
+      public Builder setGadgetType(int value) {
         
-        kPKNNJLPMFP_ = value;
+        gadgetType_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 KPKNNJLPMFP = 7;</code>
+       * <code>uint32 gadget_type = 7;</code>
        * @return This builder for chaining.
        */
-      public Builder clearKPKNNJLPMFP() {
+      public Builder clearGadgetType() {
         
-        kPKNNJLPMFP_ = 0;
+        gadgetType_ = 0;
         onChanged();
         return this;
       }
@@ -3667,35 +3515,519 @@ public final class SceneGadgetInfoOuterClass {
         return this;
       }
 
-      private int cLICILNBKDD_ ;
+      private int interactId_ ;
       /**
-       * <code>uint32 CLICILNBKDD = 11;</code>
-       * @return The cLICILNBKDD.
+       * <code>uint32 interact_id = 11;</code>
+       * @return The interactId.
        */
       @java.lang.Override
-      public int getCLICILNBKDD() {
-        return cLICILNBKDD_;
+      public int getInteractId() {
+        return interactId_;
       }
       /**
-       * <code>uint32 CLICILNBKDD = 11;</code>
-       * @param value The cLICILNBKDD to set.
+       * <code>uint32 interact_id = 11;</code>
+       * @param value The interactId to set.
        * @return This builder for chaining.
        */
-      public Builder setCLICILNBKDD(int value) {
+      public Builder setInteractId(int value) {
         
-        cLICILNBKDD_ = value;
+        interactId_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 CLICILNBKDD = 11;</code>
+       * <code>uint32 interact_id = 11;</code>
        * @return This builder for chaining.
        */
-      public Builder clearCLICILNBKDD() {
+      public Builder clearInteractId() {
         
-        cLICILNBKDD_ = 0;
+        interactId_ = 0;
         onChanged();
         return this;
+      }
+
+      private int markFlag_ ;
+      /**
+       * <code>uint32 mark_flag = 21;</code>
+       * @return The markFlag.
+       */
+      @java.lang.Override
+      public int getMarkFlag() {
+        return markFlag_;
+      }
+      /**
+       * <code>uint32 mark_flag = 21;</code>
+       * @param value The markFlag to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMarkFlag(int value) {
+        
+        markFlag_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 mark_flag = 21;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMarkFlag() {
+        
+        markFlag_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int propOwnerEntityId_ ;
+      /**
+       * <code>uint32 prop_owner_entity_id = 22;</code>
+       * @return The propOwnerEntityId.
+       */
+      @java.lang.Override
+      public int getPropOwnerEntityId() {
+        return propOwnerEntityId_;
+      }
+      /**
+       * <code>uint32 prop_owner_entity_id = 22;</code>
+       * @param value The propOwnerEntityId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPropOwnerEntityId(int value) {
+        
+        propOwnerEntityId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 prop_owner_entity_id = 22;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPropOwnerEntityId() {
+        
+        propOwnerEntityId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfo platform_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfo, emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfo.Builder, emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfoOrBuilder> platformBuilder_;
+      /**
+       * <code>.PlatformInfo platform = 23;</code>
+       * @return Whether the platform field is set.
+       */
+      public boolean hasPlatform() {
+        return platformBuilder_ != null || platform_ != null;
+      }
+      /**
+       * <code>.PlatformInfo platform = 23;</code>
+       * @return The platform.
+       */
+      public emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfo getPlatform() {
+        if (platformBuilder_ == null) {
+          return platform_ == null ? emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfo.getDefaultInstance() : platform_;
+        } else {
+          return platformBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.PlatformInfo platform = 23;</code>
+       */
+      public Builder setPlatform(emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfo value) {
+        if (platformBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          platform_ = value;
+          onChanged();
+        } else {
+          platformBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.PlatformInfo platform = 23;</code>
+       */
+      public Builder setPlatform(
+          emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfo.Builder builderForValue) {
+        if (platformBuilder_ == null) {
+          platform_ = builderForValue.build();
+          onChanged();
+        } else {
+          platformBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.PlatformInfo platform = 23;</code>
+       */
+      public Builder mergePlatform(emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfo value) {
+        if (platformBuilder_ == null) {
+          if (platform_ != null) {
+            platform_ =
+              emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfo.newBuilder(platform_).mergeFrom(value).buildPartial();
+          } else {
+            platform_ = value;
+          }
+          onChanged();
+        } else {
+          platformBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.PlatformInfo platform = 23;</code>
+       */
+      public Builder clearPlatform() {
+        if (platformBuilder_ == null) {
+          platform_ = null;
+          onChanged();
+        } else {
+          platform_ = null;
+          platformBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.PlatformInfo platform = 23;</code>
+       */
+      public emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfo.Builder getPlatformBuilder() {
+        
+        onChanged();
+        return getPlatformFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.PlatformInfo platform = 23;</code>
+       */
+      public emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfoOrBuilder getPlatformOrBuilder() {
+        if (platformBuilder_ != null) {
+          return platformBuilder_.getMessageOrBuilder();
+        } else {
+          return platform_ == null ?
+              emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfo.getDefaultInstance() : platform_;
+        }
+      }
+      /**
+       * <code>.PlatformInfo platform = 23;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfo, emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfo.Builder, emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfoOrBuilder> 
+          getPlatformFieldBuilder() {
+        if (platformBuilder_ == null) {
+          platformBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfo, emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfo.Builder, emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfoOrBuilder>(
+                  getPlatform(),
+                  getParentForChildren(),
+                  isClean());
+          platform_ = null;
+        }
+        return platformBuilder_;
+      }
+
+      private com.google.protobuf.Internal.IntList interactUidList_ = emptyIntList();
+      private void ensureInteractUidListIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          interactUidList_ = mutableCopy(interactUidList_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <code>repeated uint32 interact_uid_list = 24;</code>
+       * @return A list containing the interactUidList.
+       */
+      public java.util.List<java.lang.Integer>
+          getInteractUidListList() {
+        return ((bitField0_ & 0x00000001) != 0) ?
+                 java.util.Collections.unmodifiableList(interactUidList_) : interactUidList_;
+      }
+      /**
+       * <code>repeated uint32 interact_uid_list = 24;</code>
+       * @return The count of interactUidList.
+       */
+      public int getInteractUidListCount() {
+        return interactUidList_.size();
+      }
+      /**
+       * <code>repeated uint32 interact_uid_list = 24;</code>
+       * @param index The index of the element to return.
+       * @return The interactUidList at the given index.
+       */
+      public int getInteractUidList(int index) {
+        return interactUidList_.getInt(index);
+      }
+      /**
+       * <code>repeated uint32 interact_uid_list = 24;</code>
+       * @param index The index to set the value at.
+       * @param value The interactUidList to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInteractUidList(
+          int index, int value) {
+        ensureInteractUidListIsMutable();
+        interactUidList_.setInt(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 interact_uid_list = 24;</code>
+       * @param value The interactUidList to add.
+       * @return This builder for chaining.
+       */
+      public Builder addInteractUidList(int value) {
+        ensureInteractUidListIsMutable();
+        interactUidList_.addInt(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 interact_uid_list = 24;</code>
+       * @param values The interactUidList to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllInteractUidList(
+          java.lang.Iterable<? extends java.lang.Integer> values) {
+        ensureInteractUidListIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, interactUidList_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 interact_uid_list = 24;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearInteractUidList() {
+        interactUidList_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+
+      private int draftId_ ;
+      /**
+       * <code>uint32 draft_id = 25;</code>
+       * @return The draftId.
+       */
+      @java.lang.Override
+      public int getDraftId() {
+        return draftId_;
+      }
+      /**
+       * <code>uint32 draft_id = 25;</code>
+       * @param value The draftId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDraftId(int value) {
+        
+        draftId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 draft_id = 25;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDraftId() {
+        
+        draftId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int gadgetTalkState_ ;
+      /**
+       * <code>uint32 gadget_talk_state = 26;</code>
+       * @return The gadgetTalkState.
+       */
+      @java.lang.Override
+      public int getGadgetTalkState() {
+        return gadgetTalkState_;
+      }
+      /**
+       * <code>uint32 gadget_talk_state = 26;</code>
+       * @param value The gadgetTalkState to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGadgetTalkState(int value) {
+        
+        gadgetTalkState_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 gadget_talk_state = 26;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGadgetTalkState() {
+        
+        gadgetTalkState_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int initPoseId_ ;
+      /**
+       * <pre>
+       *OKJCNOADKMM IGMDELMIHMA = 27;
+       * </pre>
+       *
+       * <code>uint32 init_pose_id = 28;</code>
+       * @return The initPoseId.
+       */
+      @java.lang.Override
+      public int getInitPoseId() {
+        return initPoseId_;
+      }
+      /**
+       * <pre>
+       *OKJCNOADKMM IGMDELMIHMA = 27;
+       * </pre>
+       *
+       * <code>uint32 init_pose_id = 28;</code>
+       * @param value The initPoseId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInitPoseId(int value) {
+        
+        initPoseId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *OKJCNOADKMM IGMDELMIHMA = 27;
+       * </pre>
+       *
+       * <code>uint32 init_pose_id = 28;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearInitPoseId() {
+        
+        initPoseId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private emu.grasscutter.net.proto.GadgetPlayInfoOuterClass.GadgetPlayInfo playInfo_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          emu.grasscutter.net.proto.GadgetPlayInfoOuterClass.GadgetPlayInfo, emu.grasscutter.net.proto.GadgetPlayInfoOuterClass.GadgetPlayInfo.Builder, emu.grasscutter.net.proto.GadgetPlayInfoOuterClass.GadgetPlayInfoOrBuilder> playInfoBuilder_;
+      /**
+       * <code>.GadgetPlayInfo play_info = 100;</code>
+       * @return Whether the playInfo field is set.
+       */
+      public boolean hasPlayInfo() {
+        return playInfoBuilder_ != null || playInfo_ != null;
+      }
+      /**
+       * <code>.GadgetPlayInfo play_info = 100;</code>
+       * @return The playInfo.
+       */
+      public emu.grasscutter.net.proto.GadgetPlayInfoOuterClass.GadgetPlayInfo getPlayInfo() {
+        if (playInfoBuilder_ == null) {
+          return playInfo_ == null ? emu.grasscutter.net.proto.GadgetPlayInfoOuterClass.GadgetPlayInfo.getDefaultInstance() : playInfo_;
+        } else {
+          return playInfoBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.GadgetPlayInfo play_info = 100;</code>
+       */
+      public Builder setPlayInfo(emu.grasscutter.net.proto.GadgetPlayInfoOuterClass.GadgetPlayInfo value) {
+        if (playInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          playInfo_ = value;
+          onChanged();
+        } else {
+          playInfoBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.GadgetPlayInfo play_info = 100;</code>
+       */
+      public Builder setPlayInfo(
+          emu.grasscutter.net.proto.GadgetPlayInfoOuterClass.GadgetPlayInfo.Builder builderForValue) {
+        if (playInfoBuilder_ == null) {
+          playInfo_ = builderForValue.build();
+          onChanged();
+        } else {
+          playInfoBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.GadgetPlayInfo play_info = 100;</code>
+       */
+      public Builder mergePlayInfo(emu.grasscutter.net.proto.GadgetPlayInfoOuterClass.GadgetPlayInfo value) {
+        if (playInfoBuilder_ == null) {
+          if (playInfo_ != null) {
+            playInfo_ =
+              emu.grasscutter.net.proto.GadgetPlayInfoOuterClass.GadgetPlayInfo.newBuilder(playInfo_).mergeFrom(value).buildPartial();
+          } else {
+            playInfo_ = value;
+          }
+          onChanged();
+        } else {
+          playInfoBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.GadgetPlayInfo play_info = 100;</code>
+       */
+      public Builder clearPlayInfo() {
+        if (playInfoBuilder_ == null) {
+          playInfo_ = null;
+          onChanged();
+        } else {
+          playInfo_ = null;
+          playInfoBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.GadgetPlayInfo play_info = 100;</code>
+       */
+      public emu.grasscutter.net.proto.GadgetPlayInfoOuterClass.GadgetPlayInfo.Builder getPlayInfoBuilder() {
+        
+        onChanged();
+        return getPlayInfoFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.GadgetPlayInfo play_info = 100;</code>
+       */
+      public emu.grasscutter.net.proto.GadgetPlayInfoOuterClass.GadgetPlayInfoOrBuilder getPlayInfoOrBuilder() {
+        if (playInfoBuilder_ != null) {
+          return playInfoBuilder_.getMessageOrBuilder();
+        } else {
+          return playInfo_ == null ?
+              emu.grasscutter.net.proto.GadgetPlayInfoOuterClass.GadgetPlayInfo.getDefaultInstance() : playInfo_;
+        }
+      }
+      /**
+       * <code>.GadgetPlayInfo play_info = 100;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          emu.grasscutter.net.proto.GadgetPlayInfoOuterClass.GadgetPlayInfo, emu.grasscutter.net.proto.GadgetPlayInfoOuterClass.GadgetPlayInfo.Builder, emu.grasscutter.net.proto.GadgetPlayInfoOuterClass.GadgetPlayInfoOrBuilder> 
+          getPlayInfoFieldBuilder() {
+        if (playInfoBuilder_ == null) {
+          playInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              emu.grasscutter.net.proto.GadgetPlayInfoOuterClass.GadgetPlayInfo, emu.grasscutter.net.proto.GadgetPlayInfoOuterClass.GadgetPlayInfo.Builder, emu.grasscutter.net.proto.GadgetPlayInfoOuterClass.GadgetPlayInfoOrBuilder>(
+                  getPlayInfo(),
+                  getParentForChildren(),
+                  isClean());
+          playInfo_ = null;
+        }
+        return playInfoBuilder_;
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -6662,10 +6994,6 @@ public final class SceneGadgetInfoOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.TrifleGadgetOuterClass.TrifleGadget, emu.grasscutter.net.proto.TrifleGadgetOuterClass.TrifleGadget.Builder, emu.grasscutter.net.proto.TrifleGadgetOuterClass.TrifleGadgetOrBuilder> trifleGadgetBuilder_;
       /**
-       * <pre>
-       *Item trifle_item = 67;
-       * </pre>
-       *
        * <code>.TrifleGadget trifle_gadget = 67;</code>
        * @return Whether the trifleGadget field is set.
        */
@@ -6674,10 +7002,6 @@ public final class SceneGadgetInfoOuterClass {
         return contentCase_ == 67;
       }
       /**
-       * <pre>
-       *Item trifle_item = 67;
-       * </pre>
-       *
        * <code>.TrifleGadget trifle_gadget = 67;</code>
        * @return The trifleGadget.
        */
@@ -6696,10 +7020,6 @@ public final class SceneGadgetInfoOuterClass {
         }
       }
       /**
-       * <pre>
-       *Item trifle_item = 67;
-       * </pre>
-       *
        * <code>.TrifleGadget trifle_gadget = 67;</code>
        */
       public Builder setTrifleGadget(emu.grasscutter.net.proto.TrifleGadgetOuterClass.TrifleGadget value) {
@@ -6716,10 +7036,6 @@ public final class SceneGadgetInfoOuterClass {
         return this;
       }
       /**
-       * <pre>
-       *Item trifle_item = 67;
-       * </pre>
-       *
        * <code>.TrifleGadget trifle_gadget = 67;</code>
        */
       public Builder setTrifleGadget(
@@ -6734,10 +7050,6 @@ public final class SceneGadgetInfoOuterClass {
         return this;
       }
       /**
-       * <pre>
-       *Item trifle_item = 67;
-       * </pre>
-       *
        * <code>.TrifleGadget trifle_gadget = 67;</code>
        */
       public Builder mergeTrifleGadget(emu.grasscutter.net.proto.TrifleGadgetOuterClass.TrifleGadget value) {
@@ -6760,10 +7072,6 @@ public final class SceneGadgetInfoOuterClass {
         return this;
       }
       /**
-       * <pre>
-       *Item trifle_item = 67;
-       * </pre>
-       *
        * <code>.TrifleGadget trifle_gadget = 67;</code>
        */
       public Builder clearTrifleGadget() {
@@ -6783,20 +7091,12 @@ public final class SceneGadgetInfoOuterClass {
         return this;
       }
       /**
-       * <pre>
-       *Item trifle_item = 67;
-       * </pre>
-       *
        * <code>.TrifleGadget trifle_gadget = 67;</code>
        */
       public emu.grasscutter.net.proto.TrifleGadgetOuterClass.TrifleGadget.Builder getTrifleGadgetBuilder() {
         return getTrifleGadgetFieldBuilder().getBuilder();
       }
       /**
-       * <pre>
-       *Item trifle_item = 67;
-       * </pre>
-       *
        * <code>.TrifleGadget trifle_gadget = 67;</code>
        */
       @java.lang.Override
@@ -6811,10 +7111,6 @@ public final class SceneGadgetInfoOuterClass {
         }
       }
       /**
-       * <pre>
-       *Item trifle_item = 67;
-       * </pre>
-       *
        * <code>.TrifleGadget trifle_gadget = 67;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -6834,483 +7130,6 @@ public final class SceneGadgetInfoOuterClass {
         contentCase_ = 67;
         onChanged();;
         return trifleGadgetBuilder_;
-      }
-
-      private int markFlag_ ;
-      /**
-       * <code>uint32 mark_flag = 21;</code>
-       * @return The markFlag.
-       */
-      @java.lang.Override
-      public int getMarkFlag() {
-        return markFlag_;
-      }
-      /**
-       * <code>uint32 mark_flag = 21;</code>
-       * @param value The markFlag to set.
-       * @return This builder for chaining.
-       */
-      public Builder setMarkFlag(int value) {
-        
-        markFlag_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 mark_flag = 21;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearMarkFlag() {
-        
-        markFlag_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int propOwnerEntityId_ ;
-      /**
-       * <code>uint32 prop_owner_entity_id = 22;</code>
-       * @return The propOwnerEntityId.
-       */
-      @java.lang.Override
-      public int getPropOwnerEntityId() {
-        return propOwnerEntityId_;
-      }
-      /**
-       * <code>uint32 prop_owner_entity_id = 22;</code>
-       * @param value The propOwnerEntityId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setPropOwnerEntityId(int value) {
-        
-        propOwnerEntityId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 prop_owner_entity_id = 22;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearPropOwnerEntityId() {
-        
-        propOwnerEntityId_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfo platform_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfo, emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfo.Builder, emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfoOrBuilder> platformBuilder_;
-      /**
-       * <code>.PlatformInfo platform = 23;</code>
-       * @return Whether the platform field is set.
-       */
-      public boolean hasPlatform() {
-        return platformBuilder_ != null || platform_ != null;
-      }
-      /**
-       * <code>.PlatformInfo platform = 23;</code>
-       * @return The platform.
-       */
-      public emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfo getPlatform() {
-        if (platformBuilder_ == null) {
-          return platform_ == null ? emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfo.getDefaultInstance() : platform_;
-        } else {
-          return platformBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>.PlatformInfo platform = 23;</code>
-       */
-      public Builder setPlatform(emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfo value) {
-        if (platformBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          platform_ = value;
-          onChanged();
-        } else {
-          platformBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.PlatformInfo platform = 23;</code>
-       */
-      public Builder setPlatform(
-          emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfo.Builder builderForValue) {
-        if (platformBuilder_ == null) {
-          platform_ = builderForValue.build();
-          onChanged();
-        } else {
-          platformBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <code>.PlatformInfo platform = 23;</code>
-       */
-      public Builder mergePlatform(emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfo value) {
-        if (platformBuilder_ == null) {
-          if (platform_ != null) {
-            platform_ =
-              emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfo.newBuilder(platform_).mergeFrom(value).buildPartial();
-          } else {
-            platform_ = value;
-          }
-          onChanged();
-        } else {
-          platformBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.PlatformInfo platform = 23;</code>
-       */
-      public Builder clearPlatform() {
-        if (platformBuilder_ == null) {
-          platform_ = null;
-          onChanged();
-        } else {
-          platform_ = null;
-          platformBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <code>.PlatformInfo platform = 23;</code>
-       */
-      public emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfo.Builder getPlatformBuilder() {
-        
-        onChanged();
-        return getPlatformFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.PlatformInfo platform = 23;</code>
-       */
-      public emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfoOrBuilder getPlatformOrBuilder() {
-        if (platformBuilder_ != null) {
-          return platformBuilder_.getMessageOrBuilder();
-        } else {
-          return platform_ == null ?
-              emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfo.getDefaultInstance() : platform_;
-        }
-      }
-      /**
-       * <code>.PlatformInfo platform = 23;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfo, emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfo.Builder, emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfoOrBuilder> 
-          getPlatformFieldBuilder() {
-        if (platformBuilder_ == null) {
-          platformBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfo, emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfo.Builder, emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfoOrBuilder>(
-                  getPlatform(),
-                  getParentForChildren(),
-                  isClean());
-          platform_ = null;
-        }
-        return platformBuilder_;
-      }
-
-      private com.google.protobuf.Internal.IntList interactUidList_ = emptyIntList();
-      private void ensureInteractUidListIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          interactUidList_ = mutableCopy(interactUidList_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-      /**
-       * <code>repeated uint32 interact_uid_list = 24;</code>
-       * @return A list containing the interactUidList.
-       */
-      public java.util.List<java.lang.Integer>
-          getInteractUidListList() {
-        return ((bitField0_ & 0x00000001) != 0) ?
-                 java.util.Collections.unmodifiableList(interactUidList_) : interactUidList_;
-      }
-      /**
-       * <code>repeated uint32 interact_uid_list = 24;</code>
-       * @return The count of interactUidList.
-       */
-      public int getInteractUidListCount() {
-        return interactUidList_.size();
-      }
-      /**
-       * <code>repeated uint32 interact_uid_list = 24;</code>
-       * @param index The index of the element to return.
-       * @return The interactUidList at the given index.
-       */
-      public int getInteractUidList(int index) {
-        return interactUidList_.getInt(index);
-      }
-      /**
-       * <code>repeated uint32 interact_uid_list = 24;</code>
-       * @param index The index to set the value at.
-       * @param value The interactUidList to set.
-       * @return This builder for chaining.
-       */
-      public Builder setInteractUidList(
-          int index, int value) {
-        ensureInteractUidListIsMutable();
-        interactUidList_.setInt(index, value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated uint32 interact_uid_list = 24;</code>
-       * @param value The interactUidList to add.
-       * @return This builder for chaining.
-       */
-      public Builder addInteractUidList(int value) {
-        ensureInteractUidListIsMutable();
-        interactUidList_.addInt(value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated uint32 interact_uid_list = 24;</code>
-       * @param values The interactUidList to add.
-       * @return This builder for chaining.
-       */
-      public Builder addAllInteractUidList(
-          java.lang.Iterable<? extends java.lang.Integer> values) {
-        ensureInteractUidListIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, interactUidList_);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated uint32 interact_uid_list = 24;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearInteractUidList() {
-        interactUidList_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
-        return this;
-      }
-
-      private int draftId_ ;
-      /**
-       * <code>uint32 draft_id = 25;</code>
-       * @return The draftId.
-       */
-      @java.lang.Override
-      public int getDraftId() {
-        return draftId_;
-      }
-      /**
-       * <code>uint32 draft_id = 25;</code>
-       * @param value The draftId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setDraftId(int value) {
-        
-        draftId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 draft_id = 25;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearDraftId() {
-        
-        draftId_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int kHICBPFFAII_ ;
-      /**
-       * <code>uint32 KHICBPFFAII = 26;</code>
-       * @return The kHICBPFFAII.
-       */
-      @java.lang.Override
-      public int getKHICBPFFAII() {
-        return kHICBPFFAII_;
-      }
-      /**
-       * <code>uint32 KHICBPFFAII = 26;</code>
-       * @param value The kHICBPFFAII to set.
-       * @return This builder for chaining.
-       */
-      public Builder setKHICBPFFAII(int value) {
-        
-        kHICBPFFAII_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 KHICBPFFAII = 26;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearKHICBPFFAII() {
-        
-        kHICBPFFAII_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private emu.grasscutter.net.proto.GadgetPlayInfoOuterClass.GadgetPlayInfo playInfo_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          emu.grasscutter.net.proto.GadgetPlayInfoOuterClass.GadgetPlayInfo, emu.grasscutter.net.proto.GadgetPlayInfoOuterClass.GadgetPlayInfo.Builder, emu.grasscutter.net.proto.GadgetPlayInfoOuterClass.GadgetPlayInfoOrBuilder> playInfoBuilder_;
-      /**
-       * <pre>
-       *JMFPBNKNHED GPOHBBPBBEC = 27;
-       * </pre>
-       *
-       * <code>.GadgetPlayInfo play_info = 100;</code>
-       * @return Whether the playInfo field is set.
-       */
-      public boolean hasPlayInfo() {
-        return playInfoBuilder_ != null || playInfo_ != null;
-      }
-      /**
-       * <pre>
-       *JMFPBNKNHED GPOHBBPBBEC = 27;
-       * </pre>
-       *
-       * <code>.GadgetPlayInfo play_info = 100;</code>
-       * @return The playInfo.
-       */
-      public emu.grasscutter.net.proto.GadgetPlayInfoOuterClass.GadgetPlayInfo getPlayInfo() {
-        if (playInfoBuilder_ == null) {
-          return playInfo_ == null ? emu.grasscutter.net.proto.GadgetPlayInfoOuterClass.GadgetPlayInfo.getDefaultInstance() : playInfo_;
-        } else {
-          return playInfoBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       *JMFPBNKNHED GPOHBBPBBEC = 27;
-       * </pre>
-       *
-       * <code>.GadgetPlayInfo play_info = 100;</code>
-       */
-      public Builder setPlayInfo(emu.grasscutter.net.proto.GadgetPlayInfoOuterClass.GadgetPlayInfo value) {
-        if (playInfoBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          playInfo_ = value;
-          onChanged();
-        } else {
-          playInfoBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       *JMFPBNKNHED GPOHBBPBBEC = 27;
-       * </pre>
-       *
-       * <code>.GadgetPlayInfo play_info = 100;</code>
-       */
-      public Builder setPlayInfo(
-          emu.grasscutter.net.proto.GadgetPlayInfoOuterClass.GadgetPlayInfo.Builder builderForValue) {
-        if (playInfoBuilder_ == null) {
-          playInfo_ = builderForValue.build();
-          onChanged();
-        } else {
-          playInfoBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       *JMFPBNKNHED GPOHBBPBBEC = 27;
-       * </pre>
-       *
-       * <code>.GadgetPlayInfo play_info = 100;</code>
-       */
-      public Builder mergePlayInfo(emu.grasscutter.net.proto.GadgetPlayInfoOuterClass.GadgetPlayInfo value) {
-        if (playInfoBuilder_ == null) {
-          if (playInfo_ != null) {
-            playInfo_ =
-              emu.grasscutter.net.proto.GadgetPlayInfoOuterClass.GadgetPlayInfo.newBuilder(playInfo_).mergeFrom(value).buildPartial();
-          } else {
-            playInfo_ = value;
-          }
-          onChanged();
-        } else {
-          playInfoBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       *JMFPBNKNHED GPOHBBPBBEC = 27;
-       * </pre>
-       *
-       * <code>.GadgetPlayInfo play_info = 100;</code>
-       */
-      public Builder clearPlayInfo() {
-        if (playInfoBuilder_ == null) {
-          playInfo_ = null;
-          onChanged();
-        } else {
-          playInfo_ = null;
-          playInfoBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       *JMFPBNKNHED GPOHBBPBBEC = 27;
-       * </pre>
-       *
-       * <code>.GadgetPlayInfo play_info = 100;</code>
-       */
-      public emu.grasscutter.net.proto.GadgetPlayInfoOuterClass.GadgetPlayInfo.Builder getPlayInfoBuilder() {
-        
-        onChanged();
-        return getPlayInfoFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       *JMFPBNKNHED GPOHBBPBBEC = 27;
-       * </pre>
-       *
-       * <code>.GadgetPlayInfo play_info = 100;</code>
-       */
-      public emu.grasscutter.net.proto.GadgetPlayInfoOuterClass.GadgetPlayInfoOrBuilder getPlayInfoOrBuilder() {
-        if (playInfoBuilder_ != null) {
-          return playInfoBuilder_.getMessageOrBuilder();
-        } else {
-          return playInfo_ == null ?
-              emu.grasscutter.net.proto.GadgetPlayInfoOuterClass.GadgetPlayInfo.getDefaultInstance() : playInfo_;
-        }
-      }
-      /**
-       * <pre>
-       *JMFPBNKNHED GPOHBBPBBEC = 27;
-       * </pre>
-       *
-       * <code>.GadgetPlayInfo play_info = 100;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          emu.grasscutter.net.proto.GadgetPlayInfoOuterClass.GadgetPlayInfo, emu.grasscutter.net.proto.GadgetPlayInfoOuterClass.GadgetPlayInfo.Builder, emu.grasscutter.net.proto.GadgetPlayInfoOuterClass.GadgetPlayInfoOrBuilder> 
-          getPlayInfoFieldBuilder() {
-        if (playInfoBuilder_ == null) {
-          playInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              emu.grasscutter.net.proto.GadgetPlayInfoOuterClass.GadgetPlayInfo, emu.grasscutter.net.proto.GadgetPlayInfoOuterClass.GadgetPlayInfo.Builder, emu.grasscutter.net.proto.GadgetPlayInfoOuterClass.GadgetPlayInfoOrBuilder>(
-                  getPlayInfo(),
-                  getParentForChildren(),
-                  isClean());
-          playInfo_ = null;
-        }
-        return playInfoBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -7345,7 +7164,18 @@ public final class SceneGadgetInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new SceneGadgetInfo(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -7380,63 +7210,66 @@ public final class SceneGadgetInfoOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\025SceneGadgetInfo.proto\032\024GadgetBornType." +
-      "proto\032\026GatherGadgetInfo.proto\032\021WorktopIn" +
-      "fo.proto\032\026ClientGadgetInfo.proto\032\021Weathe" +
-      "rInfo.proto\032\027AbilityGadgetInfo.proto\032\026St" +
-      "atueGadgetInfo.proto\032\023BossChestInfo.prot" +
-      "o\032\026BlossomChestInfo.proto\032\026MpPlayRewardI" +
-      "nfo.proto\032\035GadgetGeneralRewardInfo.proto" +
-      "\032\022OfferingInfo.proto\032\024FoundationInfo.pro" +
-      "to\032\021VehicleInfo.proto\032\023EchoShellInfo.pro" +
-      "to\032\020ScreenInfo.proto\032\022FishPoolInfo.proto" +
-      "\032\032CustomGadgetTreeInfo.proto\032\031RoguelikeG" +
-      "adgetInfo.proto\032\031NightCrowGadgetInfo.pro" +
-      "to\032\036DeshretObeliskGadgetInfo.proto\032\035Coin" +
-      "CollectOperatorInfo.proto\032\022TrifleGadget." +
       "proto\032\022PlatformInfo.proto\032\024GadgetPlayInf" +
-      "o.proto\"\301\013\n\017SceneGadgetInfo\022\021\n\tgadget_id" +
+      "o.proto\032\026GatherGadgetInfo.proto\032\021Worktop" +
+      "Info.proto\032\026ClientGadgetInfo.proto\032\021Weat" +
+      "herInfo.proto\032\027AbilityGadgetInfo.proto\032\026" +
+      "StatueGadgetInfo.proto\032\023BossChestInfo.pr" +
+      "oto\032\026BlossomChestInfo.proto\032\026MpPlayRewar" +
+      "dInfo.proto\032\035GadgetGeneralRewardInfo.pro" +
+      "to\032\022OfferingInfo.proto\032\024FoundationInfo.p" +
+      "roto\032\021VehicleInfo.proto\032\023EchoShellInfo.p" +
+      "roto\032\020ScreenInfo.proto\032\022FishPoolInfo.pro" +
+      "to\032\032CustomGadgetTreeInfo.proto\032\031Roguelik" +
+      "eGadgetInfo.proto\032\031NightCrowGadgetInfo.p" +
+      "roto\032\036DeshretObeliskGadgetInfo.proto\032\035Co" +
+      "inCollectOperatorInfo.proto\032\022TrifleGadge" +
+      "t.proto\"\335\013\n\017SceneGadgetInfo\022\021\n\tgadget_id" +
       "\030\001 \001(\r\022\020\n\010group_id\030\002 \001(\r\022\021\n\tconfig_id\030\003 " +
       "\001(\r\022\027\n\017owner_entity_id\030\004 \001(\r\022\"\n\tborn_typ" +
       "e\030\005 \001(\0162\017.GadgetBornType\022\024\n\014gadget_state" +
-      "\030\006 \001(\r\022\023\n\013KPKNNJLPMFP\030\007 \001(\r\022\030\n\020is_show_c" +
+      "\030\006 \001(\r\022\023\n\013gadget_type\030\007 \001(\r\022\030\n\020is_show_c" +
       "utscene\030\010 \001(\010\022\031\n\021authority_peer_id\030\t \001(\r" +
-      "\022\032\n\022is_enable_interact\030\n \001(\010\022\023\n\013CLICILNB" +
-      "KDD\030\013 \001(\r\022*\n\rgather_gadget\030\r \001(\0132\021.Gathe" +
-      "rGadgetInfoH\000\022\037\n\007worktop\030\016 \001(\0132\014.Worktop" +
-      "InfoH\000\022*\n\rclient_gadget\030\017 \001(\0132\021.ClientGa" +
-      "dgetInfoH\000\022\037\n\007weather\030\021 \001(\0132\014.WeatherInf" +
-      "oH\000\022,\n\016ability_gadget\030\022 \001(\0132\022.AbilityGad" +
-      "getInfoH\000\022*\n\rstatue_gadget\030\023 \001(\0132\021.Statu" +
-      "eGadgetInfoH\000\022$\n\nboss_chest\030\024 \001(\0132\016.Boss" +
-      "ChestInfoH\000\022*\n\rblossom_chest\030) \001(\0132\021.Blo" +
-      "ssomChestInfoH\000\022+\n\016mp_play_reward\030* \001(\0132" +
-      "\021.MpPlayRewardInfoH\000\0222\n\016general_reward\030+" +
-      " \001(\0132\030.GadgetGeneralRewardInfoH\000\022&\n\roffe" +
-      "ring_info\030, \001(\0132\r.OfferingInfoH\000\022*\n\017foun" +
-      "dation_info\030- \001(\0132\017.FoundationInfoH\000\022$\n\014" +
-      "vehicle_info\030. \001(\0132\014.VehicleInfoH\000\022$\n\nsh" +
-      "ell_info\030/ \001(\0132\016.EchoShellInfoH\000\022\"\n\013scre" +
-      "en_info\0300 \001(\0132\013.ScreenInfoH\000\022\'\n\016fish_poo" +
-      "l_info\030; \001(\0132\r.FishPoolInfoH\000\0228\n\027custom_" +
-      "gadget_tree_info\030< \001(\0132\025.CustomGadgetTre" +
-      "eInfoH\000\0225\n\025roguelike_gadget_info\030= \001(\0132\024" +
-      ".RoguelikeGadgetInfoH\000\0226\n\026night_crow_gad" +
-      "get_info\030> \001(\0132\024.NightCrowGadgetInfoH\000\022@" +
-      "\n\033deshret_obelisk_gadget_info\030? \001(\0132\031.De" +
-      "shretObeliskGadgetInfoH\000\022>\n\032coin_collect" +
-      "_operator_info\030@ \001(\0132\030.CoinCollectOperat" +
-      "orInfoH\000\022&\n\rtrifle_gadget\030C \001(\0132\r.Trifle" +
-      "GadgetH\000\022\021\n\tmark_flag\030\025 \001(\r\022\034\n\024prop_owne" +
-      "r_entity_id\030\026 \001(\r\022\037\n\010platform\030\027 \001(\0132\r.Pl" +
-      "atformInfo\022\031\n\021interact_uid_list\030\030 \003(\r\022\020\n" +
-      "\010draft_id\030\031 \001(\r\022\023\n\013KHICBPFFAII\030\032 \001(\r\022\"\n\t" +
-      "play_info\030d \001(\0132\017.GadgetPlayInfoB\t\n\007cont" +
-      "entB\033\n\031emu.grasscutter.net.protob\006proto3"
+      "\022\032\n\022is_enable_interact\030\n \001(\010\022\023\n\013interact" +
+      "_id\030\013 \001(\r\022\021\n\tmark_flag\030\025 \001(\r\022\034\n\024prop_own" +
+      "er_entity_id\030\026 \001(\r\022\037\n\010platform\030\027 \001(\0132\r.P" +
+      "latformInfo\022\031\n\021interact_uid_list\030\030 \003(\r\022\020" +
+      "\n\010draft_id\030\031 \001(\r\022\031\n\021gadget_talk_state\030\032 " +
+      "\001(\r\022\024\n\014init_pose_id\030\034 \001(\r\022\"\n\tplay_info\030d" +
+      " \001(\0132\017.GadgetPlayInfo\022*\n\rgather_gadget\030\r" +
+      " \001(\0132\021.GatherGadgetInfoH\000\022\037\n\007worktop\030\016 \001" +
+      "(\0132\014.WorktopInfoH\000\022*\n\rclient_gadget\030\017 \001(" +
+      "\0132\021.ClientGadgetInfoH\000\022\037\n\007weather\030\021 \001(\0132" +
+      "\014.WeatherInfoH\000\022,\n\016ability_gadget\030\022 \001(\0132" +
+      "\022.AbilityGadgetInfoH\000\022*\n\rstatue_gadget\030\023" +
+      " \001(\0132\021.StatueGadgetInfoH\000\022$\n\nboss_chest\030" +
+      "\024 \001(\0132\016.BossChestInfoH\000\022*\n\rblossom_chest" +
+      "\030) \001(\0132\021.BlossomChestInfoH\000\022+\n\016mp_play_r" +
+      "eward\030* \001(\0132\021.MpPlayRewardInfoH\000\0222\n\016gene" +
+      "ral_reward\030+ \001(\0132\030.GadgetGeneralRewardIn" +
+      "foH\000\022&\n\roffering_info\030, \001(\0132\r.OfferingIn" +
+      "foH\000\022*\n\017foundation_info\030- \001(\0132\017.Foundati" +
+      "onInfoH\000\022$\n\014vehicle_info\030. \001(\0132\014.Vehicle" +
+      "InfoH\000\022$\n\nshell_info\030/ \001(\0132\016.EchoShellIn" +
+      "foH\000\022\"\n\013screen_info\0300 \001(\0132\013.ScreenInfoH\000" +
+      "\022\'\n\016fish_pool_info\030; \001(\0132\r.FishPoolInfoH" +
+      "\000\0228\n\027custom_gadget_tree_info\030< \001(\0132\025.Cus" +
+      "tomGadgetTreeInfoH\000\0225\n\025roguelike_gadget_" +
+      "info\030= \001(\0132\024.RoguelikeGadgetInfoH\000\0226\n\026ni" +
+      "ght_crow_gadget_info\030> \001(\0132\024.NightCrowGa" +
+      "dgetInfoH\000\022@\n\033deshret_obelisk_gadget_inf" +
+      "o\030? \001(\0132\031.DeshretObeliskGadgetInfoH\000\022>\n\032" +
+      "coin_collect_operator_info\030@ \001(\0132\030.CoinC" +
+      "ollectOperatorInfoH\000\022&\n\rtrifle_gadget\030C " +
+      "\001(\0132\r.TrifleGadgetH\000B\t\n\007contentB\033\n\031emu.g" +
+      "rasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           emu.grasscutter.net.proto.GadgetBornTypeOuterClass.getDescriptor(),
+          emu.grasscutter.net.proto.PlatformInfoOuterClass.getDescriptor(),
+          emu.grasscutter.net.proto.GadgetPlayInfoOuterClass.getDescriptor(),
           emu.grasscutter.net.proto.GatherGadgetInfoOuterClass.getDescriptor(),
           emu.grasscutter.net.proto.WorktopInfoOuterClass.getDescriptor(),
           emu.grasscutter.net.proto.ClientGadgetInfoOuterClass.getDescriptor(),
@@ -7459,16 +7292,16 @@ public final class SceneGadgetInfoOuterClass {
           emu.grasscutter.net.proto.DeshretObeliskGadgetInfoOuterClass.getDescriptor(),
           emu.grasscutter.net.proto.CoinCollectOperatorInfoOuterClass.getDescriptor(),
           emu.grasscutter.net.proto.TrifleGadgetOuterClass.getDescriptor(),
-          emu.grasscutter.net.proto.PlatformInfoOuterClass.getDescriptor(),
-          emu.grasscutter.net.proto.GadgetPlayInfoOuterClass.getDescriptor(),
         });
     internal_static_SceneGadgetInfo_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_SceneGadgetInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_SceneGadgetInfo_descriptor,
-        new java.lang.String[] { "GadgetId", "GroupId", "ConfigId", "OwnerEntityId", "BornType", "GadgetState", "KPKNNJLPMFP", "IsShowCutscene", "AuthorityPeerId", "IsEnableInteract", "CLICILNBKDD", "GatherGadget", "Worktop", "ClientGadget", "Weather", "AbilityGadget", "StatueGadget", "BossChest", "BlossomChest", "MpPlayReward", "GeneralReward", "OfferingInfo", "FoundationInfo", "VehicleInfo", "ShellInfo", "ScreenInfo", "FishPoolInfo", "CustomGadgetTreeInfo", "RoguelikeGadgetInfo", "NightCrowGadgetInfo", "DeshretObeliskGadgetInfo", "CoinCollectOperatorInfo", "TrifleGadget", "MarkFlag", "PropOwnerEntityId", "Platform", "InteractUidList", "DraftId", "KHICBPFFAII", "PlayInfo", "Content", });
+        new java.lang.String[] { "GadgetId", "GroupId", "ConfigId", "OwnerEntityId", "BornType", "GadgetState", "GadgetType", "IsShowCutscene", "AuthorityPeerId", "IsEnableInteract", "InteractId", "MarkFlag", "PropOwnerEntityId", "Platform", "InteractUidList", "DraftId", "GadgetTalkState", "InitPoseId", "PlayInfo", "GatherGadget", "Worktop", "ClientGadget", "Weather", "AbilityGadget", "StatueGadget", "BossChest", "BlossomChest", "MpPlayReward", "GeneralReward", "OfferingInfo", "FoundationInfo", "VehicleInfo", "ShellInfo", "ScreenInfo", "FishPoolInfo", "CustomGadgetTreeInfo", "RoguelikeGadgetInfo", "NightCrowGadgetInfo", "DeshretObeliskGadgetInfo", "CoinCollectOperatorInfo", "TrifleGadget", "Content", });
     emu.grasscutter.net.proto.GadgetBornTypeOuterClass.getDescriptor();
+    emu.grasscutter.net.proto.PlatformInfoOuterClass.getDescriptor();
+    emu.grasscutter.net.proto.GadgetPlayInfoOuterClass.getDescriptor();
     emu.grasscutter.net.proto.GatherGadgetInfoOuterClass.getDescriptor();
     emu.grasscutter.net.proto.WorktopInfoOuterClass.getDescriptor();
     emu.grasscutter.net.proto.ClientGadgetInfoOuterClass.getDescriptor();
@@ -7491,8 +7324,6 @@ public final class SceneGadgetInfoOuterClass {
     emu.grasscutter.net.proto.DeshretObeliskGadgetInfoOuterClass.getDescriptor();
     emu.grasscutter.net.proto.CoinCollectOperatorInfoOuterClass.getDescriptor();
     emu.grasscutter.net.proto.TrifleGadgetOuterClass.getDescriptor();
-    emu.grasscutter.net.proto.PlatformInfoOuterClass.getDescriptor();
-    emu.grasscutter.net.proto.GadgetPlayInfoOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

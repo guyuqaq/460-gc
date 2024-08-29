@@ -19,29 +19,23 @@ public final class GetMailItemReqOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated uint32 mail_id_list = 8;</code>
+     * <code>repeated uint32 mail_id_list = 1;</code>
      * @return A list containing the mailIdList.
      */
     java.util.List<java.lang.Integer> getMailIdListList();
     /**
-     * <code>repeated uint32 mail_id_list = 8;</code>
+     * <code>repeated uint32 mail_id_list = 1;</code>
      * @return The count of mailIdList.
      */
     int getMailIdListCount();
     /**
-     * <code>repeated uint32 mail_id_list = 8;</code>
+     * <code>repeated uint32 mail_id_list = 1;</code>
      * @param index The index of the element to return.
      * @return The mailIdList at the given index.
      */
     int getMailIdList(int index);
   }
   /**
-   * <pre>
-   * CmdId: 7230
-   * Version: 4.6.0
-   * Obfs: OFALDGJHMKE
-   * </pre>
-   *
    * Protobuf type {@code GetMailItemReq}
    */
   public static final class GetMailItemReq extends
@@ -69,68 +63,6 @@ public final class GetMailItemReqOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private GetMailItemReq(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 64: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                mailIdList_ = newIntList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              mailIdList_.addInt(input.readUInt32());
-              break;
-            }
-            case 66: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
-                mailIdList_ = newIntList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                mailIdList_.addInt(input.readUInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          mailIdList_.makeImmutable(); // C
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.GetMailItemReqOuterClass.internal_static_GetMailItemReq_descriptor;
@@ -144,10 +76,10 @@ public final class GetMailItemReqOuterClass {
               emu.grasscutter.net.proto.GetMailItemReqOuterClass.GetMailItemReq.class, emu.grasscutter.net.proto.GetMailItemReqOuterClass.GetMailItemReq.Builder.class);
     }
 
-    public static final int MAIL_ID_LIST_FIELD_NUMBER = 8;
+    public static final int MAIL_ID_LIST_FIELD_NUMBER = 1;
     private com.google.protobuf.Internal.IntList mailIdList_;
     /**
-     * <code>repeated uint32 mail_id_list = 8;</code>
+     * <code>repeated uint32 mail_id_list = 1;</code>
      * @return A list containing the mailIdList.
      */
     @java.lang.Override
@@ -156,14 +88,14 @@ public final class GetMailItemReqOuterClass {
       return mailIdList_;
     }
     /**
-     * <code>repeated uint32 mail_id_list = 8;</code>
+     * <code>repeated uint32 mail_id_list = 1;</code>
      * @return The count of mailIdList.
      */
     public int getMailIdListCount() {
       return mailIdList_.size();
     }
     /**
-     * <code>repeated uint32 mail_id_list = 8;</code>
+     * <code>repeated uint32 mail_id_list = 1;</code>
      * @param index The index of the element to return.
      * @return The mailIdList at the given index.
      */
@@ -188,13 +120,13 @@ public final class GetMailItemReqOuterClass {
                         throws java.io.IOException {
       getSerializedSize();
       if (getMailIdListList().size() > 0) {
-        output.writeUInt32NoTag(66);
+        output.writeUInt32NoTag(10);
         output.writeUInt32NoTag(mailIdListMemoizedSerializedSize);
       }
       for (int i = 0; i < mailIdList_.size(); i++) {
         output.writeUInt32NoTag(mailIdList_.getInt(i));
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -217,7 +149,7 @@ public final class GetMailItemReqOuterClass {
         }
         mailIdListMemoizedSerializedSize = dataSize;
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -234,7 +166,7 @@ public final class GetMailItemReqOuterClass {
 
       if (!getMailIdListList()
           .equals(other.getMailIdListList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -249,7 +181,7 @@ public final class GetMailItemReqOuterClass {
         hash = (37 * hash) + MAIL_ID_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getMailIdListList().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -345,12 +277,6 @@ public final class GetMailItemReqOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 7230
-     * Version: 4.6.0
-     * Obfs: OFALDGJHMKE
-     * </pre>
-     *
      * Protobuf type {@code GetMailItemReq}
      */
     public static final class Builder extends
@@ -372,18 +298,13 @@ public final class GetMailItemReqOuterClass {
 
       // Construct using emu.grasscutter.net.proto.GetMailItemReqOuterClass.GetMailItemReq.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -480,7 +401,7 @@ public final class GetMailItemReqOuterClass {
           }
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -495,17 +416,46 @@ public final class GetMailItemReqOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.GetMailItemReqOuterClass.GetMailItemReq parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                int v = input.readUInt32();
+                ensureMailIdListIsMutable();
+                mailIdList_.addInt(v);
+                break;
+              } // case 8
+              case 10: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureMailIdListIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  mailIdList_.addInt(input.readUInt32());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.GetMailItemReqOuterClass.GetMailItemReq) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -518,7 +468,7 @@ public final class GetMailItemReqOuterClass {
          }
       }
       /**
-       * <code>repeated uint32 mail_id_list = 8;</code>
+       * <code>repeated uint32 mail_id_list = 1;</code>
        * @return A list containing the mailIdList.
        */
       public java.util.List<java.lang.Integer>
@@ -527,14 +477,14 @@ public final class GetMailItemReqOuterClass {
                  java.util.Collections.unmodifiableList(mailIdList_) : mailIdList_;
       }
       /**
-       * <code>repeated uint32 mail_id_list = 8;</code>
+       * <code>repeated uint32 mail_id_list = 1;</code>
        * @return The count of mailIdList.
        */
       public int getMailIdListCount() {
         return mailIdList_.size();
       }
       /**
-       * <code>repeated uint32 mail_id_list = 8;</code>
+       * <code>repeated uint32 mail_id_list = 1;</code>
        * @param index The index of the element to return.
        * @return The mailIdList at the given index.
        */
@@ -542,7 +492,7 @@ public final class GetMailItemReqOuterClass {
         return mailIdList_.getInt(index);
       }
       /**
-       * <code>repeated uint32 mail_id_list = 8;</code>
+       * <code>repeated uint32 mail_id_list = 1;</code>
        * @param index The index to set the value at.
        * @param value The mailIdList to set.
        * @return This builder for chaining.
@@ -555,7 +505,7 @@ public final class GetMailItemReqOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 mail_id_list = 8;</code>
+       * <code>repeated uint32 mail_id_list = 1;</code>
        * @param value The mailIdList to add.
        * @return This builder for chaining.
        */
@@ -566,7 +516,7 @@ public final class GetMailItemReqOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 mail_id_list = 8;</code>
+       * <code>repeated uint32 mail_id_list = 1;</code>
        * @param values The mailIdList to add.
        * @return This builder for chaining.
        */
@@ -579,7 +529,7 @@ public final class GetMailItemReqOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 mail_id_list = 8;</code>
+       * <code>repeated uint32 mail_id_list = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearMailIdList() {
@@ -621,7 +571,18 @@ public final class GetMailItemReqOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new GetMailItemReq(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -656,7 +617,7 @@ public final class GetMailItemReqOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\024GetMailItemReq.proto\"&\n\016GetMailItemReq" +
-      "\022\024\n\014mail_id_list\030\010 \003(\rB\033\n\031emu.grasscutte" +
+      "\022\024\n\014mail_id_list\030\001 \003(\rB\033\n\031emu.grasscutte" +
       "r.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

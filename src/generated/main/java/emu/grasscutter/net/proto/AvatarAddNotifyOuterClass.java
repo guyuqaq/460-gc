@@ -19,7 +19,7 @@ public final class AvatarAddNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>bool is_in_team = 2;</code>
+     * <code>bool is_in_team = 3;</code>
      * @return The isInTeam.
      */
     boolean getIsInTeam();
@@ -40,6 +40,10 @@ public final class AvatarAddNotifyOuterClass {
     emu.grasscutter.net.proto.AvatarInfoOuterClass.AvatarInfoOrBuilder getAvatarOrBuilder();
   }
   /**
+   * <pre>
+   * 4.7.0
+   * </pre>
+   *
    * Protobuf type {@code AvatarAddNotify}
    */
   public static final class AvatarAddNotify extends
@@ -66,61 +70,6 @@ public final class AvatarAddNotifyOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private AvatarAddNotify(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 16: {
-
-              isInTeam_ = input.readBool();
-              break;
-            }
-            case 98: {
-              emu.grasscutter.net.proto.AvatarInfoOuterClass.AvatarInfo.Builder subBuilder = null;
-              if (avatar_ != null) {
-                subBuilder = avatar_.toBuilder();
-              }
-              avatar_ = input.readMessage(emu.grasscutter.net.proto.AvatarInfoOuterClass.AvatarInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(avatar_);
-                avatar_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.AvatarAddNotifyOuterClass.internal_static_AvatarAddNotify_descriptor;
@@ -134,10 +83,10 @@ public final class AvatarAddNotifyOuterClass {
               emu.grasscutter.net.proto.AvatarAddNotifyOuterClass.AvatarAddNotify.class, emu.grasscutter.net.proto.AvatarAddNotifyOuterClass.AvatarAddNotify.Builder.class);
     }
 
-    public static final int IS_IN_TEAM_FIELD_NUMBER = 2;
+    public static final int IS_IN_TEAM_FIELD_NUMBER = 3;
     private boolean isInTeam_;
     /**
-     * <code>bool is_in_team = 2;</code>
+     * <code>bool is_in_team = 3;</code>
      * @return The isInTeam.
      */
     @java.lang.Override
@@ -186,12 +135,12 @@ public final class AvatarAddNotifyOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (isInTeam_ != false) {
-        output.writeBool(2, isInTeam_);
+        output.writeBool(3, isInTeam_);
       }
       if (avatar_ != null) {
         output.writeMessage(12, getAvatar());
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -202,13 +151,13 @@ public final class AvatarAddNotifyOuterClass {
       size = 0;
       if (isInTeam_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(2, isInTeam_);
+          .computeBoolSize(3, isInTeam_);
       }
       if (avatar_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(12, getAvatar());
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -230,7 +179,7 @@ public final class AvatarAddNotifyOuterClass {
         if (!getAvatar()
             .equals(other.getAvatar())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -248,7 +197,7 @@ public final class AvatarAddNotifyOuterClass {
         hash = (37 * hash) + AVATAR_FIELD_NUMBER;
         hash = (53 * hash) + getAvatar().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -344,6 +293,10 @@ public final class AvatarAddNotifyOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * 4.7.0
+     * </pre>
+     *
      * Protobuf type {@code AvatarAddNotify}
      */
     public static final class Builder extends
@@ -365,18 +318,13 @@ public final class AvatarAddNotifyOuterClass {
 
       // Construct using emu.grasscutter.net.proto.AvatarAddNotifyOuterClass.AvatarAddNotify.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -475,7 +423,7 @@ public final class AvatarAddNotifyOuterClass {
         if (other.hasAvatar()) {
           mergeAvatar(other.getAvatar());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -490,23 +438,48 @@ public final class AvatarAddNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.AvatarAddNotifyOuterClass.AvatarAddNotify parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 24: {
+                isInTeam_ = input.readBool();
+
+                break;
+              } // case 24
+              case 98: {
+                input.readMessage(
+                    getAvatarFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 98
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.AvatarAddNotifyOuterClass.AvatarAddNotify) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
       private boolean isInTeam_ ;
       /**
-       * <code>bool is_in_team = 2;</code>
+       * <code>bool is_in_team = 3;</code>
        * @return The isInTeam.
        */
       @java.lang.Override
@@ -514,7 +487,7 @@ public final class AvatarAddNotifyOuterClass {
         return isInTeam_;
       }
       /**
-       * <code>bool is_in_team = 2;</code>
+       * <code>bool is_in_team = 3;</code>
        * @param value The isInTeam to set.
        * @return This builder for chaining.
        */
@@ -525,7 +498,7 @@ public final class AvatarAddNotifyOuterClass {
         return this;
       }
       /**
-       * <code>bool is_in_team = 2;</code>
+       * <code>bool is_in_team = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearIsInTeam() {
@@ -686,7 +659,18 @@ public final class AvatarAddNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new AvatarAddNotify(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -721,7 +705,7 @@ public final class AvatarAddNotifyOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\025AvatarAddNotify.proto\032\020AvatarInfo.prot" +
-      "o\"B\n\017AvatarAddNotify\022\022\n\nis_in_team\030\002 \001(\010" +
+      "o\"B\n\017AvatarAddNotify\022\022\n\nis_in_team\030\003 \001(\010" +
       "\022\033\n\006avatar\030\014 \001(\0132\013.AvatarInfoB\033\n\031emu.gra" +
       "sscutter.net.protob\006proto3"
     };

@@ -91,10 +91,6 @@ public final class ResVersionConfigOuterClass {
         getNextScriptVersionBytes();
   }
   /**
-   * <pre>
-   * Obf: DPBFMJOKIMN
-   * </pre>
-   *
    * Protobuf type {@code ResVersionConfig}
    */
   public static final class ResVersionConfig extends
@@ -125,83 +121,6 @@ public final class ResVersionConfigOuterClass {
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
-    }
-    private ResVersionConfig(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-
-              version_ = input.readUInt32();
-              break;
-            }
-            case 16: {
-
-              relogin_ = input.readBool();
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              md5_ = s;
-              break;
-            }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              releaseTotalSize_ = s;
-              break;
-            }
-            case 42: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              versionSuffix_ = s;
-              break;
-            }
-            case 50: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              branch_ = s;
-              break;
-            }
-            case 58: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              nextScriptVersion_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -463,7 +382,7 @@ public final class ResVersionConfigOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextScriptVersion_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, nextScriptVersion_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -495,7 +414,7 @@ public final class ResVersionConfigOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextScriptVersion_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, nextScriptVersion_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -524,7 +443,7 @@ public final class ResVersionConfigOuterClass {
           .equals(other.getBranch())) return false;
       if (!getNextScriptVersion()
           .equals(other.getNextScriptVersion())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -550,7 +469,7 @@ public final class ResVersionConfigOuterClass {
       hash = (53 * hash) + getBranch().hashCode();
       hash = (37 * hash) + NEXT_SCRIPT_VERSION_FIELD_NUMBER;
       hash = (53 * hash) + getNextScriptVersion().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -646,10 +565,6 @@ public final class ResVersionConfigOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * Obf: DPBFMJOKIMN
-     * </pre>
-     *
      * Protobuf type {@code ResVersionConfig}
      */
     public static final class Builder extends
@@ -671,18 +586,13 @@ public final class ResVersionConfigOuterClass {
 
       // Construct using emu.grasscutter.net.proto.ResVersionConfigOuterClass.ResVersionConfig.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -808,7 +718,7 @@ public final class ResVersionConfigOuterClass {
           nextScriptVersion_ = other.nextScriptVersion_;
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -823,17 +733,65 @@ public final class ResVersionConfigOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.ResVersionConfigOuterClass.ResVersionConfig parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                version_ = input.readUInt32();
+
+                break;
+              } // case 8
+              case 16: {
+                relogin_ = input.readBool();
+
+                break;
+              } // case 16
+              case 26: {
+                md5_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 26
+              case 34: {
+                releaseTotalSize_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 34
+              case 42: {
+                versionSuffix_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 42
+              case 50: {
+                branch_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 50
+              case 58: {
+                nextScriptVersion_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 58
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.ResVersionConfigOuterClass.ResVersionConfig) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -1311,7 +1269,18 @@ public final class ResVersionConfigOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new ResVersionConfig(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

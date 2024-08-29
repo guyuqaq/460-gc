@@ -59,12 +59,20 @@ public final class MonsterRouteOuterClass {
      * @return The arriveRange.
      */
     float getArriveRange();
+
+    /**
+     * <code>bool OFDFDKHNJGA = 5;</code>
+     * @return The oFDFDKHNJGA.
+     */
+    boolean getOFDFDKHNJGA();
+
+    /**
+     * <code>bool GPLDNOGEBDI = 6;</code>
+     * @return The gPLDNOGEBDI.
+     */
+    boolean getGPLDNOGEBDI();
   }
   /**
-   * <pre>
-   * Obf: OKAKLDGDFDP
-   * </pre>
-   *
    * Protobuf type {@code MonsterRoute}
    */
   public static final class MonsterRoute extends
@@ -91,71 +99,6 @@ public final class MonsterRouteOuterClass {
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
-    }
-    private MonsterRoute(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                routePoints_ = new java.util.ArrayList<emu.grasscutter.net.proto.RoutePointOuterClass.RoutePoint>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              routePoints_.add(
-                  input.readMessage(emu.grasscutter.net.proto.RoutePointOuterClass.RoutePoint.parser(), extensionRegistry));
-              break;
-            }
-            case 16: {
-
-              speedLevel_ = input.readUInt32();
-              break;
-            }
-            case 24: {
-
-              routeType_ = input.readUInt32();
-              break;
-            }
-            case 37: {
-
-              arriveRange_ = input.readFloat();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          routePoints_ = java.util.Collections.unmodifiableList(routePoints_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -243,6 +186,28 @@ public final class MonsterRouteOuterClass {
       return arriveRange_;
     }
 
+    public static final int OFDFDKHNJGA_FIELD_NUMBER = 5;
+    private boolean oFDFDKHNJGA_;
+    /**
+     * <code>bool OFDFDKHNJGA = 5;</code>
+     * @return The oFDFDKHNJGA.
+     */
+    @java.lang.Override
+    public boolean getOFDFDKHNJGA() {
+      return oFDFDKHNJGA_;
+    }
+
+    public static final int GPLDNOGEBDI_FIELD_NUMBER = 6;
+    private boolean gPLDNOGEBDI_;
+    /**
+     * <code>bool GPLDNOGEBDI = 6;</code>
+     * @return The gPLDNOGEBDI.
+     */
+    @java.lang.Override
+    public boolean getGPLDNOGEBDI() {
+      return gPLDNOGEBDI_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -266,10 +231,16 @@ public final class MonsterRouteOuterClass {
       if (routeType_ != 0) {
         output.writeUInt32(3, routeType_);
       }
-      if (arriveRange_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(arriveRange_) != 0) {
         output.writeFloat(4, arriveRange_);
       }
-      unknownFields.writeTo(output);
+      if (oFDFDKHNJGA_ != false) {
+        output.writeBool(5, oFDFDKHNJGA_);
+      }
+      if (gPLDNOGEBDI_ != false) {
+        output.writeBool(6, gPLDNOGEBDI_);
+      }
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -290,11 +261,19 @@ public final class MonsterRouteOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(3, routeType_);
       }
-      if (arriveRange_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(arriveRange_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(4, arriveRange_);
       }
-      size += unknownFields.getSerializedSize();
+      if (oFDFDKHNJGA_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(5, oFDFDKHNJGA_);
+      }
+      if (gPLDNOGEBDI_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(6, gPLDNOGEBDI_);
+      }
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -318,7 +297,11 @@ public final class MonsterRouteOuterClass {
       if (java.lang.Float.floatToIntBits(getArriveRange())
           != java.lang.Float.floatToIntBits(
               other.getArriveRange())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (getOFDFDKHNJGA()
+          != other.getOFDFDKHNJGA()) return false;
+      if (getGPLDNOGEBDI()
+          != other.getGPLDNOGEBDI()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -340,7 +323,13 @@ public final class MonsterRouteOuterClass {
       hash = (37 * hash) + ARRIVE_RANGE_FIELD_NUMBER;
       hash = (53 * hash) + java.lang.Float.floatToIntBits(
           getArriveRange());
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (37 * hash) + OFDFDKHNJGA_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getOFDFDKHNJGA());
+      hash = (37 * hash) + GPLDNOGEBDI_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getGPLDNOGEBDI());
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -436,10 +425,6 @@ public final class MonsterRouteOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * Obf: OKAKLDGDFDP
-     * </pre>
-     *
      * Protobuf type {@code MonsterRoute}
      */
     public static final class Builder extends
@@ -461,34 +446,33 @@ public final class MonsterRouteOuterClass {
 
       // Construct using emu.grasscutter.net.proto.MonsterRouteOuterClass.MonsterRoute.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getRoutePointsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
         if (routePointsBuilder_ == null) {
           routePoints_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          routePoints_ = null;
           routePointsBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000001);
         speedLevel_ = 0;
 
         routeType_ = 0;
 
         arriveRange_ = 0F;
+
+        oFDFDKHNJGA_ = false;
+
+        gPLDNOGEBDI_ = false;
 
         return this;
       }
@@ -529,6 +513,8 @@ public final class MonsterRouteOuterClass {
         result.speedLevel_ = speedLevel_;
         result.routeType_ = routeType_;
         result.arriveRange_ = arriveRange_;
+        result.oFDFDKHNJGA_ = oFDFDKHNJGA_;
+        result.gPLDNOGEBDI_ = gPLDNOGEBDI_;
         onBuilt();
         return result;
       }
@@ -612,7 +598,13 @@ public final class MonsterRouteOuterClass {
         if (other.getArriveRange() != 0F) {
           setArriveRange(other.getArriveRange());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        if (other.getOFDFDKHNJGA() != false) {
+          setOFDFDKHNJGA(other.getOFDFDKHNJGA());
+        }
+        if (other.getGPLDNOGEBDI() != false) {
+          setGPLDNOGEBDI(other.getGPLDNOGEBDI());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -627,17 +619,68 @@ public final class MonsterRouteOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.MonsterRouteOuterClass.MonsterRoute parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                emu.grasscutter.net.proto.RoutePointOuterClass.RoutePoint m =
+                    input.readMessage(
+                        emu.grasscutter.net.proto.RoutePointOuterClass.RoutePoint.parser(),
+                        extensionRegistry);
+                if (routePointsBuilder_ == null) {
+                  ensureRoutePointsIsMutable();
+                  routePoints_.add(m);
+                } else {
+                  routePointsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 16: {
+                speedLevel_ = input.readUInt32();
+
+                break;
+              } // case 16
+              case 24: {
+                routeType_ = input.readUInt32();
+
+                break;
+              } // case 24
+              case 37: {
+                arriveRange_ = input.readFloat();
+
+                break;
+              } // case 37
+              case 40: {
+                oFDFDKHNJGA_ = input.readBool();
+
+                break;
+              } // case 40
+              case 48: {
+                gPLDNOGEBDI_ = input.readBool();
+
+                break;
+              } // case 48
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.MonsterRouteOuterClass.MonsterRoute) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -974,6 +1017,68 @@ public final class MonsterRouteOuterClass {
         onChanged();
         return this;
       }
+
+      private boolean oFDFDKHNJGA_ ;
+      /**
+       * <code>bool OFDFDKHNJGA = 5;</code>
+       * @return The oFDFDKHNJGA.
+       */
+      @java.lang.Override
+      public boolean getOFDFDKHNJGA() {
+        return oFDFDKHNJGA_;
+      }
+      /**
+       * <code>bool OFDFDKHNJGA = 5;</code>
+       * @param value The oFDFDKHNJGA to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOFDFDKHNJGA(boolean value) {
+        
+        oFDFDKHNJGA_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool OFDFDKHNJGA = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOFDFDKHNJGA() {
+        
+        oFDFDKHNJGA_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean gPLDNOGEBDI_ ;
+      /**
+       * <code>bool GPLDNOGEBDI = 6;</code>
+       * @return The gPLDNOGEBDI.
+       */
+      @java.lang.Override
+      public boolean getGPLDNOGEBDI() {
+        return gPLDNOGEBDI_;
+      }
+      /**
+       * <code>bool GPLDNOGEBDI = 6;</code>
+       * @param value The gPLDNOGEBDI to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGPLDNOGEBDI(boolean value) {
+        
+        gPLDNOGEBDI_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool GPLDNOGEBDI = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGPLDNOGEBDI() {
+        
+        gPLDNOGEBDI_ = false;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -1007,7 +1112,18 @@ public final class MonsterRouteOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new MonsterRoute(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -1041,11 +1157,12 @@ public final class MonsterRouteOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\022MonsterRoute.proto\032\020RoutePoint.proto\"p" +
-      "\n\014MonsterRoute\022!\n\014route_points\030\001 \003(\0132\013.R" +
-      "outePoint\022\023\n\013speed_level\030\002 \001(\r\022\022\n\nroute_" +
-      "type\030\003 \001(\r\022\024\n\014arrive_range\030\004 \001(\002B\033\n\031emu." +
-      "grasscutter.net.protob\006proto3"
+      "\n\022MonsterRoute.proto\032\020RoutePoint.proto\"\232" +
+      "\001\n\014MonsterRoute\022!\n\014route_points\030\001 \003(\0132\013." +
+      "RoutePoint\022\023\n\013speed_level\030\002 \001(\r\022\022\n\nroute" +
+      "_type\030\003 \001(\r\022\024\n\014arrive_range\030\004 \001(\002\022\023\n\013OFD" +
+      "FDKHNJGA\030\005 \001(\010\022\023\n\013GPLDNOGEBDI\030\006 \001(\010B\033\n\031e" +
+      "mu.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1057,7 +1174,7 @@ public final class MonsterRouteOuterClass {
     internal_static_MonsterRoute_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_MonsterRoute_descriptor,
-        new java.lang.String[] { "RoutePoints", "SpeedLevel", "RouteType", "ArriveRange", });
+        new java.lang.String[] { "RoutePoints", "SpeedLevel", "RouteType", "ArriveRange", "OFDFDKHNJGA", "GPLDNOGEBDI", });
     emu.grasscutter.net.proto.RoutePointOuterClass.getDescriptor();
   }
 

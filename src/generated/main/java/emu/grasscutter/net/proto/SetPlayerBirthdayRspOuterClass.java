@@ -19,32 +19,27 @@ public final class SetPlayerBirthdayRspOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int32 retcode = 6;</code>
-     * @return The retcode.
-     */
-    int getRetcode();
-
-    /**
-     * <code>.Birthday birthday = 9;</code>
+     * <code>.Birthday birthday = 3;</code>
      * @return Whether the birthday field is set.
      */
     boolean hasBirthday();
     /**
-     * <code>.Birthday birthday = 9;</code>
+     * <code>.Birthday birthday = 3;</code>
      * @return The birthday.
      */
     emu.grasscutter.net.proto.BirthdayOuterClass.Birthday getBirthday();
     /**
-     * <code>.Birthday birthday = 9;</code>
+     * <code>.Birthday birthday = 3;</code>
      */
     emu.grasscutter.net.proto.BirthdayOuterClass.BirthdayOrBuilder getBirthdayOrBuilder();
+
+    /**
+     * <code>int32 retcode = 6;</code>
+     * @return The retcode.
+     */
+    int getRetcode();
   }
   /**
-   * <pre>
-   * 4.6.0
-   * CmdId: 21040
-   * </pre>
-   *
    * Protobuf type {@code SetPlayerBirthdayRsp}
    */
   public static final class SetPlayerBirthdayRsp extends
@@ -71,61 +66,6 @@ public final class SetPlayerBirthdayRspOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private SetPlayerBirthdayRsp(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 48: {
-
-              retcode_ = input.readInt32();
-              break;
-            }
-            case 74: {
-              emu.grasscutter.net.proto.BirthdayOuterClass.Birthday.Builder subBuilder = null;
-              if (birthday_ != null) {
-                subBuilder = birthday_.toBuilder();
-              }
-              birthday_ = input.readMessage(emu.grasscutter.net.proto.BirthdayOuterClass.Birthday.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(birthday_);
-                birthday_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.SetPlayerBirthdayRspOuterClass.internal_static_SetPlayerBirthdayRsp_descriptor;
@@ -139,6 +79,32 @@ public final class SetPlayerBirthdayRspOuterClass {
               emu.grasscutter.net.proto.SetPlayerBirthdayRspOuterClass.SetPlayerBirthdayRsp.class, emu.grasscutter.net.proto.SetPlayerBirthdayRspOuterClass.SetPlayerBirthdayRsp.Builder.class);
     }
 
+    public static final int BIRTHDAY_FIELD_NUMBER = 3;
+    private emu.grasscutter.net.proto.BirthdayOuterClass.Birthday birthday_;
+    /**
+     * <code>.Birthday birthday = 3;</code>
+     * @return Whether the birthday field is set.
+     */
+    @java.lang.Override
+    public boolean hasBirthday() {
+      return birthday_ != null;
+    }
+    /**
+     * <code>.Birthday birthday = 3;</code>
+     * @return The birthday.
+     */
+    @java.lang.Override
+    public emu.grasscutter.net.proto.BirthdayOuterClass.Birthday getBirthday() {
+      return birthday_ == null ? emu.grasscutter.net.proto.BirthdayOuterClass.Birthday.getDefaultInstance() : birthday_;
+    }
+    /**
+     * <code>.Birthday birthday = 3;</code>
+     */
+    @java.lang.Override
+    public emu.grasscutter.net.proto.BirthdayOuterClass.BirthdayOrBuilder getBirthdayOrBuilder() {
+      return getBirthday();
+    }
+
     public static final int RETCODE_FIELD_NUMBER = 6;
     private int retcode_;
     /**
@@ -148,32 +114,6 @@ public final class SetPlayerBirthdayRspOuterClass {
     @java.lang.Override
     public int getRetcode() {
       return retcode_;
-    }
-
-    public static final int BIRTHDAY_FIELD_NUMBER = 9;
-    private emu.grasscutter.net.proto.BirthdayOuterClass.Birthday birthday_;
-    /**
-     * <code>.Birthday birthday = 9;</code>
-     * @return Whether the birthday field is set.
-     */
-    @java.lang.Override
-    public boolean hasBirthday() {
-      return birthday_ != null;
-    }
-    /**
-     * <code>.Birthday birthday = 9;</code>
-     * @return The birthday.
-     */
-    @java.lang.Override
-    public emu.grasscutter.net.proto.BirthdayOuterClass.Birthday getBirthday() {
-      return birthday_ == null ? emu.grasscutter.net.proto.BirthdayOuterClass.Birthday.getDefaultInstance() : birthday_;
-    }
-    /**
-     * <code>.Birthday birthday = 9;</code>
-     */
-    @java.lang.Override
-    public emu.grasscutter.net.proto.BirthdayOuterClass.BirthdayOrBuilder getBirthdayOrBuilder() {
-      return getBirthday();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -190,13 +130,13 @@ public final class SetPlayerBirthdayRspOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (birthday_ != null) {
+        output.writeMessage(3, getBirthday());
+      }
       if (retcode_ != 0) {
         output.writeInt32(6, retcode_);
       }
-      if (birthday_ != null) {
-        output.writeMessage(9, getBirthday());
-      }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -205,15 +145,15 @@ public final class SetPlayerBirthdayRspOuterClass {
       if (size != -1) return size;
 
       size = 0;
+      if (birthday_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getBirthday());
+      }
       if (retcode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(6, retcode_);
       }
-      if (birthday_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(9, getBirthday());
-      }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -228,14 +168,14 @@ public final class SetPlayerBirthdayRspOuterClass {
       }
       emu.grasscutter.net.proto.SetPlayerBirthdayRspOuterClass.SetPlayerBirthdayRsp other = (emu.grasscutter.net.proto.SetPlayerBirthdayRspOuterClass.SetPlayerBirthdayRsp) obj;
 
-      if (getRetcode()
-          != other.getRetcode()) return false;
       if (hasBirthday() != other.hasBirthday()) return false;
       if (hasBirthday()) {
         if (!getBirthday()
             .equals(other.getBirthday())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (getRetcode()
+          != other.getRetcode()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -246,13 +186,13 @@ public final class SetPlayerBirthdayRspOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + RETCODE_FIELD_NUMBER;
-      hash = (53 * hash) + getRetcode();
       if (hasBirthday()) {
         hash = (37 * hash) + BIRTHDAY_FIELD_NUMBER;
         hash = (53 * hash) + getBirthday().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (37 * hash) + RETCODE_FIELD_NUMBER;
+      hash = (53 * hash) + getRetcode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -348,11 +288,6 @@ public final class SetPlayerBirthdayRspOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * 4.6.0
-     * CmdId: 21040
-     * </pre>
-     *
      * Protobuf type {@code SetPlayerBirthdayRsp}
      */
     public static final class Builder extends
@@ -374,30 +309,25 @@ public final class SetPlayerBirthdayRspOuterClass {
 
       // Construct using emu.grasscutter.net.proto.SetPlayerBirthdayRspOuterClass.SetPlayerBirthdayRsp.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        retcode_ = 0;
-
         if (birthdayBuilder_ == null) {
           birthday_ = null;
         } else {
           birthday_ = null;
           birthdayBuilder_ = null;
         }
+        retcode_ = 0;
+
         return this;
       }
 
@@ -424,12 +354,12 @@ public final class SetPlayerBirthdayRspOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.SetPlayerBirthdayRspOuterClass.SetPlayerBirthdayRsp buildPartial() {
         emu.grasscutter.net.proto.SetPlayerBirthdayRspOuterClass.SetPlayerBirthdayRsp result = new emu.grasscutter.net.proto.SetPlayerBirthdayRspOuterClass.SetPlayerBirthdayRsp(this);
-        result.retcode_ = retcode_;
         if (birthdayBuilder_ == null) {
           result.birthday_ = birthday_;
         } else {
           result.birthday_ = birthdayBuilder_.build();
         }
+        result.retcode_ = retcode_;
         onBuilt();
         return result;
       }
@@ -478,13 +408,13 @@ public final class SetPlayerBirthdayRspOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.SetPlayerBirthdayRspOuterClass.SetPlayerBirthdayRsp other) {
         if (other == emu.grasscutter.net.proto.SetPlayerBirthdayRspOuterClass.SetPlayerBirthdayRsp.getDefaultInstance()) return this;
-        if (other.getRetcode() != 0) {
-          setRetcode(other.getRetcode());
-        }
         if (other.hasBirthday()) {
           mergeBirthday(other.getBirthday());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        if (other.getRetcode() != 0) {
+          setRetcode(other.getRetcode());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -499,18 +429,162 @@ public final class SetPlayerBirthdayRspOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.SetPlayerBirthdayRspOuterClass.SetPlayerBirthdayRsp parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 26: {
+                input.readMessage(
+                    getBirthdayFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 26
+              case 48: {
+                retcode_ = input.readInt32();
+
+                break;
+              } // case 48
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.SetPlayerBirthdayRspOuterClass.SetPlayerBirthdayRsp) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
+      }
+
+      private emu.grasscutter.net.proto.BirthdayOuterClass.Birthday birthday_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          emu.grasscutter.net.proto.BirthdayOuterClass.Birthday, emu.grasscutter.net.proto.BirthdayOuterClass.Birthday.Builder, emu.grasscutter.net.proto.BirthdayOuterClass.BirthdayOrBuilder> birthdayBuilder_;
+      /**
+       * <code>.Birthday birthday = 3;</code>
+       * @return Whether the birthday field is set.
+       */
+      public boolean hasBirthday() {
+        return birthdayBuilder_ != null || birthday_ != null;
+      }
+      /**
+       * <code>.Birthday birthday = 3;</code>
+       * @return The birthday.
+       */
+      public emu.grasscutter.net.proto.BirthdayOuterClass.Birthday getBirthday() {
+        if (birthdayBuilder_ == null) {
+          return birthday_ == null ? emu.grasscutter.net.proto.BirthdayOuterClass.Birthday.getDefaultInstance() : birthday_;
+        } else {
+          return birthdayBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.Birthday birthday = 3;</code>
+       */
+      public Builder setBirthday(emu.grasscutter.net.proto.BirthdayOuterClass.Birthday value) {
+        if (birthdayBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          birthday_ = value;
+          onChanged();
+        } else {
+          birthdayBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.Birthday birthday = 3;</code>
+       */
+      public Builder setBirthday(
+          emu.grasscutter.net.proto.BirthdayOuterClass.Birthday.Builder builderForValue) {
+        if (birthdayBuilder_ == null) {
+          birthday_ = builderForValue.build();
+          onChanged();
+        } else {
+          birthdayBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.Birthday birthday = 3;</code>
+       */
+      public Builder mergeBirthday(emu.grasscutter.net.proto.BirthdayOuterClass.Birthday value) {
+        if (birthdayBuilder_ == null) {
+          if (birthday_ != null) {
+            birthday_ =
+              emu.grasscutter.net.proto.BirthdayOuterClass.Birthday.newBuilder(birthday_).mergeFrom(value).buildPartial();
+          } else {
+            birthday_ = value;
+          }
+          onChanged();
+        } else {
+          birthdayBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.Birthday birthday = 3;</code>
+       */
+      public Builder clearBirthday() {
+        if (birthdayBuilder_ == null) {
+          birthday_ = null;
+          onChanged();
+        } else {
+          birthday_ = null;
+          birthdayBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.Birthday birthday = 3;</code>
+       */
+      public emu.grasscutter.net.proto.BirthdayOuterClass.Birthday.Builder getBirthdayBuilder() {
+        
+        onChanged();
+        return getBirthdayFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.Birthday birthday = 3;</code>
+       */
+      public emu.grasscutter.net.proto.BirthdayOuterClass.BirthdayOrBuilder getBirthdayOrBuilder() {
+        if (birthdayBuilder_ != null) {
+          return birthdayBuilder_.getMessageOrBuilder();
+        } else {
+          return birthday_ == null ?
+              emu.grasscutter.net.proto.BirthdayOuterClass.Birthday.getDefaultInstance() : birthday_;
+        }
+      }
+      /**
+       * <code>.Birthday birthday = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          emu.grasscutter.net.proto.BirthdayOuterClass.Birthday, emu.grasscutter.net.proto.BirthdayOuterClass.Birthday.Builder, emu.grasscutter.net.proto.BirthdayOuterClass.BirthdayOrBuilder> 
+          getBirthdayFieldBuilder() {
+        if (birthdayBuilder_ == null) {
+          birthdayBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              emu.grasscutter.net.proto.BirthdayOuterClass.Birthday, emu.grasscutter.net.proto.BirthdayOuterClass.Birthday.Builder, emu.grasscutter.net.proto.BirthdayOuterClass.BirthdayOrBuilder>(
+                  getBirthday(),
+                  getParentForChildren(),
+                  isClean());
+          birthday_ = null;
+        }
+        return birthdayBuilder_;
       }
 
       private int retcode_ ;
@@ -542,125 +616,6 @@ public final class SetPlayerBirthdayRspOuterClass {
         retcode_ = 0;
         onChanged();
         return this;
-      }
-
-      private emu.grasscutter.net.proto.BirthdayOuterClass.Birthday birthday_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          emu.grasscutter.net.proto.BirthdayOuterClass.Birthday, emu.grasscutter.net.proto.BirthdayOuterClass.Birthday.Builder, emu.grasscutter.net.proto.BirthdayOuterClass.BirthdayOrBuilder> birthdayBuilder_;
-      /**
-       * <code>.Birthday birthday = 9;</code>
-       * @return Whether the birthday field is set.
-       */
-      public boolean hasBirthday() {
-        return birthdayBuilder_ != null || birthday_ != null;
-      }
-      /**
-       * <code>.Birthday birthday = 9;</code>
-       * @return The birthday.
-       */
-      public emu.grasscutter.net.proto.BirthdayOuterClass.Birthday getBirthday() {
-        if (birthdayBuilder_ == null) {
-          return birthday_ == null ? emu.grasscutter.net.proto.BirthdayOuterClass.Birthday.getDefaultInstance() : birthday_;
-        } else {
-          return birthdayBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>.Birthday birthday = 9;</code>
-       */
-      public Builder setBirthday(emu.grasscutter.net.proto.BirthdayOuterClass.Birthday value) {
-        if (birthdayBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          birthday_ = value;
-          onChanged();
-        } else {
-          birthdayBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.Birthday birthday = 9;</code>
-       */
-      public Builder setBirthday(
-          emu.grasscutter.net.proto.BirthdayOuterClass.Birthday.Builder builderForValue) {
-        if (birthdayBuilder_ == null) {
-          birthday_ = builderForValue.build();
-          onChanged();
-        } else {
-          birthdayBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <code>.Birthday birthday = 9;</code>
-       */
-      public Builder mergeBirthday(emu.grasscutter.net.proto.BirthdayOuterClass.Birthday value) {
-        if (birthdayBuilder_ == null) {
-          if (birthday_ != null) {
-            birthday_ =
-              emu.grasscutter.net.proto.BirthdayOuterClass.Birthday.newBuilder(birthday_).mergeFrom(value).buildPartial();
-          } else {
-            birthday_ = value;
-          }
-          onChanged();
-        } else {
-          birthdayBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.Birthday birthday = 9;</code>
-       */
-      public Builder clearBirthday() {
-        if (birthdayBuilder_ == null) {
-          birthday_ = null;
-          onChanged();
-        } else {
-          birthday_ = null;
-          birthdayBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <code>.Birthday birthday = 9;</code>
-       */
-      public emu.grasscutter.net.proto.BirthdayOuterClass.Birthday.Builder getBirthdayBuilder() {
-        
-        onChanged();
-        return getBirthdayFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.Birthday birthday = 9;</code>
-       */
-      public emu.grasscutter.net.proto.BirthdayOuterClass.BirthdayOrBuilder getBirthdayOrBuilder() {
-        if (birthdayBuilder_ != null) {
-          return birthdayBuilder_.getMessageOrBuilder();
-        } else {
-          return birthday_ == null ?
-              emu.grasscutter.net.proto.BirthdayOuterClass.Birthday.getDefaultInstance() : birthday_;
-        }
-      }
-      /**
-       * <code>.Birthday birthday = 9;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          emu.grasscutter.net.proto.BirthdayOuterClass.Birthday, emu.grasscutter.net.proto.BirthdayOuterClass.Birthday.Builder, emu.grasscutter.net.proto.BirthdayOuterClass.BirthdayOrBuilder> 
-          getBirthdayFieldBuilder() {
-        if (birthdayBuilder_ == null) {
-          birthdayBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              emu.grasscutter.net.proto.BirthdayOuterClass.Birthday, emu.grasscutter.net.proto.BirthdayOuterClass.Birthday.Builder, emu.grasscutter.net.proto.BirthdayOuterClass.BirthdayOrBuilder>(
-                  getBirthday(),
-                  getParentForChildren(),
-                  isClean());
-          birthday_ = null;
-        }
-        return birthdayBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -695,7 +650,18 @@ public final class SetPlayerBirthdayRspOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new SetPlayerBirthdayRsp(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -730,8 +696,8 @@ public final class SetPlayerBirthdayRspOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\032SetPlayerBirthdayRsp.proto\032\016Birthday.p" +
-      "roto\"D\n\024SetPlayerBirthdayRsp\022\017\n\007retcode\030" +
-      "\006 \001(\005\022\033\n\010birthday\030\t \001(\0132\t.BirthdayB\033\n\031em" +
+      "roto\"D\n\024SetPlayerBirthdayRsp\022\033\n\010birthday" +
+      "\030\003 \001(\0132\t.Birthday\022\017\n\007retcode\030\006 \001(\005B\033\n\031em" +
       "u.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -744,7 +710,7 @@ public final class SetPlayerBirthdayRspOuterClass {
     internal_static_SetPlayerBirthdayRsp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_SetPlayerBirthdayRsp_descriptor,
-        new java.lang.String[] { "Retcode", "Birthday", });
+        new java.lang.String[] { "Birthday", "Retcode", });
     emu.grasscutter.net.proto.BirthdayOuterClass.getDescriptor();
   }
 

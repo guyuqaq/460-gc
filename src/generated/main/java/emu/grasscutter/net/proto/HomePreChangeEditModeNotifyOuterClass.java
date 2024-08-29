@@ -19,16 +19,12 @@ public final class HomePreChangeEditModeNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>bool is_enter_edit_mode = 5;</code>
+     * <code>bool is_enter_edit_mode = 4;</code>
      * @return The isEnterEditMode.
      */
     boolean getIsEnterEditMode();
   }
   /**
-   * <pre>
-   * CmdId: 24506
-   * </pre>
-   *
    * Protobuf type {@code HomePreChangeEditModeNotify}
    */
   public static final class HomePreChangeEditModeNotify extends
@@ -55,48 +51,6 @@ public final class HomePreChangeEditModeNotifyOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private HomePreChangeEditModeNotify(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 40: {
-
-              isEnterEditMode_ = input.readBool();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.HomePreChangeEditModeNotifyOuterClass.internal_static_HomePreChangeEditModeNotify_descriptor;
@@ -110,10 +64,10 @@ public final class HomePreChangeEditModeNotifyOuterClass {
               emu.grasscutter.net.proto.HomePreChangeEditModeNotifyOuterClass.HomePreChangeEditModeNotify.class, emu.grasscutter.net.proto.HomePreChangeEditModeNotifyOuterClass.HomePreChangeEditModeNotify.Builder.class);
     }
 
-    public static final int IS_ENTER_EDIT_MODE_FIELD_NUMBER = 5;
+    public static final int IS_ENTER_EDIT_MODE_FIELD_NUMBER = 4;
     private boolean isEnterEditMode_;
     /**
-     * <code>bool is_enter_edit_mode = 5;</code>
+     * <code>bool is_enter_edit_mode = 4;</code>
      * @return The isEnterEditMode.
      */
     @java.lang.Override
@@ -136,9 +90,9 @@ public final class HomePreChangeEditModeNotifyOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (isEnterEditMode_ != false) {
-        output.writeBool(5, isEnterEditMode_);
+        output.writeBool(4, isEnterEditMode_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -149,9 +103,9 @@ public final class HomePreChangeEditModeNotifyOuterClass {
       size = 0;
       if (isEnterEditMode_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(5, isEnterEditMode_);
+          .computeBoolSize(4, isEnterEditMode_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -168,7 +122,7 @@ public final class HomePreChangeEditModeNotifyOuterClass {
 
       if (getIsEnterEditMode()
           != other.getIsEnterEditMode()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -182,7 +136,7 @@ public final class HomePreChangeEditModeNotifyOuterClass {
       hash = (37 * hash) + IS_ENTER_EDIT_MODE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsEnterEditMode());
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -278,10 +232,6 @@ public final class HomePreChangeEditModeNotifyOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 24506
-     * </pre>
-     *
      * Protobuf type {@code HomePreChangeEditModeNotify}
      */
     public static final class Builder extends
@@ -303,18 +253,13 @@ public final class HomePreChangeEditModeNotifyOuterClass {
 
       // Construct using emu.grasscutter.net.proto.HomePreChangeEditModeNotifyOuterClass.HomePreChangeEditModeNotify.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -399,7 +344,7 @@ public final class HomePreChangeEditModeNotifyOuterClass {
         if (other.getIsEnterEditMode() != false) {
           setIsEnterEditMode(other.getIsEnterEditMode());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -414,23 +359,41 @@ public final class HomePreChangeEditModeNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.HomePreChangeEditModeNotifyOuterClass.HomePreChangeEditModeNotify parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 32: {
+                isEnterEditMode_ = input.readBool();
+
+                break;
+              } // case 32
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.HomePreChangeEditModeNotifyOuterClass.HomePreChangeEditModeNotify) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
       private boolean isEnterEditMode_ ;
       /**
-       * <code>bool is_enter_edit_mode = 5;</code>
+       * <code>bool is_enter_edit_mode = 4;</code>
        * @return The isEnterEditMode.
        */
       @java.lang.Override
@@ -438,7 +401,7 @@ public final class HomePreChangeEditModeNotifyOuterClass {
         return isEnterEditMode_;
       }
       /**
-       * <code>bool is_enter_edit_mode = 5;</code>
+       * <code>bool is_enter_edit_mode = 4;</code>
        * @param value The isEnterEditMode to set.
        * @return This builder for chaining.
        */
@@ -449,7 +412,7 @@ public final class HomePreChangeEditModeNotifyOuterClass {
         return this;
       }
       /**
-       * <code>bool is_enter_edit_mode = 5;</code>
+       * <code>bool is_enter_edit_mode = 4;</code>
        * @return This builder for chaining.
        */
       public Builder clearIsEnterEditMode() {
@@ -491,7 +454,18 @@ public final class HomePreChangeEditModeNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new HomePreChangeEditModeNotify(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -527,7 +501,7 @@ public final class HomePreChangeEditModeNotifyOuterClass {
     java.lang.String[] descriptorData = {
       "\n!HomePreChangeEditModeNotify.proto\"9\n\033H" +
       "omePreChangeEditModeNotify\022\032\n\022is_enter_e" +
-      "dit_mode\030\005 \001(\010B\033\n\031emu.grasscutter.net.pr" +
+      "dit_mode\030\004 \001(\010B\033\n\031emu.grasscutter.net.pr" +
       "otob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

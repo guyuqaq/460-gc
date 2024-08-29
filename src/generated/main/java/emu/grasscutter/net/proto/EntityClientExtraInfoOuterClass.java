@@ -19,25 +19,21 @@ public final class EntityClientExtraInfoOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.Vector skill_anchor_position = 1;</code>
-     * @return Whether the skillAnchorPosition field is set.
+     * <code>.Vector FFIOLDKCHCK = 1;</code>
+     * @return Whether the fFIOLDKCHCK field is set.
      */
-    boolean hasSkillAnchorPosition();
+    boolean hasFFIOLDKCHCK();
     /**
-     * <code>.Vector skill_anchor_position = 1;</code>
-     * @return The skillAnchorPosition.
+     * <code>.Vector FFIOLDKCHCK = 1;</code>
+     * @return The fFIOLDKCHCK.
      */
-    emu.grasscutter.net.proto.VectorOuterClass.Vector getSkillAnchorPosition();
+    emu.grasscutter.net.proto.VectorOuterClass.Vector getFFIOLDKCHCK();
     /**
-     * <code>.Vector skill_anchor_position = 1;</code>
+     * <code>.Vector FFIOLDKCHCK = 1;</code>
      */
-    emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getSkillAnchorPositionOrBuilder();
+    emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getFFIOLDKCHCKOrBuilder();
   }
   /**
-   * <pre>
-   * Obf: LCJDLMMKJCK
-   * </pre>
-   *
    * Protobuf type {@code EntityClientExtraInfo}
    */
   public static final class EntityClientExtraInfo extends
@@ -64,56 +60,6 @@ public final class EntityClientExtraInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private EntityClientExtraInfo(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder subBuilder = null;
-              if (skillAnchorPosition_ != null) {
-                subBuilder = skillAnchorPosition_.toBuilder();
-              }
-              skillAnchorPosition_ = input.readMessage(emu.grasscutter.net.proto.VectorOuterClass.Vector.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(skillAnchorPosition_);
-                skillAnchorPosition_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.EntityClientExtraInfoOuterClass.internal_static_EntityClientExtraInfo_descriptor;
@@ -127,30 +73,30 @@ public final class EntityClientExtraInfoOuterClass {
               emu.grasscutter.net.proto.EntityClientExtraInfoOuterClass.EntityClientExtraInfo.class, emu.grasscutter.net.proto.EntityClientExtraInfoOuterClass.EntityClientExtraInfo.Builder.class);
     }
 
-    public static final int SKILL_ANCHOR_POSITION_FIELD_NUMBER = 1;
-    private emu.grasscutter.net.proto.VectorOuterClass.Vector skillAnchorPosition_;
+    public static final int FFIOLDKCHCK_FIELD_NUMBER = 1;
+    private emu.grasscutter.net.proto.VectorOuterClass.Vector fFIOLDKCHCK_;
     /**
-     * <code>.Vector skill_anchor_position = 1;</code>
-     * @return Whether the skillAnchorPosition field is set.
+     * <code>.Vector FFIOLDKCHCK = 1;</code>
+     * @return Whether the fFIOLDKCHCK field is set.
      */
     @java.lang.Override
-    public boolean hasSkillAnchorPosition() {
-      return skillAnchorPosition_ != null;
+    public boolean hasFFIOLDKCHCK() {
+      return fFIOLDKCHCK_ != null;
     }
     /**
-     * <code>.Vector skill_anchor_position = 1;</code>
-     * @return The skillAnchorPosition.
+     * <code>.Vector FFIOLDKCHCK = 1;</code>
+     * @return The fFIOLDKCHCK.
      */
     @java.lang.Override
-    public emu.grasscutter.net.proto.VectorOuterClass.Vector getSkillAnchorPosition() {
-      return skillAnchorPosition_ == null ? emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance() : skillAnchorPosition_;
+    public emu.grasscutter.net.proto.VectorOuterClass.Vector getFFIOLDKCHCK() {
+      return fFIOLDKCHCK_ == null ? emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance() : fFIOLDKCHCK_;
     }
     /**
-     * <code>.Vector skill_anchor_position = 1;</code>
+     * <code>.Vector FFIOLDKCHCK = 1;</code>
      */
     @java.lang.Override
-    public emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getSkillAnchorPositionOrBuilder() {
-      return getSkillAnchorPosition();
+    public emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getFFIOLDKCHCKOrBuilder() {
+      return getFFIOLDKCHCK();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -167,10 +113,10 @@ public final class EntityClientExtraInfoOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (skillAnchorPosition_ != null) {
-        output.writeMessage(1, getSkillAnchorPosition());
+      if (fFIOLDKCHCK_ != null) {
+        output.writeMessage(1, getFFIOLDKCHCK());
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -179,11 +125,11 @@ public final class EntityClientExtraInfoOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (skillAnchorPosition_ != null) {
+      if (fFIOLDKCHCK_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getSkillAnchorPosition());
+          .computeMessageSize(1, getFFIOLDKCHCK());
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -198,12 +144,12 @@ public final class EntityClientExtraInfoOuterClass {
       }
       emu.grasscutter.net.proto.EntityClientExtraInfoOuterClass.EntityClientExtraInfo other = (emu.grasscutter.net.proto.EntityClientExtraInfoOuterClass.EntityClientExtraInfo) obj;
 
-      if (hasSkillAnchorPosition() != other.hasSkillAnchorPosition()) return false;
-      if (hasSkillAnchorPosition()) {
-        if (!getSkillAnchorPosition()
-            .equals(other.getSkillAnchorPosition())) return false;
+      if (hasFFIOLDKCHCK() != other.hasFFIOLDKCHCK()) return false;
+      if (hasFFIOLDKCHCK()) {
+        if (!getFFIOLDKCHCK()
+            .equals(other.getFFIOLDKCHCK())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -214,11 +160,11 @@ public final class EntityClientExtraInfoOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasSkillAnchorPosition()) {
-        hash = (37 * hash) + SKILL_ANCHOR_POSITION_FIELD_NUMBER;
-        hash = (53 * hash) + getSkillAnchorPosition().hashCode();
+      if (hasFFIOLDKCHCK()) {
+        hash = (37 * hash) + FFIOLDKCHCK_FIELD_NUMBER;
+        hash = (53 * hash) + getFFIOLDKCHCK().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -314,10 +260,6 @@ public final class EntityClientExtraInfoOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * Obf: LCJDLMMKJCK
-     * </pre>
-     *
      * Protobuf type {@code EntityClientExtraInfo}
      */
     public static final class Builder extends
@@ -339,27 +281,22 @@ public final class EntityClientExtraInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.EntityClientExtraInfoOuterClass.EntityClientExtraInfo.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (skillAnchorPositionBuilder_ == null) {
-          skillAnchorPosition_ = null;
+        if (fFIOLDKCHCKBuilder_ == null) {
+          fFIOLDKCHCK_ = null;
         } else {
-          skillAnchorPosition_ = null;
-          skillAnchorPositionBuilder_ = null;
+          fFIOLDKCHCK_ = null;
+          fFIOLDKCHCKBuilder_ = null;
         }
         return this;
       }
@@ -387,10 +324,10 @@ public final class EntityClientExtraInfoOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.EntityClientExtraInfoOuterClass.EntityClientExtraInfo buildPartial() {
         emu.grasscutter.net.proto.EntityClientExtraInfoOuterClass.EntityClientExtraInfo result = new emu.grasscutter.net.proto.EntityClientExtraInfoOuterClass.EntityClientExtraInfo(this);
-        if (skillAnchorPositionBuilder_ == null) {
-          result.skillAnchorPosition_ = skillAnchorPosition_;
+        if (fFIOLDKCHCKBuilder_ == null) {
+          result.fFIOLDKCHCK_ = fFIOLDKCHCK_;
         } else {
-          result.skillAnchorPosition_ = skillAnchorPositionBuilder_.build();
+          result.fFIOLDKCHCK_ = fFIOLDKCHCKBuilder_.build();
         }
         onBuilt();
         return result;
@@ -440,10 +377,10 @@ public final class EntityClientExtraInfoOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.EntityClientExtraInfoOuterClass.EntityClientExtraInfo other) {
         if (other == emu.grasscutter.net.proto.EntityClientExtraInfoOuterClass.EntityClientExtraInfo.getDefaultInstance()) return this;
-        if (other.hasSkillAnchorPosition()) {
-          mergeSkillAnchorPosition(other.getSkillAnchorPosition());
+        if (other.hasFFIOLDKCHCK()) {
+          mergeFFIOLDKCHCK(other.getFFIOLDKCHCK());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -458,137 +395,157 @@ public final class EntityClientExtraInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.EntityClientExtraInfoOuterClass.EntityClientExtraInfo parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getFFIOLDKCHCKFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.EntityClientExtraInfoOuterClass.EntityClientExtraInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
-      private emu.grasscutter.net.proto.VectorOuterClass.Vector skillAnchorPosition_;
+      private emu.grasscutter.net.proto.VectorOuterClass.Vector fFIOLDKCHCK_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder> skillAnchorPositionBuilder_;
+          emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder> fFIOLDKCHCKBuilder_;
       /**
-       * <code>.Vector skill_anchor_position = 1;</code>
-       * @return Whether the skillAnchorPosition field is set.
+       * <code>.Vector FFIOLDKCHCK = 1;</code>
+       * @return Whether the fFIOLDKCHCK field is set.
        */
-      public boolean hasSkillAnchorPosition() {
-        return skillAnchorPositionBuilder_ != null || skillAnchorPosition_ != null;
+      public boolean hasFFIOLDKCHCK() {
+        return fFIOLDKCHCKBuilder_ != null || fFIOLDKCHCK_ != null;
       }
       /**
-       * <code>.Vector skill_anchor_position = 1;</code>
-       * @return The skillAnchorPosition.
+       * <code>.Vector FFIOLDKCHCK = 1;</code>
+       * @return The fFIOLDKCHCK.
        */
-      public emu.grasscutter.net.proto.VectorOuterClass.Vector getSkillAnchorPosition() {
-        if (skillAnchorPositionBuilder_ == null) {
-          return skillAnchorPosition_ == null ? emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance() : skillAnchorPosition_;
+      public emu.grasscutter.net.proto.VectorOuterClass.Vector getFFIOLDKCHCK() {
+        if (fFIOLDKCHCKBuilder_ == null) {
+          return fFIOLDKCHCK_ == null ? emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance() : fFIOLDKCHCK_;
         } else {
-          return skillAnchorPositionBuilder_.getMessage();
+          return fFIOLDKCHCKBuilder_.getMessage();
         }
       }
       /**
-       * <code>.Vector skill_anchor_position = 1;</code>
+       * <code>.Vector FFIOLDKCHCK = 1;</code>
        */
-      public Builder setSkillAnchorPosition(emu.grasscutter.net.proto.VectorOuterClass.Vector value) {
-        if (skillAnchorPositionBuilder_ == null) {
+      public Builder setFFIOLDKCHCK(emu.grasscutter.net.proto.VectorOuterClass.Vector value) {
+        if (fFIOLDKCHCKBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          skillAnchorPosition_ = value;
+          fFIOLDKCHCK_ = value;
           onChanged();
         } else {
-          skillAnchorPositionBuilder_.setMessage(value);
+          fFIOLDKCHCKBuilder_.setMessage(value);
         }
 
         return this;
       }
       /**
-       * <code>.Vector skill_anchor_position = 1;</code>
+       * <code>.Vector FFIOLDKCHCK = 1;</code>
        */
-      public Builder setSkillAnchorPosition(
+      public Builder setFFIOLDKCHCK(
           emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder builderForValue) {
-        if (skillAnchorPositionBuilder_ == null) {
-          skillAnchorPosition_ = builderForValue.build();
+        if (fFIOLDKCHCKBuilder_ == null) {
+          fFIOLDKCHCK_ = builderForValue.build();
           onChanged();
         } else {
-          skillAnchorPositionBuilder_.setMessage(builderForValue.build());
+          fFIOLDKCHCKBuilder_.setMessage(builderForValue.build());
         }
 
         return this;
       }
       /**
-       * <code>.Vector skill_anchor_position = 1;</code>
+       * <code>.Vector FFIOLDKCHCK = 1;</code>
        */
-      public Builder mergeSkillAnchorPosition(emu.grasscutter.net.proto.VectorOuterClass.Vector value) {
-        if (skillAnchorPositionBuilder_ == null) {
-          if (skillAnchorPosition_ != null) {
-            skillAnchorPosition_ =
-              emu.grasscutter.net.proto.VectorOuterClass.Vector.newBuilder(skillAnchorPosition_).mergeFrom(value).buildPartial();
+      public Builder mergeFFIOLDKCHCK(emu.grasscutter.net.proto.VectorOuterClass.Vector value) {
+        if (fFIOLDKCHCKBuilder_ == null) {
+          if (fFIOLDKCHCK_ != null) {
+            fFIOLDKCHCK_ =
+              emu.grasscutter.net.proto.VectorOuterClass.Vector.newBuilder(fFIOLDKCHCK_).mergeFrom(value).buildPartial();
           } else {
-            skillAnchorPosition_ = value;
+            fFIOLDKCHCK_ = value;
           }
           onChanged();
         } else {
-          skillAnchorPositionBuilder_.mergeFrom(value);
+          fFIOLDKCHCKBuilder_.mergeFrom(value);
         }
 
         return this;
       }
       /**
-       * <code>.Vector skill_anchor_position = 1;</code>
+       * <code>.Vector FFIOLDKCHCK = 1;</code>
        */
-      public Builder clearSkillAnchorPosition() {
-        if (skillAnchorPositionBuilder_ == null) {
-          skillAnchorPosition_ = null;
+      public Builder clearFFIOLDKCHCK() {
+        if (fFIOLDKCHCKBuilder_ == null) {
+          fFIOLDKCHCK_ = null;
           onChanged();
         } else {
-          skillAnchorPosition_ = null;
-          skillAnchorPositionBuilder_ = null;
+          fFIOLDKCHCK_ = null;
+          fFIOLDKCHCKBuilder_ = null;
         }
 
         return this;
       }
       /**
-       * <code>.Vector skill_anchor_position = 1;</code>
+       * <code>.Vector FFIOLDKCHCK = 1;</code>
        */
-      public emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder getSkillAnchorPositionBuilder() {
+      public emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder getFFIOLDKCHCKBuilder() {
         
         onChanged();
-        return getSkillAnchorPositionFieldBuilder().getBuilder();
+        return getFFIOLDKCHCKFieldBuilder().getBuilder();
       }
       /**
-       * <code>.Vector skill_anchor_position = 1;</code>
+       * <code>.Vector FFIOLDKCHCK = 1;</code>
        */
-      public emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getSkillAnchorPositionOrBuilder() {
-        if (skillAnchorPositionBuilder_ != null) {
-          return skillAnchorPositionBuilder_.getMessageOrBuilder();
+      public emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getFFIOLDKCHCKOrBuilder() {
+        if (fFIOLDKCHCKBuilder_ != null) {
+          return fFIOLDKCHCKBuilder_.getMessageOrBuilder();
         } else {
-          return skillAnchorPosition_ == null ?
-              emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance() : skillAnchorPosition_;
+          return fFIOLDKCHCK_ == null ?
+              emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance() : fFIOLDKCHCK_;
         }
       }
       /**
-       * <code>.Vector skill_anchor_position = 1;</code>
+       * <code>.Vector FFIOLDKCHCK = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder> 
-          getSkillAnchorPositionFieldBuilder() {
-        if (skillAnchorPositionBuilder_ == null) {
-          skillAnchorPositionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+          getFFIOLDKCHCKFieldBuilder() {
+        if (fFIOLDKCHCKBuilder_ == null) {
+          fFIOLDKCHCKBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder>(
-                  getSkillAnchorPosition(),
+                  getFFIOLDKCHCK(),
                   getParentForChildren(),
                   isClean());
-          skillAnchorPosition_ = null;
+          fFIOLDKCHCK_ = null;
         }
-        return skillAnchorPositionBuilder_;
+        return fFIOLDKCHCKBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -623,7 +580,18 @@ public final class EntityClientExtraInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new EntityClientExtraInfo(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -658,9 +626,9 @@ public final class EntityClientExtraInfoOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\033EntityClientExtraInfo.proto\032\014Vector.pr" +
-      "oto\"?\n\025EntityClientExtraInfo\022&\n\025skill_an" +
-      "chor_position\030\001 \001(\0132\007.VectorB\033\n\031emu.gras" +
-      "scutter.net.protob\006proto3"
+      "oto\"5\n\025EntityClientExtraInfo\022\034\n\013FFIOLDKC" +
+      "HCK\030\001 \001(\0132\007.VectorB\033\n\031emu.grasscutter.ne" +
+      "t.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -672,7 +640,7 @@ public final class EntityClientExtraInfoOuterClass {
     internal_static_EntityClientExtraInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_EntityClientExtraInfo_descriptor,
-        new java.lang.String[] { "SkillAnchorPosition", });
+        new java.lang.String[] { "FFIOLDKCHCK", });
     emu.grasscutter.net.proto.VectorOuterClass.getDescriptor();
   }
 

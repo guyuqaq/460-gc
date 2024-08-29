@@ -19,11 +19,11 @@ public final class EvtAiSyncCombatThreatInfoNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>map&lt;uint32, .AiThreatInfo&gt; combat_threat_info_map = 5;</code>
+     * <code>map&lt;uint32, .AiThreatInfo&gt; combat_threat_info_map = 3;</code>
      */
     int getCombatThreatInfoMapCount();
     /**
-     * <code>map&lt;uint32, .AiThreatInfo&gt; combat_threat_info_map = 5;</code>
+     * <code>map&lt;uint32, .AiThreatInfo&gt; combat_threat_info_map = 3;</code>
      */
     boolean containsCombatThreatInfoMap(
         int key);
@@ -34,19 +34,19 @@ public final class EvtAiSyncCombatThreatInfoNotifyOuterClass {
     java.util.Map<java.lang.Integer, emu.grasscutter.net.proto.AiThreatInfoOuterClass.AiThreatInfo>
     getCombatThreatInfoMap();
     /**
-     * <code>map&lt;uint32, .AiThreatInfo&gt; combat_threat_info_map = 5;</code>
+     * <code>map&lt;uint32, .AiThreatInfo&gt; combat_threat_info_map = 3;</code>
      */
     java.util.Map<java.lang.Integer, emu.grasscutter.net.proto.AiThreatInfoOuterClass.AiThreatInfo>
     getCombatThreatInfoMapMap();
     /**
-     * <code>map&lt;uint32, .AiThreatInfo&gt; combat_threat_info_map = 5;</code>
+     * <code>map&lt;uint32, .AiThreatInfo&gt; combat_threat_info_map = 3;</code>
      */
 
     emu.grasscutter.net.proto.AiThreatInfoOuterClass.AiThreatInfo getCombatThreatInfoMapOrDefault(
         int key,
         emu.grasscutter.net.proto.AiThreatInfoOuterClass.AiThreatInfo defaultValue);
     /**
-     * <code>map&lt;uint32, .AiThreatInfo&gt; combat_threat_info_map = 5;</code>
+     * <code>map&lt;uint32, .AiThreatInfo&gt; combat_threat_info_map = 3;</code>
      */
 
     emu.grasscutter.net.proto.AiThreatInfoOuterClass.AiThreatInfo getCombatThreatInfoMapOrThrow(
@@ -54,9 +54,8 @@ public final class EvtAiSyncCombatThreatInfoNotifyOuterClass {
   }
   /**
    * <pre>
-   * 4.6.0
-   * Obf: CMLBBABLKPB
-   * CmdId: 28434
+   * 4.7.0
+   * CmdId: 2682
    * </pre>
    *
    * Protobuf type {@code EvtAiSyncCombatThreatInfoNotify}
@@ -85,57 +84,6 @@ public final class EvtAiSyncCombatThreatInfoNotifyOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private EvtAiSyncCombatThreatInfoNotify(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 42: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                combatThreatInfoMap_ = com.google.protobuf.MapField.newMapField(
-                    CombatThreatInfoMapDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000001;
-              }
-              com.google.protobuf.MapEntry<java.lang.Integer, emu.grasscutter.net.proto.AiThreatInfoOuterClass.AiThreatInfo>
-              combatThreatInfoMap__ = input.readMessage(
-                  CombatThreatInfoMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              combatThreatInfoMap_.getMutableMap().put(
-                  combatThreatInfoMap__.getKey(), combatThreatInfoMap__.getValue());
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.EvtAiSyncCombatThreatInfoNotifyOuterClass.internal_static_EvtAiSyncCombatThreatInfoNotify_descriptor;
@@ -146,7 +94,7 @@ public final class EvtAiSyncCombatThreatInfoNotifyOuterClass {
     protected com.google.protobuf.MapField internalGetMapField(
         int number) {
       switch (number) {
-        case 5:
+        case 3:
           return internalGetCombatThreatInfoMap();
         default:
           throw new RuntimeException(
@@ -161,7 +109,7 @@ public final class EvtAiSyncCombatThreatInfoNotifyOuterClass {
               emu.grasscutter.net.proto.EvtAiSyncCombatThreatInfoNotifyOuterClass.EvtAiSyncCombatThreatInfoNotify.class, emu.grasscutter.net.proto.EvtAiSyncCombatThreatInfoNotifyOuterClass.EvtAiSyncCombatThreatInfoNotify.Builder.class);
     }
 
-    public static final int COMBAT_THREAT_INFO_MAP_FIELD_NUMBER = 5;
+    public static final int COMBAT_THREAT_INFO_MAP_FIELD_NUMBER = 3;
     private static final class CombatThreatInfoMapDefaultEntryHolder {
       static final com.google.protobuf.MapEntry<
           java.lang.Integer, emu.grasscutter.net.proto.AiThreatInfoOuterClass.AiThreatInfo> defaultEntry =
@@ -188,7 +136,7 @@ public final class EvtAiSyncCombatThreatInfoNotifyOuterClass {
       return internalGetCombatThreatInfoMap().getMap().size();
     }
     /**
-     * <code>map&lt;uint32, .AiThreatInfo&gt; combat_threat_info_map = 5;</code>
+     * <code>map&lt;uint32, .AiThreatInfo&gt; combat_threat_info_map = 3;</code>
      */
 
     @java.lang.Override
@@ -206,7 +154,7 @@ public final class EvtAiSyncCombatThreatInfoNotifyOuterClass {
       return getCombatThreatInfoMapMap();
     }
     /**
-     * <code>map&lt;uint32, .AiThreatInfo&gt; combat_threat_info_map = 5;</code>
+     * <code>map&lt;uint32, .AiThreatInfo&gt; combat_threat_info_map = 3;</code>
      */
     @java.lang.Override
 
@@ -214,7 +162,7 @@ public final class EvtAiSyncCombatThreatInfoNotifyOuterClass {
       return internalGetCombatThreatInfoMap().getMap();
     }
     /**
-     * <code>map&lt;uint32, .AiThreatInfo&gt; combat_threat_info_map = 5;</code>
+     * <code>map&lt;uint32, .AiThreatInfo&gt; combat_threat_info_map = 3;</code>
      */
     @java.lang.Override
 
@@ -227,7 +175,7 @@ public final class EvtAiSyncCombatThreatInfoNotifyOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
-     * <code>map&lt;uint32, .AiThreatInfo&gt; combat_threat_info_map = 5;</code>
+     * <code>map&lt;uint32, .AiThreatInfo&gt; combat_threat_info_map = 3;</code>
      */
     @java.lang.Override
 
@@ -261,8 +209,8 @@ public final class EvtAiSyncCombatThreatInfoNotifyOuterClass {
           output,
           internalGetCombatThreatInfoMap(),
           CombatThreatInfoMapDefaultEntryHolder.defaultEntry,
-          5);
-      unknownFields.writeTo(output);
+          3);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -279,9 +227,9 @@ public final class EvtAiSyncCombatThreatInfoNotifyOuterClass {
             .setValue(entry.getValue())
             .build();
         size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(5, combatThreatInfoMap__);
+            .computeMessageSize(3, combatThreatInfoMap__);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -298,7 +246,7 @@ public final class EvtAiSyncCombatThreatInfoNotifyOuterClass {
 
       if (!internalGetCombatThreatInfoMap().equals(
           other.internalGetCombatThreatInfoMap())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -313,7 +261,7 @@ public final class EvtAiSyncCombatThreatInfoNotifyOuterClass {
         hash = (37 * hash) + COMBAT_THREAT_INFO_MAP_FIELD_NUMBER;
         hash = (53 * hash) + internalGetCombatThreatInfoMap().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -410,9 +358,8 @@ public final class EvtAiSyncCombatThreatInfoNotifyOuterClass {
     }
     /**
      * <pre>
-     * 4.6.0
-     * Obf: CMLBBABLKPB
-     * CmdId: 28434
+     * 4.7.0
+     * CmdId: 2682
      * </pre>
      *
      * Protobuf type {@code EvtAiSyncCombatThreatInfoNotify}
@@ -430,7 +377,7 @@ public final class EvtAiSyncCombatThreatInfoNotifyOuterClass {
       protected com.google.protobuf.MapField internalGetMapField(
           int number) {
         switch (number) {
-          case 5:
+          case 3:
             return internalGetCombatThreatInfoMap();
           default:
             throw new RuntimeException(
@@ -441,7 +388,7 @@ public final class EvtAiSyncCombatThreatInfoNotifyOuterClass {
       protected com.google.protobuf.MapField internalGetMutableMapField(
           int number) {
         switch (number) {
-          case 5:
+          case 3:
             return internalGetMutableCombatThreatInfoMap();
           default:
             throw new RuntimeException(
@@ -458,18 +405,13 @@ public final class EvtAiSyncCombatThreatInfoNotifyOuterClass {
 
       // Construct using emu.grasscutter.net.proto.EvtAiSyncCombatThreatInfoNotifyOuterClass.EvtAiSyncCombatThreatInfoNotify.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -554,7 +496,7 @@ public final class EvtAiSyncCombatThreatInfoNotifyOuterClass {
         if (other == emu.grasscutter.net.proto.EvtAiSyncCombatThreatInfoNotifyOuterClass.EvtAiSyncCombatThreatInfoNotify.getDefaultInstance()) return this;
         internalGetMutableCombatThreatInfoMap().mergeFrom(
             other.internalGetCombatThreatInfoMap());
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -569,17 +511,38 @@ public final class EvtAiSyncCombatThreatInfoNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.EvtAiSyncCombatThreatInfoNotifyOuterClass.EvtAiSyncCombatThreatInfoNotify parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 26: {
+                com.google.protobuf.MapEntry<java.lang.Integer, emu.grasscutter.net.proto.AiThreatInfoOuterClass.AiThreatInfo>
+                combatThreatInfoMap__ = input.readMessage(
+                    CombatThreatInfoMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutableCombatThreatInfoMap().getMutableMap().put(
+                    combatThreatInfoMap__.getKey(), combatThreatInfoMap__.getValue());
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.EvtAiSyncCombatThreatInfoNotifyOuterClass.EvtAiSyncCombatThreatInfoNotify) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -611,7 +574,7 @@ public final class EvtAiSyncCombatThreatInfoNotifyOuterClass {
         return internalGetCombatThreatInfoMap().getMap().size();
       }
       /**
-       * <code>map&lt;uint32, .AiThreatInfo&gt; combat_threat_info_map = 5;</code>
+       * <code>map&lt;uint32, .AiThreatInfo&gt; combat_threat_info_map = 3;</code>
        */
 
       @java.lang.Override
@@ -629,7 +592,7 @@ public final class EvtAiSyncCombatThreatInfoNotifyOuterClass {
         return getCombatThreatInfoMapMap();
       }
       /**
-       * <code>map&lt;uint32, .AiThreatInfo&gt; combat_threat_info_map = 5;</code>
+       * <code>map&lt;uint32, .AiThreatInfo&gt; combat_threat_info_map = 3;</code>
        */
       @java.lang.Override
 
@@ -637,7 +600,7 @@ public final class EvtAiSyncCombatThreatInfoNotifyOuterClass {
         return internalGetCombatThreatInfoMap().getMap();
       }
       /**
-       * <code>map&lt;uint32, .AiThreatInfo&gt; combat_threat_info_map = 5;</code>
+       * <code>map&lt;uint32, .AiThreatInfo&gt; combat_threat_info_map = 3;</code>
        */
       @java.lang.Override
 
@@ -650,7 +613,7 @@ public final class EvtAiSyncCombatThreatInfoNotifyOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
-       * <code>map&lt;uint32, .AiThreatInfo&gt; combat_threat_info_map = 5;</code>
+       * <code>map&lt;uint32, .AiThreatInfo&gt; combat_threat_info_map = 3;</code>
        */
       @java.lang.Override
 
@@ -671,7 +634,7 @@ public final class EvtAiSyncCombatThreatInfoNotifyOuterClass {
         return this;
       }
       /**
-       * <code>map&lt;uint32, .AiThreatInfo&gt; combat_threat_info_map = 5;</code>
+       * <code>map&lt;uint32, .AiThreatInfo&gt; combat_threat_info_map = 3;</code>
        */
 
       public Builder removeCombatThreatInfoMap(
@@ -690,19 +653,22 @@ public final class EvtAiSyncCombatThreatInfoNotifyOuterClass {
         return internalGetMutableCombatThreatInfoMap().getMutableMap();
       }
       /**
-       * <code>map&lt;uint32, .AiThreatInfo&gt; combat_threat_info_map = 5;</code>
+       * <code>map&lt;uint32, .AiThreatInfo&gt; combat_threat_info_map = 3;</code>
        */
       public Builder putCombatThreatInfoMap(
           int key,
           emu.grasscutter.net.proto.AiThreatInfoOuterClass.AiThreatInfo value) {
         
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableCombatThreatInfoMap().getMutableMap()
             .put(key, value);
         return this;
       }
       /**
-       * <code>map&lt;uint32, .AiThreatInfo&gt; combat_threat_info_map = 5;</code>
+       * <code>map&lt;uint32, .AiThreatInfo&gt; combat_threat_info_map = 3;</code>
        */
 
       public Builder putAllCombatThreatInfoMap(
@@ -744,7 +710,18 @@ public final class EvtAiSyncCombatThreatInfoNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new EvtAiSyncCombatThreatInfoNotify(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -786,7 +763,7 @@ public final class EvtAiSyncCombatThreatInfoNotifyOuterClass {
       "\n%EvtAiSyncCombatThreatInfoNotify.proto\032" +
       "\022AiThreatInfo.proto\"\307\001\n\037EvtAiSyncCombatT" +
       "hreatInfoNotify\022Y\n\026combat_threat_info_ma" +
-      "p\030\005 \003(\01329.EvtAiSyncCombatThreatInfoNotif" +
+      "p\030\003 \003(\01329.EvtAiSyncCombatThreatInfoNotif" +
       "y.CombatThreatInfoMapEntry\032I\n\030CombatThre" +
       "atInfoMapEntry\022\013\n\003key\030\001 \001(\r\022\034\n\005value\030\002 \001" +
       "(\0132\r.AiThreatInfo:\0028\001B\033\n\031emu.grasscutter" +

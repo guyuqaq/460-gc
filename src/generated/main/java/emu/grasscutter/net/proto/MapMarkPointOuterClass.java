@@ -86,16 +86,12 @@ public final class MapMarkPointOuterClass {
     int getQuestId();
 
     /**
-     * <code>uint32 PCINBMGKKDJ = 8;</code>
-     * @return The pCINBMGKKDJ.
+     * <code>uint32 AGIENJJKPBE = 8;</code>
+     * @return The aGIENJJKPBE.
      */
-    int getPCINBMGKKDJ();
+    int getAGIENJJKPBE();
   }
   /**
-   * <pre>
-   * 4.6.0
-   * </pre>
-   *
    * Protobuf type {@code MapMarkPoint}
    */
   public static final class MapMarkPoint extends
@@ -124,94 +120,6 @@ public final class MapMarkPointOuterClass {
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
-    }
-    private MapMarkPoint(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-
-              sceneId_ = input.readUInt32();
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              name_ = s;
-              break;
-            }
-            case 26: {
-              emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder subBuilder = null;
-              if (pos_ != null) {
-                subBuilder = pos_.toBuilder();
-              }
-              pos_ = input.readMessage(emu.grasscutter.net.proto.VectorOuterClass.Vector.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(pos_);
-                pos_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 32: {
-              int rawValue = input.readEnum();
-
-              pointType_ = rawValue;
-              break;
-            }
-            case 40: {
-
-              monsterId_ = input.readUInt32();
-              break;
-            }
-            case 48: {
-              int rawValue = input.readEnum();
-
-              fromType_ = rawValue;
-              break;
-            }
-            case 56: {
-
-              questId_ = input.readUInt32();
-              break;
-            }
-            case 64: {
-
-              pCINBMGKKDJ_ = input.readUInt32();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -361,15 +269,15 @@ public final class MapMarkPointOuterClass {
       return questId_;
     }
 
-    public static final int PCINBMGKKDJ_FIELD_NUMBER = 8;
-    private int pCINBMGKKDJ_;
+    public static final int AGIENJJKPBE_FIELD_NUMBER = 8;
+    private int aGIENJJKPBE_;
     /**
-     * <code>uint32 PCINBMGKKDJ = 8;</code>
-     * @return The pCINBMGKKDJ.
+     * <code>uint32 AGIENJJKPBE = 8;</code>
+     * @return The aGIENJJKPBE.
      */
     @java.lang.Override
-    public int getPCINBMGKKDJ() {
-      return pCINBMGKKDJ_;
+    public int getAGIENJJKPBE() {
+      return aGIENJJKPBE_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -407,10 +315,10 @@ public final class MapMarkPointOuterClass {
       if (questId_ != 0) {
         output.writeUInt32(7, questId_);
       }
-      if (pCINBMGKKDJ_ != 0) {
-        output.writeUInt32(8, pCINBMGKKDJ_);
+      if (aGIENJJKPBE_ != 0) {
+        output.writeUInt32(8, aGIENJJKPBE_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -446,11 +354,11 @@ public final class MapMarkPointOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(7, questId_);
       }
-      if (pCINBMGKKDJ_ != 0) {
+      if (aGIENJJKPBE_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(8, pCINBMGKKDJ_);
+          .computeUInt32Size(8, aGIENJJKPBE_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -480,9 +388,9 @@ public final class MapMarkPointOuterClass {
       if (fromType_ != other.fromType_) return false;
       if (getQuestId()
           != other.getQuestId()) return false;
-      if (getPCINBMGKKDJ()
-          != other.getPCINBMGKKDJ()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (getAGIENJJKPBE()
+          != other.getAGIENJJKPBE()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -509,9 +417,9 @@ public final class MapMarkPointOuterClass {
       hash = (53 * hash) + fromType_;
       hash = (37 * hash) + QUEST_ID_FIELD_NUMBER;
       hash = (53 * hash) + getQuestId();
-      hash = (37 * hash) + PCINBMGKKDJ_FIELD_NUMBER;
-      hash = (53 * hash) + getPCINBMGKKDJ();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (37 * hash) + AGIENJJKPBE_FIELD_NUMBER;
+      hash = (53 * hash) + getAGIENJJKPBE();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -607,10 +515,6 @@ public final class MapMarkPointOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * 4.6.0
-     * </pre>
-     *
      * Protobuf type {@code MapMarkPoint}
      */
     public static final class Builder extends
@@ -632,18 +536,13 @@ public final class MapMarkPointOuterClass {
 
       // Construct using emu.grasscutter.net.proto.MapMarkPointOuterClass.MapMarkPoint.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -666,7 +565,7 @@ public final class MapMarkPointOuterClass {
 
         questId_ = 0;
 
-        pCINBMGKKDJ_ = 0;
+        aGIENJJKPBE_ = 0;
 
         return this;
       }
@@ -705,7 +604,7 @@ public final class MapMarkPointOuterClass {
         result.monsterId_ = monsterId_;
         result.fromType_ = fromType_;
         result.questId_ = questId_;
-        result.pCINBMGKKDJ_ = pCINBMGKKDJ_;
+        result.aGIENJJKPBE_ = aGIENJJKPBE_;
         onBuilt();
         return result;
       }
@@ -776,10 +675,10 @@ public final class MapMarkPointOuterClass {
         if (other.getQuestId() != 0) {
           setQuestId(other.getQuestId());
         }
-        if (other.getPCINBMGKKDJ() != 0) {
-          setPCINBMGKKDJ(other.getPCINBMGKKDJ());
+        if (other.getAGIENJJKPBE() != 0) {
+          setAGIENJJKPBE(other.getAGIENJJKPBE());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -794,17 +693,72 @@ public final class MapMarkPointOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.MapMarkPointOuterClass.MapMarkPoint parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                sceneId_ = input.readUInt32();
+
+                break;
+              } // case 8
+              case 18: {
+                name_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getPosFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 26
+              case 32: {
+                pointType_ = input.readEnum();
+
+                break;
+              } // case 32
+              case 40: {
+                monsterId_ = input.readUInt32();
+
+                break;
+              } // case 40
+              case 48: {
+                fromType_ = input.readEnum();
+
+                break;
+              } // case 48
+              case 56: {
+                questId_ = input.readUInt32();
+
+                break;
+              } // case 56
+              case 64: {
+                aGIENJJKPBE_ = input.readUInt32();
+
+                break;
+              } // case 64
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.MapMarkPointOuterClass.MapMarkPoint) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -1204,33 +1158,33 @@ public final class MapMarkPointOuterClass {
         return this;
       }
 
-      private int pCINBMGKKDJ_ ;
+      private int aGIENJJKPBE_ ;
       /**
-       * <code>uint32 PCINBMGKKDJ = 8;</code>
-       * @return The pCINBMGKKDJ.
+       * <code>uint32 AGIENJJKPBE = 8;</code>
+       * @return The aGIENJJKPBE.
        */
       @java.lang.Override
-      public int getPCINBMGKKDJ() {
-        return pCINBMGKKDJ_;
+      public int getAGIENJJKPBE() {
+        return aGIENJJKPBE_;
       }
       /**
-       * <code>uint32 PCINBMGKKDJ = 8;</code>
-       * @param value The pCINBMGKKDJ to set.
+       * <code>uint32 AGIENJJKPBE = 8;</code>
+       * @param value The aGIENJJKPBE to set.
        * @return This builder for chaining.
        */
-      public Builder setPCINBMGKKDJ(int value) {
+      public Builder setAGIENJJKPBE(int value) {
         
-        pCINBMGKKDJ_ = value;
+        aGIENJJKPBE_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 PCINBMGKKDJ = 8;</code>
+       * <code>uint32 AGIENJJKPBE = 8;</code>
        * @return This builder for chaining.
        */
-      public Builder clearPCINBMGKKDJ() {
+      public Builder clearAGIENJJKPBE() {
         
-        pCINBMGKKDJ_ = 0;
+        aGIENJJKPBE_ = 0;
         onChanged();
         return this;
       }
@@ -1267,7 +1221,18 @@ public final class MapMarkPointOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new MapMarkPoint(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -1301,32 +1266,32 @@ public final class MapMarkPointOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\022MapMarkPoint.proto\032\025MapMarkFromType.pr" +
-      "oto\032\026MapMarkPointType.proto\032\014Vector.prot" +
+      "\n\022MapMarkPoint.proto\032\014Vector.proto\032\026MapM" +
+      "arkPointType.proto\032\025MapMarkFromType.prot" +
       "o\"\313\001\n\014MapMarkPoint\022\020\n\010scene_id\030\001 \001(\r\022\014\n\004" +
       "name\030\002 \001(\t\022\024\n\003pos\030\003 \001(\0132\007.Vector\022%\n\npoin" +
       "t_type\030\004 \001(\0162\021.MapMarkPointType\022\022\n\nmonst" +
       "er_id\030\005 \001(\r\022#\n\tfrom_type\030\006 \001(\0162\020.MapMark" +
-      "FromType\022\020\n\010quest_id\030\007 \001(\r\022\023\n\013PCINBMGKKD" +
-      "J\030\010 \001(\rB\033\n\031emu.grasscutter.net.protob\006pr" +
+      "FromType\022\020\n\010quest_id\030\007 \001(\r\022\023\n\013AGIENJJKPB" +
+      "E\030\010 \001(\rB\033\n\031emu.grasscutter.net.protob\006pr" +
       "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          emu.grasscutter.net.proto.MapMarkFromTypeOuterClass.getDescriptor(),
-          emu.grasscutter.net.proto.MapMarkPointTypeOuterClass.getDescriptor(),
           emu.grasscutter.net.proto.VectorOuterClass.getDescriptor(),
+          emu.grasscutter.net.proto.MapMarkPointTypeOuterClass.getDescriptor(),
+          emu.grasscutter.net.proto.MapMarkFromTypeOuterClass.getDescriptor(),
         });
     internal_static_MapMarkPoint_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_MapMarkPoint_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_MapMarkPoint_descriptor,
-        new java.lang.String[] { "SceneId", "Name", "Pos", "PointType", "MonsterId", "FromType", "QuestId", "PCINBMGKKDJ", });
-    emu.grasscutter.net.proto.MapMarkFromTypeOuterClass.getDescriptor();
-    emu.grasscutter.net.proto.MapMarkPointTypeOuterClass.getDescriptor();
+        new java.lang.String[] { "SceneId", "Name", "Pos", "PointType", "MonsterId", "FromType", "QuestId", "AGIENJJKPBE", });
     emu.grasscutter.net.proto.VectorOuterClass.getDescriptor();
+    emu.grasscutter.net.proto.MapMarkPointTypeOuterClass.getDescriptor();
+    emu.grasscutter.net.proto.MapMarkFromTypeOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

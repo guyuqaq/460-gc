@@ -49,10 +49,6 @@ public final class ServerBuffOuterClass {
     boolean getIsModifierAdded();
   }
   /**
-   * <pre>
-   * Obf: JGJPJFGLDOE
-   * </pre>
-   *
    * Protobuf type {@code ServerBuff}
    */
   public static final class ServerBuff extends
@@ -78,68 +74,6 @@ public final class ServerBuffOuterClass {
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
-    }
-    private ServerBuff(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-
-              serverBuffUid_ = input.readUInt32();
-              break;
-            }
-            case 16: {
-
-              serverBuffId_ = input.readUInt32();
-              break;
-            }
-            case 24: {
-
-              serverBuffType_ = input.readUInt32();
-              break;
-            }
-            case 32: {
-
-              instancedModifierId_ = input.readUInt32();
-              break;
-            }
-            case 40: {
-
-              isModifierAdded_ = input.readBool();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -238,7 +172,7 @@ public final class ServerBuffOuterClass {
       if (isModifierAdded_ != false) {
         output.writeBool(5, isModifierAdded_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -267,7 +201,7 @@ public final class ServerBuffOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(5, isModifierAdded_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -292,7 +226,7 @@ public final class ServerBuffOuterClass {
           != other.getInstancedModifierId()) return false;
       if (getIsModifierAdded()
           != other.getIsModifierAdded()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -314,7 +248,7 @@ public final class ServerBuffOuterClass {
       hash = (37 * hash) + IS_MODIFIER_ADDED_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsModifierAdded());
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -410,10 +344,6 @@ public final class ServerBuffOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * Obf: JGJPJFGLDOE
-     * </pre>
-     *
      * Protobuf type {@code ServerBuff}
      */
     public static final class Builder extends
@@ -435,18 +365,13 @@ public final class ServerBuffOuterClass {
 
       // Construct using emu.grasscutter.net.proto.ServerBuffOuterClass.ServerBuff.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -555,7 +480,7 @@ public final class ServerBuffOuterClass {
         if (other.getIsModifierAdded() != false) {
           setIsModifierAdded(other.getIsModifierAdded());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -570,17 +495,55 @@ public final class ServerBuffOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.ServerBuffOuterClass.ServerBuff parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                serverBuffUid_ = input.readUInt32();
+
+                break;
+              } // case 8
+              case 16: {
+                serverBuffId_ = input.readUInt32();
+
+                break;
+              } // case 16
+              case 24: {
+                serverBuffType_ = input.readUInt32();
+
+                break;
+              } // case 24
+              case 32: {
+                instancedModifierId_ = input.readUInt32();
+
+                break;
+              } // case 32
+              case 40: {
+                isModifierAdded_ = input.readBool();
+
+                break;
+              } // case 40
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.ServerBuffOuterClass.ServerBuff) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -771,7 +734,18 @@ public final class ServerBuffOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new ServerBuff(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

@@ -19,33 +19,34 @@ public final class ClientAbilitiesInitFinishCombineNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .EntityAbilityInvokeEntry entity_invoke_list = 2;</code>
+     * <code>repeated .EntityAbilityInvokeEntry entity_invoke_list = 1;</code>
      */
     java.util.List<emu.grasscutter.net.proto.EntityAbilityInvokeEntryOuterClass.EntityAbilityInvokeEntry> 
         getEntityInvokeListList();
     /**
-     * <code>repeated .EntityAbilityInvokeEntry entity_invoke_list = 2;</code>
+     * <code>repeated .EntityAbilityInvokeEntry entity_invoke_list = 1;</code>
      */
     emu.grasscutter.net.proto.EntityAbilityInvokeEntryOuterClass.EntityAbilityInvokeEntry getEntityInvokeList(int index);
     /**
-     * <code>repeated .EntityAbilityInvokeEntry entity_invoke_list = 2;</code>
+     * <code>repeated .EntityAbilityInvokeEntry entity_invoke_list = 1;</code>
      */
     int getEntityInvokeListCount();
     /**
-     * <code>repeated .EntityAbilityInvokeEntry entity_invoke_list = 2;</code>
+     * <code>repeated .EntityAbilityInvokeEntry entity_invoke_list = 1;</code>
      */
     java.util.List<? extends emu.grasscutter.net.proto.EntityAbilityInvokeEntryOuterClass.EntityAbilityInvokeEntryOrBuilder> 
         getEntityInvokeListOrBuilderList();
     /**
-     * <code>repeated .EntityAbilityInvokeEntry entity_invoke_list = 2;</code>
+     * <code>repeated .EntityAbilityInvokeEntry entity_invoke_list = 1;</code>
      */
     emu.grasscutter.net.proto.EntityAbilityInvokeEntryOuterClass.EntityAbilityInvokeEntryOrBuilder getEntityInvokeListOrBuilder(
         int index);
   }
   /**
    * <pre>
-   *obf: KNDIDFOJEJD
-   * CmdId: 22401
+   * 4.7.0
+   * CmdId: 4338
+   * obf: ?
    * </pre>
    *
    * Protobuf type {@code ClientAbilitiesInitFinishCombineNotify}
@@ -75,56 +76,6 @@ public final class ClientAbilitiesInitFinishCombineNotifyOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private ClientAbilitiesInitFinishCombineNotify(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 18: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                entityInvokeList_ = new java.util.ArrayList<emu.grasscutter.net.proto.EntityAbilityInvokeEntryOuterClass.EntityAbilityInvokeEntry>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              entityInvokeList_.add(
-                  input.readMessage(emu.grasscutter.net.proto.EntityAbilityInvokeEntryOuterClass.EntityAbilityInvokeEntry.parser(), extensionRegistry));
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          entityInvokeList_ = java.util.Collections.unmodifiableList(entityInvokeList_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.ClientAbilitiesInitFinishCombineNotifyOuterClass.internal_static_ClientAbilitiesInitFinishCombineNotify_descriptor;
@@ -138,17 +89,17 @@ public final class ClientAbilitiesInitFinishCombineNotifyOuterClass {
               emu.grasscutter.net.proto.ClientAbilitiesInitFinishCombineNotifyOuterClass.ClientAbilitiesInitFinishCombineNotify.class, emu.grasscutter.net.proto.ClientAbilitiesInitFinishCombineNotifyOuterClass.ClientAbilitiesInitFinishCombineNotify.Builder.class);
     }
 
-    public static final int ENTITY_INVOKE_LIST_FIELD_NUMBER = 2;
+    public static final int ENTITY_INVOKE_LIST_FIELD_NUMBER = 1;
     private java.util.List<emu.grasscutter.net.proto.EntityAbilityInvokeEntryOuterClass.EntityAbilityInvokeEntry> entityInvokeList_;
     /**
-     * <code>repeated .EntityAbilityInvokeEntry entity_invoke_list = 2;</code>
+     * <code>repeated .EntityAbilityInvokeEntry entity_invoke_list = 1;</code>
      */
     @java.lang.Override
     public java.util.List<emu.grasscutter.net.proto.EntityAbilityInvokeEntryOuterClass.EntityAbilityInvokeEntry> getEntityInvokeListList() {
       return entityInvokeList_;
     }
     /**
-     * <code>repeated .EntityAbilityInvokeEntry entity_invoke_list = 2;</code>
+     * <code>repeated .EntityAbilityInvokeEntry entity_invoke_list = 1;</code>
      */
     @java.lang.Override
     public java.util.List<? extends emu.grasscutter.net.proto.EntityAbilityInvokeEntryOuterClass.EntityAbilityInvokeEntryOrBuilder> 
@@ -156,21 +107,21 @@ public final class ClientAbilitiesInitFinishCombineNotifyOuterClass {
       return entityInvokeList_;
     }
     /**
-     * <code>repeated .EntityAbilityInvokeEntry entity_invoke_list = 2;</code>
+     * <code>repeated .EntityAbilityInvokeEntry entity_invoke_list = 1;</code>
      */
     @java.lang.Override
     public int getEntityInvokeListCount() {
       return entityInvokeList_.size();
     }
     /**
-     * <code>repeated .EntityAbilityInvokeEntry entity_invoke_list = 2;</code>
+     * <code>repeated .EntityAbilityInvokeEntry entity_invoke_list = 1;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.EntityAbilityInvokeEntryOuterClass.EntityAbilityInvokeEntry getEntityInvokeList(int index) {
       return entityInvokeList_.get(index);
     }
     /**
-     * <code>repeated .EntityAbilityInvokeEntry entity_invoke_list = 2;</code>
+     * <code>repeated .EntityAbilityInvokeEntry entity_invoke_list = 1;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.EntityAbilityInvokeEntryOuterClass.EntityAbilityInvokeEntryOrBuilder getEntityInvokeListOrBuilder(
@@ -193,9 +144,9 @@ public final class ClientAbilitiesInitFinishCombineNotifyOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       for (int i = 0; i < entityInvokeList_.size(); i++) {
-        output.writeMessage(2, entityInvokeList_.get(i));
+        output.writeMessage(1, entityInvokeList_.get(i));
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -206,9 +157,9 @@ public final class ClientAbilitiesInitFinishCombineNotifyOuterClass {
       size = 0;
       for (int i = 0; i < entityInvokeList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, entityInvokeList_.get(i));
+          .computeMessageSize(1, entityInvokeList_.get(i));
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -225,7 +176,7 @@ public final class ClientAbilitiesInitFinishCombineNotifyOuterClass {
 
       if (!getEntityInvokeListList()
           .equals(other.getEntityInvokeListList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -240,7 +191,7 @@ public final class ClientAbilitiesInitFinishCombineNotifyOuterClass {
         hash = (37 * hash) + ENTITY_INVOKE_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getEntityInvokeListList().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -337,8 +288,9 @@ public final class ClientAbilitiesInitFinishCombineNotifyOuterClass {
     }
     /**
      * <pre>
-     *obf: KNDIDFOJEJD
-     * CmdId: 22401
+     * 4.7.0
+     * CmdId: 4338
+     * obf: ?
      * </pre>
      *
      * Protobuf type {@code ClientAbilitiesInitFinishCombineNotify}
@@ -362,29 +314,24 @@ public final class ClientAbilitiesInitFinishCombineNotifyOuterClass {
 
       // Construct using emu.grasscutter.net.proto.ClientAbilitiesInitFinishCombineNotifyOuterClass.ClientAbilitiesInitFinishCombineNotify.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getEntityInvokeListFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
         if (entityInvokeListBuilder_ == null) {
           entityInvokeList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          entityInvokeList_ = null;
           entityInvokeListBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -495,7 +442,7 @@ public final class ClientAbilitiesInitFinishCombineNotifyOuterClass {
             }
           }
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -510,17 +457,43 @@ public final class ClientAbilitiesInitFinishCombineNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.ClientAbilitiesInitFinishCombineNotifyOuterClass.ClientAbilitiesInitFinishCombineNotify parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                emu.grasscutter.net.proto.EntityAbilityInvokeEntryOuterClass.EntityAbilityInvokeEntry m =
+                    input.readMessage(
+                        emu.grasscutter.net.proto.EntityAbilityInvokeEntryOuterClass.EntityAbilityInvokeEntry.parser(),
+                        extensionRegistry);
+                if (entityInvokeListBuilder_ == null) {
+                  ensureEntityInvokeListIsMutable();
+                  entityInvokeList_.add(m);
+                } else {
+                  entityInvokeListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.ClientAbilitiesInitFinishCombineNotifyOuterClass.ClientAbilitiesInitFinishCombineNotify) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -538,7 +511,7 @@ public final class ClientAbilitiesInitFinishCombineNotifyOuterClass {
           emu.grasscutter.net.proto.EntityAbilityInvokeEntryOuterClass.EntityAbilityInvokeEntry, emu.grasscutter.net.proto.EntityAbilityInvokeEntryOuterClass.EntityAbilityInvokeEntry.Builder, emu.grasscutter.net.proto.EntityAbilityInvokeEntryOuterClass.EntityAbilityInvokeEntryOrBuilder> entityInvokeListBuilder_;
 
       /**
-       * <code>repeated .EntityAbilityInvokeEntry entity_invoke_list = 2;</code>
+       * <code>repeated .EntityAbilityInvokeEntry entity_invoke_list = 1;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.EntityAbilityInvokeEntryOuterClass.EntityAbilityInvokeEntry> getEntityInvokeListList() {
         if (entityInvokeListBuilder_ == null) {
@@ -548,7 +521,7 @@ public final class ClientAbilitiesInitFinishCombineNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .EntityAbilityInvokeEntry entity_invoke_list = 2;</code>
+       * <code>repeated .EntityAbilityInvokeEntry entity_invoke_list = 1;</code>
        */
       public int getEntityInvokeListCount() {
         if (entityInvokeListBuilder_ == null) {
@@ -558,7 +531,7 @@ public final class ClientAbilitiesInitFinishCombineNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .EntityAbilityInvokeEntry entity_invoke_list = 2;</code>
+       * <code>repeated .EntityAbilityInvokeEntry entity_invoke_list = 1;</code>
        */
       public emu.grasscutter.net.proto.EntityAbilityInvokeEntryOuterClass.EntityAbilityInvokeEntry getEntityInvokeList(int index) {
         if (entityInvokeListBuilder_ == null) {
@@ -568,7 +541,7 @@ public final class ClientAbilitiesInitFinishCombineNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .EntityAbilityInvokeEntry entity_invoke_list = 2;</code>
+       * <code>repeated .EntityAbilityInvokeEntry entity_invoke_list = 1;</code>
        */
       public Builder setEntityInvokeList(
           int index, emu.grasscutter.net.proto.EntityAbilityInvokeEntryOuterClass.EntityAbilityInvokeEntry value) {
@@ -585,7 +558,7 @@ public final class ClientAbilitiesInitFinishCombineNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .EntityAbilityInvokeEntry entity_invoke_list = 2;</code>
+       * <code>repeated .EntityAbilityInvokeEntry entity_invoke_list = 1;</code>
        */
       public Builder setEntityInvokeList(
           int index, emu.grasscutter.net.proto.EntityAbilityInvokeEntryOuterClass.EntityAbilityInvokeEntry.Builder builderForValue) {
@@ -599,7 +572,7 @@ public final class ClientAbilitiesInitFinishCombineNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .EntityAbilityInvokeEntry entity_invoke_list = 2;</code>
+       * <code>repeated .EntityAbilityInvokeEntry entity_invoke_list = 1;</code>
        */
       public Builder addEntityInvokeList(emu.grasscutter.net.proto.EntityAbilityInvokeEntryOuterClass.EntityAbilityInvokeEntry value) {
         if (entityInvokeListBuilder_ == null) {
@@ -615,7 +588,7 @@ public final class ClientAbilitiesInitFinishCombineNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .EntityAbilityInvokeEntry entity_invoke_list = 2;</code>
+       * <code>repeated .EntityAbilityInvokeEntry entity_invoke_list = 1;</code>
        */
       public Builder addEntityInvokeList(
           int index, emu.grasscutter.net.proto.EntityAbilityInvokeEntryOuterClass.EntityAbilityInvokeEntry value) {
@@ -632,7 +605,7 @@ public final class ClientAbilitiesInitFinishCombineNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .EntityAbilityInvokeEntry entity_invoke_list = 2;</code>
+       * <code>repeated .EntityAbilityInvokeEntry entity_invoke_list = 1;</code>
        */
       public Builder addEntityInvokeList(
           emu.grasscutter.net.proto.EntityAbilityInvokeEntryOuterClass.EntityAbilityInvokeEntry.Builder builderForValue) {
@@ -646,7 +619,7 @@ public final class ClientAbilitiesInitFinishCombineNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .EntityAbilityInvokeEntry entity_invoke_list = 2;</code>
+       * <code>repeated .EntityAbilityInvokeEntry entity_invoke_list = 1;</code>
        */
       public Builder addEntityInvokeList(
           int index, emu.grasscutter.net.proto.EntityAbilityInvokeEntryOuterClass.EntityAbilityInvokeEntry.Builder builderForValue) {
@@ -660,7 +633,7 @@ public final class ClientAbilitiesInitFinishCombineNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .EntityAbilityInvokeEntry entity_invoke_list = 2;</code>
+       * <code>repeated .EntityAbilityInvokeEntry entity_invoke_list = 1;</code>
        */
       public Builder addAllEntityInvokeList(
           java.lang.Iterable<? extends emu.grasscutter.net.proto.EntityAbilityInvokeEntryOuterClass.EntityAbilityInvokeEntry> values) {
@@ -675,7 +648,7 @@ public final class ClientAbilitiesInitFinishCombineNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .EntityAbilityInvokeEntry entity_invoke_list = 2;</code>
+       * <code>repeated .EntityAbilityInvokeEntry entity_invoke_list = 1;</code>
        */
       public Builder clearEntityInvokeList() {
         if (entityInvokeListBuilder_ == null) {
@@ -688,7 +661,7 @@ public final class ClientAbilitiesInitFinishCombineNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .EntityAbilityInvokeEntry entity_invoke_list = 2;</code>
+       * <code>repeated .EntityAbilityInvokeEntry entity_invoke_list = 1;</code>
        */
       public Builder removeEntityInvokeList(int index) {
         if (entityInvokeListBuilder_ == null) {
@@ -701,14 +674,14 @@ public final class ClientAbilitiesInitFinishCombineNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .EntityAbilityInvokeEntry entity_invoke_list = 2;</code>
+       * <code>repeated .EntityAbilityInvokeEntry entity_invoke_list = 1;</code>
        */
       public emu.grasscutter.net.proto.EntityAbilityInvokeEntryOuterClass.EntityAbilityInvokeEntry.Builder getEntityInvokeListBuilder(
           int index) {
         return getEntityInvokeListFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .EntityAbilityInvokeEntry entity_invoke_list = 2;</code>
+       * <code>repeated .EntityAbilityInvokeEntry entity_invoke_list = 1;</code>
        */
       public emu.grasscutter.net.proto.EntityAbilityInvokeEntryOuterClass.EntityAbilityInvokeEntryOrBuilder getEntityInvokeListOrBuilder(
           int index) {
@@ -718,7 +691,7 @@ public final class ClientAbilitiesInitFinishCombineNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .EntityAbilityInvokeEntry entity_invoke_list = 2;</code>
+       * <code>repeated .EntityAbilityInvokeEntry entity_invoke_list = 1;</code>
        */
       public java.util.List<? extends emu.grasscutter.net.proto.EntityAbilityInvokeEntryOuterClass.EntityAbilityInvokeEntryOrBuilder> 
            getEntityInvokeListOrBuilderList() {
@@ -729,14 +702,14 @@ public final class ClientAbilitiesInitFinishCombineNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .EntityAbilityInvokeEntry entity_invoke_list = 2;</code>
+       * <code>repeated .EntityAbilityInvokeEntry entity_invoke_list = 1;</code>
        */
       public emu.grasscutter.net.proto.EntityAbilityInvokeEntryOuterClass.EntityAbilityInvokeEntry.Builder addEntityInvokeListBuilder() {
         return getEntityInvokeListFieldBuilder().addBuilder(
             emu.grasscutter.net.proto.EntityAbilityInvokeEntryOuterClass.EntityAbilityInvokeEntry.getDefaultInstance());
       }
       /**
-       * <code>repeated .EntityAbilityInvokeEntry entity_invoke_list = 2;</code>
+       * <code>repeated .EntityAbilityInvokeEntry entity_invoke_list = 1;</code>
        */
       public emu.grasscutter.net.proto.EntityAbilityInvokeEntryOuterClass.EntityAbilityInvokeEntry.Builder addEntityInvokeListBuilder(
           int index) {
@@ -744,7 +717,7 @@ public final class ClientAbilitiesInitFinishCombineNotifyOuterClass {
             index, emu.grasscutter.net.proto.EntityAbilityInvokeEntryOuterClass.EntityAbilityInvokeEntry.getDefaultInstance());
       }
       /**
-       * <code>repeated .EntityAbilityInvokeEntry entity_invoke_list = 2;</code>
+       * <code>repeated .EntityAbilityInvokeEntry entity_invoke_list = 1;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.EntityAbilityInvokeEntryOuterClass.EntityAbilityInvokeEntry.Builder> 
            getEntityInvokeListBuilderList() {
@@ -797,7 +770,18 @@ public final class ClientAbilitiesInitFinishCombineNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new ClientAbilitiesInitFinishCombineNotify(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -834,7 +818,7 @@ public final class ClientAbilitiesInitFinishCombineNotifyOuterClass {
       "\n,ClientAbilitiesInitFinishCombineNotify" +
       ".proto\032\036EntityAbilityInvokeEntry.proto\"_" +
       "\n&ClientAbilitiesInitFinishCombineNotify" +
-      "\0225\n\022entity_invoke_list\030\002 \003(\0132\031.EntityAbi" +
+      "\0225\n\022entity_invoke_list\030\001 \003(\0132\031.EntityAbi" +
       "lityInvokeEntryB\033\n\031emu.grasscutter.net.p" +
       "rotob\006proto3"
     };

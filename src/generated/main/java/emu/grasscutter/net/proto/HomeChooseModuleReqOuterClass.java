@@ -19,7 +19,7 @@ public final class HomeChooseModuleReqOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 module_id = 9;</code>
+     * <code>uint32 module_id = 13;</code>
      * @return The moduleId.
      */
     int getModuleId();
@@ -51,48 +51,6 @@ public final class HomeChooseModuleReqOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private HomeChooseModuleReq(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 72: {
-
-              moduleId_ = input.readUInt32();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.HomeChooseModuleReqOuterClass.internal_static_HomeChooseModuleReq_descriptor;
@@ -106,10 +64,10 @@ public final class HomeChooseModuleReqOuterClass {
               emu.grasscutter.net.proto.HomeChooseModuleReqOuterClass.HomeChooseModuleReq.class, emu.grasscutter.net.proto.HomeChooseModuleReqOuterClass.HomeChooseModuleReq.Builder.class);
     }
 
-    public static final int MODULE_ID_FIELD_NUMBER = 9;
+    public static final int MODULE_ID_FIELD_NUMBER = 13;
     private int moduleId_;
     /**
-     * <code>uint32 module_id = 9;</code>
+     * <code>uint32 module_id = 13;</code>
      * @return The moduleId.
      */
     @java.lang.Override
@@ -132,9 +90,9 @@ public final class HomeChooseModuleReqOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (moduleId_ != 0) {
-        output.writeUInt32(9, moduleId_);
+        output.writeUInt32(13, moduleId_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -145,9 +103,9 @@ public final class HomeChooseModuleReqOuterClass {
       size = 0;
       if (moduleId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(9, moduleId_);
+          .computeUInt32Size(13, moduleId_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -164,7 +122,7 @@ public final class HomeChooseModuleReqOuterClass {
 
       if (getModuleId()
           != other.getModuleId()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -177,7 +135,7 @@ public final class HomeChooseModuleReqOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + MODULE_ID_FIELD_NUMBER;
       hash = (53 * hash) + getModuleId();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -294,18 +252,13 @@ public final class HomeChooseModuleReqOuterClass {
 
       // Construct using emu.grasscutter.net.proto.HomeChooseModuleReqOuterClass.HomeChooseModuleReq.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -390,7 +343,7 @@ public final class HomeChooseModuleReqOuterClass {
         if (other.getModuleId() != 0) {
           setModuleId(other.getModuleId());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -405,23 +358,41 @@ public final class HomeChooseModuleReqOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.HomeChooseModuleReqOuterClass.HomeChooseModuleReq parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 104: {
+                moduleId_ = input.readUInt32();
+
+                break;
+              } // case 104
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.HomeChooseModuleReqOuterClass.HomeChooseModuleReq) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
       private int moduleId_ ;
       /**
-       * <code>uint32 module_id = 9;</code>
+       * <code>uint32 module_id = 13;</code>
        * @return The moduleId.
        */
       @java.lang.Override
@@ -429,7 +400,7 @@ public final class HomeChooseModuleReqOuterClass {
         return moduleId_;
       }
       /**
-       * <code>uint32 module_id = 9;</code>
+       * <code>uint32 module_id = 13;</code>
        * @param value The moduleId to set.
        * @return This builder for chaining.
        */
@@ -440,7 +411,7 @@ public final class HomeChooseModuleReqOuterClass {
         return this;
       }
       /**
-       * <code>uint32 module_id = 9;</code>
+       * <code>uint32 module_id = 13;</code>
        * @return This builder for chaining.
        */
       public Builder clearModuleId() {
@@ -482,7 +453,18 @@ public final class HomeChooseModuleReqOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new HomeChooseModuleReq(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -517,7 +499,7 @@ public final class HomeChooseModuleReqOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\031HomeChooseModuleReq.proto\"(\n\023HomeChoos" +
-      "eModuleReq\022\021\n\tmodule_id\030\t \001(\rB\033\n\031emu.gra" +
+      "eModuleReq\022\021\n\tmodule_id\030\r \001(\rB\033\n\031emu.gra" +
       "sscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

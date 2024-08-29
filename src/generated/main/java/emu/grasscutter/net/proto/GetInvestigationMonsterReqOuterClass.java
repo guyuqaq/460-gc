@@ -19,7 +19,7 @@ public final class GetInvestigationMonsterReqOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>bool is_for_mark = 11;</code>
+     * <code>bool is_for_mark = 3;</code>
      * @return The isForMark.
      */
     boolean getIsForMark();
@@ -43,9 +43,9 @@ public final class GetInvestigationMonsterReqOuterClass {
   }
   /**
    * <pre>
-   * CmdId: 25947
-   * Version: 4.6.0
-   * Obfs: DHCBHICEMLG
+   * CmdId: 21813
+   * Version: 4.7.0
+   * Obfs: MHLHAFDDEAF
    * </pre>
    *
    * Protobuf type {@code GetInvestigationMonsterReq}
@@ -75,73 +75,6 @@ public final class GetInvestigationMonsterReqOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private GetInvestigationMonsterReq(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 88: {
-
-              isForMark_ = input.readBool();
-              break;
-            }
-            case 96: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                cityIdList_ = newIntList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              cityIdList_.addInt(input.readUInt32());
-              break;
-            }
-            case 98: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
-                cityIdList_ = newIntList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                cityIdList_.addInt(input.readUInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          cityIdList_.makeImmutable(); // C
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.GetInvestigationMonsterReqOuterClass.internal_static_GetInvestigationMonsterReq_descriptor;
@@ -155,10 +88,10 @@ public final class GetInvestigationMonsterReqOuterClass {
               emu.grasscutter.net.proto.GetInvestigationMonsterReqOuterClass.GetInvestigationMonsterReq.class, emu.grasscutter.net.proto.GetInvestigationMonsterReqOuterClass.GetInvestigationMonsterReq.Builder.class);
     }
 
-    public static final int IS_FOR_MARK_FIELD_NUMBER = 11;
+    public static final int IS_FOR_MARK_FIELD_NUMBER = 3;
     private boolean isForMark_;
     /**
-     * <code>bool is_for_mark = 11;</code>
+     * <code>bool is_for_mark = 3;</code>
      * @return The isForMark.
      */
     @java.lang.Override
@@ -210,7 +143,7 @@ public final class GetInvestigationMonsterReqOuterClass {
                         throws java.io.IOException {
       getSerializedSize();
       if (isForMark_ != false) {
-        output.writeBool(11, isForMark_);
+        output.writeBool(3, isForMark_);
       }
       if (getCityIdListList().size() > 0) {
         output.writeUInt32NoTag(98);
@@ -219,7 +152,7 @@ public final class GetInvestigationMonsterReqOuterClass {
       for (int i = 0; i < cityIdList_.size(); i++) {
         output.writeUInt32NoTag(cityIdList_.getInt(i));
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -230,7 +163,7 @@ public final class GetInvestigationMonsterReqOuterClass {
       size = 0;
       if (isForMark_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(11, isForMark_);
+          .computeBoolSize(3, isForMark_);
       }
       {
         int dataSize = 0;
@@ -246,7 +179,7 @@ public final class GetInvestigationMonsterReqOuterClass {
         }
         cityIdListMemoizedSerializedSize = dataSize;
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -265,7 +198,7 @@ public final class GetInvestigationMonsterReqOuterClass {
           != other.getIsForMark()) return false;
       if (!getCityIdListList()
           .equals(other.getCityIdListList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -283,7 +216,7 @@ public final class GetInvestigationMonsterReqOuterClass {
         hash = (37 * hash) + CITY_ID_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getCityIdListList().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -380,9 +313,9 @@ public final class GetInvestigationMonsterReqOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 25947
-     * Version: 4.6.0
-     * Obfs: DHCBHICEMLG
+     * CmdId: 21813
+     * Version: 4.7.0
+     * Obfs: MHLHAFDDEAF
      * </pre>
      *
      * Protobuf type {@code GetInvestigationMonsterReq}
@@ -406,18 +339,13 @@ public final class GetInvestigationMonsterReqOuterClass {
 
       // Construct using emu.grasscutter.net.proto.GetInvestigationMonsterReqOuterClass.GetInvestigationMonsterReq.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -520,7 +448,7 @@ public final class GetInvestigationMonsterReqOuterClass {
           }
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -535,24 +463,58 @@ public final class GetInvestigationMonsterReqOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.GetInvestigationMonsterReqOuterClass.GetInvestigationMonsterReq parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 24: {
+                isForMark_ = input.readBool();
+
+                break;
+              } // case 24
+              case 96: {
+                int v = input.readUInt32();
+                ensureCityIdListIsMutable();
+                cityIdList_.addInt(v);
+                break;
+              } // case 96
+              case 98: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureCityIdListIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  cityIdList_.addInt(input.readUInt32());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 98
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.GetInvestigationMonsterReqOuterClass.GetInvestigationMonsterReq) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
 
       private boolean isForMark_ ;
       /**
-       * <code>bool is_for_mark = 11;</code>
+       * <code>bool is_for_mark = 3;</code>
        * @return The isForMark.
        */
       @java.lang.Override
@@ -560,7 +522,7 @@ public final class GetInvestigationMonsterReqOuterClass {
         return isForMark_;
       }
       /**
-       * <code>bool is_for_mark = 11;</code>
+       * <code>bool is_for_mark = 3;</code>
        * @param value The isForMark to set.
        * @return This builder for chaining.
        */
@@ -571,7 +533,7 @@ public final class GetInvestigationMonsterReqOuterClass {
         return this;
       }
       /**
-       * <code>bool is_for_mark = 11;</code>
+       * <code>bool is_for_mark = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearIsForMark() {
@@ -692,7 +654,18 @@ public final class GetInvestigationMonsterReqOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new GetInvestigationMonsterReq(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -728,7 +701,7 @@ public final class GetInvestigationMonsterReqOuterClass {
     java.lang.String[] descriptorData = {
       "\n GetInvestigationMonsterReq.proto\"G\n\032Ge" +
       "tInvestigationMonsterReq\022\023\n\013is_for_mark\030" +
-      "\013 \001(\010\022\024\n\014city_id_list\030\014 \003(\rB\033\n\031emu.grass" +
+      "\003 \001(\010\022\024\n\014city_id_list\030\014 \003(\rB\033\n\031emu.grass" +
       "cutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

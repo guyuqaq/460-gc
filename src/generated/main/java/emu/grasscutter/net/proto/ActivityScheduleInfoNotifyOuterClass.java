@@ -19,41 +19,36 @@ public final class ActivityScheduleInfoNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .ActivityScheduleInfo activity_schedule_list = 11;</code>
+     * <code>uint32 remain_fly_sea_lamp_num = 1;</code>
+     * @return The remainFlySeaLampNum.
+     */
+    int getRemainFlySeaLampNum();
+
+    /**
+     * <code>repeated .ActivityScheduleInfo activity_schedule_list = 12;</code>
      */
     java.util.List<emu.grasscutter.net.proto.ActivityScheduleInfoOuterClass.ActivityScheduleInfo> 
         getActivityScheduleListList();
     /**
-     * <code>repeated .ActivityScheduleInfo activity_schedule_list = 11;</code>
+     * <code>repeated .ActivityScheduleInfo activity_schedule_list = 12;</code>
      */
     emu.grasscutter.net.proto.ActivityScheduleInfoOuterClass.ActivityScheduleInfo getActivityScheduleList(int index);
     /**
-     * <code>repeated .ActivityScheduleInfo activity_schedule_list = 11;</code>
+     * <code>repeated .ActivityScheduleInfo activity_schedule_list = 12;</code>
      */
     int getActivityScheduleListCount();
     /**
-     * <code>repeated .ActivityScheduleInfo activity_schedule_list = 11;</code>
+     * <code>repeated .ActivityScheduleInfo activity_schedule_list = 12;</code>
      */
     java.util.List<? extends emu.grasscutter.net.proto.ActivityScheduleInfoOuterClass.ActivityScheduleInfoOrBuilder> 
         getActivityScheduleListOrBuilderList();
     /**
-     * <code>repeated .ActivityScheduleInfo activity_schedule_list = 11;</code>
+     * <code>repeated .ActivityScheduleInfo activity_schedule_list = 12;</code>
      */
     emu.grasscutter.net.proto.ActivityScheduleInfoOuterClass.ActivityScheduleInfoOrBuilder getActivityScheduleListOrBuilder(
         int index);
-
-    /**
-     * <code>uint32 remain_fly_sea_lamp_num = 10;</code>
-     * @return The remainFlySeaLampNum.
-     */
-    int getRemainFlySeaLampNum();
   }
   /**
-   * <pre>
-   * CmdId: 23970
-   * Obf: HGICHODDHDN
-   * </pre>
-   *
    * Protobuf type {@code ActivityScheduleInfoNotify}
    */
   public static final class ActivityScheduleInfoNotify extends
@@ -81,61 +76,6 @@ public final class ActivityScheduleInfoNotifyOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private ActivityScheduleInfoNotify(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 80: {
-
-              remainFlySeaLampNum_ = input.readUInt32();
-              break;
-            }
-            case 90: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                activityScheduleList_ = new java.util.ArrayList<emu.grasscutter.net.proto.ActivityScheduleInfoOuterClass.ActivityScheduleInfo>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              activityScheduleList_.add(
-                  input.readMessage(emu.grasscutter.net.proto.ActivityScheduleInfoOuterClass.ActivityScheduleInfo.parser(), extensionRegistry));
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          activityScheduleList_ = java.util.Collections.unmodifiableList(activityScheduleList_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.ActivityScheduleInfoNotifyOuterClass.internal_static_ActivityScheduleInfoNotify_descriptor;
@@ -149,17 +89,28 @@ public final class ActivityScheduleInfoNotifyOuterClass {
               emu.grasscutter.net.proto.ActivityScheduleInfoNotifyOuterClass.ActivityScheduleInfoNotify.class, emu.grasscutter.net.proto.ActivityScheduleInfoNotifyOuterClass.ActivityScheduleInfoNotify.Builder.class);
     }
 
-    public static final int ACTIVITY_SCHEDULE_LIST_FIELD_NUMBER = 11;
+    public static final int REMAIN_FLY_SEA_LAMP_NUM_FIELD_NUMBER = 1;
+    private int remainFlySeaLampNum_;
+    /**
+     * <code>uint32 remain_fly_sea_lamp_num = 1;</code>
+     * @return The remainFlySeaLampNum.
+     */
+    @java.lang.Override
+    public int getRemainFlySeaLampNum() {
+      return remainFlySeaLampNum_;
+    }
+
+    public static final int ACTIVITY_SCHEDULE_LIST_FIELD_NUMBER = 12;
     private java.util.List<emu.grasscutter.net.proto.ActivityScheduleInfoOuterClass.ActivityScheduleInfo> activityScheduleList_;
     /**
-     * <code>repeated .ActivityScheduleInfo activity_schedule_list = 11;</code>
+     * <code>repeated .ActivityScheduleInfo activity_schedule_list = 12;</code>
      */
     @java.lang.Override
     public java.util.List<emu.grasscutter.net.proto.ActivityScheduleInfoOuterClass.ActivityScheduleInfo> getActivityScheduleListList() {
       return activityScheduleList_;
     }
     /**
-     * <code>repeated .ActivityScheduleInfo activity_schedule_list = 11;</code>
+     * <code>repeated .ActivityScheduleInfo activity_schedule_list = 12;</code>
      */
     @java.lang.Override
     public java.util.List<? extends emu.grasscutter.net.proto.ActivityScheduleInfoOuterClass.ActivityScheduleInfoOrBuilder> 
@@ -167,37 +118,26 @@ public final class ActivityScheduleInfoNotifyOuterClass {
       return activityScheduleList_;
     }
     /**
-     * <code>repeated .ActivityScheduleInfo activity_schedule_list = 11;</code>
+     * <code>repeated .ActivityScheduleInfo activity_schedule_list = 12;</code>
      */
     @java.lang.Override
     public int getActivityScheduleListCount() {
       return activityScheduleList_.size();
     }
     /**
-     * <code>repeated .ActivityScheduleInfo activity_schedule_list = 11;</code>
+     * <code>repeated .ActivityScheduleInfo activity_schedule_list = 12;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.ActivityScheduleInfoOuterClass.ActivityScheduleInfo getActivityScheduleList(int index) {
       return activityScheduleList_.get(index);
     }
     /**
-     * <code>repeated .ActivityScheduleInfo activity_schedule_list = 11;</code>
+     * <code>repeated .ActivityScheduleInfo activity_schedule_list = 12;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.ActivityScheduleInfoOuterClass.ActivityScheduleInfoOrBuilder getActivityScheduleListOrBuilder(
         int index) {
       return activityScheduleList_.get(index);
-    }
-
-    public static final int REMAIN_FLY_SEA_LAMP_NUM_FIELD_NUMBER = 10;
-    private int remainFlySeaLampNum_;
-    /**
-     * <code>uint32 remain_fly_sea_lamp_num = 10;</code>
-     * @return The remainFlySeaLampNum.
-     */
-    @java.lang.Override
-    public int getRemainFlySeaLampNum() {
-      return remainFlySeaLampNum_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -215,12 +155,12 @@ public final class ActivityScheduleInfoNotifyOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (remainFlySeaLampNum_ != 0) {
-        output.writeUInt32(10, remainFlySeaLampNum_);
+        output.writeUInt32(1, remainFlySeaLampNum_);
       }
       for (int i = 0; i < activityScheduleList_.size(); i++) {
-        output.writeMessage(11, activityScheduleList_.get(i));
+        output.writeMessage(12, activityScheduleList_.get(i));
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -231,13 +171,13 @@ public final class ActivityScheduleInfoNotifyOuterClass {
       size = 0;
       if (remainFlySeaLampNum_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(10, remainFlySeaLampNum_);
+          .computeUInt32Size(1, remainFlySeaLampNum_);
       }
       for (int i = 0; i < activityScheduleList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(11, activityScheduleList_.get(i));
+          .computeMessageSize(12, activityScheduleList_.get(i));
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -252,11 +192,11 @@ public final class ActivityScheduleInfoNotifyOuterClass {
       }
       emu.grasscutter.net.proto.ActivityScheduleInfoNotifyOuterClass.ActivityScheduleInfoNotify other = (emu.grasscutter.net.proto.ActivityScheduleInfoNotifyOuterClass.ActivityScheduleInfoNotify) obj;
 
-      if (!getActivityScheduleListList()
-          .equals(other.getActivityScheduleListList())) return false;
       if (getRemainFlySeaLampNum()
           != other.getRemainFlySeaLampNum()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getActivityScheduleListList()
+          .equals(other.getActivityScheduleListList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -267,13 +207,13 @@ public final class ActivityScheduleInfoNotifyOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + REMAIN_FLY_SEA_LAMP_NUM_FIELD_NUMBER;
+      hash = (53 * hash) + getRemainFlySeaLampNum();
       if (getActivityScheduleListCount() > 0) {
         hash = (37 * hash) + ACTIVITY_SCHEDULE_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getActivityScheduleListList().hashCode();
       }
-      hash = (37 * hash) + REMAIN_FLY_SEA_LAMP_NUM_FIELD_NUMBER;
-      hash = (53 * hash) + getRemainFlySeaLampNum();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -369,11 +309,6 @@ public final class ActivityScheduleInfoNotifyOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 23970
-     * Obf: HGICHODDHDN
-     * </pre>
-     *
      * Protobuf type {@code ActivityScheduleInfoNotify}
      */
     public static final class Builder extends
@@ -395,31 +330,26 @@ public final class ActivityScheduleInfoNotifyOuterClass {
 
       // Construct using emu.grasscutter.net.proto.ActivityScheduleInfoNotifyOuterClass.ActivityScheduleInfoNotify.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getActivityScheduleListFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (activityScheduleListBuilder_ == null) {
-          activityScheduleList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        } else {
-          activityScheduleListBuilder_.clear();
-        }
         remainFlySeaLampNum_ = 0;
 
+        if (activityScheduleListBuilder_ == null) {
+          activityScheduleList_ = java.util.Collections.emptyList();
+        } else {
+          activityScheduleList_ = null;
+          activityScheduleListBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -447,6 +377,7 @@ public final class ActivityScheduleInfoNotifyOuterClass {
       public emu.grasscutter.net.proto.ActivityScheduleInfoNotifyOuterClass.ActivityScheduleInfoNotify buildPartial() {
         emu.grasscutter.net.proto.ActivityScheduleInfoNotifyOuterClass.ActivityScheduleInfoNotify result = new emu.grasscutter.net.proto.ActivityScheduleInfoNotifyOuterClass.ActivityScheduleInfoNotify(this);
         int from_bitField0_ = bitField0_;
+        result.remainFlySeaLampNum_ = remainFlySeaLampNum_;
         if (activityScheduleListBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             activityScheduleList_ = java.util.Collections.unmodifiableList(activityScheduleList_);
@@ -456,7 +387,6 @@ public final class ActivityScheduleInfoNotifyOuterClass {
         } else {
           result.activityScheduleList_ = activityScheduleListBuilder_.build();
         }
-        result.remainFlySeaLampNum_ = remainFlySeaLampNum_;
         onBuilt();
         return result;
       }
@@ -505,6 +435,9 @@ public final class ActivityScheduleInfoNotifyOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.ActivityScheduleInfoNotifyOuterClass.ActivityScheduleInfoNotify other) {
         if (other == emu.grasscutter.net.proto.ActivityScheduleInfoNotifyOuterClass.ActivityScheduleInfoNotify.getDefaultInstance()) return this;
+        if (other.getRemainFlySeaLampNum() != 0) {
+          setRemainFlySeaLampNum(other.getRemainFlySeaLampNum());
+        }
         if (activityScheduleListBuilder_ == null) {
           if (!other.activityScheduleList_.isEmpty()) {
             if (activityScheduleList_.isEmpty()) {
@@ -531,10 +464,7 @@ public final class ActivityScheduleInfoNotifyOuterClass {
             }
           }
         }
-        if (other.getRemainFlySeaLampNum() != 0) {
-          setRemainFlySeaLampNum(other.getRemainFlySeaLampNum());
-        }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -549,20 +479,82 @@ public final class ActivityScheduleInfoNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.ActivityScheduleInfoNotifyOuterClass.ActivityScheduleInfoNotify parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                remainFlySeaLampNum_ = input.readUInt32();
+
+                break;
+              } // case 8
+              case 98: {
+                emu.grasscutter.net.proto.ActivityScheduleInfoOuterClass.ActivityScheduleInfo m =
+                    input.readMessage(
+                        emu.grasscutter.net.proto.ActivityScheduleInfoOuterClass.ActivityScheduleInfo.parser(),
+                        extensionRegistry);
+                if (activityScheduleListBuilder_ == null) {
+                  ensureActivityScheduleListIsMutable();
+                  activityScheduleList_.add(m);
+                } else {
+                  activityScheduleListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 98
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.ActivityScheduleInfoNotifyOuterClass.ActivityScheduleInfoNotify) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
+
+      private int remainFlySeaLampNum_ ;
+      /**
+       * <code>uint32 remain_fly_sea_lamp_num = 1;</code>
+       * @return The remainFlySeaLampNum.
+       */
+      @java.lang.Override
+      public int getRemainFlySeaLampNum() {
+        return remainFlySeaLampNum_;
+      }
+      /**
+       * <code>uint32 remain_fly_sea_lamp_num = 1;</code>
+       * @param value The remainFlySeaLampNum to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRemainFlySeaLampNum(int value) {
+        
+        remainFlySeaLampNum_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 remain_fly_sea_lamp_num = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRemainFlySeaLampNum() {
+        
+        remainFlySeaLampNum_ = 0;
+        onChanged();
+        return this;
+      }
 
       private java.util.List<emu.grasscutter.net.proto.ActivityScheduleInfoOuterClass.ActivityScheduleInfo> activityScheduleList_ =
         java.util.Collections.emptyList();
@@ -577,7 +569,7 @@ public final class ActivityScheduleInfoNotifyOuterClass {
           emu.grasscutter.net.proto.ActivityScheduleInfoOuterClass.ActivityScheduleInfo, emu.grasscutter.net.proto.ActivityScheduleInfoOuterClass.ActivityScheduleInfo.Builder, emu.grasscutter.net.proto.ActivityScheduleInfoOuterClass.ActivityScheduleInfoOrBuilder> activityScheduleListBuilder_;
 
       /**
-       * <code>repeated .ActivityScheduleInfo activity_schedule_list = 11;</code>
+       * <code>repeated .ActivityScheduleInfo activity_schedule_list = 12;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.ActivityScheduleInfoOuterClass.ActivityScheduleInfo> getActivityScheduleListList() {
         if (activityScheduleListBuilder_ == null) {
@@ -587,7 +579,7 @@ public final class ActivityScheduleInfoNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .ActivityScheduleInfo activity_schedule_list = 11;</code>
+       * <code>repeated .ActivityScheduleInfo activity_schedule_list = 12;</code>
        */
       public int getActivityScheduleListCount() {
         if (activityScheduleListBuilder_ == null) {
@@ -597,7 +589,7 @@ public final class ActivityScheduleInfoNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .ActivityScheduleInfo activity_schedule_list = 11;</code>
+       * <code>repeated .ActivityScheduleInfo activity_schedule_list = 12;</code>
        */
       public emu.grasscutter.net.proto.ActivityScheduleInfoOuterClass.ActivityScheduleInfo getActivityScheduleList(int index) {
         if (activityScheduleListBuilder_ == null) {
@@ -607,7 +599,7 @@ public final class ActivityScheduleInfoNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .ActivityScheduleInfo activity_schedule_list = 11;</code>
+       * <code>repeated .ActivityScheduleInfo activity_schedule_list = 12;</code>
        */
       public Builder setActivityScheduleList(
           int index, emu.grasscutter.net.proto.ActivityScheduleInfoOuterClass.ActivityScheduleInfo value) {
@@ -624,7 +616,7 @@ public final class ActivityScheduleInfoNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ActivityScheduleInfo activity_schedule_list = 11;</code>
+       * <code>repeated .ActivityScheduleInfo activity_schedule_list = 12;</code>
        */
       public Builder setActivityScheduleList(
           int index, emu.grasscutter.net.proto.ActivityScheduleInfoOuterClass.ActivityScheduleInfo.Builder builderForValue) {
@@ -638,7 +630,7 @@ public final class ActivityScheduleInfoNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ActivityScheduleInfo activity_schedule_list = 11;</code>
+       * <code>repeated .ActivityScheduleInfo activity_schedule_list = 12;</code>
        */
       public Builder addActivityScheduleList(emu.grasscutter.net.proto.ActivityScheduleInfoOuterClass.ActivityScheduleInfo value) {
         if (activityScheduleListBuilder_ == null) {
@@ -654,7 +646,7 @@ public final class ActivityScheduleInfoNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ActivityScheduleInfo activity_schedule_list = 11;</code>
+       * <code>repeated .ActivityScheduleInfo activity_schedule_list = 12;</code>
        */
       public Builder addActivityScheduleList(
           int index, emu.grasscutter.net.proto.ActivityScheduleInfoOuterClass.ActivityScheduleInfo value) {
@@ -671,7 +663,7 @@ public final class ActivityScheduleInfoNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ActivityScheduleInfo activity_schedule_list = 11;</code>
+       * <code>repeated .ActivityScheduleInfo activity_schedule_list = 12;</code>
        */
       public Builder addActivityScheduleList(
           emu.grasscutter.net.proto.ActivityScheduleInfoOuterClass.ActivityScheduleInfo.Builder builderForValue) {
@@ -685,7 +677,7 @@ public final class ActivityScheduleInfoNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ActivityScheduleInfo activity_schedule_list = 11;</code>
+       * <code>repeated .ActivityScheduleInfo activity_schedule_list = 12;</code>
        */
       public Builder addActivityScheduleList(
           int index, emu.grasscutter.net.proto.ActivityScheduleInfoOuterClass.ActivityScheduleInfo.Builder builderForValue) {
@@ -699,7 +691,7 @@ public final class ActivityScheduleInfoNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ActivityScheduleInfo activity_schedule_list = 11;</code>
+       * <code>repeated .ActivityScheduleInfo activity_schedule_list = 12;</code>
        */
       public Builder addAllActivityScheduleList(
           java.lang.Iterable<? extends emu.grasscutter.net.proto.ActivityScheduleInfoOuterClass.ActivityScheduleInfo> values) {
@@ -714,7 +706,7 @@ public final class ActivityScheduleInfoNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ActivityScheduleInfo activity_schedule_list = 11;</code>
+       * <code>repeated .ActivityScheduleInfo activity_schedule_list = 12;</code>
        */
       public Builder clearActivityScheduleList() {
         if (activityScheduleListBuilder_ == null) {
@@ -727,7 +719,7 @@ public final class ActivityScheduleInfoNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ActivityScheduleInfo activity_schedule_list = 11;</code>
+       * <code>repeated .ActivityScheduleInfo activity_schedule_list = 12;</code>
        */
       public Builder removeActivityScheduleList(int index) {
         if (activityScheduleListBuilder_ == null) {
@@ -740,14 +732,14 @@ public final class ActivityScheduleInfoNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ActivityScheduleInfo activity_schedule_list = 11;</code>
+       * <code>repeated .ActivityScheduleInfo activity_schedule_list = 12;</code>
        */
       public emu.grasscutter.net.proto.ActivityScheduleInfoOuterClass.ActivityScheduleInfo.Builder getActivityScheduleListBuilder(
           int index) {
         return getActivityScheduleListFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .ActivityScheduleInfo activity_schedule_list = 11;</code>
+       * <code>repeated .ActivityScheduleInfo activity_schedule_list = 12;</code>
        */
       public emu.grasscutter.net.proto.ActivityScheduleInfoOuterClass.ActivityScheduleInfoOrBuilder getActivityScheduleListOrBuilder(
           int index) {
@@ -757,7 +749,7 @@ public final class ActivityScheduleInfoNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .ActivityScheduleInfo activity_schedule_list = 11;</code>
+       * <code>repeated .ActivityScheduleInfo activity_schedule_list = 12;</code>
        */
       public java.util.List<? extends emu.grasscutter.net.proto.ActivityScheduleInfoOuterClass.ActivityScheduleInfoOrBuilder> 
            getActivityScheduleListOrBuilderList() {
@@ -768,14 +760,14 @@ public final class ActivityScheduleInfoNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .ActivityScheduleInfo activity_schedule_list = 11;</code>
+       * <code>repeated .ActivityScheduleInfo activity_schedule_list = 12;</code>
        */
       public emu.grasscutter.net.proto.ActivityScheduleInfoOuterClass.ActivityScheduleInfo.Builder addActivityScheduleListBuilder() {
         return getActivityScheduleListFieldBuilder().addBuilder(
             emu.grasscutter.net.proto.ActivityScheduleInfoOuterClass.ActivityScheduleInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .ActivityScheduleInfo activity_schedule_list = 11;</code>
+       * <code>repeated .ActivityScheduleInfo activity_schedule_list = 12;</code>
        */
       public emu.grasscutter.net.proto.ActivityScheduleInfoOuterClass.ActivityScheduleInfo.Builder addActivityScheduleListBuilder(
           int index) {
@@ -783,7 +775,7 @@ public final class ActivityScheduleInfoNotifyOuterClass {
             index, emu.grasscutter.net.proto.ActivityScheduleInfoOuterClass.ActivityScheduleInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .ActivityScheduleInfo activity_schedule_list = 11;</code>
+       * <code>repeated .ActivityScheduleInfo activity_schedule_list = 12;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.ActivityScheduleInfoOuterClass.ActivityScheduleInfo.Builder> 
            getActivityScheduleListBuilderList() {
@@ -802,37 +794,6 @@ public final class ActivityScheduleInfoNotifyOuterClass {
           activityScheduleList_ = null;
         }
         return activityScheduleListBuilder_;
-      }
-
-      private int remainFlySeaLampNum_ ;
-      /**
-       * <code>uint32 remain_fly_sea_lamp_num = 10;</code>
-       * @return The remainFlySeaLampNum.
-       */
-      @java.lang.Override
-      public int getRemainFlySeaLampNum() {
-        return remainFlySeaLampNum_;
-      }
-      /**
-       * <code>uint32 remain_fly_sea_lamp_num = 10;</code>
-       * @param value The remainFlySeaLampNum to set.
-       * @return This builder for chaining.
-       */
-      public Builder setRemainFlySeaLampNum(int value) {
-        
-        remainFlySeaLampNum_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 remain_fly_sea_lamp_num = 10;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearRemainFlySeaLampNum() {
-        
-        remainFlySeaLampNum_ = 0;
-        onChanged();
-        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -867,7 +828,18 @@ public final class ActivityScheduleInfoNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new ActivityScheduleInfoNotify(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -903,9 +875,9 @@ public final class ActivityScheduleInfoNotifyOuterClass {
     java.lang.String[] descriptorData = {
       "\n ActivityScheduleInfoNotify.proto\032\032Acti" +
       "vityScheduleInfo.proto\"t\n\032ActivitySchedu" +
-      "leInfoNotify\0225\n\026activity_schedule_list\030\013" +
-      " \003(\0132\025.ActivityScheduleInfo\022\037\n\027remain_fl" +
-      "y_sea_lamp_num\030\n \001(\rB\033\n\031emu.grasscutter." +
+      "leInfoNotify\022\037\n\027remain_fly_sea_lamp_num\030" +
+      "\001 \001(\r\0225\n\026activity_schedule_list\030\014 \003(\0132\025." +
+      "ActivityScheduleInfoB\033\n\031emu.grasscutter." +
       "net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -918,7 +890,7 @@ public final class ActivityScheduleInfoNotifyOuterClass {
     internal_static_ActivityScheduleInfoNotify_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ActivityScheduleInfoNotify_descriptor,
-        new java.lang.String[] { "ActivityScheduleList", "RemainFlySeaLampNum", });
+        new java.lang.String[] { "RemainFlySeaLampNum", "ActivityScheduleList", });
     emu.grasscutter.net.proto.ActivityScheduleInfoOuterClass.getDescriptor();
   }
 

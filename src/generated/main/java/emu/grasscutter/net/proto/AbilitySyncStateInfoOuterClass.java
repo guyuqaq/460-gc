@@ -176,109 +176,6 @@ public final class AbilitySyncStateInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private AbilitySyncStateInfo(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-
-              isInited_ = input.readBool();
-              break;
-            }
-            case 18: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                dynamicValueMap_ = new java.util.ArrayList<emu.grasscutter.net.proto.AbilityScalarValueEntryOuterClass.AbilityScalarValueEntry>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              dynamicValueMap_.add(
-                  input.readMessage(emu.grasscutter.net.proto.AbilityScalarValueEntryOuterClass.AbilityScalarValueEntry.parser(), extensionRegistry));
-              break;
-            }
-            case 26: {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                appliedAbilities_ = new java.util.ArrayList<emu.grasscutter.net.proto.AbilityAppliedAbilityOuterClass.AbilityAppliedAbility>();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              appliedAbilities_.add(
-                  input.readMessage(emu.grasscutter.net.proto.AbilityAppliedAbilityOuterClass.AbilityAppliedAbility.parser(), extensionRegistry));
-              break;
-            }
-            case 34: {
-              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-                appliedModifiers_ = new java.util.ArrayList<emu.grasscutter.net.proto.AbilityAppliedModifierOuterClass.AbilityAppliedModifier>();
-                mutable_bitField0_ |= 0x00000004;
-              }
-              appliedModifiers_.add(
-                  input.readMessage(emu.grasscutter.net.proto.AbilityAppliedModifierOuterClass.AbilityAppliedModifier.parser(), extensionRegistry));
-              break;
-            }
-            case 42: {
-              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
-                mixinRecoverInfos_ = new java.util.ArrayList<emu.grasscutter.net.proto.AbilityMixinRecoverInfoOuterClass.AbilityMixinRecoverInfo>();
-                mutable_bitField0_ |= 0x00000008;
-              }
-              mixinRecoverInfos_.add(
-                  input.readMessage(emu.grasscutter.net.proto.AbilityMixinRecoverInfoOuterClass.AbilityMixinRecoverInfo.parser(), extensionRegistry));
-              break;
-            }
-            case 50: {
-              if (!((mutable_bitField0_ & 0x00000010) != 0)) {
-                sgvDynamicValueMap_ = new java.util.ArrayList<emu.grasscutter.net.proto.AbilityScalarValueEntryOuterClass.AbilityScalarValueEntry>();
-                mutable_bitField0_ |= 0x00000010;
-              }
-              sgvDynamicValueMap_.add(
-                  input.readMessage(emu.grasscutter.net.proto.AbilityScalarValueEntryOuterClass.AbilityScalarValueEntry.parser(), extensionRegistry));
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          dynamicValueMap_ = java.util.Collections.unmodifiableList(dynamicValueMap_);
-        }
-        if (((mutable_bitField0_ & 0x00000002) != 0)) {
-          appliedAbilities_ = java.util.Collections.unmodifiableList(appliedAbilities_);
-        }
-        if (((mutable_bitField0_ & 0x00000004) != 0)) {
-          appliedModifiers_ = java.util.Collections.unmodifiableList(appliedModifiers_);
-        }
-        if (((mutable_bitField0_ & 0x00000008) != 0)) {
-          mixinRecoverInfos_ = java.util.Collections.unmodifiableList(mixinRecoverInfos_);
-        }
-        if (((mutable_bitField0_ & 0x00000010) != 0)) {
-          sgvDynamicValueMap_ = java.util.Collections.unmodifiableList(sgvDynamicValueMap_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.AbilitySyncStateInfoOuterClass.internal_static_AbilitySyncStateInfo_descriptor;
@@ -535,7 +432,7 @@ public final class AbilitySyncStateInfoOuterClass {
       for (int i = 0; i < sgvDynamicValueMap_.size(); i++) {
         output.writeMessage(6, sgvDynamicValueMap_.get(i));
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -568,7 +465,7 @@ public final class AbilitySyncStateInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, sgvDynamicValueMap_.get(i));
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -595,7 +492,7 @@ public final class AbilitySyncStateInfoOuterClass {
           .equals(other.getMixinRecoverInfosList())) return false;
       if (!getSgvDynamicValueMapList()
           .equals(other.getSgvDynamicValueMapList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -629,7 +526,7 @@ public final class AbilitySyncStateInfoOuterClass {
         hash = (37 * hash) + SGV_DYNAMIC_VALUE_MAP_FIELD_NUMBER;
         hash = (53 * hash) + getSgvDynamicValueMapList().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -746,23 +643,13 @@ public final class AbilitySyncStateInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.AbilitySyncStateInfoOuterClass.AbilitySyncStateInfo.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getDynamicValueMapFieldBuilder();
-          getAppliedAbilitiesFieldBuilder();
-          getAppliedModifiersFieldBuilder();
-          getMixinRecoverInfosFieldBuilder();
-          getSgvDynamicValueMapFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -771,34 +658,39 @@ public final class AbilitySyncStateInfoOuterClass {
 
         if (dynamicValueMapBuilder_ == null) {
           dynamicValueMap_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          dynamicValueMap_ = null;
           dynamicValueMapBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000001);
         if (appliedAbilitiesBuilder_ == null) {
           appliedAbilities_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
+          appliedAbilities_ = null;
           appliedAbilitiesBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000002);
         if (appliedModifiersBuilder_ == null) {
           appliedModifiers_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
         } else {
+          appliedModifiers_ = null;
           appliedModifiersBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000004);
         if (mixinRecoverInfosBuilder_ == null) {
           mixinRecoverInfos_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
         } else {
+          mixinRecoverInfos_ = null;
           mixinRecoverInfosBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000008);
         if (sgvDynamicValueMapBuilder_ == null) {
           sgvDynamicValueMap_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000010);
         } else {
+          sgvDynamicValueMap_ = null;
           sgvDynamicValueMapBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000010);
         return this;
       }
 
@@ -1053,7 +945,7 @@ public final class AbilitySyncStateInfoOuterClass {
             }
           }
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -1068,17 +960,100 @@ public final class AbilitySyncStateInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.AbilitySyncStateInfoOuterClass.AbilitySyncStateInfo parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                isInited_ = input.readBool();
+
+                break;
+              } // case 8
+              case 18: {
+                emu.grasscutter.net.proto.AbilityScalarValueEntryOuterClass.AbilityScalarValueEntry m =
+                    input.readMessage(
+                        emu.grasscutter.net.proto.AbilityScalarValueEntryOuterClass.AbilityScalarValueEntry.parser(),
+                        extensionRegistry);
+                if (dynamicValueMapBuilder_ == null) {
+                  ensureDynamicValueMapIsMutable();
+                  dynamicValueMap_.add(m);
+                } else {
+                  dynamicValueMapBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              case 26: {
+                emu.grasscutter.net.proto.AbilityAppliedAbilityOuterClass.AbilityAppliedAbility m =
+                    input.readMessage(
+                        emu.grasscutter.net.proto.AbilityAppliedAbilityOuterClass.AbilityAppliedAbility.parser(),
+                        extensionRegistry);
+                if (appliedAbilitiesBuilder_ == null) {
+                  ensureAppliedAbilitiesIsMutable();
+                  appliedAbilities_.add(m);
+                } else {
+                  appliedAbilitiesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              case 34: {
+                emu.grasscutter.net.proto.AbilityAppliedModifierOuterClass.AbilityAppliedModifier m =
+                    input.readMessage(
+                        emu.grasscutter.net.proto.AbilityAppliedModifierOuterClass.AbilityAppliedModifier.parser(),
+                        extensionRegistry);
+                if (appliedModifiersBuilder_ == null) {
+                  ensureAppliedModifiersIsMutable();
+                  appliedModifiers_.add(m);
+                } else {
+                  appliedModifiersBuilder_.addMessage(m);
+                }
+                break;
+              } // case 34
+              case 42: {
+                emu.grasscutter.net.proto.AbilityMixinRecoverInfoOuterClass.AbilityMixinRecoverInfo m =
+                    input.readMessage(
+                        emu.grasscutter.net.proto.AbilityMixinRecoverInfoOuterClass.AbilityMixinRecoverInfo.parser(),
+                        extensionRegistry);
+                if (mixinRecoverInfosBuilder_ == null) {
+                  ensureMixinRecoverInfosIsMutable();
+                  mixinRecoverInfos_.add(m);
+                } else {
+                  mixinRecoverInfosBuilder_.addMessage(m);
+                }
+                break;
+              } // case 42
+              case 50: {
+                emu.grasscutter.net.proto.AbilityScalarValueEntryOuterClass.AbilityScalarValueEntry m =
+                    input.readMessage(
+                        emu.grasscutter.net.proto.AbilityScalarValueEntryOuterClass.AbilityScalarValueEntry.parser(),
+                        extensionRegistry);
+                if (sgvDynamicValueMapBuilder_ == null) {
+                  ensureSgvDynamicValueMapIsMutable();
+                  sgvDynamicValueMap_.add(m);
+                } else {
+                  sgvDynamicValueMapBuilder_.addMessage(m);
+                }
+                break;
+              } // case 50
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.AbilitySyncStateInfoOuterClass.AbilitySyncStateInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -2346,7 +2321,18 @@ public final class AbilitySyncStateInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new AbilitySyncStateInfo(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

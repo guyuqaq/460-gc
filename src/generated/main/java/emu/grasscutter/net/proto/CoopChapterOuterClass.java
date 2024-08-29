@@ -224,162 +224,6 @@ public final class CoopChapterOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private CoopChapter(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 24: {
-              int rawValue = input.readEnum();
-
-              state_ = rawValue;
-              break;
-            }
-            case 40: {
-
-              hKOAKJNBIIO_ = input.readUInt32();
-              break;
-            }
-            case 50: {
-              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-                coopPointList_ = new java.util.ArrayList<emu.grasscutter.net.proto.CoopPointOuterClass.CoopPoint>();
-                mutable_bitField0_ |= 0x00000004;
-              }
-              coopPointList_.add(
-                  input.readMessage(emu.grasscutter.net.proto.CoopPointOuterClass.CoopPoint.parser(), extensionRegistry));
-              break;
-            }
-            case 56: {
-              if (!((mutable_bitField0_ & 0x00000020) != 0)) {
-                eOMGDNCEACF_ = newIntList();
-                mutable_bitField0_ |= 0x00000020;
-              }
-              eOMGDNCEACF_.addInt(input.readUInt32());
-              break;
-            }
-            case 58: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000020) != 0) && input.getBytesUntilLimit() > 0) {
-                eOMGDNCEACF_ = newIntList();
-                mutable_bitField0_ |= 0x00000020;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                eOMGDNCEACF_.addInt(input.readUInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            case 66: {
-              if (!((mutable_bitField0_ & 0x00000010) != 0)) {
-                coopCgList_ = new java.util.ArrayList<emu.grasscutter.net.proto.CoopCgOuterClass.CoopCg>();
-                mutable_bitField0_ |= 0x00000010;
-              }
-              coopCgList_.add(
-                  input.readMessage(emu.grasscutter.net.proto.CoopCgOuterClass.CoopCg.parser(), extensionRegistry));
-              break;
-            }
-            case 72: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                lAAOIEBFJKP_ = newIntList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              lAAOIEBFJKP_.addInt(input.readUInt32());
-              break;
-            }
-            case 74: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
-                lAAOIEBFJKP_ = newIntList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                lAAOIEBFJKP_.addInt(input.readUInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            case 90: {
-              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
-                coopRewardList_ = new java.util.ArrayList<emu.grasscutter.net.proto.CoopRewardOuterClass.CoopReward>();
-                mutable_bitField0_ |= 0x00000008;
-              }
-              coopRewardList_.add(
-                  input.readMessage(emu.grasscutter.net.proto.CoopRewardOuterClass.CoopReward.parser(), extensionRegistry));
-              break;
-            }
-            case 104: {
-
-              jDENGALMPJN_ = input.readUInt32();
-              break;
-            }
-            case 112: {
-
-              id_ = input.readUInt32();
-              break;
-            }
-            case 122: {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                seenEndingMap_ = com.google.protobuf.MapField.newMapField(
-                    SeenEndingMapDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000002;
-              }
-              com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
-              seenEndingMap__ = input.readMessage(
-                  SeenEndingMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              seenEndingMap_.getMutableMap().put(
-                  seenEndingMap__.getKey(), seenEndingMap__.getValue());
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000004) != 0)) {
-          coopPointList_ = java.util.Collections.unmodifiableList(coopPointList_);
-        }
-        if (((mutable_bitField0_ & 0x00000020) != 0)) {
-          eOMGDNCEACF_.makeImmutable(); // C
-        }
-        if (((mutable_bitField0_ & 0x00000010) != 0)) {
-          coopCgList_ = java.util.Collections.unmodifiableList(coopCgList_);
-        }
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          lAAOIEBFJKP_.makeImmutable(); // C
-        }
-        if (((mutable_bitField0_ & 0x00000008) != 0)) {
-          coopRewardList_ = java.util.Collections.unmodifiableList(coopRewardList_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.CoopChapterOuterClass.internal_static_CoopChapter_descriptor;
@@ -900,7 +744,7 @@ public final class CoopChapterOuterClass {
           internalGetSeenEndingMap(),
           SeenEndingMapDefaultEntryHolder.defaultEntry,
           15);
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -975,7 +819,7 @@ public final class CoopChapterOuterClass {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(15, seenEndingMap__);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -1009,7 +853,7 @@ public final class CoopChapterOuterClass {
           .equals(other.getEOMGDNCEACFList())) return false;
       if (getHKOAKJNBIIO()
           != other.getHKOAKJNBIIO()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -1052,7 +896,7 @@ public final class CoopChapterOuterClass {
       }
       hash = (37 * hash) + HKOAKJNBIIO_FIELD_NUMBER;
       hash = (53 * hash) + getHKOAKJNBIIO();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -1195,21 +1039,13 @@ public final class CoopChapterOuterClass {
 
       // Construct using emu.grasscutter.net.proto.CoopChapterOuterClass.CoopChapter.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getCoopPointListFieldBuilder();
-          getCoopRewardListFieldBuilder();
-          getCoopCgListFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1221,22 +1057,25 @@ public final class CoopChapterOuterClass {
         internalGetMutableSeenEndingMap().clear();
         if (coopPointListBuilder_ == null) {
           coopPointList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
         } else {
+          coopPointList_ = null;
           coopPointListBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000004);
         if (coopRewardListBuilder_ == null) {
           coopRewardList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
         } else {
+          coopRewardList_ = null;
           coopRewardListBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000008);
         if (coopCgListBuilder_ == null) {
           coopCgList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000010);
         } else {
+          coopCgList_ = null;
           coopCgListBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000010);
         id_ = 0;
 
         jDENGALMPJN_ = 0;
@@ -1475,7 +1314,7 @@ public final class CoopChapterOuterClass {
         if (other.getHKOAKJNBIIO() != 0) {
           setHKOAKJNBIIO(other.getHKOAKJNBIIO());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -1490,17 +1329,129 @@ public final class CoopChapterOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.CoopChapterOuterClass.CoopChapter parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 24: {
+                state_ = input.readEnum();
+
+                break;
+              } // case 24
+              case 40: {
+                hKOAKJNBIIO_ = input.readUInt32();
+
+                break;
+              } // case 40
+              case 50: {
+                emu.grasscutter.net.proto.CoopPointOuterClass.CoopPoint m =
+                    input.readMessage(
+                        emu.grasscutter.net.proto.CoopPointOuterClass.CoopPoint.parser(),
+                        extensionRegistry);
+                if (coopPointListBuilder_ == null) {
+                  ensureCoopPointListIsMutable();
+                  coopPointList_.add(m);
+                } else {
+                  coopPointListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 50
+              case 56: {
+                int v = input.readUInt32();
+                ensureEOMGDNCEACFIsMutable();
+                eOMGDNCEACF_.addInt(v);
+                break;
+              } // case 56
+              case 58: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureEOMGDNCEACFIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  eOMGDNCEACF_.addInt(input.readUInt32());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 58
+              case 66: {
+                emu.grasscutter.net.proto.CoopCgOuterClass.CoopCg m =
+                    input.readMessage(
+                        emu.grasscutter.net.proto.CoopCgOuterClass.CoopCg.parser(),
+                        extensionRegistry);
+                if (coopCgListBuilder_ == null) {
+                  ensureCoopCgListIsMutable();
+                  coopCgList_.add(m);
+                } else {
+                  coopCgListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 66
+              case 72: {
+                int v = input.readUInt32();
+                ensureLAAOIEBFJKPIsMutable();
+                lAAOIEBFJKP_.addInt(v);
+                break;
+              } // case 72
+              case 74: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureLAAOIEBFJKPIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  lAAOIEBFJKP_.addInt(input.readUInt32());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 74
+              case 90: {
+                emu.grasscutter.net.proto.CoopRewardOuterClass.CoopReward m =
+                    input.readMessage(
+                        emu.grasscutter.net.proto.CoopRewardOuterClass.CoopReward.parser(),
+                        extensionRegistry);
+                if (coopRewardListBuilder_ == null) {
+                  ensureCoopRewardListIsMutable();
+                  coopRewardList_.add(m);
+                } else {
+                  coopRewardListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 90
+              case 104: {
+                jDENGALMPJN_ = input.readUInt32();
+
+                break;
+              } // case 104
+              case 112: {
+                id_ = input.readUInt32();
+
+                break;
+              } // case 112
+              case 122: {
+                com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
+                seenEndingMap__ = input.readMessage(
+                    SeenEndingMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutableSeenEndingMap().getMutableMap().put(
+                    seenEndingMap__.getKey(), seenEndingMap__.getValue());
+                break;
+              } // case 122
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.CoopChapterOuterClass.CoopChapter) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -2690,7 +2641,18 @@ public final class CoopChapterOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new CoopChapter(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

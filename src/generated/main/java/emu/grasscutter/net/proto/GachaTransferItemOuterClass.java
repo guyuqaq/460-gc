@@ -19,32 +19,27 @@ public final class GachaTransferItemOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.ItemParam item = 2;</code>
+     * <code>.ItemParam item = 5;</code>
      * @return Whether the item field is set.
      */
     boolean hasItem();
     /**
-     * <code>.ItemParam item = 2;</code>
+     * <code>.ItemParam item = 5;</code>
      * @return The item.
      */
     emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam getItem();
     /**
-     * <code>.ItemParam item = 2;</code>
+     * <code>.ItemParam item = 5;</code>
      */
     emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder getItemOrBuilder();
 
     /**
-     * <code>bool is_transfer_item_new = 3;</code>
+     * <code>bool is_transfer_item_new = 15;</code>
      * @return The isTransferItemNew.
      */
     boolean getIsTransferItemNew();
   }
   /**
-   * <pre>
-   * Version: 4.6.0
-   * Obfs: AFCOODFGGDL
-   * </pre>
-   *
    * Protobuf type {@code GachaTransferItem}
    */
   public static final class GachaTransferItem extends
@@ -71,61 +66,6 @@ public final class GachaTransferItemOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private GachaTransferItem(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 18: {
-              emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder subBuilder = null;
-              if (item_ != null) {
-                subBuilder = item_.toBuilder();
-              }
-              item_ = input.readMessage(emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(item_);
-                item_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 24: {
-
-              isTransferItemNew_ = input.readBool();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.GachaTransferItemOuterClass.internal_static_GachaTransferItem_descriptor;
@@ -139,10 +79,10 @@ public final class GachaTransferItemOuterClass {
               emu.grasscutter.net.proto.GachaTransferItemOuterClass.GachaTransferItem.class, emu.grasscutter.net.proto.GachaTransferItemOuterClass.GachaTransferItem.Builder.class);
     }
 
-    public static final int ITEM_FIELD_NUMBER = 2;
+    public static final int ITEM_FIELD_NUMBER = 5;
     private emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam item_;
     /**
-     * <code>.ItemParam item = 2;</code>
+     * <code>.ItemParam item = 5;</code>
      * @return Whether the item field is set.
      */
     @java.lang.Override
@@ -150,7 +90,7 @@ public final class GachaTransferItemOuterClass {
       return item_ != null;
     }
     /**
-     * <code>.ItemParam item = 2;</code>
+     * <code>.ItemParam item = 5;</code>
      * @return The item.
      */
     @java.lang.Override
@@ -158,17 +98,17 @@ public final class GachaTransferItemOuterClass {
       return item_ == null ? emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.getDefaultInstance() : item_;
     }
     /**
-     * <code>.ItemParam item = 2;</code>
+     * <code>.ItemParam item = 5;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder getItemOrBuilder() {
       return getItem();
     }
 
-    public static final int IS_TRANSFER_ITEM_NEW_FIELD_NUMBER = 3;
+    public static final int IS_TRANSFER_ITEM_NEW_FIELD_NUMBER = 15;
     private boolean isTransferItemNew_;
     /**
-     * <code>bool is_transfer_item_new = 3;</code>
+     * <code>bool is_transfer_item_new = 15;</code>
      * @return The isTransferItemNew.
      */
     @java.lang.Override
@@ -191,12 +131,12 @@ public final class GachaTransferItemOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (item_ != null) {
-        output.writeMessage(2, getItem());
+        output.writeMessage(5, getItem());
       }
       if (isTransferItemNew_ != false) {
-        output.writeBool(3, isTransferItemNew_);
+        output.writeBool(15, isTransferItemNew_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -207,13 +147,13 @@ public final class GachaTransferItemOuterClass {
       size = 0;
       if (item_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getItem());
+          .computeMessageSize(5, getItem());
       }
       if (isTransferItemNew_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(3, isTransferItemNew_);
+          .computeBoolSize(15, isTransferItemNew_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -235,7 +175,7 @@ public final class GachaTransferItemOuterClass {
       }
       if (getIsTransferItemNew()
           != other.getIsTransferItemNew()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -253,7 +193,7 @@ public final class GachaTransferItemOuterClass {
       hash = (37 * hash) + IS_TRANSFER_ITEM_NEW_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsTransferItemNew());
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -349,11 +289,6 @@ public final class GachaTransferItemOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * Version: 4.6.0
-     * Obfs: AFCOODFGGDL
-     * </pre>
-     *
      * Protobuf type {@code GachaTransferItem}
      */
     public static final class Builder extends
@@ -375,18 +310,13 @@ public final class GachaTransferItemOuterClass {
 
       // Construct using emu.grasscutter.net.proto.GachaTransferItemOuterClass.GachaTransferItem.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -485,7 +415,7 @@ public final class GachaTransferItemOuterClass {
         if (other.getIsTransferItemNew() != false) {
           setIsTransferItemNew(other.getIsTransferItemNew());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -500,17 +430,42 @@ public final class GachaTransferItemOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.GachaTransferItemOuterClass.GachaTransferItem parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 42: {
+                input.readMessage(
+                    getItemFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 42
+              case 120: {
+                isTransferItemNew_ = input.readBool();
+
+                break;
+              } // case 120
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.GachaTransferItemOuterClass.GachaTransferItem) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -518,14 +473,14 @@ public final class GachaTransferItemOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam, emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder, emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder> itemBuilder_;
       /**
-       * <code>.ItemParam item = 2;</code>
+       * <code>.ItemParam item = 5;</code>
        * @return Whether the item field is set.
        */
       public boolean hasItem() {
         return itemBuilder_ != null || item_ != null;
       }
       /**
-       * <code>.ItemParam item = 2;</code>
+       * <code>.ItemParam item = 5;</code>
        * @return The item.
        */
       public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam getItem() {
@@ -536,7 +491,7 @@ public final class GachaTransferItemOuterClass {
         }
       }
       /**
-       * <code>.ItemParam item = 2;</code>
+       * <code>.ItemParam item = 5;</code>
        */
       public Builder setItem(emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam value) {
         if (itemBuilder_ == null) {
@@ -552,7 +507,7 @@ public final class GachaTransferItemOuterClass {
         return this;
       }
       /**
-       * <code>.ItemParam item = 2;</code>
+       * <code>.ItemParam item = 5;</code>
        */
       public Builder setItem(
           emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder builderForValue) {
@@ -566,7 +521,7 @@ public final class GachaTransferItemOuterClass {
         return this;
       }
       /**
-       * <code>.ItemParam item = 2;</code>
+       * <code>.ItemParam item = 5;</code>
        */
       public Builder mergeItem(emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam value) {
         if (itemBuilder_ == null) {
@@ -584,7 +539,7 @@ public final class GachaTransferItemOuterClass {
         return this;
       }
       /**
-       * <code>.ItemParam item = 2;</code>
+       * <code>.ItemParam item = 5;</code>
        */
       public Builder clearItem() {
         if (itemBuilder_ == null) {
@@ -598,7 +553,7 @@ public final class GachaTransferItemOuterClass {
         return this;
       }
       /**
-       * <code>.ItemParam item = 2;</code>
+       * <code>.ItemParam item = 5;</code>
        */
       public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder getItemBuilder() {
         
@@ -606,7 +561,7 @@ public final class GachaTransferItemOuterClass {
         return getItemFieldBuilder().getBuilder();
       }
       /**
-       * <code>.ItemParam item = 2;</code>
+       * <code>.ItemParam item = 5;</code>
        */
       public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder getItemOrBuilder() {
         if (itemBuilder_ != null) {
@@ -617,7 +572,7 @@ public final class GachaTransferItemOuterClass {
         }
       }
       /**
-       * <code>.ItemParam item = 2;</code>
+       * <code>.ItemParam item = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam, emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder, emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder> 
@@ -635,7 +590,7 @@ public final class GachaTransferItemOuterClass {
 
       private boolean isTransferItemNew_ ;
       /**
-       * <code>bool is_transfer_item_new = 3;</code>
+       * <code>bool is_transfer_item_new = 15;</code>
        * @return The isTransferItemNew.
        */
       @java.lang.Override
@@ -643,7 +598,7 @@ public final class GachaTransferItemOuterClass {
         return isTransferItemNew_;
       }
       /**
-       * <code>bool is_transfer_item_new = 3;</code>
+       * <code>bool is_transfer_item_new = 15;</code>
        * @param value The isTransferItemNew to set.
        * @return This builder for chaining.
        */
@@ -654,7 +609,7 @@ public final class GachaTransferItemOuterClass {
         return this;
       }
       /**
-       * <code>bool is_transfer_item_new = 3;</code>
+       * <code>bool is_transfer_item_new = 15;</code>
        * @return This builder for chaining.
        */
       public Builder clearIsTransferItemNew() {
@@ -696,7 +651,18 @@ public final class GachaTransferItemOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new GachaTransferItem(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -731,8 +697,8 @@ public final class GachaTransferItemOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\027GachaTransferItem.proto\032\017ItemParam.pro" +
-      "to\"K\n\021GachaTransferItem\022\030\n\004item\030\002 \001(\0132\n." +
-      "ItemParam\022\034\n\024is_transfer_item_new\030\003 \001(\010B" +
+      "to\"K\n\021GachaTransferItem\022\030\n\004item\030\005 \001(\0132\n." +
+      "ItemParam\022\034\n\024is_transfer_item_new\030\017 \001(\010B" +
       "\033\n\031emu.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

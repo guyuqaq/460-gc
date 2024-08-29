@@ -19,7 +19,7 @@ public final class SceneForceUnlockNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>bool is_add = 12;</code>
+     * <code>bool is_add = 9;</code>
      * @return The isAdd.
      */
     boolean getIsAdd();
@@ -42,11 +42,6 @@ public final class SceneForceUnlockNotifyOuterClass {
     int getForceIdList(int index);
   }
   /**
-   * <pre>
-   * 4.6.0
-   * CmdId: 1077
-   * </pre>
-   *
    * Protobuf type {@code SceneForceUnlockNotify}
    */
   public static final class SceneForceUnlockNotify extends
@@ -74,73 +69,6 @@ public final class SceneForceUnlockNotifyOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private SceneForceUnlockNotify(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 96: {
-
-              isAdd_ = input.readBool();
-              break;
-            }
-            case 104: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                forceIdList_ = newIntList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              forceIdList_.addInt(input.readUInt32());
-              break;
-            }
-            case 106: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
-                forceIdList_ = newIntList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                forceIdList_.addInt(input.readUInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          forceIdList_.makeImmutable(); // C
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.SceneForceUnlockNotifyOuterClass.internal_static_SceneForceUnlockNotify_descriptor;
@@ -154,10 +82,10 @@ public final class SceneForceUnlockNotifyOuterClass {
               emu.grasscutter.net.proto.SceneForceUnlockNotifyOuterClass.SceneForceUnlockNotify.class, emu.grasscutter.net.proto.SceneForceUnlockNotifyOuterClass.SceneForceUnlockNotify.Builder.class);
     }
 
-    public static final int IS_ADD_FIELD_NUMBER = 12;
+    public static final int IS_ADD_FIELD_NUMBER = 9;
     private boolean isAdd_;
     /**
-     * <code>bool is_add = 12;</code>
+     * <code>bool is_add = 9;</code>
      * @return The isAdd.
      */
     @java.lang.Override
@@ -209,7 +137,7 @@ public final class SceneForceUnlockNotifyOuterClass {
                         throws java.io.IOException {
       getSerializedSize();
       if (isAdd_ != false) {
-        output.writeBool(12, isAdd_);
+        output.writeBool(9, isAdd_);
       }
       if (getForceIdListList().size() > 0) {
         output.writeUInt32NoTag(106);
@@ -218,7 +146,7 @@ public final class SceneForceUnlockNotifyOuterClass {
       for (int i = 0; i < forceIdList_.size(); i++) {
         output.writeUInt32NoTag(forceIdList_.getInt(i));
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -229,7 +157,7 @@ public final class SceneForceUnlockNotifyOuterClass {
       size = 0;
       if (isAdd_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(12, isAdd_);
+          .computeBoolSize(9, isAdd_);
       }
       {
         int dataSize = 0;
@@ -245,7 +173,7 @@ public final class SceneForceUnlockNotifyOuterClass {
         }
         forceIdListMemoizedSerializedSize = dataSize;
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -264,7 +192,7 @@ public final class SceneForceUnlockNotifyOuterClass {
           != other.getIsAdd()) return false;
       if (!getForceIdListList()
           .equals(other.getForceIdListList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -282,7 +210,7 @@ public final class SceneForceUnlockNotifyOuterClass {
         hash = (37 * hash) + FORCE_ID_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getForceIdListList().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -378,11 +306,6 @@ public final class SceneForceUnlockNotifyOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * 4.6.0
-     * CmdId: 1077
-     * </pre>
-     *
      * Protobuf type {@code SceneForceUnlockNotify}
      */
     public static final class Builder extends
@@ -404,18 +327,13 @@ public final class SceneForceUnlockNotifyOuterClass {
 
       // Construct using emu.grasscutter.net.proto.SceneForceUnlockNotifyOuterClass.SceneForceUnlockNotify.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -518,7 +436,7 @@ public final class SceneForceUnlockNotifyOuterClass {
           }
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -533,24 +451,58 @@ public final class SceneForceUnlockNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.SceneForceUnlockNotifyOuterClass.SceneForceUnlockNotify parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 72: {
+                isAdd_ = input.readBool();
+
+                break;
+              } // case 72
+              case 104: {
+                int v = input.readUInt32();
+                ensureForceIdListIsMutable();
+                forceIdList_.addInt(v);
+                break;
+              } // case 104
+              case 106: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureForceIdListIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  forceIdList_.addInt(input.readUInt32());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 106
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.SceneForceUnlockNotifyOuterClass.SceneForceUnlockNotify) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
 
       private boolean isAdd_ ;
       /**
-       * <code>bool is_add = 12;</code>
+       * <code>bool is_add = 9;</code>
        * @return The isAdd.
        */
       @java.lang.Override
@@ -558,7 +510,7 @@ public final class SceneForceUnlockNotifyOuterClass {
         return isAdd_;
       }
       /**
-       * <code>bool is_add = 12;</code>
+       * <code>bool is_add = 9;</code>
        * @param value The isAdd to set.
        * @return This builder for chaining.
        */
@@ -569,7 +521,7 @@ public final class SceneForceUnlockNotifyOuterClass {
         return this;
       }
       /**
-       * <code>bool is_add = 12;</code>
+       * <code>bool is_add = 9;</code>
        * @return This builder for chaining.
        */
       public Builder clearIsAdd() {
@@ -690,7 +642,18 @@ public final class SceneForceUnlockNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new SceneForceUnlockNotify(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -725,7 +688,7 @@ public final class SceneForceUnlockNotifyOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\034SceneForceUnlockNotify.proto\"?\n\026SceneF" +
-      "orceUnlockNotify\022\016\n\006is_add\030\014 \001(\010\022\025\n\rforc" +
+      "orceUnlockNotify\022\016\n\006is_add\030\t \001(\010\022\025\n\rforc" +
       "e_id_list\030\r \003(\rB\033\n\031emu.grasscutter.net.p" +
       "rotob\006proto3"
     };

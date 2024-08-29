@@ -19,29 +19,30 @@ public final class SkyCrystalDetectorQuickUseResultOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.SkyCrystalDetectorData sky_crystal_detector_data = 2;</code>
+     * <code>.SkyCrystalDetectorData sky_crystal_detector_data = 4;</code>
      * @return Whether the skyCrystalDetectorData field is set.
      */
     boolean hasSkyCrystalDetectorData();
     /**
-     * <code>.SkyCrystalDetectorData sky_crystal_detector_data = 2;</code>
+     * <code>.SkyCrystalDetectorData sky_crystal_detector_data = 4;</code>
      * @return The skyCrystalDetectorData.
      */
     emu.grasscutter.net.proto.SkyCrystalDetectorDataOuterClass.SkyCrystalDetectorData getSkyCrystalDetectorData();
     /**
-     * <code>.SkyCrystalDetectorData sky_crystal_detector_data = 2;</code>
+     * <code>.SkyCrystalDetectorData sky_crystal_detector_data = 4;</code>
      */
     emu.grasscutter.net.proto.SkyCrystalDetectorDataOuterClass.SkyCrystalDetectorDataOrBuilder getSkyCrystalDetectorDataOrBuilder();
 
     /**
-     * <code>int32 retcode = 15;</code>
+     * <code>int32 retcode = 13;</code>
      * @return The retcode.
      */
     int getRetcode();
   }
   /**
    * <pre>
-   * Obf: MDBHGHIINAM
+   * 4.7.0
+   * Obf: LOEMJEIFCPM
    * </pre>
    *
    * Protobuf type {@code SkyCrystalDetectorQuickUseResult}
@@ -70,61 +71,6 @@ public final class SkyCrystalDetectorQuickUseResultOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private SkyCrystalDetectorQuickUseResult(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 18: {
-              emu.grasscutter.net.proto.SkyCrystalDetectorDataOuterClass.SkyCrystalDetectorData.Builder subBuilder = null;
-              if (skyCrystalDetectorData_ != null) {
-                subBuilder = skyCrystalDetectorData_.toBuilder();
-              }
-              skyCrystalDetectorData_ = input.readMessage(emu.grasscutter.net.proto.SkyCrystalDetectorDataOuterClass.SkyCrystalDetectorData.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(skyCrystalDetectorData_);
-                skyCrystalDetectorData_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 120: {
-
-              retcode_ = input.readInt32();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.SkyCrystalDetectorQuickUseResultOuterClass.internal_static_SkyCrystalDetectorQuickUseResult_descriptor;
@@ -138,10 +84,10 @@ public final class SkyCrystalDetectorQuickUseResultOuterClass {
               emu.grasscutter.net.proto.SkyCrystalDetectorQuickUseResultOuterClass.SkyCrystalDetectorQuickUseResult.class, emu.grasscutter.net.proto.SkyCrystalDetectorQuickUseResultOuterClass.SkyCrystalDetectorQuickUseResult.Builder.class);
     }
 
-    public static final int SKY_CRYSTAL_DETECTOR_DATA_FIELD_NUMBER = 2;
+    public static final int SKY_CRYSTAL_DETECTOR_DATA_FIELD_NUMBER = 4;
     private emu.grasscutter.net.proto.SkyCrystalDetectorDataOuterClass.SkyCrystalDetectorData skyCrystalDetectorData_;
     /**
-     * <code>.SkyCrystalDetectorData sky_crystal_detector_data = 2;</code>
+     * <code>.SkyCrystalDetectorData sky_crystal_detector_data = 4;</code>
      * @return Whether the skyCrystalDetectorData field is set.
      */
     @java.lang.Override
@@ -149,7 +95,7 @@ public final class SkyCrystalDetectorQuickUseResultOuterClass {
       return skyCrystalDetectorData_ != null;
     }
     /**
-     * <code>.SkyCrystalDetectorData sky_crystal_detector_data = 2;</code>
+     * <code>.SkyCrystalDetectorData sky_crystal_detector_data = 4;</code>
      * @return The skyCrystalDetectorData.
      */
     @java.lang.Override
@@ -157,17 +103,17 @@ public final class SkyCrystalDetectorQuickUseResultOuterClass {
       return skyCrystalDetectorData_ == null ? emu.grasscutter.net.proto.SkyCrystalDetectorDataOuterClass.SkyCrystalDetectorData.getDefaultInstance() : skyCrystalDetectorData_;
     }
     /**
-     * <code>.SkyCrystalDetectorData sky_crystal_detector_data = 2;</code>
+     * <code>.SkyCrystalDetectorData sky_crystal_detector_data = 4;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.SkyCrystalDetectorDataOuterClass.SkyCrystalDetectorDataOrBuilder getSkyCrystalDetectorDataOrBuilder() {
       return getSkyCrystalDetectorData();
     }
 
-    public static final int RETCODE_FIELD_NUMBER = 15;
+    public static final int RETCODE_FIELD_NUMBER = 13;
     private int retcode_;
     /**
-     * <code>int32 retcode = 15;</code>
+     * <code>int32 retcode = 13;</code>
      * @return The retcode.
      */
     @java.lang.Override
@@ -190,12 +136,12 @@ public final class SkyCrystalDetectorQuickUseResultOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (skyCrystalDetectorData_ != null) {
-        output.writeMessage(2, getSkyCrystalDetectorData());
+        output.writeMessage(4, getSkyCrystalDetectorData());
       }
       if (retcode_ != 0) {
-        output.writeInt32(15, retcode_);
+        output.writeInt32(13, retcode_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -206,13 +152,13 @@ public final class SkyCrystalDetectorQuickUseResultOuterClass {
       size = 0;
       if (skyCrystalDetectorData_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getSkyCrystalDetectorData());
+          .computeMessageSize(4, getSkyCrystalDetectorData());
       }
       if (retcode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(15, retcode_);
+          .computeInt32Size(13, retcode_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -234,7 +180,7 @@ public final class SkyCrystalDetectorQuickUseResultOuterClass {
       }
       if (getRetcode()
           != other.getRetcode()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -251,7 +197,7 @@ public final class SkyCrystalDetectorQuickUseResultOuterClass {
       }
       hash = (37 * hash) + RETCODE_FIELD_NUMBER;
       hash = (53 * hash) + getRetcode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -348,7 +294,8 @@ public final class SkyCrystalDetectorQuickUseResultOuterClass {
     }
     /**
      * <pre>
-     * Obf: MDBHGHIINAM
+     * 4.7.0
+     * Obf: LOEMJEIFCPM
      * </pre>
      *
      * Protobuf type {@code SkyCrystalDetectorQuickUseResult}
@@ -372,18 +319,13 @@ public final class SkyCrystalDetectorQuickUseResultOuterClass {
 
       // Construct using emu.grasscutter.net.proto.SkyCrystalDetectorQuickUseResultOuterClass.SkyCrystalDetectorQuickUseResult.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -482,7 +424,7 @@ public final class SkyCrystalDetectorQuickUseResultOuterClass {
         if (other.getRetcode() != 0) {
           setRetcode(other.getRetcode());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -497,17 +439,42 @@ public final class SkyCrystalDetectorQuickUseResultOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.SkyCrystalDetectorQuickUseResultOuterClass.SkyCrystalDetectorQuickUseResult parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 34: {
+                input.readMessage(
+                    getSkyCrystalDetectorDataFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 34
+              case 104: {
+                retcode_ = input.readInt32();
+
+                break;
+              } // case 104
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.SkyCrystalDetectorQuickUseResultOuterClass.SkyCrystalDetectorQuickUseResult) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -515,14 +482,14 @@ public final class SkyCrystalDetectorQuickUseResultOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.SkyCrystalDetectorDataOuterClass.SkyCrystalDetectorData, emu.grasscutter.net.proto.SkyCrystalDetectorDataOuterClass.SkyCrystalDetectorData.Builder, emu.grasscutter.net.proto.SkyCrystalDetectorDataOuterClass.SkyCrystalDetectorDataOrBuilder> skyCrystalDetectorDataBuilder_;
       /**
-       * <code>.SkyCrystalDetectorData sky_crystal_detector_data = 2;</code>
+       * <code>.SkyCrystalDetectorData sky_crystal_detector_data = 4;</code>
        * @return Whether the skyCrystalDetectorData field is set.
        */
       public boolean hasSkyCrystalDetectorData() {
         return skyCrystalDetectorDataBuilder_ != null || skyCrystalDetectorData_ != null;
       }
       /**
-       * <code>.SkyCrystalDetectorData sky_crystal_detector_data = 2;</code>
+       * <code>.SkyCrystalDetectorData sky_crystal_detector_data = 4;</code>
        * @return The skyCrystalDetectorData.
        */
       public emu.grasscutter.net.proto.SkyCrystalDetectorDataOuterClass.SkyCrystalDetectorData getSkyCrystalDetectorData() {
@@ -533,7 +500,7 @@ public final class SkyCrystalDetectorQuickUseResultOuterClass {
         }
       }
       /**
-       * <code>.SkyCrystalDetectorData sky_crystal_detector_data = 2;</code>
+       * <code>.SkyCrystalDetectorData sky_crystal_detector_data = 4;</code>
        */
       public Builder setSkyCrystalDetectorData(emu.grasscutter.net.proto.SkyCrystalDetectorDataOuterClass.SkyCrystalDetectorData value) {
         if (skyCrystalDetectorDataBuilder_ == null) {
@@ -549,7 +516,7 @@ public final class SkyCrystalDetectorQuickUseResultOuterClass {
         return this;
       }
       /**
-       * <code>.SkyCrystalDetectorData sky_crystal_detector_data = 2;</code>
+       * <code>.SkyCrystalDetectorData sky_crystal_detector_data = 4;</code>
        */
       public Builder setSkyCrystalDetectorData(
           emu.grasscutter.net.proto.SkyCrystalDetectorDataOuterClass.SkyCrystalDetectorData.Builder builderForValue) {
@@ -563,7 +530,7 @@ public final class SkyCrystalDetectorQuickUseResultOuterClass {
         return this;
       }
       /**
-       * <code>.SkyCrystalDetectorData sky_crystal_detector_data = 2;</code>
+       * <code>.SkyCrystalDetectorData sky_crystal_detector_data = 4;</code>
        */
       public Builder mergeSkyCrystalDetectorData(emu.grasscutter.net.proto.SkyCrystalDetectorDataOuterClass.SkyCrystalDetectorData value) {
         if (skyCrystalDetectorDataBuilder_ == null) {
@@ -581,7 +548,7 @@ public final class SkyCrystalDetectorQuickUseResultOuterClass {
         return this;
       }
       /**
-       * <code>.SkyCrystalDetectorData sky_crystal_detector_data = 2;</code>
+       * <code>.SkyCrystalDetectorData sky_crystal_detector_data = 4;</code>
        */
       public Builder clearSkyCrystalDetectorData() {
         if (skyCrystalDetectorDataBuilder_ == null) {
@@ -595,7 +562,7 @@ public final class SkyCrystalDetectorQuickUseResultOuterClass {
         return this;
       }
       /**
-       * <code>.SkyCrystalDetectorData sky_crystal_detector_data = 2;</code>
+       * <code>.SkyCrystalDetectorData sky_crystal_detector_data = 4;</code>
        */
       public emu.grasscutter.net.proto.SkyCrystalDetectorDataOuterClass.SkyCrystalDetectorData.Builder getSkyCrystalDetectorDataBuilder() {
         
@@ -603,7 +570,7 @@ public final class SkyCrystalDetectorQuickUseResultOuterClass {
         return getSkyCrystalDetectorDataFieldBuilder().getBuilder();
       }
       /**
-       * <code>.SkyCrystalDetectorData sky_crystal_detector_data = 2;</code>
+       * <code>.SkyCrystalDetectorData sky_crystal_detector_data = 4;</code>
        */
       public emu.grasscutter.net.proto.SkyCrystalDetectorDataOuterClass.SkyCrystalDetectorDataOrBuilder getSkyCrystalDetectorDataOrBuilder() {
         if (skyCrystalDetectorDataBuilder_ != null) {
@@ -614,7 +581,7 @@ public final class SkyCrystalDetectorQuickUseResultOuterClass {
         }
       }
       /**
-       * <code>.SkyCrystalDetectorData sky_crystal_detector_data = 2;</code>
+       * <code>.SkyCrystalDetectorData sky_crystal_detector_data = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.SkyCrystalDetectorDataOuterClass.SkyCrystalDetectorData, emu.grasscutter.net.proto.SkyCrystalDetectorDataOuterClass.SkyCrystalDetectorData.Builder, emu.grasscutter.net.proto.SkyCrystalDetectorDataOuterClass.SkyCrystalDetectorDataOrBuilder> 
@@ -632,7 +599,7 @@ public final class SkyCrystalDetectorQuickUseResultOuterClass {
 
       private int retcode_ ;
       /**
-       * <code>int32 retcode = 15;</code>
+       * <code>int32 retcode = 13;</code>
        * @return The retcode.
        */
       @java.lang.Override
@@ -640,7 +607,7 @@ public final class SkyCrystalDetectorQuickUseResultOuterClass {
         return retcode_;
       }
       /**
-       * <code>int32 retcode = 15;</code>
+       * <code>int32 retcode = 13;</code>
        * @param value The retcode to set.
        * @return This builder for chaining.
        */
@@ -651,7 +618,7 @@ public final class SkyCrystalDetectorQuickUseResultOuterClass {
         return this;
       }
       /**
-       * <code>int32 retcode = 15;</code>
+       * <code>int32 retcode = 13;</code>
        * @return This builder for chaining.
        */
       public Builder clearRetcode() {
@@ -693,7 +660,18 @@ public final class SkyCrystalDetectorQuickUseResultOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new SkyCrystalDetectorQuickUseResult(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -730,8 +708,8 @@ public final class SkyCrystalDetectorQuickUseResultOuterClass {
       "\n&SkyCrystalDetectorQuickUseResult.proto" +
       "\032\034SkyCrystalDetectorData.proto\"o\n SkyCry" +
       "stalDetectorQuickUseResult\022:\n\031sky_crysta" +
-      "l_detector_data\030\002 \001(\0132\027.SkyCrystalDetect" +
-      "orData\022\017\n\007retcode\030\017 \001(\005B\033\n\031emu.grasscutt" +
+      "l_detector_data\030\004 \001(\0132\027.SkyCrystalDetect" +
+      "orData\022\017\n\007retcode\030\r \001(\005B\033\n\031emu.grasscutt" +
       "er.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
