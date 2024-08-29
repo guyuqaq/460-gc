@@ -296,7 +296,7 @@ public class Player implements DatabaseObject<Player>, PlayerHook, FieldFetch {
         this.account = session.getAccount();
         this.accountId = this.getAccount().getId();
         this.session = session;
-        this.nickname = "Lumine";
+        this.nickname = "Traveler";
         this.signature = "";
         this.teamManager = new TeamManager(this);
         this.birthday = new PlayerBirthday();
@@ -599,7 +599,7 @@ public class Player implements DatabaseObject<Player>, PlayerHook, FieldFetch {
         this.setOrFetch(PlayerProperty.PROP_IS_TRANSFERABLE, 1);
         this.setOrFetch(PlayerProperty.PROP_MAX_STAMINA, 24000);
         this.setOrFetch(PlayerProperty.PROP_DIVE_MAX_STAMINA, withQuesting ? 10000 : 0);
-        this.setOrFetch(PlayerProperty.PROP_PLAYER_RESIN, 160);
+        this.setOrFetch(PlayerProperty.PROP_PLAYER_RESIN, 200);
         // The player's current stamina is always their max stamina.
         this.setProperty(PlayerProperty.PROP_CUR_PERSIST_STAMINA,
             this.getProperty(PlayerProperty.PROP_MAX_STAMINA));
@@ -1093,7 +1093,7 @@ public class Player implements DatabaseObject<Player>, PlayerHook, FieldFetch {
             .setMpSettingType(this.getMpSetting())
             .setNameCardId(this.getNameCardId())
             .setSignature(this.getSignature())
-            .setProfilePicture(ProfilePicture.newBuilder().setAvatarId(this.getHeadImage()));
+            .setProfilePicture(ProfilePicture.newBuilder().setHeadImageId(this.getHeadImage()));
 
         if (this.getWorld() != null) {
             onlineInfo.setCurPlayerNumInWorld(getWorld().getPlayerCount());
@@ -1121,7 +1121,7 @@ public class Player implements DatabaseObject<Player>, PlayerHook, FieldFetch {
                     socialShowAvatarInfoList.add(
                         socialShowAvatarInfoList.size(),
                         SocialShowAvatarInfoOuterClass.SocialShowAvatarInfo.newBuilder()
-                            .setAvatarId(avatarId)
+                            .setHeadImageId(avatarId)
                             .setLevel(getAvatars().getAvatarById(avatarId).getLevel())
                             .setCostumeId(getAvatars().getAvatarById(avatarId).getCostume())
                             .build()
@@ -1137,7 +1137,7 @@ public class Player implements DatabaseObject<Player>, PlayerHook, FieldFetch {
                     socialShowAvatarInfoList.add(
                         socialShowAvatarInfoList.size(),
                         SocialShowAvatarInfoOuterClass.SocialShowAvatarInfo.newBuilder()
-                            .setAvatarId(avatarId)
+                            .setHeadImageId(avatarId)
                             .setLevel(avatars.getAvatarById(avatarId).getLevel())
                             .setCostumeId(avatars.getAvatarById(avatarId).getCostume())
                             .build()
@@ -1148,7 +1148,7 @@ public class Player implements DatabaseObject<Player>, PlayerHook, FieldFetch {
 
         return SocialDetail.newBuilder()
             .setUid(this.getUid())
-            .setProfilePicture(ProfilePicture.newBuilder().setAvatarId(this.getHeadImage()))
+            .setProfilePicture(ProfilePicture.newBuilder().setHeadImageId(this.getHeadImage()))
             .setNickname(this.getNickname())
             .setSignature(this.getSignature())
             .setLevel(this.getLevel())

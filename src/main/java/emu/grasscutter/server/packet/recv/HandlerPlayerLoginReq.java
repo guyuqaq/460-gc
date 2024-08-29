@@ -26,22 +26,24 @@ public class HandlerPlayerLoginReq extends PacketHandler {
         // Parse request
         PlayerLoginReq req = PlayerLoginReq.parseFrom(payload);
 
+        // TODO: fix proto field number
         // Authenticate session
-        if (!req.getToken().equals(session.getAccount().getToken())) {
-            session.close();
-            return;
-        }
+        // if (!req.getToken().equals(session.getAccount().getToken())) {
+        //     session.close();
+        //     return;
+        // }
 
         // Load character from db
         Player player = session.getPlayer();
 
         // Show opening cutscene if player has no avatars
         if (player.getAvatars().getAvatarCount() == 0) {
-            // Pick character (Disabled due to opcode issue)
+            // TODO: find DoSetPlayerBornDataNotify opcode
+            // Pick character
             // session.setState(SessionState.PICKING_CHARACTER);
             // session.send(new BasePacket(PacketOpcodes.DoSetPlayerBornDataNotify));
 
-            // Hardcode default mc and nickname
+            // Hardcode default mc
             int avatarId = 10000007;
             Avatar mainCharacter = new Avatar(avatarId);
 

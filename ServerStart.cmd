@@ -1,2 +1,2 @@
-java -jar GasaiGC-4.6.0.jar -debug
+java -jar GasaiGC-5.0.0.jar -debug
 pause

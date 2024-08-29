@@ -33,7 +33,7 @@ public class DungeonData extends GameResource {
     @Getter private int statueCostID;
     @Getter private int statueCostCount;
     @Getter private int statueDrop;
-    @Getter private Map<String, Integer> levelConfigMap; // DungeonLevelEntityConfigData -> %chance? idk
+        @Getter private Map<String, Integer> levelConfigMap; // DungeonLevelEntityConfigData -> %chance? idk
 
     // not part of DungeonExcelConfigData
     @Getter private RewardPreviewData rewardPreviewData;
