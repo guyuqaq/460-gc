@@ -393,7 +393,6 @@ public final class PacketOpcodes {
     public static final int GetHomeExchangeWoodInfoReq = 5768;
     public static final int PlayerChatReq = 21209;
     public static final int GetWidgetQuickSlotListReq = 24642;
-    public static final int TowerAllDataReq = 2265;
     public static final int GetAllSceneGalleryInfoReq = 20484;
     public static final int GetPlayerHomeCompInfoReq = 23660;
     public static final int GetFurnitureCurModuleArrangeCountReq = 22795;
@@ -440,7 +439,16 @@ public final class PacketOpcodes {
     public static final int QueryPathRsp = 2350;
     public static final int UnlockTransPointReq = 3518;
     public static final int UnlockTransPointRsp = 23546;
-
+    public static final int TowerAllDataReq = 2265;
+    public static final int TowerAllDataRsp = 50347;
+    public static final int TowerCurLevelRecordChangeNotify = 50348;
+    public static final int TowerEnterLevelReq = 50349;
+    public static final int TowerEnterLevelRsp = 50350;
+    public static final int TowerFloorRecordChangeNotify = 50351;
+    public static final int TowerLevelStarCondNotify = 50352;
+    public static final int TowerMiddleLevelChangeTeamNotify = 50353;
+    public static final int TowerTeamSelectReq = 50354;
+    public static final int TowerTeamSelectRsp = 50355;
 
 
 
@@ -461,7 +469,6 @@ public final class PacketOpcodes {
     public static final int GetHomeExchangeWoodInfoRsp = 1;
     public static final int PlayerChatRsp = 1;
     public static final int GetWidgetQuickSlotListRsp = 1;
-    public static final int TowerAllDataRsp = 1;
     public static final int GetAllSceneGalleryInfoRsp = 1;
     public static final int FurnitureMakeRsp = 1;
     public static final int AbilityInvocationFailNotify = 1;
@@ -2253,22 +2260,14 @@ public final class PacketOpcodes {
     public static final int TowerBriefDataNotify = 1;
     public static final int TowerBuffSelectReq = 1;
     public static final int TowerBuffSelectRsp = 1;
-    public static final int TowerCurLevelRecordChangeNotify = 1;
     public static final int TowerDailyRewardProgressChangeNotify = 1;
-    public static final int TowerEnterLevelReq = 1;
-    public static final int TowerEnterLevelRsp = 1;
-    public static final int TowerFloorRecordChangeNotify = 1;
     public static final int TowerGetFloorStarRewardReq = 1;
     public static final int TowerGetFloorStarRewardRsp = 1;
     public static final int TowerLevelEndNotify = 1;
-    public static final int TowerLevelStarCondNotify = 1;
-    public static final int TowerMiddleLevelChangeTeamNotify = 1;
     public static final int TowerRecordHandbookReq = 1;
     public static final int TowerRecordHandbookRsp = 1;
     public static final int TowerSurrenderReq = 1;
     public static final int TowerSurrenderRsp = 1;
-    public static final int TowerTeamSelectReq = 1;
-    public static final int TowerTeamSelectRsp = 1;
     public static final int TreasureMapBonusChallengeNotify = 1;
     public static final int TreasureMapCurrencyNotify = 1;
     public static final int TreasureMapDetectorDataNotify = 1;
