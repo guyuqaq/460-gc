@@ -1,5 +1,7 @@
 package emu.grasscutter.game.mail;
 
+import static emu.grasscutter.config.Configuration.GAME_INFO;
+import emu.grasscutter.command.commands.SendMailCommand.MailBuilder;
 import emu.grasscutter.Grasscutter;
 import emu.grasscutter.database.DatabaseHelper;
 import emu.grasscutter.game.player.*;
@@ -96,6 +98,23 @@ public class MailHandler extends BasePlayerManager {
             return false;
         }
     }
+
+    /**********
+     * Send Welcome Mail to Player
+     **********/
+	public void sendWelcomeMail() {
+		// Default mail
+		var welcomeMail = GAME_INFO.joinOptions.welcomeMail;
+		MailBuilder mailBuilder = new MailBuilder(this.player.getUid(), new Mail());
+		mailBuilder.mail.mailContent.title = welcomeMail.title;
+		mailBuilder.mail.mailContent.sender = welcomeMail.sender;
+		mailBuilder.mail.mailContent.content = welcomeMail.content;
+		mailBuilder.mail.itemList.addAll(Arrays.asList(welcomeMail.items));
+		mailBuilder.mail.importance = 1;
+		
+		mailBuilder.mail.setOwnerUid(this.player.getUid());
+		this.player.sendMail(mailBuilder.mail);
+	}
 
     public void loadFromDatabase() {
         List<Mail> mailList = DatabaseHelper.getAllMail(this.getPlayer());

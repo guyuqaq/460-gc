@@ -8,7 +8,6 @@ import emu.grasscutter.data.*;
 import emu.grasscutter.data.excels.ItemData;
 import emu.grasscutter.data.excels.avatar.AvatarSkillDepotData;
 import emu.grasscutter.data.excels.monster.MonsterData.HpDrops;
-import emu.grasscutter.game.ability.Ability;
 import emu.grasscutter.game.avatar.Avatar;
 import emu.grasscutter.game.entity.*;
 import emu.grasscutter.game.player.*;
@@ -131,7 +130,7 @@ public class EnergyManager extends BasePlayerManager {
         }
 
         // Default to an elementless particle.
-        int itemId = 2021;
+        int itemId = 2024;
 
         // Generate 2 particles by default.
         int amount = 2;
@@ -242,9 +241,7 @@ public class EnergyManager extends BasePlayerManager {
         //      charged attack that is not (Diluc's E?).
         //    - Catalyst normal attacks have an ability, so we don't handle those for now.
         // ToDo: Fix all of that.
-       if (ability != AbilityIdentifier.getDefaultInstance()) {
-            // TODO: fix the charging issue among executing ultimate
-            this.generateElemBall(this.getCurrentAvatarBallId(), this.getPlayer().getPosition(), 2);
+        if (ability != AbilityIdentifier.getDefaultInstance()) {
             return;
         }
 
@@ -342,19 +339,6 @@ public class EnergyManager extends BasePlayerManager {
     /*
      * Utilities.
      */
-      private int getCurrentAvatarBallId() {
-        Avatar avatar = this.getPlayer().getCurrentAvatar();
-        AvatarSkillDepotData skillDepotData = avatar.getSkillDepot();
-
-        var itemId = 2024;
-
-        if (skillDepotData != null) {
-            ElementType element = skillDepotData.getElementType();
-            itemId = this.getBallIdForElement(element);
-        }
-
-        return itemId;
-    }
 
     private void generateElemBall(int ballId, Position position, int count) {
         // Generate a particle/orb with the specified parameters.

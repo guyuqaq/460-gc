@@ -159,7 +159,7 @@ public class Player implements DatabaseObject<Player>, PlayerHook, FieldFetch {
     @Getter private transient PlayerProgressManager progressManager;
     @Getter private transient SatiationManager satiationManager;
     @Getter private transient TalkManager talkManager;
-
+    
     @Getter @Setter private transient Position lastCheckedPosition = null;
 
     // Manager data (Save-able to the database)
@@ -199,7 +199,8 @@ public class Player implements DatabaseObject<Player>, PlayerHook, FieldFetch {
     @Getter @Setter private int lastDailyReset;
     @Getter private transient MpSettingType mpSetting = MpSettingType.MP_SETTING_TYPE_ENTER_AFTER_APPLY;
     @Getter private long playerGameTime = 540000; // 9 in-game hours. Present at the start of the game.
-
+    
+    private transient boolean isNew;
     @Getter private PlayerProgress playerProgress;
     @Getter private Set<Integer> activeQuestTimers;
 
@@ -296,6 +297,7 @@ public class Player implements DatabaseObject<Player>, PlayerHook, FieldFetch {
         this.account = session.getAccount();
         this.accountId = this.getAccount().getId();
         this.session = session;
+        this.isNew = true;
         this.nickname = "Traveler";
         this.signature = "";
         this.teamManager = new TeamManager(this);
@@ -1514,6 +1516,11 @@ public class Player implements DatabaseObject<Player>, PlayerHook, FieldFetch {
         // Set session state
         session.setState(SessionState.ACTIVE);
 		
+        //
+        if (this.isNew) {
+            this.getMailHandler().sendWelcomeMail();
+        }
+
         // Call join event.
         PlayerJoinEvent event = new PlayerJoinEvent(this);
         event.call();

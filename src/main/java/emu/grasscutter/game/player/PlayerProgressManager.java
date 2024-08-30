@@ -115,23 +115,6 @@ public final class PlayerProgressManager extends BasePlayerDataManager {
         }
     }
 	
-	 /**********
-     * Send Welcome Mail to Player
-     **********/
-	public void sendWelcomeMail() {
-		// Default mail
-		var welcomeMail = GAME_INFO.joinOptions.welcomeMail;
-		MailBuilder mailBuilder = new MailBuilder(this.player.getUid(), new Mail());
-		mailBuilder.mail.mailContent.title = welcomeMail.title;
-		mailBuilder.mail.mailContent.sender = welcomeMail.sender;
-		mailBuilder.mail.mailContent.content = welcomeMail.content;
-		mailBuilder.mail.itemList.addAll(Arrays.asList(welcomeMail.items));
-		mailBuilder.mail.importance = 1;
-		
-		mailBuilder.mail.setOwnerUid(this.player.getUid());
-		this.player.sendMail(mailBuilder.mail);
-	}
-
     /**********
      * Direct getters and setters for open states.
      **********/
@@ -271,7 +254,6 @@ public final class PlayerProgressManager extends BasePlayerDataManager {
         if (statueGameMainQuest == null) {
             this.player.getQuestManager().addQuest(30302);
             statueGameMainQuest = this.player.getQuestManager().getMainQuestById(303);
-            sendWelcomeMail();
         }
 
         // Set all subquests to active if they aren't already finished.

@@ -98,10 +98,10 @@ public class seCommand implements CommandHandler {
             int scene = targetPlayer.getSceneId();
             String message;
             try {
-                //Position targetPlayerPos = targetPlayer.getPosition();
-                //targetPlayer.getWorld().transferPlayerToScene(targetPlayer, 1, targetPlayerPos);
-                //targetPlayer.getWorld().transferPlayerToScene(targetPlayer, scene, targetPlayerPos);
-               // targetPlayer.getScene().broadcastPacket(new PacketSceneEntityAppearNotify(targetPlayer));
+                Position targetPlayerPos = targetPlayer.getPosition();
+                targetPlayer.getWorld().transferPlayerToScene(targetPlayer, 1, targetPlayerPos);
+                targetPlayer.getWorld().transferPlayerToScene(targetPlayer, scene, targetPlayerPos);
+                targetPlayer.getScene().broadcastPacket(new PacketSceneEntityAppearNotify(targetPlayer));
                 message = String.format("Switch success", element.name());
             } catch (Exception e) {
                 message = String.format("Failed", element.name());
