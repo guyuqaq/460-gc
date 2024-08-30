@@ -275,7 +275,7 @@ public class AbilityModifier implements Serializable {
 
         @SerializedName(
                 value = "amount",
-                alternate = {"LNFMOCKIAGK", "PDLLIFICICJ","LKDJMGOJHAH","cdRatio"})
+                alternate = {"LNFMOCKIAGK", "PDLLIFICICJ","LKDJMGOJHAH"})
         public DynamicFloat amount = DynamicFloat.ZERO;
 
         @SerializedName(
@@ -347,8 +347,8 @@ public class AbilityModifier implements Serializable {
         public String overrideMapKey;
 
         public int param1;
-        // public int param2;
-        // public int param3;
+        //public int param2;
+        //public int param3;
 
         public String funcName;
         public LuaCallType luaCallType;

@@ -268,8 +268,8 @@ public final class RegionHandler implements Router {
                                     .setStopServer(
                                             StopServerInfo.newBuilder()
                                                     .setUrl("https://in.fanbook.cn/glaze")
-                                                    .setStopBeginTime((int) Instant.now().getEpochSecond())
-                                                    .setStopEndTime((int) Instant.now().getEpochSecond() + 1)
+                                                    //.setStopBeginTime((int) Instant.now().getEpochSecond())
+                                                    //.setStopEndTime((int) Instant.now().getEpochSecond() + 1)
                                                     .setContentMsg(
                                                             updateClient
                                                                     ? "\n发现最新%s版本，请前往社区官网下载最新客户端。"

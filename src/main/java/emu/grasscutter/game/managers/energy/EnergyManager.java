@@ -131,7 +131,7 @@ public class EnergyManager extends BasePlayerManager {
         }
 
         // Default to an elementless particle.
-        int itemId = 2024;
+        int itemId = 2021;
 
         // Generate 2 particles by default.
         int amount = 2;

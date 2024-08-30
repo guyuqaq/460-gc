@@ -89,7 +89,7 @@ public final class SceneGroup {
         this.bindings = ScriptLoader.getEngine().createBindings();
 
         CompiledScript cs;
-        if (overrideScriptPath != null && !"".equals(overrideScriptPath)) {
+        if (overrideScriptPath != null && !overrideScriptPath.equals("")) {
             cs = ScriptLoader.getScript(overrideScriptPath, true);
         } else {
             cs =
