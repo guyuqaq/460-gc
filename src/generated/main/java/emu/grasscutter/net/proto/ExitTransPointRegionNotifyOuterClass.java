@@ -19,21 +19,22 @@ public final class ExitTransPointRegionNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 point_id = 8;</code>
+     * <code>uint32 point_id = 9;</code>
      * @return The pointId.
      */
     int getPointId();
 
     /**
-     * <code>uint32 scene_id = 12;</code>
+     * <code>uint32 scene_id = 6;</code>
      * @return The sceneId.
      */
     int getSceneId();
   }
   /**
    * <pre>
-   * CmdId: 2696
-   * Obf: BBGPGHPCHGN
+   * 4.7.0
+   * CmdId: 8012
+   * BHLPGMLLKJK
    * </pre>
    *
    * Protobuf type {@code ExitTransPointRegionNotify}
@@ -75,10 +76,10 @@ public final class ExitTransPointRegionNotifyOuterClass {
               emu.grasscutter.net.proto.ExitTransPointRegionNotifyOuterClass.ExitTransPointRegionNotify.class, emu.grasscutter.net.proto.ExitTransPointRegionNotifyOuterClass.ExitTransPointRegionNotify.Builder.class);
     }
 
-    public static final int POINT_ID_FIELD_NUMBER = 8;
+    public static final int POINT_ID_FIELD_NUMBER = 9;
     private int pointId_;
     /**
-     * <code>uint32 point_id = 8;</code>
+     * <code>uint32 point_id = 9;</code>
      * @return The pointId.
      */
     @java.lang.Override
@@ -86,10 +87,10 @@ public final class ExitTransPointRegionNotifyOuterClass {
       return pointId_;
     }
 
-    public static final int SCENE_ID_FIELD_NUMBER = 12;
+    public static final int SCENE_ID_FIELD_NUMBER = 6;
     private int sceneId_;
     /**
-     * <code>uint32 scene_id = 12;</code>
+     * <code>uint32 scene_id = 6;</code>
      * @return The sceneId.
      */
     @java.lang.Override
@@ -111,11 +112,11 @@ public final class ExitTransPointRegionNotifyOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (pointId_ != 0) {
-        output.writeUInt32(8, pointId_);
-      }
       if (sceneId_ != 0) {
-        output.writeUInt32(12, sceneId_);
+        output.writeUInt32(6, sceneId_);
+      }
+      if (pointId_ != 0) {
+        output.writeUInt32(9, pointId_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -126,13 +127,13 @@ public final class ExitTransPointRegionNotifyOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (pointId_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(8, pointId_);
-      }
       if (sceneId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(12, sceneId_);
+          .computeUInt32Size(6, sceneId_);
+      }
+      if (pointId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(9, pointId_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -265,8 +266,9 @@ public final class ExitTransPointRegionNotifyOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 2696
-     * Obf: BBGPGHPCHGN
+     * 4.7.0
+     * CmdId: 8012
+     * BHLPGMLLKJK
      * </pre>
      *
      * Protobuf type {@code ExitTransPointRegionNotify}
@@ -413,16 +415,16 @@ public final class ExitTransPointRegionNotifyOuterClass {
               case 0:
                 done = true;
                 break;
-              case 64: {
-                pointId_ = input.readUInt32();
-
-                break;
-              } // case 64
-              case 96: {
+              case 48: {
                 sceneId_ = input.readUInt32();
 
                 break;
-              } // case 96
+              } // case 48
+              case 72: {
+                pointId_ = input.readUInt32();
+
+                break;
+              } // case 72
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -441,7 +443,7 @@ public final class ExitTransPointRegionNotifyOuterClass {
 
       private int pointId_ ;
       /**
-       * <code>uint32 point_id = 8;</code>
+       * <code>uint32 point_id = 9;</code>
        * @return The pointId.
        */
       @java.lang.Override
@@ -449,7 +451,7 @@ public final class ExitTransPointRegionNotifyOuterClass {
         return pointId_;
       }
       /**
-       * <code>uint32 point_id = 8;</code>
+       * <code>uint32 point_id = 9;</code>
        * @param value The pointId to set.
        * @return This builder for chaining.
        */
@@ -460,7 +462,7 @@ public final class ExitTransPointRegionNotifyOuterClass {
         return this;
       }
       /**
-       * <code>uint32 point_id = 8;</code>
+       * <code>uint32 point_id = 9;</code>
        * @return This builder for chaining.
        */
       public Builder clearPointId() {
@@ -472,7 +474,7 @@ public final class ExitTransPointRegionNotifyOuterClass {
 
       private int sceneId_ ;
       /**
-       * <code>uint32 scene_id = 12;</code>
+       * <code>uint32 scene_id = 6;</code>
        * @return The sceneId.
        */
       @java.lang.Override
@@ -480,7 +482,7 @@ public final class ExitTransPointRegionNotifyOuterClass {
         return sceneId_;
       }
       /**
-       * <code>uint32 scene_id = 12;</code>
+       * <code>uint32 scene_id = 6;</code>
        * @param value The sceneId to set.
        * @return This builder for chaining.
        */
@@ -491,7 +493,7 @@ public final class ExitTransPointRegionNotifyOuterClass {
         return this;
       }
       /**
-       * <code>uint32 scene_id = 12;</code>
+       * <code>uint32 scene_id = 6;</code>
        * @return This builder for chaining.
        */
       public Builder clearSceneId() {
@@ -579,8 +581,8 @@ public final class ExitTransPointRegionNotifyOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n ExitTransPointRegionNotify.proto\"@\n\032Ex" +
-      "itTransPointRegionNotify\022\020\n\010point_id\030\010 \001" +
-      "(\r\022\020\n\010scene_id\030\014 \001(\rB\033\n\031emu.grasscutter." +
+      "itTransPointRegionNotify\022\020\n\010point_id\030\t \001" +
+      "(\r\022\020\n\010scene_id\030\006 \001(\rB\033\n\031emu.grasscutter." +
       "net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

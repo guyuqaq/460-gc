@@ -19,29 +19,24 @@ public final class SetPlayerSignatureRspOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int32 retcode = 14;</code>
+     * <code>int32 retcode = 6;</code>
      * @return The retcode.
      */
     int getRetcode();
 
     /**
-     * <code>string signature = 8;</code>
+     * <code>string signature = 10;</code>
      * @return The signature.
      */
     java.lang.String getSignature();
     /**
-     * <code>string signature = 8;</code>
+     * <code>string signature = 10;</code>
      * @return The bytes for signature.
      */
     com.google.protobuf.ByteString
         getSignatureBytes();
   }
   /**
-   * <pre>
-   * CmdId: 28588
-   * Obf: GGJIINKCKBA
-   * </pre>
-   *
    * Protobuf type {@code SetPlayerSignatureRsp}
    */
   public static final class SetPlayerSignatureRsp extends
@@ -69,6 +64,54 @@ public final class SetPlayerSignatureRspOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private SetPlayerSignatureRsp(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 48: {
+
+              retcode_ = input.readInt32();
+              break;
+            }
+            case 82: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              signature_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.SetPlayerSignatureRspOuterClass.internal_static_SetPlayerSignatureRsp_descriptor;
@@ -82,10 +125,10 @@ public final class SetPlayerSignatureRspOuterClass {
               emu.grasscutter.net.proto.SetPlayerSignatureRspOuterClass.SetPlayerSignatureRsp.class, emu.grasscutter.net.proto.SetPlayerSignatureRspOuterClass.SetPlayerSignatureRsp.Builder.class);
     }
 
-    public static final int RETCODE_FIELD_NUMBER = 14;
+    public static final int RETCODE_FIELD_NUMBER = 6;
     private int retcode_;
     /**
-     * <code>int32 retcode = 14;</code>
+     * <code>int32 retcode = 6;</code>
      * @return The retcode.
      */
     @java.lang.Override
@@ -93,10 +136,10 @@ public final class SetPlayerSignatureRspOuterClass {
       return retcode_;
     }
 
-    public static final int SIGNATURE_FIELD_NUMBER = 8;
+    public static final int SIGNATURE_FIELD_NUMBER = 10;
     private volatile java.lang.Object signature_;
     /**
-     * <code>string signature = 8;</code>
+     * <code>string signature = 10;</code>
      * @return The signature.
      */
     @java.lang.Override
@@ -113,7 +156,7 @@ public final class SetPlayerSignatureRspOuterClass {
       }
     }
     /**
-     * <code>string signature = 8;</code>
+     * <code>string signature = 10;</code>
      * @return The bytes for signature.
      */
     @java.lang.Override
@@ -145,13 +188,13 @@ public final class SetPlayerSignatureRspOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signature_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, signature_);
-      }
       if (retcode_ != 0) {
-        output.writeInt32(14, retcode_);
+        output.writeInt32(6, retcode_);
       }
-      getUnknownFields().writeTo(output);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signature_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, signature_);
+      }
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -160,14 +203,14 @@ public final class SetPlayerSignatureRspOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signature_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, signature_);
-      }
       if (retcode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(14, retcode_);
+          .computeInt32Size(6, retcode_);
       }
-      size += getUnknownFields().getSerializedSize();
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signature_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, signature_);
+      }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -186,7 +229,7 @@ public final class SetPlayerSignatureRspOuterClass {
           != other.getRetcode()) return false;
       if (!getSignature()
           .equals(other.getSignature())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -201,7 +244,7 @@ public final class SetPlayerSignatureRspOuterClass {
       hash = (53 * hash) + getRetcode();
       hash = (37 * hash) + SIGNATURE_FIELD_NUMBER;
       hash = (53 * hash) + getSignature().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -297,11 +340,6 @@ public final class SetPlayerSignatureRspOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 28588
-     * Obf: GGJIINKCKBA
-     * </pre>
-     *
      * Protobuf type {@code SetPlayerSignatureRsp}
      */
     public static final class Builder extends
@@ -323,13 +361,18 @@ public final class SetPlayerSignatureRspOuterClass {
 
       // Construct using emu.grasscutter.net.proto.SetPlayerSignatureRspOuterClass.SetPlayerSignatureRsp.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -421,7 +464,7 @@ public final class SetPlayerSignatureRspOuterClass {
           signature_ = other.signature_;
           onChanged();
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -436,46 +479,23 @@ public final class SetPlayerSignatureRspOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.SetPlayerSignatureRspOuterClass.SetPlayerSignatureRsp parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 66: {
-                signature_ = input.readStringRequireUtf8();
-
-                break;
-              } // case 66
-              case 112: {
-                retcode_ = input.readInt32();
-
-                break;
-              } // case 112
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.SetPlayerSignatureRspOuterClass.SetPlayerSignatureRsp) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
 
       private int retcode_ ;
       /**
-       * <code>int32 retcode = 14;</code>
+       * <code>int32 retcode = 6;</code>
        * @return The retcode.
        */
       @java.lang.Override
@@ -483,7 +503,7 @@ public final class SetPlayerSignatureRspOuterClass {
         return retcode_;
       }
       /**
-       * <code>int32 retcode = 14;</code>
+       * <code>int32 retcode = 6;</code>
        * @param value The retcode to set.
        * @return This builder for chaining.
        */
@@ -494,7 +514,7 @@ public final class SetPlayerSignatureRspOuterClass {
         return this;
       }
       /**
-       * <code>int32 retcode = 14;</code>
+       * <code>int32 retcode = 6;</code>
        * @return This builder for chaining.
        */
       public Builder clearRetcode() {
@@ -506,7 +526,7 @@ public final class SetPlayerSignatureRspOuterClass {
 
       private java.lang.Object signature_ = "";
       /**
-       * <code>string signature = 8;</code>
+       * <code>string signature = 10;</code>
        * @return The signature.
        */
       public java.lang.String getSignature() {
@@ -522,7 +542,7 @@ public final class SetPlayerSignatureRspOuterClass {
         }
       }
       /**
-       * <code>string signature = 8;</code>
+       * <code>string signature = 10;</code>
        * @return The bytes for signature.
        */
       public com.google.protobuf.ByteString
@@ -539,7 +559,7 @@ public final class SetPlayerSignatureRspOuterClass {
         }
       }
       /**
-       * <code>string signature = 8;</code>
+       * <code>string signature = 10;</code>
        * @param value The signature to set.
        * @return This builder for chaining.
        */
@@ -554,7 +574,7 @@ public final class SetPlayerSignatureRspOuterClass {
         return this;
       }
       /**
-       * <code>string signature = 8;</code>
+       * <code>string signature = 10;</code>
        * @return This builder for chaining.
        */
       public Builder clearSignature() {
@@ -564,7 +584,7 @@ public final class SetPlayerSignatureRspOuterClass {
         return this;
       }
       /**
-       * <code>string signature = 8;</code>
+       * <code>string signature = 10;</code>
        * @param value The bytes for signature to set.
        * @return This builder for chaining.
        */
@@ -612,18 +632,7 @@ public final class SetPlayerSignatureRspOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new SetPlayerSignatureRsp(input, extensionRegistry);
       }
     };
 
@@ -658,8 +667,8 @@ public final class SetPlayerSignatureRspOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\033SetPlayerSignatureRsp.proto\";\n\025SetPlay" +
-      "erSignatureRsp\022\017\n\007retcode\030\016 \001(\005\022\021\n\tsigna" +
-      "ture\030\010 \001(\tB\033\n\031emu.grasscutter.net.protob" +
+      "erSignatureRsp\022\017\n\007retcode\030\006 \001(\005\022\021\n\tsigna" +
+      "ture\030\n \001(\tB\033\n\031emu.grasscutter.net.protob" +
       "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

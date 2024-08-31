@@ -19,15 +19,16 @@ public final class MonsterForceAlertNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 monster_entity_id = 8;</code>
+     * <code>uint32 monster_entity_id = 14;</code>
      * @return The monsterEntityId.
      */
     int getMonsterEntityId();
   }
   /**
    * <pre>
-   * CmdId: 3111
-   * Obf: PKIMGJKJMFE
+   * 4.7.0
+   * CmdId: 5287
+   * Obf: EFNEGOBNLHF
    * </pre>
    *
    * Protobuf type {@code MonsterForceAlertNotify}
@@ -69,10 +70,10 @@ public final class MonsterForceAlertNotifyOuterClass {
               emu.grasscutter.net.proto.MonsterForceAlertNotifyOuterClass.MonsterForceAlertNotify.class, emu.grasscutter.net.proto.MonsterForceAlertNotifyOuterClass.MonsterForceAlertNotify.Builder.class);
     }
 
-    public static final int MONSTER_ENTITY_ID_FIELD_NUMBER = 8;
+    public static final int MONSTER_ENTITY_ID_FIELD_NUMBER = 14;
     private int monsterEntityId_;
     /**
-     * <code>uint32 monster_entity_id = 8;</code>
+     * <code>uint32 monster_entity_id = 14;</code>
      * @return The monsterEntityId.
      */
     @java.lang.Override
@@ -95,7 +96,7 @@ public final class MonsterForceAlertNotifyOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (monsterEntityId_ != 0) {
-        output.writeUInt32(8, monsterEntityId_);
+        output.writeUInt32(14, monsterEntityId_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -108,7 +109,7 @@ public final class MonsterForceAlertNotifyOuterClass {
       size = 0;
       if (monsterEntityId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(8, monsterEntityId_);
+          .computeUInt32Size(14, monsterEntityId_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -237,8 +238,9 @@ public final class MonsterForceAlertNotifyOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 3111
-     * Obf: PKIMGJKJMFE
+     * 4.7.0
+     * CmdId: 5287
+     * Obf: EFNEGOBNLHF
      * </pre>
      *
      * Protobuf type {@code MonsterForceAlertNotify}
@@ -379,11 +381,11 @@ public final class MonsterForceAlertNotifyOuterClass {
               case 0:
                 done = true;
                 break;
-              case 64: {
+              case 112: {
                 monsterEntityId_ = input.readUInt32();
 
                 break;
-              } // case 64
+              } // case 112
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -402,7 +404,7 @@ public final class MonsterForceAlertNotifyOuterClass {
 
       private int monsterEntityId_ ;
       /**
-       * <code>uint32 monster_entity_id = 8;</code>
+       * <code>uint32 monster_entity_id = 14;</code>
        * @return The monsterEntityId.
        */
       @java.lang.Override
@@ -410,7 +412,7 @@ public final class MonsterForceAlertNotifyOuterClass {
         return monsterEntityId_;
       }
       /**
-       * <code>uint32 monster_entity_id = 8;</code>
+       * <code>uint32 monster_entity_id = 14;</code>
        * @param value The monsterEntityId to set.
        * @return This builder for chaining.
        */
@@ -421,7 +423,7 @@ public final class MonsterForceAlertNotifyOuterClass {
         return this;
       }
       /**
-       * <code>uint32 monster_entity_id = 8;</code>
+       * <code>uint32 monster_entity_id = 14;</code>
        * @return This builder for chaining.
        */
       public Builder clearMonsterEntityId() {
@@ -510,7 +512,7 @@ public final class MonsterForceAlertNotifyOuterClass {
     java.lang.String[] descriptorData = {
       "\n\035MonsterForceAlertNotify.proto\"4\n\027Monst" +
       "erForceAlertNotify\022\031\n\021monster_entity_id\030" +
-      "\010 \001(\rB\033\n\031emu.grasscutter.net.protob\006prot" +
+      "\016 \001(\rB\033\n\031emu.grasscutter.net.protob\006prot" +
       "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

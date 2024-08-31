@@ -11,6 +11,7 @@ import java.util.*;
         label = "list",
         aliases = {"players"},
         usage = {"[uid]"},
+		permission = "server.list",
         targetRequirement = Command.TargetRequirement.NONE)
 public final class ListCommand implements CommandHandler {
 

@@ -19,7 +19,7 @@ public final class TakeInvestigationTargetRewardRspOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 quest_id = 7;</code>
+     * <code>uint32 quest_id = 10;</code>
      * @return The questId.
      */
     int getQuestId();
@@ -32,8 +32,9 @@ public final class TakeInvestigationTargetRewardRspOuterClass {
   }
   /**
    * <pre>
-   * CmdId: 1562
-   * Obf: NNNEAKIELHD
+   * 4.7.0
+   * CmdId: 25452
+   * Obf: EBFMICFMNEN
    * </pre>
    *
    * Protobuf type {@code TakeInvestigationTargetRewardRsp}
@@ -75,10 +76,10 @@ public final class TakeInvestigationTargetRewardRspOuterClass {
               emu.grasscutter.net.proto.TakeInvestigationTargetRewardRspOuterClass.TakeInvestigationTargetRewardRsp.class, emu.grasscutter.net.proto.TakeInvestigationTargetRewardRspOuterClass.TakeInvestigationTargetRewardRsp.Builder.class);
     }
 
-    public static final int QUEST_ID_FIELD_NUMBER = 7;
+    public static final int QUEST_ID_FIELD_NUMBER = 10;
     private int questId_;
     /**
-     * <code>uint32 quest_id = 7;</code>
+     * <code>uint32 quest_id = 10;</code>
      * @return The questId.
      */
     @java.lang.Override
@@ -112,7 +113,7 @@ public final class TakeInvestigationTargetRewardRspOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (questId_ != 0) {
-        output.writeUInt32(7, questId_);
+        output.writeUInt32(10, questId_);
       }
       if (retcode_ != 0) {
         output.writeInt32(15, retcode_);
@@ -128,7 +129,7 @@ public final class TakeInvestigationTargetRewardRspOuterClass {
       size = 0;
       if (questId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(7, questId_);
+          .computeUInt32Size(10, questId_);
       }
       if (retcode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -265,8 +266,9 @@ public final class TakeInvestigationTargetRewardRspOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 1562
-     * Obf: NNNEAKIELHD
+     * 4.7.0
+     * CmdId: 25452
+     * Obf: EBFMICFMNEN
      * </pre>
      *
      * Protobuf type {@code TakeInvestigationTargetRewardRsp}
@@ -413,11 +415,11 @@ public final class TakeInvestigationTargetRewardRspOuterClass {
               case 0:
                 done = true;
                 break;
-              case 56: {
+              case 80: {
                 questId_ = input.readUInt32();
 
                 break;
-              } // case 56
+              } // case 80
               case 120: {
                 retcode_ = input.readInt32();
 
@@ -441,7 +443,7 @@ public final class TakeInvestigationTargetRewardRspOuterClass {
 
       private int questId_ ;
       /**
-       * <code>uint32 quest_id = 7;</code>
+       * <code>uint32 quest_id = 10;</code>
        * @return The questId.
        */
       @java.lang.Override
@@ -449,7 +451,7 @@ public final class TakeInvestigationTargetRewardRspOuterClass {
         return questId_;
       }
       /**
-       * <code>uint32 quest_id = 7;</code>
+       * <code>uint32 quest_id = 10;</code>
        * @param value The questId to set.
        * @return This builder for chaining.
        */
@@ -460,7 +462,7 @@ public final class TakeInvestigationTargetRewardRspOuterClass {
         return this;
       }
       /**
-       * <code>uint32 quest_id = 7;</code>
+       * <code>uint32 quest_id = 10;</code>
        * @return This builder for chaining.
        */
       public Builder clearQuestId() {
@@ -580,7 +582,7 @@ public final class TakeInvestigationTargetRewardRspOuterClass {
     java.lang.String[] descriptorData = {
       "\n&TakeInvestigationTargetRewardRsp.proto" +
       "\"E\n TakeInvestigationTargetRewardRsp\022\020\n\010" +
-      "quest_id\030\007 \001(\r\022\017\n\007retcode\030\017 \001(\005B\033\n\031emu.g" +
+      "quest_id\030\n \001(\r\022\017\n\007retcode\030\017 \001(\005B\033\n\031emu.g" +
       "rasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

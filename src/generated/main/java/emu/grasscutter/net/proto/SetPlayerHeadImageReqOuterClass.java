@@ -19,15 +19,14 @@ public final class SetPlayerHeadImageReqOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 avatar_id = 7;</code>
-     * @return The avatarId.
+     * <code>uint32 head_image_id = 9;</code>
+     * @return The headImageId.
      */
-    int getAvatarId();
+    int getHeadImageId();
   }
   /**
    * <pre>
-   * CmdId: 4071
-   * Obf: PDIPMMGDOGN
+   * CmdId: 21526
    * </pre>
    *
    * Protobuf type {@code SetPlayerHeadImageReq}
@@ -56,6 +55,48 @@ public final class SetPlayerHeadImageReqOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private SetPlayerHeadImageReq(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 72: {
+
+              headImageId_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.SetPlayerHeadImageReqOuterClass.internal_static_SetPlayerHeadImageReq_descriptor;
@@ -69,15 +110,15 @@ public final class SetPlayerHeadImageReqOuterClass {
               emu.grasscutter.net.proto.SetPlayerHeadImageReqOuterClass.SetPlayerHeadImageReq.class, emu.grasscutter.net.proto.SetPlayerHeadImageReqOuterClass.SetPlayerHeadImageReq.Builder.class);
     }
 
-    public static final int AVATAR_ID_FIELD_NUMBER = 7;
-    private int avatarId_;
+    public static final int HEAD_IMAGE_ID_FIELD_NUMBER = 9;
+    private int headImageId_;
     /**
-     * <code>uint32 avatar_id = 7;</code>
-     * @return The avatarId.
+     * <code>uint32 head_image_id = 9;</code>
+     * @return The headImageId.
      */
     @java.lang.Override
-    public int getAvatarId() {
-      return avatarId_;
+    public int getHeadImageId() {
+      return headImageId_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -94,10 +135,10 @@ public final class SetPlayerHeadImageReqOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (avatarId_ != 0) {
-        output.writeUInt32(7, avatarId_);
+      if (headImageId_ != 0) {
+        output.writeUInt32(9, headImageId_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -106,11 +147,11 @@ public final class SetPlayerHeadImageReqOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (avatarId_ != 0) {
+      if (headImageId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(7, avatarId_);
+          .computeUInt32Size(9, headImageId_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -125,9 +166,9 @@ public final class SetPlayerHeadImageReqOuterClass {
       }
       emu.grasscutter.net.proto.SetPlayerHeadImageReqOuterClass.SetPlayerHeadImageReq other = (emu.grasscutter.net.proto.SetPlayerHeadImageReqOuterClass.SetPlayerHeadImageReq) obj;
 
-      if (getAvatarId()
-          != other.getAvatarId()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (getHeadImageId()
+          != other.getHeadImageId()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -138,9 +179,9 @@ public final class SetPlayerHeadImageReqOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + AVATAR_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getAvatarId();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (37 * hash) + HEAD_IMAGE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getHeadImageId();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -237,8 +278,7 @@ public final class SetPlayerHeadImageReqOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 4071
-     * Obf: PDIPMMGDOGN
+     * CmdId: 21526
      * </pre>
      *
      * Protobuf type {@code SetPlayerHeadImageReq}
@@ -262,18 +302,23 @@ public final class SetPlayerHeadImageReqOuterClass {
 
       // Construct using emu.grasscutter.net.proto.SetPlayerHeadImageReqOuterClass.SetPlayerHeadImageReq.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        avatarId_ = 0;
+        headImageId_ = 0;
 
         return this;
       }
@@ -301,7 +346,7 @@ public final class SetPlayerHeadImageReqOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.SetPlayerHeadImageReqOuterClass.SetPlayerHeadImageReq buildPartial() {
         emu.grasscutter.net.proto.SetPlayerHeadImageReqOuterClass.SetPlayerHeadImageReq result = new emu.grasscutter.net.proto.SetPlayerHeadImageReqOuterClass.SetPlayerHeadImageReq(this);
-        result.avatarId_ = avatarId_;
+        result.headImageId_ = headImageId_;
         onBuilt();
         return result;
       }
@@ -350,10 +395,10 @@ public final class SetPlayerHeadImageReqOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.SetPlayerHeadImageReqOuterClass.SetPlayerHeadImageReq other) {
         if (other == emu.grasscutter.net.proto.SetPlayerHeadImageReqOuterClass.SetPlayerHeadImageReq.getDefaultInstance()) return this;
-        if (other.getAvatarId() != 0) {
-          setAvatarId(other.getAvatarId());
+        if (other.getHeadImageId() != 0) {
+          setHeadImageId(other.getHeadImageId());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -368,65 +413,47 @@ public final class SetPlayerHeadImageReqOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.SetPlayerHeadImageReqOuterClass.SetPlayerHeadImageReq parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 56: {
-                avatarId_ = input.readUInt32();
-
-                break;
-              } // case 56
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.SetPlayerHeadImageReqOuterClass.SetPlayerHeadImageReq) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
 
-      private int avatarId_ ;
+      private int headImageId_ ;
       /**
-       * <code>uint32 avatar_id = 7;</code>
-       * @return The avatarId.
+       * <code>uint32 head_image_id = 9;</code>
+       * @return The headImageId.
        */
       @java.lang.Override
-      public int getAvatarId() {
-        return avatarId_;
+      public int getHeadImageId() {
+        return headImageId_;
       }
       /**
-       * <code>uint32 avatar_id = 7;</code>
-       * @param value The avatarId to set.
+       * <code>uint32 head_image_id = 9;</code>
+       * @param value The headImageId to set.
        * @return This builder for chaining.
        */
-      public Builder setAvatarId(int value) {
+      public Builder setHeadImageId(int value) {
         
-        avatarId_ = value;
+        headImageId_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 avatar_id = 7;</code>
+       * <code>uint32 head_image_id = 9;</code>
        * @return This builder for chaining.
        */
-      public Builder clearAvatarId() {
+      public Builder clearHeadImageId() {
         
-        avatarId_ = 0;
+        headImageId_ = 0;
         onChanged();
         return this;
       }
@@ -463,18 +490,7 @@ public final class SetPlayerHeadImageReqOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new SetPlayerHeadImageReq(input, extensionRegistry);
       }
     };
 
@@ -508,9 +524,9 @@ public final class SetPlayerHeadImageReqOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\033SetPlayerHeadImageReq.proto\"*\n\025SetPlay" +
-      "erHeadImageReq\022\021\n\tavatar_id\030\007 \001(\rB\033\n\031emu" +
-      ".grasscutter.net.protob\006proto3"
+      "\n\033SetPlayerHeadImageReq.proto\".\n\025SetPlay" +
+      "erHeadImageReq\022\025\n\rhead_image_id\030\t \001(\rB\033\n" +
+      "\031emu.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -521,7 +537,7 @@ public final class SetPlayerHeadImageReqOuterClass {
     internal_static_SetPlayerHeadImageReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_SetPlayerHeadImageReq_descriptor,
-        new java.lang.String[] { "AvatarId", });
+        new java.lang.String[] { "HeadImageId", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

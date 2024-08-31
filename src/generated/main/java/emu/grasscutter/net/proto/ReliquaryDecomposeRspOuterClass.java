@@ -19,32 +19,37 @@ public final class ReliquaryDecomposeRspOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated uint64 guid_list = 9;</code>
+     * <code>repeated uint64 guid_list = 2;</code>
      * @return A list containing the guidList.
      */
     java.util.List<java.lang.Long> getGuidListList();
     /**
-     * <code>repeated uint64 guid_list = 9;</code>
+     * <code>repeated uint64 guid_list = 2;</code>
      * @return The count of guidList.
      */
     int getGuidListCount();
     /**
-     * <code>repeated uint64 guid_list = 9;</code>
+     * <code>repeated uint64 guid_list = 2;</code>
      * @param index The index of the element to return.
      * @return The guidList at the given index.
      */
     long getGuidList(int index);
 
     /**
-     * <code>int32 retcode = 2;</code>
+     * <pre>
+     * ok
+     * </pre>
+     *
+     * <code>int32 retcode = 15;</code>
      * @return The retcode.
      */
     int getRetcode();
   }
   /**
    * <pre>
-   * CmdId: 5943
-   * Obf: AGGLLEHOPED
+   * 4.7.0
+   * CmdId: 8148
+   * HCLMCPMJLHA
    * </pre>
    *
    * Protobuf type {@code ReliquaryDecomposeRsp}
@@ -87,10 +92,10 @@ public final class ReliquaryDecomposeRspOuterClass {
               emu.grasscutter.net.proto.ReliquaryDecomposeRspOuterClass.ReliquaryDecomposeRsp.class, emu.grasscutter.net.proto.ReliquaryDecomposeRspOuterClass.ReliquaryDecomposeRsp.Builder.class);
     }
 
-    public static final int GUID_LIST_FIELD_NUMBER = 9;
+    public static final int GUID_LIST_FIELD_NUMBER = 2;
     private com.google.protobuf.Internal.LongList guidList_;
     /**
-     * <code>repeated uint64 guid_list = 9;</code>
+     * <code>repeated uint64 guid_list = 2;</code>
      * @return A list containing the guidList.
      */
     @java.lang.Override
@@ -99,14 +104,14 @@ public final class ReliquaryDecomposeRspOuterClass {
       return guidList_;
     }
     /**
-     * <code>repeated uint64 guid_list = 9;</code>
+     * <code>repeated uint64 guid_list = 2;</code>
      * @return The count of guidList.
      */
     public int getGuidListCount() {
       return guidList_.size();
     }
     /**
-     * <code>repeated uint64 guid_list = 9;</code>
+     * <code>repeated uint64 guid_list = 2;</code>
      * @param index The index of the element to return.
      * @return The guidList at the given index.
      */
@@ -115,10 +120,14 @@ public final class ReliquaryDecomposeRspOuterClass {
     }
     private int guidListMemoizedSerializedSize = -1;
 
-    public static final int RETCODE_FIELD_NUMBER = 2;
+    public static final int RETCODE_FIELD_NUMBER = 15;
     private int retcode_;
     /**
-     * <code>int32 retcode = 2;</code>
+     * <pre>
+     * ok
+     * </pre>
+     *
+     * <code>int32 retcode = 15;</code>
      * @return The retcode.
      */
     @java.lang.Override
@@ -141,15 +150,15 @@ public final class ReliquaryDecomposeRspOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
-      if (retcode_ != 0) {
-        output.writeInt32(2, retcode_);
-      }
       if (getGuidListList().size() > 0) {
-        output.writeUInt32NoTag(74);
+        output.writeUInt32NoTag(18);
         output.writeUInt32NoTag(guidListMemoizedSerializedSize);
       }
       for (int i = 0; i < guidList_.size(); i++) {
         output.writeUInt64NoTag(guidList_.getLong(i));
+      }
+      if (retcode_ != 0) {
+        output.writeInt32(15, retcode_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -160,10 +169,6 @@ public final class ReliquaryDecomposeRspOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (retcode_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(2, retcode_);
-      }
       {
         int dataSize = 0;
         for (int i = 0; i < guidList_.size(); i++) {
@@ -177,6 +182,10 @@ public final class ReliquaryDecomposeRspOuterClass {
               .computeInt32SizeNoTag(dataSize);
         }
         guidListMemoizedSerializedSize = dataSize;
+      }
+      if (retcode_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(15, retcode_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -311,8 +320,9 @@ public final class ReliquaryDecomposeRspOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 5943
-     * Obf: AGGLLEHOPED
+     * 4.7.0
+     * CmdId: 8148
+     * HCLMCPMJLHA
      * </pre>
      *
      * Protobuf type {@code ReliquaryDecomposeRsp}
@@ -472,17 +482,12 @@ public final class ReliquaryDecomposeRspOuterClass {
                 done = true;
                 break;
               case 16: {
-                retcode_ = input.readInt32();
-
-                break;
-              } // case 16
-              case 72: {
                 long v = input.readUInt64();
                 ensureGuidListIsMutable();
                 guidList_.addLong(v);
                 break;
-              } // case 72
-              case 74: {
+              } // case 16
+              case 18: {
                 int length = input.readRawVarint32();
                 int limit = input.pushLimit(length);
                 ensureGuidListIsMutable();
@@ -491,7 +496,12 @@ public final class ReliquaryDecomposeRspOuterClass {
                 }
                 input.popLimit(limit);
                 break;
-              } // case 74
+              } // case 18
+              case 120: {
+                retcode_ = input.readInt32();
+
+                break;
+              } // case 120
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -517,7 +527,7 @@ public final class ReliquaryDecomposeRspOuterClass {
          }
       }
       /**
-       * <code>repeated uint64 guid_list = 9;</code>
+       * <code>repeated uint64 guid_list = 2;</code>
        * @return A list containing the guidList.
        */
       public java.util.List<java.lang.Long>
@@ -526,14 +536,14 @@ public final class ReliquaryDecomposeRspOuterClass {
                  java.util.Collections.unmodifiableList(guidList_) : guidList_;
       }
       /**
-       * <code>repeated uint64 guid_list = 9;</code>
+       * <code>repeated uint64 guid_list = 2;</code>
        * @return The count of guidList.
        */
       public int getGuidListCount() {
         return guidList_.size();
       }
       /**
-       * <code>repeated uint64 guid_list = 9;</code>
+       * <code>repeated uint64 guid_list = 2;</code>
        * @param index The index of the element to return.
        * @return The guidList at the given index.
        */
@@ -541,7 +551,7 @@ public final class ReliquaryDecomposeRspOuterClass {
         return guidList_.getLong(index);
       }
       /**
-       * <code>repeated uint64 guid_list = 9;</code>
+       * <code>repeated uint64 guid_list = 2;</code>
        * @param index The index to set the value at.
        * @param value The guidList to set.
        * @return This builder for chaining.
@@ -554,7 +564,7 @@ public final class ReliquaryDecomposeRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint64 guid_list = 9;</code>
+       * <code>repeated uint64 guid_list = 2;</code>
        * @param value The guidList to add.
        * @return This builder for chaining.
        */
@@ -565,7 +575,7 @@ public final class ReliquaryDecomposeRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint64 guid_list = 9;</code>
+       * <code>repeated uint64 guid_list = 2;</code>
        * @param values The guidList to add.
        * @return This builder for chaining.
        */
@@ -578,7 +588,7 @@ public final class ReliquaryDecomposeRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint64 guid_list = 9;</code>
+       * <code>repeated uint64 guid_list = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearGuidList() {
@@ -590,7 +600,11 @@ public final class ReliquaryDecomposeRspOuterClass {
 
       private int retcode_ ;
       /**
-       * <code>int32 retcode = 2;</code>
+       * <pre>
+       * ok
+       * </pre>
+       *
+       * <code>int32 retcode = 15;</code>
        * @return The retcode.
        */
       @java.lang.Override
@@ -598,7 +612,11 @@ public final class ReliquaryDecomposeRspOuterClass {
         return retcode_;
       }
       /**
-       * <code>int32 retcode = 2;</code>
+       * <pre>
+       * ok
+       * </pre>
+       *
+       * <code>int32 retcode = 15;</code>
        * @param value The retcode to set.
        * @return This builder for chaining.
        */
@@ -609,7 +627,11 @@ public final class ReliquaryDecomposeRspOuterClass {
         return this;
       }
       /**
-       * <code>int32 retcode = 2;</code>
+       * <pre>
+       * ok
+       * </pre>
+       *
+       * <code>int32 retcode = 15;</code>
        * @return This builder for chaining.
        */
       public Builder clearRetcode() {
@@ -697,8 +719,8 @@ public final class ReliquaryDecomposeRspOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\033ReliquaryDecomposeRsp.proto\";\n\025Reliqua" +
-      "ryDecomposeRsp\022\021\n\tguid_list\030\t \003(\004\022\017\n\007ret" +
-      "code\030\002 \001(\005B\033\n\031emu.grasscutter.net.protob" +
+      "ryDecomposeRsp\022\021\n\tguid_list\030\002 \003(\004\022\017\n\007ret" +
+      "code\030\017 \001(\005B\033\n\031emu.grasscutter.net.protob" +
       "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

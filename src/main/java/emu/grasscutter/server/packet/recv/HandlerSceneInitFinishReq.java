@@ -20,6 +20,13 @@ public class HandlerSceneInitFinishReq extends PacketHandler {
         session.send(new PacketPlayerWorldSceneInfoListNotify(player));
         session.send(new BasePacket(PacketOpcodes.SceneForceUnlockNotify));
         session.send(new PacketHostPlayerNotify(world));
+        session.send(new PacketSceneDataNotify(player)); // SEND levelEntityConfigName
+
+        // If player inDungeon, send Dungeon relate packets
+        if (player.getScene().getDungeonManager() != null) {
+            session.send(new BasePacket(PacketOpcodes.DungeonWayPointNotify)); // TODO: add base already unlocked waypoints?
+        }
+        session.send(new PacketDungeonDataNotify(player)); // SEND levelEntityConfigId
 
         session.send(new PacketSceneTimeNotify(player));
         session.send(new PacketPlayerGameTimeNotify(player));
@@ -33,7 +40,10 @@ public class HandlerSceneInitFinishReq extends PacketHandler {
 
         // Done Packet
         session.send(new PacketSceneInitFinishRsp(player));
-
+		//session.send((BasePacket)new PacketWindSeedUID());
+		
+		// Reset the spwaned entities count
+		player.resetSpawnedEntitiesCount();
         // Set scene load state.
         player.setSceneLoadState(SceneLoadState.INIT);
         // Run scene initialization.

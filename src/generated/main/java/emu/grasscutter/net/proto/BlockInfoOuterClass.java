@@ -25,28 +25,24 @@ public final class BlockInfoOuterClass {
     int getBlockId();
 
     /**
-     * <code>uint32 data_version = 2;</code>
-     * @return The dataVersion.
+     * <code>uint32 GFKFJJOADMH = 2;</code>
+     * @return The gFKFJJOADMH.
      */
-    int getDataVersion();
+    int getGFKFJJOADMH();
 
     /**
-     * <code>bytes bin_data = 3;</code>
-     * @return The binData.
+     * <code>bytes NEHMEMLKIPP = 3;</code>
+     * @return The nEHMEMLKIPP.
      */
-    com.google.protobuf.ByteString getBinData();
+    com.google.protobuf.ByteString getNEHMEMLKIPP();
 
     /**
-     * <code>bool is_dirty = 4;</code>
-     * @return The isDirty.
+     * <code>bool GLAFBCFFAEG = 4;</code>
+     * @return The gLAFBCFFAEG.
      */
-    boolean getIsDirty();
+    boolean getGLAFBCFFAEG();
   }
   /**
-   * <pre>
-   * Obf: EGHIPFGJCJG
-   * </pre>
-   *
    * Protobuf type {@code BlockInfo}
    */
   public static final class BlockInfo extends
@@ -59,7 +55,7 @@ public final class BlockInfoOuterClass {
       super(builder);
     }
     private BlockInfo() {
-      binData_ = com.google.protobuf.ByteString.EMPTY;
+      nEHMEMLKIPP_ = com.google.protobuf.ByteString.EMPTY;
     }
 
     @java.lang.Override
@@ -73,6 +69,63 @@ public final class BlockInfoOuterClass {
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
+    }
+    private BlockInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              blockId_ = input.readUInt32();
+              break;
+            }
+            case 16: {
+
+              gFKFJJOADMH_ = input.readUInt32();
+              break;
+            }
+            case 26: {
+
+              nEHMEMLKIPP_ = input.readBytes();
+              break;
+            }
+            case 32: {
+
+              gLAFBCFFAEG_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -98,37 +151,37 @@ public final class BlockInfoOuterClass {
       return blockId_;
     }
 
-    public static final int DATA_VERSION_FIELD_NUMBER = 2;
-    private int dataVersion_;
+    public static final int GFKFJJOADMH_FIELD_NUMBER = 2;
+    private int gFKFJJOADMH_;
     /**
-     * <code>uint32 data_version = 2;</code>
-     * @return The dataVersion.
+     * <code>uint32 GFKFJJOADMH = 2;</code>
+     * @return The gFKFJJOADMH.
      */
     @java.lang.Override
-    public int getDataVersion() {
-      return dataVersion_;
+    public int getGFKFJJOADMH() {
+      return gFKFJJOADMH_;
     }
 
-    public static final int BIN_DATA_FIELD_NUMBER = 3;
-    private com.google.protobuf.ByteString binData_;
+    public static final int NEHMEMLKIPP_FIELD_NUMBER = 3;
+    private com.google.protobuf.ByteString nEHMEMLKIPP_;
     /**
-     * <code>bytes bin_data = 3;</code>
-     * @return The binData.
+     * <code>bytes NEHMEMLKIPP = 3;</code>
+     * @return The nEHMEMLKIPP.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString getBinData() {
-      return binData_;
+    public com.google.protobuf.ByteString getNEHMEMLKIPP() {
+      return nEHMEMLKIPP_;
     }
 
-    public static final int IS_DIRTY_FIELD_NUMBER = 4;
-    private boolean isDirty_;
+    public static final int GLAFBCFFAEG_FIELD_NUMBER = 4;
+    private boolean gLAFBCFFAEG_;
     /**
-     * <code>bool is_dirty = 4;</code>
-     * @return The isDirty.
+     * <code>bool GLAFBCFFAEG = 4;</code>
+     * @return The gLAFBCFFAEG.
      */
     @java.lang.Override
-    public boolean getIsDirty() {
-      return isDirty_;
+    public boolean getGLAFBCFFAEG() {
+      return gLAFBCFFAEG_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -148,16 +201,16 @@ public final class BlockInfoOuterClass {
       if (blockId_ != 0) {
         output.writeUInt32(1, blockId_);
       }
-      if (dataVersion_ != 0) {
-        output.writeUInt32(2, dataVersion_);
+      if (gFKFJJOADMH_ != 0) {
+        output.writeUInt32(2, gFKFJJOADMH_);
       }
-      if (!binData_.isEmpty()) {
-        output.writeBytes(3, binData_);
+      if (!nEHMEMLKIPP_.isEmpty()) {
+        output.writeBytes(3, nEHMEMLKIPP_);
       }
-      if (isDirty_ != false) {
-        output.writeBool(4, isDirty_);
+      if (gLAFBCFFAEG_ != false) {
+        output.writeBool(4, gLAFBCFFAEG_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -170,19 +223,19 @@ public final class BlockInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(1, blockId_);
       }
-      if (dataVersion_ != 0) {
+      if (gFKFJJOADMH_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(2, dataVersion_);
+          .computeUInt32Size(2, gFKFJJOADMH_);
       }
-      if (!binData_.isEmpty()) {
+      if (!nEHMEMLKIPP_.isEmpty()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(3, binData_);
+          .computeBytesSize(3, nEHMEMLKIPP_);
       }
-      if (isDirty_ != false) {
+      if (gLAFBCFFAEG_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(4, isDirty_);
+          .computeBoolSize(4, gLAFBCFFAEG_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -199,13 +252,13 @@ public final class BlockInfoOuterClass {
 
       if (getBlockId()
           != other.getBlockId()) return false;
-      if (getDataVersion()
-          != other.getDataVersion()) return false;
-      if (!getBinData()
-          .equals(other.getBinData())) return false;
-      if (getIsDirty()
-          != other.getIsDirty()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (getGFKFJJOADMH()
+          != other.getGFKFJJOADMH()) return false;
+      if (!getNEHMEMLKIPP()
+          .equals(other.getNEHMEMLKIPP())) return false;
+      if (getGLAFBCFFAEG()
+          != other.getGLAFBCFFAEG()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -218,14 +271,14 @@ public final class BlockInfoOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + BLOCK_ID_FIELD_NUMBER;
       hash = (53 * hash) + getBlockId();
-      hash = (37 * hash) + DATA_VERSION_FIELD_NUMBER;
-      hash = (53 * hash) + getDataVersion();
-      hash = (37 * hash) + BIN_DATA_FIELD_NUMBER;
-      hash = (53 * hash) + getBinData().hashCode();
-      hash = (37 * hash) + IS_DIRTY_FIELD_NUMBER;
+      hash = (37 * hash) + GFKFJJOADMH_FIELD_NUMBER;
+      hash = (53 * hash) + getGFKFJJOADMH();
+      hash = (37 * hash) + NEHMEMLKIPP_FIELD_NUMBER;
+      hash = (53 * hash) + getNEHMEMLKIPP().hashCode();
+      hash = (37 * hash) + GLAFBCFFAEG_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getIsDirty());
-      hash = (29 * hash) + getUnknownFields().hashCode();
+          getGLAFBCFFAEG());
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -321,10 +374,6 @@ public final class BlockInfoOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * Obf: EGHIPFGJCJG
-     * </pre>
-     *
      * Protobuf type {@code BlockInfo}
      */
     public static final class Builder extends
@@ -346,24 +395,29 @@ public final class BlockInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.BlockInfoOuterClass.BlockInfo.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
         blockId_ = 0;
 
-        dataVersion_ = 0;
+        gFKFJJOADMH_ = 0;
 
-        binData_ = com.google.protobuf.ByteString.EMPTY;
+        nEHMEMLKIPP_ = com.google.protobuf.ByteString.EMPTY;
 
-        isDirty_ = false;
+        gLAFBCFFAEG_ = false;
 
         return this;
       }
@@ -392,9 +446,9 @@ public final class BlockInfoOuterClass {
       public emu.grasscutter.net.proto.BlockInfoOuterClass.BlockInfo buildPartial() {
         emu.grasscutter.net.proto.BlockInfoOuterClass.BlockInfo result = new emu.grasscutter.net.proto.BlockInfoOuterClass.BlockInfo(this);
         result.blockId_ = blockId_;
-        result.dataVersion_ = dataVersion_;
-        result.binData_ = binData_;
-        result.isDirty_ = isDirty_;
+        result.gFKFJJOADMH_ = gFKFJJOADMH_;
+        result.nEHMEMLKIPP_ = nEHMEMLKIPP_;
+        result.gLAFBCFFAEG_ = gLAFBCFFAEG_;
         onBuilt();
         return result;
       }
@@ -446,16 +500,16 @@ public final class BlockInfoOuterClass {
         if (other.getBlockId() != 0) {
           setBlockId(other.getBlockId());
         }
-        if (other.getDataVersion() != 0) {
-          setDataVersion(other.getDataVersion());
+        if (other.getGFKFJJOADMH() != 0) {
+          setGFKFJJOADMH(other.getGFKFJJOADMH());
         }
-        if (other.getBinData() != com.google.protobuf.ByteString.EMPTY) {
-          setBinData(other.getBinData());
+        if (other.getNEHMEMLKIPP() != com.google.protobuf.ByteString.EMPTY) {
+          setNEHMEMLKIPP(other.getNEHMEMLKIPP());
         }
-        if (other.getIsDirty() != false) {
-          setIsDirty(other.getIsDirty());
+        if (other.getGLAFBCFFAEG() != false) {
+          setGLAFBCFFAEG(other.getGLAFBCFFAEG());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -470,50 +524,17 @@ public final class BlockInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.BlockInfoOuterClass.BlockInfo parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                blockId_ = input.readUInt32();
-
-                break;
-              } // case 8
-              case 16: {
-                dataVersion_ = input.readUInt32();
-
-                break;
-              } // case 16
-              case 26: {
-                binData_ = input.readBytes();
-
-                break;
-              } // case 26
-              case 32: {
-                isDirty_ = input.readBool();
-
-                break;
-              } // case 32
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.BlockInfoOuterClass.BlockInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
 
@@ -548,98 +569,98 @@ public final class BlockInfoOuterClass {
         return this;
       }
 
-      private int dataVersion_ ;
+      private int gFKFJJOADMH_ ;
       /**
-       * <code>uint32 data_version = 2;</code>
-       * @return The dataVersion.
+       * <code>uint32 GFKFJJOADMH = 2;</code>
+       * @return The gFKFJJOADMH.
        */
       @java.lang.Override
-      public int getDataVersion() {
-        return dataVersion_;
+      public int getGFKFJJOADMH() {
+        return gFKFJJOADMH_;
       }
       /**
-       * <code>uint32 data_version = 2;</code>
-       * @param value The dataVersion to set.
+       * <code>uint32 GFKFJJOADMH = 2;</code>
+       * @param value The gFKFJJOADMH to set.
        * @return This builder for chaining.
        */
-      public Builder setDataVersion(int value) {
+      public Builder setGFKFJJOADMH(int value) {
         
-        dataVersion_ = value;
+        gFKFJJOADMH_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 data_version = 2;</code>
+       * <code>uint32 GFKFJJOADMH = 2;</code>
        * @return This builder for chaining.
        */
-      public Builder clearDataVersion() {
+      public Builder clearGFKFJJOADMH() {
         
-        dataVersion_ = 0;
+        gFKFJJOADMH_ = 0;
         onChanged();
         return this;
       }
 
-      private com.google.protobuf.ByteString binData_ = com.google.protobuf.ByteString.EMPTY;
+      private com.google.protobuf.ByteString nEHMEMLKIPP_ = com.google.protobuf.ByteString.EMPTY;
       /**
-       * <code>bytes bin_data = 3;</code>
-       * @return The binData.
+       * <code>bytes NEHMEMLKIPP = 3;</code>
+       * @return The nEHMEMLKIPP.
        */
       @java.lang.Override
-      public com.google.protobuf.ByteString getBinData() {
-        return binData_;
+      public com.google.protobuf.ByteString getNEHMEMLKIPP() {
+        return nEHMEMLKIPP_;
       }
       /**
-       * <code>bytes bin_data = 3;</code>
-       * @param value The binData to set.
+       * <code>bytes NEHMEMLKIPP = 3;</code>
+       * @param value The nEHMEMLKIPP to set.
        * @return This builder for chaining.
        */
-      public Builder setBinData(com.google.protobuf.ByteString value) {
+      public Builder setNEHMEMLKIPP(com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        binData_ = value;
+        nEHMEMLKIPP_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>bytes bin_data = 3;</code>
+       * <code>bytes NEHMEMLKIPP = 3;</code>
        * @return This builder for chaining.
        */
-      public Builder clearBinData() {
+      public Builder clearNEHMEMLKIPP() {
         
-        binData_ = getDefaultInstance().getBinData();
+        nEHMEMLKIPP_ = getDefaultInstance().getNEHMEMLKIPP();
         onChanged();
         return this;
       }
 
-      private boolean isDirty_ ;
+      private boolean gLAFBCFFAEG_ ;
       /**
-       * <code>bool is_dirty = 4;</code>
-       * @return The isDirty.
+       * <code>bool GLAFBCFFAEG = 4;</code>
+       * @return The gLAFBCFFAEG.
        */
       @java.lang.Override
-      public boolean getIsDirty() {
-        return isDirty_;
+      public boolean getGLAFBCFFAEG() {
+        return gLAFBCFFAEG_;
       }
       /**
-       * <code>bool is_dirty = 4;</code>
-       * @param value The isDirty to set.
+       * <code>bool GLAFBCFFAEG = 4;</code>
+       * @param value The gLAFBCFFAEG to set.
        * @return This builder for chaining.
        */
-      public Builder setIsDirty(boolean value) {
+      public Builder setGLAFBCFFAEG(boolean value) {
         
-        isDirty_ = value;
+        gLAFBCFFAEG_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>bool is_dirty = 4;</code>
+       * <code>bool GLAFBCFFAEG = 4;</code>
        * @return This builder for chaining.
        */
-      public Builder clearIsDirty() {
+      public Builder clearGLAFBCFFAEG() {
         
-        isDirty_ = false;
+        gLAFBCFFAEG_ = false;
         onChanged();
         return this;
       }
@@ -676,18 +697,7 @@ public final class BlockInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new BlockInfo(input, extensionRegistry);
       }
     };
 
@@ -721,10 +731,10 @@ public final class BlockInfoOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\017BlockInfo.proto\"W\n\tBlockInfo\022\020\n\010block_" +
-      "id\030\001 \001(\r\022\024\n\014data_version\030\002 \001(\r\022\020\n\010bin_da" +
-      "ta\030\003 \001(\014\022\020\n\010is_dirty\030\004 \001(\010B\033\n\031emu.grassc" +
-      "utter.net.protob\006proto3"
+      "\n\017BlockInfo.proto\"\\\n\tBlockInfo\022\020\n\010block_" +
+      "id\030\001 \001(\r\022\023\n\013GFKFJJOADMH\030\002 \001(\r\022\023\n\013NEHMEML" +
+      "KIPP\030\003 \001(\014\022\023\n\013GLAFBCFFAEG\030\004 \001(\010B\033\n\031emu.g" +
+      "rasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -735,7 +745,7 @@ public final class BlockInfoOuterClass {
     internal_static_BlockInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_BlockInfo_descriptor,
-        new java.lang.String[] { "BlockId", "DataVersion", "BinData", "IsDirty", });
+        new java.lang.String[] { "BlockId", "GFKFJJOADMH", "NEHMEMLKIPP", "GLAFBCFFAEG", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

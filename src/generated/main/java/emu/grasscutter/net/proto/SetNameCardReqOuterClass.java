@@ -19,17 +19,12 @@ public final class SetNameCardReqOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 name_card_id = 15;</code>
+     * <code>uint32 name_card_id = 11;</code>
      * @return The nameCardId.
      */
     int getNameCardId();
   }
   /**
-   * <pre>
-   * CmdId: 3853
-   * Obf: KBHCHCMMILM
-   * </pre>
-   *
    * Protobuf type {@code SetNameCardReq}
    */
   public static final class SetNameCardReq extends
@@ -56,6 +51,48 @@ public final class SetNameCardReqOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private SetNameCardReq(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 88: {
+
+              nameCardId_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.SetNameCardReqOuterClass.internal_static_SetNameCardReq_descriptor;
@@ -69,10 +106,10 @@ public final class SetNameCardReqOuterClass {
               emu.grasscutter.net.proto.SetNameCardReqOuterClass.SetNameCardReq.class, emu.grasscutter.net.proto.SetNameCardReqOuterClass.SetNameCardReq.Builder.class);
     }
 
-    public static final int NAME_CARD_ID_FIELD_NUMBER = 15;
+    public static final int NAME_CARD_ID_FIELD_NUMBER = 11;
     private int nameCardId_;
     /**
-     * <code>uint32 name_card_id = 15;</code>
+     * <code>uint32 name_card_id = 11;</code>
      * @return The nameCardId.
      */
     @java.lang.Override
@@ -95,9 +132,9 @@ public final class SetNameCardReqOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (nameCardId_ != 0) {
-        output.writeUInt32(15, nameCardId_);
+        output.writeUInt32(11, nameCardId_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -108,9 +145,9 @@ public final class SetNameCardReqOuterClass {
       size = 0;
       if (nameCardId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(15, nameCardId_);
+          .computeUInt32Size(11, nameCardId_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -127,7 +164,7 @@ public final class SetNameCardReqOuterClass {
 
       if (getNameCardId()
           != other.getNameCardId()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -140,7 +177,7 @@ public final class SetNameCardReqOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + NAME_CARD_ID_FIELD_NUMBER;
       hash = (53 * hash) + getNameCardId();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -236,11 +273,6 @@ public final class SetNameCardReqOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 3853
-     * Obf: KBHCHCMMILM
-     * </pre>
-     *
      * Protobuf type {@code SetNameCardReq}
      */
     public static final class Builder extends
@@ -262,13 +294,18 @@ public final class SetNameCardReqOuterClass {
 
       // Construct using emu.grasscutter.net.proto.SetNameCardReqOuterClass.SetNameCardReq.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -353,7 +390,7 @@ public final class SetNameCardReqOuterClass {
         if (other.getNameCardId() != 0) {
           setNameCardId(other.getNameCardId());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -368,41 +405,23 @@ public final class SetNameCardReqOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.SetNameCardReqOuterClass.SetNameCardReq parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 120: {
-                nameCardId_ = input.readUInt32();
-
-                break;
-              } // case 120
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.SetNameCardReqOuterClass.SetNameCardReq) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
 
       private int nameCardId_ ;
       /**
-       * <code>uint32 name_card_id = 15;</code>
+       * <code>uint32 name_card_id = 11;</code>
        * @return The nameCardId.
        */
       @java.lang.Override
@@ -410,7 +429,7 @@ public final class SetNameCardReqOuterClass {
         return nameCardId_;
       }
       /**
-       * <code>uint32 name_card_id = 15;</code>
+       * <code>uint32 name_card_id = 11;</code>
        * @param value The nameCardId to set.
        * @return This builder for chaining.
        */
@@ -421,7 +440,7 @@ public final class SetNameCardReqOuterClass {
         return this;
       }
       /**
-       * <code>uint32 name_card_id = 15;</code>
+       * <code>uint32 name_card_id = 11;</code>
        * @return This builder for chaining.
        */
       public Builder clearNameCardId() {
@@ -463,18 +482,7 @@ public final class SetNameCardReqOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new SetNameCardReq(input, extensionRegistry);
       }
     };
 
@@ -509,7 +517,7 @@ public final class SetNameCardReqOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\024SetNameCardReq.proto\"&\n\016SetNameCardReq" +
-      "\022\024\n\014name_card_id\030\017 \001(\rB\033\n\031emu.grasscutte" +
+      "\022\024\n\014name_card_id\030\013 \001(\rB\033\n\031emu.grasscutte" +
       "r.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

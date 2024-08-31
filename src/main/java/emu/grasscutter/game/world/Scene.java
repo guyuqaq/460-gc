@@ -41,6 +41,9 @@ import emu.grasscutter.server.packet.send.*;
 import emu.grasscutter.server.scheduler.ServerTaskScheduler;
 import emu.grasscutter.utils.algorithms.KahnsSort;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
+
+import static emu.grasscutter.config.Configuration.GAME_OPTIONS;
+
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
@@ -351,7 +354,7 @@ public class Scene {
     public synchronized void addEntity(GameEntity entity) {
         this.addEntityDirectly(entity);
         this.broadcastPacket(new PacketSceneEntityAppearNotify(entity));
-    }
+	}
 
     public synchronized void addEntityToSingleClient(Player player, GameEntity entity) {
         this.addEntityDirectly(entity);
@@ -435,7 +438,7 @@ public class Scene {
         GameEntity removed = this.removeEntityDirectly(entity);
         if (removed != null) {
             this.broadcastPacket(new PacketSceneEntityDisappearNotify(removed, visionType));
-        }
+		}
     }
 
     public void removeEntities(List<GameEntity> entity, VisionType visionType) {
@@ -535,6 +538,9 @@ public class Scene {
                                 "Can not solve monster drop: drop_id = {}, drop_tag = {}. Falling back to legacy drop system.",
                                 monster.getMetaMonster().drop_id,
                                 monster.getMetaMonster().drop_tag);
+                world.getServer().getDropSystemLegacy().callDrop(monster);
+            } else {
+                if (world.getHost().isForceLegacyDrops() == false) return;
                 world.getServer().getDropSystemLegacy().callDrop(monster);
             }
         }

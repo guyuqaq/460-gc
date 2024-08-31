@@ -19,27 +19,28 @@ public final class SkipPlayerGameTimeRspOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 client_game_time = 2;</code>
+     * <code>uint32 client_game_time = 5;</code>
      * @return The clientGameTime.
      */
     int getClientGameTime();
 
     /**
-     * <code>int32 retcode = 9;</code>
+     * <code>int32 retcode = 3;</code>
      * @return The retcode.
      */
     int getRetcode();
 
     /**
-     * <code>uint32 game_time = 13;</code>
+     * <code>uint32 game_time = 12;</code>
      * @return The gameTime.
      */
     int getGameTime();
   }
   /**
    * <pre>
-   * CmdId: 24529
-   * Obf: PFBBCGKLBFC
+   * 4.7.0
+   * CmdId: 29633
+   * FPAJMADLEGI
    * </pre>
    *
    * Protobuf type {@code SkipPlayerGameTimeRsp}
@@ -81,10 +82,10 @@ public final class SkipPlayerGameTimeRspOuterClass {
               emu.grasscutter.net.proto.SkipPlayerGameTimeRspOuterClass.SkipPlayerGameTimeRsp.class, emu.grasscutter.net.proto.SkipPlayerGameTimeRspOuterClass.SkipPlayerGameTimeRsp.Builder.class);
     }
 
-    public static final int CLIENT_GAME_TIME_FIELD_NUMBER = 2;
+    public static final int CLIENT_GAME_TIME_FIELD_NUMBER = 5;
     private int clientGameTime_;
     /**
-     * <code>uint32 client_game_time = 2;</code>
+     * <code>uint32 client_game_time = 5;</code>
      * @return The clientGameTime.
      */
     @java.lang.Override
@@ -92,10 +93,10 @@ public final class SkipPlayerGameTimeRspOuterClass {
       return clientGameTime_;
     }
 
-    public static final int RETCODE_FIELD_NUMBER = 9;
+    public static final int RETCODE_FIELD_NUMBER = 3;
     private int retcode_;
     /**
-     * <code>int32 retcode = 9;</code>
+     * <code>int32 retcode = 3;</code>
      * @return The retcode.
      */
     @java.lang.Override
@@ -103,10 +104,10 @@ public final class SkipPlayerGameTimeRspOuterClass {
       return retcode_;
     }
 
-    public static final int GAME_TIME_FIELD_NUMBER = 13;
+    public static final int GAME_TIME_FIELD_NUMBER = 12;
     private int gameTime_;
     /**
-     * <code>uint32 game_time = 13;</code>
+     * <code>uint32 game_time = 12;</code>
      * @return The gameTime.
      */
     @java.lang.Override
@@ -128,14 +129,14 @@ public final class SkipPlayerGameTimeRspOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (clientGameTime_ != 0) {
-        output.writeUInt32(2, clientGameTime_);
-      }
       if (retcode_ != 0) {
-        output.writeInt32(9, retcode_);
+        output.writeInt32(3, retcode_);
+      }
+      if (clientGameTime_ != 0) {
+        output.writeUInt32(5, clientGameTime_);
       }
       if (gameTime_ != 0) {
-        output.writeUInt32(13, gameTime_);
+        output.writeUInt32(12, gameTime_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -146,17 +147,17 @@ public final class SkipPlayerGameTimeRspOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (clientGameTime_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(2, clientGameTime_);
-      }
       if (retcode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(9, retcode_);
+          .computeInt32Size(3, retcode_);
+      }
+      if (clientGameTime_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(5, clientGameTime_);
       }
       if (gameTime_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(13, gameTime_);
+          .computeUInt32Size(12, gameTime_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -293,8 +294,9 @@ public final class SkipPlayerGameTimeRspOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 24529
-     * Obf: PFBBCGKLBFC
+     * 4.7.0
+     * CmdId: 29633
+     * FPAJMADLEGI
      * </pre>
      *
      * Protobuf type {@code SkipPlayerGameTimeRsp}
@@ -447,21 +449,21 @@ public final class SkipPlayerGameTimeRspOuterClass {
               case 0:
                 done = true;
                 break;
-              case 16: {
-                clientGameTime_ = input.readUInt32();
-
-                break;
-              } // case 16
-              case 72: {
+              case 24: {
                 retcode_ = input.readInt32();
 
                 break;
-              } // case 72
-              case 104: {
+              } // case 24
+              case 40: {
+                clientGameTime_ = input.readUInt32();
+
+                break;
+              } // case 40
+              case 96: {
                 gameTime_ = input.readUInt32();
 
                 break;
-              } // case 104
+              } // case 96
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -480,7 +482,7 @@ public final class SkipPlayerGameTimeRspOuterClass {
 
       private int clientGameTime_ ;
       /**
-       * <code>uint32 client_game_time = 2;</code>
+       * <code>uint32 client_game_time = 5;</code>
        * @return The clientGameTime.
        */
       @java.lang.Override
@@ -488,7 +490,7 @@ public final class SkipPlayerGameTimeRspOuterClass {
         return clientGameTime_;
       }
       /**
-       * <code>uint32 client_game_time = 2;</code>
+       * <code>uint32 client_game_time = 5;</code>
        * @param value The clientGameTime to set.
        * @return This builder for chaining.
        */
@@ -499,7 +501,7 @@ public final class SkipPlayerGameTimeRspOuterClass {
         return this;
       }
       /**
-       * <code>uint32 client_game_time = 2;</code>
+       * <code>uint32 client_game_time = 5;</code>
        * @return This builder for chaining.
        */
       public Builder clearClientGameTime() {
@@ -511,7 +513,7 @@ public final class SkipPlayerGameTimeRspOuterClass {
 
       private int retcode_ ;
       /**
-       * <code>int32 retcode = 9;</code>
+       * <code>int32 retcode = 3;</code>
        * @return The retcode.
        */
       @java.lang.Override
@@ -519,7 +521,7 @@ public final class SkipPlayerGameTimeRspOuterClass {
         return retcode_;
       }
       /**
-       * <code>int32 retcode = 9;</code>
+       * <code>int32 retcode = 3;</code>
        * @param value The retcode to set.
        * @return This builder for chaining.
        */
@@ -530,7 +532,7 @@ public final class SkipPlayerGameTimeRspOuterClass {
         return this;
       }
       /**
-       * <code>int32 retcode = 9;</code>
+       * <code>int32 retcode = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearRetcode() {
@@ -542,7 +544,7 @@ public final class SkipPlayerGameTimeRspOuterClass {
 
       private int gameTime_ ;
       /**
-       * <code>uint32 game_time = 13;</code>
+       * <code>uint32 game_time = 12;</code>
        * @return The gameTime.
        */
       @java.lang.Override
@@ -550,7 +552,7 @@ public final class SkipPlayerGameTimeRspOuterClass {
         return gameTime_;
       }
       /**
-       * <code>uint32 game_time = 13;</code>
+       * <code>uint32 game_time = 12;</code>
        * @param value The gameTime to set.
        * @return This builder for chaining.
        */
@@ -561,7 +563,7 @@ public final class SkipPlayerGameTimeRspOuterClass {
         return this;
       }
       /**
-       * <code>uint32 game_time = 13;</code>
+       * <code>uint32 game_time = 12;</code>
        * @return This builder for chaining.
        */
       public Builder clearGameTime() {
@@ -649,8 +651,8 @@ public final class SkipPlayerGameTimeRspOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\033SkipPlayerGameTimeRsp.proto\"U\n\025SkipPla" +
-      "yerGameTimeRsp\022\030\n\020client_game_time\030\002 \001(\r" +
-      "\022\017\n\007retcode\030\t \001(\005\022\021\n\tgame_time\030\r \001(\rB\033\n\031" +
+      "yerGameTimeRsp\022\030\n\020client_game_time\030\005 \001(\r" +
+      "\022\017\n\007retcode\030\003 \001(\005\022\021\n\tgame_time\030\014 \001(\rB\033\n\031" +
       "emu.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

@@ -35,9 +35,10 @@ public class ConfigContainer {
      *              HTTP server should start immediately.
      * Version 13 - 'game.useUniquePacketKey' was added to control whether the
      *              encryption key used for packets is a constant or randomly generated.
+     * Version 14 - 'forceLegacyDrops' was added to force legacy drop system to be used
      */
     private static int version() {
-        return 13;
+        return 14;
     }
 
     /**
@@ -165,6 +166,7 @@ public class ConfigContainer {
 
     public static class Game {
         public boolean useWindy = false; //是否添加水印
+        public boolean loginUnlockMap = false; //开局是否默认解锁全图
         public String bindAddress = "0.0.0.0";
         public int bindPort = 22102;
 
@@ -175,6 +177,8 @@ public class ConfigContainer {
 
         /* Enabling this will generate a unique packet encryption key for each player. */
         public boolean useUniquePacketKey = true;
+        
+        public boolean useXorEncryption = true;
 
         /* Entities within a certain range will be loaded for the player */
         public int loadEntitiesForPlayerRange = 300;
@@ -278,6 +282,7 @@ public class ConfigContainer {
         public boolean energyUsage = true;
         public boolean fishhookTeleport = true;
         public boolean trialCostumes = false;
+        public boolean forceLegacyDrops = true;
 
         @SerializedName(value = "questing", alternate = "questOptions")
         public Questing questing = new Questing();
@@ -361,6 +366,7 @@ public class ConfigContainer {
     }
 
     public static class JoinOptions {
+        public static String noticeMessage = "Welcome to a Grasscutter server.";
         public int[] welcomeEmotes = {2007, 1002, 4010};
         public String welcomeMessage = "Welcome to a Grasscutter server.";
         public JoinOptions.Mail welcomeMail = new JoinOptions.Mail();

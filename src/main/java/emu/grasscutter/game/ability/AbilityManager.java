@@ -93,8 +93,9 @@ public final class AbilityManager extends BasePlayerManager {
                             > 0;
         }
 
-        if (this.burstCasterId == entityId
-                && (ability.getAvatarSkillStartIds().contains(this.burstSkillId) || skillInvincibility)) {
+        // TODO: fix the check
+         if (this.burstCasterId == entityId
+                 && (ability.getAvatarSkillStartIds().contains(this.burstSkillId) || skillInvincibility)) {
             Grasscutter.getLogger()
                     .trace(
                             "Caster ID's {} burst successful, clearing energy and setting invulnerability",
@@ -105,7 +106,7 @@ public final class AbilityManager extends BasePlayerManager {
                     .handleEvtDoSkillSuccNotify(
                             this.player.getSession(), this.burstSkillId, this.burstCasterId);
             this.removePendingEnergyClear();
-        }
+         }
     }
 
     public static void registerHandlers() {
@@ -361,7 +362,7 @@ public final class AbilityManager extends BasePlayerManager {
     }
 
     private void setAbilityOverrideValue(Ability ability, AbilityScalarValueEntry valueChange) {
-        if (valueChange.getValueType() != AbilityScalarType.ABILITY_SCALAR_TYPE_FLOAT) {
+         if (valueChange.getValueType() != AbilityScalarType.ABILITY_SCALAR_TYPE_FLOAT && valueChange.getValueType() != AbilityScalarType.ABILITY_SCALAR_TYPE_UNKNOW) {
             Grasscutter.getLogger().trace("Scalar type not supported: {}", valueChange.getValueType());
 
             return;
@@ -547,7 +548,7 @@ public final class AbilityManager extends BasePlayerManager {
         if (entity == null) return;
 
         var entry = AbilityScalarValueEntry.parseFrom(invoke.getAbilityData());
-        if (entry == null || !entry.hasFloatValue()) return;
+         if (entry == null || !entry.hasFloatValue()) return;
 
         String key = null;
         if (entry.getKey().hasStr()) key = entry.getKey().getStr();
@@ -557,18 +558,18 @@ public final class AbilityManager extends BasePlayerManager {
         if (key == null) return;
 
         if (key.startsWith("SGV_")) return; // Server does not allow to change this variables I think
-        switch (entry.getValueType().getNumber()) {
-            case AbilityScalarType.ABILITY_SCALAR_TYPE_FLOAT_VALUE -> {
-                if (!Float.isNaN(entry.getFloatValue()))
-                    entity.getGlobalAbilityValues().put(key, entry.getFloatValue());
+            switch (entry.getValueType().getNumber()) {
+                case AbilityScalarType.ABILITY_SCALAR_TYPE_FLOAT_VALUE -> {
+                    if (!Float.isNaN(entry.getFloatValue()))
+                        entity.getGlobalAbilityValues().put(key, entry.getFloatValue());
+                }
+                case AbilityScalarType.ABILITY_SCALAR_TYPE_UINT_VALUE -> entity
+                        .getGlobalAbilityValues()
+                        .put(key, (float) entry.getUintValue());
+                default -> {
+                    return;
+                }
             }
-            case AbilityScalarType.ABILITY_SCALAR_TYPE_UINT_VALUE -> entity
-                    .getGlobalAbilityValues()
-                    .put(key, (float) entry.getUintValue());
-            default -> {
-                return;
-            }
-        }
 
         entity.onAbilityValueUpdate();
     }

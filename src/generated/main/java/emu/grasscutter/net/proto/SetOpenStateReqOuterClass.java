@@ -19,23 +19,18 @@ public final class SetOpenStateReqOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 value = 13;</code>
-     * @return The value.
-     */
-    int getValue();
-
-    /**
-     * <code>uint32 key = 12;</code>
+     * <code>uint32 key = 3;</code>
      * @return The key.
      */
     int getKey();
+
+    /**
+     * <code>uint32 value = 1;</code>
+     * @return The value.
+     */
+    int getValue();
   }
   /**
-   * <pre>
-   * CmdId: 20702
-   * Obf: KFLGFOELPIO
-   * </pre>
-   *
    * Protobuf type {@code SetOpenStateReq}
    */
   public static final class SetOpenStateReq extends
@@ -62,6 +57,53 @@ public final class SetOpenStateReqOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private SetOpenStateReq(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              value_ = input.readUInt32();
+              break;
+            }
+            case 24: {
+
+              key_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.SetOpenStateReqOuterClass.internal_static_SetOpenStateReq_descriptor;
@@ -75,26 +117,26 @@ public final class SetOpenStateReqOuterClass {
               emu.grasscutter.net.proto.SetOpenStateReqOuterClass.SetOpenStateReq.class, emu.grasscutter.net.proto.SetOpenStateReqOuterClass.SetOpenStateReq.Builder.class);
     }
 
-    public static final int VALUE_FIELD_NUMBER = 13;
-    private int value_;
-    /**
-     * <code>uint32 value = 13;</code>
-     * @return The value.
-     */
-    @java.lang.Override
-    public int getValue() {
-      return value_;
-    }
-
-    public static final int KEY_FIELD_NUMBER = 12;
+    public static final int KEY_FIELD_NUMBER = 3;
     private int key_;
     /**
-     * <code>uint32 key = 12;</code>
+     * <code>uint32 key = 3;</code>
      * @return The key.
      */
     @java.lang.Override
     public int getKey() {
       return key_;
+    }
+
+    public static final int VALUE_FIELD_NUMBER = 1;
+    private int value_;
+    /**
+     * <code>uint32 value = 1;</code>
+     * @return The value.
+     */
+    @java.lang.Override
+    public int getValue() {
+      return value_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -111,13 +153,13 @@ public final class SetOpenStateReqOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (key_ != 0) {
-        output.writeUInt32(12, key_);
-      }
       if (value_ != 0) {
-        output.writeUInt32(13, value_);
+        output.writeUInt32(1, value_);
       }
-      getUnknownFields().writeTo(output);
+      if (key_ != 0) {
+        output.writeUInt32(3, key_);
+      }
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -126,15 +168,15 @@ public final class SetOpenStateReqOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (key_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(12, key_);
-      }
       if (value_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(13, value_);
+          .computeUInt32Size(1, value_);
       }
-      size += getUnknownFields().getSerializedSize();
+      if (key_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(3, key_);
+      }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -149,11 +191,11 @@ public final class SetOpenStateReqOuterClass {
       }
       emu.grasscutter.net.proto.SetOpenStateReqOuterClass.SetOpenStateReq other = (emu.grasscutter.net.proto.SetOpenStateReqOuterClass.SetOpenStateReq) obj;
 
-      if (getValue()
-          != other.getValue()) return false;
       if (getKey()
           != other.getKey()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (getValue()
+          != other.getValue()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -164,11 +206,11 @@ public final class SetOpenStateReqOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + VALUE_FIELD_NUMBER;
-      hash = (53 * hash) + getValue();
       hash = (37 * hash) + KEY_FIELD_NUMBER;
       hash = (53 * hash) + getKey();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (37 * hash) + VALUE_FIELD_NUMBER;
+      hash = (53 * hash) + getValue();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -264,11 +306,6 @@ public final class SetOpenStateReqOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 20702
-     * Obf: KFLGFOELPIO
-     * </pre>
-     *
      * Protobuf type {@code SetOpenStateReq}
      */
     public static final class Builder extends
@@ -290,20 +327,25 @@ public final class SetOpenStateReqOuterClass {
 
       // Construct using emu.grasscutter.net.proto.SetOpenStateReqOuterClass.SetOpenStateReq.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        value_ = 0;
-
         key_ = 0;
+
+        value_ = 0;
 
         return this;
       }
@@ -331,8 +373,8 @@ public final class SetOpenStateReqOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.SetOpenStateReqOuterClass.SetOpenStateReq buildPartial() {
         emu.grasscutter.net.proto.SetOpenStateReqOuterClass.SetOpenStateReq result = new emu.grasscutter.net.proto.SetOpenStateReqOuterClass.SetOpenStateReq(this);
-        result.value_ = value_;
         result.key_ = key_;
+        result.value_ = value_;
         onBuilt();
         return result;
       }
@@ -381,13 +423,13 @@ public final class SetOpenStateReqOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.SetOpenStateReqOuterClass.SetOpenStateReq other) {
         if (other == emu.grasscutter.net.proto.SetOpenStateReqOuterClass.SetOpenStateReq.getDefaultInstance()) return this;
-        if (other.getValue() != 0) {
-          setValue(other.getValue());
-        }
         if (other.getKey() != 0) {
           setKey(other.getKey());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        if (other.getValue() != 0) {
+          setValue(other.getValue());
+        }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -402,77 +444,23 @@ public final class SetOpenStateReqOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.SetOpenStateReqOuterClass.SetOpenStateReq parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 96: {
-                key_ = input.readUInt32();
-
-                break;
-              } // case 96
-              case 104: {
-                value_ = input.readUInt32();
-
-                break;
-              } // case 104
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.SetOpenStateReqOuterClass.SetOpenStateReq) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-
-      private int value_ ;
-      /**
-       * <code>uint32 value = 13;</code>
-       * @return The value.
-       */
-      @java.lang.Override
-      public int getValue() {
-        return value_;
-      }
-      /**
-       * <code>uint32 value = 13;</code>
-       * @param value The value to set.
-       * @return This builder for chaining.
-       */
-      public Builder setValue(int value) {
-        
-        value_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 value = 13;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearValue() {
-        
-        value_ = 0;
-        onChanged();
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
 
       private int key_ ;
       /**
-       * <code>uint32 key = 12;</code>
+       * <code>uint32 key = 3;</code>
        * @return The key.
        */
       @java.lang.Override
@@ -480,7 +468,7 @@ public final class SetOpenStateReqOuterClass {
         return key_;
       }
       /**
-       * <code>uint32 key = 12;</code>
+       * <code>uint32 key = 3;</code>
        * @param value The key to set.
        * @return This builder for chaining.
        */
@@ -491,12 +479,43 @@ public final class SetOpenStateReqOuterClass {
         return this;
       }
       /**
-       * <code>uint32 key = 12;</code>
+       * <code>uint32 key = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearKey() {
         
         key_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int value_ ;
+      /**
+       * <code>uint32 value = 1;</code>
+       * @return The value.
+       */
+      @java.lang.Override
+      public int getValue() {
+        return value_;
+      }
+      /**
+       * <code>uint32 value = 1;</code>
+       * @param value The value to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValue(int value) {
+        
+        value_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 value = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValue() {
+        
+        value_ = 0;
         onChanged();
         return this;
       }
@@ -533,18 +552,7 @@ public final class SetOpenStateReqOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new SetOpenStateReq(input, extensionRegistry);
       }
     };
 
@@ -579,7 +587,7 @@ public final class SetOpenStateReqOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\025SetOpenStateReq.proto\"-\n\017SetOpenStateR" +
-      "eq\022\r\n\005value\030\r \001(\r\022\013\n\003key\030\014 \001(\rB\033\n\031emu.gr" +
+      "eq\022\013\n\003key\030\003 \001(\r\022\r\n\005value\030\001 \001(\rB\033\n\031emu.gr" +
       "asscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -591,7 +599,7 @@ public final class SetOpenStateReqOuterClass {
     internal_static_SetOpenStateReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_SetOpenStateReq_descriptor,
-        new java.lang.String[] { "Value", "Key", });
+        new java.lang.String[] { "Key", "Value", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

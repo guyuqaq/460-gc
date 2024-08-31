@@ -188,6 +188,25 @@ public class BlossomManager {
 
     public List<GameItem> onReward(Player player, EntityGadget chest, boolean useCondensedResin) {
         var resinManager = player.getResinManager();
+        if (chest.getGroupId() == 69420) {
+            List<GameItem> items = new ArrayList<>();
+            var blossomRewards = GameData.getRewardPreviewDataMap().get(chest.getConfigId());
+            if (blossomRewards == null) {
+                // Pick random reward
+                var dataMap = GameData.getRewardPreviewDataMap();
+                blossomRewards = dataMap.values().stream().skip((int) (dataMap.size() * Math.random())).findAny().get();
+                Grasscutter.getLogger().info("Picked random reward for flower as no data exists! Reward id: " + blossomRewards.getId());
+            };
+            var rewards = blossomRewards.getPreviewItems();
+            for (ItemParamData blossomReward : rewards) {
+                int rewardCount = blossomReward.getCount();
+                if (useCondensedResin) {
+                    rewardCount += blossomReward.getCount(); // Double!
+                }
+                items.add(new GameItem(blossomReward.getItemId(), rewardCount));
+            }
+            return items;
+        }
         synchronized (activeChests) {
             var it = activeChests.iterator();
             while (it.hasNext()) {

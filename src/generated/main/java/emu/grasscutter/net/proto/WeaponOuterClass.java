@@ -69,12 +69,14 @@ public final class WeaponOuterClass {
 
     int getAffixMapOrThrow(
         int key);
+
+    /**
+     * <code>bool HHLNNPOILDL = 5;</code>
+     * @return The hHLNNPOILDL.
+     */
+    boolean getHHLNNPOILDL();
   }
   /**
-   * <pre>
-   * Obf: NHOLFKPNLCH
-   * </pre>
-   *
    * Protobuf type {@code Weapon}
    */
   public static final class Weapon extends
@@ -100,6 +102,77 @@ public final class WeaponOuterClass {
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
+    }
+    private Weapon(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              level_ = input.readUInt32();
+              break;
+            }
+            case 16: {
+
+              exp_ = input.readUInt32();
+              break;
+            }
+            case 24: {
+
+              promoteLevel_ = input.readUInt32();
+              break;
+            }
+            case 34: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                affixMap_ = com.google.protobuf.MapField.newMapField(
+                    AffixMapDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
+              affixMap__ = input.readMessage(
+                  AffixMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              affixMap_.getMutableMap().put(
+                  affixMap__.getKey(), affixMap__.getValue());
+              break;
+            }
+            case 40: {
+
+              hHLNNPOILDL_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -240,6 +313,17 @@ public final class WeaponOuterClass {
       return map.get(key);
     }
 
+    public static final int HHLNNPOILDL_FIELD_NUMBER = 5;
+    private boolean hHLNNPOILDL_;
+    /**
+     * <code>bool HHLNNPOILDL = 5;</code>
+     * @return The hHLNNPOILDL.
+     */
+    @java.lang.Override
+    public boolean getHHLNNPOILDL() {
+      return hHLNNPOILDL_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -269,7 +353,10 @@ public final class WeaponOuterClass {
           internalGetAffixMap(),
           AffixMapDefaultEntryHolder.defaultEntry,
           4);
-      getUnknownFields().writeTo(output);
+      if (hHLNNPOILDL_ != false) {
+        output.writeBool(5, hHLNNPOILDL_);
+      }
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -300,7 +387,11 @@ public final class WeaponOuterClass {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(4, affixMap__);
       }
-      size += getUnknownFields().getSerializedSize();
+      if (hHLNNPOILDL_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(5, hHLNNPOILDL_);
+      }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -323,7 +414,9 @@ public final class WeaponOuterClass {
           != other.getPromoteLevel()) return false;
       if (!internalGetAffixMap().equals(
           other.internalGetAffixMap())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (getHHLNNPOILDL()
+          != other.getHHLNNPOILDL()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -344,7 +437,10 @@ public final class WeaponOuterClass {
         hash = (37 * hash) + AFFIX_MAP_FIELD_NUMBER;
         hash = (53 * hash) + internalGetAffixMap().hashCode();
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (37 * hash) + HHLNNPOILDL_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getHHLNNPOILDL());
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -440,10 +536,6 @@ public final class WeaponOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * Obf: NHOLFKPNLCH
-     * </pre>
-     *
      * Protobuf type {@code Weapon}
      */
     public static final class Builder extends
@@ -487,13 +579,18 @@ public final class WeaponOuterClass {
 
       // Construct using emu.grasscutter.net.proto.WeaponOuterClass.Weapon.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -505,6 +602,8 @@ public final class WeaponOuterClass {
         promoteLevel_ = 0;
 
         internalGetMutableAffixMap().clear();
+        hHLNNPOILDL_ = false;
+
         return this;
       }
 
@@ -537,6 +636,7 @@ public final class WeaponOuterClass {
         result.promoteLevel_ = promoteLevel_;
         result.affixMap_ = internalGetAffixMap();
         result.affixMap_.makeImmutable();
+        result.hHLNNPOILDL_ = hHLNNPOILDL_;
         onBuilt();
         return result;
       }
@@ -596,7 +696,10 @@ public final class WeaponOuterClass {
         }
         internalGetMutableAffixMap().mergeFrom(
             other.internalGetAffixMap());
-        this.mergeUnknownFields(other.getUnknownFields());
+        if (other.getHHLNNPOILDL() != false) {
+          setHHLNNPOILDL(other.getHHLNNPOILDL());
+        }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -611,53 +714,17 @@ public final class WeaponOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.WeaponOuterClass.Weapon parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                level_ = input.readUInt32();
-
-                break;
-              } // case 8
-              case 16: {
-                exp_ = input.readUInt32();
-
-                break;
-              } // case 16
-              case 24: {
-                promoteLevel_ = input.readUInt32();
-
-                break;
-              } // case 24
-              case 34: {
-                com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
-                affixMap__ = input.readMessage(
-                    AffixMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-                internalGetMutableAffixMap().getMutableMap().put(
-                    affixMap__.getKey(), affixMap__.getValue());
-                break;
-              } // case 34
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.WeaponOuterClass.Weapon) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -882,6 +949,37 @@ public final class WeaponOuterClass {
             .putAll(values);
         return this;
       }
+
+      private boolean hHLNNPOILDL_ ;
+      /**
+       * <code>bool HHLNNPOILDL = 5;</code>
+       * @return The hHLNNPOILDL.
+       */
+      @java.lang.Override
+      public boolean getHHLNNPOILDL() {
+        return hHLNNPOILDL_;
+      }
+      /**
+       * <code>bool HHLNNPOILDL = 5;</code>
+       * @param value The hHLNNPOILDL to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHHLNNPOILDL(boolean value) {
+        
+        hHLNNPOILDL_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool HHLNNPOILDL = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHHLNNPOILDL() {
+        
+        hHLNNPOILDL_ = false;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -915,18 +1013,7 @@ public final class WeaponOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new Weapon(input, extensionRegistry);
       }
     };
 
@@ -965,12 +1052,12 @@ public final class WeaponOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\014Weapon.proto\"\226\001\n\006Weapon\022\r\n\005level\030\001 \001(\r" +
+      "\n\014Weapon.proto\"\253\001\n\006Weapon\022\r\n\005level\030\001 \001(\r" +
       "\022\013\n\003exp\030\002 \001(\r\022\025\n\rpromote_level\030\003 \001(\r\022(\n\t" +
-      "affix_map\030\004 \003(\0132\025.Weapon.AffixMapEntry\032/" +
-      "\n\rAffixMapEntry\022\013\n\003key\030\001 \001(\r\022\r\n\005value\030\002 " +
-      "\001(\r:\0028\001B\033\n\031emu.grasscutter.net.protob\006pr" +
-      "oto3"
+      "affix_map\030\004 \003(\0132\025.Weapon.AffixMapEntry\022\023" +
+      "\n\013HHLNNPOILDL\030\005 \001(\010\032/\n\rAffixMapEntry\022\013\n\003" +
+      "key\030\001 \001(\r\022\r\n\005value\030\002 \001(\r:\0028\001B\033\n\031emu.gras" +
+      "scutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -981,7 +1068,7 @@ public final class WeaponOuterClass {
     internal_static_Weapon_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_Weapon_descriptor,
-        new java.lang.String[] { "Level", "Exp", "PromoteLevel", "AffixMap", });
+        new java.lang.String[] { "Level", "Exp", "PromoteLevel", "AffixMap", "HHLNNPOILDL", });
     internal_static_Weapon_AffixMapEntry_descriptor =
       internal_static_Weapon_descriptor.getNestedTypes().get(0);
     internal_static_Weapon_AffixMapEntry_fieldAccessorTable = new

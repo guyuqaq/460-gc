@@ -263,19 +263,20 @@ public final class RegionHandler implements Router {
                     QueryCurrRegionHttpRsp rsp =
                             QueryCurrRegionHttpRsp.newBuilder()
                                     .setRetcode(Retcode.RET_STOP_SERVER_VALUE)
-                                    .setMsg("连接失败！")
+                                    .setMsg("通知")
                                     .setRegionInfo(RegionInfo.newBuilder())
                                     .setStopServer(
                                             StopServerInfo.newBuilder()
                                                     .setUrl("https://in.fanbook.cn/glaze")
-                                                    .setStopBeginTime((int) Instant.now().getEpochSecond())
-                                                    .setStopEndTime((int) Instant.now().getEpochSecond() + 1)
+                                                    //.setStopBeginTime((int) Instant.now().getEpochSecond())
+                                                    //.setStopEndTime((int) Instant.now().getEpochSecond() + 1)
                                                     .setContentMsg(
                                                             updateClient
-                                                                    ? "\n版本不匹配，客户端已过期！ \n\n服务器版本: %s\n客户端版本: %s"
-                                                                            .formatted(GameConstants.VERSION, clientVersion)
-                                                                    : "\n版本不匹配，服务器已过期！ \n\n服务器版本: %s\n客户端版本: %s"
-                                                                            .formatted(GameConstants.VERSION, clientVersion))
+                                                                    ? "\n发现最新%s版本，请前往社区官网下载最新客户端。"
+                                                                    .formatted(GameConstants.VERSION)
+                                                                    
+                                                                    : "\n服务端不支持%s版本，请前往社区官网下载%s版本。"
+                                                                            .formatted(clientVersion, GameConstants.VERSION))
                                                     .build())
                                     .buildPartial();
 

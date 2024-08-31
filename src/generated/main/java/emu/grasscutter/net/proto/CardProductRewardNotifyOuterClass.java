@@ -19,35 +19,30 @@ public final class CardProductRewardNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string product_id = 7;</code>
+     * <code>string product_id = 4;</code>
      * @return The productId.
      */
     java.lang.String getProductId();
     /**
-     * <code>string product_id = 7;</code>
+     * <code>string product_id = 4;</code>
      * @return The bytes for productId.
      */
     com.google.protobuf.ByteString
         getProductIdBytes();
 
     /**
-     * <code>uint32 hcoin = 11;</code>
-     * @return The hcoin.
-     */
-    int getHcoin();
-
-    /**
-     * <code>uint32 remain_days = 4;</code>
+     * <code>uint32 remain_days = 10;</code>
      * @return The remainDays.
      */
     int getRemainDays();
+
+    /**
+     * <code>uint32 hcoin = 13;</code>
+     * @return The hcoin.
+     */
+    int getHcoin();
   }
   /**
-   * <pre>
-   * CmdId: 5635
-   * Obf: KHCOIEOAPAE
-   * </pre>
-   *
    * Protobuf type {@code CardProductRewardNotify}
    */
   public static final class CardProductRewardNotify extends
@@ -88,10 +83,10 @@ public final class CardProductRewardNotifyOuterClass {
               emu.grasscutter.net.proto.CardProductRewardNotifyOuterClass.CardProductRewardNotify.class, emu.grasscutter.net.proto.CardProductRewardNotifyOuterClass.CardProductRewardNotify.Builder.class);
     }
 
-    public static final int PRODUCT_ID_FIELD_NUMBER = 7;
+    public static final int PRODUCT_ID_FIELD_NUMBER = 4;
     private volatile java.lang.Object productId_;
     /**
-     * <code>string product_id = 7;</code>
+     * <code>string product_id = 4;</code>
      * @return The productId.
      */
     @java.lang.Override
@@ -108,7 +103,7 @@ public final class CardProductRewardNotifyOuterClass {
       }
     }
     /**
-     * <code>string product_id = 7;</code>
+     * <code>string product_id = 4;</code>
      * @return The bytes for productId.
      */
     @java.lang.Override
@@ -126,26 +121,26 @@ public final class CardProductRewardNotifyOuterClass {
       }
     }
 
-    public static final int HCOIN_FIELD_NUMBER = 11;
-    private int hcoin_;
-    /**
-     * <code>uint32 hcoin = 11;</code>
-     * @return The hcoin.
-     */
-    @java.lang.Override
-    public int getHcoin() {
-      return hcoin_;
-    }
-
-    public static final int REMAIN_DAYS_FIELD_NUMBER = 4;
+    public static final int REMAIN_DAYS_FIELD_NUMBER = 10;
     private int remainDays_;
     /**
-     * <code>uint32 remain_days = 4;</code>
+     * <code>uint32 remain_days = 10;</code>
      * @return The remainDays.
      */
     @java.lang.Override
     public int getRemainDays() {
       return remainDays_;
+    }
+
+    public static final int HCOIN_FIELD_NUMBER = 13;
+    private int hcoin_;
+    /**
+     * <code>uint32 hcoin = 13;</code>
+     * @return The hcoin.
+     */
+    @java.lang.Override
+    public int getHcoin() {
+      return hcoin_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -162,14 +157,14 @@ public final class CardProductRewardNotifyOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (remainDays_ != 0) {
-        output.writeUInt32(4, remainDays_);
-      }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(productId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, productId_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, productId_);
+      }
+      if (remainDays_ != 0) {
+        output.writeUInt32(10, remainDays_);
       }
       if (hcoin_ != 0) {
-        output.writeUInt32(11, hcoin_);
+        output.writeUInt32(13, hcoin_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -180,16 +175,16 @@ public final class CardProductRewardNotifyOuterClass {
       if (size != -1) return size;
 
       size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(productId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, productId_);
+      }
       if (remainDays_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(4, remainDays_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(productId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, productId_);
+          .computeUInt32Size(10, remainDays_);
       }
       if (hcoin_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(11, hcoin_);
+          .computeUInt32Size(13, hcoin_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -208,10 +203,10 @@ public final class CardProductRewardNotifyOuterClass {
 
       if (!getProductId()
           .equals(other.getProductId())) return false;
-      if (getHcoin()
-          != other.getHcoin()) return false;
       if (getRemainDays()
           != other.getRemainDays()) return false;
+      if (getHcoin()
+          != other.getHcoin()) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -225,10 +220,10 @@ public final class CardProductRewardNotifyOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + PRODUCT_ID_FIELD_NUMBER;
       hash = (53 * hash) + getProductId().hashCode();
-      hash = (37 * hash) + HCOIN_FIELD_NUMBER;
-      hash = (53 * hash) + getHcoin();
       hash = (37 * hash) + REMAIN_DAYS_FIELD_NUMBER;
       hash = (53 * hash) + getRemainDays();
+      hash = (37 * hash) + HCOIN_FIELD_NUMBER;
+      hash = (53 * hash) + getHcoin();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -325,11 +320,6 @@ public final class CardProductRewardNotifyOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 5635
-     * Obf: KHCOIEOAPAE
-     * </pre>
-     *
      * Protobuf type {@code CardProductRewardNotify}
      */
     public static final class Builder extends
@@ -364,9 +354,9 @@ public final class CardProductRewardNotifyOuterClass {
         super.clear();
         productId_ = "";
 
-        hcoin_ = 0;
-
         remainDays_ = 0;
+
+        hcoin_ = 0;
 
         return this;
       }
@@ -395,8 +385,8 @@ public final class CardProductRewardNotifyOuterClass {
       public emu.grasscutter.net.proto.CardProductRewardNotifyOuterClass.CardProductRewardNotify buildPartial() {
         emu.grasscutter.net.proto.CardProductRewardNotifyOuterClass.CardProductRewardNotify result = new emu.grasscutter.net.proto.CardProductRewardNotifyOuterClass.CardProductRewardNotify(this);
         result.productId_ = productId_;
-        result.hcoin_ = hcoin_;
         result.remainDays_ = remainDays_;
+        result.hcoin_ = hcoin_;
         onBuilt();
         return result;
       }
@@ -449,11 +439,11 @@ public final class CardProductRewardNotifyOuterClass {
           productId_ = other.productId_;
           onChanged();
         }
-        if (other.getHcoin() != 0) {
-          setHcoin(other.getHcoin());
-        }
         if (other.getRemainDays() != 0) {
           setRemainDays(other.getRemainDays());
+        }
+        if (other.getHcoin() != 0) {
+          setHcoin(other.getHcoin());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -481,21 +471,21 @@ public final class CardProductRewardNotifyOuterClass {
               case 0:
                 done = true;
                 break;
-              case 32: {
-                remainDays_ = input.readUInt32();
-
-                break;
-              } // case 32
-              case 58: {
+              case 34: {
                 productId_ = input.readStringRequireUtf8();
 
                 break;
-              } // case 58
-              case 88: {
+              } // case 34
+              case 80: {
+                remainDays_ = input.readUInt32();
+
+                break;
+              } // case 80
+              case 104: {
                 hcoin_ = input.readUInt32();
 
                 break;
-              } // case 88
+              } // case 104
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -514,7 +504,7 @@ public final class CardProductRewardNotifyOuterClass {
 
       private java.lang.Object productId_ = "";
       /**
-       * <code>string product_id = 7;</code>
+       * <code>string product_id = 4;</code>
        * @return The productId.
        */
       public java.lang.String getProductId() {
@@ -530,7 +520,7 @@ public final class CardProductRewardNotifyOuterClass {
         }
       }
       /**
-       * <code>string product_id = 7;</code>
+       * <code>string product_id = 4;</code>
        * @return The bytes for productId.
        */
       public com.google.protobuf.ByteString
@@ -547,7 +537,7 @@ public final class CardProductRewardNotifyOuterClass {
         }
       }
       /**
-       * <code>string product_id = 7;</code>
+       * <code>string product_id = 4;</code>
        * @param value The productId to set.
        * @return This builder for chaining.
        */
@@ -562,7 +552,7 @@ public final class CardProductRewardNotifyOuterClass {
         return this;
       }
       /**
-       * <code>string product_id = 7;</code>
+       * <code>string product_id = 4;</code>
        * @return This builder for chaining.
        */
       public Builder clearProductId() {
@@ -572,7 +562,7 @@ public final class CardProductRewardNotifyOuterClass {
         return this;
       }
       /**
-       * <code>string product_id = 7;</code>
+       * <code>string product_id = 4;</code>
        * @param value The bytes for productId to set.
        * @return This builder for chaining.
        */
@@ -588,40 +578,9 @@ public final class CardProductRewardNotifyOuterClass {
         return this;
       }
 
-      private int hcoin_ ;
-      /**
-       * <code>uint32 hcoin = 11;</code>
-       * @return The hcoin.
-       */
-      @java.lang.Override
-      public int getHcoin() {
-        return hcoin_;
-      }
-      /**
-       * <code>uint32 hcoin = 11;</code>
-       * @param value The hcoin to set.
-       * @return This builder for chaining.
-       */
-      public Builder setHcoin(int value) {
-        
-        hcoin_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 hcoin = 11;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearHcoin() {
-        
-        hcoin_ = 0;
-        onChanged();
-        return this;
-      }
-
       private int remainDays_ ;
       /**
-       * <code>uint32 remain_days = 4;</code>
+       * <code>uint32 remain_days = 10;</code>
        * @return The remainDays.
        */
       @java.lang.Override
@@ -629,7 +588,7 @@ public final class CardProductRewardNotifyOuterClass {
         return remainDays_;
       }
       /**
-       * <code>uint32 remain_days = 4;</code>
+       * <code>uint32 remain_days = 10;</code>
        * @param value The remainDays to set.
        * @return This builder for chaining.
        */
@@ -640,12 +599,43 @@ public final class CardProductRewardNotifyOuterClass {
         return this;
       }
       /**
-       * <code>uint32 remain_days = 4;</code>
+       * <code>uint32 remain_days = 10;</code>
        * @return This builder for chaining.
        */
       public Builder clearRemainDays() {
         
         remainDays_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int hcoin_ ;
+      /**
+       * <code>uint32 hcoin = 13;</code>
+       * @return The hcoin.
+       */
+      @java.lang.Override
+      public int getHcoin() {
+        return hcoin_;
+      }
+      /**
+       * <code>uint32 hcoin = 13;</code>
+       * @param value The hcoin to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHcoin(int value) {
+        
+        hcoin_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 hcoin = 13;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHcoin() {
+        
+        hcoin_ = 0;
         onChanged();
         return this;
       }
@@ -728,8 +718,8 @@ public final class CardProductRewardNotifyOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\035CardProductRewardNotify.proto\"Q\n\027CardP" +
-      "roductRewardNotify\022\022\n\nproduct_id\030\007 \001(\t\022\r" +
-      "\n\005hcoin\030\013 \001(\r\022\023\n\013remain_days\030\004 \001(\rB\033\n\031em" +
+      "roductRewardNotify\022\022\n\nproduct_id\030\004 \001(\t\022\023" +
+      "\n\013remain_days\030\n \001(\r\022\r\n\005hcoin\030\r \001(\rB\033\n\031em" +
       "u.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -741,7 +731,7 @@ public final class CardProductRewardNotifyOuterClass {
     internal_static_CardProductRewardNotify_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CardProductRewardNotify_descriptor,
-        new java.lang.String[] { "ProductId", "Hcoin", "RemainDays", });
+        new java.lang.String[] { "ProductId", "RemainDays", "Hcoin", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

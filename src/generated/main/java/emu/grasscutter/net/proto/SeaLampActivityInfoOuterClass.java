@@ -122,6 +122,96 @@ public final class SeaLampActivityInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private SeaLampActivityInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 16: {
+
+              nAOOKLKKOBJ_ = input.readBool();
+              break;
+            }
+            case 32: {
+
+              popularity_ = input.readUInt32();
+              break;
+            }
+            case 40: {
+
+              fFHKCOOGLCB_ = input.readBool();
+              break;
+            }
+            case 56: {
+
+              dayIndex_ = input.readUInt32();
+              break;
+            }
+            case 66: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                sectionInfoList_ = new java.util.ArrayList<emu.grasscutter.net.proto.SeaLampSectionInfoOuterClass.SeaLampSectionInfo>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              sectionInfoList_.add(
+                  input.readMessage(emu.grasscutter.net.proto.SeaLampSectionInfoOuterClass.SeaLampSectionInfo.parser(), extensionRegistry));
+              break;
+            }
+            case 72: {
+
+              mechanicusId_ = input.readUInt32();
+              break;
+            }
+            case 88: {
+
+              isContentClosed_ = input.readBool();
+              break;
+            }
+            case 112: {
+
+              firstDayStartTime_ = input.readUInt32();
+              break;
+            }
+            case 120: {
+
+              seaLampCoin_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          sectionInfoList_ = java.util.Collections.unmodifiableList(sectionInfoList_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.SeaLampActivityInfoOuterClass.internal_static_SeaLampActivityInfo_descriptor;
@@ -304,7 +394,7 @@ public final class SeaLampActivityInfoOuterClass {
       if (seaLampCoin_ != 0) {
         output.writeUInt32(15, seaLampCoin_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -349,7 +439,7 @@ public final class SeaLampActivityInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(15, seaLampCoin_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -382,7 +472,7 @@ public final class SeaLampActivityInfoOuterClass {
           != other.getPopularity()) return false;
       if (getIsContentClosed()
           != other.getIsContentClosed()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -416,7 +506,7 @@ public final class SeaLampActivityInfoOuterClass {
       hash = (37 * hash) + IS_CONTENT_CLOSED_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsContentClosed());
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -537,24 +627,29 @@ public final class SeaLampActivityInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.SeaLampActivityInfoOuterClass.SeaLampActivityInfo.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getSectionInfoListFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
         if (sectionInfoListBuilder_ == null) {
           sectionInfoList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
-          sectionInfoList_ = null;
           sectionInfoListBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000001);
         firstDayStartTime_ = 0;
 
         seaLampCoin_ = 0;
@@ -713,7 +808,7 @@ public final class SeaLampActivityInfoOuterClass {
         if (other.getIsContentClosed() != false) {
           setIsContentClosed(other.getIsContentClosed());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -728,83 +823,17 @@ public final class SeaLampActivityInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.SeaLampActivityInfoOuterClass.SeaLampActivityInfo parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 16: {
-                nAOOKLKKOBJ_ = input.readBool();
-
-                break;
-              } // case 16
-              case 32: {
-                popularity_ = input.readUInt32();
-
-                break;
-              } // case 32
-              case 40: {
-                fFHKCOOGLCB_ = input.readBool();
-
-                break;
-              } // case 40
-              case 56: {
-                dayIndex_ = input.readUInt32();
-
-                break;
-              } // case 56
-              case 66: {
-                emu.grasscutter.net.proto.SeaLampSectionInfoOuterClass.SeaLampSectionInfo m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.SeaLampSectionInfoOuterClass.SeaLampSectionInfo.parser(),
-                        extensionRegistry);
-                if (sectionInfoListBuilder_ == null) {
-                  ensureSectionInfoListIsMutable();
-                  sectionInfoList_.add(m);
-                } else {
-                  sectionInfoListBuilder_.addMessage(m);
-                }
-                break;
-              } // case 66
-              case 72: {
-                mechanicusId_ = input.readUInt32();
-
-                break;
-              } // case 72
-              case 88: {
-                isContentClosed_ = input.readBool();
-
-                break;
-              } // case 88
-              case 112: {
-                firstDayStartTime_ = input.readUInt32();
-
-                break;
-              } // case 112
-              case 120: {
-                seaLampCoin_ = input.readUInt32();
-
-                break;
-              } // case 120
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.SeaLampActivityInfoOuterClass.SeaLampActivityInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -1329,18 +1358,7 @@ public final class SeaLampActivityInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new SeaLampActivityInfo(input, extensionRegistry);
       }
     };
 

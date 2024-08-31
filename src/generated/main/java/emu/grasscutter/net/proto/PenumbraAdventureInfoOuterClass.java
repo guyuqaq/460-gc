@@ -124,6 +124,108 @@ public final class PenumbraAdventureInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private PenumbraAdventureInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 18: {
+              emu.grasscutter.net.proto.MDNHPGAIGKIOuterClass.MDNHPGAIGKI.Builder subBuilder = null;
+              if (mNOIAHNMLBC_ != null) {
+                subBuilder = mNOIAHNMLBC_.toBuilder();
+              }
+              mNOIAHNMLBC_ = input.readMessage(emu.grasscutter.net.proto.MDNHPGAIGKIOuterClass.MDNHPGAIGKI.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(mNOIAHNMLBC_);
+                mNOIAHNMLBC_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              emu.grasscutter.net.proto.POIBHEEKGPHOuterClass.POIBHEEKGPH.Builder subBuilder = null;
+              if (aNGGAFECGNG_ != null) {
+                subBuilder = aNGGAFECGNG_.toBuilder();
+              }
+              aNGGAFECGNG_ = input.readMessage(emu.grasscutter.net.proto.POIBHEEKGPHOuterClass.POIBHEEKGPH.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(aNGGAFECGNG_);
+                aNGGAFECGNG_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 42: {
+              emu.grasscutter.net.proto.LCMINEGOHCCOuterClass.LCMINEGOHCC.Builder subBuilder = null;
+              if (fGFFEKEDIMC_ != null) {
+                subBuilder = fGFFEKEDIMC_.toBuilder();
+              }
+              fGFFEKEDIMC_ = input.readMessage(emu.grasscutter.net.proto.LCMINEGOHCCOuterClass.LCMINEGOHCC.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(fGFFEKEDIMC_);
+                fGFFEKEDIMC_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 90: {
+              emu.grasscutter.net.proto.FGEEOGDFHABOuterClass.FGEEOGDFHAB.Builder subBuilder = null;
+              if (pBMDNLMPPBL_ != null) {
+                subBuilder = pBMDNLMPPBL_.toBuilder();
+              }
+              pBMDNLMPPBL_ = input.readMessage(emu.grasscutter.net.proto.FGEEOGDFHABOuterClass.FGEEOGDFHAB.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(pBMDNLMPPBL_);
+                pBMDNLMPPBL_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 98: {
+              emu.grasscutter.net.proto.BHKIIEFGFFLOuterClass.BHKIIEFGFFL.Builder subBuilder = null;
+              if (cMCADCHCOPA_ != null) {
+                subBuilder = cMCADCHCOPA_.toBuilder();
+              }
+              cMCADCHCOPA_ = input.readMessage(emu.grasscutter.net.proto.BHKIIEFGFFLOuterClass.BHKIIEFGFFL.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(cMCADCHCOPA_);
+                cMCADCHCOPA_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.PenumbraAdventureInfoOuterClass.internal_static_PenumbraAdventureInfo_descriptor;
@@ -296,7 +398,7 @@ public final class PenumbraAdventureInfoOuterClass {
       if (cMCADCHCOPA_ != null) {
         output.writeMessage(12, getCMCADCHCOPA());
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -325,7 +427,7 @@ public final class PenumbraAdventureInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(12, getCMCADCHCOPA());
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -365,7 +467,7 @@ public final class PenumbraAdventureInfoOuterClass {
         if (!getMNOIAHNMLBC()
             .equals(other.getMNOIAHNMLBC())) return false;
       }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -396,7 +498,7 @@ public final class PenumbraAdventureInfoOuterClass {
         hash = (37 * hash) + MNOIAHNMLBC_FIELD_NUMBER;
         hash = (53 * hash) + getMNOIAHNMLBC().hashCode();
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -517,13 +619,18 @@ public final class PenumbraAdventureInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.PenumbraAdventureInfoOuterClass.PenumbraAdventureInfo.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -672,7 +779,7 @@ public final class PenumbraAdventureInfoOuterClass {
         if (other.hasMNOIAHNMLBC()) {
           mergeMNOIAHNMLBC(other.getMNOIAHNMLBC());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -687,65 +794,17 @@ public final class PenumbraAdventureInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.PenumbraAdventureInfoOuterClass.PenumbraAdventureInfo parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 18: {
-                input.readMessage(
-                    getMNOIAHNMLBCFieldBuilder().getBuilder(),
-                    extensionRegistry);
-
-                break;
-              } // case 18
-              case 26: {
-                input.readMessage(
-                    getANGGAFECGNGFieldBuilder().getBuilder(),
-                    extensionRegistry);
-
-                break;
-              } // case 26
-              case 42: {
-                input.readMessage(
-                    getFGFFEKEDIMCFieldBuilder().getBuilder(),
-                    extensionRegistry);
-
-                break;
-              } // case 42
-              case 90: {
-                input.readMessage(
-                    getPBMDNLMPPBLFieldBuilder().getBuilder(),
-                    extensionRegistry);
-
-                break;
-              } // case 90
-              case 98: {
-                input.readMessage(
-                    getCMCADCHCOPAFieldBuilder().getBuilder(),
-                    extensionRegistry);
-
-                break;
-              } // case 98
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.PenumbraAdventureInfoOuterClass.PenumbraAdventureInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
 
@@ -1376,18 +1435,7 @@ public final class PenumbraAdventureInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new PenumbraAdventureInfo(input, extensionRegistry);
       }
     };
 

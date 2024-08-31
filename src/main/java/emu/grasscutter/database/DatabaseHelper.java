@@ -1,5 +1,6 @@
 package emu.grasscutter.database;
 
+import static com.mongodb.client.model.Filters.eq;
 import dev.morphia.query.*;
 import dev.morphia.query.experimental.filters.Filters;
 import emu.grasscutter.*;
@@ -18,19 +19,24 @@ import emu.grasscutter.game.player.Player;
 import emu.grasscutter.game.quest.GameMainQuest;
 import emu.grasscutter.game.world.SceneGroupInstance;
 import emu.grasscutter.utils.objects.Returnable;
-import lombok.Getter;
-
-import javax.annotation.Nullable;
+import io.netty.util.concurrent.FastThreadLocalThread;
 import java.util.List;
 import java.util.concurrent.*;
 import java.util.stream.Stream;
-
-import static com.mongodb.client.model.Filters.eq;
+import javax.annotation.Nullable;
+import lombok.Getter;
 
 public final class DatabaseHelper {
     @Getter
     private static final ExecutorService eventExecutor =
-        Executors.newFixedThreadPool(6);
+                   new ThreadPoolExecutor(
+                    10,
+                    20,
+                    60,
+                    TimeUnit.SECONDS,
+                    new LinkedBlockingDeque<>(),
+                    FastThreadLocalThread::new,
+                    new ThreadPoolExecutor.AbortPolicy());
 
     /**
      * Saves an object on the account datastore.

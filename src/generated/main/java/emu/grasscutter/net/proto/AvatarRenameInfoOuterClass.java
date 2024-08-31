@@ -19,28 +19,24 @@ public final class AvatarRenameInfoOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string avatar_name = 1;</code>
-     * @return The avatarName.
-     */
-    java.lang.String getAvatarName();
-    /**
-     * <code>string avatar_name = 1;</code>
-     * @return The bytes for avatarName.
-     */
-    com.google.protobuf.ByteString
-        getAvatarNameBytes();
-
-    /**
      * <code>uint32 avatar_id = 13;</code>
      * @return The avatarId.
      */
     int getAvatarId();
+
+    /**
+     * <code>string HEMDLGOMMKC = 15;</code>
+     * @return The hEMDLGOMMKC.
+     */
+    java.lang.String getHEMDLGOMMKC();
+    /**
+     * <code>string HEMDLGOMMKC = 15;</code>
+     * @return The bytes for hEMDLGOMMKC.
+     */
+    com.google.protobuf.ByteString
+        getHEMDLGOMMKCBytes();
   }
   /**
-   * <pre>
-   * Obf: NNBEINLIFPB
-   * </pre>
-   *
    * Protobuf type {@code AvatarRenameInfo}
    */
   public static final class AvatarRenameInfo extends
@@ -53,7 +49,7 @@ public final class AvatarRenameInfoOuterClass {
       super(builder);
     }
     private AvatarRenameInfo() {
-      avatarName_ = "";
+      hEMDLGOMMKC_ = "";
     }
 
     @java.lang.Override
@@ -68,6 +64,54 @@ public final class AvatarRenameInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private AvatarRenameInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 104: {
+
+              avatarId_ = input.readUInt32();
+              break;
+            }
+            case 122: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              hEMDLGOMMKC_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.internal_static_AvatarRenameInfo_descriptor;
@@ -81,44 +125,6 @@ public final class AvatarRenameInfoOuterClass {
               emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo.class, emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo.Builder.class);
     }
 
-    public static final int AVATAR_NAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object avatarName_;
-    /**
-     * <code>string avatar_name = 1;</code>
-     * @return The avatarName.
-     */
-    @java.lang.Override
-    public java.lang.String getAvatarName() {
-      java.lang.Object ref = avatarName_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        avatarName_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string avatar_name = 1;</code>
-     * @return The bytes for avatarName.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getAvatarNameBytes() {
-      java.lang.Object ref = avatarName_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        avatarName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
     public static final int AVATAR_ID_FIELD_NUMBER = 13;
     private int avatarId_;
     /**
@@ -128,6 +134,44 @@ public final class AvatarRenameInfoOuterClass {
     @java.lang.Override
     public int getAvatarId() {
       return avatarId_;
+    }
+
+    public static final int HEMDLGOMMKC_FIELD_NUMBER = 15;
+    private volatile java.lang.Object hEMDLGOMMKC_;
+    /**
+     * <code>string HEMDLGOMMKC = 15;</code>
+     * @return The hEMDLGOMMKC.
+     */
+    @java.lang.Override
+    public java.lang.String getHEMDLGOMMKC() {
+      java.lang.Object ref = hEMDLGOMMKC_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        hEMDLGOMMKC_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string HEMDLGOMMKC = 15;</code>
+     * @return The bytes for hEMDLGOMMKC.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getHEMDLGOMMKCBytes() {
+      java.lang.Object ref = hEMDLGOMMKC_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        hEMDLGOMMKC_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     private byte memoizedIsInitialized = -1;
@@ -144,13 +188,13 @@ public final class AvatarRenameInfoOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(avatarName_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, avatarName_);
-      }
       if (avatarId_ != 0) {
         output.writeUInt32(13, avatarId_);
       }
-      getUnknownFields().writeTo(output);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hEMDLGOMMKC_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 15, hEMDLGOMMKC_);
+      }
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -159,14 +203,14 @@ public final class AvatarRenameInfoOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(avatarName_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, avatarName_);
-      }
       if (avatarId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(13, avatarId_);
       }
-      size += getUnknownFields().getSerializedSize();
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hEMDLGOMMKC_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, hEMDLGOMMKC_);
+      }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -181,11 +225,11 @@ public final class AvatarRenameInfoOuterClass {
       }
       emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo other = (emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo) obj;
 
-      if (!getAvatarName()
-          .equals(other.getAvatarName())) return false;
       if (getAvatarId()
           != other.getAvatarId()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!getHEMDLGOMMKC()
+          .equals(other.getHEMDLGOMMKC())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -196,11 +240,11 @@ public final class AvatarRenameInfoOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + AVATAR_NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getAvatarName().hashCode();
       hash = (37 * hash) + AVATAR_ID_FIELD_NUMBER;
       hash = (53 * hash) + getAvatarId();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (37 * hash) + HEMDLGOMMKC_FIELD_NUMBER;
+      hash = (53 * hash) + getHEMDLGOMMKC().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -296,10 +340,6 @@ public final class AvatarRenameInfoOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * Obf: NNBEINLIFPB
-     * </pre>
-     *
      * Protobuf type {@code AvatarRenameInfo}
      */
     public static final class Builder extends
@@ -321,20 +361,25 @@ public final class AvatarRenameInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        avatarName_ = "";
-
         avatarId_ = 0;
+
+        hEMDLGOMMKC_ = "";
 
         return this;
       }
@@ -362,8 +407,8 @@ public final class AvatarRenameInfoOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo buildPartial() {
         emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo result = new emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo(this);
-        result.avatarName_ = avatarName_;
         result.avatarId_ = avatarId_;
+        result.hEMDLGOMMKC_ = hEMDLGOMMKC_;
         onBuilt();
         return result;
       }
@@ -412,14 +457,14 @@ public final class AvatarRenameInfoOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo other) {
         if (other == emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo.getDefaultInstance()) return this;
-        if (!other.getAvatarName().isEmpty()) {
-          avatarName_ = other.avatarName_;
-          onChanged();
-        }
         if (other.getAvatarId() != 0) {
           setAvatarId(other.getAvatarId());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        if (!other.getHEMDLGOMMKC().isEmpty()) {
+          hEMDLGOMMKC_ = other.hEMDLGOMMKC_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -434,116 +479,17 @@ public final class AvatarRenameInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                avatarName_ = input.readStringRequireUtf8();
-
-                break;
-              } // case 10
-              case 104: {
-                avatarId_ = input.readUInt32();
-
-                break;
-              } // case 104
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-
-      private java.lang.Object avatarName_ = "";
-      /**
-       * <code>string avatar_name = 1;</code>
-       * @return The avatarName.
-       */
-      public java.lang.String getAvatarName() {
-        java.lang.Object ref = avatarName_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          avatarName_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
         }
-      }
-      /**
-       * <code>string avatar_name = 1;</code>
-       * @return The bytes for avatarName.
-       */
-      public com.google.protobuf.ByteString
-          getAvatarNameBytes() {
-        java.lang.Object ref = avatarName_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          avatarName_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string avatar_name = 1;</code>
-       * @param value The avatarName to set.
-       * @return This builder for chaining.
-       */
-      public Builder setAvatarName(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        avatarName_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string avatar_name = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearAvatarName() {
-        
-        avatarName_ = getDefaultInstance().getAvatarName();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string avatar_name = 1;</code>
-       * @param value The bytes for avatarName to set.
-       * @return This builder for chaining.
-       */
-      public Builder setAvatarNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        avatarName_ = value;
-        onChanged();
         return this;
       }
 
@@ -574,6 +520,82 @@ public final class AvatarRenameInfoOuterClass {
       public Builder clearAvatarId() {
         
         avatarId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object hEMDLGOMMKC_ = "";
+      /**
+       * <code>string HEMDLGOMMKC = 15;</code>
+       * @return The hEMDLGOMMKC.
+       */
+      public java.lang.String getHEMDLGOMMKC() {
+        java.lang.Object ref = hEMDLGOMMKC_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          hEMDLGOMMKC_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string HEMDLGOMMKC = 15;</code>
+       * @return The bytes for hEMDLGOMMKC.
+       */
+      public com.google.protobuf.ByteString
+          getHEMDLGOMMKCBytes() {
+        java.lang.Object ref = hEMDLGOMMKC_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          hEMDLGOMMKC_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string HEMDLGOMMKC = 15;</code>
+       * @param value The hEMDLGOMMKC to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHEMDLGOMMKC(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        hEMDLGOMMKC_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string HEMDLGOMMKC = 15;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHEMDLGOMMKC() {
+        
+        hEMDLGOMMKC_ = getDefaultInstance().getHEMDLGOMMKC();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string HEMDLGOMMKC = 15;</code>
+       * @param value The bytes for hEMDLGOMMKC to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHEMDLGOMMKCBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        hEMDLGOMMKC_ = value;
         onChanged();
         return this;
       }
@@ -610,18 +632,7 @@ public final class AvatarRenameInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new AvatarRenameInfo(input, extensionRegistry);
       }
     };
 
@@ -656,8 +667,8 @@ public final class AvatarRenameInfoOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\026AvatarRenameInfo.proto\":\n\020AvatarRename" +
-      "Info\022\023\n\013avatar_name\030\001 \001(\t\022\021\n\tavatar_id\030\r" +
-      " \001(\rB\033\n\031emu.grasscutter.net.protob\006proto" +
+      "Info\022\021\n\tavatar_id\030\r \001(\r\022\023\n\013HEMDLGOMMKC\030\017" +
+      " \001(\tB\033\n\031emu.grasscutter.net.protob\006proto" +
       "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -669,7 +680,7 @@ public final class AvatarRenameInfoOuterClass {
     internal_static_AvatarRenameInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_AvatarRenameInfo_descriptor,
-        new java.lang.String[] { "AvatarName", "AvatarId", });
+        new java.lang.String[] { "AvatarId", "HEMDLGOMMKC", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

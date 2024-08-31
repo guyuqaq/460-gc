@@ -19,23 +19,18 @@ public final class PlayerApplyEnterMpResultReqOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 apply_uid = 11;</code>
-     * @return The applyUid.
-     */
-    int getApplyUid();
-
-    /**
-     * <code>bool is_agreed = 12;</code>
+     * <code>bool is_agreed = 3;</code>
      * @return The isAgreed.
      */
     boolean getIsAgreed();
+
+    /**
+     * <code>uint32 apply_uid = 15;</code>
+     * @return The applyUid.
+     */
+    int getApplyUid();
   }
   /**
-   * <pre>
-   * CmdId: 24849
-   * Obf: DCHAHENHFKC
-   * </pre>
-   *
    * Protobuf type {@code PlayerApplyEnterMpResultReq}
    */
   public static final class PlayerApplyEnterMpResultReq extends
@@ -62,6 +57,53 @@ public final class PlayerApplyEnterMpResultReqOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private PlayerApplyEnterMpResultReq(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 24: {
+
+              isAgreed_ = input.readBool();
+              break;
+            }
+            case 120: {
+
+              applyUid_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.PlayerApplyEnterMpResultReqOuterClass.internal_static_PlayerApplyEnterMpResultReq_descriptor;
@@ -75,26 +117,26 @@ public final class PlayerApplyEnterMpResultReqOuterClass {
               emu.grasscutter.net.proto.PlayerApplyEnterMpResultReqOuterClass.PlayerApplyEnterMpResultReq.class, emu.grasscutter.net.proto.PlayerApplyEnterMpResultReqOuterClass.PlayerApplyEnterMpResultReq.Builder.class);
     }
 
-    public static final int APPLY_UID_FIELD_NUMBER = 11;
-    private int applyUid_;
-    /**
-     * <code>uint32 apply_uid = 11;</code>
-     * @return The applyUid.
-     */
-    @java.lang.Override
-    public int getApplyUid() {
-      return applyUid_;
-    }
-
-    public static final int IS_AGREED_FIELD_NUMBER = 12;
+    public static final int IS_AGREED_FIELD_NUMBER = 3;
     private boolean isAgreed_;
     /**
-     * <code>bool is_agreed = 12;</code>
+     * <code>bool is_agreed = 3;</code>
      * @return The isAgreed.
      */
     @java.lang.Override
     public boolean getIsAgreed() {
       return isAgreed_;
+    }
+
+    public static final int APPLY_UID_FIELD_NUMBER = 15;
+    private int applyUid_;
+    /**
+     * <code>uint32 apply_uid = 15;</code>
+     * @return The applyUid.
+     */
+    @java.lang.Override
+    public int getApplyUid() {
+      return applyUid_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -111,13 +153,13 @@ public final class PlayerApplyEnterMpResultReqOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (applyUid_ != 0) {
-        output.writeUInt32(11, applyUid_);
-      }
       if (isAgreed_ != false) {
-        output.writeBool(12, isAgreed_);
+        output.writeBool(3, isAgreed_);
       }
-      getUnknownFields().writeTo(output);
+      if (applyUid_ != 0) {
+        output.writeUInt32(15, applyUid_);
+      }
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -126,15 +168,15 @@ public final class PlayerApplyEnterMpResultReqOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (applyUid_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(11, applyUid_);
-      }
       if (isAgreed_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(12, isAgreed_);
+          .computeBoolSize(3, isAgreed_);
       }
-      size += getUnknownFields().getSerializedSize();
+      if (applyUid_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(15, applyUid_);
+      }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -149,11 +191,11 @@ public final class PlayerApplyEnterMpResultReqOuterClass {
       }
       emu.grasscutter.net.proto.PlayerApplyEnterMpResultReqOuterClass.PlayerApplyEnterMpResultReq other = (emu.grasscutter.net.proto.PlayerApplyEnterMpResultReqOuterClass.PlayerApplyEnterMpResultReq) obj;
 
-      if (getApplyUid()
-          != other.getApplyUid()) return false;
       if (getIsAgreed()
           != other.getIsAgreed()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (getApplyUid()
+          != other.getApplyUid()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -164,12 +206,12 @@ public final class PlayerApplyEnterMpResultReqOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + APPLY_UID_FIELD_NUMBER;
-      hash = (53 * hash) + getApplyUid();
       hash = (37 * hash) + IS_AGREED_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsAgreed());
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (37 * hash) + APPLY_UID_FIELD_NUMBER;
+      hash = (53 * hash) + getApplyUid();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -265,11 +307,6 @@ public final class PlayerApplyEnterMpResultReqOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 24849
-     * Obf: DCHAHENHFKC
-     * </pre>
-     *
      * Protobuf type {@code PlayerApplyEnterMpResultReq}
      */
     public static final class Builder extends
@@ -291,20 +328,25 @@ public final class PlayerApplyEnterMpResultReqOuterClass {
 
       // Construct using emu.grasscutter.net.proto.PlayerApplyEnterMpResultReqOuterClass.PlayerApplyEnterMpResultReq.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        applyUid_ = 0;
-
         isAgreed_ = false;
+
+        applyUid_ = 0;
 
         return this;
       }
@@ -332,8 +374,8 @@ public final class PlayerApplyEnterMpResultReqOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.PlayerApplyEnterMpResultReqOuterClass.PlayerApplyEnterMpResultReq buildPartial() {
         emu.grasscutter.net.proto.PlayerApplyEnterMpResultReqOuterClass.PlayerApplyEnterMpResultReq result = new emu.grasscutter.net.proto.PlayerApplyEnterMpResultReqOuterClass.PlayerApplyEnterMpResultReq(this);
-        result.applyUid_ = applyUid_;
         result.isAgreed_ = isAgreed_;
+        result.applyUid_ = applyUid_;
         onBuilt();
         return result;
       }
@@ -382,13 +424,13 @@ public final class PlayerApplyEnterMpResultReqOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.PlayerApplyEnterMpResultReqOuterClass.PlayerApplyEnterMpResultReq other) {
         if (other == emu.grasscutter.net.proto.PlayerApplyEnterMpResultReqOuterClass.PlayerApplyEnterMpResultReq.getDefaultInstance()) return this;
-        if (other.getApplyUid() != 0) {
-          setApplyUid(other.getApplyUid());
-        }
         if (other.getIsAgreed() != false) {
           setIsAgreed(other.getIsAgreed());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        if (other.getApplyUid() != 0) {
+          setApplyUid(other.getApplyUid());
+        }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -403,77 +445,23 @@ public final class PlayerApplyEnterMpResultReqOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.PlayerApplyEnterMpResultReqOuterClass.PlayerApplyEnterMpResultReq parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 88: {
-                applyUid_ = input.readUInt32();
-
-                break;
-              } // case 88
-              case 96: {
-                isAgreed_ = input.readBool();
-
-                break;
-              } // case 96
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.PlayerApplyEnterMpResultReqOuterClass.PlayerApplyEnterMpResultReq) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-
-      private int applyUid_ ;
-      /**
-       * <code>uint32 apply_uid = 11;</code>
-       * @return The applyUid.
-       */
-      @java.lang.Override
-      public int getApplyUid() {
-        return applyUid_;
-      }
-      /**
-       * <code>uint32 apply_uid = 11;</code>
-       * @param value The applyUid to set.
-       * @return This builder for chaining.
-       */
-      public Builder setApplyUid(int value) {
-        
-        applyUid_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 apply_uid = 11;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearApplyUid() {
-        
-        applyUid_ = 0;
-        onChanged();
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
 
       private boolean isAgreed_ ;
       /**
-       * <code>bool is_agreed = 12;</code>
+       * <code>bool is_agreed = 3;</code>
        * @return The isAgreed.
        */
       @java.lang.Override
@@ -481,7 +469,7 @@ public final class PlayerApplyEnterMpResultReqOuterClass {
         return isAgreed_;
       }
       /**
-       * <code>bool is_agreed = 12;</code>
+       * <code>bool is_agreed = 3;</code>
        * @param value The isAgreed to set.
        * @return This builder for chaining.
        */
@@ -492,12 +480,43 @@ public final class PlayerApplyEnterMpResultReqOuterClass {
         return this;
       }
       /**
-       * <code>bool is_agreed = 12;</code>
+       * <code>bool is_agreed = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearIsAgreed() {
         
         isAgreed_ = false;
+        onChanged();
+        return this;
+      }
+
+      private int applyUid_ ;
+      /**
+       * <code>uint32 apply_uid = 15;</code>
+       * @return The applyUid.
+       */
+      @java.lang.Override
+      public int getApplyUid() {
+        return applyUid_;
+      }
+      /**
+       * <code>uint32 apply_uid = 15;</code>
+       * @param value The applyUid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setApplyUid(int value) {
+        
+        applyUid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 apply_uid = 15;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearApplyUid() {
+        
+        applyUid_ = 0;
         onChanged();
         return this;
       }
@@ -534,18 +553,7 @@ public final class PlayerApplyEnterMpResultReqOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new PlayerApplyEnterMpResultReq(input, extensionRegistry);
       }
     };
 
@@ -580,8 +588,8 @@ public final class PlayerApplyEnterMpResultReqOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n!PlayerApplyEnterMpResultReq.proto\"C\n\033P" +
-      "layerApplyEnterMpResultReq\022\021\n\tapply_uid\030" +
-      "\013 \001(\r\022\021\n\tis_agreed\030\014 \001(\010B\033\n\031emu.grasscut" +
+      "layerApplyEnterMpResultReq\022\021\n\tis_agreed\030" +
+      "\003 \001(\010\022\021\n\tapply_uid\030\017 \001(\rB\033\n\031emu.grasscut" +
       "ter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -593,7 +601,7 @@ public final class PlayerApplyEnterMpResultReqOuterClass {
     internal_static_PlayerApplyEnterMpResultReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_PlayerApplyEnterMpResultReq_descriptor,
-        new java.lang.String[] { "ApplyUid", "IsAgreed", });
+        new java.lang.String[] { "IsAgreed", "ApplyUid", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -19,7 +19,7 @@ public final class PlatformStartRouteNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 entity_id = 14;</code>
+     * <code>uint32 entity_id = 3;</code>
      * @return The entityId.
      */
     int getEntityId();
@@ -47,8 +47,9 @@ public final class PlatformStartRouteNotifyOuterClass {
   }
   /**
    * <pre>
-   * CmdId: 7427
-   * Obf: PPPKGDJOODM
+   * 4.7.0
+   * CmdId: 25562?
+   * Obf: PDPFPMMKOMC
    * </pre>
    *
    * Protobuf type {@code PlatformStartRouteNotify}
@@ -90,10 +91,10 @@ public final class PlatformStartRouteNotifyOuterClass {
               emu.grasscutter.net.proto.PlatformStartRouteNotifyOuterClass.PlatformStartRouteNotify.class, emu.grasscutter.net.proto.PlatformStartRouteNotifyOuterClass.PlatformStartRouteNotify.Builder.class);
     }
 
-    public static final int ENTITY_ID_FIELD_NUMBER = 14;
+    public static final int ENTITY_ID_FIELD_NUMBER = 3;
     private int entityId_;
     /**
-     * <code>uint32 entity_id = 14;</code>
+     * <code>uint32 entity_id = 3;</code>
      * @return The entityId.
      */
     @java.lang.Override
@@ -152,14 +153,14 @@ public final class PlatformStartRouteNotifyOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (entityId_ != 0) {
+        output.writeUInt32(3, entityId_);
+      }
       if (sceneTime_ != 0) {
         output.writeUInt32(4, sceneTime_);
       }
       if (platform_ != null) {
         output.writeMessage(10, getPlatform());
-      }
-      if (entityId_ != 0) {
-        output.writeUInt32(14, entityId_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -170,6 +171,10 @@ public final class PlatformStartRouteNotifyOuterClass {
       if (size != -1) return size;
 
       size = 0;
+      if (entityId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(3, entityId_);
+      }
       if (sceneTime_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(4, sceneTime_);
@@ -177,10 +182,6 @@ public final class PlatformStartRouteNotifyOuterClass {
       if (platform_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, getPlatform());
-      }
-      if (entityId_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(14, entityId_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -322,8 +323,9 @@ public final class PlatformStartRouteNotifyOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 7427
-     * Obf: PPPKGDJOODM
+     * 4.7.0
+     * CmdId: 25562?
+     * Obf: PDPFPMMKOMC
      * </pre>
      *
      * Protobuf type {@code PlatformStartRouteNotify}
@@ -484,6 +486,11 @@ public final class PlatformStartRouteNotifyOuterClass {
               case 0:
                 done = true;
                 break;
+              case 24: {
+                entityId_ = input.readUInt32();
+
+                break;
+              } // case 24
               case 32: {
                 sceneTime_ = input.readUInt32();
 
@@ -496,11 +503,6 @@ public final class PlatformStartRouteNotifyOuterClass {
 
                 break;
               } // case 82
-              case 112: {
-                entityId_ = input.readUInt32();
-
-                break;
-              } // case 112
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -519,7 +521,7 @@ public final class PlatformStartRouteNotifyOuterClass {
 
       private int entityId_ ;
       /**
-       * <code>uint32 entity_id = 14;</code>
+       * <code>uint32 entity_id = 3;</code>
        * @return The entityId.
        */
       @java.lang.Override
@@ -527,7 +529,7 @@ public final class PlatformStartRouteNotifyOuterClass {
         return entityId_;
       }
       /**
-       * <code>uint32 entity_id = 14;</code>
+       * <code>uint32 entity_id = 3;</code>
        * @param value The entityId to set.
        * @return This builder for chaining.
        */
@@ -538,7 +540,7 @@ public final class PlatformStartRouteNotifyOuterClass {
         return this;
       }
       /**
-       * <code>uint32 entity_id = 14;</code>
+       * <code>uint32 entity_id = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearEntityId() {
@@ -777,7 +779,7 @@ public final class PlatformStartRouteNotifyOuterClass {
     java.lang.String[] descriptorData = {
       "\n\036PlatformStartRouteNotify.proto\032\022Platfo" +
       "rmInfo.proto\"b\n\030PlatformStartRouteNotify" +
-      "\022\021\n\tentity_id\030\016 \001(\r\022\022\n\nscene_time\030\004 \001(\r\022" +
+      "\022\021\n\tentity_id\030\003 \001(\r\022\022\n\nscene_time\030\004 \001(\r\022" +
       "\037\n\010platform\030\n \001(\0132\r.PlatformInfoB\033\n\031emu." +
       "grasscutter.net.protob\006proto3"
     };

@@ -19,17 +19,12 @@ public final class HomeChangeBgmNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 bgm_id = 2;</code>
+     * <code>uint32 bgm_id = 4;</code>
      * @return The bgmId.
      */
     int getBgmId();
   }
   /**
-   * <pre>
-   * CmdId: 2031
-   * Obf: HIJFHJEALCJ
-   * </pre>
-   *
    * Protobuf type {@code HomeChangeBgmNotify}
    */
   public static final class HomeChangeBgmNotify extends
@@ -56,6 +51,48 @@ public final class HomeChangeBgmNotifyOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private HomeChangeBgmNotify(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 32: {
+
+              bgmId_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.HomeChangeBgmNotifyOuterClass.internal_static_HomeChangeBgmNotify_descriptor;
@@ -69,10 +106,10 @@ public final class HomeChangeBgmNotifyOuterClass {
               emu.grasscutter.net.proto.HomeChangeBgmNotifyOuterClass.HomeChangeBgmNotify.class, emu.grasscutter.net.proto.HomeChangeBgmNotifyOuterClass.HomeChangeBgmNotify.Builder.class);
     }
 
-    public static final int BGM_ID_FIELD_NUMBER = 2;
+    public static final int BGM_ID_FIELD_NUMBER = 4;
     private int bgmId_;
     /**
-     * <code>uint32 bgm_id = 2;</code>
+     * <code>uint32 bgm_id = 4;</code>
      * @return The bgmId.
      */
     @java.lang.Override
@@ -95,9 +132,9 @@ public final class HomeChangeBgmNotifyOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (bgmId_ != 0) {
-        output.writeUInt32(2, bgmId_);
+        output.writeUInt32(4, bgmId_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -108,9 +145,9 @@ public final class HomeChangeBgmNotifyOuterClass {
       size = 0;
       if (bgmId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(2, bgmId_);
+          .computeUInt32Size(4, bgmId_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -127,7 +164,7 @@ public final class HomeChangeBgmNotifyOuterClass {
 
       if (getBgmId()
           != other.getBgmId()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -140,7 +177,7 @@ public final class HomeChangeBgmNotifyOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + BGM_ID_FIELD_NUMBER;
       hash = (53 * hash) + getBgmId();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -236,11 +273,6 @@ public final class HomeChangeBgmNotifyOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 2031
-     * Obf: HIJFHJEALCJ
-     * </pre>
-     *
      * Protobuf type {@code HomeChangeBgmNotify}
      */
     public static final class Builder extends
@@ -262,13 +294,18 @@ public final class HomeChangeBgmNotifyOuterClass {
 
       // Construct using emu.grasscutter.net.proto.HomeChangeBgmNotifyOuterClass.HomeChangeBgmNotify.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -353,7 +390,7 @@ public final class HomeChangeBgmNotifyOuterClass {
         if (other.getBgmId() != 0) {
           setBgmId(other.getBgmId());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -368,41 +405,23 @@ public final class HomeChangeBgmNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.HomeChangeBgmNotifyOuterClass.HomeChangeBgmNotify parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 16: {
-                bgmId_ = input.readUInt32();
-
-                break;
-              } // case 16
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.HomeChangeBgmNotifyOuterClass.HomeChangeBgmNotify) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
 
       private int bgmId_ ;
       /**
-       * <code>uint32 bgm_id = 2;</code>
+       * <code>uint32 bgm_id = 4;</code>
        * @return The bgmId.
        */
       @java.lang.Override
@@ -410,7 +429,7 @@ public final class HomeChangeBgmNotifyOuterClass {
         return bgmId_;
       }
       /**
-       * <code>uint32 bgm_id = 2;</code>
+       * <code>uint32 bgm_id = 4;</code>
        * @param value The bgmId to set.
        * @return This builder for chaining.
        */
@@ -421,7 +440,7 @@ public final class HomeChangeBgmNotifyOuterClass {
         return this;
       }
       /**
-       * <code>uint32 bgm_id = 2;</code>
+       * <code>uint32 bgm_id = 4;</code>
        * @return This builder for chaining.
        */
       public Builder clearBgmId() {
@@ -463,18 +482,7 @@ public final class HomeChangeBgmNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new HomeChangeBgmNotify(input, extensionRegistry);
       }
     };
 
@@ -509,7 +517,7 @@ public final class HomeChangeBgmNotifyOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\031HomeChangeBgmNotify.proto\"%\n\023HomeChang" +
-      "eBgmNotify\022\016\n\006bgm_id\030\002 \001(\rB\033\n\031emu.grassc" +
+      "eBgmNotify\022\016\n\006bgm_id\030\004 \001(\rB\033\n\031emu.grassc" +
       "utter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

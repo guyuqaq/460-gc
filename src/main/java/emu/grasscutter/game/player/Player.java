@@ -8,7 +8,7 @@ import emu.grasscutter.data.excels.world.WeatherData;
 import emu.grasscutter.database.DatabaseHelper;
 import emu.grasscutter.game.*;
 import emu.grasscutter.game.ability.AbilityManager;
-import emu.grasscutter.game.achievement.*;
+import emu.grasscutter.game.achievement.Achievements;
 import emu.grasscutter.game.activity.ActivityManager;
 import emu.grasscutter.game.avatar.*;
 import emu.grasscutter.game.battlepass.BattlePassManager;
@@ -55,7 +55,8 @@ import emu.grasscutter.server.game.GameSession.SessionState;
 import emu.grasscutter.server.packet.send.*;
 import emu.grasscutter.utils.*;
 import emu.grasscutter.utils.helpers.DateHelper;
-import emu.grasscutter.utils.objects.*;
+import emu.grasscutter.utils.objects.FieldFetch;
+import emu.grasscutter.utils.objects.DatabaseObject;
 import it.unimi.dsi.fastutil.ints.*;
 import lombok.*;
 
@@ -95,8 +96,10 @@ public class Player implements DatabaseObject<Player>, PlayerHook, FieldFetch {
     @Getter @Setter private int sceneId;
     @Getter @Setter private int regionId;
     @Getter private int mainCharacterId;
+	private int spawnedEntitiesCount; //limit entities
     @Getter @Setter private boolean inGodMode;
     @Getter @Setter private boolean unlimitedStamina;
+    @Getter @Setter public boolean forceLegacyDrops;
 
     @Getter private Set<Integer> nameCardList;
     @Getter private Set<Integer> flyCloakList;
@@ -156,7 +159,7 @@ public class Player implements DatabaseObject<Player>, PlayerHook, FieldFetch {
     @Getter private transient PlayerProgressManager progressManager;
     @Getter private transient SatiationManager satiationManager;
     @Getter private transient TalkManager talkManager;
-
+    
     @Getter @Setter private transient Position lastCheckedPosition = null;
 
     // Manager data (Save-able to the database)
@@ -196,7 +199,8 @@ public class Player implements DatabaseObject<Player>, PlayerHook, FieldFetch {
     @Getter @Setter private int lastDailyReset;
     @Getter private transient MpSettingType mpSetting = MpSettingType.MP_SETTING_TYPE_ENTER_AFTER_APPLY;
     @Getter private long playerGameTime = 540000; // 9 in-game hours. Present at the start of the game.
-
+    
+    private transient boolean isNew;
     @Getter private PlayerProgress playerProgress;
     @Getter private Set<Integer> activeQuestTimers;
 
@@ -277,7 +281,6 @@ public class Player implements DatabaseObject<Player>, PlayerHook, FieldFetch {
         this.energyManager = new EnergyManager(this);
         this.resinManager = new ResinManager(this);
         this.forgingManager = new ForgingManager(this);
-        this.deforestationManager = new DeforestationManager(this);
         this.progressManager = new PlayerProgressManager(this);
         this.furnitureManager = new FurnitureManager(this);
         this.battlePassManager = new BattlePassManager(this);
@@ -294,6 +297,7 @@ public class Player implements DatabaseObject<Player>, PlayerHook, FieldFetch {
         this.account = session.getAccount();
         this.accountId = this.getAccount().getId();
         this.session = session;
+        this.isNew = true;
         this.nickname = "Traveler";
         this.signature = "";
         this.teamManager = new TeamManager(this);
@@ -304,11 +308,40 @@ public class Player implements DatabaseObject<Player>, PlayerHook, FieldFetch {
         this.applyStartingSceneTags();
         this.getFlyCloakList().add(140001);
         this.getNameCardList().add(210001);
+        this.mapMarksManager = new MapMarksManager(this);
+        this.staminaManager = new StaminaManager(this);
+        this.sotsManager = new SotSManager(this);
+        this.energyManager = new EnergyManager(this);
+        this.resinManager = new ResinManager(this);
+        this.deforestationManager = new DeforestationManager(this);
+        this.forgingManager = new ForgingManager(this);
+        this.progressManager = new PlayerProgressManager(this);
+        this.furnitureManager = new FurnitureManager(this);
+        this.cookingManager = new CookingManager(this);
+        this.cookingCompoundManager = new CookingCompoundManager(this);
+        this.satiationManager = new SatiationManager(this);
     }
 
     @Override
     public Player getPlayer() {
         return this;
+    }
+	
+	/**
+	* Track the number of entities spawned by the player 
+	*
+	* @param count The add entities	
+	*/
+	 public int getSpawnedEntitiesCount() {
+        return spawnedEntitiesCount;
+    }
+
+    public void incrementSpawnedEntitiesCount(int count) {
+        this.spawnedEntitiesCount += count;
+    }
+	
+    public void resetSpawnedEntitiesCount() {
+        this.spawnedEntitiesCount = 0;
     }
 
     /**
@@ -568,7 +601,7 @@ public class Player implements DatabaseObject<Player>, PlayerHook, FieldFetch {
         this.setOrFetch(PlayerProperty.PROP_IS_TRANSFERABLE, 1);
         this.setOrFetch(PlayerProperty.PROP_MAX_STAMINA, 24000);
         this.setOrFetch(PlayerProperty.PROP_DIVE_MAX_STAMINA, withQuesting ? 10000 : 0);
-        this.setOrFetch(PlayerProperty.PROP_PLAYER_RESIN, 160);
+        this.setOrFetch(PlayerProperty.PROP_PLAYER_RESIN, 200);
         // The player's current stamina is always their max stamina.
         this.setProperty(PlayerProperty.PROP_CUR_PERSIST_STAMINA,
             this.getProperty(PlayerProperty.PROP_MAX_STAMINA));
@@ -588,6 +621,13 @@ public class Player implements DatabaseObject<Player>, PlayerHook, FieldFetch {
                     }
                     this.getSceneTags().get(sceneTag.getSceneId()).add(sceneTag.getId());
                 });
+        //sceneId -> List<sceneTagIds>, since some are blocked off by annoying quests
+        GameConstants.DEFAULT_CUSTOM_SCENE_TAGS.entrySet().forEach(entry -> {
+            if (this.getSceneTags().get(entry.getKey()) == null) {
+                this.getSceneTags().put(entry.getKey(), new HashSet<>());
+            }
+            this.getSceneTags().get(entry.getKey()).addAll(entry.getValue());
+        });
     }
 
     /**
@@ -1055,7 +1095,7 @@ public class Player implements DatabaseObject<Player>, PlayerHook, FieldFetch {
             .setMpSettingType(this.getMpSetting())
             .setNameCardId(this.getNameCardId())
             .setSignature(this.getSignature())
-            .setProfilePicture(ProfilePicture.newBuilder().setAvatarId(this.getHeadImage()));
+            .setProfilePicture(ProfilePicture.newBuilder().setHeadImageId(this.getHeadImage()));
 
         if (this.getWorld() != null) {
             onlineInfo.setCurPlayerNumInWorld(getWorld().getPlayerCount());
@@ -1110,7 +1150,7 @@ public class Player implements DatabaseObject<Player>, PlayerHook, FieldFetch {
 
         return SocialDetail.newBuilder()
             .setUid(this.getUid())
-            .setProfilePicture(ProfilePicture.newBuilder().setAvatarId(this.getHeadImage()))
+            .setProfilePicture(ProfilePicture.newBuilder().setHeadImageId(this.getHeadImage()))
             .setNickname(this.getNickname())
             .setSignature(this.getSignature())
             .setLevel(this.getLevel())
@@ -1381,18 +1421,10 @@ public class Player implements DatabaseObject<Player>, PlayerHook, FieldFetch {
         this.getPlayerProgress().setPlayer(this); // Add reference to the player.
     }
 
-    /**
-     * Invoked when the player selects their avatar.
-     */
-    public void onPlayerBorn() {
-        Grasscutter.getThreadPool().submit(
-            this.getQuestManager()::onPlayerBorn);
-    }
-
     public void onLogin() {
         // Quest - Commented out because a problem is caused if you log out while this quest is active
         /*
-        if (getQuestManager().getMainQuestById(351) == null) {
+		if (getQuestManager().getMainQuestById(351) == null) {
             GameQuest quest = getQuestManager().addQuest(35104);
             if (quest != null) {
                 quest.finish();
@@ -1402,8 +1434,8 @@ public class Player implements DatabaseObject<Player>, PlayerHook, FieldFetch {
             this.setSceneId(3);
             this.getPos().set(GameConstants.START_POSITION);
         }
-        */
-
+		*/
+        
         // Ensure the player has valid scenetags, allows old accounts to work
         if (this.getSceneTags().isEmpty() || this.getSceneTags() == null) {
             this.applyStartingSceneTags();
@@ -1421,6 +1453,7 @@ public class Player implements DatabaseObject<Player>, PlayerHook, FieldFetch {
         // Create world
         World world = new World(this);
         world.addPlayer(this);
+        this.setForceLegacyDrops(GAME_OPTIONS.forceLegacyDrops);
 
         // Multiplayer setting
         this.setProperty(PlayerProperty.PROP_PLAYER_MP_SETTING_TYPE, this.getMpSetting().getNumber(), false);
@@ -1431,7 +1464,7 @@ public class Player implements DatabaseObject<Player>, PlayerHook, FieldFetch {
 
         // Rewind active quests, and put the player to a rewind position it finds (if any) of an active quest
         getQuestManager().onLogin();
-
+		
         // Packets
         session.send(new PacketPlayerDataNotify(this)); // Player data
         session.send(new PacketStoreWeightLimitNotify());
@@ -1482,6 +1515,11 @@ public class Player implements DatabaseObject<Player>, PlayerHook, FieldFetch {
 
         // Set session state
         session.setState(SessionState.ACTIVE);
+		
+        //
+        if (this.isNew) {
+            this.getMailHandler().sendWelcomeMail();
+        }
 
         // Call join event.
         PlayerJoinEvent event = new PlayerJoinEvent(this);

@@ -156,6 +156,7 @@ public class CookingManager extends BasePlayerManager {
     }
 
     public void sendCookDataNotify() {
+        initialize();
         // Default unlocked recipes to player if they don't have them yet.
         this.addDefaultUnlocked();
 

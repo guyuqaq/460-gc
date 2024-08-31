@@ -19,15 +19,16 @@ public final class SetBattlePassViewedReqOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 schedule_id = 2;</code>
+     * <code>uint32 schedule_id = 3;</code>
      * @return The scheduleId.
      */
     int getScheduleId();
   }
   /**
    * <pre>
-   * CmdId: 7320
-   * Obf: KKIGJEPPADN
+   * CmdId: 4006
+   * Version: 4.7.0
+   * Obfs: ?
    * </pre>
    *
    * Protobuf type {@code SetBattlePassViewedReq}
@@ -69,10 +70,10 @@ public final class SetBattlePassViewedReqOuterClass {
               emu.grasscutter.net.proto.SetBattlePassViewedReqOuterClass.SetBattlePassViewedReq.class, emu.grasscutter.net.proto.SetBattlePassViewedReqOuterClass.SetBattlePassViewedReq.Builder.class);
     }
 
-    public static final int SCHEDULE_ID_FIELD_NUMBER = 2;
+    public static final int SCHEDULE_ID_FIELD_NUMBER = 3;
     private int scheduleId_;
     /**
-     * <code>uint32 schedule_id = 2;</code>
+     * <code>uint32 schedule_id = 3;</code>
      * @return The scheduleId.
      */
     @java.lang.Override
@@ -95,7 +96,7 @@ public final class SetBattlePassViewedReqOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (scheduleId_ != 0) {
-        output.writeUInt32(2, scheduleId_);
+        output.writeUInt32(3, scheduleId_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -108,7 +109,7 @@ public final class SetBattlePassViewedReqOuterClass {
       size = 0;
       if (scheduleId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(2, scheduleId_);
+          .computeUInt32Size(3, scheduleId_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -237,8 +238,9 @@ public final class SetBattlePassViewedReqOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 7320
-     * Obf: KKIGJEPPADN
+     * CmdId: 4006
+     * Version: 4.7.0
+     * Obfs: ?
      * </pre>
      *
      * Protobuf type {@code SetBattlePassViewedReq}
@@ -379,11 +381,11 @@ public final class SetBattlePassViewedReqOuterClass {
               case 0:
                 done = true;
                 break;
-              case 16: {
+              case 24: {
                 scheduleId_ = input.readUInt32();
 
                 break;
-              } // case 16
+              } // case 24
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -402,7 +404,7 @@ public final class SetBattlePassViewedReqOuterClass {
 
       private int scheduleId_ ;
       /**
-       * <code>uint32 schedule_id = 2;</code>
+       * <code>uint32 schedule_id = 3;</code>
        * @return The scheduleId.
        */
       @java.lang.Override
@@ -410,7 +412,7 @@ public final class SetBattlePassViewedReqOuterClass {
         return scheduleId_;
       }
       /**
-       * <code>uint32 schedule_id = 2;</code>
+       * <code>uint32 schedule_id = 3;</code>
        * @param value The scheduleId to set.
        * @return This builder for chaining.
        */
@@ -421,7 +423,7 @@ public final class SetBattlePassViewedReqOuterClass {
         return this;
       }
       /**
-       * <code>uint32 schedule_id = 2;</code>
+       * <code>uint32 schedule_id = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearScheduleId() {
@@ -509,7 +511,7 @@ public final class SetBattlePassViewedReqOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\034SetBattlePassViewedReq.proto\"-\n\026SetBat" +
-      "tlePassViewedReq\022\023\n\013schedule_id\030\002 \001(\rB\033\n" +
+      "tlePassViewedReq\022\023\n\013schedule_id\030\003 \001(\rB\033\n" +
       "\031emu.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

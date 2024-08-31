@@ -143,6 +143,103 @@ public final class SalesmanActivityDetailInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private SalesmanActivityDetailInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              pNGNAEEEEHC_ = input.readBool();
+              break;
+            }
+            case 16: {
+
+              fNPJPBEODBN_ = input.readBool();
+              break;
+            }
+            case 24: {
+
+              gCGDGLAKAIC_ = input.readUInt32();
+              break;
+            }
+            case 32: {
+
+              dayIndex_ = input.readUInt32();
+              break;
+            }
+            case 50: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                selectedRewardIdMap_ = com.google.protobuf.MapField.newMapField(
+                    SelectedRewardIdMapDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
+              selectedRewardIdMap__ = input.readMessage(
+                  SelectedRewardIdMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              selectedRewardIdMap_.getMutableMap().put(
+                  selectedRewardIdMap__.getKey(), selectedRewardIdMap__.getValue());
+              break;
+            }
+            case 64: {
+
+              dayRewardId_ = input.readUInt32();
+              break;
+            }
+            case 72: {
+
+              aFJBNMCAMOB_ = input.readUInt32();
+              break;
+            }
+            case 96: {
+              int rawValue = input.readEnum();
+
+              status_ = rawValue;
+              break;
+            }
+            case 112: {
+
+              cCKNCIGDIDH_ = input.readUInt32();
+              break;
+            }
+            case 120: {
+
+              hCAIPINLEJC_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.SalesmanActivityDetailInfoOuterClass.internal_static_SalesmanActivityDetailInfo_descriptor;
@@ -403,7 +500,7 @@ public final class SalesmanActivityDetailInfoOuterClass {
       if (hCAIPINLEJC_ != 0) {
         output.writeUInt32(15, hCAIPINLEJC_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -458,7 +555,7 @@ public final class SalesmanActivityDetailInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(15, hCAIPINLEJC_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -492,7 +589,7 @@ public final class SalesmanActivityDetailInfoOuterClass {
           != other.getPNGNAEEEEHC()) return false;
       if (getHCAIPINLEJC()
           != other.getHCAIPINLEJC()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -527,7 +624,7 @@ public final class SalesmanActivityDetailInfoOuterClass {
           getPNGNAEEEEHC());
       hash = (37 * hash) + HCAIPINLEJC_FIELD_NUMBER;
       hash = (53 * hash) + getHCAIPINLEJC();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -670,13 +767,18 @@ public final class SalesmanActivityDetailInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.SalesmanActivityDetailInfoOuterClass.SalesmanActivityDetailInfo.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -815,7 +917,7 @@ public final class SalesmanActivityDetailInfoOuterClass {
         if (other.getHCAIPINLEJC() != 0) {
           setHCAIPINLEJC(other.getHCAIPINLEJC());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -830,83 +932,17 @@ public final class SalesmanActivityDetailInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.SalesmanActivityDetailInfoOuterClass.SalesmanActivityDetailInfo parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                pNGNAEEEEHC_ = input.readBool();
-
-                break;
-              } // case 8
-              case 16: {
-                fNPJPBEODBN_ = input.readBool();
-
-                break;
-              } // case 16
-              case 24: {
-                gCGDGLAKAIC_ = input.readUInt32();
-
-                break;
-              } // case 24
-              case 32: {
-                dayIndex_ = input.readUInt32();
-
-                break;
-              } // case 32
-              case 50: {
-                com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
-                selectedRewardIdMap__ = input.readMessage(
-                    SelectedRewardIdMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-                internalGetMutableSelectedRewardIdMap().getMutableMap().put(
-                    selectedRewardIdMap__.getKey(), selectedRewardIdMap__.getValue());
-                break;
-              } // case 50
-              case 64: {
-                dayRewardId_ = input.readUInt32();
-
-                break;
-              } // case 64
-              case 72: {
-                aFJBNMCAMOB_ = input.readUInt32();
-
-                break;
-              } // case 72
-              case 96: {
-                status_ = input.readEnum();
-
-                break;
-              } // case 96
-              case 112: {
-                cCKNCIGDIDH_ = input.readUInt32();
-
-                break;
-              } // case 112
-              case 120: {
-                hCAIPINLEJC_ = input.readUInt32();
-
-                break;
-              } // case 120
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.SalesmanActivityDetailInfoOuterClass.SalesmanActivityDetailInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -1373,18 +1409,7 @@ public final class SalesmanActivityDetailInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new SalesmanActivityDetailInfo(input, extensionRegistry);
       }
     };
 

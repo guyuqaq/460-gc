@@ -19,15 +19,16 @@ public final class ClientLockGameTimeNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>bool is_lock = 1;</code>
+     * <code>bool is_lock = 11;</code>
      * @return The isLock.
      */
     boolean getIsLock();
   }
   /**
    * <pre>
-   * CmdId: 23994
-   * Obf: JMHDCBIFBBI
+   * 4.7.0
+   * CmdId: 7730
+   * Obf: MLKLNEJBIBK
    * </pre>
    *
    * Protobuf type {@code ClientLockGameTimeNotify}
@@ -69,10 +70,10 @@ public final class ClientLockGameTimeNotifyOuterClass {
               emu.grasscutter.net.proto.ClientLockGameTimeNotifyOuterClass.ClientLockGameTimeNotify.class, emu.grasscutter.net.proto.ClientLockGameTimeNotifyOuterClass.ClientLockGameTimeNotify.Builder.class);
     }
 
-    public static final int IS_LOCK_FIELD_NUMBER = 1;
+    public static final int IS_LOCK_FIELD_NUMBER = 11;
     private boolean isLock_;
     /**
-     * <code>bool is_lock = 1;</code>
+     * <code>bool is_lock = 11;</code>
      * @return The isLock.
      */
     @java.lang.Override
@@ -95,7 +96,7 @@ public final class ClientLockGameTimeNotifyOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (isLock_ != false) {
-        output.writeBool(1, isLock_);
+        output.writeBool(11, isLock_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -108,7 +109,7 @@ public final class ClientLockGameTimeNotifyOuterClass {
       size = 0;
       if (isLock_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(1, isLock_);
+          .computeBoolSize(11, isLock_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -238,8 +239,9 @@ public final class ClientLockGameTimeNotifyOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 23994
-     * Obf: JMHDCBIFBBI
+     * 4.7.0
+     * CmdId: 7730
+     * Obf: MLKLNEJBIBK
      * </pre>
      *
      * Protobuf type {@code ClientLockGameTimeNotify}
@@ -380,11 +382,11 @@ public final class ClientLockGameTimeNotifyOuterClass {
               case 0:
                 done = true;
                 break;
-              case 8: {
+              case 88: {
                 isLock_ = input.readBool();
 
                 break;
-              } // case 8
+              } // case 88
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -403,7 +405,7 @@ public final class ClientLockGameTimeNotifyOuterClass {
 
       private boolean isLock_ ;
       /**
-       * <code>bool is_lock = 1;</code>
+       * <code>bool is_lock = 11;</code>
        * @return The isLock.
        */
       @java.lang.Override
@@ -411,7 +413,7 @@ public final class ClientLockGameTimeNotifyOuterClass {
         return isLock_;
       }
       /**
-       * <code>bool is_lock = 1;</code>
+       * <code>bool is_lock = 11;</code>
        * @param value The isLock to set.
        * @return This builder for chaining.
        */
@@ -422,7 +424,7 @@ public final class ClientLockGameTimeNotifyOuterClass {
         return this;
       }
       /**
-       * <code>bool is_lock = 1;</code>
+       * <code>bool is_lock = 11;</code>
        * @return This builder for chaining.
        */
       public Builder clearIsLock() {
@@ -510,7 +512,7 @@ public final class ClientLockGameTimeNotifyOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\036ClientLockGameTimeNotify.proto\"+\n\030Clie" +
-      "ntLockGameTimeNotify\022\017\n\007is_lock\030\001 \001(\010B\033\n" +
+      "ntLockGameTimeNotify\022\017\n\007is_lock\030\013 \001(\010B\033\n" +
       "\031emu.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

@@ -19,15 +19,16 @@ public final class HomeSaveArrangementNoChangeReqOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 scene_id = 1;</code>
+     * <code>uint32 scene_id = 4;</code>
      * @return The sceneId.
      */
     int getSceneId();
   }
   /**
    * <pre>
-   * CmdId: 2521
-   * Obf: GPHNPONJLKO
+   * 4.7.0
+   * CmdId: 23493
+   * Obf: KOOFBAPIMEJ
    * </pre>
    *
    * Protobuf type {@code HomeSaveArrangementNoChangeReq}
@@ -69,10 +70,10 @@ public final class HomeSaveArrangementNoChangeReqOuterClass {
               emu.grasscutter.net.proto.HomeSaveArrangementNoChangeReqOuterClass.HomeSaveArrangementNoChangeReq.class, emu.grasscutter.net.proto.HomeSaveArrangementNoChangeReqOuterClass.HomeSaveArrangementNoChangeReq.Builder.class);
     }
 
-    public static final int SCENE_ID_FIELD_NUMBER = 1;
+    public static final int SCENE_ID_FIELD_NUMBER = 4;
     private int sceneId_;
     /**
-     * <code>uint32 scene_id = 1;</code>
+     * <code>uint32 scene_id = 4;</code>
      * @return The sceneId.
      */
     @java.lang.Override
@@ -95,7 +96,7 @@ public final class HomeSaveArrangementNoChangeReqOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (sceneId_ != 0) {
-        output.writeUInt32(1, sceneId_);
+        output.writeUInt32(4, sceneId_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -108,7 +109,7 @@ public final class HomeSaveArrangementNoChangeReqOuterClass {
       size = 0;
       if (sceneId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(1, sceneId_);
+          .computeUInt32Size(4, sceneId_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -237,8 +238,9 @@ public final class HomeSaveArrangementNoChangeReqOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 2521
-     * Obf: GPHNPONJLKO
+     * 4.7.0
+     * CmdId: 23493
+     * Obf: KOOFBAPIMEJ
      * </pre>
      *
      * Protobuf type {@code HomeSaveArrangementNoChangeReq}
@@ -379,11 +381,11 @@ public final class HomeSaveArrangementNoChangeReqOuterClass {
               case 0:
                 done = true;
                 break;
-              case 8: {
+              case 32: {
                 sceneId_ = input.readUInt32();
 
                 break;
-              } // case 8
+              } // case 32
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -402,7 +404,7 @@ public final class HomeSaveArrangementNoChangeReqOuterClass {
 
       private int sceneId_ ;
       /**
-       * <code>uint32 scene_id = 1;</code>
+       * <code>uint32 scene_id = 4;</code>
        * @return The sceneId.
        */
       @java.lang.Override
@@ -410,7 +412,7 @@ public final class HomeSaveArrangementNoChangeReqOuterClass {
         return sceneId_;
       }
       /**
-       * <code>uint32 scene_id = 1;</code>
+       * <code>uint32 scene_id = 4;</code>
        * @param value The sceneId to set.
        * @return This builder for chaining.
        */
@@ -421,7 +423,7 @@ public final class HomeSaveArrangementNoChangeReqOuterClass {
         return this;
       }
       /**
-       * <code>uint32 scene_id = 1;</code>
+       * <code>uint32 scene_id = 4;</code>
        * @return This builder for chaining.
        */
       public Builder clearSceneId() {
@@ -510,7 +512,7 @@ public final class HomeSaveArrangementNoChangeReqOuterClass {
     java.lang.String[] descriptorData = {
       "\n$HomeSaveArrangementNoChangeReq.proto\"2" +
       "\n\036HomeSaveArrangementNoChangeReq\022\020\n\010scen" +
-      "e_id\030\001 \001(\rB\033\n\031emu.grasscutter.net.protob" +
+      "e_id\030\004 \001(\rB\033\n\031emu.grasscutter.net.protob" +
       "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

@@ -19,33 +19,34 @@ public final class GivingRecordNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .GivingRecord giving_record_list = 4;</code>
+     * <code>repeated .GivingRecord giving_record_list = 1;</code>
      */
     java.util.List<emu.grasscutter.net.proto.GivingRecordOuterClass.GivingRecord> 
         getGivingRecordListList();
     /**
-     * <code>repeated .GivingRecord giving_record_list = 4;</code>
+     * <code>repeated .GivingRecord giving_record_list = 1;</code>
      */
     emu.grasscutter.net.proto.GivingRecordOuterClass.GivingRecord getGivingRecordList(int index);
     /**
-     * <code>repeated .GivingRecord giving_record_list = 4;</code>
+     * <code>repeated .GivingRecord giving_record_list = 1;</code>
      */
     int getGivingRecordListCount();
     /**
-     * <code>repeated .GivingRecord giving_record_list = 4;</code>
+     * <code>repeated .GivingRecord giving_record_list = 1;</code>
      */
     java.util.List<? extends emu.grasscutter.net.proto.GivingRecordOuterClass.GivingRecordOrBuilder> 
         getGivingRecordListOrBuilderList();
     /**
-     * <code>repeated .GivingRecord giving_record_list = 4;</code>
+     * <code>repeated .GivingRecord giving_record_list = 1;</code>
      */
     emu.grasscutter.net.proto.GivingRecordOuterClass.GivingRecordOrBuilder getGivingRecordListOrBuilder(
         int index);
   }
   /**
    * <pre>
-   * CmdId: 7258
-   * Obf: DPEHMENOLIB
+   * 4.7.0
+   * CmdId: 5883
+   * Obf: PPBNEEDPIFD
    * </pre>
    *
    * Protobuf type {@code GivingRecordNotify}
@@ -88,17 +89,17 @@ public final class GivingRecordNotifyOuterClass {
               emu.grasscutter.net.proto.GivingRecordNotifyOuterClass.GivingRecordNotify.class, emu.grasscutter.net.proto.GivingRecordNotifyOuterClass.GivingRecordNotify.Builder.class);
     }
 
-    public static final int GIVING_RECORD_LIST_FIELD_NUMBER = 4;
+    public static final int GIVING_RECORD_LIST_FIELD_NUMBER = 1;
     private java.util.List<emu.grasscutter.net.proto.GivingRecordOuterClass.GivingRecord> givingRecordList_;
     /**
-     * <code>repeated .GivingRecord giving_record_list = 4;</code>
+     * <code>repeated .GivingRecord giving_record_list = 1;</code>
      */
     @java.lang.Override
     public java.util.List<emu.grasscutter.net.proto.GivingRecordOuterClass.GivingRecord> getGivingRecordListList() {
       return givingRecordList_;
     }
     /**
-     * <code>repeated .GivingRecord giving_record_list = 4;</code>
+     * <code>repeated .GivingRecord giving_record_list = 1;</code>
      */
     @java.lang.Override
     public java.util.List<? extends emu.grasscutter.net.proto.GivingRecordOuterClass.GivingRecordOrBuilder> 
@@ -106,21 +107,21 @@ public final class GivingRecordNotifyOuterClass {
       return givingRecordList_;
     }
     /**
-     * <code>repeated .GivingRecord giving_record_list = 4;</code>
+     * <code>repeated .GivingRecord giving_record_list = 1;</code>
      */
     @java.lang.Override
     public int getGivingRecordListCount() {
       return givingRecordList_.size();
     }
     /**
-     * <code>repeated .GivingRecord giving_record_list = 4;</code>
+     * <code>repeated .GivingRecord giving_record_list = 1;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.GivingRecordOuterClass.GivingRecord getGivingRecordList(int index) {
       return givingRecordList_.get(index);
     }
     /**
-     * <code>repeated .GivingRecord giving_record_list = 4;</code>
+     * <code>repeated .GivingRecord giving_record_list = 1;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.GivingRecordOuterClass.GivingRecordOrBuilder getGivingRecordListOrBuilder(
@@ -143,7 +144,7 @@ public final class GivingRecordNotifyOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       for (int i = 0; i < givingRecordList_.size(); i++) {
-        output.writeMessage(4, givingRecordList_.get(i));
+        output.writeMessage(1, givingRecordList_.get(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -156,7 +157,7 @@ public final class GivingRecordNotifyOuterClass {
       size = 0;
       for (int i = 0; i < givingRecordList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, givingRecordList_.get(i));
+          .computeMessageSize(1, givingRecordList_.get(i));
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -287,8 +288,9 @@ public final class GivingRecordNotifyOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 7258
-     * Obf: DPEHMENOLIB
+     * 4.7.0
+     * CmdId: 5883
+     * Obf: PPBNEEDPIFD
      * </pre>
      *
      * Protobuf type {@code GivingRecordNotify}
@@ -466,7 +468,7 @@ public final class GivingRecordNotifyOuterClass {
               case 0:
                 done = true;
                 break;
-              case 34: {
+              case 10: {
                 emu.grasscutter.net.proto.GivingRecordOuterClass.GivingRecord m =
                     input.readMessage(
                         emu.grasscutter.net.proto.GivingRecordOuterClass.GivingRecord.parser(),
@@ -478,7 +480,7 @@ public final class GivingRecordNotifyOuterClass {
                   givingRecordListBuilder_.addMessage(m);
                 }
                 break;
-              } // case 34
+              } // case 10
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -509,7 +511,7 @@ public final class GivingRecordNotifyOuterClass {
           emu.grasscutter.net.proto.GivingRecordOuterClass.GivingRecord, emu.grasscutter.net.proto.GivingRecordOuterClass.GivingRecord.Builder, emu.grasscutter.net.proto.GivingRecordOuterClass.GivingRecordOrBuilder> givingRecordListBuilder_;
 
       /**
-       * <code>repeated .GivingRecord giving_record_list = 4;</code>
+       * <code>repeated .GivingRecord giving_record_list = 1;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.GivingRecordOuterClass.GivingRecord> getGivingRecordListList() {
         if (givingRecordListBuilder_ == null) {
@@ -519,7 +521,7 @@ public final class GivingRecordNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .GivingRecord giving_record_list = 4;</code>
+       * <code>repeated .GivingRecord giving_record_list = 1;</code>
        */
       public int getGivingRecordListCount() {
         if (givingRecordListBuilder_ == null) {
@@ -529,7 +531,7 @@ public final class GivingRecordNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .GivingRecord giving_record_list = 4;</code>
+       * <code>repeated .GivingRecord giving_record_list = 1;</code>
        */
       public emu.grasscutter.net.proto.GivingRecordOuterClass.GivingRecord getGivingRecordList(int index) {
         if (givingRecordListBuilder_ == null) {
@@ -539,7 +541,7 @@ public final class GivingRecordNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .GivingRecord giving_record_list = 4;</code>
+       * <code>repeated .GivingRecord giving_record_list = 1;</code>
        */
       public Builder setGivingRecordList(
           int index, emu.grasscutter.net.proto.GivingRecordOuterClass.GivingRecord value) {
@@ -556,7 +558,7 @@ public final class GivingRecordNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .GivingRecord giving_record_list = 4;</code>
+       * <code>repeated .GivingRecord giving_record_list = 1;</code>
        */
       public Builder setGivingRecordList(
           int index, emu.grasscutter.net.proto.GivingRecordOuterClass.GivingRecord.Builder builderForValue) {
@@ -570,7 +572,7 @@ public final class GivingRecordNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .GivingRecord giving_record_list = 4;</code>
+       * <code>repeated .GivingRecord giving_record_list = 1;</code>
        */
       public Builder addGivingRecordList(emu.grasscutter.net.proto.GivingRecordOuterClass.GivingRecord value) {
         if (givingRecordListBuilder_ == null) {
@@ -586,7 +588,7 @@ public final class GivingRecordNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .GivingRecord giving_record_list = 4;</code>
+       * <code>repeated .GivingRecord giving_record_list = 1;</code>
        */
       public Builder addGivingRecordList(
           int index, emu.grasscutter.net.proto.GivingRecordOuterClass.GivingRecord value) {
@@ -603,7 +605,7 @@ public final class GivingRecordNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .GivingRecord giving_record_list = 4;</code>
+       * <code>repeated .GivingRecord giving_record_list = 1;</code>
        */
       public Builder addGivingRecordList(
           emu.grasscutter.net.proto.GivingRecordOuterClass.GivingRecord.Builder builderForValue) {
@@ -617,7 +619,7 @@ public final class GivingRecordNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .GivingRecord giving_record_list = 4;</code>
+       * <code>repeated .GivingRecord giving_record_list = 1;</code>
        */
       public Builder addGivingRecordList(
           int index, emu.grasscutter.net.proto.GivingRecordOuterClass.GivingRecord.Builder builderForValue) {
@@ -631,7 +633,7 @@ public final class GivingRecordNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .GivingRecord giving_record_list = 4;</code>
+       * <code>repeated .GivingRecord giving_record_list = 1;</code>
        */
       public Builder addAllGivingRecordList(
           java.lang.Iterable<? extends emu.grasscutter.net.proto.GivingRecordOuterClass.GivingRecord> values) {
@@ -646,7 +648,7 @@ public final class GivingRecordNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .GivingRecord giving_record_list = 4;</code>
+       * <code>repeated .GivingRecord giving_record_list = 1;</code>
        */
       public Builder clearGivingRecordList() {
         if (givingRecordListBuilder_ == null) {
@@ -659,7 +661,7 @@ public final class GivingRecordNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .GivingRecord giving_record_list = 4;</code>
+       * <code>repeated .GivingRecord giving_record_list = 1;</code>
        */
       public Builder removeGivingRecordList(int index) {
         if (givingRecordListBuilder_ == null) {
@@ -672,14 +674,14 @@ public final class GivingRecordNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .GivingRecord giving_record_list = 4;</code>
+       * <code>repeated .GivingRecord giving_record_list = 1;</code>
        */
       public emu.grasscutter.net.proto.GivingRecordOuterClass.GivingRecord.Builder getGivingRecordListBuilder(
           int index) {
         return getGivingRecordListFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .GivingRecord giving_record_list = 4;</code>
+       * <code>repeated .GivingRecord giving_record_list = 1;</code>
        */
       public emu.grasscutter.net.proto.GivingRecordOuterClass.GivingRecordOrBuilder getGivingRecordListOrBuilder(
           int index) {
@@ -689,7 +691,7 @@ public final class GivingRecordNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .GivingRecord giving_record_list = 4;</code>
+       * <code>repeated .GivingRecord giving_record_list = 1;</code>
        */
       public java.util.List<? extends emu.grasscutter.net.proto.GivingRecordOuterClass.GivingRecordOrBuilder> 
            getGivingRecordListOrBuilderList() {
@@ -700,14 +702,14 @@ public final class GivingRecordNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .GivingRecord giving_record_list = 4;</code>
+       * <code>repeated .GivingRecord giving_record_list = 1;</code>
        */
       public emu.grasscutter.net.proto.GivingRecordOuterClass.GivingRecord.Builder addGivingRecordListBuilder() {
         return getGivingRecordListFieldBuilder().addBuilder(
             emu.grasscutter.net.proto.GivingRecordOuterClass.GivingRecord.getDefaultInstance());
       }
       /**
-       * <code>repeated .GivingRecord giving_record_list = 4;</code>
+       * <code>repeated .GivingRecord giving_record_list = 1;</code>
        */
       public emu.grasscutter.net.proto.GivingRecordOuterClass.GivingRecord.Builder addGivingRecordListBuilder(
           int index) {
@@ -715,7 +717,7 @@ public final class GivingRecordNotifyOuterClass {
             index, emu.grasscutter.net.proto.GivingRecordOuterClass.GivingRecord.getDefaultInstance());
       }
       /**
-       * <code>repeated .GivingRecord giving_record_list = 4;</code>
+       * <code>repeated .GivingRecord giving_record_list = 1;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.GivingRecordOuterClass.GivingRecord.Builder> 
            getGivingRecordListBuilderList() {
@@ -815,7 +817,7 @@ public final class GivingRecordNotifyOuterClass {
     java.lang.String[] descriptorData = {
       "\n\030GivingRecordNotify.proto\032\022GivingRecord" +
       ".proto\"?\n\022GivingRecordNotify\022)\n\022giving_r" +
-      "ecord_list\030\004 \003(\0132\r.GivingRecordB\033\n\031emu.g" +
+      "ecord_list\030\001 \003(\0132\r.GivingRecordB\033\n\031emu.g" +
       "rasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

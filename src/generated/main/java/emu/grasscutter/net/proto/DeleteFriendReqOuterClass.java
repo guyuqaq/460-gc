@@ -19,15 +19,15 @@ public final class DeleteFriendReqOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 target_uid = 11;</code>
+     * <code>uint32 target_uid = 4;</code>
      * @return The targetUid.
      */
     int getTargetUid();
   }
   /**
    * <pre>
-   * CmdId: 3037
-   * Obf: PALNPHNIHDF
+   * CmdId: 26120
+   * Obf: BPDICGMOACG
    * </pre>
    *
    * Protobuf type {@code DeleteFriendReq}
@@ -69,10 +69,10 @@ public final class DeleteFriendReqOuterClass {
               emu.grasscutter.net.proto.DeleteFriendReqOuterClass.DeleteFriendReq.class, emu.grasscutter.net.proto.DeleteFriendReqOuterClass.DeleteFriendReq.Builder.class);
     }
 
-    public static final int TARGET_UID_FIELD_NUMBER = 11;
+    public static final int TARGET_UID_FIELD_NUMBER = 4;
     private int targetUid_;
     /**
-     * <code>uint32 target_uid = 11;</code>
+     * <code>uint32 target_uid = 4;</code>
      * @return The targetUid.
      */
     @java.lang.Override
@@ -95,7 +95,7 @@ public final class DeleteFriendReqOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (targetUid_ != 0) {
-        output.writeUInt32(11, targetUid_);
+        output.writeUInt32(4, targetUid_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -108,7 +108,7 @@ public final class DeleteFriendReqOuterClass {
       size = 0;
       if (targetUid_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(11, targetUid_);
+          .computeUInt32Size(4, targetUid_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -237,8 +237,8 @@ public final class DeleteFriendReqOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 3037
-     * Obf: PALNPHNIHDF
+     * CmdId: 26120
+     * Obf: BPDICGMOACG
      * </pre>
      *
      * Protobuf type {@code DeleteFriendReq}
@@ -379,11 +379,11 @@ public final class DeleteFriendReqOuterClass {
               case 0:
                 done = true;
                 break;
-              case 88: {
+              case 32: {
                 targetUid_ = input.readUInt32();
 
                 break;
-              } // case 88
+              } // case 32
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -402,7 +402,7 @@ public final class DeleteFriendReqOuterClass {
 
       private int targetUid_ ;
       /**
-       * <code>uint32 target_uid = 11;</code>
+       * <code>uint32 target_uid = 4;</code>
        * @return The targetUid.
        */
       @java.lang.Override
@@ -410,7 +410,7 @@ public final class DeleteFriendReqOuterClass {
         return targetUid_;
       }
       /**
-       * <code>uint32 target_uid = 11;</code>
+       * <code>uint32 target_uid = 4;</code>
        * @param value The targetUid to set.
        * @return This builder for chaining.
        */
@@ -421,7 +421,7 @@ public final class DeleteFriendReqOuterClass {
         return this;
       }
       /**
-       * <code>uint32 target_uid = 11;</code>
+       * <code>uint32 target_uid = 4;</code>
        * @return This builder for chaining.
        */
       public Builder clearTargetUid() {
@@ -509,7 +509,7 @@ public final class DeleteFriendReqOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\025DeleteFriendReq.proto\"%\n\017DeleteFriendR" +
-      "eq\022\022\n\ntarget_uid\030\013 \001(\rB\033\n\031emu.grasscutte" +
+      "eq\022\022\n\ntarget_uid\030\004 \001(\rB\033\n\031emu.grasscutte" +
       "r.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

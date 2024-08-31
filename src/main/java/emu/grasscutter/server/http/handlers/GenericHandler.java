@@ -88,6 +88,6 @@ public final class GenericHandler implements Router {
         // webstatic-sea.hoyoverse.com
         javalin.get("/admin/mi18n/plat_oversea/*", new WebStaticVersionResponse());
 
-        javalin.get("/api/glaze/status/gs40", GenericHandler::serverStatus);
+        javalin.get("/status/server", GenericHandler::serverStatus);
     }
 }

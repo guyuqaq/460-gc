@@ -19,32 +19,27 @@ public final class HomeAvatarTalkRspOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int32 retcode = 15;</code>
+     * <code>int32 retcode = 3;</code>
      * @return The retcode.
      */
     int getRetcode();
 
     /**
-     * <code>.HomeAvatarTalkFinishInfo avatar_talk_info = 11;</code>
+     * <code>.HomeAvatarTalkFinishInfo avatar_talk_info = 8;</code>
      * @return Whether the avatarTalkInfo field is set.
      */
     boolean hasAvatarTalkInfo();
     /**
-     * <code>.HomeAvatarTalkFinishInfo avatar_talk_info = 11;</code>
+     * <code>.HomeAvatarTalkFinishInfo avatar_talk_info = 8;</code>
      * @return The avatarTalkInfo.
      */
     emu.grasscutter.net.proto.HomeAvatarTalkFinishInfoOuterClass.HomeAvatarTalkFinishInfo getAvatarTalkInfo();
     /**
-     * <code>.HomeAvatarTalkFinishInfo avatar_talk_info = 11;</code>
+     * <code>.HomeAvatarTalkFinishInfo avatar_talk_info = 8;</code>
      */
     emu.grasscutter.net.proto.HomeAvatarTalkFinishInfoOuterClass.HomeAvatarTalkFinishInfoOrBuilder getAvatarTalkInfoOrBuilder();
   }
   /**
-   * <pre>
-   * CmdId: 1147
-   * Obf: BMKBKBJBHLM
-   * </pre>
-   *
    * Protobuf type {@code HomeAvatarTalkRsp}
    */
   public static final class HomeAvatarTalkRsp extends
@@ -71,6 +66,61 @@ public final class HomeAvatarTalkRspOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private HomeAvatarTalkRsp(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 24: {
+
+              retcode_ = input.readInt32();
+              break;
+            }
+            case 66: {
+              emu.grasscutter.net.proto.HomeAvatarTalkFinishInfoOuterClass.HomeAvatarTalkFinishInfo.Builder subBuilder = null;
+              if (avatarTalkInfo_ != null) {
+                subBuilder = avatarTalkInfo_.toBuilder();
+              }
+              avatarTalkInfo_ = input.readMessage(emu.grasscutter.net.proto.HomeAvatarTalkFinishInfoOuterClass.HomeAvatarTalkFinishInfo.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(avatarTalkInfo_);
+                avatarTalkInfo_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.HomeAvatarTalkRspOuterClass.internal_static_HomeAvatarTalkRsp_descriptor;
@@ -84,10 +134,10 @@ public final class HomeAvatarTalkRspOuterClass {
               emu.grasscutter.net.proto.HomeAvatarTalkRspOuterClass.HomeAvatarTalkRsp.class, emu.grasscutter.net.proto.HomeAvatarTalkRspOuterClass.HomeAvatarTalkRsp.Builder.class);
     }
 
-    public static final int RETCODE_FIELD_NUMBER = 15;
+    public static final int RETCODE_FIELD_NUMBER = 3;
     private int retcode_;
     /**
-     * <code>int32 retcode = 15;</code>
+     * <code>int32 retcode = 3;</code>
      * @return The retcode.
      */
     @java.lang.Override
@@ -95,10 +145,10 @@ public final class HomeAvatarTalkRspOuterClass {
       return retcode_;
     }
 
-    public static final int AVATAR_TALK_INFO_FIELD_NUMBER = 11;
+    public static final int AVATAR_TALK_INFO_FIELD_NUMBER = 8;
     private emu.grasscutter.net.proto.HomeAvatarTalkFinishInfoOuterClass.HomeAvatarTalkFinishInfo avatarTalkInfo_;
     /**
-     * <code>.HomeAvatarTalkFinishInfo avatar_talk_info = 11;</code>
+     * <code>.HomeAvatarTalkFinishInfo avatar_talk_info = 8;</code>
      * @return Whether the avatarTalkInfo field is set.
      */
     @java.lang.Override
@@ -106,7 +156,7 @@ public final class HomeAvatarTalkRspOuterClass {
       return avatarTalkInfo_ != null;
     }
     /**
-     * <code>.HomeAvatarTalkFinishInfo avatar_talk_info = 11;</code>
+     * <code>.HomeAvatarTalkFinishInfo avatar_talk_info = 8;</code>
      * @return The avatarTalkInfo.
      */
     @java.lang.Override
@@ -114,7 +164,7 @@ public final class HomeAvatarTalkRspOuterClass {
       return avatarTalkInfo_ == null ? emu.grasscutter.net.proto.HomeAvatarTalkFinishInfoOuterClass.HomeAvatarTalkFinishInfo.getDefaultInstance() : avatarTalkInfo_;
     }
     /**
-     * <code>.HomeAvatarTalkFinishInfo avatar_talk_info = 11;</code>
+     * <code>.HomeAvatarTalkFinishInfo avatar_talk_info = 8;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.HomeAvatarTalkFinishInfoOuterClass.HomeAvatarTalkFinishInfoOrBuilder getAvatarTalkInfoOrBuilder() {
@@ -135,13 +185,13 @@ public final class HomeAvatarTalkRspOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (avatarTalkInfo_ != null) {
-        output.writeMessage(11, getAvatarTalkInfo());
-      }
       if (retcode_ != 0) {
-        output.writeInt32(15, retcode_);
+        output.writeInt32(3, retcode_);
       }
-      getUnknownFields().writeTo(output);
+      if (avatarTalkInfo_ != null) {
+        output.writeMessage(8, getAvatarTalkInfo());
+      }
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -150,15 +200,15 @@ public final class HomeAvatarTalkRspOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (avatarTalkInfo_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(11, getAvatarTalkInfo());
-      }
       if (retcode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(15, retcode_);
+          .computeInt32Size(3, retcode_);
       }
-      size += getUnknownFields().getSerializedSize();
+      if (avatarTalkInfo_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, getAvatarTalkInfo());
+      }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -180,7 +230,7 @@ public final class HomeAvatarTalkRspOuterClass {
         if (!getAvatarTalkInfo()
             .equals(other.getAvatarTalkInfo())) return false;
       }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -197,7 +247,7 @@ public final class HomeAvatarTalkRspOuterClass {
         hash = (37 * hash) + AVATAR_TALK_INFO_FIELD_NUMBER;
         hash = (53 * hash) + getAvatarTalkInfo().hashCode();
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -293,11 +343,6 @@ public final class HomeAvatarTalkRspOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 1147
-     * Obf: BMKBKBJBHLM
-     * </pre>
-     *
      * Protobuf type {@code HomeAvatarTalkRsp}
      */
     public static final class Builder extends
@@ -319,13 +364,18 @@ public final class HomeAvatarTalkRspOuterClass {
 
       // Construct using emu.grasscutter.net.proto.HomeAvatarTalkRspOuterClass.HomeAvatarTalkRsp.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -424,7 +474,7 @@ public final class HomeAvatarTalkRspOuterClass {
         if (other.hasAvatarTalkInfo()) {
           mergeAvatarTalkInfo(other.getAvatarTalkInfo());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -439,48 +489,23 @@ public final class HomeAvatarTalkRspOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.HomeAvatarTalkRspOuterClass.HomeAvatarTalkRsp parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 90: {
-                input.readMessage(
-                    getAvatarTalkInfoFieldBuilder().getBuilder(),
-                    extensionRegistry);
-
-                break;
-              } // case 90
-              case 120: {
-                retcode_ = input.readInt32();
-
-                break;
-              } // case 120
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.HomeAvatarTalkRspOuterClass.HomeAvatarTalkRsp) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
 
       private int retcode_ ;
       /**
-       * <code>int32 retcode = 15;</code>
+       * <code>int32 retcode = 3;</code>
        * @return The retcode.
        */
       @java.lang.Override
@@ -488,7 +513,7 @@ public final class HomeAvatarTalkRspOuterClass {
         return retcode_;
       }
       /**
-       * <code>int32 retcode = 15;</code>
+       * <code>int32 retcode = 3;</code>
        * @param value The retcode to set.
        * @return This builder for chaining.
        */
@@ -499,7 +524,7 @@ public final class HomeAvatarTalkRspOuterClass {
         return this;
       }
       /**
-       * <code>int32 retcode = 15;</code>
+       * <code>int32 retcode = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearRetcode() {
@@ -513,14 +538,14 @@ public final class HomeAvatarTalkRspOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.HomeAvatarTalkFinishInfoOuterClass.HomeAvatarTalkFinishInfo, emu.grasscutter.net.proto.HomeAvatarTalkFinishInfoOuterClass.HomeAvatarTalkFinishInfo.Builder, emu.grasscutter.net.proto.HomeAvatarTalkFinishInfoOuterClass.HomeAvatarTalkFinishInfoOrBuilder> avatarTalkInfoBuilder_;
       /**
-       * <code>.HomeAvatarTalkFinishInfo avatar_talk_info = 11;</code>
+       * <code>.HomeAvatarTalkFinishInfo avatar_talk_info = 8;</code>
        * @return Whether the avatarTalkInfo field is set.
        */
       public boolean hasAvatarTalkInfo() {
         return avatarTalkInfoBuilder_ != null || avatarTalkInfo_ != null;
       }
       /**
-       * <code>.HomeAvatarTalkFinishInfo avatar_talk_info = 11;</code>
+       * <code>.HomeAvatarTalkFinishInfo avatar_talk_info = 8;</code>
        * @return The avatarTalkInfo.
        */
       public emu.grasscutter.net.proto.HomeAvatarTalkFinishInfoOuterClass.HomeAvatarTalkFinishInfo getAvatarTalkInfo() {
@@ -531,7 +556,7 @@ public final class HomeAvatarTalkRspOuterClass {
         }
       }
       /**
-       * <code>.HomeAvatarTalkFinishInfo avatar_talk_info = 11;</code>
+       * <code>.HomeAvatarTalkFinishInfo avatar_talk_info = 8;</code>
        */
       public Builder setAvatarTalkInfo(emu.grasscutter.net.proto.HomeAvatarTalkFinishInfoOuterClass.HomeAvatarTalkFinishInfo value) {
         if (avatarTalkInfoBuilder_ == null) {
@@ -547,7 +572,7 @@ public final class HomeAvatarTalkRspOuterClass {
         return this;
       }
       /**
-       * <code>.HomeAvatarTalkFinishInfo avatar_talk_info = 11;</code>
+       * <code>.HomeAvatarTalkFinishInfo avatar_talk_info = 8;</code>
        */
       public Builder setAvatarTalkInfo(
           emu.grasscutter.net.proto.HomeAvatarTalkFinishInfoOuterClass.HomeAvatarTalkFinishInfo.Builder builderForValue) {
@@ -561,7 +586,7 @@ public final class HomeAvatarTalkRspOuterClass {
         return this;
       }
       /**
-       * <code>.HomeAvatarTalkFinishInfo avatar_talk_info = 11;</code>
+       * <code>.HomeAvatarTalkFinishInfo avatar_talk_info = 8;</code>
        */
       public Builder mergeAvatarTalkInfo(emu.grasscutter.net.proto.HomeAvatarTalkFinishInfoOuterClass.HomeAvatarTalkFinishInfo value) {
         if (avatarTalkInfoBuilder_ == null) {
@@ -579,7 +604,7 @@ public final class HomeAvatarTalkRspOuterClass {
         return this;
       }
       /**
-       * <code>.HomeAvatarTalkFinishInfo avatar_talk_info = 11;</code>
+       * <code>.HomeAvatarTalkFinishInfo avatar_talk_info = 8;</code>
        */
       public Builder clearAvatarTalkInfo() {
         if (avatarTalkInfoBuilder_ == null) {
@@ -593,7 +618,7 @@ public final class HomeAvatarTalkRspOuterClass {
         return this;
       }
       /**
-       * <code>.HomeAvatarTalkFinishInfo avatar_talk_info = 11;</code>
+       * <code>.HomeAvatarTalkFinishInfo avatar_talk_info = 8;</code>
        */
       public emu.grasscutter.net.proto.HomeAvatarTalkFinishInfoOuterClass.HomeAvatarTalkFinishInfo.Builder getAvatarTalkInfoBuilder() {
         
@@ -601,7 +626,7 @@ public final class HomeAvatarTalkRspOuterClass {
         return getAvatarTalkInfoFieldBuilder().getBuilder();
       }
       /**
-       * <code>.HomeAvatarTalkFinishInfo avatar_talk_info = 11;</code>
+       * <code>.HomeAvatarTalkFinishInfo avatar_talk_info = 8;</code>
        */
       public emu.grasscutter.net.proto.HomeAvatarTalkFinishInfoOuterClass.HomeAvatarTalkFinishInfoOrBuilder getAvatarTalkInfoOrBuilder() {
         if (avatarTalkInfoBuilder_ != null) {
@@ -612,7 +637,7 @@ public final class HomeAvatarTalkRspOuterClass {
         }
       }
       /**
-       * <code>.HomeAvatarTalkFinishInfo avatar_talk_info = 11;</code>
+       * <code>.HomeAvatarTalkFinishInfo avatar_talk_info = 8;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.HomeAvatarTalkFinishInfoOuterClass.HomeAvatarTalkFinishInfo, emu.grasscutter.net.proto.HomeAvatarTalkFinishInfoOuterClass.HomeAvatarTalkFinishInfo.Builder, emu.grasscutter.net.proto.HomeAvatarTalkFinishInfoOuterClass.HomeAvatarTalkFinishInfoOrBuilder> 
@@ -660,18 +685,7 @@ public final class HomeAvatarTalkRspOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new HomeAvatarTalkRsp(input, extensionRegistry);
       }
     };
 
@@ -707,7 +721,7 @@ public final class HomeAvatarTalkRspOuterClass {
     java.lang.String[] descriptorData = {
       "\n\027HomeAvatarTalkRsp.proto\032\036HomeAvatarTal" +
       "kFinishInfo.proto\"Y\n\021HomeAvatarTalkRsp\022\017" +
-      "\n\007retcode\030\017 \001(\005\0223\n\020avatar_talk_info\030\013 \001(" +
+      "\n\007retcode\030\003 \001(\005\0223\n\020avatar_talk_info\030\010 \001(" +
       "\0132\031.HomeAvatarTalkFinishInfoB\033\n\031emu.gras" +
       "scutter.net.protob\006proto3"
     };

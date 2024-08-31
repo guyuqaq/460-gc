@@ -89,6 +89,62 @@ public final class GcgPveInfiniteInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private GcgPveInfiniteInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 96: {
+
+              hOGJFCLMMPC_ = input.readBool();
+              break;
+            }
+            case 114: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                mEBDFIIEPBM_ = com.google.protobuf.MapField.newMapField(
+                    MEBDFIIEPBMDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
+              mEBDFIIEPBM__ = input.readMessage(
+                  MEBDFIIEPBMDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              mEBDFIIEPBM_.getMutableMap().put(
+                  mEBDFIIEPBM__.getKey(), mEBDFIIEPBM__.getValue());
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.GcgPveInfiniteInfoOuterClass.internal_static_GcgPveInfiniteInfo_descriptor;
@@ -229,7 +285,7 @@ public final class GcgPveInfiniteInfoOuterClass {
           internalGetMEBDFIIEPBM(),
           MEBDFIIEPBMDefaultEntryHolder.defaultEntry,
           14);
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -252,7 +308,7 @@ public final class GcgPveInfiniteInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(14, mEBDFIIEPBM__);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -271,7 +327,7 @@ public final class GcgPveInfiniteInfoOuterClass {
           other.internalGetMEBDFIIEPBM())) return false;
       if (getHOGJFCLMMPC()
           != other.getHOGJFCLMMPC()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -289,7 +345,7 @@ public final class GcgPveInfiniteInfoOuterClass {
       hash = (37 * hash) + HOGJFCLMMPC_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getHOGJFCLMMPC());
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -432,13 +488,18 @@ public final class GcgPveInfiniteInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.GcgPveInfiniteInfoOuterClass.GcgPveInfiniteInfo.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -529,7 +590,7 @@ public final class GcgPveInfiniteInfoOuterClass {
         if (other.getHOGJFCLMMPC() != false) {
           setHOGJFCLMMPC(other.getHOGJFCLMMPC());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -544,43 +605,17 @@ public final class GcgPveInfiniteInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.GcgPveInfiniteInfoOuterClass.GcgPveInfiniteInfo parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 96: {
-                hOGJFCLMMPC_ = input.readBool();
-
-                break;
-              } // case 96
-              case 114: {
-                com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
-                mEBDFIIEPBM__ = input.readMessage(
-                    MEBDFIIEPBMDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-                internalGetMutableMEBDFIIEPBM().getMutableMap().put(
-                    mEBDFIIEPBM__.getKey(), mEBDFIIEPBM__.getValue());
-                break;
-              } // case 114
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.GcgPveInfiniteInfoOuterClass.GcgPveInfiniteInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -776,18 +811,7 @@ public final class GcgPveInfiniteInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new GcgPveInfiniteInfo(input, extensionRegistry);
       }
     };
 

@@ -44,16 +44,46 @@ public final class SpawnCommand implements CommandHandler {
 
     @Override
     public void execute(Player sender, Player targetPlayer, List<String> args) {
-        SpawnParameters param = new SpawnParameters();
-
-        parseIntParameters(args, param, intCommandHandlers);
-
-        // At this point, first remaining argument MUST be the id and the rest the pos
         if (args.size() < 1) {
             sendUsageMessage(sender); // Reachable if someone does `/give lv90` or similar
             throw new IllegalArgumentException();
         }
 
+        if (args.get(0).toLowerCase().contains("legacy")) {
+            String valueStr = "toggle";
+            if (args.size() < 1) {
+                valueStr = args.get(1);
+            }
+            int value = -1;
+            try {
+                value = switch (valueStr.toLowerCase()) {
+                    case "on", "true" -> 1;
+                    case "off", "false" -> 0;
+                    case "toggle" -> -1;
+                    case "all" -> -2;
+                    default -> -1;
+                };
+            } catch (NumberFormatException ignored) {
+                CommandHandler.sendTranslatedMessage(sender, "commands.execution.argument_error");
+                return;
+            }
+
+            boolean enabled = targetPlayer.isForceLegacyDrops();
+            enabled = switch (value) {
+                case -1 -> !enabled;
+                case 0 -> false;
+                default -> true;
+            };
+            CommandHandler.sendMessage(targetPlayer, "Set forced legacy drops to " + enabled);
+            targetPlayer.setForceLegacyDrops(enabled);
+            return;
+        }
+
+        SpawnParameters param = new SpawnParameters();
+
+        parseIntParameters(args, param, intCommandHandlers);
+
+        // At this point, first remaining argument MUST be the id and the rest the pos
         Position pos = new Position(targetPlayer.getPosition());
         Position rot = new Position(targetPlayer.getRotation());
 
@@ -98,20 +128,25 @@ public final class SpawnCommand implements CommandHandler {
         }
 
         param.scene = targetPlayer.getScene();
-
-        if (param.scene.getEntities().size() + param.amount > GAME_OPTIONS.sceneEntityLimit) {
-            param.amount =
-                    Math.max(
-                            Math.min(
-                                    GAME_OPTIONS.sceneEntityLimit - param.scene.getEntities().size(), param.amount),
-                            0);
-            CommandHandler.sendMessage(
-                    sender, translate(sender, "commands.spawn.limit_reached", param.amount));
-            if (param.amount <= 0) {
-                return;
-            }
-        }
-
+		
+		int playerSpawnedEntitiesCount = targetPlayer.getSpawnedEntitiesCount();
+		if (playerSpawnedEntitiesCount + param.amount > 20) {
+			param.amount = 20 - playerSpawnedEntitiesCount;
+			CommandHandler.sendMessage(sender, translate(sender, "commands.spawn.limit_exceeded", param.amount));
+			if (param.amount <= 0) {
+				return;
+			}
+		}
+		
+		if (param.scene.getEntities().size() + param.amount > GAME_OPTIONS.sceneEntityLimit) {
+			param.amount = Math.max(Math.min(GAME_OPTIONS.sceneEntityLimit - param.scene.getEntities().size(), param.amount), 0);
+			CommandHandler.sendMessage(sender, translate(sender, "commands.spawn.limit_reached", param.amount));
+			if (param.amount <= 0) {
+				return;
+			}
+		}
+		
+		//spawn entities
         double maxRadius = Math.sqrt(param.amount * 0.2 / Math.PI);
         for (int i = 0; i < param.amount; i++) {
             pos = GetRandomPositionInCircle(param.pos, maxRadius).addY(3);
@@ -130,8 +165,8 @@ public final class SpawnCommand implements CommandHandler {
 
             param.scene.addEntity(entity);
         }
-        CommandHandler.sendMessage(
-                sender, translate(sender, "commands.spawn.success", param.amount, param.id));
+		targetPlayer.incrementSpawnedEntitiesCount(param.amount); // Update player's spawned entities count
+        CommandHandler.sendMessage(sender, translate(sender, "commands.spawn.success", param.amount, param.id));
     }
 
     private EntityItem createItem(ItemData itemData, SpawnParameters param, Position pos) {

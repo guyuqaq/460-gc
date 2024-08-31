@@ -153,14 +153,15 @@ public final class BreakoutActionOuterClass {
     int getOffset();
 
     /**
-     * <code>uint64 FCCNGNCIFAI = 18;</code>
-     * @return The fCCNGNCIFAI.
+     * <code>uint64 CLKEPICNJJD = 18;</code>
+     * @return The cLKEPICNJJD.
      */
-    long getFCCNGNCIFAI();
+    long getCLKEPICNJJD();
   }
   /**
    * <pre>
-   * Obf: JBHHKOPAEFB
+   * 5.0.0
+   * CmdId: 
    * </pre>
    *
    * Protobuf type {@code BreakoutAction}
@@ -190,6 +191,158 @@ public final class BreakoutActionOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private BreakoutAction(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              int rawValue = input.readEnum();
+
+              actionType_ = rawValue;
+              break;
+            }
+            case 16: {
+
+              clientGameTime_ = input.readUInt64();
+              break;
+            }
+            case 24: {
+
+              serverGameTime_ = input.readUInt64();
+              break;
+            }
+            case 32: {
+
+              isFailed_ = input.readBool();
+              break;
+            }
+            case 40: {
+
+              preIndex_ = input.readUInt32();
+              break;
+            }
+            case 48: {
+
+              newIndex_ = input.readUInt32();
+              break;
+            }
+            case 58: {
+              emu.grasscutter.net.proto.BreakoutVector2OuterClass.BreakoutVector2.Builder subBuilder = null;
+              if (pos_ != null) {
+                subBuilder = pos_.toBuilder();
+              }
+              pos_ = input.readMessage(emu.grasscutter.net.proto.BreakoutVector2OuterClass.BreakoutVector2.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(pos_);
+                pos_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 66: {
+              emu.grasscutter.net.proto.BreakoutVector2OuterClass.BreakoutVector2.Builder subBuilder = null;
+              if (moveDir_ != null) {
+                subBuilder = moveDir_.toBuilder();
+              }
+              moveDir_ = input.readMessage(emu.grasscutter.net.proto.BreakoutVector2OuterClass.BreakoutVector2.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(moveDir_);
+                moveDir_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 72: {
+
+              speed_ = input.readInt32();
+              break;
+            }
+            case 80: {
+
+              peerId_ = input.readUInt32();
+              break;
+            }
+            case 88: {
+
+              elementType_ = input.readUInt32();
+              break;
+            }
+            case 96: {
+
+              elementReactionBuff_ = input.readUInt32();
+              break;
+            }
+            case 104: {
+
+              speedIncreaseCount_ = input.readUInt32();
+              break;
+            }
+            case 112: {
+
+              hasExtraBall_ = input.readBool();
+              break;
+            }
+            case 122: {
+              emu.grasscutter.net.proto.BreakoutVector2OuterClass.BreakoutVector2.Builder subBuilder = null;
+              if (extraBallDir_ != null) {
+                subBuilder = extraBallDir_.toBuilder();
+              }
+              extraBallDir_ = input.readMessage(emu.grasscutter.net.proto.BreakoutVector2OuterClass.BreakoutVector2.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(extraBallDir_);
+                extraBallDir_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 128: {
+
+              extraBallIndex_ = input.readUInt32();
+              break;
+            }
+            case 136: {
+
+              offset_ = input.readInt32();
+              break;
+            }
+            case 144: {
+
+              cLKEPICNJJD_ = input.readUInt64();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.BreakoutActionOuterClass.internal_static_BreakoutAction_descriptor;
@@ -204,10 +357,6 @@ public final class BreakoutActionOuterClass {
     }
 
     /**
-     * <pre>
-     * Obf: BGLHJHMLHAI
-     * </pre>
-     *
      * Protobuf enum {@code BreakoutAction.BreakoutActionType}
      */
     public enum BreakoutActionType
@@ -582,15 +731,15 @@ public final class BreakoutActionOuterClass {
       return offset_;
     }
 
-    public static final int FCCNGNCIFAI_FIELD_NUMBER = 18;
-    private long fCCNGNCIFAI_;
+    public static final int CLKEPICNJJD_FIELD_NUMBER = 18;
+    private long cLKEPICNJJD_;
     /**
-     * <code>uint64 FCCNGNCIFAI = 18;</code>
-     * @return The fCCNGNCIFAI.
+     * <code>uint64 CLKEPICNJJD = 18;</code>
+     * @return The cLKEPICNJJD.
      */
     @java.lang.Override
-    public long getFCCNGNCIFAI() {
-      return fCCNGNCIFAI_;
+    public long getCLKEPICNJJD() {
+      return cLKEPICNJJD_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -658,10 +807,10 @@ public final class BreakoutActionOuterClass {
       if (offset_ != 0) {
         output.writeInt32(17, offset_);
       }
-      if (fCCNGNCIFAI_ != 0L) {
-        output.writeUInt64(18, fCCNGNCIFAI_);
+      if (cLKEPICNJJD_ != 0L) {
+        output.writeUInt64(18, cLKEPICNJJD_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -738,11 +887,11 @@ public final class BreakoutActionOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(17, offset_);
       }
-      if (fCCNGNCIFAI_ != 0L) {
+      if (cLKEPICNJJD_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(18, fCCNGNCIFAI_);
+          .computeUInt64Size(18, cLKEPICNJJD_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -799,9 +948,9 @@ public final class BreakoutActionOuterClass {
           != other.getExtraBallIndex()) return false;
       if (getOffset()
           != other.getOffset()) return false;
-      if (getFCCNGNCIFAI()
-          != other.getFCCNGNCIFAI()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (getCLKEPICNJJD()
+          != other.getCLKEPICNJJD()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -856,10 +1005,10 @@ public final class BreakoutActionOuterClass {
       hash = (53 * hash) + getExtraBallIndex();
       hash = (37 * hash) + OFFSET_FIELD_NUMBER;
       hash = (53 * hash) + getOffset();
-      hash = (37 * hash) + FCCNGNCIFAI_FIELD_NUMBER;
+      hash = (37 * hash) + CLKEPICNJJD_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getFCCNGNCIFAI());
-      hash = (29 * hash) + getUnknownFields().hashCode();
+          getCLKEPICNJJD());
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -956,7 +1105,8 @@ public final class BreakoutActionOuterClass {
     }
     /**
      * <pre>
-     * Obf: JBHHKOPAEFB
+     * 5.0.0
+     * CmdId: 
      * </pre>
      *
      * Protobuf type {@code BreakoutAction}
@@ -980,13 +1130,18 @@ public final class BreakoutActionOuterClass {
 
       // Construct using emu.grasscutter.net.proto.BreakoutActionOuterClass.BreakoutAction.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1037,7 +1192,7 @@ public final class BreakoutActionOuterClass {
 
         offset_ = 0;
 
-        fCCNGNCIFAI_ = 0L;
+        cLKEPICNJJD_ = 0L;
 
         return this;
       }
@@ -1094,7 +1249,7 @@ public final class BreakoutActionOuterClass {
         }
         result.extraBallIndex_ = extraBallIndex_;
         result.offset_ = offset_;
-        result.fCCNGNCIFAI_ = fCCNGNCIFAI_;
+        result.cLKEPICNJJD_ = cLKEPICNJJD_;
         onBuilt();
         return result;
       }
@@ -1194,10 +1349,10 @@ public final class BreakoutActionOuterClass {
         if (other.getOffset() != 0) {
           setOffset(other.getOffset());
         }
-        if (other.getFCCNGNCIFAI() != 0L) {
-          setFCCNGNCIFAI(other.getFCCNGNCIFAI());
+        if (other.getCLKEPICNJJD() != 0L) {
+          setCLKEPICNJJD(other.getCLKEPICNJJD());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -1212,126 +1367,17 @@ public final class BreakoutActionOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.BreakoutActionOuterClass.BreakoutAction parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                actionType_ = input.readEnum();
-
-                break;
-              } // case 8
-              case 16: {
-                clientGameTime_ = input.readUInt64();
-
-                break;
-              } // case 16
-              case 24: {
-                serverGameTime_ = input.readUInt64();
-
-                break;
-              } // case 24
-              case 32: {
-                isFailed_ = input.readBool();
-
-                break;
-              } // case 32
-              case 40: {
-                preIndex_ = input.readUInt32();
-
-                break;
-              } // case 40
-              case 48: {
-                newIndex_ = input.readUInt32();
-
-                break;
-              } // case 48
-              case 58: {
-                input.readMessage(
-                    getPosFieldBuilder().getBuilder(),
-                    extensionRegistry);
-
-                break;
-              } // case 58
-              case 66: {
-                input.readMessage(
-                    getMoveDirFieldBuilder().getBuilder(),
-                    extensionRegistry);
-
-                break;
-              } // case 66
-              case 72: {
-                speed_ = input.readInt32();
-
-                break;
-              } // case 72
-              case 80: {
-                peerId_ = input.readUInt32();
-
-                break;
-              } // case 80
-              case 88: {
-                elementType_ = input.readUInt32();
-
-                break;
-              } // case 88
-              case 96: {
-                elementReactionBuff_ = input.readUInt32();
-
-                break;
-              } // case 96
-              case 104: {
-                speedIncreaseCount_ = input.readUInt32();
-
-                break;
-              } // case 104
-              case 112: {
-                hasExtraBall_ = input.readBool();
-
-                break;
-              } // case 112
-              case 122: {
-                input.readMessage(
-                    getExtraBallDirFieldBuilder().getBuilder(),
-                    extensionRegistry);
-
-                break;
-              } // case 122
-              case 128: {
-                extraBallIndex_ = input.readUInt32();
-
-                break;
-              } // case 128
-              case 136: {
-                offset_ = input.readInt32();
-
-                break;
-              } // case 136
-              case 144: {
-                fCCNGNCIFAI_ = input.readUInt64();
-
-                break;
-              } // case 144
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.BreakoutActionOuterClass.BreakoutAction) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
 
@@ -2149,33 +2195,33 @@ public final class BreakoutActionOuterClass {
         return this;
       }
 
-      private long fCCNGNCIFAI_ ;
+      private long cLKEPICNJJD_ ;
       /**
-       * <code>uint64 FCCNGNCIFAI = 18;</code>
-       * @return The fCCNGNCIFAI.
+       * <code>uint64 CLKEPICNJJD = 18;</code>
+       * @return The cLKEPICNJJD.
        */
       @java.lang.Override
-      public long getFCCNGNCIFAI() {
-        return fCCNGNCIFAI_;
+      public long getCLKEPICNJJD() {
+        return cLKEPICNJJD_;
       }
       /**
-       * <code>uint64 FCCNGNCIFAI = 18;</code>
-       * @param value The fCCNGNCIFAI to set.
+       * <code>uint64 CLKEPICNJJD = 18;</code>
+       * @param value The cLKEPICNJJD to set.
        * @return This builder for chaining.
        */
-      public Builder setFCCNGNCIFAI(long value) {
+      public Builder setCLKEPICNJJD(long value) {
         
-        fCCNGNCIFAI_ = value;
+        cLKEPICNJJD_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>uint64 FCCNGNCIFAI = 18;</code>
+       * <code>uint64 CLKEPICNJJD = 18;</code>
        * @return This builder for chaining.
        */
-      public Builder clearFCCNGNCIFAI() {
+      public Builder clearCLKEPICNJJD() {
         
-        fCCNGNCIFAI_ = 0L;
+        cLKEPICNJJD_ = 0L;
         onChanged();
         return this;
       }
@@ -2212,18 +2258,7 @@ public final class BreakoutActionOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new BreakoutAction(input, extensionRegistry);
       }
     };
 
@@ -2270,7 +2305,7 @@ public final class BreakoutActionOuterClass {
       "_count\030\r \001(\r\022\026\n\016has_extra_ball\030\016 \001(\010\022(\n\016" +
       "extra_ball_dir\030\017 \001(\0132\020.BreakoutVector2\022\030" +
       "\n\020extra_ball_index\030\020 \001(\r\022\016\n\006offset\030\021 \001(\005" +
-      "\022\023\n\013FCCNGNCIFAI\030\022 \001(\004\"\236\001\n\022BreakoutAction" +
+      "\022\023\n\013CLKEPICNJJD\030\022 \001(\004\"\236\001\n\022BreakoutAction" +
       "Type\022\024\n\020ACTION_TYPE_NONE\020\000\022\033\n\027ACTION_TYP" +
       "E_LAUNCH_BALL\020\001\022\034\n\030ACTION_TYPE_DESTROY_B" +
       "ALL\020\002\022\036\n\032ACTION_TYPE_FALLING_OBJECT\020\003\022\027\n" +
@@ -2287,7 +2322,7 @@ public final class BreakoutActionOuterClass {
     internal_static_BreakoutAction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_BreakoutAction_descriptor,
-        new java.lang.String[] { "ActionType", "ClientGameTime", "ServerGameTime", "IsFailed", "PreIndex", "NewIndex", "Pos", "MoveDir", "Speed", "PeerId", "ElementType", "ElementReactionBuff", "SpeedIncreaseCount", "HasExtraBall", "ExtraBallDir", "ExtraBallIndex", "Offset", "FCCNGNCIFAI", });
+        new java.lang.String[] { "ActionType", "ClientGameTime", "ServerGameTime", "IsFailed", "PreIndex", "NewIndex", "Pos", "MoveDir", "Speed", "PeerId", "ElementType", "ElementReactionBuff", "SpeedIncreaseCount", "HasExtraBall", "ExtraBallDir", "ExtraBallIndex", "Offset", "CLKEPICNJJD", });
     emu.grasscutter.net.proto.BreakoutVector2OuterClass.getDescriptor();
   }
 

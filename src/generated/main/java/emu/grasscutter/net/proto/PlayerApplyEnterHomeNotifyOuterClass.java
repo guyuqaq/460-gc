@@ -34,15 +34,15 @@ public final class PlayerApplyEnterHomeNotifyOuterClass {
     emu.grasscutter.net.proto.OnlinePlayerInfoOuterClass.OnlinePlayerInfoOrBuilder getSrcPlayerInfoOrBuilder();
 
     /**
-     * <code>uint32 src_app_id = 12;</code>
+     * <code>uint32 src_app_id = 10;</code>
      * @return The srcAppId.
      */
     int getSrcAppId();
   }
   /**
    * <pre>
-   * CmdId: 26047
-   * Obf: HKFIJOMFLOA
+   * CmdId: 5247? OR 23074 ? (4.7.0)
+   * Obf: BDPJPLOMCHE
    * </pre>
    *
    * Protobuf type {@code PlayerApplyEnterHomeNotify}
@@ -110,10 +110,10 @@ public final class PlayerApplyEnterHomeNotifyOuterClass {
       return getSrcPlayerInfo();
     }
 
-    public static final int SRC_APP_ID_FIELD_NUMBER = 12;
+    public static final int SRC_APP_ID_FIELD_NUMBER = 10;
     private int srcAppId_;
     /**
-     * <code>uint32 src_app_id = 12;</code>
+     * <code>uint32 src_app_id = 10;</code>
      * @return The srcAppId.
      */
     @java.lang.Override
@@ -139,7 +139,7 @@ public final class PlayerApplyEnterHomeNotifyOuterClass {
         output.writeMessage(2, getSrcPlayerInfo());
       }
       if (srcAppId_ != 0) {
-        output.writeUInt32(12, srcAppId_);
+        output.writeUInt32(10, srcAppId_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -156,7 +156,7 @@ public final class PlayerApplyEnterHomeNotifyOuterClass {
       }
       if (srcAppId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(12, srcAppId_);
+          .computeUInt32Size(10, srcAppId_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -294,8 +294,8 @@ public final class PlayerApplyEnterHomeNotifyOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 26047
-     * Obf: HKFIJOMFLOA
+     * CmdId: 5247? OR 23074 ? (4.7.0)
+     * Obf: BDPJPLOMCHE
      * </pre>
      *
      * Protobuf type {@code PlayerApplyEnterHomeNotify}
@@ -457,11 +457,11 @@ public final class PlayerApplyEnterHomeNotifyOuterClass {
 
                 break;
               } // case 18
-              case 96: {
+              case 80: {
                 srcAppId_ = input.readUInt32();
 
                 break;
-              } // case 96
+              } // case 80
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -599,7 +599,7 @@ public final class PlayerApplyEnterHomeNotifyOuterClass {
 
       private int srcAppId_ ;
       /**
-       * <code>uint32 src_app_id = 12;</code>
+       * <code>uint32 src_app_id = 10;</code>
        * @return The srcAppId.
        */
       @java.lang.Override
@@ -607,7 +607,7 @@ public final class PlayerApplyEnterHomeNotifyOuterClass {
         return srcAppId_;
       }
       /**
-       * <code>uint32 src_app_id = 12;</code>
+       * <code>uint32 src_app_id = 10;</code>
        * @param value The srcAppId to set.
        * @return This builder for chaining.
        */
@@ -618,7 +618,7 @@ public final class PlayerApplyEnterHomeNotifyOuterClass {
         return this;
       }
       /**
-       * <code>uint32 src_app_id = 12;</code>
+       * <code>uint32 src_app_id = 10;</code>
        * @return This builder for chaining.
        */
       public Builder clearSrcAppId() {
@@ -708,7 +708,7 @@ public final class PlayerApplyEnterHomeNotifyOuterClass {
       "\n PlayerApplyEnterHomeNotify.proto\032\026Onli" +
       "nePlayerInfo.proto\"\\\n\032PlayerApplyEnterHo" +
       "meNotify\022*\n\017src_player_info\030\002 \001(\0132\021.Onli" +
-      "nePlayerInfo\022\022\n\nsrc_app_id\030\014 \001(\rB\033\n\031emu." +
+      "nePlayerInfo\022\022\n\nsrc_app_id\030\n \001(\rB\033\n\031emu." +
       "grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

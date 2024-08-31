@@ -19,52 +19,47 @@ public final class MarkMapReqOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.MapMarkPoint mark = 6;</code>
+     * <code>.MapMarkPoint mark = 9;</code>
      * @return Whether the mark field is set.
      */
     boolean hasMark();
     /**
-     * <code>.MapMarkPoint mark = 6;</code>
+     * <code>.MapMarkPoint mark = 9;</code>
      * @return The mark.
      */
     emu.grasscutter.net.proto.MapMarkPointOuterClass.MapMarkPoint getMark();
     /**
-     * <code>.MapMarkPoint mark = 6;</code>
+     * <code>.MapMarkPoint mark = 9;</code>
      */
     emu.grasscutter.net.proto.MapMarkPointOuterClass.MapMarkPointOrBuilder getMarkOrBuilder();
 
     /**
-     * <code>.MarkMapReq.Operation op = 3;</code>
-     * @return The enum numeric value on the wire for op.
-     */
-    int getOpValue();
-    /**
-     * <code>.MarkMapReq.Operation op = 3;</code>
-     * @return The op.
-     */
-    emu.grasscutter.net.proto.MarkMapReqOuterClass.MarkMapReq.Operation getOp();
-
-    /**
-     * <code>.MapMarkPoint old = 15;</code>
+     * <code>.MapMarkPoint old = 3;</code>
      * @return Whether the old field is set.
      */
     boolean hasOld();
     /**
-     * <code>.MapMarkPoint old = 15;</code>
+     * <code>.MapMarkPoint old = 3;</code>
      * @return The old.
      */
     emu.grasscutter.net.proto.MapMarkPointOuterClass.MapMarkPoint getOld();
     /**
-     * <code>.MapMarkPoint old = 15;</code>
+     * <code>.MapMarkPoint old = 3;</code>
      */
     emu.grasscutter.net.proto.MapMarkPointOuterClass.MapMarkPointOrBuilder getOldOrBuilder();
+
+    /**
+     * <code>.MarkMapReq.Operation op = 15;</code>
+     * @return The enum numeric value on the wire for op.
+     */
+    int getOpValue();
+    /**
+     * <code>.MarkMapReq.Operation op = 15;</code>
+     * @return The op.
+     */
+    emu.grasscutter.net.proto.MarkMapReqOuterClass.MarkMapReq.Operation getOp();
   }
   /**
-   * <pre>
-   * CmdId: 1812
-   * Obf: OIHCCJMLEGJ
-   * </pre>
-   *
    * Protobuf type {@code MarkMapReq}
    */
   public static final class MarkMapReq extends
@@ -92,6 +87,75 @@ public final class MarkMapReqOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private MarkMapReq(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 26: {
+              emu.grasscutter.net.proto.MapMarkPointOuterClass.MapMarkPoint.Builder subBuilder = null;
+              if (old_ != null) {
+                subBuilder = old_.toBuilder();
+              }
+              old_ = input.readMessage(emu.grasscutter.net.proto.MapMarkPointOuterClass.MapMarkPoint.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(old_);
+                old_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 74: {
+              emu.grasscutter.net.proto.MapMarkPointOuterClass.MapMarkPoint.Builder subBuilder = null;
+              if (mark_ != null) {
+                subBuilder = mark_.toBuilder();
+              }
+              mark_ = input.readMessage(emu.grasscutter.net.proto.MapMarkPointOuterClass.MapMarkPoint.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(mark_);
+                mark_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 120: {
+              int rawValue = input.readEnum();
+
+              op_ = rawValue;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.MarkMapReqOuterClass.internal_static_MarkMapReq_descriptor;
@@ -106,10 +170,6 @@ public final class MarkMapReqOuterClass {
     }
 
     /**
-     * <pre>
-     * Obf: NIELEKBPCIJ
-     * </pre>
-     *
      * Protobuf enum {@code MarkMapReq.Operation}
      */
     public enum Operation
@@ -235,10 +295,10 @@ public final class MarkMapReqOuterClass {
       // @@protoc_insertion_point(enum_scope:MarkMapReq.Operation)
     }
 
-    public static final int MARK_FIELD_NUMBER = 6;
+    public static final int MARK_FIELD_NUMBER = 9;
     private emu.grasscutter.net.proto.MapMarkPointOuterClass.MapMarkPoint mark_;
     /**
-     * <code>.MapMarkPoint mark = 6;</code>
+     * <code>.MapMarkPoint mark = 9;</code>
      * @return Whether the mark field is set.
      */
     @java.lang.Override
@@ -246,7 +306,7 @@ public final class MarkMapReqOuterClass {
       return mark_ != null;
     }
     /**
-     * <code>.MapMarkPoint mark = 6;</code>
+     * <code>.MapMarkPoint mark = 9;</code>
      * @return The mark.
      */
     @java.lang.Override
@@ -254,36 +314,17 @@ public final class MarkMapReqOuterClass {
       return mark_ == null ? emu.grasscutter.net.proto.MapMarkPointOuterClass.MapMarkPoint.getDefaultInstance() : mark_;
     }
     /**
-     * <code>.MapMarkPoint mark = 6;</code>
+     * <code>.MapMarkPoint mark = 9;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.MapMarkPointOuterClass.MapMarkPointOrBuilder getMarkOrBuilder() {
       return getMark();
     }
 
-    public static final int OP_FIELD_NUMBER = 3;
-    private int op_;
-    /**
-     * <code>.MarkMapReq.Operation op = 3;</code>
-     * @return The enum numeric value on the wire for op.
-     */
-    @java.lang.Override public int getOpValue() {
-      return op_;
-    }
-    /**
-     * <code>.MarkMapReq.Operation op = 3;</code>
-     * @return The op.
-     */
-    @java.lang.Override public emu.grasscutter.net.proto.MarkMapReqOuterClass.MarkMapReq.Operation getOp() {
-      @SuppressWarnings("deprecation")
-      emu.grasscutter.net.proto.MarkMapReqOuterClass.MarkMapReq.Operation result = emu.grasscutter.net.proto.MarkMapReqOuterClass.MarkMapReq.Operation.valueOf(op_);
-      return result == null ? emu.grasscutter.net.proto.MarkMapReqOuterClass.MarkMapReq.Operation.UNRECOGNIZED : result;
-    }
-
-    public static final int OLD_FIELD_NUMBER = 15;
+    public static final int OLD_FIELD_NUMBER = 3;
     private emu.grasscutter.net.proto.MapMarkPointOuterClass.MapMarkPoint old_;
     /**
-     * <code>.MapMarkPoint old = 15;</code>
+     * <code>.MapMarkPoint old = 3;</code>
      * @return Whether the old field is set.
      */
     @java.lang.Override
@@ -291,7 +332,7 @@ public final class MarkMapReqOuterClass {
       return old_ != null;
     }
     /**
-     * <code>.MapMarkPoint old = 15;</code>
+     * <code>.MapMarkPoint old = 3;</code>
      * @return The old.
      */
     @java.lang.Override
@@ -299,11 +340,30 @@ public final class MarkMapReqOuterClass {
       return old_ == null ? emu.grasscutter.net.proto.MapMarkPointOuterClass.MapMarkPoint.getDefaultInstance() : old_;
     }
     /**
-     * <code>.MapMarkPoint old = 15;</code>
+     * <code>.MapMarkPoint old = 3;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.MapMarkPointOuterClass.MapMarkPointOrBuilder getOldOrBuilder() {
       return getOld();
+    }
+
+    public static final int OP_FIELD_NUMBER = 15;
+    private int op_;
+    /**
+     * <code>.MarkMapReq.Operation op = 15;</code>
+     * @return The enum numeric value on the wire for op.
+     */
+    @java.lang.Override public int getOpValue() {
+      return op_;
+    }
+    /**
+     * <code>.MarkMapReq.Operation op = 15;</code>
+     * @return The op.
+     */
+    @java.lang.Override public emu.grasscutter.net.proto.MarkMapReqOuterClass.MarkMapReq.Operation getOp() {
+      @SuppressWarnings("deprecation")
+      emu.grasscutter.net.proto.MarkMapReqOuterClass.MarkMapReq.Operation result = emu.grasscutter.net.proto.MarkMapReqOuterClass.MarkMapReq.Operation.valueOf(op_);
+      return result == null ? emu.grasscutter.net.proto.MarkMapReqOuterClass.MarkMapReq.Operation.UNRECOGNIZED : result;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -320,16 +380,16 @@ public final class MarkMapReqOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (op_ != emu.grasscutter.net.proto.MarkMapReqOuterClass.MarkMapReq.Operation.OPERATION_ADD.getNumber()) {
-        output.writeEnum(3, op_);
+      if (old_ != null) {
+        output.writeMessage(3, getOld());
       }
       if (mark_ != null) {
-        output.writeMessage(6, getMark());
+        output.writeMessage(9, getMark());
       }
-      if (old_ != null) {
-        output.writeMessage(15, getOld());
+      if (op_ != emu.grasscutter.net.proto.MarkMapReqOuterClass.MarkMapReq.Operation.OPERATION_ADD.getNumber()) {
+        output.writeEnum(15, op_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -338,19 +398,19 @@ public final class MarkMapReqOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (op_ != emu.grasscutter.net.proto.MarkMapReqOuterClass.MarkMapReq.Operation.OPERATION_ADD.getNumber()) {
+      if (old_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(3, op_);
+          .computeMessageSize(3, getOld());
       }
       if (mark_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(6, getMark());
+          .computeMessageSize(9, getMark());
       }
-      if (old_ != null) {
+      if (op_ != emu.grasscutter.net.proto.MarkMapReqOuterClass.MarkMapReq.Operation.OPERATION_ADD.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(15, getOld());
+          .computeEnumSize(15, op_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -370,13 +430,13 @@ public final class MarkMapReqOuterClass {
         if (!getMark()
             .equals(other.getMark())) return false;
       }
-      if (op_ != other.op_) return false;
       if (hasOld() != other.hasOld()) return false;
       if (hasOld()) {
         if (!getOld()
             .equals(other.getOld())) return false;
       }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (op_ != other.op_) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -391,13 +451,13 @@ public final class MarkMapReqOuterClass {
         hash = (37 * hash) + MARK_FIELD_NUMBER;
         hash = (53 * hash) + getMark().hashCode();
       }
-      hash = (37 * hash) + OP_FIELD_NUMBER;
-      hash = (53 * hash) + op_;
       if (hasOld()) {
         hash = (37 * hash) + OLD_FIELD_NUMBER;
         hash = (53 * hash) + getOld().hashCode();
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (37 * hash) + OP_FIELD_NUMBER;
+      hash = (53 * hash) + op_;
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -493,11 +553,6 @@ public final class MarkMapReqOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 1812
-     * Obf: OIHCCJMLEGJ
-     * </pre>
-     *
      * Protobuf type {@code MarkMapReq}
      */
     public static final class Builder extends
@@ -519,13 +574,18 @@ public final class MarkMapReqOuterClass {
 
       // Construct using emu.grasscutter.net.proto.MarkMapReqOuterClass.MarkMapReq.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -536,14 +596,14 @@ public final class MarkMapReqOuterClass {
           mark_ = null;
           markBuilder_ = null;
         }
-        op_ = 0;
-
         if (oldBuilder_ == null) {
           old_ = null;
         } else {
           old_ = null;
           oldBuilder_ = null;
         }
+        op_ = 0;
+
         return this;
       }
 
@@ -575,12 +635,12 @@ public final class MarkMapReqOuterClass {
         } else {
           result.mark_ = markBuilder_.build();
         }
-        result.op_ = op_;
         if (oldBuilder_ == null) {
           result.old_ = old_;
         } else {
           result.old_ = oldBuilder_.build();
         }
+        result.op_ = op_;
         onBuilt();
         return result;
       }
@@ -632,13 +692,13 @@ public final class MarkMapReqOuterClass {
         if (other.hasMark()) {
           mergeMark(other.getMark());
         }
-        if (other.op_ != 0) {
-          setOpValue(other.getOpValue());
-        }
         if (other.hasOld()) {
           mergeOld(other.getOld());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        if (other.op_ != 0) {
+          setOpValue(other.getOpValue());
+        }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -653,49 +713,17 @@ public final class MarkMapReqOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.MarkMapReqOuterClass.MarkMapReq parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 24: {
-                op_ = input.readEnum();
-
-                break;
-              } // case 24
-              case 50: {
-                input.readMessage(
-                    getMarkFieldBuilder().getBuilder(),
-                    extensionRegistry);
-
-                break;
-              } // case 50
-              case 122: {
-                input.readMessage(
-                    getOldFieldBuilder().getBuilder(),
-                    extensionRegistry);
-
-                break;
-              } // case 122
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.MarkMapReqOuterClass.MarkMapReq) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
 
@@ -703,14 +731,14 @@ public final class MarkMapReqOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.MapMarkPointOuterClass.MapMarkPoint, emu.grasscutter.net.proto.MapMarkPointOuterClass.MapMarkPoint.Builder, emu.grasscutter.net.proto.MapMarkPointOuterClass.MapMarkPointOrBuilder> markBuilder_;
       /**
-       * <code>.MapMarkPoint mark = 6;</code>
+       * <code>.MapMarkPoint mark = 9;</code>
        * @return Whether the mark field is set.
        */
       public boolean hasMark() {
         return markBuilder_ != null || mark_ != null;
       }
       /**
-       * <code>.MapMarkPoint mark = 6;</code>
+       * <code>.MapMarkPoint mark = 9;</code>
        * @return The mark.
        */
       public emu.grasscutter.net.proto.MapMarkPointOuterClass.MapMarkPoint getMark() {
@@ -721,7 +749,7 @@ public final class MarkMapReqOuterClass {
         }
       }
       /**
-       * <code>.MapMarkPoint mark = 6;</code>
+       * <code>.MapMarkPoint mark = 9;</code>
        */
       public Builder setMark(emu.grasscutter.net.proto.MapMarkPointOuterClass.MapMarkPoint value) {
         if (markBuilder_ == null) {
@@ -737,7 +765,7 @@ public final class MarkMapReqOuterClass {
         return this;
       }
       /**
-       * <code>.MapMarkPoint mark = 6;</code>
+       * <code>.MapMarkPoint mark = 9;</code>
        */
       public Builder setMark(
           emu.grasscutter.net.proto.MapMarkPointOuterClass.MapMarkPoint.Builder builderForValue) {
@@ -751,7 +779,7 @@ public final class MarkMapReqOuterClass {
         return this;
       }
       /**
-       * <code>.MapMarkPoint mark = 6;</code>
+       * <code>.MapMarkPoint mark = 9;</code>
        */
       public Builder mergeMark(emu.grasscutter.net.proto.MapMarkPointOuterClass.MapMarkPoint value) {
         if (markBuilder_ == null) {
@@ -769,7 +797,7 @@ public final class MarkMapReqOuterClass {
         return this;
       }
       /**
-       * <code>.MapMarkPoint mark = 6;</code>
+       * <code>.MapMarkPoint mark = 9;</code>
        */
       public Builder clearMark() {
         if (markBuilder_ == null) {
@@ -783,7 +811,7 @@ public final class MarkMapReqOuterClass {
         return this;
       }
       /**
-       * <code>.MapMarkPoint mark = 6;</code>
+       * <code>.MapMarkPoint mark = 9;</code>
        */
       public emu.grasscutter.net.proto.MapMarkPointOuterClass.MapMarkPoint.Builder getMarkBuilder() {
         
@@ -791,7 +819,7 @@ public final class MarkMapReqOuterClass {
         return getMarkFieldBuilder().getBuilder();
       }
       /**
-       * <code>.MapMarkPoint mark = 6;</code>
+       * <code>.MapMarkPoint mark = 9;</code>
        */
       public emu.grasscutter.net.proto.MapMarkPointOuterClass.MapMarkPointOrBuilder getMarkOrBuilder() {
         if (markBuilder_ != null) {
@@ -802,7 +830,7 @@ public final class MarkMapReqOuterClass {
         }
       }
       /**
-       * <code>.MapMarkPoint mark = 6;</code>
+       * <code>.MapMarkPoint mark = 9;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.MapMarkPointOuterClass.MapMarkPoint, emu.grasscutter.net.proto.MapMarkPointOuterClass.MapMarkPoint.Builder, emu.grasscutter.net.proto.MapMarkPointOuterClass.MapMarkPointOrBuilder> 
@@ -818,72 +846,18 @@ public final class MarkMapReqOuterClass {
         return markBuilder_;
       }
 
-      private int op_ = 0;
-      /**
-       * <code>.MarkMapReq.Operation op = 3;</code>
-       * @return The enum numeric value on the wire for op.
-       */
-      @java.lang.Override public int getOpValue() {
-        return op_;
-      }
-      /**
-       * <code>.MarkMapReq.Operation op = 3;</code>
-       * @param value The enum numeric value on the wire for op to set.
-       * @return This builder for chaining.
-       */
-      public Builder setOpValue(int value) {
-        
-        op_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.MarkMapReq.Operation op = 3;</code>
-       * @return The op.
-       */
-      @java.lang.Override
-      public emu.grasscutter.net.proto.MarkMapReqOuterClass.MarkMapReq.Operation getOp() {
-        @SuppressWarnings("deprecation")
-        emu.grasscutter.net.proto.MarkMapReqOuterClass.MarkMapReq.Operation result = emu.grasscutter.net.proto.MarkMapReqOuterClass.MarkMapReq.Operation.valueOf(op_);
-        return result == null ? emu.grasscutter.net.proto.MarkMapReqOuterClass.MarkMapReq.Operation.UNRECOGNIZED : result;
-      }
-      /**
-       * <code>.MarkMapReq.Operation op = 3;</code>
-       * @param value The op to set.
-       * @return This builder for chaining.
-       */
-      public Builder setOp(emu.grasscutter.net.proto.MarkMapReqOuterClass.MarkMapReq.Operation value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        
-        op_ = value.getNumber();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.MarkMapReq.Operation op = 3;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearOp() {
-        
-        op_ = 0;
-        onChanged();
-        return this;
-      }
-
       private emu.grasscutter.net.proto.MapMarkPointOuterClass.MapMarkPoint old_;
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.MapMarkPointOuterClass.MapMarkPoint, emu.grasscutter.net.proto.MapMarkPointOuterClass.MapMarkPoint.Builder, emu.grasscutter.net.proto.MapMarkPointOuterClass.MapMarkPointOrBuilder> oldBuilder_;
       /**
-       * <code>.MapMarkPoint old = 15;</code>
+       * <code>.MapMarkPoint old = 3;</code>
        * @return Whether the old field is set.
        */
       public boolean hasOld() {
         return oldBuilder_ != null || old_ != null;
       }
       /**
-       * <code>.MapMarkPoint old = 15;</code>
+       * <code>.MapMarkPoint old = 3;</code>
        * @return The old.
        */
       public emu.grasscutter.net.proto.MapMarkPointOuterClass.MapMarkPoint getOld() {
@@ -894,7 +868,7 @@ public final class MarkMapReqOuterClass {
         }
       }
       /**
-       * <code>.MapMarkPoint old = 15;</code>
+       * <code>.MapMarkPoint old = 3;</code>
        */
       public Builder setOld(emu.grasscutter.net.proto.MapMarkPointOuterClass.MapMarkPoint value) {
         if (oldBuilder_ == null) {
@@ -910,7 +884,7 @@ public final class MarkMapReqOuterClass {
         return this;
       }
       /**
-       * <code>.MapMarkPoint old = 15;</code>
+       * <code>.MapMarkPoint old = 3;</code>
        */
       public Builder setOld(
           emu.grasscutter.net.proto.MapMarkPointOuterClass.MapMarkPoint.Builder builderForValue) {
@@ -924,7 +898,7 @@ public final class MarkMapReqOuterClass {
         return this;
       }
       /**
-       * <code>.MapMarkPoint old = 15;</code>
+       * <code>.MapMarkPoint old = 3;</code>
        */
       public Builder mergeOld(emu.grasscutter.net.proto.MapMarkPointOuterClass.MapMarkPoint value) {
         if (oldBuilder_ == null) {
@@ -942,7 +916,7 @@ public final class MarkMapReqOuterClass {
         return this;
       }
       /**
-       * <code>.MapMarkPoint old = 15;</code>
+       * <code>.MapMarkPoint old = 3;</code>
        */
       public Builder clearOld() {
         if (oldBuilder_ == null) {
@@ -956,7 +930,7 @@ public final class MarkMapReqOuterClass {
         return this;
       }
       /**
-       * <code>.MapMarkPoint old = 15;</code>
+       * <code>.MapMarkPoint old = 3;</code>
        */
       public emu.grasscutter.net.proto.MapMarkPointOuterClass.MapMarkPoint.Builder getOldBuilder() {
         
@@ -964,7 +938,7 @@ public final class MarkMapReqOuterClass {
         return getOldFieldBuilder().getBuilder();
       }
       /**
-       * <code>.MapMarkPoint old = 15;</code>
+       * <code>.MapMarkPoint old = 3;</code>
        */
       public emu.grasscutter.net.proto.MapMarkPointOuterClass.MapMarkPointOrBuilder getOldOrBuilder() {
         if (oldBuilder_ != null) {
@@ -975,7 +949,7 @@ public final class MarkMapReqOuterClass {
         }
       }
       /**
-       * <code>.MapMarkPoint old = 15;</code>
+       * <code>.MapMarkPoint old = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.MapMarkPointOuterClass.MapMarkPoint, emu.grasscutter.net.proto.MapMarkPointOuterClass.MapMarkPoint.Builder, emu.grasscutter.net.proto.MapMarkPointOuterClass.MapMarkPointOrBuilder> 
@@ -989,6 +963,60 @@ public final class MarkMapReqOuterClass {
           old_ = null;
         }
         return oldBuilder_;
+      }
+
+      private int op_ = 0;
+      /**
+       * <code>.MarkMapReq.Operation op = 15;</code>
+       * @return The enum numeric value on the wire for op.
+       */
+      @java.lang.Override public int getOpValue() {
+        return op_;
+      }
+      /**
+       * <code>.MarkMapReq.Operation op = 15;</code>
+       * @param value The enum numeric value on the wire for op to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOpValue(int value) {
+        
+        op_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.MarkMapReq.Operation op = 15;</code>
+       * @return The op.
+       */
+      @java.lang.Override
+      public emu.grasscutter.net.proto.MarkMapReqOuterClass.MarkMapReq.Operation getOp() {
+        @SuppressWarnings("deprecation")
+        emu.grasscutter.net.proto.MarkMapReqOuterClass.MarkMapReq.Operation result = emu.grasscutter.net.proto.MarkMapReqOuterClass.MarkMapReq.Operation.valueOf(op_);
+        return result == null ? emu.grasscutter.net.proto.MarkMapReqOuterClass.MarkMapReq.Operation.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.MarkMapReq.Operation op = 15;</code>
+       * @param value The op to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOp(emu.grasscutter.net.proto.MarkMapReqOuterClass.MarkMapReq.Operation value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        op_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.MarkMapReq.Operation op = 15;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOp() {
+        
+        op_ = 0;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -1023,18 +1051,7 @@ public final class MarkMapReqOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new MarkMapReq(input, extensionRegistry);
       }
     };
 
@@ -1068,26 +1085,29 @@ public final class MarkMapReqOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\020MarkMapReq.proto\032\022MapMarkPoint.proto\"\301" +
-      "\001\n\nMarkMapReq\022\033\n\004mark\030\006 \001(\0132\r.MapMarkPoi" +
-      "nt\022!\n\002op\030\003 \001(\0162\025.MarkMapReq.Operation\022\032\n" +
-      "\003old\030\017 \001(\0132\r.MapMarkPoint\"W\n\tOperation\022\021" +
-      "\n\rOPERATION_ADD\020\000\022\021\n\rOPERATION_MOD\020\001\022\021\n\r" +
-      "OPERATION_DEL\020\002\022\021\n\rOPERATION_GET\020\003B\033\n\031em" +
-      "u.grasscutter.net.protob\006proto3"
+      "\n\020MarkMapReq.proto\032\022MapMarkPoint.proto\032\017" +
+      "Operation.proto\"\301\001\n\nMarkMapReq\022\033\n\004mark\030\t" +
+      " \001(\0132\r.MapMarkPoint\022\032\n\003old\030\003 \001(\0132\r.MapMa" +
+      "rkPoint\022!\n\002op\030\017 \001(\0162\025.MarkMapReq.Operati" +
+      "on\"W\n\tOperation\022\021\n\rOPERATION_ADD\020\000\022\021\n\rOP" +
+      "ERATION_MOD\020\001\022\021\n\rOPERATION_DEL\020\002\022\021\n\rOPER" +
+      "ATION_GET\020\003B\033\n\031emu.grasscutter.net.proto" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           emu.grasscutter.net.proto.MapMarkPointOuterClass.getDescriptor(),
+          emu.grasscutter.net.proto.OperationOuterClass.getDescriptor(),
         });
     internal_static_MarkMapReq_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_MarkMapReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_MarkMapReq_descriptor,
-        new java.lang.String[] { "Mark", "Op", "Old", });
+        new java.lang.String[] { "Mark", "Old", "Op", });
     emu.grasscutter.net.proto.MapMarkPointOuterClass.getDescriptor();
+    emu.grasscutter.net.proto.OperationOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

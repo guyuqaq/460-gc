@@ -19,39 +19,38 @@ public final class ParentQuestInferenceDataNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .InferencePageInfo inference_page_list = 12;</code>
+     * <code>repeated .InferencePageInfo inference_page_list = 4;</code>
      */
     java.util.List<emu.grasscutter.net.proto.InferencePageInfoOuterClass.InferencePageInfo> 
         getInferencePageListList();
     /**
-     * <code>repeated .InferencePageInfo inference_page_list = 12;</code>
+     * <code>repeated .InferencePageInfo inference_page_list = 4;</code>
      */
     emu.grasscutter.net.proto.InferencePageInfoOuterClass.InferencePageInfo getInferencePageList(int index);
     /**
-     * <code>repeated .InferencePageInfo inference_page_list = 12;</code>
+     * <code>repeated .InferencePageInfo inference_page_list = 4;</code>
      */
     int getInferencePageListCount();
     /**
-     * <code>repeated .InferencePageInfo inference_page_list = 12;</code>
+     * <code>repeated .InferencePageInfo inference_page_list = 4;</code>
      */
     java.util.List<? extends emu.grasscutter.net.proto.InferencePageInfoOuterClass.InferencePageInfoOrBuilder> 
         getInferencePageListOrBuilderList();
     /**
-     * <code>repeated .InferencePageInfo inference_page_list = 12;</code>
+     * <code>repeated .InferencePageInfo inference_page_list = 4;</code>
      */
     emu.grasscutter.net.proto.InferencePageInfoOuterClass.InferencePageInfoOrBuilder getInferencePageListOrBuilder(
         int index);
 
     /**
-     * <code>uint32 parent_quest_id = 4;</code>
+     * <code>uint32 parent_quest_id = 15;</code>
      * @return The parentQuestId.
      */
     int getParentQuestId();
   }
   /**
    * <pre>
-   * CmdId: 24796
-   * Obf: LPFEFNDAENI
+   * CmdId: 1127
    * </pre>
    *
    * Protobuf type {@code ParentQuestInferenceDataNotify}
@@ -81,6 +80,61 @@ public final class ParentQuestInferenceDataNotifyOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private ParentQuestInferenceDataNotify(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 34: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                inferencePageList_ = new java.util.ArrayList<emu.grasscutter.net.proto.InferencePageInfoOuterClass.InferencePageInfo>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              inferencePageList_.add(
+                  input.readMessage(emu.grasscutter.net.proto.InferencePageInfoOuterClass.InferencePageInfo.parser(), extensionRegistry));
+              break;
+            }
+            case 120: {
+
+              parentQuestId_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          inferencePageList_ = java.util.Collections.unmodifiableList(inferencePageList_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.ParentQuestInferenceDataNotifyOuterClass.internal_static_ParentQuestInferenceDataNotify_descriptor;
@@ -94,17 +148,17 @@ public final class ParentQuestInferenceDataNotifyOuterClass {
               emu.grasscutter.net.proto.ParentQuestInferenceDataNotifyOuterClass.ParentQuestInferenceDataNotify.class, emu.grasscutter.net.proto.ParentQuestInferenceDataNotifyOuterClass.ParentQuestInferenceDataNotify.Builder.class);
     }
 
-    public static final int INFERENCE_PAGE_LIST_FIELD_NUMBER = 12;
+    public static final int INFERENCE_PAGE_LIST_FIELD_NUMBER = 4;
     private java.util.List<emu.grasscutter.net.proto.InferencePageInfoOuterClass.InferencePageInfo> inferencePageList_;
     /**
-     * <code>repeated .InferencePageInfo inference_page_list = 12;</code>
+     * <code>repeated .InferencePageInfo inference_page_list = 4;</code>
      */
     @java.lang.Override
     public java.util.List<emu.grasscutter.net.proto.InferencePageInfoOuterClass.InferencePageInfo> getInferencePageListList() {
       return inferencePageList_;
     }
     /**
-     * <code>repeated .InferencePageInfo inference_page_list = 12;</code>
+     * <code>repeated .InferencePageInfo inference_page_list = 4;</code>
      */
     @java.lang.Override
     public java.util.List<? extends emu.grasscutter.net.proto.InferencePageInfoOuterClass.InferencePageInfoOrBuilder> 
@@ -112,21 +166,21 @@ public final class ParentQuestInferenceDataNotifyOuterClass {
       return inferencePageList_;
     }
     /**
-     * <code>repeated .InferencePageInfo inference_page_list = 12;</code>
+     * <code>repeated .InferencePageInfo inference_page_list = 4;</code>
      */
     @java.lang.Override
     public int getInferencePageListCount() {
       return inferencePageList_.size();
     }
     /**
-     * <code>repeated .InferencePageInfo inference_page_list = 12;</code>
+     * <code>repeated .InferencePageInfo inference_page_list = 4;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.InferencePageInfoOuterClass.InferencePageInfo getInferencePageList(int index) {
       return inferencePageList_.get(index);
     }
     /**
-     * <code>repeated .InferencePageInfo inference_page_list = 12;</code>
+     * <code>repeated .InferencePageInfo inference_page_list = 4;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.InferencePageInfoOuterClass.InferencePageInfoOrBuilder getInferencePageListOrBuilder(
@@ -134,10 +188,10 @@ public final class ParentQuestInferenceDataNotifyOuterClass {
       return inferencePageList_.get(index);
     }
 
-    public static final int PARENT_QUEST_ID_FIELD_NUMBER = 4;
+    public static final int PARENT_QUEST_ID_FIELD_NUMBER = 15;
     private int parentQuestId_;
     /**
-     * <code>uint32 parent_quest_id = 4;</code>
+     * <code>uint32 parent_quest_id = 15;</code>
      * @return The parentQuestId.
      */
     @java.lang.Override
@@ -159,13 +213,13 @@ public final class ParentQuestInferenceDataNotifyOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (parentQuestId_ != 0) {
-        output.writeUInt32(4, parentQuestId_);
-      }
       for (int i = 0; i < inferencePageList_.size(); i++) {
-        output.writeMessage(12, inferencePageList_.get(i));
+        output.writeMessage(4, inferencePageList_.get(i));
       }
-      getUnknownFields().writeTo(output);
+      if (parentQuestId_ != 0) {
+        output.writeUInt32(15, parentQuestId_);
+      }
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -174,15 +228,15 @@ public final class ParentQuestInferenceDataNotifyOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (parentQuestId_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(4, parentQuestId_);
-      }
       for (int i = 0; i < inferencePageList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(12, inferencePageList_.get(i));
+          .computeMessageSize(4, inferencePageList_.get(i));
       }
-      size += getUnknownFields().getSerializedSize();
+      if (parentQuestId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(15, parentQuestId_);
+      }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -201,7 +255,7 @@ public final class ParentQuestInferenceDataNotifyOuterClass {
           .equals(other.getInferencePageListList())) return false;
       if (getParentQuestId()
           != other.getParentQuestId()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -218,7 +272,7 @@ public final class ParentQuestInferenceDataNotifyOuterClass {
       }
       hash = (37 * hash) + PARENT_QUEST_ID_FIELD_NUMBER;
       hash = (53 * hash) + getParentQuestId();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -315,8 +369,7 @@ public final class ParentQuestInferenceDataNotifyOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 24796
-     * Obf: LPFEFNDAENI
+     * CmdId: 1127
      * </pre>
      *
      * Protobuf type {@code ParentQuestInferenceDataNotify}
@@ -340,24 +393,29 @@ public final class ParentQuestInferenceDataNotifyOuterClass {
 
       // Construct using emu.grasscutter.net.proto.ParentQuestInferenceDataNotifyOuterClass.ParentQuestInferenceDataNotify.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getInferencePageListFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
         if (inferencePageListBuilder_ == null) {
           inferencePageList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
-          inferencePageList_ = null;
           inferencePageListBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000001);
         parentQuestId_ = 0;
 
         return this;
@@ -474,7 +532,7 @@ public final class ParentQuestInferenceDataNotifyOuterClass {
         if (other.getParentQuestId() != 0) {
           setParentQuestId(other.getParentQuestId());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -489,48 +547,17 @@ public final class ParentQuestInferenceDataNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.ParentQuestInferenceDataNotifyOuterClass.ParentQuestInferenceDataNotify parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 32: {
-                parentQuestId_ = input.readUInt32();
-
-                break;
-              } // case 32
-              case 98: {
-                emu.grasscutter.net.proto.InferencePageInfoOuterClass.InferencePageInfo m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.InferencePageInfoOuterClass.InferencePageInfo.parser(),
-                        extensionRegistry);
-                if (inferencePageListBuilder_ == null) {
-                  ensureInferencePageListIsMutable();
-                  inferencePageList_.add(m);
-                } else {
-                  inferencePageListBuilder_.addMessage(m);
-                }
-                break;
-              } // case 98
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.ParentQuestInferenceDataNotifyOuterClass.ParentQuestInferenceDataNotify) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -548,7 +575,7 @@ public final class ParentQuestInferenceDataNotifyOuterClass {
           emu.grasscutter.net.proto.InferencePageInfoOuterClass.InferencePageInfo, emu.grasscutter.net.proto.InferencePageInfoOuterClass.InferencePageInfo.Builder, emu.grasscutter.net.proto.InferencePageInfoOuterClass.InferencePageInfoOrBuilder> inferencePageListBuilder_;
 
       /**
-       * <code>repeated .InferencePageInfo inference_page_list = 12;</code>
+       * <code>repeated .InferencePageInfo inference_page_list = 4;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.InferencePageInfoOuterClass.InferencePageInfo> getInferencePageListList() {
         if (inferencePageListBuilder_ == null) {
@@ -558,7 +585,7 @@ public final class ParentQuestInferenceDataNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .InferencePageInfo inference_page_list = 12;</code>
+       * <code>repeated .InferencePageInfo inference_page_list = 4;</code>
        */
       public int getInferencePageListCount() {
         if (inferencePageListBuilder_ == null) {
@@ -568,7 +595,7 @@ public final class ParentQuestInferenceDataNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .InferencePageInfo inference_page_list = 12;</code>
+       * <code>repeated .InferencePageInfo inference_page_list = 4;</code>
        */
       public emu.grasscutter.net.proto.InferencePageInfoOuterClass.InferencePageInfo getInferencePageList(int index) {
         if (inferencePageListBuilder_ == null) {
@@ -578,7 +605,7 @@ public final class ParentQuestInferenceDataNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .InferencePageInfo inference_page_list = 12;</code>
+       * <code>repeated .InferencePageInfo inference_page_list = 4;</code>
        */
       public Builder setInferencePageList(
           int index, emu.grasscutter.net.proto.InferencePageInfoOuterClass.InferencePageInfo value) {
@@ -595,7 +622,7 @@ public final class ParentQuestInferenceDataNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .InferencePageInfo inference_page_list = 12;</code>
+       * <code>repeated .InferencePageInfo inference_page_list = 4;</code>
        */
       public Builder setInferencePageList(
           int index, emu.grasscutter.net.proto.InferencePageInfoOuterClass.InferencePageInfo.Builder builderForValue) {
@@ -609,7 +636,7 @@ public final class ParentQuestInferenceDataNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .InferencePageInfo inference_page_list = 12;</code>
+       * <code>repeated .InferencePageInfo inference_page_list = 4;</code>
        */
       public Builder addInferencePageList(emu.grasscutter.net.proto.InferencePageInfoOuterClass.InferencePageInfo value) {
         if (inferencePageListBuilder_ == null) {
@@ -625,7 +652,7 @@ public final class ParentQuestInferenceDataNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .InferencePageInfo inference_page_list = 12;</code>
+       * <code>repeated .InferencePageInfo inference_page_list = 4;</code>
        */
       public Builder addInferencePageList(
           int index, emu.grasscutter.net.proto.InferencePageInfoOuterClass.InferencePageInfo value) {
@@ -642,7 +669,7 @@ public final class ParentQuestInferenceDataNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .InferencePageInfo inference_page_list = 12;</code>
+       * <code>repeated .InferencePageInfo inference_page_list = 4;</code>
        */
       public Builder addInferencePageList(
           emu.grasscutter.net.proto.InferencePageInfoOuterClass.InferencePageInfo.Builder builderForValue) {
@@ -656,7 +683,7 @@ public final class ParentQuestInferenceDataNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .InferencePageInfo inference_page_list = 12;</code>
+       * <code>repeated .InferencePageInfo inference_page_list = 4;</code>
        */
       public Builder addInferencePageList(
           int index, emu.grasscutter.net.proto.InferencePageInfoOuterClass.InferencePageInfo.Builder builderForValue) {
@@ -670,7 +697,7 @@ public final class ParentQuestInferenceDataNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .InferencePageInfo inference_page_list = 12;</code>
+       * <code>repeated .InferencePageInfo inference_page_list = 4;</code>
        */
       public Builder addAllInferencePageList(
           java.lang.Iterable<? extends emu.grasscutter.net.proto.InferencePageInfoOuterClass.InferencePageInfo> values) {
@@ -685,7 +712,7 @@ public final class ParentQuestInferenceDataNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .InferencePageInfo inference_page_list = 12;</code>
+       * <code>repeated .InferencePageInfo inference_page_list = 4;</code>
        */
       public Builder clearInferencePageList() {
         if (inferencePageListBuilder_ == null) {
@@ -698,7 +725,7 @@ public final class ParentQuestInferenceDataNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .InferencePageInfo inference_page_list = 12;</code>
+       * <code>repeated .InferencePageInfo inference_page_list = 4;</code>
        */
       public Builder removeInferencePageList(int index) {
         if (inferencePageListBuilder_ == null) {
@@ -711,14 +738,14 @@ public final class ParentQuestInferenceDataNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .InferencePageInfo inference_page_list = 12;</code>
+       * <code>repeated .InferencePageInfo inference_page_list = 4;</code>
        */
       public emu.grasscutter.net.proto.InferencePageInfoOuterClass.InferencePageInfo.Builder getInferencePageListBuilder(
           int index) {
         return getInferencePageListFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .InferencePageInfo inference_page_list = 12;</code>
+       * <code>repeated .InferencePageInfo inference_page_list = 4;</code>
        */
       public emu.grasscutter.net.proto.InferencePageInfoOuterClass.InferencePageInfoOrBuilder getInferencePageListOrBuilder(
           int index) {
@@ -728,7 +755,7 @@ public final class ParentQuestInferenceDataNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .InferencePageInfo inference_page_list = 12;</code>
+       * <code>repeated .InferencePageInfo inference_page_list = 4;</code>
        */
       public java.util.List<? extends emu.grasscutter.net.proto.InferencePageInfoOuterClass.InferencePageInfoOrBuilder> 
            getInferencePageListOrBuilderList() {
@@ -739,14 +766,14 @@ public final class ParentQuestInferenceDataNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .InferencePageInfo inference_page_list = 12;</code>
+       * <code>repeated .InferencePageInfo inference_page_list = 4;</code>
        */
       public emu.grasscutter.net.proto.InferencePageInfoOuterClass.InferencePageInfo.Builder addInferencePageListBuilder() {
         return getInferencePageListFieldBuilder().addBuilder(
             emu.grasscutter.net.proto.InferencePageInfoOuterClass.InferencePageInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .InferencePageInfo inference_page_list = 12;</code>
+       * <code>repeated .InferencePageInfo inference_page_list = 4;</code>
        */
       public emu.grasscutter.net.proto.InferencePageInfoOuterClass.InferencePageInfo.Builder addInferencePageListBuilder(
           int index) {
@@ -754,7 +781,7 @@ public final class ParentQuestInferenceDataNotifyOuterClass {
             index, emu.grasscutter.net.proto.InferencePageInfoOuterClass.InferencePageInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .InferencePageInfo inference_page_list = 12;</code>
+       * <code>repeated .InferencePageInfo inference_page_list = 4;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.InferencePageInfoOuterClass.InferencePageInfo.Builder> 
            getInferencePageListBuilderList() {
@@ -777,7 +804,7 @@ public final class ParentQuestInferenceDataNotifyOuterClass {
 
       private int parentQuestId_ ;
       /**
-       * <code>uint32 parent_quest_id = 4;</code>
+       * <code>uint32 parent_quest_id = 15;</code>
        * @return The parentQuestId.
        */
       @java.lang.Override
@@ -785,7 +812,7 @@ public final class ParentQuestInferenceDataNotifyOuterClass {
         return parentQuestId_;
       }
       /**
-       * <code>uint32 parent_quest_id = 4;</code>
+       * <code>uint32 parent_quest_id = 15;</code>
        * @param value The parentQuestId to set.
        * @return This builder for chaining.
        */
@@ -796,7 +823,7 @@ public final class ParentQuestInferenceDataNotifyOuterClass {
         return this;
       }
       /**
-       * <code>uint32 parent_quest_id = 4;</code>
+       * <code>uint32 parent_quest_id = 15;</code>
        * @return This builder for chaining.
        */
       public Builder clearParentQuestId() {
@@ -838,18 +865,7 @@ public final class ParentQuestInferenceDataNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new ParentQuestInferenceDataNotify(input, extensionRegistry);
       }
     };
 
@@ -886,8 +902,8 @@ public final class ParentQuestInferenceDataNotifyOuterClass {
       "\n$ParentQuestInferenceDataNotify.proto\032\027" +
       "InferencePageInfo.proto\"j\n\036ParentQuestIn" +
       "ferenceDataNotify\022/\n\023inference_page_list" +
-      "\030\014 \003(\0132\022.InferencePageInfo\022\027\n\017parent_que" +
-      "st_id\030\004 \001(\rB\033\n\031emu.grasscutter.net.proto" +
+      "\030\004 \003(\0132\022.InferencePageInfo\022\027\n\017parent_que" +
+      "st_id\030\017 \001(\rB\033\n\031emu.grasscutter.net.proto" +
       "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
