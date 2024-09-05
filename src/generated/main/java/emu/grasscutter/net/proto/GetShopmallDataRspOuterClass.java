@@ -19,33 +19,31 @@ public final class GetShopmallDataRspOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated uint32 shop_type_list = 3;</code>
+     * <code>repeated uint32 shop_type_list = 6;</code>
      * @return A list containing the shopTypeList.
      */
     java.util.List<java.lang.Integer> getShopTypeListList();
     /**
-     * <code>repeated uint32 shop_type_list = 3;</code>
+     * <code>repeated uint32 shop_type_list = 6;</code>
      * @return The count of shopTypeList.
      */
     int getShopTypeListCount();
     /**
-     * <code>repeated uint32 shop_type_list = 3;</code>
+     * <code>repeated uint32 shop_type_list = 6;</code>
      * @param index The index of the element to return.
      * @return The shopTypeList at the given index.
      */
     int getShopTypeList(int index);
 
     /**
-     * <code>int32 retcode = 4;</code>
+     * <code>int32 retcode = 13;</code>
      * @return The retcode.
      */
     int getRetcode();
   }
   /**
    * <pre>
-   * CmdId: 6919(1lock),28359(2),27873(4),25495(1),24983(4),27354(1),505(1),27308(2),24348(5),1343(7),23548(1),23633(3),28511(3),29372(5),25915(1),8699(7),6693(1),3442(2),1130(3),467(3),24437(1)
-   * Version: 4.7.0
-   * Obfs: CABMIAPOIPE
+   * CmdId: 22257
    * </pre>
    *
    * Protobuf type {@code GetShopmallDataRsp}
@@ -88,10 +86,10 @@ public final class GetShopmallDataRspOuterClass {
               emu.grasscutter.net.proto.GetShopmallDataRspOuterClass.GetShopmallDataRsp.class, emu.grasscutter.net.proto.GetShopmallDataRspOuterClass.GetShopmallDataRsp.Builder.class);
     }
 
-    public static final int SHOP_TYPE_LIST_FIELD_NUMBER = 3;
+    public static final int SHOP_TYPE_LIST_FIELD_NUMBER = 6;
     private com.google.protobuf.Internal.IntList shopTypeList_;
     /**
-     * <code>repeated uint32 shop_type_list = 3;</code>
+     * <code>repeated uint32 shop_type_list = 6;</code>
      * @return A list containing the shopTypeList.
      */
     @java.lang.Override
@@ -100,14 +98,14 @@ public final class GetShopmallDataRspOuterClass {
       return shopTypeList_;
     }
     /**
-     * <code>repeated uint32 shop_type_list = 3;</code>
+     * <code>repeated uint32 shop_type_list = 6;</code>
      * @return The count of shopTypeList.
      */
     public int getShopTypeListCount() {
       return shopTypeList_.size();
     }
     /**
-     * <code>repeated uint32 shop_type_list = 3;</code>
+     * <code>repeated uint32 shop_type_list = 6;</code>
      * @param index The index of the element to return.
      * @return The shopTypeList at the given index.
      */
@@ -116,10 +114,10 @@ public final class GetShopmallDataRspOuterClass {
     }
     private int shopTypeListMemoizedSerializedSize = -1;
 
-    public static final int RETCODE_FIELD_NUMBER = 4;
+    public static final int RETCODE_FIELD_NUMBER = 13;
     private int retcode_;
     /**
-     * <code>int32 retcode = 4;</code>
+     * <code>int32 retcode = 13;</code>
      * @return The retcode.
      */
     @java.lang.Override
@@ -143,14 +141,14 @@ public final class GetShopmallDataRspOuterClass {
                         throws java.io.IOException {
       getSerializedSize();
       if (getShopTypeListList().size() > 0) {
-        output.writeUInt32NoTag(26);
+        output.writeUInt32NoTag(50);
         output.writeUInt32NoTag(shopTypeListMemoizedSerializedSize);
       }
       for (int i = 0; i < shopTypeList_.size(); i++) {
         output.writeUInt32NoTag(shopTypeList_.getInt(i));
       }
       if (retcode_ != 0) {
-        output.writeInt32(4, retcode_);
+        output.writeInt32(13, retcode_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -177,7 +175,7 @@ public final class GetShopmallDataRspOuterClass {
       }
       if (retcode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(4, retcode_);
+          .computeInt32Size(13, retcode_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -312,9 +310,7 @@ public final class GetShopmallDataRspOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 6919(1lock),28359(2),27873(4),25495(1),24983(4),27354(1),505(1),27308(2),24348(5),1343(7),23548(1),23633(3),28511(3),29372(5),25915(1),8699(7),6693(1),3442(2),1130(3),467(3),24437(1)
-     * Version: 4.7.0
-     * Obfs: CABMIAPOIPE
+     * CmdId: 22257
      * </pre>
      *
      * Protobuf type {@code GetShopmallDataRsp}
@@ -473,13 +469,13 @@ public final class GetShopmallDataRspOuterClass {
               case 0:
                 done = true;
                 break;
-              case 24: {
+              case 48: {
                 int v = input.readUInt32();
                 ensureShopTypeListIsMutable();
                 shopTypeList_.addInt(v);
                 break;
-              } // case 24
-              case 26: {
+              } // case 48
+              case 50: {
                 int length = input.readRawVarint32();
                 int limit = input.pushLimit(length);
                 ensureShopTypeListIsMutable();
@@ -488,12 +484,12 @@ public final class GetShopmallDataRspOuterClass {
                 }
                 input.popLimit(limit);
                 break;
-              } // case 26
-              case 32: {
+              } // case 50
+              case 104: {
                 retcode_ = input.readInt32();
 
                 break;
-              } // case 32
+              } // case 104
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -519,7 +515,7 @@ public final class GetShopmallDataRspOuterClass {
          }
       }
       /**
-       * <code>repeated uint32 shop_type_list = 3;</code>
+       * <code>repeated uint32 shop_type_list = 6;</code>
        * @return A list containing the shopTypeList.
        */
       public java.util.List<java.lang.Integer>
@@ -528,14 +524,14 @@ public final class GetShopmallDataRspOuterClass {
                  java.util.Collections.unmodifiableList(shopTypeList_) : shopTypeList_;
       }
       /**
-       * <code>repeated uint32 shop_type_list = 3;</code>
+       * <code>repeated uint32 shop_type_list = 6;</code>
        * @return The count of shopTypeList.
        */
       public int getShopTypeListCount() {
         return shopTypeList_.size();
       }
       /**
-       * <code>repeated uint32 shop_type_list = 3;</code>
+       * <code>repeated uint32 shop_type_list = 6;</code>
        * @param index The index of the element to return.
        * @return The shopTypeList at the given index.
        */
@@ -543,7 +539,7 @@ public final class GetShopmallDataRspOuterClass {
         return shopTypeList_.getInt(index);
       }
       /**
-       * <code>repeated uint32 shop_type_list = 3;</code>
+       * <code>repeated uint32 shop_type_list = 6;</code>
        * @param index The index to set the value at.
        * @param value The shopTypeList to set.
        * @return This builder for chaining.
@@ -556,7 +552,7 @@ public final class GetShopmallDataRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 shop_type_list = 3;</code>
+       * <code>repeated uint32 shop_type_list = 6;</code>
        * @param value The shopTypeList to add.
        * @return This builder for chaining.
        */
@@ -567,7 +563,7 @@ public final class GetShopmallDataRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 shop_type_list = 3;</code>
+       * <code>repeated uint32 shop_type_list = 6;</code>
        * @param values The shopTypeList to add.
        * @return This builder for chaining.
        */
@@ -580,7 +576,7 @@ public final class GetShopmallDataRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 shop_type_list = 3;</code>
+       * <code>repeated uint32 shop_type_list = 6;</code>
        * @return This builder for chaining.
        */
       public Builder clearShopTypeList() {
@@ -592,7 +588,7 @@ public final class GetShopmallDataRspOuterClass {
 
       private int retcode_ ;
       /**
-       * <code>int32 retcode = 4;</code>
+       * <code>int32 retcode = 13;</code>
        * @return The retcode.
        */
       @java.lang.Override
@@ -600,7 +596,7 @@ public final class GetShopmallDataRspOuterClass {
         return retcode_;
       }
       /**
-       * <code>int32 retcode = 4;</code>
+       * <code>int32 retcode = 13;</code>
        * @param value The retcode to set.
        * @return This builder for chaining.
        */
@@ -611,7 +607,7 @@ public final class GetShopmallDataRspOuterClass {
         return this;
       }
       /**
-       * <code>int32 retcode = 4;</code>
+       * <code>int32 retcode = 13;</code>
        * @return This builder for chaining.
        */
       public Builder clearRetcode() {
@@ -699,8 +695,8 @@ public final class GetShopmallDataRspOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\030GetShopmallDataRsp.proto\"=\n\022GetShopmal" +
-      "lDataRsp\022\026\n\016shop_type_list\030\003 \003(\r\022\017\n\007retc" +
-      "ode\030\004 \001(\005B\033\n\031emu.grasscutter.net.protob\006" +
+      "lDataRsp\022\026\n\016shop_type_list\030\006 \003(\r\022\017\n\007retc" +
+      "ode\030\r \001(\005B\033\n\031emu.grasscutter.net.protob\006" +
       "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
