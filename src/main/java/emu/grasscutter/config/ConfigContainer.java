@@ -366,7 +366,7 @@ public class ConfigContainer {
     }
 
     public static class JoinOptions {
-        public static String noticeMessage = "Welcome to a Grasscutter server.";
+        public String dialogMessage = "Welcome to a Grasscutter server.";
         public int[] welcomeEmotes = {2007, 1002, 4010};
         public String welcomeMessage = "Welcome to a Grasscutter server.";
         public JoinOptions.Mail welcomeMail = new JoinOptions.Mail();

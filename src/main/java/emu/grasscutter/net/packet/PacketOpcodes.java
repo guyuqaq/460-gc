@@ -339,7 +339,6 @@ public final class PacketOpcodes {
 	public static final int GetOnlinePlayerListReq = 27044;
 	public static final int GetOnlinePlayerListRsp = 9049;
 	public static final int SetPlayerPropReq = 23363;
-	public static final int GetShopmallDataReq = 21348;
 	public static final int GetActivityShopSheetInfoReq = 21652;
 	public static final int GetActivityShopSheetInfoRsp = 23513;
 	public static final int ServerAnnounceNotify = 25165;
@@ -393,7 +392,6 @@ public final class PacketOpcodes {
 	public static final int GetHomeExchangeWoodInfoReq = 5768;
 	public static final int PlayerChatReq = 21209;
 	public static final int GetWidgetQuickSlotListReq = 24642;
-	public static final int TowerAllDataReq = 2265;
 	public static final int GetAllSceneGalleryInfoReq = 20484;
 	public static final int GetPlayerHomeCompInfoReq = 23660;
 	public static final int GetFurnitureCurModuleArrangeCountReq = 22795;
@@ -440,7 +438,17 @@ public final class PacketOpcodes {
 	public static final int QueryPathRsp = 2350;
 	public static final int UnlockTransPointReq = 3518;
 	public static final int UnlockTransPointRsp = 23546;
-    
+    public static final int AntiAddictNotify = 20752;
+	public static final int TowerAllDataReq = 2265;
+
+	public static final int GetShopmallDataReq = 21348;
+    public static final int GetShopmallDataRsp = 22257;
+    public static final int BuyGoodsReq = 4523;
+	public static final int BuyGoodsRsp = 21;
+	public static final int BatchBuyGoodsReq = 28689;
+	public static final int BatchBuyGoodsRsp = 3959;
+
+	
 	public static final int TowerAllDataRsp = 50347;
 	public static final int TowerCurLevelRecordChangeNotify = 50348;
 	public static final int TowerEnterLevelReq = 50349;
@@ -506,7 +514,6 @@ public final class PacketOpcodes {
 	public static final int AddBackupAvatarTeamRsp = 50064;
 	public static final int AddNoGachaAvatarCardNotify = 50065;
 	public static final int AllWidgetDataNotify = 50066;
-	public static final int AntiAddictNotify = 50067;
 	public static final int AskAddFriendRsp = 50068;
 	public static final int AvatarChangeElementTypeReq = 50069;
 	public static final int AvatarChangeElementTypeRsp = 50070;
@@ -532,14 +539,12 @@ public final class PacketOpcodes {
 	public static final int BargainOfferPriceRsp = 50095;
 	public static final int BargainStartNotify = 50096;
 	public static final int BargainTerminateNotify = 50097;
-	public static final int BatchBuyGoodsReq = 50098;
-	public static final int BatchBuyGoodsRsp = 50099;
+
 	public static final int BeginCameraSceneLookNotify = 50100;
 	public static final int BlossomBriefInfoNotify = 50101;
 	public static final int BuyBattlePassLevelReq = 50102;
 	public static final int BuyBattlePassLevelRsp = 50103;
-	public static final int BuyGoodsReq = 50104;
-	public static final int BuyGoodsRsp = 50105;
+
 	public static final int BuyResinReq = 50106;
 	public static final int BuyResinRsp = 50107;
 	public static final int SceneEntityMoveNotify = 50110;
@@ -636,7 +641,6 @@ public final class PacketOpcodes {
 	public static final int GetDailyDungeonEntryInfoReq = 50206;
 	public static final int GetFriendShowNameCardInfoReq = 50207;
 	public static final int GetHomeLevelUpRewardRsp = 50209;
-	public static final int GetShopmallDataRsp = 22257;
 	public static final int GetUgcBriefInfoReq = 50213;
 	public static final int GetUgcBriefInfoRsp = 50214;
 	public static final int GetUgcReq = 50215;
