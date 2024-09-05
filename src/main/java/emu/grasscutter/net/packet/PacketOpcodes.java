@@ -636,7 +636,7 @@ public final class PacketOpcodes {
 	public static final int GetDailyDungeonEntryInfoReq = 50206;
 	public static final int GetFriendShowNameCardInfoReq = 50207;
 	public static final int GetHomeLevelUpRewardRsp = 50209;
-	public static final int GetShopmallDataRsp = 50212;
+	public static final int GetShopmallDataRsp = 22257;
 	public static final int GetUgcBriefInfoReq = 50213;
 	public static final int GetUgcBriefInfoRsp = 50214;
 	public static final int GetUgcReq = 50215;
