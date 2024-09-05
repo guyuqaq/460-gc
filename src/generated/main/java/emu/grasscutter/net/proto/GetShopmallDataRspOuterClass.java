@@ -36,14 +36,14 @@ public final class GetShopmallDataRspOuterClass {
     int getShopTypeList(int index);
 
     /**
-     * <code>int32 retcode = 13;</code>
+     * <code>int32 retcode = 14;</code>
      * @return The retcode.
      */
     int getRetcode();
   }
   /**
    * <pre>
-   * CmdId: 22257
+   * CmdId: 23211
    * </pre>
    *
    * Protobuf type {@code GetShopmallDataRsp}
@@ -114,10 +114,10 @@ public final class GetShopmallDataRspOuterClass {
     }
     private int shopTypeListMemoizedSerializedSize = -1;
 
-    public static final int RETCODE_FIELD_NUMBER = 13;
+    public static final int RETCODE_FIELD_NUMBER = 14;
     private int retcode_;
     /**
-     * <code>int32 retcode = 13;</code>
+     * <code>int32 retcode = 14;</code>
      * @return The retcode.
      */
     @java.lang.Override
@@ -148,7 +148,7 @@ public final class GetShopmallDataRspOuterClass {
         output.writeUInt32NoTag(shopTypeList_.getInt(i));
       }
       if (retcode_ != 0) {
-        output.writeInt32(13, retcode_);
+        output.writeInt32(14, retcode_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -175,7 +175,7 @@ public final class GetShopmallDataRspOuterClass {
       }
       if (retcode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(13, retcode_);
+          .computeInt32Size(14, retcode_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -310,7 +310,7 @@ public final class GetShopmallDataRspOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 22257
+     * CmdId: 23211
      * </pre>
      *
      * Protobuf type {@code GetShopmallDataRsp}
@@ -485,11 +485,11 @@ public final class GetShopmallDataRspOuterClass {
                 input.popLimit(limit);
                 break;
               } // case 50
-              case 104: {
+              case 112: {
                 retcode_ = input.readInt32();
 
                 break;
-              } // case 104
+              } // case 112
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -588,7 +588,7 @@ public final class GetShopmallDataRspOuterClass {
 
       private int retcode_ ;
       /**
-       * <code>int32 retcode = 13;</code>
+       * <code>int32 retcode = 14;</code>
        * @return The retcode.
        */
       @java.lang.Override
@@ -596,7 +596,7 @@ public final class GetShopmallDataRspOuterClass {
         return retcode_;
       }
       /**
-       * <code>int32 retcode = 13;</code>
+       * <code>int32 retcode = 14;</code>
        * @param value The retcode to set.
        * @return This builder for chaining.
        */
@@ -607,7 +607,7 @@ public final class GetShopmallDataRspOuterClass {
         return this;
       }
       /**
-       * <code>int32 retcode = 13;</code>
+       * <code>int32 retcode = 14;</code>
        * @return This builder for chaining.
        */
       public Builder clearRetcode() {
@@ -696,7 +696,7 @@ public final class GetShopmallDataRspOuterClass {
     java.lang.String[] descriptorData = {
       "\n\030GetShopmallDataRsp.proto\"=\n\022GetShopmal" +
       "lDataRsp\022\026\n\016shop_type_list\030\006 \003(\r\022\017\n\007retc" +
-      "ode\030\r \001(\005B\033\n\031emu.grasscutter.net.protob\006" +
+      "ode\030\016 \001(\005B\033\n\031emu.grasscutter.net.protob\006" +
       "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

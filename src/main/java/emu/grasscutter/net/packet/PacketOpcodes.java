@@ -442,7 +442,7 @@ public final class PacketOpcodes {
 	public static final int TowerAllDataReq = 2265;
 
 	public static final int GetShopmallDataReq = 21348;
-    public static final int GetShopmallDataRsp = 22257;
+    public static final int GetShopmallDataRsp = 23211;
     public static final int BuyGoodsReq = 4523;
 	public static final int BuyGoodsRsp = 21;
 	public static final int BatchBuyGoodsReq = 28689;
