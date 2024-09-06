@@ -43,10 +43,10 @@ public final class ShopGoodsOuterClass {
     int getDisableType();
 
     /**
-     * <code>uint32 min_level = 5;</code>
-     * @return The minLevel.
+     * <code>uint32 max_level = 5;</code>
+     * @return The maxLevel.
      */
-    int getMinLevel();
+    int getMaxLevel();
 
     /**
      * <code>.ItemParam goods_item = 6;</code>
@@ -76,10 +76,10 @@ public final class ShopGoodsOuterClass {
     int getHcoin();
 
     /**
-     * <code>uint32 mcoin = 9;</code>
-     * @return The mcoin.
+     * <code>uint32 min_level = 9;</code>
+     * @return The minLevel.
      */
-    int getMcoin();
+    int getMinLevel();
 
     /**
      * <code>uint32 scoin = 10;</code>
@@ -88,10 +88,10 @@ public final class ShopGoodsOuterClass {
     int getScoin();
 
     /**
-     * <code>uint32 max_level = 11;</code>
-     * @return The maxLevel.
+     * <code>uint32 mcoin = 11;</code>
+     * @return The mcoin.
      */
-    int getMaxLevel();
+    int getMcoin();
 
     /**
      * <code>repeated .ItemParam cost_item_list = 12;</code>
@@ -183,6 +183,10 @@ public final class ShopGoodsOuterClass {
     int getMNCAAIMGCJJ();
   }
   /**
+   * <pre>
+   * Version: 5.0.0 need Update
+   * </pre>
+   *
    * Protobuf type {@code ShopGoods}
    */
   public static final class ShopGoods extends
@@ -268,15 +272,15 @@ public final class ShopGoodsOuterClass {
       return disableType_;
     }
 
-    public static final int MIN_LEVEL_FIELD_NUMBER = 5;
-    private int minLevel_;
+    public static final int MAX_LEVEL_FIELD_NUMBER = 5;
+    private int maxLevel_;
     /**
-     * <code>uint32 min_level = 5;</code>
-     * @return The minLevel.
+     * <code>uint32 max_level = 5;</code>
+     * @return The maxLevel.
      */
     @java.lang.Override
-    public int getMinLevel() {
-      return minLevel_;
+    public int getMaxLevel() {
+      return maxLevel_;
     }
 
     public static final int GOODS_ITEM_FIELD_NUMBER = 6;
@@ -327,15 +331,15 @@ public final class ShopGoodsOuterClass {
       return hcoin_;
     }
 
-    public static final int MCOIN_FIELD_NUMBER = 9;
-    private int mcoin_;
+    public static final int MIN_LEVEL_FIELD_NUMBER = 9;
+    private int minLevel_;
     /**
-     * <code>uint32 mcoin = 9;</code>
-     * @return The mcoin.
+     * <code>uint32 min_level = 9;</code>
+     * @return The minLevel.
      */
     @java.lang.Override
-    public int getMcoin() {
-      return mcoin_;
+    public int getMinLevel() {
+      return minLevel_;
     }
 
     public static final int SCOIN_FIELD_NUMBER = 10;
@@ -349,15 +353,15 @@ public final class ShopGoodsOuterClass {
       return scoin_;
     }
 
-    public static final int MAX_LEVEL_FIELD_NUMBER = 11;
-    private int maxLevel_;
+    public static final int MCOIN_FIELD_NUMBER = 11;
+    private int mcoin_;
     /**
-     * <code>uint32 max_level = 11;</code>
-     * @return The maxLevel.
+     * <code>uint32 mcoin = 11;</code>
+     * @return The mcoin.
      */
     @java.lang.Override
-    public int getMaxLevel() {
-      return maxLevel_;
+    public int getMcoin() {
+      return mcoin_;
     }
 
     public static final int COST_ITEM_LIST_FIELD_NUMBER = 12;
@@ -543,8 +547,8 @@ public final class ShopGoodsOuterClass {
       if (disableType_ != 0) {
         output.writeUInt32(4, disableType_);
       }
-      if (minLevel_ != 0) {
-        output.writeUInt32(5, minLevel_);
+      if (maxLevel_ != 0) {
+        output.writeUInt32(5, maxLevel_);
       }
       if (goodsItem_ != null) {
         output.writeMessage(6, getGoodsItem());
@@ -555,14 +559,14 @@ public final class ShopGoodsOuterClass {
       if (hcoin_ != 0) {
         output.writeUInt32(8, hcoin_);
       }
-      if (mcoin_ != 0) {
-        output.writeUInt32(9, mcoin_);
+      if (minLevel_ != 0) {
+        output.writeUInt32(9, minLevel_);
       }
       if (scoin_ != 0) {
         output.writeUInt32(10, scoin_);
       }
-      if (maxLevel_ != 0) {
-        output.writeUInt32(11, maxLevel_);
+      if (mcoin_ != 0) {
+        output.writeUInt32(11, mcoin_);
       }
       for (int i = 0; i < costItemList_.size(); i++) {
         output.writeMessage(12, costItemList_.get(i));
@@ -623,9 +627,9 @@ public final class ShopGoodsOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(4, disableType_);
       }
-      if (minLevel_ != 0) {
+      if (maxLevel_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(5, minLevel_);
+          .computeUInt32Size(5, maxLevel_);
       }
       if (goodsItem_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -639,17 +643,17 @@ public final class ShopGoodsOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(8, hcoin_);
       }
-      if (mcoin_ != 0) {
+      if (minLevel_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(9, mcoin_);
+          .computeUInt32Size(9, minLevel_);
       }
       if (scoin_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(10, scoin_);
       }
-      if (maxLevel_ != 0) {
+      if (mcoin_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(11, maxLevel_);
+          .computeUInt32Size(11, mcoin_);
       }
       for (int i = 0; i < costItemList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
@@ -724,8 +728,8 @@ public final class ShopGoodsOuterClass {
           != other.getNextRefreshTime()) return false;
       if (getDisableType()
           != other.getDisableType()) return false;
-      if (getMinLevel()
-          != other.getMinLevel()) return false;
+      if (getMaxLevel()
+          != other.getMaxLevel()) return false;
       if (hasGoodsItem() != other.hasGoodsItem()) return false;
       if (hasGoodsItem()) {
         if (!getGoodsItem()
@@ -735,12 +739,12 @@ public final class ShopGoodsOuterClass {
           != other.getBuyLimit()) return false;
       if (getHcoin()
           != other.getHcoin()) return false;
-      if (getMcoin()
-          != other.getMcoin()) return false;
+      if (getMinLevel()
+          != other.getMinLevel()) return false;
       if (getScoin()
           != other.getScoin()) return false;
-      if (getMaxLevel()
-          != other.getMaxLevel()) return false;
+      if (getMcoin()
+          != other.getMcoin()) return false;
       if (!getCostItemListList()
           .equals(other.getCostItemListList())) return false;
       if (!getPreGoodsIdListList()
@@ -780,8 +784,8 @@ public final class ShopGoodsOuterClass {
       hash = (53 * hash) + getNextRefreshTime();
       hash = (37 * hash) + DISABLE_TYPE_FIELD_NUMBER;
       hash = (53 * hash) + getDisableType();
-      hash = (37 * hash) + MIN_LEVEL_FIELD_NUMBER;
-      hash = (53 * hash) + getMinLevel();
+      hash = (37 * hash) + MAX_LEVEL_FIELD_NUMBER;
+      hash = (53 * hash) + getMaxLevel();
       if (hasGoodsItem()) {
         hash = (37 * hash) + GOODS_ITEM_FIELD_NUMBER;
         hash = (53 * hash) + getGoodsItem().hashCode();
@@ -790,12 +794,12 @@ public final class ShopGoodsOuterClass {
       hash = (53 * hash) + getBuyLimit();
       hash = (37 * hash) + HCOIN_FIELD_NUMBER;
       hash = (53 * hash) + getHcoin();
-      hash = (37 * hash) + MCOIN_FIELD_NUMBER;
-      hash = (53 * hash) + getMcoin();
+      hash = (37 * hash) + MIN_LEVEL_FIELD_NUMBER;
+      hash = (53 * hash) + getMinLevel();
       hash = (37 * hash) + SCOIN_FIELD_NUMBER;
       hash = (53 * hash) + getScoin();
-      hash = (37 * hash) + MAX_LEVEL_FIELD_NUMBER;
-      hash = (53 * hash) + getMaxLevel();
+      hash = (37 * hash) + MCOIN_FIELD_NUMBER;
+      hash = (53 * hash) + getMcoin();
       if (getCostItemListCount() > 0) {
         hash = (37 * hash) + COST_ITEM_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getCostItemListList().hashCode();
@@ -917,6 +921,10 @@ public final class ShopGoodsOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Version: 5.0.0 need Update
+     * </pre>
+     *
      * Protobuf type {@code ShopGoods}
      */
     public static final class Builder extends
@@ -957,7 +965,7 @@ public final class ShopGoodsOuterClass {
 
         disableType_ = 0;
 
-        minLevel_ = 0;
+        maxLevel_ = 0;
 
         if (goodsItemBuilder_ == null) {
           goodsItem_ = null;
@@ -969,11 +977,11 @@ public final class ShopGoodsOuterClass {
 
         hcoin_ = 0;
 
-        mcoin_ = 0;
+        minLevel_ = 0;
 
         scoin_ = 0;
 
-        maxLevel_ = 0;
+        mcoin_ = 0;
 
         if (costItemListBuilder_ == null) {
           costItemList_ = java.util.Collections.emptyList();
@@ -1031,7 +1039,7 @@ public final class ShopGoodsOuterClass {
         result.beginTime_ = beginTime_;
         result.nextRefreshTime_ = nextRefreshTime_;
         result.disableType_ = disableType_;
-        result.minLevel_ = minLevel_;
+        result.maxLevel_ = maxLevel_;
         if (goodsItemBuilder_ == null) {
           result.goodsItem_ = goodsItem_;
         } else {
@@ -1039,9 +1047,9 @@ public final class ShopGoodsOuterClass {
         }
         result.buyLimit_ = buyLimit_;
         result.hcoin_ = hcoin_;
-        result.mcoin_ = mcoin_;
+        result.minLevel_ = minLevel_;
         result.scoin_ = scoin_;
-        result.maxLevel_ = maxLevel_;
+        result.mcoin_ = mcoin_;
         if (costItemListBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             costItemList_ = java.util.Collections.unmodifiableList(costItemList_);
@@ -1124,8 +1132,8 @@ public final class ShopGoodsOuterClass {
         if (other.getDisableType() != 0) {
           setDisableType(other.getDisableType());
         }
-        if (other.getMinLevel() != 0) {
-          setMinLevel(other.getMinLevel());
+        if (other.getMaxLevel() != 0) {
+          setMaxLevel(other.getMaxLevel());
         }
         if (other.hasGoodsItem()) {
           mergeGoodsItem(other.getGoodsItem());
@@ -1136,14 +1144,14 @@ public final class ShopGoodsOuterClass {
         if (other.getHcoin() != 0) {
           setHcoin(other.getHcoin());
         }
-        if (other.getMcoin() != 0) {
-          setMcoin(other.getMcoin());
+        if (other.getMinLevel() != 0) {
+          setMinLevel(other.getMinLevel());
         }
         if (other.getScoin() != 0) {
           setScoin(other.getScoin());
         }
-        if (other.getMaxLevel() != 0) {
-          setMaxLevel(other.getMaxLevel());
+        if (other.getMcoin() != 0) {
+          setMcoin(other.getMcoin());
         }
         if (costItemListBuilder_ == null) {
           if (!other.costItemList_.isEmpty()) {
@@ -1252,7 +1260,7 @@ public final class ShopGoodsOuterClass {
                 break;
               } // case 32
               case 40: {
-                minLevel_ = input.readUInt32();
+                maxLevel_ = input.readUInt32();
 
                 break;
               } // case 40
@@ -1274,7 +1282,7 @@ public final class ShopGoodsOuterClass {
                 break;
               } // case 64
               case 72: {
-                mcoin_ = input.readUInt32();
+                minLevel_ = input.readUInt32();
 
                 break;
               } // case 72
@@ -1284,7 +1292,7 @@ public final class ShopGoodsOuterClass {
                 break;
               } // case 80
               case 88: {
-                maxLevel_ = input.readUInt32();
+                mcoin_ = input.readUInt32();
 
                 break;
               } // case 88
@@ -1498,33 +1506,33 @@ public final class ShopGoodsOuterClass {
         return this;
       }
 
-      private int minLevel_ ;
+      private int maxLevel_ ;
       /**
-       * <code>uint32 min_level = 5;</code>
-       * @return The minLevel.
+       * <code>uint32 max_level = 5;</code>
+       * @return The maxLevel.
        */
       @java.lang.Override
-      public int getMinLevel() {
-        return minLevel_;
+      public int getMaxLevel() {
+        return maxLevel_;
       }
       /**
-       * <code>uint32 min_level = 5;</code>
-       * @param value The minLevel to set.
+       * <code>uint32 max_level = 5;</code>
+       * @param value The maxLevel to set.
        * @return This builder for chaining.
        */
-      public Builder setMinLevel(int value) {
+      public Builder setMaxLevel(int value) {
         
-        minLevel_ = value;
+        maxLevel_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 min_level = 5;</code>
+       * <code>uint32 max_level = 5;</code>
        * @return This builder for chaining.
        */
-      public Builder clearMinLevel() {
+      public Builder clearMaxLevel() {
         
-        minLevel_ = 0;
+        maxLevel_ = 0;
         onChanged();
         return this;
       }
@@ -1710,33 +1718,33 @@ public final class ShopGoodsOuterClass {
         return this;
       }
 
-      private int mcoin_ ;
+      private int minLevel_ ;
       /**
-       * <code>uint32 mcoin = 9;</code>
-       * @return The mcoin.
+       * <code>uint32 min_level = 9;</code>
+       * @return The minLevel.
        */
       @java.lang.Override
-      public int getMcoin() {
-        return mcoin_;
+      public int getMinLevel() {
+        return minLevel_;
       }
       /**
-       * <code>uint32 mcoin = 9;</code>
-       * @param value The mcoin to set.
+       * <code>uint32 min_level = 9;</code>
+       * @param value The minLevel to set.
        * @return This builder for chaining.
        */
-      public Builder setMcoin(int value) {
+      public Builder setMinLevel(int value) {
         
-        mcoin_ = value;
+        minLevel_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 mcoin = 9;</code>
+       * <code>uint32 min_level = 9;</code>
        * @return This builder for chaining.
        */
-      public Builder clearMcoin() {
+      public Builder clearMinLevel() {
         
-        mcoin_ = 0;
+        minLevel_ = 0;
         onChanged();
         return this;
       }
@@ -1772,33 +1780,33 @@ public final class ShopGoodsOuterClass {
         return this;
       }
 
-      private int maxLevel_ ;
+      private int mcoin_ ;
       /**
-       * <code>uint32 max_level = 11;</code>
-       * @return The maxLevel.
+       * <code>uint32 mcoin = 11;</code>
+       * @return The mcoin.
        */
       @java.lang.Override
-      public int getMaxLevel() {
-        return maxLevel_;
+      public int getMcoin() {
+        return mcoin_;
       }
       /**
-       * <code>uint32 max_level = 11;</code>
-       * @param value The maxLevel to set.
+       * <code>uint32 mcoin = 11;</code>
+       * @param value The mcoin to set.
        * @return This builder for chaining.
        */
-      public Builder setMaxLevel(int value) {
+      public Builder setMcoin(int value) {
         
-        maxLevel_ = value;
+        mcoin_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 max_level = 11;</code>
+       * <code>uint32 mcoin = 11;</code>
        * @return This builder for chaining.
        */
-      public Builder clearMaxLevel() {
+      public Builder clearMcoin() {
         
-        maxLevel_ = 0;
+        mcoin_ = 0;
         onChanged();
         return this;
       }
@@ -2450,10 +2458,10 @@ public final class ShopGoodsOuterClass {
       "\n\017ShopGoods.proto\032\017ItemParam.proto\"\321\003\n\tS" +
       "hopGoods\022\020\n\010goods_id\030\001 \001(\r\022\022\n\nbegin_time" +
       "\030\002 \001(\r\022\031\n\021next_refresh_time\030\003 \001(\r\022\024\n\014dis" +
-      "able_type\030\004 \001(\r\022\021\n\tmin_level\030\005 \001(\r\022\036\n\ngo" +
+      "able_type\030\004 \001(\r\022\021\n\tmax_level\030\005 \001(\r\022\036\n\ngo" +
       "ods_item\030\006 \001(\0132\n.ItemParam\022\021\n\tbuy_limit\030" +
-      "\007 \001(\r\022\r\n\005hcoin\030\010 \001(\r\022\r\n\005mcoin\030\t \001(\r\022\r\n\005s" +
-      "coin\030\n \001(\r\022\021\n\tmax_level\030\013 \001(\r\022\"\n\016cost_it" +
+      "\007 \001(\r\022\r\n\005hcoin\030\010 \001(\r\022\021\n\tmin_level\030\t \001(\r\022" +
+      "\r\n\005scoin\030\n \001(\r\022\r\n\005mcoin\030\013 \001(\r\022\"\n\016cost_it" +
       "em_list\030\014 \003(\0132\n.ItemParam\022\031\n\021pre_goods_i" +
       "d_list\030\r \003(\r\022\022\n\nbought_num\030\016 \001(\r\022\020\n\010end_" +
       "time\030\017 \001(\r\022\024\n\013JLIBGEFCAHD\030\316\004 \001(\r\022\024\n\013BHNA" +
@@ -2472,7 +2480,7 @@ public final class ShopGoodsOuterClass {
     internal_static_ShopGoods_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ShopGoods_descriptor,
-        new java.lang.String[] { "GoodsId", "BeginTime", "NextRefreshTime", "DisableType", "MinLevel", "GoodsItem", "BuyLimit", "Hcoin", "Mcoin", "Scoin", "MaxLevel", "CostItemList", "PreGoodsIdList", "BoughtNum", "EndTime", "JLIBGEFCAHD", "BHNAJCLPOJE", "KJAGOOHCNON", "AFOGAPGJCOH", "EHIAIOONFDH", "MNCAAIMGCJJ", });
+        new java.lang.String[] { "GoodsId", "BeginTime", "NextRefreshTime", "DisableType", "MaxLevel", "GoodsItem", "BuyLimit", "Hcoin", "MinLevel", "Scoin", "Mcoin", "CostItemList", "PreGoodsIdList", "BoughtNum", "EndTime", "JLIBGEFCAHD", "BHNAJCLPOJE", "KJAGOOHCNON", "AFOGAPGJCOH", "EHIAIOONFDH", "MNCAAIMGCJJ", });
     emu.grasscutter.net.proto.ItemParamOuterClass.getDescriptor();
   }
 

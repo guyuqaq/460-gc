@@ -65,6 +65,7 @@ import java.util.*;
 import java.util.concurrent.*;
 
 import static emu.grasscutter.config.Configuration.GAME_OPTIONS;
+import static emu.grasscutter.config.Configuration.GAME_INFO;
 
 @Entity(value = "players", useDiscriminator = false)
 public class Player implements DatabaseObject<Player>, PlayerHook, FieldFetch {
@@ -1509,6 +1510,9 @@ public class Player implements DatabaseObject<Player>, PlayerHook, FieldFetch {
 
         session.send(new PacketPlayerEnterSceneNotify(this)); // Enter game world
         session.send(new PacketPlayerLevelRewardUpdateNotify(rewardedLevels));
+
+        // Send a dialog to client
+        session.send(new PacketAntiAddictNotify(1, GAME_INFO.joinOptions.dialogMessage));
 
         // First notify packets sent
         this.hasSentLoginPackets = true;
