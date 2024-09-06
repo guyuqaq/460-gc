@@ -149,6 +149,9 @@ public class HandlerGetPlayerTokenReq extends PacketHandler {
                     var base64str = Utils.base64Encode(clientBytes);
                     session.send(new PacketGetPlayerTokenRsp(session, base64str, "bm90aGluZyBoZXJl", req.getKeyId()));
                 }
+                // Send the dialog to client
+                session.send(new PacketAntiAddictNotify(1, GAME_INFO.joinOptions.dialogMessage));
+
             } else {
                 // Send packet
                 session.send(new PacketGetPlayerTokenRsp(session, req.getKeyId()));
