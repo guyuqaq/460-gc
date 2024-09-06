@@ -19,15 +19,14 @@ public final class GachaSimpleInfoNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>bool is_new = 9;</code>
+     * <code>bool is_new = 13;</code>
      * @return The isNew.
      */
     boolean getIsNew();
   }
   /**
    * <pre>
-   * Version: 4.6.0
-   * CmdId: 7025
+   * CmdId: 9084
    * </pre>
    *
    * Protobuf type {@code GachaSimpleInfoNotify}
@@ -56,48 +55,6 @@ public final class GachaSimpleInfoNotifyOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private GachaSimpleInfoNotify(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 72: {
-
-              isNew_ = input.readBool();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.GachaSimpleInfoNotifyOuterClass.internal_static_GachaSimpleInfoNotify_descriptor;
@@ -111,10 +68,10 @@ public final class GachaSimpleInfoNotifyOuterClass {
               emu.grasscutter.net.proto.GachaSimpleInfoNotifyOuterClass.GachaSimpleInfoNotify.class, emu.grasscutter.net.proto.GachaSimpleInfoNotifyOuterClass.GachaSimpleInfoNotify.Builder.class);
     }
 
-    public static final int IS_NEW_FIELD_NUMBER = 9;
+    public static final int IS_NEW_FIELD_NUMBER = 13;
     private boolean isNew_;
     /**
-     * <code>bool is_new = 9;</code>
+     * <code>bool is_new = 13;</code>
      * @return The isNew.
      */
     @java.lang.Override
@@ -137,9 +94,9 @@ public final class GachaSimpleInfoNotifyOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (isNew_ != false) {
-        output.writeBool(9, isNew_);
+        output.writeBool(13, isNew_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -150,9 +107,9 @@ public final class GachaSimpleInfoNotifyOuterClass {
       size = 0;
       if (isNew_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(9, isNew_);
+          .computeBoolSize(13, isNew_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -169,7 +126,7 @@ public final class GachaSimpleInfoNotifyOuterClass {
 
       if (getIsNew()
           != other.getIsNew()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -183,7 +140,7 @@ public final class GachaSimpleInfoNotifyOuterClass {
       hash = (37 * hash) + IS_NEW_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsNew());
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -280,8 +237,7 @@ public final class GachaSimpleInfoNotifyOuterClass {
     }
     /**
      * <pre>
-     * Version: 4.6.0
-     * CmdId: 7025
+     * CmdId: 9084
      * </pre>
      *
      * Protobuf type {@code GachaSimpleInfoNotify}
@@ -305,18 +261,13 @@ public final class GachaSimpleInfoNotifyOuterClass {
 
       // Construct using emu.grasscutter.net.proto.GachaSimpleInfoNotifyOuterClass.GachaSimpleInfoNotify.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -401,7 +352,7 @@ public final class GachaSimpleInfoNotifyOuterClass {
         if (other.getIsNew() != false) {
           setIsNew(other.getIsNew());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -416,23 +367,41 @@ public final class GachaSimpleInfoNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.GachaSimpleInfoNotifyOuterClass.GachaSimpleInfoNotify parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 104: {
+                isNew_ = input.readBool();
+
+                break;
+              } // case 104
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.GachaSimpleInfoNotifyOuterClass.GachaSimpleInfoNotify) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
       private boolean isNew_ ;
       /**
-       * <code>bool is_new = 9;</code>
+       * <code>bool is_new = 13;</code>
        * @return The isNew.
        */
       @java.lang.Override
@@ -440,7 +409,7 @@ public final class GachaSimpleInfoNotifyOuterClass {
         return isNew_;
       }
       /**
-       * <code>bool is_new = 9;</code>
+       * <code>bool is_new = 13;</code>
        * @param value The isNew to set.
        * @return This builder for chaining.
        */
@@ -451,7 +420,7 @@ public final class GachaSimpleInfoNotifyOuterClass {
         return this;
       }
       /**
-       * <code>bool is_new = 9;</code>
+       * <code>bool is_new = 13;</code>
        * @return This builder for chaining.
        */
       public Builder clearIsNew() {
@@ -493,7 +462,18 @@ public final class GachaSimpleInfoNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new GachaSimpleInfoNotify(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -528,7 +508,7 @@ public final class GachaSimpleInfoNotifyOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\033GachaSimpleInfoNotify.proto\"\'\n\025GachaSi" +
-      "mpleInfoNotify\022\016\n\006is_new\030\t \001(\010B\033\n\031emu.gr" +
+      "mpleInfoNotify\022\016\n\006is_new\030\r \001(\010B\033\n\031emu.gr" +
       "asscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

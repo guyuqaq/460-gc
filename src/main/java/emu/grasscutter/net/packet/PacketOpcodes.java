@@ -440,14 +440,16 @@ public final class PacketOpcodes {
 	public static final int UnlockTransPointRsp = 23546;
     public static final int AntiAddictNotify = 20752;
 	public static final int TowerAllDataReq = 2265;
-
 	public static final int GetShopmallDataReq = 21348;
     public static final int GetShopmallDataRsp = 25192;
     public static final int BuyGoodsReq = 4523;
 	public static final int BuyGoodsRsp = 21;
 	public static final int BatchBuyGoodsReq = 28689;
 	public static final int BatchBuyGoodsRsp = 3959;
-
+	public static final int GachaWishReq = 25407;
+	public static final int GachaWishRsp = 23268;
+	public static final int GachaSimpleInfoNotify = 9084;
+	public static final int GachaOpenWishNotify = 27243;// or 27098
 	
 	public static final int TowerAllDataRsp = 50347;
 	public static final int TowerCurLevelRecordChangeNotify = 50348;
@@ -489,8 +491,6 @@ public final class PacketOpcodes {
 	public static final int DropHintNotify = 50029;
 	public static final int TakeoffEquipReq = 50030;
 	public static final int TakeoffEquipRsp = 50031;
-	public static final int GachaWishReq = 50032;
-	public static final int GachaWishRsp = 50033;
 	public static final int DestroyMaterialReq = 50034;
 	public static final int DestroyMaterialRsp = 50035;
 	public static final int McoinExchangeHcoinReq = 50036;
@@ -1456,8 +1456,6 @@ public final class PacketOpcodes {
 	public static final int GachaActivityTakeRewardReq = 1;
 	public static final int GachaActivityTakeRewardRsp = 1;
 	public static final int GachaActivityUpdateElemNotify = 1;
-	public static final int GachaOpenWishNotify = 1;
-	public static final int GachaSimpleInfoNotify = 1;
 	public static final int GadgetChainLevelChangeNotify = 1;
 	public static final int GadgetChainLevelUpdateNotify = 1;
 	public static final int GadgetChangeLevelTagReq = 1;
