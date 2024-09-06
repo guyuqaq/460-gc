@@ -1510,20 +1510,19 @@ public class Player implements DatabaseObject<Player>, PlayerHook, FieldFetch {
 
         session.send(new PacketPlayerEnterSceneNotify(this)); // Enter game world
         session.send(new PacketPlayerLevelRewardUpdateNotify(rewardedLevels));
-
-        // Send a dialog to client
-        session.send(new PacketAntiAddictNotify(1, GAME_INFO.joinOptions.dialogMessage));
-
         // First notify packets sent
         this.hasSentLoginPackets = true;
 
         // Set session state
         session.setState(SessionState.ACTIVE);
 		
-        //
+        // send mail to the new player
         if (this.isNew) {
             this.getMailHandler().sendWelcomeMail();
         }
+
+        // Send a dialog to client
+        session.send(new PacketAntiAddictNotify(1, GAME_INFO.joinOptions.dialogMessage));
 
         // Call join event.
         PlayerJoinEvent event = new PlayerJoinEvent(this);
