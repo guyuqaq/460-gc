@@ -5,7 +5,7 @@ import emu.grasscutter.net.proto.PlayerSetPauseReqOuterClass.PlayerSetPauseReq;
 import emu.grasscutter.net.proto.RetcodeOuterClass.Retcode;
 import emu.grasscutter.server.game.GameSession;
 import emu.grasscutter.server.packet.send.PacketPlayerSetPauseRsp;
-import emu.grasscutter.server.packet.send.AntiAddictNotify;
+import emu.grasscutter.server.packet.send.PacketAntiAddictNotify;
 
 import static emu.grasscutter.config.Configuration.GAME_INFO;
 

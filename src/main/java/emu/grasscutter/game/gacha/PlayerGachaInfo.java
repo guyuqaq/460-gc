@@ -8,7 +8,6 @@ public class PlayerGachaInfo {
     private PlayerGachaBannerInfo beginnerBanner;
     private PlayerGachaBannerInfo eventCharacterBanner;
     private PlayerGachaBannerInfo eventWeaponBanner;
-    private PlayerGachaBannerInfo chronicleBanner;
 
     public PlayerGachaInfo() {
         this.standardBanner = new PlayerGachaBannerInfo();
@@ -36,18 +35,12 @@ public class PlayerGachaInfo {
         return this.eventWeaponBanner;
     }
 
-    public PlayerGachaBannerInfo getChronicleBanner() {
-        if (this.chronicleBanner == null) this.chronicleBanner = new PlayerGachaBannerInfo();
-        return this.chronicleBanner;
-    }
-
     public PlayerGachaBannerInfo getBannerInfo(GachaBanner banner) {
         return switch (banner.getBannerType()) {
             case STANDARD -> this.getStandardBanner();
             case BEGINNER -> this.getBeginnerBanner();
             case EVENT, CHARACTER, CHARACTER2 -> this.getEventCharacterBanner();
             case WEAPON -> this.getEventWeaponBanner();
-            case CHRONICLE -> this.getChronicleBanner();
         };
     }
 }
