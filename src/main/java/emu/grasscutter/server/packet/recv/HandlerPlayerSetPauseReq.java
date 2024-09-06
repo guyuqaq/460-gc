@@ -5,9 +5,7 @@ import emu.grasscutter.net.proto.PlayerSetPauseReqOuterClass.PlayerSetPauseReq;
 import emu.grasscutter.net.proto.RetcodeOuterClass.Retcode;
 import emu.grasscutter.server.game.GameSession;
 import emu.grasscutter.server.packet.send.PacketPlayerSetPauseRsp;
-import emu.grasscutter.server.packet.send.PacketAntiAddictNotify;
 
-import static emu.grasscutter.config.Configuration.GAME_INFO;
 
 @Opcodes(PacketOpcodes.PlayerSetPauseReq)
 public class HandlerPlayerSetPauseReq extends PacketHandler {
@@ -18,8 +16,6 @@ public class HandlerPlayerSetPauseReq extends PacketHandler {
         var player = session.getPlayer();
         var world = player.getWorld();
 
-        // Send a dialog to client
-        session.send(new PacketAntiAddictNotify(1, GAME_INFO.joinOptions.dialogMessage));
 
         // Check if the player is in a multiplayer world.
         if (player.isInMultiplayer()) {
