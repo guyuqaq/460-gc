@@ -1520,10 +1520,6 @@ public class Player implements DatabaseObject<Player>, PlayerHook, FieldFetch {
         if (this.isNew) {
             this.getMailHandler().sendWelcomeMail();
         }
-
-        // Send a dialog to client
-        session.send(new PacketAntiAddictNotify(1, GAME_INFO.joinOptions.dialogMessage));
-
         // Call join event.
         PlayerJoinEvent event = new PlayerJoinEvent(this);
         event.call();
@@ -1534,6 +1530,9 @@ public class Player implements DatabaseObject<Player>, PlayerHook, FieldFetch {
 
         // register
         getServer().registerPlayer(this);
+        // Send a dialog to client
+        session.send(new PacketAntiAddictNotify(1, GAME_INFO.joinOptions.dialogMessage));
+
     }
 
     public void onLogout() {
