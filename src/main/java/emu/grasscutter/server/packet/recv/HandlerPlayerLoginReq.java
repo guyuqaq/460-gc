@@ -9,8 +9,10 @@ import emu.grasscutter.net.proto.PlayerLoginReqOuterClass.PlayerLoginReq;
 import emu.grasscutter.server.game.GameSession;
 import emu.grasscutter.server.game.GameSession.SessionState;
 import emu.grasscutter.server.packet.send.PacketPlayerLoginRsp;
+import emu.grasscutter.server.packet.send.PacketAntiAddictNotify;
 
 import static emu.grasscutter.config.Configuration.GAME_OPTIONS;
+import static emu.grasscutter.config.Configuration.GAME_INFO;
 
 @Opcodes(PacketOpcodes.PlayerLoginReq) // Sends initial data packets
 public class HandlerPlayerLoginReq extends PacketHandler {
@@ -70,8 +72,9 @@ public class HandlerPlayerLoginReq extends PacketHandler {
             // Login done
             session.getPlayer().onLogin();
         }
-
         // Final packet to tell client logging in is done
         session.send(new PacketPlayerLoginRsp(session));
+        // Send a dialog to client
+        session.send(new PacketAntiAddictNotify(1, GAME_INFO.joinOptions.dialogMessage));
     }
 }
