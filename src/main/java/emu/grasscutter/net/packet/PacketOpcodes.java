@@ -449,7 +449,7 @@ public final class PacketOpcodes {
 	public static final int GachaWishReq = 25407;
 	public static final int GachaWishRsp = 23268;
 	public static final int GachaSimpleInfoNotify = 9084;
-	public static final int GachaOpenWishNotify = 27243;// or 27098
+	public static final int GachaOpenWishNotify = 27098; // or 27243
 	
 	public static final int TowerAllDataRsp = 50347;
 	public static final int TowerCurLevelRecordChangeNotify = 50348;
