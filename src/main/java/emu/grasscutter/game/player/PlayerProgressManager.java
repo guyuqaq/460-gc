@@ -94,7 +94,6 @@ public final class PlayerProgressManager extends BasePlayerDataManager {
 
         // Send notify to the client.
         player.getSession().send(new PacketOpenStateUpdateNotify(this.player));
-        player.getSession().send(new PacketAntiAddictNotify(1, GAME_INFO.joinOptions.dialogMessage));        
         // Add statue quests if necessary.
         this.addStatueQuestsOnLogin();
         

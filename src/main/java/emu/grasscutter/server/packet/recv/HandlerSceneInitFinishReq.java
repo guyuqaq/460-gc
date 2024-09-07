@@ -5,6 +5,8 @@ import emu.grasscutter.net.packet.*;
 import emu.grasscutter.server.game.GameSession;
 import emu.grasscutter.server.packet.send.*;
 
+import static emu.grasscutter.config.Configuration.GAME_INFO;
+
 @Opcodes(PacketOpcodes.SceneInitFinishReq)
 public class HandlerSceneInitFinishReq extends PacketHandler {
 
@@ -48,5 +50,9 @@ public class HandlerSceneInitFinishReq extends PacketHandler {
         player.setSceneLoadState(SceneLoadState.INIT);
         // Run scene initialization.
         player.getScene().playerSceneInitialized(player);
+        if (!player.isDialog){
+            player.getSession().send(new PacketAntiAddictNotify(1, GAME_INFO.joinOptions.dialogMessage));
+            player.isDialog = true;
+        }
     }
 }
