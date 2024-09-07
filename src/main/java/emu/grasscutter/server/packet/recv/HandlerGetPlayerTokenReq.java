@@ -11,14 +11,12 @@ import emu.grasscutter.server.event.game.PlayerCreationEvent;
 import emu.grasscutter.server.game.GameSession;
 import emu.grasscutter.server.game.GameSession.SessionState;
 import emu.grasscutter.server.packet.send.PacketGetPlayerTokenRsp;
-import emu.grasscutter.server.packet.send.PacketAntiAddictNotify;
 import emu.grasscutter.utils.*;
 import emu.grasscutter.utils.helpers.ByteHelper;
 import java.nio.ByteBuffer;
 import java.security.Signature;
 import javax.crypto.Cipher;
 
-import static emu.grasscutter.config.Configuration.GAME_INFO;
 
 @Opcodes(PacketOpcodes.GetPlayerTokenReq)
 public class HandlerGetPlayerTokenReq extends PacketHandler {
@@ -149,14 +147,10 @@ public class HandlerGetPlayerTokenReq extends PacketHandler {
                     var base64str = Utils.base64Encode(clientBytes);
                     session.send(new PacketGetPlayerTokenRsp(session, base64str, "bm90aGluZyBoZXJl", req.getKeyId()));
                 }
-                // Send the dialog to client
-                session.send(new PacketAntiAddictNotify(1, GAME_INFO.joinOptions.dialogMessage));
 
             } else {
                 // Send packet
                 session.send(new PacketGetPlayerTokenRsp(session, req.getKeyId()));
-                // Send the dialog to client
-                session.send(new PacketAntiAddictNotify(1, GAME_INFO.joinOptions.dialogMessage));
             }
         } else {
             // Set session state
@@ -164,8 +158,6 @@ public class HandlerGetPlayerTokenReq extends PacketHandler {
             session.setState(SessionState.WAITING_FOR_LOGIN);
 
             session.send(new PacketGetPlayerTokenRsp(session, req.getKeyId()));
-            // Send the dialog to client
-            session.send(new PacketAntiAddictNotify(1, GAME_INFO.joinOptions.dialogMessage));
         }
     }
 
