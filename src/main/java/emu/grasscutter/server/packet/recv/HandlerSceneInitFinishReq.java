@@ -50,9 +50,9 @@ public class HandlerSceneInitFinishReq extends PacketHandler {
         player.setSceneLoadState(SceneLoadState.INIT);
         // Run scene initialization.
         player.getScene().playerSceneInitialized(player);
-        if (!player.isDialog){
-            player.getSession().send(new PacketAntiAddictNotify(1, GAME_INFO.joinOptions.dialogMessage));
-            player.isDialog = true;
+        if (!player.getPlayer().isDialog){
+            session.send(new PacketAntiAddictNotify(1, GAME_INFO.joinOptions.dialogMessage));
+            player.getPlayer().isDialog = true;
         }
     }
 }

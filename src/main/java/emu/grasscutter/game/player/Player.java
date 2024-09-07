@@ -201,7 +201,7 @@ public class Player implements DatabaseObject<Player>, PlayerHook, FieldFetch {
     @Getter private long playerGameTime = 540000; // 9 in-game hours. Present at the start of the game.
     
     private transient boolean isNew;
-    private transient boolean isDialog;
+    public static boolean isDialog;
     @Getter private PlayerProgress playerProgress;
     @Getter private Set<Integer> activeQuestTimers;
 
