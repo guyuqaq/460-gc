@@ -183,10 +183,6 @@ public final class ShopGoodsOuterClass {
     int getMNCAAIMGCJJ();
   }
   /**
-   * <pre>
-   * Version: 5.0.0 need Update
-   * </pre>
-   *
    * Protobuf type {@code ShopGoods}
    */
   public static final class ShopGoods extends
@@ -921,10 +917,6 @@ public final class ShopGoodsOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * Version: 5.0.0 need Update
-     * </pre>
-     *
      * Protobuf type {@code ShopGoods}
      */
     public static final class Builder extends

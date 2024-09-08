@@ -19,10 +19,16 @@ public final class RogueDiaryStageInfoOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 stage_id = 1;</code>
+     * <code>uint32 stage_id = 2;</code>
      * @return The stageId.
      */
     int getStageId();
+
+    /**
+     * <code>bool is_have_try = 5;</code>
+     * @return The isHaveTry.
+     */
+    boolean getIsHaveTry();
 
     /**
      * <code>.RogueDiaryDungeonRecord best_record = 7;</code>
@@ -38,18 +44,8 @@ public final class RogueDiaryStageInfoOuterClass {
      * <code>.RogueDiaryDungeonRecord best_record = 7;</code>
      */
     emu.grasscutter.net.proto.RogueDiaryDungeonRecordOuterClass.RogueDiaryDungeonRecordOrBuilder getBestRecordOrBuilder();
-
-    /**
-     * <code>bool is_have_try = 13;</code>
-     * @return The isHaveTry.
-     */
-    boolean getIsHaveTry();
   }
   /**
-   * <pre>
-   * Obf: PKLHAFICKIC
-   * </pre>
-   *
    * Protobuf type {@code RogueDiaryStageInfo}
    */
   public static final class RogueDiaryStageInfo extends
@@ -76,66 +72,6 @@ public final class RogueDiaryStageInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private RogueDiaryStageInfo(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-
-              stageId_ = input.readUInt32();
-              break;
-            }
-            case 58: {
-              emu.grasscutter.net.proto.RogueDiaryDungeonRecordOuterClass.RogueDiaryDungeonRecord.Builder subBuilder = null;
-              if (bestRecord_ != null) {
-                subBuilder = bestRecord_.toBuilder();
-              }
-              bestRecord_ = input.readMessage(emu.grasscutter.net.proto.RogueDiaryDungeonRecordOuterClass.RogueDiaryDungeonRecord.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(bestRecord_);
-                bestRecord_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 104: {
-
-              isHaveTry_ = input.readBool();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.RogueDiaryStageInfoOuterClass.internal_static_RogueDiaryStageInfo_descriptor;
@@ -149,15 +85,26 @@ public final class RogueDiaryStageInfoOuterClass {
               emu.grasscutter.net.proto.RogueDiaryStageInfoOuterClass.RogueDiaryStageInfo.class, emu.grasscutter.net.proto.RogueDiaryStageInfoOuterClass.RogueDiaryStageInfo.Builder.class);
     }
 
-    public static final int STAGE_ID_FIELD_NUMBER = 1;
+    public static final int STAGE_ID_FIELD_NUMBER = 2;
     private int stageId_;
     /**
-     * <code>uint32 stage_id = 1;</code>
+     * <code>uint32 stage_id = 2;</code>
      * @return The stageId.
      */
     @java.lang.Override
     public int getStageId() {
       return stageId_;
+    }
+
+    public static final int IS_HAVE_TRY_FIELD_NUMBER = 5;
+    private boolean isHaveTry_;
+    /**
+     * <code>bool is_have_try = 5;</code>
+     * @return The isHaveTry.
+     */
+    @java.lang.Override
+    public boolean getIsHaveTry() {
+      return isHaveTry_;
     }
 
     public static final int BEST_RECORD_FIELD_NUMBER = 7;
@@ -186,17 +133,6 @@ public final class RogueDiaryStageInfoOuterClass {
       return getBestRecord();
     }
 
-    public static final int IS_HAVE_TRY_FIELD_NUMBER = 13;
-    private boolean isHaveTry_;
-    /**
-     * <code>bool is_have_try = 13;</code>
-     * @return The isHaveTry.
-     */
-    @java.lang.Override
-    public boolean getIsHaveTry() {
-      return isHaveTry_;
-    }
-
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -212,15 +148,15 @@ public final class RogueDiaryStageInfoOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (stageId_ != 0) {
-        output.writeUInt32(1, stageId_);
+        output.writeUInt32(2, stageId_);
+      }
+      if (isHaveTry_ != false) {
+        output.writeBool(5, isHaveTry_);
       }
       if (bestRecord_ != null) {
         output.writeMessage(7, getBestRecord());
       }
-      if (isHaveTry_ != false) {
-        output.writeBool(13, isHaveTry_);
-      }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -231,17 +167,17 @@ public final class RogueDiaryStageInfoOuterClass {
       size = 0;
       if (stageId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(1, stageId_);
+          .computeUInt32Size(2, stageId_);
+      }
+      if (isHaveTry_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(5, isHaveTry_);
       }
       if (bestRecord_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getBestRecord());
       }
-      if (isHaveTry_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(13, isHaveTry_);
-      }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -258,14 +194,14 @@ public final class RogueDiaryStageInfoOuterClass {
 
       if (getStageId()
           != other.getStageId()) return false;
+      if (getIsHaveTry()
+          != other.getIsHaveTry()) return false;
       if (hasBestRecord() != other.hasBestRecord()) return false;
       if (hasBestRecord()) {
         if (!getBestRecord()
             .equals(other.getBestRecord())) return false;
       }
-      if (getIsHaveTry()
-          != other.getIsHaveTry()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -278,14 +214,14 @@ public final class RogueDiaryStageInfoOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + STAGE_ID_FIELD_NUMBER;
       hash = (53 * hash) + getStageId();
+      hash = (37 * hash) + IS_HAVE_TRY_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsHaveTry());
       if (hasBestRecord()) {
         hash = (37 * hash) + BEST_RECORD_FIELD_NUMBER;
         hash = (53 * hash) + getBestRecord().hashCode();
       }
-      hash = (37 * hash) + IS_HAVE_TRY_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getIsHaveTry());
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -381,10 +317,6 @@ public final class RogueDiaryStageInfoOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * Obf: PKLHAFICKIC
-     * </pre>
-     *
      * Protobuf type {@code RogueDiaryStageInfo}
      */
     public static final class Builder extends
@@ -406,23 +338,20 @@ public final class RogueDiaryStageInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.RogueDiaryStageInfoOuterClass.RogueDiaryStageInfo.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
         stageId_ = 0;
+
+        isHaveTry_ = false;
 
         if (bestRecordBuilder_ == null) {
           bestRecord_ = null;
@@ -430,8 +359,6 @@ public final class RogueDiaryStageInfoOuterClass {
           bestRecord_ = null;
           bestRecordBuilder_ = null;
         }
-        isHaveTry_ = false;
-
         return this;
       }
 
@@ -459,12 +386,12 @@ public final class RogueDiaryStageInfoOuterClass {
       public emu.grasscutter.net.proto.RogueDiaryStageInfoOuterClass.RogueDiaryStageInfo buildPartial() {
         emu.grasscutter.net.proto.RogueDiaryStageInfoOuterClass.RogueDiaryStageInfo result = new emu.grasscutter.net.proto.RogueDiaryStageInfoOuterClass.RogueDiaryStageInfo(this);
         result.stageId_ = stageId_;
+        result.isHaveTry_ = isHaveTry_;
         if (bestRecordBuilder_ == null) {
           result.bestRecord_ = bestRecord_;
         } else {
           result.bestRecord_ = bestRecordBuilder_.build();
         }
-        result.isHaveTry_ = isHaveTry_;
         onBuilt();
         return result;
       }
@@ -516,13 +443,13 @@ public final class RogueDiaryStageInfoOuterClass {
         if (other.getStageId() != 0) {
           setStageId(other.getStageId());
         }
-        if (other.hasBestRecord()) {
-          mergeBestRecord(other.getBestRecord());
-        }
         if (other.getIsHaveTry() != false) {
           setIsHaveTry(other.getIsHaveTry());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        if (other.hasBestRecord()) {
+          mergeBestRecord(other.getBestRecord());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -537,23 +464,53 @@ public final class RogueDiaryStageInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.RogueDiaryStageInfoOuterClass.RogueDiaryStageInfo parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 16: {
+                stageId_ = input.readUInt32();
+
+                break;
+              } // case 16
+              case 40: {
+                isHaveTry_ = input.readBool();
+
+                break;
+              } // case 40
+              case 58: {
+                input.readMessage(
+                    getBestRecordFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 58
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.RogueDiaryStageInfoOuterClass.RogueDiaryStageInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
       private int stageId_ ;
       /**
-       * <code>uint32 stage_id = 1;</code>
+       * <code>uint32 stage_id = 2;</code>
        * @return The stageId.
        */
       @java.lang.Override
@@ -561,7 +518,7 @@ public final class RogueDiaryStageInfoOuterClass {
         return stageId_;
       }
       /**
-       * <code>uint32 stage_id = 1;</code>
+       * <code>uint32 stage_id = 2;</code>
        * @param value The stageId to set.
        * @return This builder for chaining.
        */
@@ -572,12 +529,43 @@ public final class RogueDiaryStageInfoOuterClass {
         return this;
       }
       /**
-       * <code>uint32 stage_id = 1;</code>
+       * <code>uint32 stage_id = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearStageId() {
         
         stageId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean isHaveTry_ ;
+      /**
+       * <code>bool is_have_try = 5;</code>
+       * @return The isHaveTry.
+       */
+      @java.lang.Override
+      public boolean getIsHaveTry() {
+        return isHaveTry_;
+      }
+      /**
+       * <code>bool is_have_try = 5;</code>
+       * @param value The isHaveTry to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsHaveTry(boolean value) {
+        
+        isHaveTry_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool is_have_try = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsHaveTry() {
+        
+        isHaveTry_ = false;
         onChanged();
         return this;
       }
@@ -700,37 +688,6 @@ public final class RogueDiaryStageInfoOuterClass {
         }
         return bestRecordBuilder_;
       }
-
-      private boolean isHaveTry_ ;
-      /**
-       * <code>bool is_have_try = 13;</code>
-       * @return The isHaveTry.
-       */
-      @java.lang.Override
-      public boolean getIsHaveTry() {
-        return isHaveTry_;
-      }
-      /**
-       * <code>bool is_have_try = 13;</code>
-       * @param value The isHaveTry to set.
-       * @return This builder for chaining.
-       */
-      public Builder setIsHaveTry(boolean value) {
-        
-        isHaveTry_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bool is_have_try = 13;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearIsHaveTry() {
-        
-        isHaveTry_ = false;
-        onChanged();
-        return this;
-      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -764,7 +721,18 @@ public final class RogueDiaryStageInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new RogueDiaryStageInfo(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -800,9 +768,9 @@ public final class RogueDiaryStageInfoOuterClass {
     java.lang.String[] descriptorData = {
       "\n\031RogueDiaryStageInfo.proto\032\035RogueDiaryD" +
       "ungeonRecord.proto\"k\n\023RogueDiaryStageInf" +
-      "o\022\020\n\010stage_id\030\001 \001(\r\022-\n\013best_record\030\007 \001(\013" +
-      "2\030.RogueDiaryDungeonRecord\022\023\n\013is_have_tr" +
-      "y\030\r \001(\010B\033\n\031emu.grasscutter.net.protob\006pr" +
+      "o\022\020\n\010stage_id\030\002 \001(\r\022\023\n\013is_have_try\030\005 \001(\010" +
+      "\022-\n\013best_record\030\007 \001(\0132\030.RogueDiaryDungeo" +
+      "nRecordB\033\n\031emu.grasscutter.net.protob\006pr" +
       "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -815,7 +783,7 @@ public final class RogueDiaryStageInfoOuterClass {
     internal_static_RogueDiaryStageInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_RogueDiaryStageInfo_descriptor,
-        new java.lang.String[] { "StageId", "BestRecord", "IsHaveTry", });
+        new java.lang.String[] { "StageId", "IsHaveTry", "BestRecord", });
     emu.grasscutter.net.proto.RogueDiaryDungeonRecordOuterClass.getDescriptor();
   }
 

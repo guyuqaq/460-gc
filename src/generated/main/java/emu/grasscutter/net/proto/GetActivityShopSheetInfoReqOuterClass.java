@@ -19,15 +19,14 @@ public final class GetActivityShopSheetInfoReqOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 shop_type = 5;</code>
+     * <code>uint32 shop_type = 9;</code>
      * @return The shopType.
      */
     int getShopType();
   }
   /**
    * <pre>
-   * CmdId: 24121
-   * Obf: CFLICFMDOBD
+   * CmdId: 21652
    * </pre>
    *
    * Protobuf type {@code GetActivityShopSheetInfoReq}
@@ -56,48 +55,6 @@ public final class GetActivityShopSheetInfoReqOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private GetActivityShopSheetInfoReq(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 40: {
-
-              shopType_ = input.readUInt32();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.GetActivityShopSheetInfoReqOuterClass.internal_static_GetActivityShopSheetInfoReq_descriptor;
@@ -111,10 +68,10 @@ public final class GetActivityShopSheetInfoReqOuterClass {
               emu.grasscutter.net.proto.GetActivityShopSheetInfoReqOuterClass.GetActivityShopSheetInfoReq.class, emu.grasscutter.net.proto.GetActivityShopSheetInfoReqOuterClass.GetActivityShopSheetInfoReq.Builder.class);
     }
 
-    public static final int SHOP_TYPE_FIELD_NUMBER = 5;
+    public static final int SHOP_TYPE_FIELD_NUMBER = 9;
     private int shopType_;
     /**
-     * <code>uint32 shop_type = 5;</code>
+     * <code>uint32 shop_type = 9;</code>
      * @return The shopType.
      */
     @java.lang.Override
@@ -137,9 +94,9 @@ public final class GetActivityShopSheetInfoReqOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (shopType_ != 0) {
-        output.writeUInt32(5, shopType_);
+        output.writeUInt32(9, shopType_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -150,9 +107,9 @@ public final class GetActivityShopSheetInfoReqOuterClass {
       size = 0;
       if (shopType_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(5, shopType_);
+          .computeUInt32Size(9, shopType_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -169,7 +126,7 @@ public final class GetActivityShopSheetInfoReqOuterClass {
 
       if (getShopType()
           != other.getShopType()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -182,7 +139,7 @@ public final class GetActivityShopSheetInfoReqOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + SHOP_TYPE_FIELD_NUMBER;
       hash = (53 * hash) + getShopType();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -279,8 +236,7 @@ public final class GetActivityShopSheetInfoReqOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 24121
-     * Obf: CFLICFMDOBD
+     * CmdId: 21652
      * </pre>
      *
      * Protobuf type {@code GetActivityShopSheetInfoReq}
@@ -304,18 +260,13 @@ public final class GetActivityShopSheetInfoReqOuterClass {
 
       // Construct using emu.grasscutter.net.proto.GetActivityShopSheetInfoReqOuterClass.GetActivityShopSheetInfoReq.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -400,7 +351,7 @@ public final class GetActivityShopSheetInfoReqOuterClass {
         if (other.getShopType() != 0) {
           setShopType(other.getShopType());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -415,23 +366,41 @@ public final class GetActivityShopSheetInfoReqOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.GetActivityShopSheetInfoReqOuterClass.GetActivityShopSheetInfoReq parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 72: {
+                shopType_ = input.readUInt32();
+
+                break;
+              } // case 72
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.GetActivityShopSheetInfoReqOuterClass.GetActivityShopSheetInfoReq) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
       private int shopType_ ;
       /**
-       * <code>uint32 shop_type = 5;</code>
+       * <code>uint32 shop_type = 9;</code>
        * @return The shopType.
        */
       @java.lang.Override
@@ -439,7 +408,7 @@ public final class GetActivityShopSheetInfoReqOuterClass {
         return shopType_;
       }
       /**
-       * <code>uint32 shop_type = 5;</code>
+       * <code>uint32 shop_type = 9;</code>
        * @param value The shopType to set.
        * @return This builder for chaining.
        */
@@ -450,7 +419,7 @@ public final class GetActivityShopSheetInfoReqOuterClass {
         return this;
       }
       /**
-       * <code>uint32 shop_type = 5;</code>
+       * <code>uint32 shop_type = 9;</code>
        * @return This builder for chaining.
        */
       public Builder clearShopType() {
@@ -492,7 +461,18 @@ public final class GetActivityShopSheetInfoReqOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new GetActivityShopSheetInfoReq(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -528,7 +508,7 @@ public final class GetActivityShopSheetInfoReqOuterClass {
     java.lang.String[] descriptorData = {
       "\n!GetActivityShopSheetInfoReq.proto\"0\n\033G" +
       "etActivityShopSheetInfoReq\022\021\n\tshop_type\030" +
-      "\005 \001(\rB\033\n\031emu.grasscutter.net.protob\006prot" +
+      "\t \001(\rB\033\n\031emu.grasscutter.net.protob\006prot" +
       "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

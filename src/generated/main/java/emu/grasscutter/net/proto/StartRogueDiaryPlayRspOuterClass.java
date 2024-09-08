@@ -19,34 +19,51 @@ public final class StartRogueDiaryPlayRspOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .RogueDiaryAvatar avatar_list = 10;</code>
+     * <code>int32 retcode = 2;</code>
+     * @return The retcode.
+     */
+    int getRetcode();
+
+    /**
+     * <code>repeated uint32 rand_card_list = 5;</code>
+     * @return A list containing the randCardList.
+     */
+    java.util.List<java.lang.Integer> getRandCardListList();
+    /**
+     * <code>repeated uint32 rand_card_list = 5;</code>
+     * @return The count of randCardList.
+     */
+    int getRandCardListCount();
+    /**
+     * <code>repeated uint32 rand_card_list = 5;</code>
+     * @param index The index of the element to return.
+     * @return The randCardList at the given index.
+     */
+    int getRandCardList(int index);
+
+    /**
+     * <code>repeated .RogueDiaryAvatar avatar_list = 6;</code>
      */
     java.util.List<emu.grasscutter.net.proto.RogueDiaryAvatarOuterClass.RogueDiaryAvatar> 
         getAvatarListList();
     /**
-     * <code>repeated .RogueDiaryAvatar avatar_list = 10;</code>
+     * <code>repeated .RogueDiaryAvatar avatar_list = 6;</code>
      */
     emu.grasscutter.net.proto.RogueDiaryAvatarOuterClass.RogueDiaryAvatar getAvatarList(int index);
     /**
-     * <code>repeated .RogueDiaryAvatar avatar_list = 10;</code>
+     * <code>repeated .RogueDiaryAvatar avatar_list = 6;</code>
      */
     int getAvatarListCount();
     /**
-     * <code>repeated .RogueDiaryAvatar avatar_list = 10;</code>
+     * <code>repeated .RogueDiaryAvatar avatar_list = 6;</code>
      */
     java.util.List<? extends emu.grasscutter.net.proto.RogueDiaryAvatarOuterClass.RogueDiaryAvatarOrBuilder> 
         getAvatarListOrBuilderList();
     /**
-     * <code>repeated .RogueDiaryAvatar avatar_list = 10;</code>
+     * <code>repeated .RogueDiaryAvatar avatar_list = 6;</code>
      */
     emu.grasscutter.net.proto.RogueDiaryAvatarOuterClass.RogueDiaryAvatarOrBuilder getAvatarListOrBuilder(
         int index);
-
-    /**
-     * <code>int32 retcode = 5;</code>
-     * @return The retcode.
-     */
-    int getRetcode();
 
     /**
      * <code>repeated .RogueDiaryAvatar trial_avatar_list = 8;</code>
@@ -71,28 +88,10 @@ public final class StartRogueDiaryPlayRspOuterClass {
      */
     emu.grasscutter.net.proto.RogueDiaryAvatarOuterClass.RogueDiaryAvatarOrBuilder getTrialAvatarListOrBuilder(
         int index);
-
-    /**
-     * <code>repeated uint32 rand_card_list = 12;</code>
-     * @return A list containing the randCardList.
-     */
-    java.util.List<java.lang.Integer> getRandCardListList();
-    /**
-     * <code>repeated uint32 rand_card_list = 12;</code>
-     * @return The count of randCardList.
-     */
-    int getRandCardListCount();
-    /**
-     * <code>repeated uint32 rand_card_list = 12;</code>
-     * @param index The index of the element to return.
-     * @return The randCardList at the given index.
-     */
-    int getRandCardList(int index);
   }
   /**
    * <pre>
-   * CmdId: 3886
-   * Obf: NJAIODLPBMP
+   * CmdId: 9097
    * </pre>
    *
    * Protobuf type {@code StartRogueDiaryPlayRsp}
@@ -107,9 +106,9 @@ public final class StartRogueDiaryPlayRspOuterClass {
       super(builder);
     }
     private StartRogueDiaryPlayRsp() {
+      randCardList_ = emptyIntList();
       avatarList_ = java.util.Collections.emptyList();
       trialAvatarList_ = java.util.Collections.emptyList();
-      randCardList_ = emptyIntList();
     }
 
     @java.lang.Override
@@ -124,97 +123,6 @@ public final class StartRogueDiaryPlayRspOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private StartRogueDiaryPlayRsp(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 40: {
-
-              retcode_ = input.readInt32();
-              break;
-            }
-            case 66: {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                trialAvatarList_ = new java.util.ArrayList<emu.grasscutter.net.proto.RogueDiaryAvatarOuterClass.RogueDiaryAvatar>();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              trialAvatarList_.add(
-                  input.readMessage(emu.grasscutter.net.proto.RogueDiaryAvatarOuterClass.RogueDiaryAvatar.parser(), extensionRegistry));
-              break;
-            }
-            case 82: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                avatarList_ = new java.util.ArrayList<emu.grasscutter.net.proto.RogueDiaryAvatarOuterClass.RogueDiaryAvatar>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              avatarList_.add(
-                  input.readMessage(emu.grasscutter.net.proto.RogueDiaryAvatarOuterClass.RogueDiaryAvatar.parser(), extensionRegistry));
-              break;
-            }
-            case 96: {
-              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-                randCardList_ = newIntList();
-                mutable_bitField0_ |= 0x00000004;
-              }
-              randCardList_.addInt(input.readUInt32());
-              break;
-            }
-            case 98: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000004) != 0) && input.getBytesUntilLimit() > 0) {
-                randCardList_ = newIntList();
-                mutable_bitField0_ |= 0x00000004;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                randCardList_.addInt(input.readUInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000002) != 0)) {
-          trialAvatarList_ = java.util.Collections.unmodifiableList(trialAvatarList_);
-        }
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          avatarList_ = java.util.Collections.unmodifiableList(avatarList_);
-        }
-        if (((mutable_bitField0_ & 0x00000004) != 0)) {
-          randCardList_.makeImmutable(); // C
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.StartRogueDiaryPlayRspOuterClass.internal_static_StartRogueDiaryPlayRsp_descriptor;
@@ -228,17 +136,56 @@ public final class StartRogueDiaryPlayRspOuterClass {
               emu.grasscutter.net.proto.StartRogueDiaryPlayRspOuterClass.StartRogueDiaryPlayRsp.class, emu.grasscutter.net.proto.StartRogueDiaryPlayRspOuterClass.StartRogueDiaryPlayRsp.Builder.class);
     }
 
-    public static final int AVATAR_LIST_FIELD_NUMBER = 10;
+    public static final int RETCODE_FIELD_NUMBER = 2;
+    private int retcode_;
+    /**
+     * <code>int32 retcode = 2;</code>
+     * @return The retcode.
+     */
+    @java.lang.Override
+    public int getRetcode() {
+      return retcode_;
+    }
+
+    public static final int RAND_CARD_LIST_FIELD_NUMBER = 5;
+    private com.google.protobuf.Internal.IntList randCardList_;
+    /**
+     * <code>repeated uint32 rand_card_list = 5;</code>
+     * @return A list containing the randCardList.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Integer>
+        getRandCardListList() {
+      return randCardList_;
+    }
+    /**
+     * <code>repeated uint32 rand_card_list = 5;</code>
+     * @return The count of randCardList.
+     */
+    public int getRandCardListCount() {
+      return randCardList_.size();
+    }
+    /**
+     * <code>repeated uint32 rand_card_list = 5;</code>
+     * @param index The index of the element to return.
+     * @return The randCardList at the given index.
+     */
+    public int getRandCardList(int index) {
+      return randCardList_.getInt(index);
+    }
+    private int randCardListMemoizedSerializedSize = -1;
+
+    public static final int AVATAR_LIST_FIELD_NUMBER = 6;
     private java.util.List<emu.grasscutter.net.proto.RogueDiaryAvatarOuterClass.RogueDiaryAvatar> avatarList_;
     /**
-     * <code>repeated .RogueDiaryAvatar avatar_list = 10;</code>
+     * <code>repeated .RogueDiaryAvatar avatar_list = 6;</code>
      */
     @java.lang.Override
     public java.util.List<emu.grasscutter.net.proto.RogueDiaryAvatarOuterClass.RogueDiaryAvatar> getAvatarListList() {
       return avatarList_;
     }
     /**
-     * <code>repeated .RogueDiaryAvatar avatar_list = 10;</code>
+     * <code>repeated .RogueDiaryAvatar avatar_list = 6;</code>
      */
     @java.lang.Override
     public java.util.List<? extends emu.grasscutter.net.proto.RogueDiaryAvatarOuterClass.RogueDiaryAvatarOrBuilder> 
@@ -246,37 +193,26 @@ public final class StartRogueDiaryPlayRspOuterClass {
       return avatarList_;
     }
     /**
-     * <code>repeated .RogueDiaryAvatar avatar_list = 10;</code>
+     * <code>repeated .RogueDiaryAvatar avatar_list = 6;</code>
      */
     @java.lang.Override
     public int getAvatarListCount() {
       return avatarList_.size();
     }
     /**
-     * <code>repeated .RogueDiaryAvatar avatar_list = 10;</code>
+     * <code>repeated .RogueDiaryAvatar avatar_list = 6;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.RogueDiaryAvatarOuterClass.RogueDiaryAvatar getAvatarList(int index) {
       return avatarList_.get(index);
     }
     /**
-     * <code>repeated .RogueDiaryAvatar avatar_list = 10;</code>
+     * <code>repeated .RogueDiaryAvatar avatar_list = 6;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.RogueDiaryAvatarOuterClass.RogueDiaryAvatarOrBuilder getAvatarListOrBuilder(
         int index) {
       return avatarList_.get(index);
-    }
-
-    public static final int RETCODE_FIELD_NUMBER = 5;
-    private int retcode_;
-    /**
-     * <code>int32 retcode = 5;</code>
-     * @return The retcode.
-     */
-    @java.lang.Override
-    public int getRetcode() {
-      return retcode_;
     }
 
     public static final int TRIAL_AVATAR_LIST_FIELD_NUMBER = 8;
@@ -319,34 +255,6 @@ public final class StartRogueDiaryPlayRspOuterClass {
       return trialAvatarList_.get(index);
     }
 
-    public static final int RAND_CARD_LIST_FIELD_NUMBER = 12;
-    private com.google.protobuf.Internal.IntList randCardList_;
-    /**
-     * <code>repeated uint32 rand_card_list = 12;</code>
-     * @return A list containing the randCardList.
-     */
-    @java.lang.Override
-    public java.util.List<java.lang.Integer>
-        getRandCardListList() {
-      return randCardList_;
-    }
-    /**
-     * <code>repeated uint32 rand_card_list = 12;</code>
-     * @return The count of randCardList.
-     */
-    public int getRandCardListCount() {
-      return randCardList_.size();
-    }
-    /**
-     * <code>repeated uint32 rand_card_list = 12;</code>
-     * @param index The index of the element to return.
-     * @return The randCardList at the given index.
-     */
-    public int getRandCardList(int index) {
-      return randCardList_.getInt(index);
-    }
-    private int randCardListMemoizedSerializedSize = -1;
-
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -363,22 +271,22 @@ public final class StartRogueDiaryPlayRspOuterClass {
                         throws java.io.IOException {
       getSerializedSize();
       if (retcode_ != 0) {
-        output.writeInt32(5, retcode_);
-      }
-      for (int i = 0; i < trialAvatarList_.size(); i++) {
-        output.writeMessage(8, trialAvatarList_.get(i));
-      }
-      for (int i = 0; i < avatarList_.size(); i++) {
-        output.writeMessage(10, avatarList_.get(i));
+        output.writeInt32(2, retcode_);
       }
       if (getRandCardListList().size() > 0) {
-        output.writeUInt32NoTag(98);
+        output.writeUInt32NoTag(42);
         output.writeUInt32NoTag(randCardListMemoizedSerializedSize);
       }
       for (int i = 0; i < randCardList_.size(); i++) {
         output.writeUInt32NoTag(randCardList_.getInt(i));
       }
-      unknownFields.writeTo(output);
+      for (int i = 0; i < avatarList_.size(); i++) {
+        output.writeMessage(6, avatarList_.get(i));
+      }
+      for (int i = 0; i < trialAvatarList_.size(); i++) {
+        output.writeMessage(8, trialAvatarList_.get(i));
+      }
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -389,15 +297,7 @@ public final class StartRogueDiaryPlayRspOuterClass {
       size = 0;
       if (retcode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(5, retcode_);
-      }
-      for (int i = 0; i < trialAvatarList_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(8, trialAvatarList_.get(i));
-      }
-      for (int i = 0; i < avatarList_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(10, avatarList_.get(i));
+          .computeInt32Size(2, retcode_);
       }
       {
         int dataSize = 0;
@@ -413,7 +313,15 @@ public final class StartRogueDiaryPlayRspOuterClass {
         }
         randCardListMemoizedSerializedSize = dataSize;
       }
-      size += unknownFields.getSerializedSize();
+      for (int i = 0; i < avatarList_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, avatarList_.get(i));
+      }
+      for (int i = 0; i < trialAvatarList_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, trialAvatarList_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -428,15 +336,15 @@ public final class StartRogueDiaryPlayRspOuterClass {
       }
       emu.grasscutter.net.proto.StartRogueDiaryPlayRspOuterClass.StartRogueDiaryPlayRsp other = (emu.grasscutter.net.proto.StartRogueDiaryPlayRspOuterClass.StartRogueDiaryPlayRsp) obj;
 
-      if (!getAvatarListList()
-          .equals(other.getAvatarListList())) return false;
       if (getRetcode()
           != other.getRetcode()) return false;
-      if (!getTrialAvatarListList()
-          .equals(other.getTrialAvatarListList())) return false;
       if (!getRandCardListList()
           .equals(other.getRandCardListList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getAvatarListList()
+          .equals(other.getAvatarListList())) return false;
+      if (!getTrialAvatarListList()
+          .equals(other.getTrialAvatarListList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -447,21 +355,21 @@ public final class StartRogueDiaryPlayRspOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (getAvatarListCount() > 0) {
-        hash = (37 * hash) + AVATAR_LIST_FIELD_NUMBER;
-        hash = (53 * hash) + getAvatarListList().hashCode();
-      }
       hash = (37 * hash) + RETCODE_FIELD_NUMBER;
       hash = (53 * hash) + getRetcode();
-      if (getTrialAvatarListCount() > 0) {
-        hash = (37 * hash) + TRIAL_AVATAR_LIST_FIELD_NUMBER;
-        hash = (53 * hash) + getTrialAvatarListList().hashCode();
-      }
       if (getRandCardListCount() > 0) {
         hash = (37 * hash) + RAND_CARD_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getRandCardListList().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      if (getAvatarListCount() > 0) {
+        hash = (37 * hash) + AVATAR_LIST_FIELD_NUMBER;
+        hash = (53 * hash) + getAvatarListList().hashCode();
+      }
+      if (getTrialAvatarListCount() > 0) {
+        hash = (37 * hash) + TRIAL_AVATAR_LIST_FIELD_NUMBER;
+        hash = (53 * hash) + getTrialAvatarListList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -558,8 +466,7 @@ public final class StartRogueDiaryPlayRspOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 3886
-     * Obf: NJAIODLPBMP
+     * CmdId: 9097
      * </pre>
      *
      * Protobuf type {@code StartRogueDiaryPlayRsp}
@@ -583,39 +490,34 @@ public final class StartRogueDiaryPlayRspOuterClass {
 
       // Construct using emu.grasscutter.net.proto.StartRogueDiaryPlayRspOuterClass.StartRogueDiaryPlayRsp.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getAvatarListFieldBuilder();
-          getTrialAvatarListFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (avatarListBuilder_ == null) {
-          avatarList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        } else {
-          avatarListBuilder_.clear();
-        }
         retcode_ = 0;
 
+        randCardList_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        if (avatarListBuilder_ == null) {
+          avatarList_ = java.util.Collections.emptyList();
+        } else {
+          avatarList_ = null;
+          avatarListBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
         if (trialAvatarListBuilder_ == null) {
           trialAvatarList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
+          trialAvatarList_ = null;
           trialAvatarListBuilder_.clear();
         }
-        randCardList_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
@@ -644,30 +546,30 @@ public final class StartRogueDiaryPlayRspOuterClass {
       public emu.grasscutter.net.proto.StartRogueDiaryPlayRspOuterClass.StartRogueDiaryPlayRsp buildPartial() {
         emu.grasscutter.net.proto.StartRogueDiaryPlayRspOuterClass.StartRogueDiaryPlayRsp result = new emu.grasscutter.net.proto.StartRogueDiaryPlayRspOuterClass.StartRogueDiaryPlayRsp(this);
         int from_bitField0_ = bitField0_;
+        result.retcode_ = retcode_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          randCardList_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.randCardList_ = randCardList_;
         if (avatarListBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
+          if (((bitField0_ & 0x00000002) != 0)) {
             avatarList_ = java.util.Collections.unmodifiableList(avatarList_);
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
           }
           result.avatarList_ = avatarList_;
         } else {
           result.avatarList_ = avatarListBuilder_.build();
         }
-        result.retcode_ = retcode_;
         if (trialAvatarListBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0)) {
+          if (((bitField0_ & 0x00000004) != 0)) {
             trialAvatarList_ = java.util.Collections.unmodifiableList(trialAvatarList_);
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000004);
           }
           result.trialAvatarList_ = trialAvatarList_;
         } else {
           result.trialAvatarList_ = trialAvatarListBuilder_.build();
         }
-        if (((bitField0_ & 0x00000004) != 0)) {
-          randCardList_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000004);
-        }
-        result.randCardList_ = randCardList_;
         onBuilt();
         return result;
       }
@@ -716,11 +618,24 @@ public final class StartRogueDiaryPlayRspOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.StartRogueDiaryPlayRspOuterClass.StartRogueDiaryPlayRsp other) {
         if (other == emu.grasscutter.net.proto.StartRogueDiaryPlayRspOuterClass.StartRogueDiaryPlayRsp.getDefaultInstance()) return this;
+        if (other.getRetcode() != 0) {
+          setRetcode(other.getRetcode());
+        }
+        if (!other.randCardList_.isEmpty()) {
+          if (randCardList_.isEmpty()) {
+            randCardList_ = other.randCardList_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureRandCardListIsMutable();
+            randCardList_.addAll(other.randCardList_);
+          }
+          onChanged();
+        }
         if (avatarListBuilder_ == null) {
           if (!other.avatarList_.isEmpty()) {
             if (avatarList_.isEmpty()) {
               avatarList_ = other.avatarList_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000002);
             } else {
               ensureAvatarListIsMutable();
               avatarList_.addAll(other.avatarList_);
@@ -733,7 +648,7 @@ public final class StartRogueDiaryPlayRspOuterClass {
               avatarListBuilder_.dispose();
               avatarListBuilder_ = null;
               avatarList_ = other.avatarList_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000002);
               avatarListBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getAvatarListFieldBuilder() : null;
@@ -742,14 +657,11 @@ public final class StartRogueDiaryPlayRspOuterClass {
             }
           }
         }
-        if (other.getRetcode() != 0) {
-          setRetcode(other.getRetcode());
-        }
         if (trialAvatarListBuilder_ == null) {
           if (!other.trialAvatarList_.isEmpty()) {
             if (trialAvatarList_.isEmpty()) {
               trialAvatarList_ = other.trialAvatarList_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000004);
             } else {
               ensureTrialAvatarListIsMutable();
               trialAvatarList_.addAll(other.trialAvatarList_);
@@ -762,7 +674,7 @@ public final class StartRogueDiaryPlayRspOuterClass {
               trialAvatarListBuilder_.dispose();
               trialAvatarListBuilder_ = null;
               trialAvatarList_ = other.trialAvatarList_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000004);
               trialAvatarListBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getTrialAvatarListFieldBuilder() : null;
@@ -771,17 +683,7 @@ public final class StartRogueDiaryPlayRspOuterClass {
             }
           }
         }
-        if (!other.randCardList_.isEmpty()) {
-          if (randCardList_.isEmpty()) {
-            randCardList_ = other.randCardList_;
-            bitField0_ = (bitField0_ & ~0x00000004);
-          } else {
-            ensureRandCardListIsMutable();
-            randCardList_.addAll(other.randCardList_);
-          }
-          onChanged();
-        }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -796,27 +698,197 @@ public final class StartRogueDiaryPlayRspOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.StartRogueDiaryPlayRspOuterClass.StartRogueDiaryPlayRsp parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 16: {
+                retcode_ = input.readInt32();
+
+                break;
+              } // case 16
+              case 40: {
+                int v = input.readUInt32();
+                ensureRandCardListIsMutable();
+                randCardList_.addInt(v);
+                break;
+              } // case 40
+              case 42: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureRandCardListIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  randCardList_.addInt(input.readUInt32());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 42
+              case 50: {
+                emu.grasscutter.net.proto.RogueDiaryAvatarOuterClass.RogueDiaryAvatar m =
+                    input.readMessage(
+                        emu.grasscutter.net.proto.RogueDiaryAvatarOuterClass.RogueDiaryAvatar.parser(),
+                        extensionRegistry);
+                if (avatarListBuilder_ == null) {
+                  ensureAvatarListIsMutable();
+                  avatarList_.add(m);
+                } else {
+                  avatarListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 50
+              case 66: {
+                emu.grasscutter.net.proto.RogueDiaryAvatarOuterClass.RogueDiaryAvatar m =
+                    input.readMessage(
+                        emu.grasscutter.net.proto.RogueDiaryAvatarOuterClass.RogueDiaryAvatar.parser(),
+                        extensionRegistry);
+                if (trialAvatarListBuilder_ == null) {
+                  ensureTrialAvatarListIsMutable();
+                  trialAvatarList_.add(m);
+                } else {
+                  trialAvatarListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 66
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.StartRogueDiaryPlayRspOuterClass.StartRogueDiaryPlayRsp) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
 
+      private int retcode_ ;
+      /**
+       * <code>int32 retcode = 2;</code>
+       * @return The retcode.
+       */
+      @java.lang.Override
+      public int getRetcode() {
+        return retcode_;
+      }
+      /**
+       * <code>int32 retcode = 2;</code>
+       * @param value The retcode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRetcode(int value) {
+        
+        retcode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 retcode = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRetcode() {
+        
+        retcode_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Internal.IntList randCardList_ = emptyIntList();
+      private void ensureRandCardListIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          randCardList_ = mutableCopy(randCardList_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <code>repeated uint32 rand_card_list = 5;</code>
+       * @return A list containing the randCardList.
+       */
+      public java.util.List<java.lang.Integer>
+          getRandCardListList() {
+        return ((bitField0_ & 0x00000001) != 0) ?
+                 java.util.Collections.unmodifiableList(randCardList_) : randCardList_;
+      }
+      /**
+       * <code>repeated uint32 rand_card_list = 5;</code>
+       * @return The count of randCardList.
+       */
+      public int getRandCardListCount() {
+        return randCardList_.size();
+      }
+      /**
+       * <code>repeated uint32 rand_card_list = 5;</code>
+       * @param index The index of the element to return.
+       * @return The randCardList at the given index.
+       */
+      public int getRandCardList(int index) {
+        return randCardList_.getInt(index);
+      }
+      /**
+       * <code>repeated uint32 rand_card_list = 5;</code>
+       * @param index The index to set the value at.
+       * @param value The randCardList to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRandCardList(
+          int index, int value) {
+        ensureRandCardListIsMutable();
+        randCardList_.setInt(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 rand_card_list = 5;</code>
+       * @param value The randCardList to add.
+       * @return This builder for chaining.
+       */
+      public Builder addRandCardList(int value) {
+        ensureRandCardListIsMutable();
+        randCardList_.addInt(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 rand_card_list = 5;</code>
+       * @param values The randCardList to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllRandCardList(
+          java.lang.Iterable<? extends java.lang.Integer> values) {
+        ensureRandCardListIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, randCardList_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 rand_card_list = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRandCardList() {
+        randCardList_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+
       private java.util.List<emu.grasscutter.net.proto.RogueDiaryAvatarOuterClass.RogueDiaryAvatar> avatarList_ =
         java.util.Collections.emptyList();
       private void ensureAvatarListIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           avatarList_ = new java.util.ArrayList<emu.grasscutter.net.proto.RogueDiaryAvatarOuterClass.RogueDiaryAvatar>(avatarList_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000002;
          }
       }
 
@@ -824,7 +896,7 @@ public final class StartRogueDiaryPlayRspOuterClass {
           emu.grasscutter.net.proto.RogueDiaryAvatarOuterClass.RogueDiaryAvatar, emu.grasscutter.net.proto.RogueDiaryAvatarOuterClass.RogueDiaryAvatar.Builder, emu.grasscutter.net.proto.RogueDiaryAvatarOuterClass.RogueDiaryAvatarOrBuilder> avatarListBuilder_;
 
       /**
-       * <code>repeated .RogueDiaryAvatar avatar_list = 10;</code>
+       * <code>repeated .RogueDiaryAvatar avatar_list = 6;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.RogueDiaryAvatarOuterClass.RogueDiaryAvatar> getAvatarListList() {
         if (avatarListBuilder_ == null) {
@@ -834,7 +906,7 @@ public final class StartRogueDiaryPlayRspOuterClass {
         }
       }
       /**
-       * <code>repeated .RogueDiaryAvatar avatar_list = 10;</code>
+       * <code>repeated .RogueDiaryAvatar avatar_list = 6;</code>
        */
       public int getAvatarListCount() {
         if (avatarListBuilder_ == null) {
@@ -844,7 +916,7 @@ public final class StartRogueDiaryPlayRspOuterClass {
         }
       }
       /**
-       * <code>repeated .RogueDiaryAvatar avatar_list = 10;</code>
+       * <code>repeated .RogueDiaryAvatar avatar_list = 6;</code>
        */
       public emu.grasscutter.net.proto.RogueDiaryAvatarOuterClass.RogueDiaryAvatar getAvatarList(int index) {
         if (avatarListBuilder_ == null) {
@@ -854,7 +926,7 @@ public final class StartRogueDiaryPlayRspOuterClass {
         }
       }
       /**
-       * <code>repeated .RogueDiaryAvatar avatar_list = 10;</code>
+       * <code>repeated .RogueDiaryAvatar avatar_list = 6;</code>
        */
       public Builder setAvatarList(
           int index, emu.grasscutter.net.proto.RogueDiaryAvatarOuterClass.RogueDiaryAvatar value) {
@@ -871,7 +943,7 @@ public final class StartRogueDiaryPlayRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .RogueDiaryAvatar avatar_list = 10;</code>
+       * <code>repeated .RogueDiaryAvatar avatar_list = 6;</code>
        */
       public Builder setAvatarList(
           int index, emu.grasscutter.net.proto.RogueDiaryAvatarOuterClass.RogueDiaryAvatar.Builder builderForValue) {
@@ -885,7 +957,7 @@ public final class StartRogueDiaryPlayRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .RogueDiaryAvatar avatar_list = 10;</code>
+       * <code>repeated .RogueDiaryAvatar avatar_list = 6;</code>
        */
       public Builder addAvatarList(emu.grasscutter.net.proto.RogueDiaryAvatarOuterClass.RogueDiaryAvatar value) {
         if (avatarListBuilder_ == null) {
@@ -901,7 +973,7 @@ public final class StartRogueDiaryPlayRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .RogueDiaryAvatar avatar_list = 10;</code>
+       * <code>repeated .RogueDiaryAvatar avatar_list = 6;</code>
        */
       public Builder addAvatarList(
           int index, emu.grasscutter.net.proto.RogueDiaryAvatarOuterClass.RogueDiaryAvatar value) {
@@ -918,7 +990,7 @@ public final class StartRogueDiaryPlayRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .RogueDiaryAvatar avatar_list = 10;</code>
+       * <code>repeated .RogueDiaryAvatar avatar_list = 6;</code>
        */
       public Builder addAvatarList(
           emu.grasscutter.net.proto.RogueDiaryAvatarOuterClass.RogueDiaryAvatar.Builder builderForValue) {
@@ -932,7 +1004,7 @@ public final class StartRogueDiaryPlayRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .RogueDiaryAvatar avatar_list = 10;</code>
+       * <code>repeated .RogueDiaryAvatar avatar_list = 6;</code>
        */
       public Builder addAvatarList(
           int index, emu.grasscutter.net.proto.RogueDiaryAvatarOuterClass.RogueDiaryAvatar.Builder builderForValue) {
@@ -946,7 +1018,7 @@ public final class StartRogueDiaryPlayRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .RogueDiaryAvatar avatar_list = 10;</code>
+       * <code>repeated .RogueDiaryAvatar avatar_list = 6;</code>
        */
       public Builder addAllAvatarList(
           java.lang.Iterable<? extends emu.grasscutter.net.proto.RogueDiaryAvatarOuterClass.RogueDiaryAvatar> values) {
@@ -961,12 +1033,12 @@ public final class StartRogueDiaryPlayRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .RogueDiaryAvatar avatar_list = 10;</code>
+       * <code>repeated .RogueDiaryAvatar avatar_list = 6;</code>
        */
       public Builder clearAvatarList() {
         if (avatarListBuilder_ == null) {
           avatarList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
         } else {
           avatarListBuilder_.clear();
@@ -974,7 +1046,7 @@ public final class StartRogueDiaryPlayRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .RogueDiaryAvatar avatar_list = 10;</code>
+       * <code>repeated .RogueDiaryAvatar avatar_list = 6;</code>
        */
       public Builder removeAvatarList(int index) {
         if (avatarListBuilder_ == null) {
@@ -987,14 +1059,14 @@ public final class StartRogueDiaryPlayRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .RogueDiaryAvatar avatar_list = 10;</code>
+       * <code>repeated .RogueDiaryAvatar avatar_list = 6;</code>
        */
       public emu.grasscutter.net.proto.RogueDiaryAvatarOuterClass.RogueDiaryAvatar.Builder getAvatarListBuilder(
           int index) {
         return getAvatarListFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .RogueDiaryAvatar avatar_list = 10;</code>
+       * <code>repeated .RogueDiaryAvatar avatar_list = 6;</code>
        */
       public emu.grasscutter.net.proto.RogueDiaryAvatarOuterClass.RogueDiaryAvatarOrBuilder getAvatarListOrBuilder(
           int index) {
@@ -1004,7 +1076,7 @@ public final class StartRogueDiaryPlayRspOuterClass {
         }
       }
       /**
-       * <code>repeated .RogueDiaryAvatar avatar_list = 10;</code>
+       * <code>repeated .RogueDiaryAvatar avatar_list = 6;</code>
        */
       public java.util.List<? extends emu.grasscutter.net.proto.RogueDiaryAvatarOuterClass.RogueDiaryAvatarOrBuilder> 
            getAvatarListOrBuilderList() {
@@ -1015,14 +1087,14 @@ public final class StartRogueDiaryPlayRspOuterClass {
         }
       }
       /**
-       * <code>repeated .RogueDiaryAvatar avatar_list = 10;</code>
+       * <code>repeated .RogueDiaryAvatar avatar_list = 6;</code>
        */
       public emu.grasscutter.net.proto.RogueDiaryAvatarOuterClass.RogueDiaryAvatar.Builder addAvatarListBuilder() {
         return getAvatarListFieldBuilder().addBuilder(
             emu.grasscutter.net.proto.RogueDiaryAvatarOuterClass.RogueDiaryAvatar.getDefaultInstance());
       }
       /**
-       * <code>repeated .RogueDiaryAvatar avatar_list = 10;</code>
+       * <code>repeated .RogueDiaryAvatar avatar_list = 6;</code>
        */
       public emu.grasscutter.net.proto.RogueDiaryAvatarOuterClass.RogueDiaryAvatar.Builder addAvatarListBuilder(
           int index) {
@@ -1030,7 +1102,7 @@ public final class StartRogueDiaryPlayRspOuterClass {
             index, emu.grasscutter.net.proto.RogueDiaryAvatarOuterClass.RogueDiaryAvatar.getDefaultInstance());
       }
       /**
-       * <code>repeated .RogueDiaryAvatar avatar_list = 10;</code>
+       * <code>repeated .RogueDiaryAvatar avatar_list = 6;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.RogueDiaryAvatarOuterClass.RogueDiaryAvatar.Builder> 
            getAvatarListBuilderList() {
@@ -1043,7 +1115,7 @@ public final class StartRogueDiaryPlayRspOuterClass {
           avatarListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               emu.grasscutter.net.proto.RogueDiaryAvatarOuterClass.RogueDiaryAvatar, emu.grasscutter.net.proto.RogueDiaryAvatarOuterClass.RogueDiaryAvatar.Builder, emu.grasscutter.net.proto.RogueDiaryAvatarOuterClass.RogueDiaryAvatarOrBuilder>(
                   avatarList_,
-                  ((bitField0_ & 0x00000001) != 0),
+                  ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
           avatarList_ = null;
@@ -1051,43 +1123,12 @@ public final class StartRogueDiaryPlayRspOuterClass {
         return avatarListBuilder_;
       }
 
-      private int retcode_ ;
-      /**
-       * <code>int32 retcode = 5;</code>
-       * @return The retcode.
-       */
-      @java.lang.Override
-      public int getRetcode() {
-        return retcode_;
-      }
-      /**
-       * <code>int32 retcode = 5;</code>
-       * @param value The retcode to set.
-       * @return This builder for chaining.
-       */
-      public Builder setRetcode(int value) {
-        
-        retcode_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int32 retcode = 5;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearRetcode() {
-        
-        retcode_ = 0;
-        onChanged();
-        return this;
-      }
-
       private java.util.List<emu.grasscutter.net.proto.RogueDiaryAvatarOuterClass.RogueDiaryAvatar> trialAvatarList_ =
         java.util.Collections.emptyList();
       private void ensureTrialAvatarListIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           trialAvatarList_ = new java.util.ArrayList<emu.grasscutter.net.proto.RogueDiaryAvatarOuterClass.RogueDiaryAvatar>(trialAvatarList_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000004;
          }
       }
 
@@ -1237,7 +1278,7 @@ public final class StartRogueDiaryPlayRspOuterClass {
       public Builder clearTrialAvatarList() {
         if (trialAvatarListBuilder_ == null) {
           trialAvatarList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000004);
           onChanged();
         } else {
           trialAvatarListBuilder_.clear();
@@ -1314,91 +1355,12 @@ public final class StartRogueDiaryPlayRspOuterClass {
           trialAvatarListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               emu.grasscutter.net.proto.RogueDiaryAvatarOuterClass.RogueDiaryAvatar, emu.grasscutter.net.proto.RogueDiaryAvatarOuterClass.RogueDiaryAvatar.Builder, emu.grasscutter.net.proto.RogueDiaryAvatarOuterClass.RogueDiaryAvatarOrBuilder>(
                   trialAvatarList_,
-                  ((bitField0_ & 0x00000002) != 0),
+                  ((bitField0_ & 0x00000004) != 0),
                   getParentForChildren(),
                   isClean());
           trialAvatarList_ = null;
         }
         return trialAvatarListBuilder_;
-      }
-
-      private com.google.protobuf.Internal.IntList randCardList_ = emptyIntList();
-      private void ensureRandCardListIsMutable() {
-        if (!((bitField0_ & 0x00000004) != 0)) {
-          randCardList_ = mutableCopy(randCardList_);
-          bitField0_ |= 0x00000004;
-         }
-      }
-      /**
-       * <code>repeated uint32 rand_card_list = 12;</code>
-       * @return A list containing the randCardList.
-       */
-      public java.util.List<java.lang.Integer>
-          getRandCardListList() {
-        return ((bitField0_ & 0x00000004) != 0) ?
-                 java.util.Collections.unmodifiableList(randCardList_) : randCardList_;
-      }
-      /**
-       * <code>repeated uint32 rand_card_list = 12;</code>
-       * @return The count of randCardList.
-       */
-      public int getRandCardListCount() {
-        return randCardList_.size();
-      }
-      /**
-       * <code>repeated uint32 rand_card_list = 12;</code>
-       * @param index The index of the element to return.
-       * @return The randCardList at the given index.
-       */
-      public int getRandCardList(int index) {
-        return randCardList_.getInt(index);
-      }
-      /**
-       * <code>repeated uint32 rand_card_list = 12;</code>
-       * @param index The index to set the value at.
-       * @param value The randCardList to set.
-       * @return This builder for chaining.
-       */
-      public Builder setRandCardList(
-          int index, int value) {
-        ensureRandCardListIsMutable();
-        randCardList_.setInt(index, value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated uint32 rand_card_list = 12;</code>
-       * @param value The randCardList to add.
-       * @return This builder for chaining.
-       */
-      public Builder addRandCardList(int value) {
-        ensureRandCardListIsMutable();
-        randCardList_.addInt(value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated uint32 rand_card_list = 12;</code>
-       * @param values The randCardList to add.
-       * @return This builder for chaining.
-       */
-      public Builder addAllRandCardList(
-          java.lang.Iterable<? extends java.lang.Integer> values) {
-        ensureRandCardListIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, randCardList_);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated uint32 rand_card_list = 12;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearRandCardList() {
-        randCardList_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000004);
-        onChanged();
-        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -1433,7 +1395,18 @@ public final class StartRogueDiaryPlayRspOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new StartRogueDiaryPlayRsp(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -1469,10 +1442,10 @@ public final class StartRogueDiaryPlayRspOuterClass {
     java.lang.String[] descriptorData = {
       "\n\034StartRogueDiaryPlayRsp.proto\032\026RogueDia" +
       "ryAvatar.proto\"\227\001\n\026StartRogueDiaryPlayRs" +
-      "p\022&\n\013avatar_list\030\n \003(\0132\021.RogueDiaryAvata" +
-      "r\022\017\n\007retcode\030\005 \001(\005\022,\n\021trial_avatar_list\030" +
-      "\010 \003(\0132\021.RogueDiaryAvatar\022\026\n\016rand_card_li" +
-      "st\030\014 \003(\rB\033\n\031emu.grasscutter.net.protob\006p" +
+      "p\022\017\n\007retcode\030\002 \001(\005\022\026\n\016rand_card_list\030\005 \003" +
+      "(\r\022&\n\013avatar_list\030\006 \003(\0132\021.RogueDiaryAvat" +
+      "ar\022,\n\021trial_avatar_list\030\010 \003(\0132\021.RogueDia" +
+      "ryAvatarB\033\n\031emu.grasscutter.net.protob\006p" +
       "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -1485,7 +1458,7 @@ public final class StartRogueDiaryPlayRspOuterClass {
     internal_static_StartRogueDiaryPlayRsp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_StartRogueDiaryPlayRsp_descriptor,
-        new java.lang.String[] { "AvatarList", "Retcode", "TrialAvatarList", "RandCardList", });
+        new java.lang.String[] { "Retcode", "RandCardList", "AvatarList", "TrialAvatarList", });
     emu.grasscutter.net.proto.RogueDiaryAvatarOuterClass.getDescriptor();
   }
 

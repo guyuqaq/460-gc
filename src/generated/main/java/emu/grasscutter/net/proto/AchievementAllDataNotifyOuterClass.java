@@ -88,80 +88,6 @@ public final class AchievementAllDataNotifyOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private AchievementAllDataNotify(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 66: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                achievementList_ = new java.util.ArrayList<emu.grasscutter.net.proto.AchievementOuterClass.Achievement>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              achievementList_.add(
-                  input.readMessage(emu.grasscutter.net.proto.AchievementOuterClass.Achievement.parser(), extensionRegistry));
-              break;
-            }
-            case 120: {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                rewardTakenGoalIdList_ = newIntList();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              rewardTakenGoalIdList_.addInt(input.readUInt32());
-              break;
-            }
-            case 122: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000002) != 0) && input.getBytesUntilLimit() > 0) {
-                rewardTakenGoalIdList_ = newIntList();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                rewardTakenGoalIdList_.addInt(input.readUInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          achievementList_ = java.util.Collections.unmodifiableList(achievementList_);
-        }
-        if (((mutable_bitField0_ & 0x00000002) != 0)) {
-          rewardTakenGoalIdList_.makeImmutable(); // C
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.AchievementAllDataNotifyOuterClass.internal_static_AchievementAllDataNotify_descriptor;
@@ -268,7 +194,7 @@ public final class AchievementAllDataNotifyOuterClass {
       for (int i = 0; i < rewardTakenGoalIdList_.size(); i++) {
         output.writeUInt32NoTag(rewardTakenGoalIdList_.getInt(i));
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -295,7 +221,7 @@ public final class AchievementAllDataNotifyOuterClass {
         }
         rewardTakenGoalIdListMemoizedSerializedSize = dataSize;
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -314,7 +240,7 @@ public final class AchievementAllDataNotifyOuterClass {
           .equals(other.getAchievementListList())) return false;
       if (!getRewardTakenGoalIdListList()
           .equals(other.getRewardTakenGoalIdListList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -333,7 +259,7 @@ public final class AchievementAllDataNotifyOuterClass {
         hash = (37 * hash) + REWARD_TAKEN_GOAL_ID_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getRewardTakenGoalIdListList().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -450,29 +376,24 @@ public final class AchievementAllDataNotifyOuterClass {
 
       // Construct using emu.grasscutter.net.proto.AchievementAllDataNotifyOuterClass.AchievementAllDataNotify.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getAchievementListFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
         if (achievementListBuilder_ == null) {
           achievementList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          achievementList_ = null;
           achievementListBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000001);
         rewardTakenGoalIdList_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000002);
         return this;
@@ -600,7 +521,7 @@ public final class AchievementAllDataNotifyOuterClass {
           }
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -615,17 +536,59 @@ public final class AchievementAllDataNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.AchievementAllDataNotifyOuterClass.AchievementAllDataNotify parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 66: {
+                emu.grasscutter.net.proto.AchievementOuterClass.Achievement m =
+                    input.readMessage(
+                        emu.grasscutter.net.proto.AchievementOuterClass.Achievement.parser(),
+                        extensionRegistry);
+                if (achievementListBuilder_ == null) {
+                  ensureAchievementListIsMutable();
+                  achievementList_.add(m);
+                } else {
+                  achievementListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 66
+              case 120: {
+                int v = input.readUInt32();
+                ensureRewardTakenGoalIdListIsMutable();
+                rewardTakenGoalIdList_.addInt(v);
+                break;
+              } // case 120
+              case 122: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureRewardTakenGoalIdListIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  rewardTakenGoalIdList_.addInt(input.readUInt32());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 122
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.AchievementAllDataNotifyOuterClass.AchievementAllDataNotify) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -981,7 +944,18 @@ public final class AchievementAllDataNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new AchievementAllDataNotify(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

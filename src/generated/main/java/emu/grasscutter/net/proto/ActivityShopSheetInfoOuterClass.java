@@ -25,22 +25,18 @@ public final class ActivityShopSheetInfoOuterClass {
     int getBeginTime();
 
     /**
-     * <code>uint32 sheet_id = 14;</code>
-     * @return The sheetId.
+     * <code>uint32 KPAKELNFFHK = 5;</code>
+     * @return The kPAKELNFFHK.
      */
-    int getSheetId();
+    int getKPAKELNFFHK();
 
     /**
-     * <code>uint32 end_time = 15;</code>
+     * <code>uint32 end_time = 12;</code>
      * @return The endTime.
      */
     int getEndTime();
   }
   /**
-   * <pre>
-   * Obf: AENJPCKAMNL
-   * </pre>
-   *
    * Protobuf type {@code ActivityShopSheetInfo}
    */
   public static final class ActivityShopSheetInfo extends
@@ -67,58 +63,6 @@ public final class ActivityShopSheetInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private ActivityShopSheetInfo(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-
-              beginTime_ = input.readUInt32();
-              break;
-            }
-            case 112: {
-
-              sheetId_ = input.readUInt32();
-              break;
-            }
-            case 120: {
-
-              endTime_ = input.readUInt32();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.ActivityShopSheetInfoOuterClass.internal_static_ActivityShopSheetInfo_descriptor;
@@ -143,21 +87,21 @@ public final class ActivityShopSheetInfoOuterClass {
       return beginTime_;
     }
 
-    public static final int SHEET_ID_FIELD_NUMBER = 14;
-    private int sheetId_;
+    public static final int KPAKELNFFHK_FIELD_NUMBER = 5;
+    private int kPAKELNFFHK_;
     /**
-     * <code>uint32 sheet_id = 14;</code>
-     * @return The sheetId.
+     * <code>uint32 KPAKELNFFHK = 5;</code>
+     * @return The kPAKELNFFHK.
      */
     @java.lang.Override
-    public int getSheetId() {
-      return sheetId_;
+    public int getKPAKELNFFHK() {
+      return kPAKELNFFHK_;
     }
 
-    public static final int END_TIME_FIELD_NUMBER = 15;
+    public static final int END_TIME_FIELD_NUMBER = 12;
     private int endTime_;
     /**
-     * <code>uint32 end_time = 15;</code>
+     * <code>uint32 end_time = 12;</code>
      * @return The endTime.
      */
     @java.lang.Override
@@ -182,13 +126,13 @@ public final class ActivityShopSheetInfoOuterClass {
       if (beginTime_ != 0) {
         output.writeUInt32(1, beginTime_);
       }
-      if (sheetId_ != 0) {
-        output.writeUInt32(14, sheetId_);
+      if (kPAKELNFFHK_ != 0) {
+        output.writeUInt32(5, kPAKELNFFHK_);
       }
       if (endTime_ != 0) {
-        output.writeUInt32(15, endTime_);
+        output.writeUInt32(12, endTime_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -201,15 +145,15 @@ public final class ActivityShopSheetInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(1, beginTime_);
       }
-      if (sheetId_ != 0) {
+      if (kPAKELNFFHK_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(14, sheetId_);
+          .computeUInt32Size(5, kPAKELNFFHK_);
       }
       if (endTime_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(15, endTime_);
+          .computeUInt32Size(12, endTime_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -226,11 +170,11 @@ public final class ActivityShopSheetInfoOuterClass {
 
       if (getBeginTime()
           != other.getBeginTime()) return false;
-      if (getSheetId()
-          != other.getSheetId()) return false;
+      if (getKPAKELNFFHK()
+          != other.getKPAKELNFFHK()) return false;
       if (getEndTime()
           != other.getEndTime()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -243,11 +187,11 @@ public final class ActivityShopSheetInfoOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + BEGIN_TIME_FIELD_NUMBER;
       hash = (53 * hash) + getBeginTime();
-      hash = (37 * hash) + SHEET_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getSheetId();
+      hash = (37 * hash) + KPAKELNFFHK_FIELD_NUMBER;
+      hash = (53 * hash) + getKPAKELNFFHK();
       hash = (37 * hash) + END_TIME_FIELD_NUMBER;
       hash = (53 * hash) + getEndTime();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -343,10 +287,6 @@ public final class ActivityShopSheetInfoOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * Obf: AENJPCKAMNL
-     * </pre>
-     *
      * Protobuf type {@code ActivityShopSheetInfo}
      */
     public static final class Builder extends
@@ -368,25 +308,20 @@ public final class ActivityShopSheetInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.ActivityShopSheetInfoOuterClass.ActivityShopSheetInfo.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
         beginTime_ = 0;
 
-        sheetId_ = 0;
+        kPAKELNFFHK_ = 0;
 
         endTime_ = 0;
 
@@ -417,7 +352,7 @@ public final class ActivityShopSheetInfoOuterClass {
       public emu.grasscutter.net.proto.ActivityShopSheetInfoOuterClass.ActivityShopSheetInfo buildPartial() {
         emu.grasscutter.net.proto.ActivityShopSheetInfoOuterClass.ActivityShopSheetInfo result = new emu.grasscutter.net.proto.ActivityShopSheetInfoOuterClass.ActivityShopSheetInfo(this);
         result.beginTime_ = beginTime_;
-        result.sheetId_ = sheetId_;
+        result.kPAKELNFFHK_ = kPAKELNFFHK_;
         result.endTime_ = endTime_;
         onBuilt();
         return result;
@@ -470,13 +405,13 @@ public final class ActivityShopSheetInfoOuterClass {
         if (other.getBeginTime() != 0) {
           setBeginTime(other.getBeginTime());
         }
-        if (other.getSheetId() != 0) {
-          setSheetId(other.getSheetId());
+        if (other.getKPAKELNFFHK() != 0) {
+          setKPAKELNFFHK(other.getKPAKELNFFHK());
         }
         if (other.getEndTime() != 0) {
           setEndTime(other.getEndTime());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -491,17 +426,45 @@ public final class ActivityShopSheetInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.ActivityShopSheetInfoOuterClass.ActivityShopSheetInfo parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                beginTime_ = input.readUInt32();
+
+                break;
+              } // case 8
+              case 40: {
+                kPAKELNFFHK_ = input.readUInt32();
+
+                break;
+              } // case 40
+              case 96: {
+                endTime_ = input.readUInt32();
+
+                break;
+              } // case 96
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.ActivityShopSheetInfoOuterClass.ActivityShopSheetInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -536,40 +499,40 @@ public final class ActivityShopSheetInfoOuterClass {
         return this;
       }
 
-      private int sheetId_ ;
+      private int kPAKELNFFHK_ ;
       /**
-       * <code>uint32 sheet_id = 14;</code>
-       * @return The sheetId.
+       * <code>uint32 KPAKELNFFHK = 5;</code>
+       * @return The kPAKELNFFHK.
        */
       @java.lang.Override
-      public int getSheetId() {
-        return sheetId_;
+      public int getKPAKELNFFHK() {
+        return kPAKELNFFHK_;
       }
       /**
-       * <code>uint32 sheet_id = 14;</code>
-       * @param value The sheetId to set.
+       * <code>uint32 KPAKELNFFHK = 5;</code>
+       * @param value The kPAKELNFFHK to set.
        * @return This builder for chaining.
        */
-      public Builder setSheetId(int value) {
+      public Builder setKPAKELNFFHK(int value) {
         
-        sheetId_ = value;
+        kPAKELNFFHK_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 sheet_id = 14;</code>
+       * <code>uint32 KPAKELNFFHK = 5;</code>
        * @return This builder for chaining.
        */
-      public Builder clearSheetId() {
+      public Builder clearKPAKELNFFHK() {
         
-        sheetId_ = 0;
+        kPAKELNFFHK_ = 0;
         onChanged();
         return this;
       }
 
       private int endTime_ ;
       /**
-       * <code>uint32 end_time = 15;</code>
+       * <code>uint32 end_time = 12;</code>
        * @return The endTime.
        */
       @java.lang.Override
@@ -577,7 +540,7 @@ public final class ActivityShopSheetInfoOuterClass {
         return endTime_;
       }
       /**
-       * <code>uint32 end_time = 15;</code>
+       * <code>uint32 end_time = 12;</code>
        * @param value The endTime to set.
        * @return This builder for chaining.
        */
@@ -588,7 +551,7 @@ public final class ActivityShopSheetInfoOuterClass {
         return this;
       }
       /**
-       * <code>uint32 end_time = 15;</code>
+       * <code>uint32 end_time = 12;</code>
        * @return This builder for chaining.
        */
       public Builder clearEndTime() {
@@ -630,7 +593,18 @@ public final class ActivityShopSheetInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new ActivityShopSheetInfo(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -664,10 +638,10 @@ public final class ActivityShopSheetInfoOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\033ActivityShopSheetInfo.proto\"O\n\025Activit" +
-      "yShopSheetInfo\022\022\n\nbegin_time\030\001 \001(\r\022\020\n\010sh" +
-      "eet_id\030\016 \001(\r\022\020\n\010end_time\030\017 \001(\rB\033\n\031emu.gr" +
-      "asscutter.net.protob\006proto3"
+      "\n\033ActivityShopSheetInfo.proto\"R\n\025Activit" +
+      "yShopSheetInfo\022\022\n\nbegin_time\030\001 \001(\r\022\023\n\013KP" +
+      "AKELNFFHK\030\005 \001(\r\022\020\n\010end_time\030\014 \001(\rB\033\n\031emu" +
+      ".grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -678,7 +652,7 @@ public final class ActivityShopSheetInfoOuterClass {
     internal_static_ActivityShopSheetInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ActivityShopSheetInfo_descriptor,
-        new java.lang.String[] { "BeginTime", "SheetId", "EndTime", });
+        new java.lang.String[] { "BeginTime", "KPAKELNFFHK", "EndTime", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

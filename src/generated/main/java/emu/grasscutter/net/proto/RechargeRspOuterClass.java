@@ -19,34 +19,32 @@ public final class RechargeRspOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string product_id = 3;</code>
-     * @return The productId.
-     */
-    java.lang.String getProductId();
-    /**
-     * <code>string product_id = 3;</code>
-     * @return The bytes for productId.
-     */
-    com.google.protobuf.ByteString
-        getProductIdBytes();
-
-    /**
-     * <code>bool is_show_minors_hint = 6;</code>
+     * <code>bool is_show_minors_hint = 1;</code>
      * @return The isShowMinorsHint.
      */
     boolean getIsShowMinorsHint();
 
     /**
-     * <code>int32 retcode = 11;</code>
+     * <code>int32 retcode = 2;</code>
      * @return The retcode.
      */
     int getRetcode();
+
+    /**
+     * <code>string product_id = 5;</code>
+     * @return The productId.
+     */
+    java.lang.String getProductId();
+    /**
+     * <code>string product_id = 5;</code>
+     * @return The bytes for productId.
+     */
+    com.google.protobuf.ByteString
+        getProductIdBytes();
   }
   /**
    * <pre>
-   * CmdId: 1499
-   * Version: 4.6.0
-   * Obfs: HEJONAIGBBM
+   * CmdId: 24839
    * </pre>
    *
    * Protobuf type {@code RechargeRsp}
@@ -76,59 +74,6 @@ public final class RechargeRspOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private RechargeRsp(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              productId_ = s;
-              break;
-            }
-            case 48: {
-
-              isShowMinorsHint_ = input.readBool();
-              break;
-            }
-            case 88: {
-
-              retcode_ = input.readInt32();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.RechargeRspOuterClass.internal_static_RechargeRsp_descriptor;
@@ -142,10 +87,32 @@ public final class RechargeRspOuterClass {
               emu.grasscutter.net.proto.RechargeRspOuterClass.RechargeRsp.class, emu.grasscutter.net.proto.RechargeRspOuterClass.RechargeRsp.Builder.class);
     }
 
-    public static final int PRODUCT_ID_FIELD_NUMBER = 3;
+    public static final int IS_SHOW_MINORS_HINT_FIELD_NUMBER = 1;
+    private boolean isShowMinorsHint_;
+    /**
+     * <code>bool is_show_minors_hint = 1;</code>
+     * @return The isShowMinorsHint.
+     */
+    @java.lang.Override
+    public boolean getIsShowMinorsHint() {
+      return isShowMinorsHint_;
+    }
+
+    public static final int RETCODE_FIELD_NUMBER = 2;
+    private int retcode_;
+    /**
+     * <code>int32 retcode = 2;</code>
+     * @return The retcode.
+     */
+    @java.lang.Override
+    public int getRetcode() {
+      return retcode_;
+    }
+
+    public static final int PRODUCT_ID_FIELD_NUMBER = 5;
     private volatile java.lang.Object productId_;
     /**
-     * <code>string product_id = 3;</code>
+     * <code>string product_id = 5;</code>
      * @return The productId.
      */
     @java.lang.Override
@@ -162,7 +129,7 @@ public final class RechargeRspOuterClass {
       }
     }
     /**
-     * <code>string product_id = 3;</code>
+     * <code>string product_id = 5;</code>
      * @return The bytes for productId.
      */
     @java.lang.Override
@@ -180,28 +147,6 @@ public final class RechargeRspOuterClass {
       }
     }
 
-    public static final int IS_SHOW_MINORS_HINT_FIELD_NUMBER = 6;
-    private boolean isShowMinorsHint_;
-    /**
-     * <code>bool is_show_minors_hint = 6;</code>
-     * @return The isShowMinorsHint.
-     */
-    @java.lang.Override
-    public boolean getIsShowMinorsHint() {
-      return isShowMinorsHint_;
-    }
-
-    public static final int RETCODE_FIELD_NUMBER = 11;
-    private int retcode_;
-    /**
-     * <code>int32 retcode = 11;</code>
-     * @return The retcode.
-     */
-    @java.lang.Override
-    public int getRetcode() {
-      return retcode_;
-    }
-
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -216,16 +161,16 @@ public final class RechargeRspOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(productId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, productId_);
-      }
       if (isShowMinorsHint_ != false) {
-        output.writeBool(6, isShowMinorsHint_);
+        output.writeBool(1, isShowMinorsHint_);
       }
       if (retcode_ != 0) {
-        output.writeInt32(11, retcode_);
+        output.writeInt32(2, retcode_);
       }
-      unknownFields.writeTo(output);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(productId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, productId_);
+      }
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -234,18 +179,18 @@ public final class RechargeRspOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(productId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, productId_);
-      }
       if (isShowMinorsHint_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(6, isShowMinorsHint_);
+          .computeBoolSize(1, isShowMinorsHint_);
       }
       if (retcode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(11, retcode_);
+          .computeInt32Size(2, retcode_);
       }
-      size += unknownFields.getSerializedSize();
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(productId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, productId_);
+      }
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -260,13 +205,13 @@ public final class RechargeRspOuterClass {
       }
       emu.grasscutter.net.proto.RechargeRspOuterClass.RechargeRsp other = (emu.grasscutter.net.proto.RechargeRspOuterClass.RechargeRsp) obj;
 
-      if (!getProductId()
-          .equals(other.getProductId())) return false;
       if (getIsShowMinorsHint()
           != other.getIsShowMinorsHint()) return false;
       if (getRetcode()
           != other.getRetcode()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getProductId()
+          .equals(other.getProductId())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -277,14 +222,14 @@ public final class RechargeRspOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + PRODUCT_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getProductId().hashCode();
       hash = (37 * hash) + IS_SHOW_MINORS_HINT_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsShowMinorsHint());
       hash = (37 * hash) + RETCODE_FIELD_NUMBER;
       hash = (53 * hash) + getRetcode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (37 * hash) + PRODUCT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getProductId().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -381,9 +326,7 @@ public final class RechargeRspOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 1499
-     * Version: 4.6.0
-     * Obfs: HEJONAIGBBM
+     * CmdId: 24839
      * </pre>
      *
      * Protobuf type {@code RechargeRsp}
@@ -407,27 +350,22 @@ public final class RechargeRspOuterClass {
 
       // Construct using emu.grasscutter.net.proto.RechargeRspOuterClass.RechargeRsp.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        productId_ = "";
-
         isShowMinorsHint_ = false;
 
         retcode_ = 0;
+
+        productId_ = "";
 
         return this;
       }
@@ -455,9 +393,9 @@ public final class RechargeRspOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.RechargeRspOuterClass.RechargeRsp buildPartial() {
         emu.grasscutter.net.proto.RechargeRspOuterClass.RechargeRsp result = new emu.grasscutter.net.proto.RechargeRspOuterClass.RechargeRsp(this);
-        result.productId_ = productId_;
         result.isShowMinorsHint_ = isShowMinorsHint_;
         result.retcode_ = retcode_;
+        result.productId_ = productId_;
         onBuilt();
         return result;
       }
@@ -506,17 +444,17 @@ public final class RechargeRspOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.RechargeRspOuterClass.RechargeRsp other) {
         if (other == emu.grasscutter.net.proto.RechargeRspOuterClass.RechargeRsp.getDefaultInstance()) return this;
-        if (!other.getProductId().isEmpty()) {
-          productId_ = other.productId_;
-          onChanged();
-        }
         if (other.getIsShowMinorsHint() != false) {
           setIsShowMinorsHint(other.getIsShowMinorsHint());
         }
         if (other.getRetcode() != 0) {
           setRetcode(other.getRetcode());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        if (!other.getProductId().isEmpty()) {
+          productId_ = other.productId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -531,23 +469,113 @@ public final class RechargeRspOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.RechargeRspOuterClass.RechargeRsp parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                isShowMinorsHint_ = input.readBool();
+
+                break;
+              } // case 8
+              case 16: {
+                retcode_ = input.readInt32();
+
+                break;
+              } // case 16
+              case 42: {
+                productId_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.RechargeRspOuterClass.RechargeRsp) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
+        return this;
+      }
+
+      private boolean isShowMinorsHint_ ;
+      /**
+       * <code>bool is_show_minors_hint = 1;</code>
+       * @return The isShowMinorsHint.
+       */
+      @java.lang.Override
+      public boolean getIsShowMinorsHint() {
+        return isShowMinorsHint_;
+      }
+      /**
+       * <code>bool is_show_minors_hint = 1;</code>
+       * @param value The isShowMinorsHint to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsShowMinorsHint(boolean value) {
+        
+        isShowMinorsHint_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool is_show_minors_hint = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsShowMinorsHint() {
+        
+        isShowMinorsHint_ = false;
+        onChanged();
+        return this;
+      }
+
+      private int retcode_ ;
+      /**
+       * <code>int32 retcode = 2;</code>
+       * @return The retcode.
+       */
+      @java.lang.Override
+      public int getRetcode() {
+        return retcode_;
+      }
+      /**
+       * <code>int32 retcode = 2;</code>
+       * @param value The retcode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRetcode(int value) {
+        
+        retcode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 retcode = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRetcode() {
+        
+        retcode_ = 0;
+        onChanged();
         return this;
       }
 
       private java.lang.Object productId_ = "";
       /**
-       * <code>string product_id = 3;</code>
+       * <code>string product_id = 5;</code>
        * @return The productId.
        */
       public java.lang.String getProductId() {
@@ -563,7 +591,7 @@ public final class RechargeRspOuterClass {
         }
       }
       /**
-       * <code>string product_id = 3;</code>
+       * <code>string product_id = 5;</code>
        * @return The bytes for productId.
        */
       public com.google.protobuf.ByteString
@@ -580,7 +608,7 @@ public final class RechargeRspOuterClass {
         }
       }
       /**
-       * <code>string product_id = 3;</code>
+       * <code>string product_id = 5;</code>
        * @param value The productId to set.
        * @return This builder for chaining.
        */
@@ -595,7 +623,7 @@ public final class RechargeRspOuterClass {
         return this;
       }
       /**
-       * <code>string product_id = 3;</code>
+       * <code>string product_id = 5;</code>
        * @return This builder for chaining.
        */
       public Builder clearProductId() {
@@ -605,7 +633,7 @@ public final class RechargeRspOuterClass {
         return this;
       }
       /**
-       * <code>string product_id = 3;</code>
+       * <code>string product_id = 5;</code>
        * @param value The bytes for productId to set.
        * @return This builder for chaining.
        */
@@ -617,68 +645,6 @@ public final class RechargeRspOuterClass {
   checkByteStringIsUtf8(value);
         
         productId_ = value;
-        onChanged();
-        return this;
-      }
-
-      private boolean isShowMinorsHint_ ;
-      /**
-       * <code>bool is_show_minors_hint = 6;</code>
-       * @return The isShowMinorsHint.
-       */
-      @java.lang.Override
-      public boolean getIsShowMinorsHint() {
-        return isShowMinorsHint_;
-      }
-      /**
-       * <code>bool is_show_minors_hint = 6;</code>
-       * @param value The isShowMinorsHint to set.
-       * @return This builder for chaining.
-       */
-      public Builder setIsShowMinorsHint(boolean value) {
-        
-        isShowMinorsHint_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bool is_show_minors_hint = 6;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearIsShowMinorsHint() {
-        
-        isShowMinorsHint_ = false;
-        onChanged();
-        return this;
-      }
-
-      private int retcode_ ;
-      /**
-       * <code>int32 retcode = 11;</code>
-       * @return The retcode.
-       */
-      @java.lang.Override
-      public int getRetcode() {
-        return retcode_;
-      }
-      /**
-       * <code>int32 retcode = 11;</code>
-       * @param value The retcode to set.
-       * @return This builder for chaining.
-       */
-      public Builder setRetcode(int value) {
-        
-        retcode_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int32 retcode = 11;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearRetcode() {
-        
-        retcode_ = 0;
         onChanged();
         return this;
       }
@@ -715,7 +681,18 @@ public final class RechargeRspOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new RechargeRsp(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -749,9 +726,9 @@ public final class RechargeRspOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\021RechargeRsp.proto\"O\n\013RechargeRsp\022\022\n\npr" +
-      "oduct_id\030\003 \001(\t\022\033\n\023is_show_minors_hint\030\006 " +
-      "\001(\010\022\017\n\007retcode\030\013 \001(\005B\033\n\031emu.grasscutter." +
+      "\n\021RechargeRsp.proto\"O\n\013RechargeRsp\022\033\n\023is" +
+      "_show_minors_hint\030\001 \001(\010\022\017\n\007retcode\030\002 \001(\005" +
+      "\022\022\n\nproduct_id\030\005 \001(\tB\033\n\031emu.grasscutter." +
       "net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -763,7 +740,7 @@ public final class RechargeRspOuterClass {
     internal_static_RechargeRsp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_RechargeRsp_descriptor,
-        new java.lang.String[] { "ProductId", "IsShowMinorsHint", "Retcode", });
+        new java.lang.String[] { "IsShowMinorsHint", "Retcode", "ProductId", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

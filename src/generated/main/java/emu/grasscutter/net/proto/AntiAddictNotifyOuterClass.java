@@ -51,7 +51,6 @@ public final class AntiAddictNotifyOuterClass {
   /**
    * <pre>
    * CmdId: 20752
-   * Obf: FDPBICNKDBN
    * </pre>
    *
    * Protobuf type {@code AntiAddictNotify}
@@ -360,7 +359,6 @@ public final class AntiAddictNotifyOuterClass {
     /**
      * <pre>
      * CmdId: 20752
-     * Obf: FDPBICNKDBN
      * </pre>
      *
      * Protobuf type {@code AntiAddictNotify}

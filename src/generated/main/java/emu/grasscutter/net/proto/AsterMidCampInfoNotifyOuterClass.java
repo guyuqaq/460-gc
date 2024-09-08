@@ -19,33 +19,32 @@ public final class AsterMidCampInfoNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .AsterMidCampInfo camp_list = 12;</code>
+     * <code>repeated .AsterMidCampInfo camp_list = 13;</code>
      */
     java.util.List<emu.grasscutter.net.proto.AsterMidCampInfoOuterClass.AsterMidCampInfo> 
         getCampListList();
     /**
-     * <code>repeated .AsterMidCampInfo camp_list = 12;</code>
+     * <code>repeated .AsterMidCampInfo camp_list = 13;</code>
      */
     emu.grasscutter.net.proto.AsterMidCampInfoOuterClass.AsterMidCampInfo getCampList(int index);
     /**
-     * <code>repeated .AsterMidCampInfo camp_list = 12;</code>
+     * <code>repeated .AsterMidCampInfo camp_list = 13;</code>
      */
     int getCampListCount();
     /**
-     * <code>repeated .AsterMidCampInfo camp_list = 12;</code>
+     * <code>repeated .AsterMidCampInfo camp_list = 13;</code>
      */
     java.util.List<? extends emu.grasscutter.net.proto.AsterMidCampInfoOuterClass.AsterMidCampInfoOrBuilder> 
         getCampListOrBuilderList();
     /**
-     * <code>repeated .AsterMidCampInfo camp_list = 12;</code>
+     * <code>repeated .AsterMidCampInfo camp_list = 13;</code>
      */
     emu.grasscutter.net.proto.AsterMidCampInfoOuterClass.AsterMidCampInfoOrBuilder getCampListOrBuilder(
         int index);
   }
   /**
    * <pre>
-   * CmdId: 21139
-   * Obf: JGDCHLHCNFO
+   * CmdId: 23516
    * </pre>
    *
    * Protobuf type {@code AsterMidCampInfoNotify}
@@ -75,56 +74,6 @@ public final class AsterMidCampInfoNotifyOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private AsterMidCampInfoNotify(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 98: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                campList_ = new java.util.ArrayList<emu.grasscutter.net.proto.AsterMidCampInfoOuterClass.AsterMidCampInfo>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              campList_.add(
-                  input.readMessage(emu.grasscutter.net.proto.AsterMidCampInfoOuterClass.AsterMidCampInfo.parser(), extensionRegistry));
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          campList_ = java.util.Collections.unmodifiableList(campList_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.AsterMidCampInfoNotifyOuterClass.internal_static_AsterMidCampInfoNotify_descriptor;
@@ -138,17 +87,17 @@ public final class AsterMidCampInfoNotifyOuterClass {
               emu.grasscutter.net.proto.AsterMidCampInfoNotifyOuterClass.AsterMidCampInfoNotify.class, emu.grasscutter.net.proto.AsterMidCampInfoNotifyOuterClass.AsterMidCampInfoNotify.Builder.class);
     }
 
-    public static final int CAMP_LIST_FIELD_NUMBER = 12;
+    public static final int CAMP_LIST_FIELD_NUMBER = 13;
     private java.util.List<emu.grasscutter.net.proto.AsterMidCampInfoOuterClass.AsterMidCampInfo> campList_;
     /**
-     * <code>repeated .AsterMidCampInfo camp_list = 12;</code>
+     * <code>repeated .AsterMidCampInfo camp_list = 13;</code>
      */
     @java.lang.Override
     public java.util.List<emu.grasscutter.net.proto.AsterMidCampInfoOuterClass.AsterMidCampInfo> getCampListList() {
       return campList_;
     }
     /**
-     * <code>repeated .AsterMidCampInfo camp_list = 12;</code>
+     * <code>repeated .AsterMidCampInfo camp_list = 13;</code>
      */
     @java.lang.Override
     public java.util.List<? extends emu.grasscutter.net.proto.AsterMidCampInfoOuterClass.AsterMidCampInfoOrBuilder> 
@@ -156,21 +105,21 @@ public final class AsterMidCampInfoNotifyOuterClass {
       return campList_;
     }
     /**
-     * <code>repeated .AsterMidCampInfo camp_list = 12;</code>
+     * <code>repeated .AsterMidCampInfo camp_list = 13;</code>
      */
     @java.lang.Override
     public int getCampListCount() {
       return campList_.size();
     }
     /**
-     * <code>repeated .AsterMidCampInfo camp_list = 12;</code>
+     * <code>repeated .AsterMidCampInfo camp_list = 13;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.AsterMidCampInfoOuterClass.AsterMidCampInfo getCampList(int index) {
       return campList_.get(index);
     }
     /**
-     * <code>repeated .AsterMidCampInfo camp_list = 12;</code>
+     * <code>repeated .AsterMidCampInfo camp_list = 13;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.AsterMidCampInfoOuterClass.AsterMidCampInfoOrBuilder getCampListOrBuilder(
@@ -193,9 +142,9 @@ public final class AsterMidCampInfoNotifyOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       for (int i = 0; i < campList_.size(); i++) {
-        output.writeMessage(12, campList_.get(i));
+        output.writeMessage(13, campList_.get(i));
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -206,9 +155,9 @@ public final class AsterMidCampInfoNotifyOuterClass {
       size = 0;
       for (int i = 0; i < campList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(12, campList_.get(i));
+          .computeMessageSize(13, campList_.get(i));
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -225,7 +174,7 @@ public final class AsterMidCampInfoNotifyOuterClass {
 
       if (!getCampListList()
           .equals(other.getCampListList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -240,7 +189,7 @@ public final class AsterMidCampInfoNotifyOuterClass {
         hash = (37 * hash) + CAMP_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getCampListList().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -337,8 +286,7 @@ public final class AsterMidCampInfoNotifyOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 21139
-     * Obf: JGDCHLHCNFO
+     * CmdId: 23516
      * </pre>
      *
      * Protobuf type {@code AsterMidCampInfoNotify}
@@ -362,29 +310,24 @@ public final class AsterMidCampInfoNotifyOuterClass {
 
       // Construct using emu.grasscutter.net.proto.AsterMidCampInfoNotifyOuterClass.AsterMidCampInfoNotify.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getCampListFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
         if (campListBuilder_ == null) {
           campList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          campList_ = null;
           campListBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -495,7 +438,7 @@ public final class AsterMidCampInfoNotifyOuterClass {
             }
           }
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -510,17 +453,43 @@ public final class AsterMidCampInfoNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.AsterMidCampInfoNotifyOuterClass.AsterMidCampInfoNotify parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 106: {
+                emu.grasscutter.net.proto.AsterMidCampInfoOuterClass.AsterMidCampInfo m =
+                    input.readMessage(
+                        emu.grasscutter.net.proto.AsterMidCampInfoOuterClass.AsterMidCampInfo.parser(),
+                        extensionRegistry);
+                if (campListBuilder_ == null) {
+                  ensureCampListIsMutable();
+                  campList_.add(m);
+                } else {
+                  campListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 106
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.AsterMidCampInfoNotifyOuterClass.AsterMidCampInfoNotify) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -538,7 +507,7 @@ public final class AsterMidCampInfoNotifyOuterClass {
           emu.grasscutter.net.proto.AsterMidCampInfoOuterClass.AsterMidCampInfo, emu.grasscutter.net.proto.AsterMidCampInfoOuterClass.AsterMidCampInfo.Builder, emu.grasscutter.net.proto.AsterMidCampInfoOuterClass.AsterMidCampInfoOrBuilder> campListBuilder_;
 
       /**
-       * <code>repeated .AsterMidCampInfo camp_list = 12;</code>
+       * <code>repeated .AsterMidCampInfo camp_list = 13;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.AsterMidCampInfoOuterClass.AsterMidCampInfo> getCampListList() {
         if (campListBuilder_ == null) {
@@ -548,7 +517,7 @@ public final class AsterMidCampInfoNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .AsterMidCampInfo camp_list = 12;</code>
+       * <code>repeated .AsterMidCampInfo camp_list = 13;</code>
        */
       public int getCampListCount() {
         if (campListBuilder_ == null) {
@@ -558,7 +527,7 @@ public final class AsterMidCampInfoNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .AsterMidCampInfo camp_list = 12;</code>
+       * <code>repeated .AsterMidCampInfo camp_list = 13;</code>
        */
       public emu.grasscutter.net.proto.AsterMidCampInfoOuterClass.AsterMidCampInfo getCampList(int index) {
         if (campListBuilder_ == null) {
@@ -568,7 +537,7 @@ public final class AsterMidCampInfoNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .AsterMidCampInfo camp_list = 12;</code>
+       * <code>repeated .AsterMidCampInfo camp_list = 13;</code>
        */
       public Builder setCampList(
           int index, emu.grasscutter.net.proto.AsterMidCampInfoOuterClass.AsterMidCampInfo value) {
@@ -585,7 +554,7 @@ public final class AsterMidCampInfoNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .AsterMidCampInfo camp_list = 12;</code>
+       * <code>repeated .AsterMidCampInfo camp_list = 13;</code>
        */
       public Builder setCampList(
           int index, emu.grasscutter.net.proto.AsterMidCampInfoOuterClass.AsterMidCampInfo.Builder builderForValue) {
@@ -599,7 +568,7 @@ public final class AsterMidCampInfoNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .AsterMidCampInfo camp_list = 12;</code>
+       * <code>repeated .AsterMidCampInfo camp_list = 13;</code>
        */
       public Builder addCampList(emu.grasscutter.net.proto.AsterMidCampInfoOuterClass.AsterMidCampInfo value) {
         if (campListBuilder_ == null) {
@@ -615,7 +584,7 @@ public final class AsterMidCampInfoNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .AsterMidCampInfo camp_list = 12;</code>
+       * <code>repeated .AsterMidCampInfo camp_list = 13;</code>
        */
       public Builder addCampList(
           int index, emu.grasscutter.net.proto.AsterMidCampInfoOuterClass.AsterMidCampInfo value) {
@@ -632,7 +601,7 @@ public final class AsterMidCampInfoNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .AsterMidCampInfo camp_list = 12;</code>
+       * <code>repeated .AsterMidCampInfo camp_list = 13;</code>
        */
       public Builder addCampList(
           emu.grasscutter.net.proto.AsterMidCampInfoOuterClass.AsterMidCampInfo.Builder builderForValue) {
@@ -646,7 +615,7 @@ public final class AsterMidCampInfoNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .AsterMidCampInfo camp_list = 12;</code>
+       * <code>repeated .AsterMidCampInfo camp_list = 13;</code>
        */
       public Builder addCampList(
           int index, emu.grasscutter.net.proto.AsterMidCampInfoOuterClass.AsterMidCampInfo.Builder builderForValue) {
@@ -660,7 +629,7 @@ public final class AsterMidCampInfoNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .AsterMidCampInfo camp_list = 12;</code>
+       * <code>repeated .AsterMidCampInfo camp_list = 13;</code>
        */
       public Builder addAllCampList(
           java.lang.Iterable<? extends emu.grasscutter.net.proto.AsterMidCampInfoOuterClass.AsterMidCampInfo> values) {
@@ -675,7 +644,7 @@ public final class AsterMidCampInfoNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .AsterMidCampInfo camp_list = 12;</code>
+       * <code>repeated .AsterMidCampInfo camp_list = 13;</code>
        */
       public Builder clearCampList() {
         if (campListBuilder_ == null) {
@@ -688,7 +657,7 @@ public final class AsterMidCampInfoNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .AsterMidCampInfo camp_list = 12;</code>
+       * <code>repeated .AsterMidCampInfo camp_list = 13;</code>
        */
       public Builder removeCampList(int index) {
         if (campListBuilder_ == null) {
@@ -701,14 +670,14 @@ public final class AsterMidCampInfoNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .AsterMidCampInfo camp_list = 12;</code>
+       * <code>repeated .AsterMidCampInfo camp_list = 13;</code>
        */
       public emu.grasscutter.net.proto.AsterMidCampInfoOuterClass.AsterMidCampInfo.Builder getCampListBuilder(
           int index) {
         return getCampListFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .AsterMidCampInfo camp_list = 12;</code>
+       * <code>repeated .AsterMidCampInfo camp_list = 13;</code>
        */
       public emu.grasscutter.net.proto.AsterMidCampInfoOuterClass.AsterMidCampInfoOrBuilder getCampListOrBuilder(
           int index) {
@@ -718,7 +687,7 @@ public final class AsterMidCampInfoNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .AsterMidCampInfo camp_list = 12;</code>
+       * <code>repeated .AsterMidCampInfo camp_list = 13;</code>
        */
       public java.util.List<? extends emu.grasscutter.net.proto.AsterMidCampInfoOuterClass.AsterMidCampInfoOrBuilder> 
            getCampListOrBuilderList() {
@@ -729,14 +698,14 @@ public final class AsterMidCampInfoNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .AsterMidCampInfo camp_list = 12;</code>
+       * <code>repeated .AsterMidCampInfo camp_list = 13;</code>
        */
       public emu.grasscutter.net.proto.AsterMidCampInfoOuterClass.AsterMidCampInfo.Builder addCampListBuilder() {
         return getCampListFieldBuilder().addBuilder(
             emu.grasscutter.net.proto.AsterMidCampInfoOuterClass.AsterMidCampInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .AsterMidCampInfo camp_list = 12;</code>
+       * <code>repeated .AsterMidCampInfo camp_list = 13;</code>
        */
       public emu.grasscutter.net.proto.AsterMidCampInfoOuterClass.AsterMidCampInfo.Builder addCampListBuilder(
           int index) {
@@ -744,7 +713,7 @@ public final class AsterMidCampInfoNotifyOuterClass {
             index, emu.grasscutter.net.proto.AsterMidCampInfoOuterClass.AsterMidCampInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .AsterMidCampInfo camp_list = 12;</code>
+       * <code>repeated .AsterMidCampInfo camp_list = 13;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.AsterMidCampInfoOuterClass.AsterMidCampInfo.Builder> 
            getCampListBuilderList() {
@@ -797,7 +766,18 @@ public final class AsterMidCampInfoNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new AsterMidCampInfoNotify(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -833,7 +813,7 @@ public final class AsterMidCampInfoNotifyOuterClass {
     java.lang.String[] descriptorData = {
       "\n\034AsterMidCampInfoNotify.proto\032\026AsterMid" +
       "CampInfo.proto\">\n\026AsterMidCampInfoNotify" +
-      "\022$\n\tcamp_list\030\014 \003(\0132\021.AsterMidCampInfoB\033" +
+      "\022$\n\tcamp_list\030\r \003(\0132\021.AsterMidCampInfoB\033" +
       "\n\031emu.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

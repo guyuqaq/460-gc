@@ -19,21 +19,20 @@ public final class AvatarChangeAnimHashReqOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint64 avatar_guid = 10;</code>
-     * @return The avatarGuid.
-     */
-    long getAvatarGuid();
-
-    /**
-     * <code>uint32 anim_hash = 14;</code>
+     * <code>uint32 anim_hash = 15;</code>
      * @return The animHash.
      */
     int getAnimHash();
+
+    /**
+     * <code>uint64 avatar_guid = 13;</code>
+     * @return The avatarGuid.
+     */
+    long getAvatarGuid();
   }
   /**
    * <pre>
-   * 4.6.0
-   * CmdId: 27660
+   * CmdId: 4722
    * </pre>
    *
    * Protobuf type {@code AvatarChangeAnimHashReq}
@@ -62,53 +61,6 @@ public final class AvatarChangeAnimHashReqOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private AvatarChangeAnimHashReq(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 80: {
-
-              avatarGuid_ = input.readUInt64();
-              break;
-            }
-            case 112: {
-
-              animHash_ = input.readUInt32();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.AvatarChangeAnimHashReqOuterClass.internal_static_AvatarChangeAnimHashReq_descriptor;
@@ -122,26 +74,26 @@ public final class AvatarChangeAnimHashReqOuterClass {
               emu.grasscutter.net.proto.AvatarChangeAnimHashReqOuterClass.AvatarChangeAnimHashReq.class, emu.grasscutter.net.proto.AvatarChangeAnimHashReqOuterClass.AvatarChangeAnimHashReq.Builder.class);
     }
 
-    public static final int AVATAR_GUID_FIELD_NUMBER = 10;
-    private long avatarGuid_;
-    /**
-     * <code>uint64 avatar_guid = 10;</code>
-     * @return The avatarGuid.
-     */
-    @java.lang.Override
-    public long getAvatarGuid() {
-      return avatarGuid_;
-    }
-
-    public static final int ANIM_HASH_FIELD_NUMBER = 14;
+    public static final int ANIM_HASH_FIELD_NUMBER = 15;
     private int animHash_;
     /**
-     * <code>uint32 anim_hash = 14;</code>
+     * <code>uint32 anim_hash = 15;</code>
      * @return The animHash.
      */
     @java.lang.Override
     public int getAnimHash() {
       return animHash_;
+    }
+
+    public static final int AVATAR_GUID_FIELD_NUMBER = 13;
+    private long avatarGuid_;
+    /**
+     * <code>uint64 avatar_guid = 13;</code>
+     * @return The avatarGuid.
+     */
+    @java.lang.Override
+    public long getAvatarGuid() {
+      return avatarGuid_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -159,12 +111,12 @@ public final class AvatarChangeAnimHashReqOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (avatarGuid_ != 0L) {
-        output.writeUInt64(10, avatarGuid_);
+        output.writeUInt64(13, avatarGuid_);
       }
       if (animHash_ != 0) {
-        output.writeUInt32(14, animHash_);
+        output.writeUInt32(15, animHash_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -175,13 +127,13 @@ public final class AvatarChangeAnimHashReqOuterClass {
       size = 0;
       if (avatarGuid_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(10, avatarGuid_);
+          .computeUInt64Size(13, avatarGuid_);
       }
       if (animHash_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(14, animHash_);
+          .computeUInt32Size(15, animHash_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -196,11 +148,11 @@ public final class AvatarChangeAnimHashReqOuterClass {
       }
       emu.grasscutter.net.proto.AvatarChangeAnimHashReqOuterClass.AvatarChangeAnimHashReq other = (emu.grasscutter.net.proto.AvatarChangeAnimHashReqOuterClass.AvatarChangeAnimHashReq) obj;
 
-      if (getAvatarGuid()
-          != other.getAvatarGuid()) return false;
       if (getAnimHash()
           != other.getAnimHash()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (getAvatarGuid()
+          != other.getAvatarGuid()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -211,12 +163,12 @@ public final class AvatarChangeAnimHashReqOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ANIM_HASH_FIELD_NUMBER;
+      hash = (53 * hash) + getAnimHash();
       hash = (37 * hash) + AVATAR_GUID_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getAvatarGuid());
-      hash = (37 * hash) + ANIM_HASH_FIELD_NUMBER;
-      hash = (53 * hash) + getAnimHash();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -313,8 +265,7 @@ public final class AvatarChangeAnimHashReqOuterClass {
     }
     /**
      * <pre>
-     * 4.6.0
-     * CmdId: 27660
+     * CmdId: 4722
      * </pre>
      *
      * Protobuf type {@code AvatarChangeAnimHashReq}
@@ -338,25 +289,20 @@ public final class AvatarChangeAnimHashReqOuterClass {
 
       // Construct using emu.grasscutter.net.proto.AvatarChangeAnimHashReqOuterClass.AvatarChangeAnimHashReq.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        avatarGuid_ = 0L;
-
         animHash_ = 0;
+
+        avatarGuid_ = 0L;
 
         return this;
       }
@@ -384,8 +330,8 @@ public final class AvatarChangeAnimHashReqOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.AvatarChangeAnimHashReqOuterClass.AvatarChangeAnimHashReq buildPartial() {
         emu.grasscutter.net.proto.AvatarChangeAnimHashReqOuterClass.AvatarChangeAnimHashReq result = new emu.grasscutter.net.proto.AvatarChangeAnimHashReqOuterClass.AvatarChangeAnimHashReq(this);
-        result.avatarGuid_ = avatarGuid_;
         result.animHash_ = animHash_;
+        result.avatarGuid_ = avatarGuid_;
         onBuilt();
         return result;
       }
@@ -434,13 +380,13 @@ public final class AvatarChangeAnimHashReqOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.AvatarChangeAnimHashReqOuterClass.AvatarChangeAnimHashReq other) {
         if (other == emu.grasscutter.net.proto.AvatarChangeAnimHashReqOuterClass.AvatarChangeAnimHashReq.getDefaultInstance()) return this;
-        if (other.getAvatarGuid() != 0L) {
-          setAvatarGuid(other.getAvatarGuid());
-        }
         if (other.getAnimHash() != 0) {
           setAnimHash(other.getAnimHash());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        if (other.getAvatarGuid() != 0L) {
+          setAvatarGuid(other.getAvatarGuid());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -455,54 +401,46 @@ public final class AvatarChangeAnimHashReqOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.AvatarChangeAnimHashReqOuterClass.AvatarChangeAnimHashReq parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 104: {
+                avatarGuid_ = input.readUInt64();
+
+                break;
+              } // case 104
+              case 120: {
+                animHash_ = input.readUInt32();
+
+                break;
+              } // case 120
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.AvatarChangeAnimHashReqOuterClass.AvatarChangeAnimHashReq) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private long avatarGuid_ ;
-      /**
-       * <code>uint64 avatar_guid = 10;</code>
-       * @return The avatarGuid.
-       */
-      @java.lang.Override
-      public long getAvatarGuid() {
-        return avatarGuid_;
-      }
-      /**
-       * <code>uint64 avatar_guid = 10;</code>
-       * @param value The avatarGuid to set.
-       * @return This builder for chaining.
-       */
-      public Builder setAvatarGuid(long value) {
-        
-        avatarGuid_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint64 avatar_guid = 10;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearAvatarGuid() {
-        
-        avatarGuid_ = 0L;
-        onChanged();
+          onChanged();
+        } // finally
         return this;
       }
 
       private int animHash_ ;
       /**
-       * <code>uint32 anim_hash = 14;</code>
+       * <code>uint32 anim_hash = 15;</code>
        * @return The animHash.
        */
       @java.lang.Override
@@ -510,7 +448,7 @@ public final class AvatarChangeAnimHashReqOuterClass {
         return animHash_;
       }
       /**
-       * <code>uint32 anim_hash = 14;</code>
+       * <code>uint32 anim_hash = 15;</code>
        * @param value The animHash to set.
        * @return This builder for chaining.
        */
@@ -521,12 +459,43 @@ public final class AvatarChangeAnimHashReqOuterClass {
         return this;
       }
       /**
-       * <code>uint32 anim_hash = 14;</code>
+       * <code>uint32 anim_hash = 15;</code>
        * @return This builder for chaining.
        */
       public Builder clearAnimHash() {
         
         animHash_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private long avatarGuid_ ;
+      /**
+       * <code>uint64 avatar_guid = 13;</code>
+       * @return The avatarGuid.
+       */
+      @java.lang.Override
+      public long getAvatarGuid() {
+        return avatarGuid_;
+      }
+      /**
+       * <code>uint64 avatar_guid = 13;</code>
+       * @param value The avatarGuid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAvatarGuid(long value) {
+        
+        avatarGuid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 avatar_guid = 13;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAvatarGuid() {
+        
+        avatarGuid_ = 0L;
         onChanged();
         return this;
       }
@@ -563,7 +532,18 @@ public final class AvatarChangeAnimHashReqOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new AvatarChangeAnimHashReq(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -598,8 +578,8 @@ public final class AvatarChangeAnimHashReqOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\035AvatarChangeAnimHashReq.proto\"A\n\027Avata" +
-      "rChangeAnimHashReq\022\023\n\013avatar_guid\030\n \001(\004\022" +
-      "\021\n\tanim_hash\030\016 \001(\rB\033\n\031emu.grasscutter.ne" +
+      "rChangeAnimHashReq\022\021\n\tanim_hash\030\017 \001(\r\022\023\n" +
+      "\013avatar_guid\030\r \001(\004B\033\n\031emu.grasscutter.ne" +
       "t.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -611,7 +591,7 @@ public final class AvatarChangeAnimHashReqOuterClass {
     internal_static_AvatarChangeAnimHashReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_AvatarChangeAnimHashReq_descriptor,
-        new java.lang.String[] { "AvatarGuid", "AnimHash", });
+        new java.lang.String[] { "AnimHash", "AvatarGuid", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

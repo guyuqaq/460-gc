@@ -119,97 +119,6 @@ public final class HomeBasicInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private HomeBasicInfo(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              ownerNickName_ = s;
-              break;
-            }
-            case 32: {
-
-              exp_ = input.readUInt64();
-              break;
-            }
-            case 56: {
-
-              curModuleId_ = input.readUInt32();
-              break;
-            }
-            case 74: {
-              emu.grasscutter.net.proto.HomeLimitedShopInfoOuterClass.HomeLimitedShopInfo.Builder subBuilder = null;
-              if (limitedShopInfo_ != null) {
-                subBuilder = limitedShopInfo_.toBuilder();
-              }
-              limitedShopInfo_ = input.readMessage(emu.grasscutter.net.proto.HomeLimitedShopInfoOuterClass.HomeLimitedShopInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(limitedShopInfo_);
-                limitedShopInfo_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 88: {
-
-              level_ = input.readUInt32();
-              break;
-            }
-            case 96: {
-
-              homeOwnerUid_ = input.readUInt32();
-              break;
-            }
-            case 104: {
-
-              fCMIKLCEAKA_ = input.readUInt32();
-              break;
-            }
-            case 112: {
-
-              isInEditMode_ = input.readBool();
-              break;
-            }
-            case 120: {
-
-              curRoomSceneId_ = input.readUInt32();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.HomeBasicInfoOuterClass.internal_static_HomeBasicInfo_descriptor;
@@ -409,7 +318,7 @@ public final class HomeBasicInfoOuterClass {
       if (curRoomSceneId_ != 0) {
         output.writeUInt32(15, curRoomSceneId_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -453,7 +362,7 @@ public final class HomeBasicInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(15, curRoomSceneId_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -489,7 +398,7 @@ public final class HomeBasicInfoOuterClass {
           != other.getIsInEditMode()) return false;
       if (getCurRoomSceneId()
           != other.getCurRoomSceneId()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -522,7 +431,7 @@ public final class HomeBasicInfoOuterClass {
           getIsInEditMode());
       hash = (37 * hash) + CUR_ROOM_SCENE_ID_FIELD_NUMBER;
       hash = (53 * hash) + getCurRoomSceneId();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -639,18 +548,13 @@ public final class HomeBasicInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.HomeBasicInfoOuterClass.HomeBasicInfo.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -792,7 +696,7 @@ public final class HomeBasicInfoOuterClass {
         if (other.getCurRoomSceneId() != 0) {
           setCurRoomSceneId(other.getCurRoomSceneId());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -807,17 +711,77 @@ public final class HomeBasicInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.HomeBasicInfoOuterClass.HomeBasicInfo parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 18: {
+                ownerNickName_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 18
+              case 32: {
+                exp_ = input.readUInt64();
+
+                break;
+              } // case 32
+              case 56: {
+                curModuleId_ = input.readUInt32();
+
+                break;
+              } // case 56
+              case 74: {
+                input.readMessage(
+                    getLimitedShopInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 74
+              case 88: {
+                level_ = input.readUInt32();
+
+                break;
+              } // case 88
+              case 96: {
+                homeOwnerUid_ = input.readUInt32();
+
+                break;
+              } // case 96
+              case 104: {
+                fCMIKLCEAKA_ = input.readUInt32();
+
+                break;
+              } // case 104
+              case 112: {
+                isInEditMode_ = input.readBool();
+
+                break;
+              } // case 112
+              case 120: {
+                curRoomSceneId_ = input.readUInt32();
+
+                break;
+              } // case 120
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.HomeBasicInfoOuterClass.HomeBasicInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -1277,7 +1241,18 @@ public final class HomeBasicInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new HomeBasicInfo(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

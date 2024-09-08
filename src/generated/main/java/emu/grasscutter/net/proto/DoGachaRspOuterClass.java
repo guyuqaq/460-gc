@@ -194,156 +194,6 @@ public final class DoGachaRspOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private DoGachaRsp(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-
-              wishItemId_ = input.readUInt32();
-              break;
-            }
-            case 16: {
-
-              retcode_ = input.readInt32();
-              break;
-            }
-            case 24: {
-
-              gachaScheduleId_ = input.readUInt32();
-              break;
-            }
-            case 32: {
-
-              tenCostItemNum_ = input.readUInt32();
-              break;
-            }
-            case 40: {
-
-              costItemId_ = input.readUInt32();
-              break;
-            }
-            case 48: {
-
-              leftGachaTimes_ = input.readUInt32();
-              break;
-            }
-            case 56: {
-
-              gachaTimesLimit_ = input.readUInt32();
-              break;
-            }
-            case 64: {
-
-              tenCostItemId_ = input.readUInt32();
-              break;
-            }
-            case 72: {
-
-              gachaSortId_ = input.readUInt32();
-              break;
-            }
-            case 82: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                gachaItemList_ = new java.util.ArrayList<emu.grasscutter.net.proto.GachaItemOuterClass.GachaItem>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              gachaItemList_.add(
-                  input.readMessage(emu.grasscutter.net.proto.GachaItemOuterClass.GachaItem.parser(), extensionRegistry));
-              break;
-            }
-            case 88: {
-
-              gachaTimes_ = input.readUInt32();
-              break;
-            }
-            case 96: {
-
-              costItemNum_ = input.readUInt32();
-              break;
-            }
-            case 104: {
-
-              wishProgress_ = input.readUInt32();
-              break;
-            }
-            case 112: {
-
-              gachaType_ = input.readUInt32();
-              break;
-            }
-            case 120: {
-
-              wishMaxProgress_ = input.readUInt32();
-              break;
-            }
-            case 128: {
-
-              newGachaRandom_ = input.readUInt32();
-              break;
-            }
-            case 3024: {
-
-              curScheduleDailyGachaTimes_ = input.readUInt32();
-              break;
-            }
-            case 3040: {
-
-              dBNKDMFDCNG_ = input.readBool();
-              break;
-            }
-            case 8152: {
-
-              isUnderMinorsRestrict_ = input.readBool();
-              break;
-            }
-            case 12224: {
-
-              dailyGachaTimes_ = input.readUInt32();
-              break;
-            }
-            case 12832: {
-
-              isUnderGeneralRestrict_ = input.readBool();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          gachaItemList_ = java.util.Collections.unmodifiableList(gachaItemList_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.DoGachaRspOuterClass.internal_static_DoGachaRsp_descriptor;
@@ -698,7 +548,7 @@ public final class DoGachaRspOuterClass {
       if (isUnderGeneralRestrict_ != false) {
         output.writeBool(1604, isUnderGeneralRestrict_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -791,7 +641,7 @@ public final class DoGachaRspOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(1604, isUnderGeneralRestrict_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -848,7 +698,7 @@ public final class DoGachaRspOuterClass {
           != other.getDailyGachaTimes()) return false;
       if (getIsUnderGeneralRestrict()
           != other.getIsUnderGeneralRestrict()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -906,7 +756,7 @@ public final class DoGachaRspOuterClass {
       hash = (37 * hash) + IS_UNDER_GENERAL_RESTRICT_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsUnderGeneralRestrict());
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -1023,19 +873,13 @@ public final class DoGachaRspOuterClass {
 
       // Construct using emu.grasscutter.net.proto.DoGachaRspOuterClass.DoGachaRsp.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getGachaItemListFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1060,10 +904,11 @@ public final class DoGachaRspOuterClass {
 
         if (gachaItemListBuilder_ == null) {
           gachaItemList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          gachaItemList_ = null;
           gachaItemListBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000001);
         gachaTimes_ = 0;
 
         costItemNum_ = 0;
@@ -1276,7 +1121,7 @@ public final class DoGachaRspOuterClass {
         if (other.getIsUnderGeneralRestrict() != false) {
           setIsUnderGeneralRestrict(other.getIsUnderGeneralRestrict());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -1291,17 +1136,143 @@ public final class DoGachaRspOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.DoGachaRspOuterClass.DoGachaRsp parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                wishItemId_ = input.readUInt32();
+
+                break;
+              } // case 8
+              case 16: {
+                retcode_ = input.readInt32();
+
+                break;
+              } // case 16
+              case 24: {
+                gachaScheduleId_ = input.readUInt32();
+
+                break;
+              } // case 24
+              case 32: {
+                tenCostItemNum_ = input.readUInt32();
+
+                break;
+              } // case 32
+              case 40: {
+                costItemId_ = input.readUInt32();
+
+                break;
+              } // case 40
+              case 48: {
+                leftGachaTimes_ = input.readUInt32();
+
+                break;
+              } // case 48
+              case 56: {
+                gachaTimesLimit_ = input.readUInt32();
+
+                break;
+              } // case 56
+              case 64: {
+                tenCostItemId_ = input.readUInt32();
+
+                break;
+              } // case 64
+              case 72: {
+                gachaSortId_ = input.readUInt32();
+
+                break;
+              } // case 72
+              case 82: {
+                emu.grasscutter.net.proto.GachaItemOuterClass.GachaItem m =
+                    input.readMessage(
+                        emu.grasscutter.net.proto.GachaItemOuterClass.GachaItem.parser(),
+                        extensionRegistry);
+                if (gachaItemListBuilder_ == null) {
+                  ensureGachaItemListIsMutable();
+                  gachaItemList_.add(m);
+                } else {
+                  gachaItemListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 82
+              case 88: {
+                gachaTimes_ = input.readUInt32();
+
+                break;
+              } // case 88
+              case 96: {
+                costItemNum_ = input.readUInt32();
+
+                break;
+              } // case 96
+              case 104: {
+                wishProgress_ = input.readUInt32();
+
+                break;
+              } // case 104
+              case 112: {
+                gachaType_ = input.readUInt32();
+
+                break;
+              } // case 112
+              case 120: {
+                wishMaxProgress_ = input.readUInt32();
+
+                break;
+              } // case 120
+              case 128: {
+                newGachaRandom_ = input.readUInt32();
+
+                break;
+              } // case 128
+              case 3024: {
+                curScheduleDailyGachaTimes_ = input.readUInt32();
+
+                break;
+              } // case 3024
+              case 3040: {
+                dBNKDMFDCNG_ = input.readBool();
+
+                break;
+              } // case 3040
+              case 8152: {
+                isUnderMinorsRestrict_ = input.readBool();
+
+                break;
+              } // case 8152
+              case 12224: {
+                dailyGachaTimes_ = input.readUInt32();
+
+                break;
+              } // case 12224
+              case 12832: {
+                isUnderGeneralRestrict_ = input.readBool();
+
+                break;
+              } // case 12832
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.DoGachaRspOuterClass.DoGachaRsp) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -2210,7 +2181,18 @@ public final class DoGachaRspOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new DoGachaRsp(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

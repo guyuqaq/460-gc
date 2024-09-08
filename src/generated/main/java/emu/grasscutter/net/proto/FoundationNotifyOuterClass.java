@@ -19,30 +19,29 @@ public final class FoundationNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.FoundationInfo info = 3;</code>
+     * <code>uint32 gadget_entity_id = 10;</code>
+     * @return The gadgetEntityId.
+     */
+    int getGadgetEntityId();
+
+    /**
+     * <code>.FoundationInfo info = 14;</code>
      * @return Whether the info field is set.
      */
     boolean hasInfo();
     /**
-     * <code>.FoundationInfo info = 3;</code>
+     * <code>.FoundationInfo info = 14;</code>
      * @return The info.
      */
     emu.grasscutter.net.proto.FoundationInfoOuterClass.FoundationInfo getInfo();
     /**
-     * <code>.FoundationInfo info = 3;</code>
+     * <code>.FoundationInfo info = 14;</code>
      */
     emu.grasscutter.net.proto.FoundationInfoOuterClass.FoundationInfoOrBuilder getInfoOrBuilder();
-
-    /**
-     * <code>uint32 gadget_entity_id = 4;</code>
-     * @return The gadgetEntityId.
-     */
-    int getGadgetEntityId();
   }
   /**
    * <pre>
-   * CmdId: 3606
-   * Obf: OACBEHADMHF
+   * CmdId: 5623
    * </pre>
    *
    * Protobuf type {@code FoundationNotify}
@@ -71,61 +70,6 @@ public final class FoundationNotifyOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private FoundationNotify(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 26: {
-              emu.grasscutter.net.proto.FoundationInfoOuterClass.FoundationInfo.Builder subBuilder = null;
-              if (info_ != null) {
-                subBuilder = info_.toBuilder();
-              }
-              info_ = input.readMessage(emu.grasscutter.net.proto.FoundationInfoOuterClass.FoundationInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(info_);
-                info_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 32: {
-
-              gadgetEntityId_ = input.readUInt32();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.FoundationNotifyOuterClass.internal_static_FoundationNotify_descriptor;
@@ -139,10 +83,21 @@ public final class FoundationNotifyOuterClass {
               emu.grasscutter.net.proto.FoundationNotifyOuterClass.FoundationNotify.class, emu.grasscutter.net.proto.FoundationNotifyOuterClass.FoundationNotify.Builder.class);
     }
 
-    public static final int INFO_FIELD_NUMBER = 3;
+    public static final int GADGET_ENTITY_ID_FIELD_NUMBER = 10;
+    private int gadgetEntityId_;
+    /**
+     * <code>uint32 gadget_entity_id = 10;</code>
+     * @return The gadgetEntityId.
+     */
+    @java.lang.Override
+    public int getGadgetEntityId() {
+      return gadgetEntityId_;
+    }
+
+    public static final int INFO_FIELD_NUMBER = 14;
     private emu.grasscutter.net.proto.FoundationInfoOuterClass.FoundationInfo info_;
     /**
-     * <code>.FoundationInfo info = 3;</code>
+     * <code>.FoundationInfo info = 14;</code>
      * @return Whether the info field is set.
      */
     @java.lang.Override
@@ -150,7 +105,7 @@ public final class FoundationNotifyOuterClass {
       return info_ != null;
     }
     /**
-     * <code>.FoundationInfo info = 3;</code>
+     * <code>.FoundationInfo info = 14;</code>
      * @return The info.
      */
     @java.lang.Override
@@ -158,22 +113,11 @@ public final class FoundationNotifyOuterClass {
       return info_ == null ? emu.grasscutter.net.proto.FoundationInfoOuterClass.FoundationInfo.getDefaultInstance() : info_;
     }
     /**
-     * <code>.FoundationInfo info = 3;</code>
+     * <code>.FoundationInfo info = 14;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.FoundationInfoOuterClass.FoundationInfoOrBuilder getInfoOrBuilder() {
       return getInfo();
-    }
-
-    public static final int GADGET_ENTITY_ID_FIELD_NUMBER = 4;
-    private int gadgetEntityId_;
-    /**
-     * <code>uint32 gadget_entity_id = 4;</code>
-     * @return The gadgetEntityId.
-     */
-    @java.lang.Override
-    public int getGadgetEntityId() {
-      return gadgetEntityId_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -190,13 +134,13 @@ public final class FoundationNotifyOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (info_ != null) {
-        output.writeMessage(3, getInfo());
-      }
       if (gadgetEntityId_ != 0) {
-        output.writeUInt32(4, gadgetEntityId_);
+        output.writeUInt32(10, gadgetEntityId_);
       }
-      unknownFields.writeTo(output);
+      if (info_ != null) {
+        output.writeMessage(14, getInfo());
+      }
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -205,15 +149,15 @@ public final class FoundationNotifyOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (info_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, getInfo());
-      }
       if (gadgetEntityId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(4, gadgetEntityId_);
+          .computeUInt32Size(10, gadgetEntityId_);
       }
-      size += unknownFields.getSerializedSize();
+      if (info_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(14, getInfo());
+      }
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -228,14 +172,14 @@ public final class FoundationNotifyOuterClass {
       }
       emu.grasscutter.net.proto.FoundationNotifyOuterClass.FoundationNotify other = (emu.grasscutter.net.proto.FoundationNotifyOuterClass.FoundationNotify) obj;
 
+      if (getGadgetEntityId()
+          != other.getGadgetEntityId()) return false;
       if (hasInfo() != other.hasInfo()) return false;
       if (hasInfo()) {
         if (!getInfo()
             .equals(other.getInfo())) return false;
       }
-      if (getGadgetEntityId()
-          != other.getGadgetEntityId()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -246,13 +190,13 @@ public final class FoundationNotifyOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + GADGET_ENTITY_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getGadgetEntityId();
       if (hasInfo()) {
         hash = (37 * hash) + INFO_FIELD_NUMBER;
         hash = (53 * hash) + getInfo().hashCode();
       }
-      hash = (37 * hash) + GADGET_ENTITY_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getGadgetEntityId();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -349,8 +293,7 @@ public final class FoundationNotifyOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 3606
-     * Obf: OACBEHADMHF
+     * CmdId: 5623
      * </pre>
      *
      * Protobuf type {@code FoundationNotify}
@@ -374,30 +317,25 @@ public final class FoundationNotifyOuterClass {
 
       // Construct using emu.grasscutter.net.proto.FoundationNotifyOuterClass.FoundationNotify.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        gadgetEntityId_ = 0;
+
         if (infoBuilder_ == null) {
           info_ = null;
         } else {
           info_ = null;
           infoBuilder_ = null;
         }
-        gadgetEntityId_ = 0;
-
         return this;
       }
 
@@ -424,12 +362,12 @@ public final class FoundationNotifyOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.FoundationNotifyOuterClass.FoundationNotify buildPartial() {
         emu.grasscutter.net.proto.FoundationNotifyOuterClass.FoundationNotify result = new emu.grasscutter.net.proto.FoundationNotifyOuterClass.FoundationNotify(this);
+        result.gadgetEntityId_ = gadgetEntityId_;
         if (infoBuilder_ == null) {
           result.info_ = info_;
         } else {
           result.info_ = infoBuilder_.build();
         }
-        result.gadgetEntityId_ = gadgetEntityId_;
         onBuilt();
         return result;
       }
@@ -478,13 +416,13 @@ public final class FoundationNotifyOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.FoundationNotifyOuterClass.FoundationNotify other) {
         if (other == emu.grasscutter.net.proto.FoundationNotifyOuterClass.FoundationNotify.getDefaultInstance()) return this;
-        if (other.hasInfo()) {
-          mergeInfo(other.getInfo());
-        }
         if (other.getGadgetEntityId() != 0) {
           setGadgetEntityId(other.getGadgetEntityId());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        if (other.hasInfo()) {
+          mergeInfo(other.getInfo());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -499,17 +437,73 @@ public final class FoundationNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.FoundationNotifyOuterClass.FoundationNotify parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 80: {
+                gadgetEntityId_ = input.readUInt32();
+
+                break;
+              } // case 80
+              case 114: {
+                input.readMessage(
+                    getInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 114
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.FoundationNotifyOuterClass.FoundationNotify) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
+        return this;
+      }
+
+      private int gadgetEntityId_ ;
+      /**
+       * <code>uint32 gadget_entity_id = 10;</code>
+       * @return The gadgetEntityId.
+       */
+      @java.lang.Override
+      public int getGadgetEntityId() {
+        return gadgetEntityId_;
+      }
+      /**
+       * <code>uint32 gadget_entity_id = 10;</code>
+       * @param value The gadgetEntityId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGadgetEntityId(int value) {
+        
+        gadgetEntityId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 gadget_entity_id = 10;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGadgetEntityId() {
+        
+        gadgetEntityId_ = 0;
+        onChanged();
         return this;
       }
 
@@ -517,14 +511,14 @@ public final class FoundationNotifyOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.FoundationInfoOuterClass.FoundationInfo, emu.grasscutter.net.proto.FoundationInfoOuterClass.FoundationInfo.Builder, emu.grasscutter.net.proto.FoundationInfoOuterClass.FoundationInfoOrBuilder> infoBuilder_;
       /**
-       * <code>.FoundationInfo info = 3;</code>
+       * <code>.FoundationInfo info = 14;</code>
        * @return Whether the info field is set.
        */
       public boolean hasInfo() {
         return infoBuilder_ != null || info_ != null;
       }
       /**
-       * <code>.FoundationInfo info = 3;</code>
+       * <code>.FoundationInfo info = 14;</code>
        * @return The info.
        */
       public emu.grasscutter.net.proto.FoundationInfoOuterClass.FoundationInfo getInfo() {
@@ -535,7 +529,7 @@ public final class FoundationNotifyOuterClass {
         }
       }
       /**
-       * <code>.FoundationInfo info = 3;</code>
+       * <code>.FoundationInfo info = 14;</code>
        */
       public Builder setInfo(emu.grasscutter.net.proto.FoundationInfoOuterClass.FoundationInfo value) {
         if (infoBuilder_ == null) {
@@ -551,7 +545,7 @@ public final class FoundationNotifyOuterClass {
         return this;
       }
       /**
-       * <code>.FoundationInfo info = 3;</code>
+       * <code>.FoundationInfo info = 14;</code>
        */
       public Builder setInfo(
           emu.grasscutter.net.proto.FoundationInfoOuterClass.FoundationInfo.Builder builderForValue) {
@@ -565,7 +559,7 @@ public final class FoundationNotifyOuterClass {
         return this;
       }
       /**
-       * <code>.FoundationInfo info = 3;</code>
+       * <code>.FoundationInfo info = 14;</code>
        */
       public Builder mergeInfo(emu.grasscutter.net.proto.FoundationInfoOuterClass.FoundationInfo value) {
         if (infoBuilder_ == null) {
@@ -583,7 +577,7 @@ public final class FoundationNotifyOuterClass {
         return this;
       }
       /**
-       * <code>.FoundationInfo info = 3;</code>
+       * <code>.FoundationInfo info = 14;</code>
        */
       public Builder clearInfo() {
         if (infoBuilder_ == null) {
@@ -597,7 +591,7 @@ public final class FoundationNotifyOuterClass {
         return this;
       }
       /**
-       * <code>.FoundationInfo info = 3;</code>
+       * <code>.FoundationInfo info = 14;</code>
        */
       public emu.grasscutter.net.proto.FoundationInfoOuterClass.FoundationInfo.Builder getInfoBuilder() {
         
@@ -605,7 +599,7 @@ public final class FoundationNotifyOuterClass {
         return getInfoFieldBuilder().getBuilder();
       }
       /**
-       * <code>.FoundationInfo info = 3;</code>
+       * <code>.FoundationInfo info = 14;</code>
        */
       public emu.grasscutter.net.proto.FoundationInfoOuterClass.FoundationInfoOrBuilder getInfoOrBuilder() {
         if (infoBuilder_ != null) {
@@ -616,7 +610,7 @@ public final class FoundationNotifyOuterClass {
         }
       }
       /**
-       * <code>.FoundationInfo info = 3;</code>
+       * <code>.FoundationInfo info = 14;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.FoundationInfoOuterClass.FoundationInfo, emu.grasscutter.net.proto.FoundationInfoOuterClass.FoundationInfo.Builder, emu.grasscutter.net.proto.FoundationInfoOuterClass.FoundationInfoOrBuilder> 
@@ -630,37 +624,6 @@ public final class FoundationNotifyOuterClass {
           info_ = null;
         }
         return infoBuilder_;
-      }
-
-      private int gadgetEntityId_ ;
-      /**
-       * <code>uint32 gadget_entity_id = 4;</code>
-       * @return The gadgetEntityId.
-       */
-      @java.lang.Override
-      public int getGadgetEntityId() {
-        return gadgetEntityId_;
-      }
-      /**
-       * <code>uint32 gadget_entity_id = 4;</code>
-       * @param value The gadgetEntityId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setGadgetEntityId(int value) {
-        
-        gadgetEntityId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 gadget_entity_id = 4;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearGadgetEntityId() {
-        
-        gadgetEntityId_ = 0;
-        onChanged();
-        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -695,7 +658,18 @@ public final class FoundationNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new FoundationNotify(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -730,9 +704,9 @@ public final class FoundationNotifyOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\026FoundationNotify.proto\032\024FoundationInfo" +
-      ".proto\"K\n\020FoundationNotify\022\035\n\004info\030\003 \001(\013" +
-      "2\017.FoundationInfo\022\030\n\020gadget_entity_id\030\004 " +
-      "\001(\rB\033\n\031emu.grasscutter.net.protob\006proto3"
+      ".proto\"K\n\020FoundationNotify\022\030\n\020gadget_ent" +
+      "ity_id\030\n \001(\r\022\035\n\004info\030\016 \001(\0132\017.FoundationI" +
+      "nfoB\033\n\031emu.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -744,7 +718,7 @@ public final class FoundationNotifyOuterClass {
     internal_static_FoundationNotify_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_FoundationNotify_descriptor,
-        new java.lang.String[] { "Info", "GadgetEntityId", });
+        new java.lang.String[] { "GadgetEntityId", "Info", });
     emu.grasscutter.net.proto.FoundationInfoOuterClass.getDescriptor();
   }
 

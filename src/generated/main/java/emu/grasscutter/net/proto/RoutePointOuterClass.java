@@ -143,118 +143,6 @@ public final class RoutePointOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private RoutePoint(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder subBuilder = null;
-              if (position_ != null) {
-                subBuilder = position_.toBuilder();
-              }
-              position_ = input.readMessage(emu.grasscutter.net.proto.VectorOuterClass.Vector.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(position_);
-                position_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 21: {
-
-              arriveRange_ = input.readFloat();
-              break;
-            }
-            case 24: {
-
-              hasReachEvent_ = input.readBool();
-              break;
-            }
-            case 93: {
-              moveParamsCase_ = 11;
-              moveParams_ = input.readFloat();
-              break;
-            }
-            case 101: {
-              moveParamsCase_ = 12;
-              moveParams_ = input.readFloat();
-              break;
-            }
-            case 170: {
-              emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder subBuilder = null;
-              if (rotateParamsCase_ == 21) {
-                subBuilder = ((emu.grasscutter.net.proto.VectorOuterClass.Vector) rotateParams_).toBuilder();
-              }
-              rotateParams_ =
-                  input.readMessage(emu.grasscutter.net.proto.VectorOuterClass.Vector.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.VectorOuterClass.Vector) rotateParams_);
-                rotateParams_ = subBuilder.buildPartial();
-              }
-              rotateParamsCase_ = 21;
-              break;
-            }
-            case 178: {
-              emu.grasscutter.net.proto.MathQuaternionOuterClass.MathQuaternion.Builder subBuilder = null;
-              if (rotateParamsCase_ == 22) {
-                subBuilder = ((emu.grasscutter.net.proto.MathQuaternionOuterClass.MathQuaternion) rotateParams_).toBuilder();
-              }
-              rotateParams_ =
-                  input.readMessage(emu.grasscutter.net.proto.MathQuaternionOuterClass.MathQuaternion.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.MathQuaternionOuterClass.MathQuaternion) rotateParams_);
-                rotateParams_ = subBuilder.buildPartial();
-              }
-              rotateParamsCase_ = 22;
-              break;
-            }
-            case 186: {
-              emu.grasscutter.net.proto.MathQuaternionOuterClass.MathQuaternion.Builder subBuilder = null;
-              if (rotateParamsCase_ == 23) {
-                subBuilder = ((emu.grasscutter.net.proto.MathQuaternionOuterClass.MathQuaternion) rotateParams_).toBuilder();
-              }
-              rotateParams_ =
-                  input.readMessage(emu.grasscutter.net.proto.MathQuaternionOuterClass.MathQuaternion.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.MathQuaternionOuterClass.MathQuaternion) rotateParams_);
-                rotateParams_ = subBuilder.buildPartial();
-              }
-              rotateParamsCase_ = 23;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.RoutePointOuterClass.internal_static_RoutePoint_descriptor;
@@ -552,7 +440,7 @@ public final class RoutePointOuterClass {
       if (position_ != null) {
         output.writeMessage(1, getPosition());
       }
-      if (arriveRange_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(arriveRange_) != 0) {
         output.writeFloat(2, arriveRange_);
       }
       if (hasReachEvent_ != false) {
@@ -575,7 +463,7 @@ public final class RoutePointOuterClass {
       if (rotateParamsCase_ == 23) {
         output.writeMessage(23, (emu.grasscutter.net.proto.MathQuaternionOuterClass.MathQuaternion) rotateParams_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -588,7 +476,7 @@ public final class RoutePointOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPosition());
       }
-      if (arriveRange_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(arriveRange_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(2, arriveRange_);
       }
@@ -618,7 +506,7 @@ public final class RoutePointOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(23, (emu.grasscutter.net.proto.MathQuaternionOuterClass.MathQuaternion) rotateParams_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -675,7 +563,7 @@ public final class RoutePointOuterClass {
         case 0:
         default:
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -726,7 +614,7 @@ public final class RoutePointOuterClass {
         case 0:
         default:
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -843,18 +731,13 @@ public final class RoutePointOuterClass {
 
       // Construct using emu.grasscutter.net.proto.RoutePointOuterClass.RoutePoint.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -869,6 +752,15 @@ public final class RoutePointOuterClass {
 
         hasReachEvent_ = false;
 
+        if (rotationBuilder_ != null) {
+          rotationBuilder_.clear();
+        }
+        if (rotationSpeedBuilder_ != null) {
+          rotationSpeedBuilder_.clear();
+        }
+        if (axisSpeedBuilder_ != null) {
+          axisSpeedBuilder_.clear();
+        }
         moveParamsCase_ = 0;
         moveParams_ = null;
         rotateParamsCase_ = 0;
@@ -1022,7 +914,7 @@ public final class RoutePointOuterClass {
             break;
           }
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -1037,17 +929,78 @@ public final class RoutePointOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.RoutePointOuterClass.RoutePoint parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getPositionFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 10
+              case 21: {
+                arriveRange_ = input.readFloat();
+
+                break;
+              } // case 21
+              case 24: {
+                hasReachEvent_ = input.readBool();
+
+                break;
+              } // case 24
+              case 93: {
+                moveParams_ = input.readFloat();
+                moveParamsCase_ = 11;
+                break;
+              } // case 93
+              case 101: {
+                moveParams_ = input.readFloat();
+                moveParamsCase_ = 12;
+                break;
+              } // case 101
+              case 170: {
+                input.readMessage(
+                    getRotationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                rotateParamsCase_ = 21;
+                break;
+              } // case 170
+              case 178: {
+                input.readMessage(
+                    getRotationSpeedFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                rotateParamsCase_ = 22;
+                break;
+              } // case 178
+              case 186: {
+                input.readMessage(
+                    getAxisSpeedFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                rotateParamsCase_ = 23;
+                break;
+              } // case 186
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.RoutePointOuterClass.RoutePoint) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int moveParamsCase_ = 0;
@@ -1799,7 +1752,18 @@ public final class RoutePointOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new RoutePoint(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

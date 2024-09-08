@@ -168,135 +168,6 @@ public final class UgcDungeonBriefOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private UgcDungeonBrief(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-
-              pEIOEFBCMFP_ = input.readUInt32();
-              break;
-            }
-            case 16: {
-
-              dHAOMGMMDPD_ = input.readBool();
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              eBBPBOEJJPP_ = s;
-              break;
-            }
-            case 32: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                tagList_ = newIntList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              tagList_.addInt(input.readUInt32());
-              break;
-            }
-            case 34: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
-                tagList_ = newIntList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                tagList_.addInt(input.readUInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            case 56: {
-
-              kFEHEOJCKLB_ = input.readUInt32();
-              break;
-            }
-            case 72: {
-
-              oPPFABKNMMB_ = input.readUInt32();
-              break;
-            }
-            case 80: {
-
-              dungeonId_ = input.readUInt32();
-              break;
-            }
-            case 96: {
-
-              dungeonGuid_ = input.readUInt64();
-              break;
-            }
-            case 106: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              dPPIBJFOMOC_ = s;
-              break;
-            }
-            case 112: {
-
-              iIACGGOGMLP_ = input.readUInt32();
-              break;
-            }
-            case 120: {
-
-              jFOEEKHEIMO_ = input.readBool();
-              break;
-            }
-            case 6704: {
-
-              pFLAJCKEHFA_ = input.readBool();
-              break;
-            }
-            case 7280: {
-
-              dGBMJCFHLBB_ = input.readUInt32();
-              break;
-            }
-            case 11584: {
-
-              aNICOPJPCFM_ = input.readBool();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          tagList_.makeImmutable(); // C
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.UgcDungeonBriefOuterClass.internal_static_UgcDungeonBrief_descriptor;
@@ -609,7 +480,7 @@ public final class UgcDungeonBriefOuterClass {
       if (aNICOPJPCFM_ != false) {
         output.writeBool(1448, aNICOPJPCFM_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -682,7 +553,7 @@ public final class UgcDungeonBriefOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(1448, aNICOPJPCFM_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -725,7 +596,7 @@ public final class UgcDungeonBriefOuterClass {
           != other.getDGBMJCFHLBB()) return false;
       if (getANICOPJPCFM()
           != other.getANICOPJPCFM()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -771,7 +642,7 @@ public final class UgcDungeonBriefOuterClass {
       hash = (37 * hash) + ANICOPJPCFM_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getANICOPJPCFM());
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -888,18 +759,13 @@ public final class UgcDungeonBriefOuterClass {
 
       // Construct using emu.grasscutter.net.proto.UgcDungeonBriefOuterClass.UgcDungeonBrief.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1076,7 +942,7 @@ public final class UgcDungeonBriefOuterClass {
         if (other.getANICOPJPCFM() != false) {
           setANICOPJPCFM(other.getANICOPJPCFM());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -1091,17 +957,111 @@ public final class UgcDungeonBriefOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.UgcDungeonBriefOuterClass.UgcDungeonBrief parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                pEIOEFBCMFP_ = input.readUInt32();
+
+                break;
+              } // case 8
+              case 16: {
+                dHAOMGMMDPD_ = input.readBool();
+
+                break;
+              } // case 16
+              case 26: {
+                eBBPBOEJJPP_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 26
+              case 32: {
+                int v = input.readUInt32();
+                ensureTagListIsMutable();
+                tagList_.addInt(v);
+                break;
+              } // case 32
+              case 34: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureTagListIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  tagList_.addInt(input.readUInt32());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 34
+              case 56: {
+                kFEHEOJCKLB_ = input.readUInt32();
+
+                break;
+              } // case 56
+              case 72: {
+                oPPFABKNMMB_ = input.readUInt32();
+
+                break;
+              } // case 72
+              case 80: {
+                dungeonId_ = input.readUInt32();
+
+                break;
+              } // case 80
+              case 96: {
+                dungeonGuid_ = input.readUInt64();
+
+                break;
+              } // case 96
+              case 106: {
+                dPPIBJFOMOC_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 106
+              case 112: {
+                iIACGGOGMLP_ = input.readUInt32();
+
+                break;
+              } // case 112
+              case 120: {
+                jFOEEKHEIMO_ = input.readBool();
+
+                break;
+              } // case 120
+              case 6704: {
+                pFLAJCKEHFA_ = input.readBool();
+
+                break;
+              } // case 6704
+              case 7280: {
+                dGBMJCFHLBB_ = input.readUInt32();
+
+                break;
+              } // case 7280
+              case 11584: {
+                aNICOPJPCFM_ = input.readBool();
+
+                break;
+              } // case 11584
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.UgcDungeonBriefOuterClass.UgcDungeonBrief) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -1749,7 +1709,18 @@ public final class UgcDungeonBriefOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new UgcDungeonBrief(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

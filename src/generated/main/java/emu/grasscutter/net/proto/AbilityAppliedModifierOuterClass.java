@@ -165,145 +165,6 @@ public final class AbilityAppliedModifierOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private AbilityAppliedModifier(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-
-              modifierLocalId_ = input.readInt32();
-              break;
-            }
-            case 16: {
-
-              parentAbilityEntityId_ = input.readUInt32();
-              break;
-            }
-            case 26: {
-              emu.grasscutter.net.proto.AbilityStringOuterClass.AbilityString.Builder subBuilder = null;
-              if (parentAbilityName_ != null) {
-                subBuilder = parentAbilityName_.toBuilder();
-              }
-              parentAbilityName_ = input.readMessage(emu.grasscutter.net.proto.AbilityStringOuterClass.AbilityString.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(parentAbilityName_);
-                parentAbilityName_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 34: {
-              emu.grasscutter.net.proto.AbilityStringOuterClass.AbilityString.Builder subBuilder = null;
-              if (parentAbilityOverride_ != null) {
-                subBuilder = parentAbilityOverride_.toBuilder();
-              }
-              parentAbilityOverride_ = input.readMessage(emu.grasscutter.net.proto.AbilityStringOuterClass.AbilityString.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(parentAbilityOverride_);
-                parentAbilityOverride_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 40: {
-
-              instancedAbilityId_ = input.readUInt32();
-              break;
-            }
-            case 48: {
-
-              instancedModifierId_ = input.readUInt32();
-              break;
-            }
-            case 61: {
-
-              existDuration_ = input.readFloat();
-              break;
-            }
-            case 66: {
-              emu.grasscutter.net.proto.AbilityAttachedModifierOuterClass.AbilityAttachedModifier.Builder subBuilder = null;
-              if (attachedInstancedModifier_ != null) {
-                subBuilder = attachedInstancedModifier_.toBuilder();
-              }
-              attachedInstancedModifier_ = input.readMessage(emu.grasscutter.net.proto.AbilityAttachedModifierOuterClass.AbilityAttachedModifier.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(attachedInstancedModifier_);
-                attachedInstancedModifier_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 72: {
-
-              applyEntityId_ = input.readUInt32();
-              break;
-            }
-            case 80: {
-
-              isAttachedParentAbility_ = input.readBool();
-              break;
-            }
-            case 90: {
-              emu.grasscutter.net.proto.ModifierDurabilityOuterClass.ModifierDurability.Builder subBuilder = null;
-              if (modifierDurability_ != null) {
-                subBuilder = modifierDurability_.toBuilder();
-              }
-              modifierDurability_ = input.readMessage(emu.grasscutter.net.proto.ModifierDurabilityOuterClass.ModifierDurability.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(modifierDurability_);
-                modifierDurability_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 96: {
-
-              sbuffUid_ = input.readUInt32();
-              break;
-            }
-            case 104: {
-
-              isServerbuffModifier_ = input.readBool();
-              break;
-            }
-            case 112: {
-
-              nCEGKBANOBP_ = input.readBool();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.AbilityAppliedModifierOuterClass.internal_static_AbilityAppliedModifier_descriptor;
@@ -563,7 +424,7 @@ public final class AbilityAppliedModifierOuterClass {
       if (instancedModifierId_ != 0) {
         output.writeUInt32(6, instancedModifierId_);
       }
-      if (existDuration_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(existDuration_) != 0) {
         output.writeFloat(7, existDuration_);
       }
       if (attachedInstancedModifier_ != null) {
@@ -587,7 +448,7 @@ public final class AbilityAppliedModifierOuterClass {
       if (nCEGKBANOBP_ != false) {
         output.writeBool(14, nCEGKBANOBP_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -620,7 +481,7 @@ public final class AbilityAppliedModifierOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(6, instancedModifierId_);
       }
-      if (existDuration_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(existDuration_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(7, existDuration_);
       }
@@ -652,7 +513,7 @@ public final class AbilityAppliedModifierOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(14, nCEGKBANOBP_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -708,7 +569,7 @@ public final class AbilityAppliedModifierOuterClass {
           != other.getIsServerbuffModifier()) return false;
       if (getNCEGKBANOBP()
           != other.getNCEGKBANOBP()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -759,7 +620,7 @@ public final class AbilityAppliedModifierOuterClass {
       hash = (37 * hash) + NCEGKBANOBP_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getNCEGKBANOBP());
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -876,18 +737,13 @@ public final class AbilityAppliedModifierOuterClass {
 
       // Construct using emu.grasscutter.net.proto.AbilityAppliedModifierOuterClass.AbilityAppliedModifier.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1082,7 +938,7 @@ public final class AbilityAppliedModifierOuterClass {
         if (other.getNCEGKBANOBP() != false) {
           setNCEGKBANOBP(other.getNCEGKBANOBP());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -1097,17 +953,108 @@ public final class AbilityAppliedModifierOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.AbilityAppliedModifierOuterClass.AbilityAppliedModifier parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                modifierLocalId_ = input.readInt32();
+
+                break;
+              } // case 8
+              case 16: {
+                parentAbilityEntityId_ = input.readUInt32();
+
+                break;
+              } // case 16
+              case 26: {
+                input.readMessage(
+                    getParentAbilityNameFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getParentAbilityOverrideFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 34
+              case 40: {
+                instancedAbilityId_ = input.readUInt32();
+
+                break;
+              } // case 40
+              case 48: {
+                instancedModifierId_ = input.readUInt32();
+
+                break;
+              } // case 48
+              case 61: {
+                existDuration_ = input.readFloat();
+
+                break;
+              } // case 61
+              case 66: {
+                input.readMessage(
+                    getAttachedInstancedModifierFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 66
+              case 72: {
+                applyEntityId_ = input.readUInt32();
+
+                break;
+              } // case 72
+              case 80: {
+                isAttachedParentAbility_ = input.readBool();
+
+                break;
+              } // case 80
+              case 90: {
+                input.readMessage(
+                    getModifierDurabilityFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 90
+              case 96: {
+                sbuffUid_ = input.readUInt32();
+
+                break;
+              } // case 96
+              case 104: {
+                isServerbuffModifier_ = input.readBool();
+
+                break;
+              } // case 104
+              case 112: {
+                nCEGKBANOBP_ = input.readBool();
+
+                break;
+              } // case 112
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.AbilityAppliedModifierOuterClass.AbilityAppliedModifier) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -1929,7 +1876,18 @@ public final class AbilityAppliedModifierOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new AbilityAppliedModifier(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

@@ -41,7 +41,7 @@ public final class AvatarAddNotifyOuterClass {
   }
   /**
    * <pre>
-   * 4.7.0
+   * CmdId: 4216
    * </pre>
    *
    * Protobuf type {@code AvatarAddNotify}
@@ -294,7 +294,7 @@ public final class AvatarAddNotifyOuterClass {
     }
     /**
      * <pre>
-     * 4.7.0
+     * CmdId: 4216
      * </pre>
      *
      * Protobuf type {@code AvatarAddNotify}

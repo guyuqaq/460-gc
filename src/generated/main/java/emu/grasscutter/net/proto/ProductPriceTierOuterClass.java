@@ -19,35 +19,30 @@ public final class ProductPriceTierOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string price_tier = 3;</code>
-     * @return The priceTier.
-     */
-    java.lang.String getPriceTier();
-    /**
-     * <code>string price_tier = 3;</code>
-     * @return The bytes for priceTier.
-     */
-    com.google.protobuf.ByteString
-        getPriceTierBytes();
-
-    /**
-     * <code>string product_id = 10;</code>
+     * <code>string product_id = 5;</code>
      * @return The productId.
      */
     java.lang.String getProductId();
     /**
-     * <code>string product_id = 10;</code>
+     * <code>string product_id = 5;</code>
      * @return The bytes for productId.
      */
     com.google.protobuf.ByteString
         getProductIdBytes();
+
+    /**
+     * <code>string price_tier = 12;</code>
+     * @return The priceTier.
+     */
+    java.lang.String getPriceTier();
+    /**
+     * <code>string price_tier = 12;</code>
+     * @return The bytes for priceTier.
+     */
+    com.google.protobuf.ByteString
+        getPriceTierBytes();
   }
   /**
-   * <pre>
-   * Version: 4.6.0
-   * Obfs: KGKLDAGGGNP
-   * </pre>
-   *
    * Protobuf type {@code ProductPriceTier}
    */
   public static final class ProductPriceTier extends
@@ -60,8 +55,8 @@ public final class ProductPriceTierOuterClass {
       super(builder);
     }
     private ProductPriceTier() {
-      priceTier_ = "";
       productId_ = "";
+      priceTier_ = "";
     }
 
     @java.lang.Override
@@ -76,55 +71,6 @@ public final class ProductPriceTierOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private ProductPriceTier(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              priceTier_ = s;
-              break;
-            }
-            case 82: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              productId_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.ProductPriceTierOuterClass.internal_static_ProductPriceTier_descriptor;
@@ -138,48 +84,10 @@ public final class ProductPriceTierOuterClass {
               emu.grasscutter.net.proto.ProductPriceTierOuterClass.ProductPriceTier.class, emu.grasscutter.net.proto.ProductPriceTierOuterClass.ProductPriceTier.Builder.class);
     }
 
-    public static final int PRICE_TIER_FIELD_NUMBER = 3;
-    private volatile java.lang.Object priceTier_;
-    /**
-     * <code>string price_tier = 3;</code>
-     * @return The priceTier.
-     */
-    @java.lang.Override
-    public java.lang.String getPriceTier() {
-      java.lang.Object ref = priceTier_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        priceTier_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string price_tier = 3;</code>
-     * @return The bytes for priceTier.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getPriceTierBytes() {
-      java.lang.Object ref = priceTier_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        priceTier_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int PRODUCT_ID_FIELD_NUMBER = 10;
+    public static final int PRODUCT_ID_FIELD_NUMBER = 5;
     private volatile java.lang.Object productId_;
     /**
-     * <code>string product_id = 10;</code>
+     * <code>string product_id = 5;</code>
      * @return The productId.
      */
     @java.lang.Override
@@ -196,7 +104,7 @@ public final class ProductPriceTierOuterClass {
       }
     }
     /**
-     * <code>string product_id = 10;</code>
+     * <code>string product_id = 5;</code>
      * @return The bytes for productId.
      */
     @java.lang.Override
@@ -208,6 +116,44 @@ public final class ProductPriceTierOuterClass {
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         productId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PRICE_TIER_FIELD_NUMBER = 12;
+    private volatile java.lang.Object priceTier_;
+    /**
+     * <code>string price_tier = 12;</code>
+     * @return The priceTier.
+     */
+    @java.lang.Override
+    public java.lang.String getPriceTier() {
+      java.lang.Object ref = priceTier_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        priceTier_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string price_tier = 12;</code>
+     * @return The bytes for priceTier.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPriceTierBytes() {
+      java.lang.Object ref = priceTier_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        priceTier_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -228,13 +174,13 @@ public final class ProductPriceTierOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(priceTier_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, priceTier_);
-      }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(productId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, productId_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, productId_);
       }
-      unknownFields.writeTo(output);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(priceTier_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 12, priceTier_);
+      }
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -243,13 +189,13 @@ public final class ProductPriceTierOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(priceTier_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, priceTier_);
-      }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(productId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, productId_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, productId_);
       }
-      size += unknownFields.getSerializedSize();
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(priceTier_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, priceTier_);
+      }
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -264,11 +210,11 @@ public final class ProductPriceTierOuterClass {
       }
       emu.grasscutter.net.proto.ProductPriceTierOuterClass.ProductPriceTier other = (emu.grasscutter.net.proto.ProductPriceTierOuterClass.ProductPriceTier) obj;
 
-      if (!getPriceTier()
-          .equals(other.getPriceTier())) return false;
       if (!getProductId()
           .equals(other.getProductId())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getPriceTier()
+          .equals(other.getPriceTier())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -279,11 +225,11 @@ public final class ProductPriceTierOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + PRICE_TIER_FIELD_NUMBER;
-      hash = (53 * hash) + getPriceTier().hashCode();
       hash = (37 * hash) + PRODUCT_ID_FIELD_NUMBER;
       hash = (53 * hash) + getProductId().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (37 * hash) + PRICE_TIER_FIELD_NUMBER;
+      hash = (53 * hash) + getPriceTier().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -379,11 +325,6 @@ public final class ProductPriceTierOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * Version: 4.6.0
-     * Obfs: KGKLDAGGGNP
-     * </pre>
-     *
      * Protobuf type {@code ProductPriceTier}
      */
     public static final class Builder extends
@@ -405,25 +346,20 @@ public final class ProductPriceTierOuterClass {
 
       // Construct using emu.grasscutter.net.proto.ProductPriceTierOuterClass.ProductPriceTier.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        priceTier_ = "";
-
         productId_ = "";
+
+        priceTier_ = "";
 
         return this;
       }
@@ -451,8 +387,8 @@ public final class ProductPriceTierOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.ProductPriceTierOuterClass.ProductPriceTier buildPartial() {
         emu.grasscutter.net.proto.ProductPriceTierOuterClass.ProductPriceTier result = new emu.grasscutter.net.proto.ProductPriceTierOuterClass.ProductPriceTier(this);
-        result.priceTier_ = priceTier_;
         result.productId_ = productId_;
+        result.priceTier_ = priceTier_;
         onBuilt();
         return result;
       }
@@ -501,15 +437,15 @@ public final class ProductPriceTierOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.ProductPriceTierOuterClass.ProductPriceTier other) {
         if (other == emu.grasscutter.net.proto.ProductPriceTierOuterClass.ProductPriceTier.getDefaultInstance()) return this;
-        if (!other.getPriceTier().isEmpty()) {
-          priceTier_ = other.priceTier_;
-          onChanged();
-        }
         if (!other.getProductId().isEmpty()) {
           productId_ = other.productId_;
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        if (!other.getPriceTier().isEmpty()) {
+          priceTier_ = other.priceTier_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -524,99 +460,46 @@ public final class ProductPriceTierOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.ProductPriceTierOuterClass.ProductPriceTier parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 42: {
+                productId_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 42
+              case 98: {
+                priceTier_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 98
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.ProductPriceTierOuterClass.ProductPriceTier) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private java.lang.Object priceTier_ = "";
-      /**
-       * <code>string price_tier = 3;</code>
-       * @return The priceTier.
-       */
-      public java.lang.String getPriceTier() {
-        java.lang.Object ref = priceTier_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          priceTier_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string price_tier = 3;</code>
-       * @return The bytes for priceTier.
-       */
-      public com.google.protobuf.ByteString
-          getPriceTierBytes() {
-        java.lang.Object ref = priceTier_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          priceTier_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string price_tier = 3;</code>
-       * @param value The priceTier to set.
-       * @return This builder for chaining.
-       */
-      public Builder setPriceTier(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        priceTier_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string price_tier = 3;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearPriceTier() {
-        
-        priceTier_ = getDefaultInstance().getPriceTier();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string price_tier = 3;</code>
-       * @param value The bytes for priceTier to set.
-       * @return This builder for chaining.
-       */
-      public Builder setPriceTierBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        priceTier_ = value;
-        onChanged();
+          onChanged();
+        } // finally
         return this;
       }
 
       private java.lang.Object productId_ = "";
       /**
-       * <code>string product_id = 10;</code>
+       * <code>string product_id = 5;</code>
        * @return The productId.
        */
       public java.lang.String getProductId() {
@@ -632,7 +515,7 @@ public final class ProductPriceTierOuterClass {
         }
       }
       /**
-       * <code>string product_id = 10;</code>
+       * <code>string product_id = 5;</code>
        * @return The bytes for productId.
        */
       public com.google.protobuf.ByteString
@@ -649,7 +532,7 @@ public final class ProductPriceTierOuterClass {
         }
       }
       /**
-       * <code>string product_id = 10;</code>
+       * <code>string product_id = 5;</code>
        * @param value The productId to set.
        * @return This builder for chaining.
        */
@@ -664,7 +547,7 @@ public final class ProductPriceTierOuterClass {
         return this;
       }
       /**
-       * <code>string product_id = 10;</code>
+       * <code>string product_id = 5;</code>
        * @return This builder for chaining.
        */
       public Builder clearProductId() {
@@ -674,7 +557,7 @@ public final class ProductPriceTierOuterClass {
         return this;
       }
       /**
-       * <code>string product_id = 10;</code>
+       * <code>string product_id = 5;</code>
        * @param value The bytes for productId to set.
        * @return This builder for chaining.
        */
@@ -686,6 +569,82 @@ public final class ProductPriceTierOuterClass {
   checkByteStringIsUtf8(value);
         
         productId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object priceTier_ = "";
+      /**
+       * <code>string price_tier = 12;</code>
+       * @return The priceTier.
+       */
+      public java.lang.String getPriceTier() {
+        java.lang.Object ref = priceTier_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          priceTier_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string price_tier = 12;</code>
+       * @return The bytes for priceTier.
+       */
+      public com.google.protobuf.ByteString
+          getPriceTierBytes() {
+        java.lang.Object ref = priceTier_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          priceTier_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string price_tier = 12;</code>
+       * @param value The priceTier to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPriceTier(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        priceTier_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string price_tier = 12;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPriceTier() {
+        
+        priceTier_ = getDefaultInstance().getPriceTier();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string price_tier = 12;</code>
+       * @param value The bytes for priceTier to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPriceTierBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        priceTier_ = value;
         onChanged();
         return this;
       }
@@ -722,7 +681,18 @@ public final class ProductPriceTierOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new ProductPriceTier(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -757,7 +727,7 @@ public final class ProductPriceTierOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\026ProductPriceTier.proto\":\n\020ProductPrice" +
-      "Tier\022\022\n\nprice_tier\030\003 \001(\t\022\022\n\nproduct_id\030\n" +
+      "Tier\022\022\n\nproduct_id\030\005 \001(\t\022\022\n\nprice_tier\030\014" +
       " \001(\tB\033\n\031emu.grasscutter.net.protob\006proto" +
       "3"
     };
@@ -770,7 +740,7 @@ public final class ProductPriceTierOuterClass {
     internal_static_ProductPriceTier_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ProductPriceTier_descriptor,
-        new java.lang.String[] { "PriceTier", "ProductId", });
+        new java.lang.String[] { "ProductId", "PriceTier", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -19,22 +19,18 @@ public final class FleurFairChapterInfoOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 open_time = 9;</code>
-     * @return The openTime.
-     */
-    int getOpenTime();
-
-    /**
-     * <code>uint32 chapter_id = 12;</code>
+     * <code>uint32 chapter_id = 9;</code>
      * @return The chapterId.
      */
     int getChapterId();
+
+    /**
+     * <code>uint32 open_time = 15;</code>
+     * @return The openTime.
+     */
+    int getOpenTime();
   }
   /**
-   * <pre>
-   * Obf: BGDPGELKJAF
-   * </pre>
-   *
    * Protobuf type {@code FleurFairChapterInfo}
    */
   public static final class FleurFairChapterInfo extends
@@ -61,53 +57,6 @@ public final class FleurFairChapterInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private FleurFairChapterInfo(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 72: {
-
-              openTime_ = input.readUInt32();
-              break;
-            }
-            case 96: {
-
-              chapterId_ = input.readUInt32();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.FleurFairChapterInfoOuterClass.internal_static_FleurFairChapterInfo_descriptor;
@@ -121,26 +70,26 @@ public final class FleurFairChapterInfoOuterClass {
               emu.grasscutter.net.proto.FleurFairChapterInfoOuterClass.FleurFairChapterInfo.class, emu.grasscutter.net.proto.FleurFairChapterInfoOuterClass.FleurFairChapterInfo.Builder.class);
     }
 
-    public static final int OPEN_TIME_FIELD_NUMBER = 9;
-    private int openTime_;
-    /**
-     * <code>uint32 open_time = 9;</code>
-     * @return The openTime.
-     */
-    @java.lang.Override
-    public int getOpenTime() {
-      return openTime_;
-    }
-
-    public static final int CHAPTER_ID_FIELD_NUMBER = 12;
+    public static final int CHAPTER_ID_FIELD_NUMBER = 9;
     private int chapterId_;
     /**
-     * <code>uint32 chapter_id = 12;</code>
+     * <code>uint32 chapter_id = 9;</code>
      * @return The chapterId.
      */
     @java.lang.Override
     public int getChapterId() {
       return chapterId_;
+    }
+
+    public static final int OPEN_TIME_FIELD_NUMBER = 15;
+    private int openTime_;
+    /**
+     * <code>uint32 open_time = 15;</code>
+     * @return The openTime.
+     */
+    @java.lang.Override
+    public int getOpenTime() {
+      return openTime_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -157,13 +106,13 @@ public final class FleurFairChapterInfoOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (openTime_ != 0) {
-        output.writeUInt32(9, openTime_);
-      }
       if (chapterId_ != 0) {
-        output.writeUInt32(12, chapterId_);
+        output.writeUInt32(9, chapterId_);
       }
-      unknownFields.writeTo(output);
+      if (openTime_ != 0) {
+        output.writeUInt32(15, openTime_);
+      }
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -172,15 +121,15 @@ public final class FleurFairChapterInfoOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (openTime_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(9, openTime_);
-      }
       if (chapterId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(12, chapterId_);
+          .computeUInt32Size(9, chapterId_);
       }
-      size += unknownFields.getSerializedSize();
+      if (openTime_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(15, openTime_);
+      }
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -195,11 +144,11 @@ public final class FleurFairChapterInfoOuterClass {
       }
       emu.grasscutter.net.proto.FleurFairChapterInfoOuterClass.FleurFairChapterInfo other = (emu.grasscutter.net.proto.FleurFairChapterInfoOuterClass.FleurFairChapterInfo) obj;
 
-      if (getOpenTime()
-          != other.getOpenTime()) return false;
       if (getChapterId()
           != other.getChapterId()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (getOpenTime()
+          != other.getOpenTime()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -210,11 +159,11 @@ public final class FleurFairChapterInfoOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + OPEN_TIME_FIELD_NUMBER;
-      hash = (53 * hash) + getOpenTime();
       hash = (37 * hash) + CHAPTER_ID_FIELD_NUMBER;
       hash = (53 * hash) + getChapterId();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (37 * hash) + OPEN_TIME_FIELD_NUMBER;
+      hash = (53 * hash) + getOpenTime();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -310,10 +259,6 @@ public final class FleurFairChapterInfoOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * Obf: BGDPGELKJAF
-     * </pre>
-     *
      * Protobuf type {@code FleurFairChapterInfo}
      */
     public static final class Builder extends
@@ -335,25 +280,20 @@ public final class FleurFairChapterInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.FleurFairChapterInfoOuterClass.FleurFairChapterInfo.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        openTime_ = 0;
-
         chapterId_ = 0;
+
+        openTime_ = 0;
 
         return this;
       }
@@ -381,8 +321,8 @@ public final class FleurFairChapterInfoOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.FleurFairChapterInfoOuterClass.FleurFairChapterInfo buildPartial() {
         emu.grasscutter.net.proto.FleurFairChapterInfoOuterClass.FleurFairChapterInfo result = new emu.grasscutter.net.proto.FleurFairChapterInfoOuterClass.FleurFairChapterInfo(this);
-        result.openTime_ = openTime_;
         result.chapterId_ = chapterId_;
+        result.openTime_ = openTime_;
         onBuilt();
         return result;
       }
@@ -431,13 +371,13 @@ public final class FleurFairChapterInfoOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.FleurFairChapterInfoOuterClass.FleurFairChapterInfo other) {
         if (other == emu.grasscutter.net.proto.FleurFairChapterInfoOuterClass.FleurFairChapterInfo.getDefaultInstance()) return this;
-        if (other.getOpenTime() != 0) {
-          setOpenTime(other.getOpenTime());
-        }
         if (other.getChapterId() != 0) {
           setChapterId(other.getChapterId());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        if (other.getOpenTime() != 0) {
+          setOpenTime(other.getOpenTime());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -452,54 +392,46 @@ public final class FleurFairChapterInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.FleurFairChapterInfoOuterClass.FleurFairChapterInfo parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 72: {
+                chapterId_ = input.readUInt32();
+
+                break;
+              } // case 72
+              case 120: {
+                openTime_ = input.readUInt32();
+
+                break;
+              } // case 120
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.FleurFairChapterInfoOuterClass.FleurFairChapterInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private int openTime_ ;
-      /**
-       * <code>uint32 open_time = 9;</code>
-       * @return The openTime.
-       */
-      @java.lang.Override
-      public int getOpenTime() {
-        return openTime_;
-      }
-      /**
-       * <code>uint32 open_time = 9;</code>
-       * @param value The openTime to set.
-       * @return This builder for chaining.
-       */
-      public Builder setOpenTime(int value) {
-        
-        openTime_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 open_time = 9;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearOpenTime() {
-        
-        openTime_ = 0;
-        onChanged();
+          onChanged();
+        } // finally
         return this;
       }
 
       private int chapterId_ ;
       /**
-       * <code>uint32 chapter_id = 12;</code>
+       * <code>uint32 chapter_id = 9;</code>
        * @return The chapterId.
        */
       @java.lang.Override
@@ -507,7 +439,7 @@ public final class FleurFairChapterInfoOuterClass {
         return chapterId_;
       }
       /**
-       * <code>uint32 chapter_id = 12;</code>
+       * <code>uint32 chapter_id = 9;</code>
        * @param value The chapterId to set.
        * @return This builder for chaining.
        */
@@ -518,12 +450,43 @@ public final class FleurFairChapterInfoOuterClass {
         return this;
       }
       /**
-       * <code>uint32 chapter_id = 12;</code>
+       * <code>uint32 chapter_id = 9;</code>
        * @return This builder for chaining.
        */
       public Builder clearChapterId() {
         
         chapterId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int openTime_ ;
+      /**
+       * <code>uint32 open_time = 15;</code>
+       * @return The openTime.
+       */
+      @java.lang.Override
+      public int getOpenTime() {
+        return openTime_;
+      }
+      /**
+       * <code>uint32 open_time = 15;</code>
+       * @param value The openTime to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOpenTime(int value) {
+        
+        openTime_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 open_time = 15;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOpenTime() {
+        
+        openTime_ = 0;
         onChanged();
         return this;
       }
@@ -560,7 +523,18 @@ public final class FleurFairChapterInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new FleurFairChapterInfo(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -595,8 +569,8 @@ public final class FleurFairChapterInfoOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\032FleurFairChapterInfo.proto\"=\n\024FleurFai" +
-      "rChapterInfo\022\021\n\topen_time\030\t \001(\r\022\022\n\nchapt" +
-      "er_id\030\014 \001(\rB\033\n\031emu.grasscutter.net.proto" +
+      "rChapterInfo\022\022\n\nchapter_id\030\t \001(\r\022\021\n\topen" +
+      "_time\030\017 \001(\rB\033\n\031emu.grasscutter.net.proto" +
       "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -608,7 +582,7 @@ public final class FleurFairChapterInfoOuterClass {
     internal_static_FleurFairChapterInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_FleurFairChapterInfo_descriptor,
-        new java.lang.String[] { "OpenTime", "ChapterId", });
+        new java.lang.String[] { "ChapterId", "OpenTime", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

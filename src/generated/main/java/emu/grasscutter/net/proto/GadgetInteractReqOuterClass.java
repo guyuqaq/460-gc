@@ -99,80 +99,6 @@ public final class GadgetInteractReqOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private GadgetInteractReq(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 24: {
-
-              gadgetId_ = input.readUInt32();
-              break;
-            }
-            case 32: {
-              int rawValue = input.readEnum();
-
-              opType_ = rawValue;
-              break;
-            }
-            case 40: {
-
-              uiInteractId_ = input.readUInt32();
-              break;
-            }
-            case 72: {
-
-              cHDDOFMLBLM_ = input.readUInt32();
-              break;
-            }
-            case 88: {
-              int rawValue = input.readEnum();
-
-              resinCostType_ = rawValue;
-              break;
-            }
-            case 96: {
-
-              gadgetEntityId_ = input.readUInt32();
-              break;
-            }
-            case 120: {
-
-              isUseCondenseResin_ = input.readBool();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.GadgetInteractReqOuterClass.internal_static_GadgetInteractReq_descriptor;
@@ -314,7 +240,7 @@ public final class GadgetInteractReqOuterClass {
       if (isUseCondenseResin_ != false) {
         output.writeBool(15, isUseCondenseResin_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -351,7 +277,7 @@ public final class GadgetInteractReqOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(15, isUseCondenseResin_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -378,7 +304,7 @@ public final class GadgetInteractReqOuterClass {
           != other.getCHDDOFMLBLM()) return false;
       if (getGadgetEntityId()
           != other.getGadgetEntityId()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -404,7 +330,7 @@ public final class GadgetInteractReqOuterClass {
       hash = (53 * hash) + getCHDDOFMLBLM();
       hash = (37 * hash) + GADGET_ENTITY_ID_FIELD_NUMBER;
       hash = (53 * hash) + getGadgetEntityId();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -521,18 +447,13 @@ public final class GadgetInteractReqOuterClass {
 
       // Construct using emu.grasscutter.net.proto.GadgetInteractReqOuterClass.GadgetInteractReq.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -653,7 +574,7 @@ public final class GadgetInteractReqOuterClass {
         if (other.getGadgetEntityId() != 0) {
           setGadgetEntityId(other.getGadgetEntityId());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -668,17 +589,65 @@ public final class GadgetInteractReqOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.GadgetInteractReqOuterClass.GadgetInteractReq parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 24: {
+                gadgetId_ = input.readUInt32();
+
+                break;
+              } // case 24
+              case 32: {
+                opType_ = input.readEnum();
+
+                break;
+              } // case 32
+              case 40: {
+                uiInteractId_ = input.readUInt32();
+
+                break;
+              } // case 40
+              case 72: {
+                cHDDOFMLBLM_ = input.readUInt32();
+
+                break;
+              } // case 72
+              case 88: {
+                resinCostType_ = input.readEnum();
+
+                break;
+              } // case 88
+              case 96: {
+                gadgetEntityId_ = input.readUInt32();
+
+                break;
+              } // case 96
+              case 120: {
+                isUseCondenseResin_ = input.readBool();
+
+                break;
+              } // case 120
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.GadgetInteractReqOuterClass.GadgetInteractReq) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -977,7 +946,18 @@ public final class GadgetInteractReqOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new GadgetInteractReq(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

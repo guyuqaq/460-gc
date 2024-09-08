@@ -352,243 +352,6 @@ public final class SceneEntityInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private SceneEntityInfo(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              int rawValue = input.readEnum();
-
-              entityType_ = rawValue;
-              break;
-            }
-            case 16: {
-
-              entityId_ = input.readUInt32();
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              name_ = s;
-              break;
-            }
-            case 34: {
-              emu.grasscutter.net.proto.MotionInfoOuterClass.MotionInfo.Builder subBuilder = null;
-              if (motionInfo_ != null) {
-                subBuilder = motionInfo_.toBuilder();
-              }
-              motionInfo_ = input.readMessage(emu.grasscutter.net.proto.MotionInfoOuterClass.MotionInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(motionInfo_);
-                motionInfo_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 42: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                propList_ = new java.util.ArrayList<emu.grasscutter.net.proto.PropPairOuterClass.PropPair>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              propList_.add(
-                  input.readMessage(emu.grasscutter.net.proto.PropPairOuterClass.PropPair.parser(), extensionRegistry));
-              break;
-            }
-            case 50: {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                fightPropList_ = new java.util.ArrayList<emu.grasscutter.net.proto.FightPropPairOuterClass.FightPropPair>();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              fightPropList_.add(
-                  input.readMessage(emu.grasscutter.net.proto.FightPropPairOuterClass.FightPropPair.parser(), extensionRegistry));
-              break;
-            }
-            case 56: {
-
-              lifeState_ = input.readUInt32();
-              break;
-            }
-            case 74: {
-              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-                animatorParaList_ = new java.util.ArrayList<emu.grasscutter.net.proto.AnimatorParameterValueInfoPairOuterClass.AnimatorParameterValueInfoPair>();
-                mutable_bitField0_ |= 0x00000004;
-              }
-              animatorParaList_.add(
-                  input.readMessage(emu.grasscutter.net.proto.AnimatorParameterValueInfoPairOuterClass.AnimatorParameterValueInfoPair.parser(), extensionRegistry));
-              break;
-            }
-            case 82: {
-              emu.grasscutter.net.proto.SceneAvatarInfoOuterClass.SceneAvatarInfo.Builder subBuilder = null;
-              if (entityCase_ == 10) {
-                subBuilder = ((emu.grasscutter.net.proto.SceneAvatarInfoOuterClass.SceneAvatarInfo) entity_).toBuilder();
-              }
-              entity_ =
-                  input.readMessage(emu.grasscutter.net.proto.SceneAvatarInfoOuterClass.SceneAvatarInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.SceneAvatarInfoOuterClass.SceneAvatarInfo) entity_);
-                entity_ = subBuilder.buildPartial();
-              }
-              entityCase_ = 10;
-              break;
-            }
-            case 90: {
-              emu.grasscutter.net.proto.SceneMonsterInfoOuterClass.SceneMonsterInfo.Builder subBuilder = null;
-              if (entityCase_ == 11) {
-                subBuilder = ((emu.grasscutter.net.proto.SceneMonsterInfoOuterClass.SceneMonsterInfo) entity_).toBuilder();
-              }
-              entity_ =
-                  input.readMessage(emu.grasscutter.net.proto.SceneMonsterInfoOuterClass.SceneMonsterInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.SceneMonsterInfoOuterClass.SceneMonsterInfo) entity_);
-                entity_ = subBuilder.buildPartial();
-              }
-              entityCase_ = 11;
-              break;
-            }
-            case 98: {
-              emu.grasscutter.net.proto.SceneNpcInfoOuterClass.SceneNpcInfo.Builder subBuilder = null;
-              if (entityCase_ == 12) {
-                subBuilder = ((emu.grasscutter.net.proto.SceneNpcInfoOuterClass.SceneNpcInfo) entity_).toBuilder();
-              }
-              entity_ =
-                  input.readMessage(emu.grasscutter.net.proto.SceneNpcInfoOuterClass.SceneNpcInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.SceneNpcInfoOuterClass.SceneNpcInfo) entity_);
-                entity_ = subBuilder.buildPartial();
-              }
-              entityCase_ = 12;
-              break;
-            }
-            case 106: {
-              emu.grasscutter.net.proto.SceneGadgetInfoOuterClass.SceneGadgetInfo.Builder subBuilder = null;
-              if (entityCase_ == 13) {
-                subBuilder = ((emu.grasscutter.net.proto.SceneGadgetInfoOuterClass.SceneGadgetInfo) entity_).toBuilder();
-              }
-              entity_ =
-                  input.readMessage(emu.grasscutter.net.proto.SceneGadgetInfoOuterClass.SceneGadgetInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.SceneGadgetInfoOuterClass.SceneGadgetInfo) entity_);
-                entity_ = subBuilder.buildPartial();
-              }
-              entityCase_ = 13;
-              break;
-            }
-            case 136: {
-
-              lastMoveSceneTimeMs_ = input.readUInt32();
-              break;
-            }
-            case 144: {
-
-              lastMoveReliableSeq_ = input.readUInt32();
-              break;
-            }
-            case 154: {
-              emu.grasscutter.net.proto.EntityClientDataOuterClass.EntityClientData.Builder subBuilder = null;
-              if (entityClientData_ != null) {
-                subBuilder = entityClientData_.toBuilder();
-              }
-              entityClientData_ = input.readMessage(emu.grasscutter.net.proto.EntityClientDataOuterClass.EntityClientData.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(entityClientData_);
-                entityClientData_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 162: {
-              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
-                entityEnvironmentInfoList_ = new java.util.ArrayList<emu.grasscutter.net.proto.EntityEnvironmentInfoOuterClass.EntityEnvironmentInfo>();
-                mutable_bitField0_ |= 0x00000008;
-              }
-              entityEnvironmentInfoList_.add(
-                  input.readMessage(emu.grasscutter.net.proto.EntityEnvironmentInfoOuterClass.EntityEnvironmentInfo.parser(), extensionRegistry));
-              break;
-            }
-            case 170: {
-              emu.grasscutter.net.proto.EntityAuthorityInfoOuterClass.EntityAuthorityInfo.Builder subBuilder = null;
-              if (entityAuthorityInfo_ != null) {
-                subBuilder = entityAuthorityInfo_.toBuilder();
-              }
-              entityAuthorityInfo_ = input.readMessage(emu.grasscutter.net.proto.EntityAuthorityInfoOuterClass.EntityAuthorityInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(entityAuthorityInfo_);
-                entityAuthorityInfo_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 178: {
-              java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000010) != 0)) {
-                tagList_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000010;
-              }
-              tagList_.add(s);
-              break;
-            }
-            case 186: {
-              if (!((mutable_bitField0_ & 0x00000020) != 0)) {
-                serverBuffList_ = new java.util.ArrayList<emu.grasscutter.net.proto.ServerBuffOuterClass.ServerBuff>();
-                mutable_bitField0_ |= 0x00000020;
-              }
-              serverBuffList_.add(
-                  input.readMessage(emu.grasscutter.net.proto.ServerBuffOuterClass.ServerBuff.parser(), extensionRegistry));
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          propList_ = java.util.Collections.unmodifiableList(propList_);
-        }
-        if (((mutable_bitField0_ & 0x00000002) != 0)) {
-          fightPropList_ = java.util.Collections.unmodifiableList(fightPropList_);
-        }
-        if (((mutable_bitField0_ & 0x00000004) != 0)) {
-          animatorParaList_ = java.util.Collections.unmodifiableList(animatorParaList_);
-        }
-        if (((mutable_bitField0_ & 0x00000008) != 0)) {
-          entityEnvironmentInfoList_ = java.util.Collections.unmodifiableList(entityEnvironmentInfoList_);
-        }
-        if (((mutable_bitField0_ & 0x00000010) != 0)) {
-          tagList_ = tagList_.getUnmodifiableView();
-        }
-        if (((mutable_bitField0_ & 0x00000020) != 0)) {
-          serverBuffList_ = java.util.Collections.unmodifiableList(serverBuffList_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.SceneEntityInfoOuterClass.internal_static_SceneEntityInfo_descriptor;
@@ -1256,7 +1019,7 @@ public final class SceneEntityInfoOuterClass {
       for (int i = 0; i < serverBuffList_.size(); i++) {
         output.writeMessage(23, serverBuffList_.get(i));
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -1344,7 +1107,7 @@ public final class SceneEntityInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(23, serverBuffList_.get(i));
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -1418,7 +1181,7 @@ public final class SceneEntityInfoOuterClass {
         case 0:
         default:
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -1497,7 +1260,7 @@ public final class SceneEntityInfoOuterClass {
         case 0:
         default:
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -1614,23 +1377,13 @@ public final class SceneEntityInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.SceneEntityInfoOuterClass.SceneEntityInfo.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPropListFieldBuilder();
-          getFightPropListFieldBuilder();
-          getAnimatorParaListFieldBuilder();
-          getEntityEnvironmentInfoListFieldBuilder();
-          getServerBuffListFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1649,24 +1402,27 @@ public final class SceneEntityInfoOuterClass {
         }
         if (propListBuilder_ == null) {
           propList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          propList_ = null;
           propListBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000001);
         if (fightPropListBuilder_ == null) {
           fightPropList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
+          fightPropList_ = null;
           fightPropListBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000002);
         lifeState_ = 0;
 
         if (animatorParaListBuilder_ == null) {
           animatorParaList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
         } else {
+          animatorParaList_ = null;
           animatorParaListBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000004);
         lastMoveSceneTimeMs_ = 0;
 
         lastMoveReliableSeq_ = 0;
@@ -1679,10 +1435,11 @@ public final class SceneEntityInfoOuterClass {
         }
         if (entityEnvironmentInfoListBuilder_ == null) {
           entityEnvironmentInfoList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
         } else {
+          entityEnvironmentInfoList_ = null;
           entityEnvironmentInfoListBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000008);
         if (entityAuthorityInfoBuilder_ == null) {
           entityAuthorityInfo_ = null;
         } else {
@@ -1693,9 +1450,22 @@ public final class SceneEntityInfoOuterClass {
         bitField0_ = (bitField0_ & ~0x00000010);
         if (serverBuffListBuilder_ == null) {
           serverBuffList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000020);
         } else {
+          serverBuffList_ = null;
           serverBuffListBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000020);
+        if (avatarBuilder_ != null) {
+          avatarBuilder_.clear();
+        }
+        if (monsterBuilder_ != null) {
+          monsterBuilder_.clear();
+        }
+        if (npcBuilder_ != null) {
+          npcBuilder_.clear();
+        }
+        if (gadgetBuilder_ != null) {
+          gadgetBuilder_.clear();
         }
         entityCase_ = 0;
         entity_ = null;
@@ -2063,7 +1833,7 @@ public final class SceneEntityInfoOuterClass {
             break;
           }
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -2078,17 +1848,180 @@ public final class SceneEntityInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.SceneEntityInfoOuterClass.SceneEntityInfo parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                entityType_ = input.readEnum();
+
+                break;
+              } // case 8
+              case 16: {
+                entityId_ = input.readUInt32();
+
+                break;
+              } // case 16
+              case 26: {
+                name_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getMotionInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 34
+              case 42: {
+                emu.grasscutter.net.proto.PropPairOuterClass.PropPair m =
+                    input.readMessage(
+                        emu.grasscutter.net.proto.PropPairOuterClass.PropPair.parser(),
+                        extensionRegistry);
+                if (propListBuilder_ == null) {
+                  ensurePropListIsMutable();
+                  propList_.add(m);
+                } else {
+                  propListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 42
+              case 50: {
+                emu.grasscutter.net.proto.FightPropPairOuterClass.FightPropPair m =
+                    input.readMessage(
+                        emu.grasscutter.net.proto.FightPropPairOuterClass.FightPropPair.parser(),
+                        extensionRegistry);
+                if (fightPropListBuilder_ == null) {
+                  ensureFightPropListIsMutable();
+                  fightPropList_.add(m);
+                } else {
+                  fightPropListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 50
+              case 56: {
+                lifeState_ = input.readUInt32();
+
+                break;
+              } // case 56
+              case 74: {
+                emu.grasscutter.net.proto.AnimatorParameterValueInfoPairOuterClass.AnimatorParameterValueInfoPair m =
+                    input.readMessage(
+                        emu.grasscutter.net.proto.AnimatorParameterValueInfoPairOuterClass.AnimatorParameterValueInfoPair.parser(),
+                        extensionRegistry);
+                if (animatorParaListBuilder_ == null) {
+                  ensureAnimatorParaListIsMutable();
+                  animatorParaList_.add(m);
+                } else {
+                  animatorParaListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 74
+              case 82: {
+                input.readMessage(
+                    getAvatarFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                entityCase_ = 10;
+                break;
+              } // case 82
+              case 90: {
+                input.readMessage(
+                    getMonsterFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                entityCase_ = 11;
+                break;
+              } // case 90
+              case 98: {
+                input.readMessage(
+                    getNpcFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                entityCase_ = 12;
+                break;
+              } // case 98
+              case 106: {
+                input.readMessage(
+                    getGadgetFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                entityCase_ = 13;
+                break;
+              } // case 106
+              case 136: {
+                lastMoveSceneTimeMs_ = input.readUInt32();
+
+                break;
+              } // case 136
+              case 144: {
+                lastMoveReliableSeq_ = input.readUInt32();
+
+                break;
+              } // case 144
+              case 154: {
+                input.readMessage(
+                    getEntityClientDataFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 154
+              case 162: {
+                emu.grasscutter.net.proto.EntityEnvironmentInfoOuterClass.EntityEnvironmentInfo m =
+                    input.readMessage(
+                        emu.grasscutter.net.proto.EntityEnvironmentInfoOuterClass.EntityEnvironmentInfo.parser(),
+                        extensionRegistry);
+                if (entityEnvironmentInfoListBuilder_ == null) {
+                  ensureEntityEnvironmentInfoListIsMutable();
+                  entityEnvironmentInfoList_.add(m);
+                } else {
+                  entityEnvironmentInfoListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 162
+              case 170: {
+                input.readMessage(
+                    getEntityAuthorityInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 170
+              case 178: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureTagListIsMutable();
+                tagList_.add(s);
+                break;
+              } // case 178
+              case 186: {
+                emu.grasscutter.net.proto.ServerBuffOuterClass.ServerBuff m =
+                    input.readMessage(
+                        emu.grasscutter.net.proto.ServerBuffOuterClass.ServerBuff.parser(),
+                        extensionRegistry);
+                if (serverBuffListBuilder_ == null) {
+                  ensureServerBuffListIsMutable();
+                  serverBuffList_.add(m);
+                } else {
+                  serverBuffListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 186
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.SceneEntityInfoOuterClass.SceneEntityInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int entityCase_ = 0;
@@ -4625,7 +4558,18 @@ public final class SceneEntityInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new SceneEntityInfo(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

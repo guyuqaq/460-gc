@@ -220,163 +220,6 @@ public final class ParentQuestOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private ParentQuest(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              emu.grasscutter.net.proto.ParentQuestRandomInfoOuterClass.ParentQuestRandomInfo.Builder subBuilder = null;
-              if (randomInfo_ != null) {
-                subBuilder = randomInfo_.toBuilder();
-              }
-              randomInfo_ = input.readMessage(emu.grasscutter.net.proto.ParentQuestRandomInfoOuterClass.ParentQuestRandomInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(randomInfo_);
-                randomInfo_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 18: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                childQuestList_ = new java.util.ArrayList<emu.grasscutter.net.proto.ChildQuestOuterClass.ChildQuest>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              childQuestList_.add(
-                  input.readMessage(emu.grasscutter.net.proto.ChildQuestOuterClass.ChildQuest.parser(), extensionRegistry));
-              break;
-            }
-            case 24: {
-
-              questVarSeq_ = input.readUInt32();
-              break;
-            }
-            case 32: {
-
-              parentQuestState_ = input.readUInt32();
-              break;
-            }
-            case 40: {
-
-              isRandom_ = input.readBool();
-              break;
-            }
-            case 48: {
-
-              mGIJFMCBJKE_ = input.readBool();
-              break;
-            }
-            case 56: {
-
-              acceptTime_ = input.readUInt32();
-              break;
-            }
-            case 66: {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                inferencePageList_ = new java.util.ArrayList<emu.grasscutter.net.proto.InferencePageInfoOuterClass.InferencePageInfo>();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              inferencePageList_.add(
-                  input.readMessage(emu.grasscutter.net.proto.InferencePageInfoOuterClass.InferencePageInfo.parser(), extensionRegistry));
-              break;
-            }
-            case 72: {
-
-              parentQuestId_ = input.readUInt32();
-              break;
-            }
-            case 80: {
-
-              cKJMKGOKNED_ = input.readBool();
-              break;
-            }
-            case 96: {
-
-              isFinished_ = input.readBool();
-              break;
-            }
-            case 106: {
-              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-                timeVarMap_ = com.google.protobuf.MapField.newMapField(
-                    TimeVarMapDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000004;
-              }
-              com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
-              timeVarMap__ = input.readMessage(
-                  TimeVarMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              timeVarMap_.getMutableMap().put(
-                  timeVarMap__.getKey(), timeVarMap__.getValue());
-              break;
-            }
-            case 112: {
-              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
-                questVar_ = newIntList();
-                mutable_bitField0_ |= 0x00000008;
-              }
-              questVar_.addInt(input.readInt32());
-              break;
-            }
-            case 114: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000008) != 0) && input.getBytesUntilLimit() > 0) {
-                questVar_ = newIntList();
-                mutable_bitField0_ |= 0x00000008;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                questVar_.addInt(input.readInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            case 120: {
-
-              videoKey_ = input.readUInt64();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          childQuestList_ = java.util.Collections.unmodifiableList(childQuestList_);
-        }
-        if (((mutable_bitField0_ & 0x00000002) != 0)) {
-          inferencePageList_ = java.util.Collections.unmodifiableList(inferencePageList_);
-        }
-        if (((mutable_bitField0_ & 0x00000008) != 0)) {
-          questVar_.makeImmutable(); // C
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.ParentQuestOuterClass.internal_static_ParentQuest_descriptor;
@@ -784,7 +627,7 @@ public final class ParentQuestOuterClass {
       if (videoKey_ != 0L) {
         output.writeUInt64(15, videoKey_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -865,7 +708,7 @@ public final class ParentQuestOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(15, videoKey_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -911,7 +754,7 @@ public final class ParentQuestOuterClass {
           .equals(other.getQuestVarList())) return false;
       if (getVideoKey()
           != other.getVideoKey()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -965,7 +808,7 @@ public final class ParentQuestOuterClass {
       hash = (37 * hash) + VIDEO_KEY_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getVideoKey());
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -1104,20 +947,13 @@ public final class ParentQuestOuterClass {
 
       // Construct using emu.grasscutter.net.proto.ParentQuestOuterClass.ParentQuest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getChildQuestListFieldBuilder();
-          getInferencePageListFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1130,10 +966,11 @@ public final class ParentQuestOuterClass {
         }
         if (childQuestListBuilder_ == null) {
           childQuestList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          childQuestList_ = null;
           childQuestListBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000001);
         questVarSeq_ = 0;
 
         parentQuestState_ = 0;
@@ -1146,10 +983,11 @@ public final class ParentQuestOuterClass {
 
         if (inferencePageListBuilder_ == null) {
           inferencePageList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
+          inferencePageList_ = null;
           inferencePageListBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000002);
         parentQuestId_ = 0;
 
         cKJMKGOKNED_ = false;
@@ -1369,7 +1207,7 @@ public final class ParentQuestOuterClass {
         if (other.getVideoKey() != 0L) {
           setVideoKey(other.getVideoKey());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -1384,17 +1222,132 @@ public final class ParentQuestOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.ParentQuestOuterClass.ParentQuest parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getRandomInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 10
+              case 18: {
+                emu.grasscutter.net.proto.ChildQuestOuterClass.ChildQuest m =
+                    input.readMessage(
+                        emu.grasscutter.net.proto.ChildQuestOuterClass.ChildQuest.parser(),
+                        extensionRegistry);
+                if (childQuestListBuilder_ == null) {
+                  ensureChildQuestListIsMutable();
+                  childQuestList_.add(m);
+                } else {
+                  childQuestListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              case 24: {
+                questVarSeq_ = input.readUInt32();
+
+                break;
+              } // case 24
+              case 32: {
+                parentQuestState_ = input.readUInt32();
+
+                break;
+              } // case 32
+              case 40: {
+                isRandom_ = input.readBool();
+
+                break;
+              } // case 40
+              case 48: {
+                mGIJFMCBJKE_ = input.readBool();
+
+                break;
+              } // case 48
+              case 56: {
+                acceptTime_ = input.readUInt32();
+
+                break;
+              } // case 56
+              case 66: {
+                emu.grasscutter.net.proto.InferencePageInfoOuterClass.InferencePageInfo m =
+                    input.readMessage(
+                        emu.grasscutter.net.proto.InferencePageInfoOuterClass.InferencePageInfo.parser(),
+                        extensionRegistry);
+                if (inferencePageListBuilder_ == null) {
+                  ensureInferencePageListIsMutable();
+                  inferencePageList_.add(m);
+                } else {
+                  inferencePageListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 66
+              case 72: {
+                parentQuestId_ = input.readUInt32();
+
+                break;
+              } // case 72
+              case 80: {
+                cKJMKGOKNED_ = input.readBool();
+
+                break;
+              } // case 80
+              case 96: {
+                isFinished_ = input.readBool();
+
+                break;
+              } // case 96
+              case 106: {
+                com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
+                timeVarMap__ = input.readMessage(
+                    TimeVarMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutableTimeVarMap().getMutableMap().put(
+                    timeVarMap__.getKey(), timeVarMap__.getValue());
+                break;
+              } // case 106
+              case 112: {
+                int v = input.readInt32();
+                ensureQuestVarIsMutable();
+                questVar_.addInt(v);
+                break;
+              } // case 112
+              case 114: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureQuestVarIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  questVar_.addInt(input.readInt32());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 114
+              case 120: {
+                videoKey_ = input.readUInt64();
+
+                break;
+              } // case 120
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.ParentQuestOuterClass.ParentQuest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -2528,7 +2481,18 @@ public final class ParentQuestOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new ParentQuest(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

@@ -19,21 +19,20 @@ public final class TakeBackGivingItemRspOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 giving_id = 14;</code>
+     * <code>uint32 giving_id = 4;</code>
      * @return The givingId.
      */
     int getGivingId();
 
     /**
-     * <code>int32 retcode = 9;</code>
+     * <code>int32 retcode = 10;</code>
      * @return The retcode.
      */
     int getRetcode();
   }
   /**
    * <pre>
-   * CmdId: 20307
-   * Obf: MCKLDOKBMBC
+   * CmdId: 770
    * </pre>
    *
    * Protobuf type {@code TakeBackGivingItemRsp}
@@ -62,53 +61,6 @@ public final class TakeBackGivingItemRspOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private TakeBackGivingItemRsp(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 72: {
-
-              retcode_ = input.readInt32();
-              break;
-            }
-            case 112: {
-
-              givingId_ = input.readUInt32();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.TakeBackGivingItemRspOuterClass.internal_static_TakeBackGivingItemRsp_descriptor;
@@ -122,10 +74,10 @@ public final class TakeBackGivingItemRspOuterClass {
               emu.grasscutter.net.proto.TakeBackGivingItemRspOuterClass.TakeBackGivingItemRsp.class, emu.grasscutter.net.proto.TakeBackGivingItemRspOuterClass.TakeBackGivingItemRsp.Builder.class);
     }
 
-    public static final int GIVING_ID_FIELD_NUMBER = 14;
+    public static final int GIVING_ID_FIELD_NUMBER = 4;
     private int givingId_;
     /**
-     * <code>uint32 giving_id = 14;</code>
+     * <code>uint32 giving_id = 4;</code>
      * @return The givingId.
      */
     @java.lang.Override
@@ -133,10 +85,10 @@ public final class TakeBackGivingItemRspOuterClass {
       return givingId_;
     }
 
-    public static final int RETCODE_FIELD_NUMBER = 9;
+    public static final int RETCODE_FIELD_NUMBER = 10;
     private int retcode_;
     /**
-     * <code>int32 retcode = 9;</code>
+     * <code>int32 retcode = 10;</code>
      * @return The retcode.
      */
     @java.lang.Override
@@ -158,13 +110,13 @@ public final class TakeBackGivingItemRspOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (retcode_ != 0) {
-        output.writeInt32(9, retcode_);
-      }
       if (givingId_ != 0) {
-        output.writeUInt32(14, givingId_);
+        output.writeUInt32(4, givingId_);
       }
-      unknownFields.writeTo(output);
+      if (retcode_ != 0) {
+        output.writeInt32(10, retcode_);
+      }
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -173,15 +125,15 @@ public final class TakeBackGivingItemRspOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (retcode_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(9, retcode_);
-      }
       if (givingId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(14, givingId_);
+          .computeUInt32Size(4, givingId_);
       }
-      size += unknownFields.getSerializedSize();
+      if (retcode_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(10, retcode_);
+      }
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -200,7 +152,7 @@ public final class TakeBackGivingItemRspOuterClass {
           != other.getGivingId()) return false;
       if (getRetcode()
           != other.getRetcode()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -215,7 +167,7 @@ public final class TakeBackGivingItemRspOuterClass {
       hash = (53 * hash) + getGivingId();
       hash = (37 * hash) + RETCODE_FIELD_NUMBER;
       hash = (53 * hash) + getRetcode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -312,8 +264,7 @@ public final class TakeBackGivingItemRspOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 20307
-     * Obf: MCKLDOKBMBC
+     * CmdId: 770
      * </pre>
      *
      * Protobuf type {@code TakeBackGivingItemRsp}
@@ -337,18 +288,13 @@ public final class TakeBackGivingItemRspOuterClass {
 
       // Construct using emu.grasscutter.net.proto.TakeBackGivingItemRspOuterClass.TakeBackGivingItemRsp.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -439,7 +385,7 @@ public final class TakeBackGivingItemRspOuterClass {
         if (other.getRetcode() != 0) {
           setRetcode(other.getRetcode());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -454,23 +400,46 @@ public final class TakeBackGivingItemRspOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.TakeBackGivingItemRspOuterClass.TakeBackGivingItemRsp parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 32: {
+                givingId_ = input.readUInt32();
+
+                break;
+              } // case 32
+              case 80: {
+                retcode_ = input.readInt32();
+
+                break;
+              } // case 80
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.TakeBackGivingItemRspOuterClass.TakeBackGivingItemRsp) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
       private int givingId_ ;
       /**
-       * <code>uint32 giving_id = 14;</code>
+       * <code>uint32 giving_id = 4;</code>
        * @return The givingId.
        */
       @java.lang.Override
@@ -478,7 +447,7 @@ public final class TakeBackGivingItemRspOuterClass {
         return givingId_;
       }
       /**
-       * <code>uint32 giving_id = 14;</code>
+       * <code>uint32 giving_id = 4;</code>
        * @param value The givingId to set.
        * @return This builder for chaining.
        */
@@ -489,7 +458,7 @@ public final class TakeBackGivingItemRspOuterClass {
         return this;
       }
       /**
-       * <code>uint32 giving_id = 14;</code>
+       * <code>uint32 giving_id = 4;</code>
        * @return This builder for chaining.
        */
       public Builder clearGivingId() {
@@ -501,7 +470,7 @@ public final class TakeBackGivingItemRspOuterClass {
 
       private int retcode_ ;
       /**
-       * <code>int32 retcode = 9;</code>
+       * <code>int32 retcode = 10;</code>
        * @return The retcode.
        */
       @java.lang.Override
@@ -509,7 +478,7 @@ public final class TakeBackGivingItemRspOuterClass {
         return retcode_;
       }
       /**
-       * <code>int32 retcode = 9;</code>
+       * <code>int32 retcode = 10;</code>
        * @param value The retcode to set.
        * @return This builder for chaining.
        */
@@ -520,7 +489,7 @@ public final class TakeBackGivingItemRspOuterClass {
         return this;
       }
       /**
-       * <code>int32 retcode = 9;</code>
+       * <code>int32 retcode = 10;</code>
        * @return This builder for chaining.
        */
       public Builder clearRetcode() {
@@ -562,7 +531,18 @@ public final class TakeBackGivingItemRspOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new TakeBackGivingItemRsp(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -597,8 +577,8 @@ public final class TakeBackGivingItemRspOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\033TakeBackGivingItemRsp.proto\";\n\025TakeBac" +
-      "kGivingItemRsp\022\021\n\tgiving_id\030\016 \001(\r\022\017\n\007ret" +
-      "code\030\t \001(\005B\033\n\031emu.grasscutter.net.protob" +
+      "kGivingItemRsp\022\021\n\tgiving_id\030\004 \001(\r\022\017\n\007ret" +
+      "code\030\n \001(\005B\033\n\031emu.grasscutter.net.protob" +
       "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

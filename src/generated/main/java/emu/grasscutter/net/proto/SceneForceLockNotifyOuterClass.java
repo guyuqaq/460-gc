@@ -36,6 +36,10 @@ public final class SceneForceLockNotifyOuterClass {
     int getForceIdList(int index);
   }
   /**
+   * <pre>
+   * CmdId: 27356
+   * </pre>
+   *
    * Protobuf type {@code SceneForceLockNotify}
    */
   public static final class SceneForceLockNotify extends
@@ -277,6 +281,10 @@ public final class SceneForceLockNotifyOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * CmdId: 27356
+     * </pre>
+     *
      * Protobuf type {@code SceneForceLockNotify}
      */
     public static final class Builder extends

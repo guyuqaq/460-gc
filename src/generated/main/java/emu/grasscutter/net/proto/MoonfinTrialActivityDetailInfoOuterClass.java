@@ -19,17 +19,17 @@ public final class MoonfinTrialActivityDetailInfoOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 special_fish_count = 6;</code>
+     * <code>uint32 special_fish_count = 1;</code>
      * @return The specialFishCount.
      */
     int getSpecialFishCount();
 
     /**
-     * <code>map&lt;uint32, .MoonfinTrialLevelInfo&gt; level_info_map = 3;</code>
+     * <code>map&lt;uint32, .MoonfinTrialLevelInfo&gt; level_info_map = 4;</code>
      */
     int getLevelInfoMapCount();
     /**
-     * <code>map&lt;uint32, .MoonfinTrialLevelInfo&gt; level_info_map = 3;</code>
+     * <code>map&lt;uint32, .MoonfinTrialLevelInfo&gt; level_info_map = 4;</code>
      */
     boolean containsLevelInfoMap(
         int key);
@@ -40,29 +40,25 @@ public final class MoonfinTrialActivityDetailInfoOuterClass {
     java.util.Map<java.lang.Integer, emu.grasscutter.net.proto.MoonfinTrialLevelInfoOuterClass.MoonfinTrialLevelInfo>
     getLevelInfoMap();
     /**
-     * <code>map&lt;uint32, .MoonfinTrialLevelInfo&gt; level_info_map = 3;</code>
+     * <code>map&lt;uint32, .MoonfinTrialLevelInfo&gt; level_info_map = 4;</code>
      */
     java.util.Map<java.lang.Integer, emu.grasscutter.net.proto.MoonfinTrialLevelInfoOuterClass.MoonfinTrialLevelInfo>
     getLevelInfoMapMap();
     /**
-     * <code>map&lt;uint32, .MoonfinTrialLevelInfo&gt; level_info_map = 3;</code>
+     * <code>map&lt;uint32, .MoonfinTrialLevelInfo&gt; level_info_map = 4;</code>
      */
 
     emu.grasscutter.net.proto.MoonfinTrialLevelInfoOuterClass.MoonfinTrialLevelInfo getLevelInfoMapOrDefault(
         int key,
         emu.grasscutter.net.proto.MoonfinTrialLevelInfoOuterClass.MoonfinTrialLevelInfo defaultValue);
     /**
-     * <code>map&lt;uint32, .MoonfinTrialLevelInfo&gt; level_info_map = 3;</code>
+     * <code>map&lt;uint32, .MoonfinTrialLevelInfo&gt; level_info_map = 4;</code>
      */
 
     emu.grasscutter.net.proto.MoonfinTrialLevelInfoOuterClass.MoonfinTrialLevelInfo getLevelInfoMapOrThrow(
         int key);
   }
   /**
-   * <pre>
-   * Obf: KPPONIEPJGF
-   * </pre>
-   *
    * Protobuf type {@code MoonfinTrialActivityDetailInfo}
    */
   public static final class MoonfinTrialActivityDetailInfo extends
@@ -89,62 +85,6 @@ public final class MoonfinTrialActivityDetailInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private MoonfinTrialActivityDetailInfo(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 26: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                levelInfoMap_ = com.google.protobuf.MapField.newMapField(
-                    LevelInfoMapDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000001;
-              }
-              com.google.protobuf.MapEntry<java.lang.Integer, emu.grasscutter.net.proto.MoonfinTrialLevelInfoOuterClass.MoonfinTrialLevelInfo>
-              levelInfoMap__ = input.readMessage(
-                  LevelInfoMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              levelInfoMap_.getMutableMap().put(
-                  levelInfoMap__.getKey(), levelInfoMap__.getValue());
-              break;
-            }
-            case 48: {
-
-              specialFishCount_ = input.readUInt32();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.MoonfinTrialActivityDetailInfoOuterClass.internal_static_MoonfinTrialActivityDetailInfo_descriptor;
@@ -155,7 +95,7 @@ public final class MoonfinTrialActivityDetailInfoOuterClass {
     protected com.google.protobuf.MapField internalGetMapField(
         int number) {
       switch (number) {
-        case 3:
+        case 4:
           return internalGetLevelInfoMap();
         default:
           throw new RuntimeException(
@@ -170,10 +110,10 @@ public final class MoonfinTrialActivityDetailInfoOuterClass {
               emu.grasscutter.net.proto.MoonfinTrialActivityDetailInfoOuterClass.MoonfinTrialActivityDetailInfo.class, emu.grasscutter.net.proto.MoonfinTrialActivityDetailInfoOuterClass.MoonfinTrialActivityDetailInfo.Builder.class);
     }
 
-    public static final int SPECIAL_FISH_COUNT_FIELD_NUMBER = 6;
+    public static final int SPECIAL_FISH_COUNT_FIELD_NUMBER = 1;
     private int specialFishCount_;
     /**
-     * <code>uint32 special_fish_count = 6;</code>
+     * <code>uint32 special_fish_count = 1;</code>
      * @return The specialFishCount.
      */
     @java.lang.Override
@@ -181,7 +121,7 @@ public final class MoonfinTrialActivityDetailInfoOuterClass {
       return specialFishCount_;
     }
 
-    public static final int LEVEL_INFO_MAP_FIELD_NUMBER = 3;
+    public static final int LEVEL_INFO_MAP_FIELD_NUMBER = 4;
     private static final class LevelInfoMapDefaultEntryHolder {
       static final com.google.protobuf.MapEntry<
           java.lang.Integer, emu.grasscutter.net.proto.MoonfinTrialLevelInfoOuterClass.MoonfinTrialLevelInfo> defaultEntry =
@@ -208,7 +148,7 @@ public final class MoonfinTrialActivityDetailInfoOuterClass {
       return internalGetLevelInfoMap().getMap().size();
     }
     /**
-     * <code>map&lt;uint32, .MoonfinTrialLevelInfo&gt; level_info_map = 3;</code>
+     * <code>map&lt;uint32, .MoonfinTrialLevelInfo&gt; level_info_map = 4;</code>
      */
 
     @java.lang.Override
@@ -226,7 +166,7 @@ public final class MoonfinTrialActivityDetailInfoOuterClass {
       return getLevelInfoMapMap();
     }
     /**
-     * <code>map&lt;uint32, .MoonfinTrialLevelInfo&gt; level_info_map = 3;</code>
+     * <code>map&lt;uint32, .MoonfinTrialLevelInfo&gt; level_info_map = 4;</code>
      */
     @java.lang.Override
 
@@ -234,7 +174,7 @@ public final class MoonfinTrialActivityDetailInfoOuterClass {
       return internalGetLevelInfoMap().getMap();
     }
     /**
-     * <code>map&lt;uint32, .MoonfinTrialLevelInfo&gt; level_info_map = 3;</code>
+     * <code>map&lt;uint32, .MoonfinTrialLevelInfo&gt; level_info_map = 4;</code>
      */
     @java.lang.Override
 
@@ -247,7 +187,7 @@ public final class MoonfinTrialActivityDetailInfoOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
-     * <code>map&lt;uint32, .MoonfinTrialLevelInfo&gt; level_info_map = 3;</code>
+     * <code>map&lt;uint32, .MoonfinTrialLevelInfo&gt; level_info_map = 4;</code>
      */
     @java.lang.Override
 
@@ -276,16 +216,16 @@ public final class MoonfinTrialActivityDetailInfoOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (specialFishCount_ != 0) {
+        output.writeUInt32(1, specialFishCount_);
+      }
       com.google.protobuf.GeneratedMessageV3
         .serializeIntegerMapTo(
           output,
           internalGetLevelInfoMap(),
           LevelInfoMapDefaultEntryHolder.defaultEntry,
-          3);
-      if (specialFishCount_ != 0) {
-        output.writeUInt32(6, specialFishCount_);
-      }
-      unknownFields.writeTo(output);
+          4);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -294,6 +234,10 @@ public final class MoonfinTrialActivityDetailInfoOuterClass {
       if (size != -1) return size;
 
       size = 0;
+      if (specialFishCount_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, specialFishCount_);
+      }
       for (java.util.Map.Entry<java.lang.Integer, emu.grasscutter.net.proto.MoonfinTrialLevelInfoOuterClass.MoonfinTrialLevelInfo> entry
            : internalGetLevelInfoMap().getMap().entrySet()) {
         com.google.protobuf.MapEntry<java.lang.Integer, emu.grasscutter.net.proto.MoonfinTrialLevelInfoOuterClass.MoonfinTrialLevelInfo>
@@ -302,13 +246,9 @@ public final class MoonfinTrialActivityDetailInfoOuterClass {
             .setValue(entry.getValue())
             .build();
         size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(3, levelInfoMap__);
+            .computeMessageSize(4, levelInfoMap__);
       }
-      if (specialFishCount_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(6, specialFishCount_);
-      }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -327,7 +267,7 @@ public final class MoonfinTrialActivityDetailInfoOuterClass {
           != other.getSpecialFishCount()) return false;
       if (!internalGetLevelInfoMap().equals(
           other.internalGetLevelInfoMap())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -344,7 +284,7 @@ public final class MoonfinTrialActivityDetailInfoOuterClass {
         hash = (37 * hash) + LEVEL_INFO_MAP_FIELD_NUMBER;
         hash = (53 * hash) + internalGetLevelInfoMap().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -440,10 +380,6 @@ public final class MoonfinTrialActivityDetailInfoOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * Obf: KPPONIEPJGF
-     * </pre>
-     *
      * Protobuf type {@code MoonfinTrialActivityDetailInfo}
      */
     public static final class Builder extends
@@ -459,7 +395,7 @@ public final class MoonfinTrialActivityDetailInfoOuterClass {
       protected com.google.protobuf.MapField internalGetMapField(
           int number) {
         switch (number) {
-          case 3:
+          case 4:
             return internalGetLevelInfoMap();
           default:
             throw new RuntimeException(
@@ -470,7 +406,7 @@ public final class MoonfinTrialActivityDetailInfoOuterClass {
       protected com.google.protobuf.MapField internalGetMutableMapField(
           int number) {
         switch (number) {
-          case 3:
+          case 4:
             return internalGetMutableLevelInfoMap();
           default:
             throw new RuntimeException(
@@ -487,18 +423,13 @@ public final class MoonfinTrialActivityDetailInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.MoonfinTrialActivityDetailInfoOuterClass.MoonfinTrialActivityDetailInfo.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -589,7 +520,7 @@ public final class MoonfinTrialActivityDetailInfoOuterClass {
         }
         internalGetMutableLevelInfoMap().mergeFrom(
             other.internalGetLevelInfoMap());
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -604,24 +535,50 @@ public final class MoonfinTrialActivityDetailInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.MoonfinTrialActivityDetailInfoOuterClass.MoonfinTrialActivityDetailInfo parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                specialFishCount_ = input.readUInt32();
+
+                break;
+              } // case 8
+              case 34: {
+                com.google.protobuf.MapEntry<java.lang.Integer, emu.grasscutter.net.proto.MoonfinTrialLevelInfoOuterClass.MoonfinTrialLevelInfo>
+                levelInfoMap__ = input.readMessage(
+                    LevelInfoMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutableLevelInfoMap().getMutableMap().put(
+                    levelInfoMap__.getKey(), levelInfoMap__.getValue());
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.MoonfinTrialActivityDetailInfoOuterClass.MoonfinTrialActivityDetailInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
 
       private int specialFishCount_ ;
       /**
-       * <code>uint32 special_fish_count = 6;</code>
+       * <code>uint32 special_fish_count = 1;</code>
        * @return The specialFishCount.
        */
       @java.lang.Override
@@ -629,7 +586,7 @@ public final class MoonfinTrialActivityDetailInfoOuterClass {
         return specialFishCount_;
       }
       /**
-       * <code>uint32 special_fish_count = 6;</code>
+       * <code>uint32 special_fish_count = 1;</code>
        * @param value The specialFishCount to set.
        * @return This builder for chaining.
        */
@@ -640,7 +597,7 @@ public final class MoonfinTrialActivityDetailInfoOuterClass {
         return this;
       }
       /**
-       * <code>uint32 special_fish_count = 6;</code>
+       * <code>uint32 special_fish_count = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearSpecialFishCount() {
@@ -677,7 +634,7 @@ public final class MoonfinTrialActivityDetailInfoOuterClass {
         return internalGetLevelInfoMap().getMap().size();
       }
       /**
-       * <code>map&lt;uint32, .MoonfinTrialLevelInfo&gt; level_info_map = 3;</code>
+       * <code>map&lt;uint32, .MoonfinTrialLevelInfo&gt; level_info_map = 4;</code>
        */
 
       @java.lang.Override
@@ -695,7 +652,7 @@ public final class MoonfinTrialActivityDetailInfoOuterClass {
         return getLevelInfoMapMap();
       }
       /**
-       * <code>map&lt;uint32, .MoonfinTrialLevelInfo&gt; level_info_map = 3;</code>
+       * <code>map&lt;uint32, .MoonfinTrialLevelInfo&gt; level_info_map = 4;</code>
        */
       @java.lang.Override
 
@@ -703,7 +660,7 @@ public final class MoonfinTrialActivityDetailInfoOuterClass {
         return internalGetLevelInfoMap().getMap();
       }
       /**
-       * <code>map&lt;uint32, .MoonfinTrialLevelInfo&gt; level_info_map = 3;</code>
+       * <code>map&lt;uint32, .MoonfinTrialLevelInfo&gt; level_info_map = 4;</code>
        */
       @java.lang.Override
 
@@ -716,7 +673,7 @@ public final class MoonfinTrialActivityDetailInfoOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
-       * <code>map&lt;uint32, .MoonfinTrialLevelInfo&gt; level_info_map = 3;</code>
+       * <code>map&lt;uint32, .MoonfinTrialLevelInfo&gt; level_info_map = 4;</code>
        */
       @java.lang.Override
 
@@ -737,7 +694,7 @@ public final class MoonfinTrialActivityDetailInfoOuterClass {
         return this;
       }
       /**
-       * <code>map&lt;uint32, .MoonfinTrialLevelInfo&gt; level_info_map = 3;</code>
+       * <code>map&lt;uint32, .MoonfinTrialLevelInfo&gt; level_info_map = 4;</code>
        */
 
       public Builder removeLevelInfoMap(
@@ -756,19 +713,22 @@ public final class MoonfinTrialActivityDetailInfoOuterClass {
         return internalGetMutableLevelInfoMap().getMutableMap();
       }
       /**
-       * <code>map&lt;uint32, .MoonfinTrialLevelInfo&gt; level_info_map = 3;</code>
+       * <code>map&lt;uint32, .MoonfinTrialLevelInfo&gt; level_info_map = 4;</code>
        */
       public Builder putLevelInfoMap(
           int key,
           emu.grasscutter.net.proto.MoonfinTrialLevelInfoOuterClass.MoonfinTrialLevelInfo value) {
         
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableLevelInfoMap().getMutableMap()
             .put(key, value);
         return this;
       }
       /**
-       * <code>map&lt;uint32, .MoonfinTrialLevelInfo&gt; level_info_map = 3;</code>
+       * <code>map&lt;uint32, .MoonfinTrialLevelInfo&gt; level_info_map = 4;</code>
        */
 
       public Builder putAllLevelInfoMap(
@@ -810,7 +770,18 @@ public final class MoonfinTrialActivityDetailInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new MoonfinTrialActivityDetailInfo(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -852,7 +823,7 @@ public final class MoonfinTrialActivityDetailInfoOuterClass {
       "\n$MoonfinTrialActivityDetailInfo.proto\032\033" +
       "MoonfinTrialLevelInfo.proto\"\324\001\n\036MoonfinT" +
       "rialActivityDetailInfo\022\032\n\022special_fish_c" +
-      "ount\030\006 \001(\r\022I\n\016level_info_map\030\003 \003(\01321.Moo" +
+      "ount\030\001 \001(\r\022I\n\016level_info_map\030\004 \003(\01321.Moo" +
       "nfinTrialActivityDetailInfo.LevelInfoMap" +
       "Entry\032K\n\021LevelInfoMapEntry\022\013\n\003key\030\001 \001(\r\022" +
       "%\n\005value\030\002 \001(\0132\026.MoonfinTrialLevelInfo:\002" +

@@ -212,6 +212,7 @@ public class Player implements DatabaseObject<Player>, PlayerHook, FieldFetch {
     @Deprecated
     @SuppressWarnings({"rawtypes", "unchecked"}) // Morphia only!
     public Player() {
+        this.isDialog = false;
         this.inventory = new Inventory(this);
         this.avatars = new AvatarStorage(this);
         this.friendsList = new FriendsList(this);

@@ -19,6 +19,12 @@ public final class AvatarPromoteReqOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <code>int32 retcode = 2;</code>
+     * @return The retcode.
+     */
+    int getRetcode();
+
+    /**
      * <code>uint64 guid = 11;</code>
      * @return The guid.
      */
@@ -26,9 +32,7 @@ public final class AvatarPromoteReqOuterClass {
   }
   /**
    * <pre>
-   * 4.7.0
-   * CmdId: 20441
-   * GIOBHMNCNGA
+   * CmdId: 28642
    * </pre>
    *
    * Protobuf type {@code AvatarPromoteReq}
@@ -70,6 +74,17 @@ public final class AvatarPromoteReqOuterClass {
               emu.grasscutter.net.proto.AvatarPromoteReqOuterClass.AvatarPromoteReq.class, emu.grasscutter.net.proto.AvatarPromoteReqOuterClass.AvatarPromoteReq.Builder.class);
     }
 
+    public static final int RETCODE_FIELD_NUMBER = 2;
+    private int retcode_;
+    /**
+     * <code>int32 retcode = 2;</code>
+     * @return The retcode.
+     */
+    @java.lang.Override
+    public int getRetcode() {
+      return retcode_;
+    }
+
     public static final int GUID_FIELD_NUMBER = 11;
     private long guid_;
     /**
@@ -95,6 +110,9 @@ public final class AvatarPromoteReqOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (retcode_ != 0) {
+        output.writeInt32(2, retcode_);
+      }
       if (guid_ != 0L) {
         output.writeUInt64(11, guid_);
       }
@@ -107,6 +125,10 @@ public final class AvatarPromoteReqOuterClass {
       if (size != -1) return size;
 
       size = 0;
+      if (retcode_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, retcode_);
+      }
       if (guid_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(11, guid_);
@@ -126,6 +148,8 @@ public final class AvatarPromoteReqOuterClass {
       }
       emu.grasscutter.net.proto.AvatarPromoteReqOuterClass.AvatarPromoteReq other = (emu.grasscutter.net.proto.AvatarPromoteReqOuterClass.AvatarPromoteReq) obj;
 
+      if (getRetcode()
+          != other.getRetcode()) return false;
       if (getGuid()
           != other.getGuid()) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -139,6 +163,8 @@ public final class AvatarPromoteReqOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + RETCODE_FIELD_NUMBER;
+      hash = (53 * hash) + getRetcode();
       hash = (37 * hash) + GUID_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getGuid());
@@ -239,9 +265,7 @@ public final class AvatarPromoteReqOuterClass {
     }
     /**
      * <pre>
-     * 4.7.0
-     * CmdId: 20441
-     * GIOBHMNCNGA
+     * CmdId: 28642
      * </pre>
      *
      * Protobuf type {@code AvatarPromoteReq}
@@ -276,6 +300,8 @@ public final class AvatarPromoteReqOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        retcode_ = 0;
+
         guid_ = 0L;
 
         return this;
@@ -304,6 +330,7 @@ public final class AvatarPromoteReqOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.AvatarPromoteReqOuterClass.AvatarPromoteReq buildPartial() {
         emu.grasscutter.net.proto.AvatarPromoteReqOuterClass.AvatarPromoteReq result = new emu.grasscutter.net.proto.AvatarPromoteReqOuterClass.AvatarPromoteReq(this);
+        result.retcode_ = retcode_;
         result.guid_ = guid_;
         onBuilt();
         return result;
@@ -353,6 +380,9 @@ public final class AvatarPromoteReqOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.AvatarPromoteReqOuterClass.AvatarPromoteReq other) {
         if (other == emu.grasscutter.net.proto.AvatarPromoteReqOuterClass.AvatarPromoteReq.getDefaultInstance()) return this;
+        if (other.getRetcode() != 0) {
+          setRetcode(other.getRetcode());
+        }
         if (other.getGuid() != 0L) {
           setGuid(other.getGuid());
         }
@@ -382,6 +412,11 @@ public final class AvatarPromoteReqOuterClass {
               case 0:
                 done = true;
                 break;
+              case 16: {
+                retcode_ = input.readInt32();
+
+                break;
+              } // case 16
               case 88: {
                 guid_ = input.readUInt64();
 
@@ -400,6 +435,37 @@ public final class AvatarPromoteReqOuterClass {
         } finally {
           onChanged();
         } // finally
+        return this;
+      }
+
+      private int retcode_ ;
+      /**
+       * <code>int32 retcode = 2;</code>
+       * @return The retcode.
+       */
+      @java.lang.Override
+      public int getRetcode() {
+        return retcode_;
+      }
+      /**
+       * <code>int32 retcode = 2;</code>
+       * @param value The retcode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRetcode(int value) {
+        
+        retcode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 retcode = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRetcode() {
+        
+        retcode_ = 0;
+        onChanged();
         return this;
       }
 
@@ -511,9 +577,9 @@ public final class AvatarPromoteReqOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\026AvatarPromoteReq.proto\" \n\020AvatarPromot" +
-      "eReq\022\014\n\004guid\030\013 \001(\004B\033\n\031emu.grasscutter.ne" +
-      "t.protob\006proto3"
+      "\n\026AvatarPromoteReq.proto\"1\n\020AvatarPromot" +
+      "eReq\022\017\n\007retcode\030\002 \001(\005\022\014\n\004guid\030\013 \001(\004B\033\n\031e" +
+      "mu.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -524,7 +590,7 @@ public final class AvatarPromoteReqOuterClass {
     internal_static_AvatarPromoteReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_AvatarPromoteReq_descriptor,
-        new java.lang.String[] { "Guid", });
+        new java.lang.String[] { "Retcode", "Guid", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

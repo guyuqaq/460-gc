@@ -19,24 +19,23 @@ public final class AsterMidInfoNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.AsterMidDetailInfo info = 6;</code>
+     * <code>.AsterMidDetailInfo info = 12;</code>
      * @return Whether the info field is set.
      */
     boolean hasInfo();
     /**
-     * <code>.AsterMidDetailInfo info = 6;</code>
+     * <code>.AsterMidDetailInfo info = 12;</code>
      * @return The info.
      */
     emu.grasscutter.net.proto.AsterMidDetailInfoOuterClass.AsterMidDetailInfo getInfo();
     /**
-     * <code>.AsterMidDetailInfo info = 6;</code>
+     * <code>.AsterMidDetailInfo info = 12;</code>
      */
     emu.grasscutter.net.proto.AsterMidDetailInfoOuterClass.AsterMidDetailInfoOrBuilder getInfoOrBuilder();
   }
   /**
    * <pre>
-   * CmdId: 6512
-   * Obf: HJNPLOKNKDD
+   * CmdId: 9450
    * </pre>
    *
    * Protobuf type {@code AsterMidInfoNotify}
@@ -65,56 +64,6 @@ public final class AsterMidInfoNotifyOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private AsterMidInfoNotify(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 50: {
-              emu.grasscutter.net.proto.AsterMidDetailInfoOuterClass.AsterMidDetailInfo.Builder subBuilder = null;
-              if (info_ != null) {
-                subBuilder = info_.toBuilder();
-              }
-              info_ = input.readMessage(emu.grasscutter.net.proto.AsterMidDetailInfoOuterClass.AsterMidDetailInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(info_);
-                info_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.AsterMidInfoNotifyOuterClass.internal_static_AsterMidInfoNotify_descriptor;
@@ -128,10 +77,10 @@ public final class AsterMidInfoNotifyOuterClass {
               emu.grasscutter.net.proto.AsterMidInfoNotifyOuterClass.AsterMidInfoNotify.class, emu.grasscutter.net.proto.AsterMidInfoNotifyOuterClass.AsterMidInfoNotify.Builder.class);
     }
 
-    public static final int INFO_FIELD_NUMBER = 6;
+    public static final int INFO_FIELD_NUMBER = 12;
     private emu.grasscutter.net.proto.AsterMidDetailInfoOuterClass.AsterMidDetailInfo info_;
     /**
-     * <code>.AsterMidDetailInfo info = 6;</code>
+     * <code>.AsterMidDetailInfo info = 12;</code>
      * @return Whether the info field is set.
      */
     @java.lang.Override
@@ -139,7 +88,7 @@ public final class AsterMidInfoNotifyOuterClass {
       return info_ != null;
     }
     /**
-     * <code>.AsterMidDetailInfo info = 6;</code>
+     * <code>.AsterMidDetailInfo info = 12;</code>
      * @return The info.
      */
     @java.lang.Override
@@ -147,7 +96,7 @@ public final class AsterMidInfoNotifyOuterClass {
       return info_ == null ? emu.grasscutter.net.proto.AsterMidDetailInfoOuterClass.AsterMidDetailInfo.getDefaultInstance() : info_;
     }
     /**
-     * <code>.AsterMidDetailInfo info = 6;</code>
+     * <code>.AsterMidDetailInfo info = 12;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.AsterMidDetailInfoOuterClass.AsterMidDetailInfoOrBuilder getInfoOrBuilder() {
@@ -169,9 +118,9 @@ public final class AsterMidInfoNotifyOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (info_ != null) {
-        output.writeMessage(6, getInfo());
+        output.writeMessage(12, getInfo());
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -182,9 +131,9 @@ public final class AsterMidInfoNotifyOuterClass {
       size = 0;
       if (info_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(6, getInfo());
+          .computeMessageSize(12, getInfo());
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -204,7 +153,7 @@ public final class AsterMidInfoNotifyOuterClass {
         if (!getInfo()
             .equals(other.getInfo())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -219,7 +168,7 @@ public final class AsterMidInfoNotifyOuterClass {
         hash = (37 * hash) + INFO_FIELD_NUMBER;
         hash = (53 * hash) + getInfo().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -316,8 +265,7 @@ public final class AsterMidInfoNotifyOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 6512
-     * Obf: HJNPLOKNKDD
+     * CmdId: 9450
      * </pre>
      *
      * Protobuf type {@code AsterMidInfoNotify}
@@ -341,18 +289,13 @@ public final class AsterMidInfoNotifyOuterClass {
 
       // Construct using emu.grasscutter.net.proto.AsterMidInfoNotifyOuterClass.AsterMidInfoNotify.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -445,7 +388,7 @@ public final class AsterMidInfoNotifyOuterClass {
         if (other.hasInfo()) {
           mergeInfo(other.getInfo());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -460,17 +403,37 @@ public final class AsterMidInfoNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.AsterMidInfoNotifyOuterClass.AsterMidInfoNotify parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 98: {
+                input.readMessage(
+                    getInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 98
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.AsterMidInfoNotifyOuterClass.AsterMidInfoNotify) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -478,14 +441,14 @@ public final class AsterMidInfoNotifyOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.AsterMidDetailInfoOuterClass.AsterMidDetailInfo, emu.grasscutter.net.proto.AsterMidDetailInfoOuterClass.AsterMidDetailInfo.Builder, emu.grasscutter.net.proto.AsterMidDetailInfoOuterClass.AsterMidDetailInfoOrBuilder> infoBuilder_;
       /**
-       * <code>.AsterMidDetailInfo info = 6;</code>
+       * <code>.AsterMidDetailInfo info = 12;</code>
        * @return Whether the info field is set.
        */
       public boolean hasInfo() {
         return infoBuilder_ != null || info_ != null;
       }
       /**
-       * <code>.AsterMidDetailInfo info = 6;</code>
+       * <code>.AsterMidDetailInfo info = 12;</code>
        * @return The info.
        */
       public emu.grasscutter.net.proto.AsterMidDetailInfoOuterClass.AsterMidDetailInfo getInfo() {
@@ -496,7 +459,7 @@ public final class AsterMidInfoNotifyOuterClass {
         }
       }
       /**
-       * <code>.AsterMidDetailInfo info = 6;</code>
+       * <code>.AsterMidDetailInfo info = 12;</code>
        */
       public Builder setInfo(emu.grasscutter.net.proto.AsterMidDetailInfoOuterClass.AsterMidDetailInfo value) {
         if (infoBuilder_ == null) {
@@ -512,7 +475,7 @@ public final class AsterMidInfoNotifyOuterClass {
         return this;
       }
       /**
-       * <code>.AsterMidDetailInfo info = 6;</code>
+       * <code>.AsterMidDetailInfo info = 12;</code>
        */
       public Builder setInfo(
           emu.grasscutter.net.proto.AsterMidDetailInfoOuterClass.AsterMidDetailInfo.Builder builderForValue) {
@@ -526,7 +489,7 @@ public final class AsterMidInfoNotifyOuterClass {
         return this;
       }
       /**
-       * <code>.AsterMidDetailInfo info = 6;</code>
+       * <code>.AsterMidDetailInfo info = 12;</code>
        */
       public Builder mergeInfo(emu.grasscutter.net.proto.AsterMidDetailInfoOuterClass.AsterMidDetailInfo value) {
         if (infoBuilder_ == null) {
@@ -544,7 +507,7 @@ public final class AsterMidInfoNotifyOuterClass {
         return this;
       }
       /**
-       * <code>.AsterMidDetailInfo info = 6;</code>
+       * <code>.AsterMidDetailInfo info = 12;</code>
        */
       public Builder clearInfo() {
         if (infoBuilder_ == null) {
@@ -558,7 +521,7 @@ public final class AsterMidInfoNotifyOuterClass {
         return this;
       }
       /**
-       * <code>.AsterMidDetailInfo info = 6;</code>
+       * <code>.AsterMidDetailInfo info = 12;</code>
        */
       public emu.grasscutter.net.proto.AsterMidDetailInfoOuterClass.AsterMidDetailInfo.Builder getInfoBuilder() {
         
@@ -566,7 +529,7 @@ public final class AsterMidInfoNotifyOuterClass {
         return getInfoFieldBuilder().getBuilder();
       }
       /**
-       * <code>.AsterMidDetailInfo info = 6;</code>
+       * <code>.AsterMidDetailInfo info = 12;</code>
        */
       public emu.grasscutter.net.proto.AsterMidDetailInfoOuterClass.AsterMidDetailInfoOrBuilder getInfoOrBuilder() {
         if (infoBuilder_ != null) {
@@ -577,7 +540,7 @@ public final class AsterMidInfoNotifyOuterClass {
         }
       }
       /**
-       * <code>.AsterMidDetailInfo info = 6;</code>
+       * <code>.AsterMidDetailInfo info = 12;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.AsterMidDetailInfoOuterClass.AsterMidDetailInfo, emu.grasscutter.net.proto.AsterMidDetailInfoOuterClass.AsterMidDetailInfo.Builder, emu.grasscutter.net.proto.AsterMidDetailInfoOuterClass.AsterMidDetailInfoOrBuilder> 
@@ -625,7 +588,18 @@ public final class AsterMidInfoNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new AsterMidInfoNotify(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -661,7 +635,7 @@ public final class AsterMidInfoNotifyOuterClass {
     java.lang.String[] descriptorData = {
       "\n\030AsterMidInfoNotify.proto\032\030AsterMidDeta" +
       "ilInfo.proto\"7\n\022AsterMidInfoNotify\022!\n\004in" +
-      "fo\030\006 \001(\0132\023.AsterMidDetailInfoB\033\n\031emu.gra" +
+      "fo\030\014 \001(\0132\023.AsterMidDetailInfoB\033\n\031emu.gra" +
       "sscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

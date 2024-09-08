@@ -37,6 +37,10 @@ public final class SetPlayerBornDataReqOuterClass {
     int getAvatarId();
   }
   /**
+   * <pre>
+   * CmdId: 25726
+   * </pre>
+   *
    * Protobuf type {@code SetPlayerBornDataReq}
    */
   public static final class SetPlayerBornDataReq extends
@@ -292,6 +296,10 @@ public final class SetPlayerBornDataReqOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * CmdId: 25726
+     * </pre>
+     *
      * Protobuf type {@code SetPlayerBornDataReq}
      */
     public static final class Builder extends

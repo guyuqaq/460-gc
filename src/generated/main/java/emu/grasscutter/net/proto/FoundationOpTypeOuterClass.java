@@ -15,10 +15,6 @@ public final class FoundationOpTypeOuterClass {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   /**
-   * <pre>
-   * Obf: LJLDCFOCBKF
-   * </pre>
-   *
    * Protobuf enum {@code FoundationOpType}
    */
   public enum FoundationOpType

@@ -162,169 +162,6 @@ public final class QuestOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private Quest(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-
-              questId_ = input.readUInt32();
-              break;
-            }
-            case 16: {
-
-              state_ = input.readUInt32();
-              break;
-            }
-            case 32: {
-
-              startTime_ = input.readUInt32();
-              break;
-            }
-            case 40: {
-
-              isRandom_ = input.readBool();
-              break;
-            }
-            case 48: {
-
-              parentQuestId_ = input.readUInt32();
-              break;
-            }
-            case 56: {
-
-              questConfigId_ = input.readUInt32();
-              break;
-            }
-            case 64: {
-
-              startGameTime_ = input.readUInt32();
-              break;
-            }
-            case 72: {
-
-              acceptTime_ = input.readUInt32();
-              break;
-            }
-            case 80: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                finishProgressList_ = newIntList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              finishProgressList_.addInt(input.readUInt32());
-              break;
-            }
-            case 82: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
-                finishProgressList_ = newIntList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                finishProgressList_.addInt(input.readUInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            case 88: {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                failProgressList_ = newIntList();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              failProgressList_.addInt(input.readUInt32());
-              break;
-            }
-            case 90: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000002) != 0) && input.getBytesUntilLimit() > 0) {
-                failProgressList_ = newIntList();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                failProgressList_.addInt(input.readUInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            case 96: {
-              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-                mLHFBAFCKIP_ = newIntList();
-                mutable_bitField0_ |= 0x00000004;
-              }
-              mLHFBAFCKIP_.addInt(input.readUInt32());
-              break;
-            }
-            case 98: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000004) != 0) && input.getBytesUntilLimit() > 0) {
-                mLHFBAFCKIP_ = newIntList();
-                mutable_bitField0_ |= 0x00000004;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                mLHFBAFCKIP_.addInt(input.readUInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            case 106: {
-              emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfo.Builder subBuilder = null;
-              if (lackingResourcesInfo_ != null) {
-                subBuilder = lackingResourcesInfo_.toBuilder();
-              }
-              lackingResourcesInfo_ = input.readMessage(emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(lackingResourcesInfo_);
-                lackingResourcesInfo_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          finishProgressList_.makeImmutable(); // C
-        }
-        if (((mutable_bitField0_ & 0x00000002) != 0)) {
-          failProgressList_.makeImmutable(); // C
-        }
-        if (((mutable_bitField0_ & 0x00000004) != 0)) {
-          mLHFBAFCKIP_.makeImmutable(); // C
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.QuestOuterClass.internal_static_Quest_descriptor;
@@ -599,7 +436,7 @@ public final class QuestOuterClass {
       if (lackingResourcesInfo_ != null) {
         output.writeMessage(13, getLackingResourcesInfo());
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -686,7 +523,7 @@ public final class QuestOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(13, getLackingResourcesInfo());
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -728,7 +565,7 @@ public final class QuestOuterClass {
         if (!getLackingResourcesInfo()
             .equals(other.getLackingResourcesInfo())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -772,7 +609,7 @@ public final class QuestOuterClass {
         hash = (37 * hash) + LACKING_RESOURCES_INFO_FIELD_NUMBER;
         hash = (53 * hash) + getLackingResourcesInfo().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -889,18 +726,13 @@ public final class QuestOuterClass {
 
       // Construct using emu.grasscutter.net.proto.QuestOuterClass.Quest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1093,7 +925,7 @@ public final class QuestOuterClass {
         if (other.hasLackingResourcesInfo()) {
           mergeLackingResourcesInfo(other.getLackingResourcesInfo());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -1108,17 +940,125 @@ public final class QuestOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.QuestOuterClass.Quest parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                questId_ = input.readUInt32();
+
+                break;
+              } // case 8
+              case 16: {
+                state_ = input.readUInt32();
+
+                break;
+              } // case 16
+              case 32: {
+                startTime_ = input.readUInt32();
+
+                break;
+              } // case 32
+              case 40: {
+                isRandom_ = input.readBool();
+
+                break;
+              } // case 40
+              case 48: {
+                parentQuestId_ = input.readUInt32();
+
+                break;
+              } // case 48
+              case 56: {
+                questConfigId_ = input.readUInt32();
+
+                break;
+              } // case 56
+              case 64: {
+                startGameTime_ = input.readUInt32();
+
+                break;
+              } // case 64
+              case 72: {
+                acceptTime_ = input.readUInt32();
+
+                break;
+              } // case 72
+              case 80: {
+                int v = input.readUInt32();
+                ensureFinishProgressListIsMutable();
+                finishProgressList_.addInt(v);
+                break;
+              } // case 80
+              case 82: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureFinishProgressListIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  finishProgressList_.addInt(input.readUInt32());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 82
+              case 88: {
+                int v = input.readUInt32();
+                ensureFailProgressListIsMutable();
+                failProgressList_.addInt(v);
+                break;
+              } // case 88
+              case 90: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureFailProgressListIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  failProgressList_.addInt(input.readUInt32());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 90
+              case 96: {
+                int v = input.readUInt32();
+                ensureMLHFBAFCKIPIsMutable();
+                mLHFBAFCKIP_.addInt(v);
+                break;
+              } // case 96
+              case 98: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureMLHFBAFCKIPIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  mLHFBAFCKIP_.addInt(input.readUInt32());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 98
+              case 106: {
+                input.readMessage(
+                    getLackingResourcesInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 106
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.QuestOuterClass.Quest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -1759,7 +1699,18 @@ public final class QuestOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Quest(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

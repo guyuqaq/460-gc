@@ -15,10 +15,6 @@ public final class RogueDiaryAvatarDisableStatusOuterClass {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   /**
-   * <pre>
-   * Obf: LPHEHBBIBOG
-   * </pre>
-   *
    * Protobuf enum {@code RogueDiaryAvatarDisableStatus}
    */
   public enum RogueDiaryAvatarDisableStatus

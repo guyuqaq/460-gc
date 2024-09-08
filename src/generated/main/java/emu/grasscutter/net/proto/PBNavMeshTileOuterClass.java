@@ -95,68 +95,6 @@ public final class PBNavMeshTileOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private PBNavMeshTile(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 18: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                polys_ = new java.util.ArrayList<emu.grasscutter.net.proto.PBNavMeshPolyOuterClass.PBNavMeshPoly>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              polys_.add(
-                  input.readMessage(emu.grasscutter.net.proto.PBNavMeshPolyOuterClass.PBNavMeshPoly.parser(), extensionRegistry));
-              break;
-            }
-            case 114: {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                vecs_ = new java.util.ArrayList<emu.grasscutter.net.proto.VectorOuterClass.Vector>();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              vecs_.add(
-                  input.readMessage(emu.grasscutter.net.proto.VectorOuterClass.Vector.parser(), extensionRegistry));
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          polys_ = java.util.Collections.unmodifiableList(polys_);
-        }
-        if (((mutable_bitField0_ & 0x00000002) != 0)) {
-          vecs_ = java.util.Collections.unmodifiableList(vecs_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.PBNavMeshTileOuterClass.internal_static_PBNavMeshTile_descriptor;
@@ -270,7 +208,7 @@ public final class PBNavMeshTileOuterClass {
       for (int i = 0; i < vecs_.size(); i++) {
         output.writeMessage(14, vecs_.get(i));
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -287,7 +225,7 @@ public final class PBNavMeshTileOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(14, vecs_.get(i));
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -306,7 +244,7 @@ public final class PBNavMeshTileOuterClass {
           .equals(other.getPolysList())) return false;
       if (!getVecsList()
           .equals(other.getVecsList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -325,7 +263,7 @@ public final class PBNavMeshTileOuterClass {
         hash = (37 * hash) + VECS_FIELD_NUMBER;
         hash = (53 * hash) + getVecsList().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -442,36 +380,31 @@ public final class PBNavMeshTileOuterClass {
 
       // Construct using emu.grasscutter.net.proto.PBNavMeshTileOuterClass.PBNavMeshTile.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPolysFieldBuilder();
-          getVecsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
         if (polysBuilder_ == null) {
           polys_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          polys_ = null;
           polysBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000001);
         if (vecsBuilder_ == null) {
           vecs_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
+          vecs_ = null;
           vecsBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -617,7 +550,7 @@ public final class PBNavMeshTileOuterClass {
             }
           }
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -632,17 +565,56 @@ public final class PBNavMeshTileOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.PBNavMeshTileOuterClass.PBNavMeshTile parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 18: {
+                emu.grasscutter.net.proto.PBNavMeshPolyOuterClass.PBNavMeshPoly m =
+                    input.readMessage(
+                        emu.grasscutter.net.proto.PBNavMeshPolyOuterClass.PBNavMeshPoly.parser(),
+                        extensionRegistry);
+                if (polysBuilder_ == null) {
+                  ensurePolysIsMutable();
+                  polys_.add(m);
+                } else {
+                  polysBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              case 114: {
+                emu.grasscutter.net.proto.VectorOuterClass.Vector m =
+                    input.readMessage(
+                        emu.grasscutter.net.proto.VectorOuterClass.Vector.parser(),
+                        extensionRegistry);
+                if (vecsBuilder_ == null) {
+                  ensureVecsIsMutable();
+                  vecs_.add(m);
+                } else {
+                  vecsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 114
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.PBNavMeshTileOuterClass.PBNavMeshTile) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -1159,7 +1131,18 @@ public final class PBNavMeshTileOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new PBNavMeshTile(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

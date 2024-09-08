@@ -19,40 +19,38 @@ public final class PlayerRechargeDataNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 card_product_remain_days = 10;</code>
-     * @return The cardProductRemainDays.
-     */
-    int getCardProductRemainDays();
-
-    /**
-     * <code>repeated .ProductPriceTier product_price_tier_list = 14;</code>
+     * <code>repeated .ProductPriceTier product_price_tier_list = 6;</code>
      */
     java.util.List<emu.grasscutter.net.proto.ProductPriceTierOuterClass.ProductPriceTier> 
         getProductPriceTierListList();
     /**
-     * <code>repeated .ProductPriceTier product_price_tier_list = 14;</code>
+     * <code>repeated .ProductPriceTier product_price_tier_list = 6;</code>
      */
     emu.grasscutter.net.proto.ProductPriceTierOuterClass.ProductPriceTier getProductPriceTierList(int index);
     /**
-     * <code>repeated .ProductPriceTier product_price_tier_list = 14;</code>
+     * <code>repeated .ProductPriceTier product_price_tier_list = 6;</code>
      */
     int getProductPriceTierListCount();
     /**
-     * <code>repeated .ProductPriceTier product_price_tier_list = 14;</code>
+     * <code>repeated .ProductPriceTier product_price_tier_list = 6;</code>
      */
     java.util.List<? extends emu.grasscutter.net.proto.ProductPriceTierOuterClass.ProductPriceTierOrBuilder> 
         getProductPriceTierListOrBuilderList();
     /**
-     * <code>repeated .ProductPriceTier product_price_tier_list = 14;</code>
+     * <code>repeated .ProductPriceTier product_price_tier_list = 6;</code>
      */
     emu.grasscutter.net.proto.ProductPriceTierOuterClass.ProductPriceTierOrBuilder getProductPriceTierListOrBuilder(
         int index);
+
+    /**
+     * <code>uint32 card_product_remain_days = 9;</code>
+     * @return The cardProductRemainDays.
+     */
+    int getCardProductRemainDays();
   }
   /**
    * <pre>
-   * CmdId: 20372
-   * Version: 4.6.0
-   * Obfs: FPNDLFEOEFN
+   * CmdId: 8039
    * </pre>
    *
    * Protobuf type {@code PlayerRechargeDataNotify}
@@ -82,61 +80,6 @@ public final class PlayerRechargeDataNotifyOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private PlayerRechargeDataNotify(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 80: {
-
-              cardProductRemainDays_ = input.readUInt32();
-              break;
-            }
-            case 114: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                productPriceTierList_ = new java.util.ArrayList<emu.grasscutter.net.proto.ProductPriceTierOuterClass.ProductPriceTier>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              productPriceTierList_.add(
-                  input.readMessage(emu.grasscutter.net.proto.ProductPriceTierOuterClass.ProductPriceTier.parser(), extensionRegistry));
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          productPriceTierList_ = java.util.Collections.unmodifiableList(productPriceTierList_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.PlayerRechargeDataNotifyOuterClass.internal_static_PlayerRechargeDataNotify_descriptor;
@@ -150,28 +93,17 @@ public final class PlayerRechargeDataNotifyOuterClass {
               emu.grasscutter.net.proto.PlayerRechargeDataNotifyOuterClass.PlayerRechargeDataNotify.class, emu.grasscutter.net.proto.PlayerRechargeDataNotifyOuterClass.PlayerRechargeDataNotify.Builder.class);
     }
 
-    public static final int CARD_PRODUCT_REMAIN_DAYS_FIELD_NUMBER = 10;
-    private int cardProductRemainDays_;
-    /**
-     * <code>uint32 card_product_remain_days = 10;</code>
-     * @return The cardProductRemainDays.
-     */
-    @java.lang.Override
-    public int getCardProductRemainDays() {
-      return cardProductRemainDays_;
-    }
-
-    public static final int PRODUCT_PRICE_TIER_LIST_FIELD_NUMBER = 14;
+    public static final int PRODUCT_PRICE_TIER_LIST_FIELD_NUMBER = 6;
     private java.util.List<emu.grasscutter.net.proto.ProductPriceTierOuterClass.ProductPriceTier> productPriceTierList_;
     /**
-     * <code>repeated .ProductPriceTier product_price_tier_list = 14;</code>
+     * <code>repeated .ProductPriceTier product_price_tier_list = 6;</code>
      */
     @java.lang.Override
     public java.util.List<emu.grasscutter.net.proto.ProductPriceTierOuterClass.ProductPriceTier> getProductPriceTierListList() {
       return productPriceTierList_;
     }
     /**
-     * <code>repeated .ProductPriceTier product_price_tier_list = 14;</code>
+     * <code>repeated .ProductPriceTier product_price_tier_list = 6;</code>
      */
     @java.lang.Override
     public java.util.List<? extends emu.grasscutter.net.proto.ProductPriceTierOuterClass.ProductPriceTierOrBuilder> 
@@ -179,26 +111,37 @@ public final class PlayerRechargeDataNotifyOuterClass {
       return productPriceTierList_;
     }
     /**
-     * <code>repeated .ProductPriceTier product_price_tier_list = 14;</code>
+     * <code>repeated .ProductPriceTier product_price_tier_list = 6;</code>
      */
     @java.lang.Override
     public int getProductPriceTierListCount() {
       return productPriceTierList_.size();
     }
     /**
-     * <code>repeated .ProductPriceTier product_price_tier_list = 14;</code>
+     * <code>repeated .ProductPriceTier product_price_tier_list = 6;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.ProductPriceTierOuterClass.ProductPriceTier getProductPriceTierList(int index) {
       return productPriceTierList_.get(index);
     }
     /**
-     * <code>repeated .ProductPriceTier product_price_tier_list = 14;</code>
+     * <code>repeated .ProductPriceTier product_price_tier_list = 6;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.ProductPriceTierOuterClass.ProductPriceTierOrBuilder getProductPriceTierListOrBuilder(
         int index) {
       return productPriceTierList_.get(index);
+    }
+
+    public static final int CARD_PRODUCT_REMAIN_DAYS_FIELD_NUMBER = 9;
+    private int cardProductRemainDays_;
+    /**
+     * <code>uint32 card_product_remain_days = 9;</code>
+     * @return The cardProductRemainDays.
+     */
+    @java.lang.Override
+    public int getCardProductRemainDays() {
+      return cardProductRemainDays_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -215,13 +158,13 @@ public final class PlayerRechargeDataNotifyOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (cardProductRemainDays_ != 0) {
-        output.writeUInt32(10, cardProductRemainDays_);
-      }
       for (int i = 0; i < productPriceTierList_.size(); i++) {
-        output.writeMessage(14, productPriceTierList_.get(i));
+        output.writeMessage(6, productPriceTierList_.get(i));
       }
-      unknownFields.writeTo(output);
+      if (cardProductRemainDays_ != 0) {
+        output.writeUInt32(9, cardProductRemainDays_);
+      }
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -230,15 +173,15 @@ public final class PlayerRechargeDataNotifyOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (cardProductRemainDays_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(10, cardProductRemainDays_);
-      }
       for (int i = 0; i < productPriceTierList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(14, productPriceTierList_.get(i));
+          .computeMessageSize(6, productPriceTierList_.get(i));
       }
-      size += unknownFields.getSerializedSize();
+      if (cardProductRemainDays_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(9, cardProductRemainDays_);
+      }
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -253,11 +196,11 @@ public final class PlayerRechargeDataNotifyOuterClass {
       }
       emu.grasscutter.net.proto.PlayerRechargeDataNotifyOuterClass.PlayerRechargeDataNotify other = (emu.grasscutter.net.proto.PlayerRechargeDataNotifyOuterClass.PlayerRechargeDataNotify) obj;
 
-      if (getCardProductRemainDays()
-          != other.getCardProductRemainDays()) return false;
       if (!getProductPriceTierListList()
           .equals(other.getProductPriceTierListList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (getCardProductRemainDays()
+          != other.getCardProductRemainDays()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -268,13 +211,13 @@ public final class PlayerRechargeDataNotifyOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + CARD_PRODUCT_REMAIN_DAYS_FIELD_NUMBER;
-      hash = (53 * hash) + getCardProductRemainDays();
       if (getProductPriceTierListCount() > 0) {
         hash = (37 * hash) + PRODUCT_PRICE_TIER_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getProductPriceTierListList().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (37 * hash) + CARD_PRODUCT_REMAIN_DAYS_FIELD_NUMBER;
+      hash = (53 * hash) + getCardProductRemainDays();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -371,9 +314,7 @@ public final class PlayerRechargeDataNotifyOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 20372
-     * Version: 4.6.0
-     * Obfs: FPNDLFEOEFN
+     * CmdId: 8039
      * </pre>
      *
      * Protobuf type {@code PlayerRechargeDataNotify}
@@ -397,31 +338,26 @@ public final class PlayerRechargeDataNotifyOuterClass {
 
       // Construct using emu.grasscutter.net.proto.PlayerRechargeDataNotifyOuterClass.PlayerRechargeDataNotify.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getProductPriceTierListFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        cardProductRemainDays_ = 0;
-
         if (productPriceTierListBuilder_ == null) {
           productPriceTierList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          productPriceTierList_ = null;
           productPriceTierListBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        cardProductRemainDays_ = 0;
+
         return this;
       }
 
@@ -449,7 +385,6 @@ public final class PlayerRechargeDataNotifyOuterClass {
       public emu.grasscutter.net.proto.PlayerRechargeDataNotifyOuterClass.PlayerRechargeDataNotify buildPartial() {
         emu.grasscutter.net.proto.PlayerRechargeDataNotifyOuterClass.PlayerRechargeDataNotify result = new emu.grasscutter.net.proto.PlayerRechargeDataNotifyOuterClass.PlayerRechargeDataNotify(this);
         int from_bitField0_ = bitField0_;
-        result.cardProductRemainDays_ = cardProductRemainDays_;
         if (productPriceTierListBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             productPriceTierList_ = java.util.Collections.unmodifiableList(productPriceTierList_);
@@ -459,6 +394,7 @@ public final class PlayerRechargeDataNotifyOuterClass {
         } else {
           result.productPriceTierList_ = productPriceTierListBuilder_.build();
         }
+        result.cardProductRemainDays_ = cardProductRemainDays_;
         onBuilt();
         return result;
       }
@@ -507,9 +443,6 @@ public final class PlayerRechargeDataNotifyOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.PlayerRechargeDataNotifyOuterClass.PlayerRechargeDataNotify other) {
         if (other == emu.grasscutter.net.proto.PlayerRechargeDataNotifyOuterClass.PlayerRechargeDataNotify.getDefaultInstance()) return this;
-        if (other.getCardProductRemainDays() != 0) {
-          setCardProductRemainDays(other.getCardProductRemainDays());
-        }
         if (productPriceTierListBuilder_ == null) {
           if (!other.productPriceTierList_.isEmpty()) {
             if (productPriceTierList_.isEmpty()) {
@@ -536,7 +469,10 @@ public final class PlayerRechargeDataNotifyOuterClass {
             }
           }
         }
-        this.mergeUnknownFields(other.unknownFields);
+        if (other.getCardProductRemainDays() != 0) {
+          setCardProductRemainDays(other.getCardProductRemainDays());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -551,51 +487,51 @@ public final class PlayerRechargeDataNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.PlayerRechargeDataNotifyOuterClass.PlayerRechargeDataNotify parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 50: {
+                emu.grasscutter.net.proto.ProductPriceTierOuterClass.ProductPriceTier m =
+                    input.readMessage(
+                        emu.grasscutter.net.proto.ProductPriceTierOuterClass.ProductPriceTier.parser(),
+                        extensionRegistry);
+                if (productPriceTierListBuilder_ == null) {
+                  ensureProductPriceTierListIsMutable();
+                  productPriceTierList_.add(m);
+                } else {
+                  productPriceTierListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 50
+              case 72: {
+                cardProductRemainDays_ = input.readUInt32();
+
+                break;
+              } // case 72
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.PlayerRechargeDataNotifyOuterClass.PlayerRechargeDataNotify) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
-
-      private int cardProductRemainDays_ ;
-      /**
-       * <code>uint32 card_product_remain_days = 10;</code>
-       * @return The cardProductRemainDays.
-       */
-      @java.lang.Override
-      public int getCardProductRemainDays() {
-        return cardProductRemainDays_;
-      }
-      /**
-       * <code>uint32 card_product_remain_days = 10;</code>
-       * @param value The cardProductRemainDays to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCardProductRemainDays(int value) {
-        
-        cardProductRemainDays_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 card_product_remain_days = 10;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCardProductRemainDays() {
-        
-        cardProductRemainDays_ = 0;
-        onChanged();
-        return this;
-      }
 
       private java.util.List<emu.grasscutter.net.proto.ProductPriceTierOuterClass.ProductPriceTier> productPriceTierList_ =
         java.util.Collections.emptyList();
@@ -610,7 +546,7 @@ public final class PlayerRechargeDataNotifyOuterClass {
           emu.grasscutter.net.proto.ProductPriceTierOuterClass.ProductPriceTier, emu.grasscutter.net.proto.ProductPriceTierOuterClass.ProductPriceTier.Builder, emu.grasscutter.net.proto.ProductPriceTierOuterClass.ProductPriceTierOrBuilder> productPriceTierListBuilder_;
 
       /**
-       * <code>repeated .ProductPriceTier product_price_tier_list = 14;</code>
+       * <code>repeated .ProductPriceTier product_price_tier_list = 6;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.ProductPriceTierOuterClass.ProductPriceTier> getProductPriceTierListList() {
         if (productPriceTierListBuilder_ == null) {
@@ -620,7 +556,7 @@ public final class PlayerRechargeDataNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .ProductPriceTier product_price_tier_list = 14;</code>
+       * <code>repeated .ProductPriceTier product_price_tier_list = 6;</code>
        */
       public int getProductPriceTierListCount() {
         if (productPriceTierListBuilder_ == null) {
@@ -630,7 +566,7 @@ public final class PlayerRechargeDataNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .ProductPriceTier product_price_tier_list = 14;</code>
+       * <code>repeated .ProductPriceTier product_price_tier_list = 6;</code>
        */
       public emu.grasscutter.net.proto.ProductPriceTierOuterClass.ProductPriceTier getProductPriceTierList(int index) {
         if (productPriceTierListBuilder_ == null) {
@@ -640,7 +576,7 @@ public final class PlayerRechargeDataNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .ProductPriceTier product_price_tier_list = 14;</code>
+       * <code>repeated .ProductPriceTier product_price_tier_list = 6;</code>
        */
       public Builder setProductPriceTierList(
           int index, emu.grasscutter.net.proto.ProductPriceTierOuterClass.ProductPriceTier value) {
@@ -657,7 +593,7 @@ public final class PlayerRechargeDataNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ProductPriceTier product_price_tier_list = 14;</code>
+       * <code>repeated .ProductPriceTier product_price_tier_list = 6;</code>
        */
       public Builder setProductPriceTierList(
           int index, emu.grasscutter.net.proto.ProductPriceTierOuterClass.ProductPriceTier.Builder builderForValue) {
@@ -671,7 +607,7 @@ public final class PlayerRechargeDataNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ProductPriceTier product_price_tier_list = 14;</code>
+       * <code>repeated .ProductPriceTier product_price_tier_list = 6;</code>
        */
       public Builder addProductPriceTierList(emu.grasscutter.net.proto.ProductPriceTierOuterClass.ProductPriceTier value) {
         if (productPriceTierListBuilder_ == null) {
@@ -687,7 +623,7 @@ public final class PlayerRechargeDataNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ProductPriceTier product_price_tier_list = 14;</code>
+       * <code>repeated .ProductPriceTier product_price_tier_list = 6;</code>
        */
       public Builder addProductPriceTierList(
           int index, emu.grasscutter.net.proto.ProductPriceTierOuterClass.ProductPriceTier value) {
@@ -704,7 +640,7 @@ public final class PlayerRechargeDataNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ProductPriceTier product_price_tier_list = 14;</code>
+       * <code>repeated .ProductPriceTier product_price_tier_list = 6;</code>
        */
       public Builder addProductPriceTierList(
           emu.grasscutter.net.proto.ProductPriceTierOuterClass.ProductPriceTier.Builder builderForValue) {
@@ -718,7 +654,7 @@ public final class PlayerRechargeDataNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ProductPriceTier product_price_tier_list = 14;</code>
+       * <code>repeated .ProductPriceTier product_price_tier_list = 6;</code>
        */
       public Builder addProductPriceTierList(
           int index, emu.grasscutter.net.proto.ProductPriceTierOuterClass.ProductPriceTier.Builder builderForValue) {
@@ -732,7 +668,7 @@ public final class PlayerRechargeDataNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ProductPriceTier product_price_tier_list = 14;</code>
+       * <code>repeated .ProductPriceTier product_price_tier_list = 6;</code>
        */
       public Builder addAllProductPriceTierList(
           java.lang.Iterable<? extends emu.grasscutter.net.proto.ProductPriceTierOuterClass.ProductPriceTier> values) {
@@ -747,7 +683,7 @@ public final class PlayerRechargeDataNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ProductPriceTier product_price_tier_list = 14;</code>
+       * <code>repeated .ProductPriceTier product_price_tier_list = 6;</code>
        */
       public Builder clearProductPriceTierList() {
         if (productPriceTierListBuilder_ == null) {
@@ -760,7 +696,7 @@ public final class PlayerRechargeDataNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ProductPriceTier product_price_tier_list = 14;</code>
+       * <code>repeated .ProductPriceTier product_price_tier_list = 6;</code>
        */
       public Builder removeProductPriceTierList(int index) {
         if (productPriceTierListBuilder_ == null) {
@@ -773,14 +709,14 @@ public final class PlayerRechargeDataNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ProductPriceTier product_price_tier_list = 14;</code>
+       * <code>repeated .ProductPriceTier product_price_tier_list = 6;</code>
        */
       public emu.grasscutter.net.proto.ProductPriceTierOuterClass.ProductPriceTier.Builder getProductPriceTierListBuilder(
           int index) {
         return getProductPriceTierListFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .ProductPriceTier product_price_tier_list = 14;</code>
+       * <code>repeated .ProductPriceTier product_price_tier_list = 6;</code>
        */
       public emu.grasscutter.net.proto.ProductPriceTierOuterClass.ProductPriceTierOrBuilder getProductPriceTierListOrBuilder(
           int index) {
@@ -790,7 +726,7 @@ public final class PlayerRechargeDataNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .ProductPriceTier product_price_tier_list = 14;</code>
+       * <code>repeated .ProductPriceTier product_price_tier_list = 6;</code>
        */
       public java.util.List<? extends emu.grasscutter.net.proto.ProductPriceTierOuterClass.ProductPriceTierOrBuilder> 
            getProductPriceTierListOrBuilderList() {
@@ -801,14 +737,14 @@ public final class PlayerRechargeDataNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .ProductPriceTier product_price_tier_list = 14;</code>
+       * <code>repeated .ProductPriceTier product_price_tier_list = 6;</code>
        */
       public emu.grasscutter.net.proto.ProductPriceTierOuterClass.ProductPriceTier.Builder addProductPriceTierListBuilder() {
         return getProductPriceTierListFieldBuilder().addBuilder(
             emu.grasscutter.net.proto.ProductPriceTierOuterClass.ProductPriceTier.getDefaultInstance());
       }
       /**
-       * <code>repeated .ProductPriceTier product_price_tier_list = 14;</code>
+       * <code>repeated .ProductPriceTier product_price_tier_list = 6;</code>
        */
       public emu.grasscutter.net.proto.ProductPriceTierOuterClass.ProductPriceTier.Builder addProductPriceTierListBuilder(
           int index) {
@@ -816,7 +752,7 @@ public final class PlayerRechargeDataNotifyOuterClass {
             index, emu.grasscutter.net.proto.ProductPriceTierOuterClass.ProductPriceTier.getDefaultInstance());
       }
       /**
-       * <code>repeated .ProductPriceTier product_price_tier_list = 14;</code>
+       * <code>repeated .ProductPriceTier product_price_tier_list = 6;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.ProductPriceTierOuterClass.ProductPriceTier.Builder> 
            getProductPriceTierListBuilderList() {
@@ -835,6 +771,37 @@ public final class PlayerRechargeDataNotifyOuterClass {
           productPriceTierList_ = null;
         }
         return productPriceTierListBuilder_;
+      }
+
+      private int cardProductRemainDays_ ;
+      /**
+       * <code>uint32 card_product_remain_days = 9;</code>
+       * @return The cardProductRemainDays.
+       */
+      @java.lang.Override
+      public int getCardProductRemainDays() {
+        return cardProductRemainDays_;
+      }
+      /**
+       * <code>uint32 card_product_remain_days = 9;</code>
+       * @param value The cardProductRemainDays to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCardProductRemainDays(int value) {
+        
+        cardProductRemainDays_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 card_product_remain_days = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCardProductRemainDays() {
+        
+        cardProductRemainDays_ = 0;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -869,7 +836,18 @@ public final class PlayerRechargeDataNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new PlayerRechargeDataNotify(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -905,9 +883,9 @@ public final class PlayerRechargeDataNotifyOuterClass {
     java.lang.String[] descriptorData = {
       "\n\036PlayerRechargeDataNotify.proto\032\026Produc" +
       "tPriceTier.proto\"p\n\030PlayerRechargeDataNo" +
-      "tify\022 \n\030card_product_remain_days\030\n \001(\r\0222" +
-      "\n\027product_price_tier_list\030\016 \003(\0132\021.Produc" +
-      "tPriceTierB\033\n\031emu.grasscutter.net.protob" +
+      "tify\0222\n\027product_price_tier_list\030\006 \003(\0132\021." +
+      "ProductPriceTier\022 \n\030card_product_remain_" +
+      "days\030\t \001(\rB\033\n\031emu.grasscutter.net.protob" +
       "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -920,7 +898,7 @@ public final class PlayerRechargeDataNotifyOuterClass {
     internal_static_PlayerRechargeDataNotify_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_PlayerRechargeDataNotify_descriptor,
-        new java.lang.String[] { "CardProductRemainDays", "ProductPriceTierList", });
+        new java.lang.String[] { "ProductPriceTierList", "CardProductRemainDays", });
     emu.grasscutter.net.proto.ProductPriceTierOuterClass.getDescriptor();
   }
 

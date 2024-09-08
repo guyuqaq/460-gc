@@ -40,10 +40,6 @@ public final class GetShopRspOuterClass {
     int getRetcode();
   }
   /**
-   * <pre>
-   * CmdId: 5665
-   * </pre>
-   *
    * Protobuf type {@code GetShopRsp}
    */
   public static final class GetShopRsp extends
@@ -292,10 +288,6 @@ public final class GetShopRspOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 5665
-     * </pre>
-     *
      * Protobuf type {@code GetShopRsp}
      */
     public static final class Builder extends

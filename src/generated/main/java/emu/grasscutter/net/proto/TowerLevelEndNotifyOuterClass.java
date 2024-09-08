@@ -43,6 +43,10 @@ public final class TowerLevelEndNotifyOuterClass {
         int index);
 
     /**
+     * <pre>
+     *sus 11
+     * </pre>
+     *
      * <code>uint32 next_floor_id = 3;</code>
      * @return The nextFloorId.
      */
@@ -66,6 +70,10 @@ public final class TowerLevelEndNotifyOuterClass {
     int getFinishedStarCondList(int index);
 
     /**
+     * <pre>
+     *sus 3
+     * </pre>
+     *
      * <code>uint32 continue_state = 11;</code>
      * @return The continueState.
      */
@@ -78,6 +86,11 @@ public final class TowerLevelEndNotifyOuterClass {
     boolean getIsSuccess();
   }
   /**
+   * <pre>
+   * 5.0.0
+   * CmdId: 22669
+   * </pre>
+   *
    * Protobuf type {@code TowerLevelEndNotify}
    */
   public static final class TowerLevelEndNotify extends
@@ -279,6 +292,10 @@ public final class TowerLevelEndNotifyOuterClass {
     public static final int NEXT_FLOOR_ID_FIELD_NUMBER = 3;
     private int nextFloorId_;
     /**
+     * <pre>
+     *sus 11
+     * </pre>
+     *
      * <code>uint32 next_floor_id = 3;</code>
      * @return The nextFloorId.
      */
@@ -318,6 +335,10 @@ public final class TowerLevelEndNotifyOuterClass {
     public static final int CONTINUE_STATE_FIELD_NUMBER = 11;
     private int continueState_;
     /**
+     * <pre>
+     *sus 3
+     * </pre>
+     *
      * <code>uint32 continue_state = 11;</code>
      * @return The continueState.
      */
@@ -557,6 +578,11 @@ public final class TowerLevelEndNotifyOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * 5.0.0
+     * CmdId: 22669
+     * </pre>
+     *
      * Protobuf type {@code TowerLevelEndNotify}
      */
     public static final class Builder extends
@@ -1070,6 +1096,10 @@ public final class TowerLevelEndNotifyOuterClass {
 
       private int nextFloorId_ ;
       /**
+       * <pre>
+       *sus 11
+       * </pre>
+       *
        * <code>uint32 next_floor_id = 3;</code>
        * @return The nextFloorId.
        */
@@ -1078,6 +1108,10 @@ public final class TowerLevelEndNotifyOuterClass {
         return nextFloorId_;
       }
       /**
+       * <pre>
+       *sus 11
+       * </pre>
+       *
        * <code>uint32 next_floor_id = 3;</code>
        * @param value The nextFloorId to set.
        * @return This builder for chaining.
@@ -1089,6 +1123,10 @@ public final class TowerLevelEndNotifyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       *sus 11
+       * </pre>
+       *
        * <code>uint32 next_floor_id = 3;</code>
        * @return This builder for chaining.
        */
@@ -1180,6 +1218,10 @@ public final class TowerLevelEndNotifyOuterClass {
 
       private int continueState_ ;
       /**
+       * <pre>
+       *sus 3
+       * </pre>
+       *
        * <code>uint32 continue_state = 11;</code>
        * @return The continueState.
        */
@@ -1188,6 +1230,10 @@ public final class TowerLevelEndNotifyOuterClass {
         return continueState_;
       }
       /**
+       * <pre>
+       *sus 3
+       * </pre>
+       *
        * <code>uint32 continue_state = 11;</code>
        * @param value The continueState to set.
        * @return This builder for chaining.
@@ -1199,6 +1245,10 @@ public final class TowerLevelEndNotifyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       *sus 3
+       * </pre>
+       *
        * <code>uint32 continue_state = 11;</code>
        * @return This builder for chaining.
        */

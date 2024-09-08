@@ -19,30 +19,29 @@ public final class GivingRecordChangeNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.GivingRecord giving_record = 9;</code>
+     * <code>.GivingRecord giving_record = 8;</code>
      * @return Whether the givingRecord field is set.
      */
     boolean hasGivingRecord();
     /**
-     * <code>.GivingRecord giving_record = 9;</code>
+     * <code>.GivingRecord giving_record = 8;</code>
      * @return The givingRecord.
      */
     emu.grasscutter.net.proto.GivingRecordOuterClass.GivingRecord getGivingRecord();
     /**
-     * <code>.GivingRecord giving_record = 9;</code>
+     * <code>.GivingRecord giving_record = 8;</code>
      */
     emu.grasscutter.net.proto.GivingRecordOuterClass.GivingRecordOrBuilder getGivingRecordOrBuilder();
 
     /**
-     * <code>bool is_deactive = 6;</code>
+     * <code>bool is_deactive = 14;</code>
      * @return The isDeactive.
      */
     boolean getIsDeactive();
   }
   /**
    * <pre>
-   * CmdId: 20863
-   * Obf: EFABNIELGHL
+   * CmdId: 3120
    * </pre>
    *
    * Protobuf type {@code GivingRecordChangeNotify}
@@ -71,61 +70,6 @@ public final class GivingRecordChangeNotifyOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private GivingRecordChangeNotify(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 48: {
-
-              isDeactive_ = input.readBool();
-              break;
-            }
-            case 74: {
-              emu.grasscutter.net.proto.GivingRecordOuterClass.GivingRecord.Builder subBuilder = null;
-              if (givingRecord_ != null) {
-                subBuilder = givingRecord_.toBuilder();
-              }
-              givingRecord_ = input.readMessage(emu.grasscutter.net.proto.GivingRecordOuterClass.GivingRecord.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(givingRecord_);
-                givingRecord_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.GivingRecordChangeNotifyOuterClass.internal_static_GivingRecordChangeNotify_descriptor;
@@ -139,10 +83,10 @@ public final class GivingRecordChangeNotifyOuterClass {
               emu.grasscutter.net.proto.GivingRecordChangeNotifyOuterClass.GivingRecordChangeNotify.class, emu.grasscutter.net.proto.GivingRecordChangeNotifyOuterClass.GivingRecordChangeNotify.Builder.class);
     }
 
-    public static final int GIVING_RECORD_FIELD_NUMBER = 9;
+    public static final int GIVING_RECORD_FIELD_NUMBER = 8;
     private emu.grasscutter.net.proto.GivingRecordOuterClass.GivingRecord givingRecord_;
     /**
-     * <code>.GivingRecord giving_record = 9;</code>
+     * <code>.GivingRecord giving_record = 8;</code>
      * @return Whether the givingRecord field is set.
      */
     @java.lang.Override
@@ -150,7 +94,7 @@ public final class GivingRecordChangeNotifyOuterClass {
       return givingRecord_ != null;
     }
     /**
-     * <code>.GivingRecord giving_record = 9;</code>
+     * <code>.GivingRecord giving_record = 8;</code>
      * @return The givingRecord.
      */
     @java.lang.Override
@@ -158,17 +102,17 @@ public final class GivingRecordChangeNotifyOuterClass {
       return givingRecord_ == null ? emu.grasscutter.net.proto.GivingRecordOuterClass.GivingRecord.getDefaultInstance() : givingRecord_;
     }
     /**
-     * <code>.GivingRecord giving_record = 9;</code>
+     * <code>.GivingRecord giving_record = 8;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.GivingRecordOuterClass.GivingRecordOrBuilder getGivingRecordOrBuilder() {
       return getGivingRecord();
     }
 
-    public static final int IS_DEACTIVE_FIELD_NUMBER = 6;
+    public static final int IS_DEACTIVE_FIELD_NUMBER = 14;
     private boolean isDeactive_;
     /**
-     * <code>bool is_deactive = 6;</code>
+     * <code>bool is_deactive = 14;</code>
      * @return The isDeactive.
      */
     @java.lang.Override
@@ -190,13 +134,13 @@ public final class GivingRecordChangeNotifyOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (isDeactive_ != false) {
-        output.writeBool(6, isDeactive_);
-      }
       if (givingRecord_ != null) {
-        output.writeMessage(9, getGivingRecord());
+        output.writeMessage(8, getGivingRecord());
       }
-      unknownFields.writeTo(output);
+      if (isDeactive_ != false) {
+        output.writeBool(14, isDeactive_);
+      }
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -205,15 +149,15 @@ public final class GivingRecordChangeNotifyOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (isDeactive_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(6, isDeactive_);
-      }
       if (givingRecord_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(9, getGivingRecord());
+          .computeMessageSize(8, getGivingRecord());
       }
-      size += unknownFields.getSerializedSize();
+      if (isDeactive_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(14, isDeactive_);
+      }
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -235,7 +179,7 @@ public final class GivingRecordChangeNotifyOuterClass {
       }
       if (getIsDeactive()
           != other.getIsDeactive()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -253,7 +197,7 @@ public final class GivingRecordChangeNotifyOuterClass {
       hash = (37 * hash) + IS_DEACTIVE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsDeactive());
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -350,8 +294,7 @@ public final class GivingRecordChangeNotifyOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 20863
-     * Obf: EFABNIELGHL
+     * CmdId: 3120
      * </pre>
      *
      * Protobuf type {@code GivingRecordChangeNotify}
@@ -375,18 +318,13 @@ public final class GivingRecordChangeNotifyOuterClass {
 
       // Construct using emu.grasscutter.net.proto.GivingRecordChangeNotifyOuterClass.GivingRecordChangeNotify.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -485,7 +423,7 @@ public final class GivingRecordChangeNotifyOuterClass {
         if (other.getIsDeactive() != false) {
           setIsDeactive(other.getIsDeactive());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -500,17 +438,42 @@ public final class GivingRecordChangeNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.GivingRecordChangeNotifyOuterClass.GivingRecordChangeNotify parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 66: {
+                input.readMessage(
+                    getGivingRecordFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 66
+              case 112: {
+                isDeactive_ = input.readBool();
+
+                break;
+              } // case 112
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.GivingRecordChangeNotifyOuterClass.GivingRecordChangeNotify) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -518,14 +481,14 @@ public final class GivingRecordChangeNotifyOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.GivingRecordOuterClass.GivingRecord, emu.grasscutter.net.proto.GivingRecordOuterClass.GivingRecord.Builder, emu.grasscutter.net.proto.GivingRecordOuterClass.GivingRecordOrBuilder> givingRecordBuilder_;
       /**
-       * <code>.GivingRecord giving_record = 9;</code>
+       * <code>.GivingRecord giving_record = 8;</code>
        * @return Whether the givingRecord field is set.
        */
       public boolean hasGivingRecord() {
         return givingRecordBuilder_ != null || givingRecord_ != null;
       }
       /**
-       * <code>.GivingRecord giving_record = 9;</code>
+       * <code>.GivingRecord giving_record = 8;</code>
        * @return The givingRecord.
        */
       public emu.grasscutter.net.proto.GivingRecordOuterClass.GivingRecord getGivingRecord() {
@@ -536,7 +499,7 @@ public final class GivingRecordChangeNotifyOuterClass {
         }
       }
       /**
-       * <code>.GivingRecord giving_record = 9;</code>
+       * <code>.GivingRecord giving_record = 8;</code>
        */
       public Builder setGivingRecord(emu.grasscutter.net.proto.GivingRecordOuterClass.GivingRecord value) {
         if (givingRecordBuilder_ == null) {
@@ -552,7 +515,7 @@ public final class GivingRecordChangeNotifyOuterClass {
         return this;
       }
       /**
-       * <code>.GivingRecord giving_record = 9;</code>
+       * <code>.GivingRecord giving_record = 8;</code>
        */
       public Builder setGivingRecord(
           emu.grasscutter.net.proto.GivingRecordOuterClass.GivingRecord.Builder builderForValue) {
@@ -566,7 +529,7 @@ public final class GivingRecordChangeNotifyOuterClass {
         return this;
       }
       /**
-       * <code>.GivingRecord giving_record = 9;</code>
+       * <code>.GivingRecord giving_record = 8;</code>
        */
       public Builder mergeGivingRecord(emu.grasscutter.net.proto.GivingRecordOuterClass.GivingRecord value) {
         if (givingRecordBuilder_ == null) {
@@ -584,7 +547,7 @@ public final class GivingRecordChangeNotifyOuterClass {
         return this;
       }
       /**
-       * <code>.GivingRecord giving_record = 9;</code>
+       * <code>.GivingRecord giving_record = 8;</code>
        */
       public Builder clearGivingRecord() {
         if (givingRecordBuilder_ == null) {
@@ -598,7 +561,7 @@ public final class GivingRecordChangeNotifyOuterClass {
         return this;
       }
       /**
-       * <code>.GivingRecord giving_record = 9;</code>
+       * <code>.GivingRecord giving_record = 8;</code>
        */
       public emu.grasscutter.net.proto.GivingRecordOuterClass.GivingRecord.Builder getGivingRecordBuilder() {
         
@@ -606,7 +569,7 @@ public final class GivingRecordChangeNotifyOuterClass {
         return getGivingRecordFieldBuilder().getBuilder();
       }
       /**
-       * <code>.GivingRecord giving_record = 9;</code>
+       * <code>.GivingRecord giving_record = 8;</code>
        */
       public emu.grasscutter.net.proto.GivingRecordOuterClass.GivingRecordOrBuilder getGivingRecordOrBuilder() {
         if (givingRecordBuilder_ != null) {
@@ -617,7 +580,7 @@ public final class GivingRecordChangeNotifyOuterClass {
         }
       }
       /**
-       * <code>.GivingRecord giving_record = 9;</code>
+       * <code>.GivingRecord giving_record = 8;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.GivingRecordOuterClass.GivingRecord, emu.grasscutter.net.proto.GivingRecordOuterClass.GivingRecord.Builder, emu.grasscutter.net.proto.GivingRecordOuterClass.GivingRecordOrBuilder> 
@@ -635,7 +598,7 @@ public final class GivingRecordChangeNotifyOuterClass {
 
       private boolean isDeactive_ ;
       /**
-       * <code>bool is_deactive = 6;</code>
+       * <code>bool is_deactive = 14;</code>
        * @return The isDeactive.
        */
       @java.lang.Override
@@ -643,7 +606,7 @@ public final class GivingRecordChangeNotifyOuterClass {
         return isDeactive_;
       }
       /**
-       * <code>bool is_deactive = 6;</code>
+       * <code>bool is_deactive = 14;</code>
        * @param value The isDeactive to set.
        * @return This builder for chaining.
        */
@@ -654,7 +617,7 @@ public final class GivingRecordChangeNotifyOuterClass {
         return this;
       }
       /**
-       * <code>bool is_deactive = 6;</code>
+       * <code>bool is_deactive = 14;</code>
        * @return This builder for chaining.
        */
       public Builder clearIsDeactive() {
@@ -696,7 +659,18 @@ public final class GivingRecordChangeNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new GivingRecordChangeNotify(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -732,8 +706,8 @@ public final class GivingRecordChangeNotifyOuterClass {
     java.lang.String[] descriptorData = {
       "\n\036GivingRecordChangeNotify.proto\032\022Giving" +
       "Record.proto\"U\n\030GivingRecordChangeNotify" +
-      "\022$\n\rgiving_record\030\t \001(\0132\r.GivingRecord\022\023" +
-      "\n\013is_deactive\030\006 \001(\010B\033\n\031emu.grasscutter.n" +
+      "\022$\n\rgiving_record\030\010 \001(\0132\r.GivingRecord\022\023" +
+      "\n\013is_deactive\030\016 \001(\010B\033\n\031emu.grasscutter.n" +
       "et.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
