@@ -136,7 +136,6 @@ public final class PacketOpcodes {
 	public static final int SetOpenStateRsp = 7944;
 	public static final int RedeemLegendaryKeyRsp = 22912;
 	public static final int BattlePassCurScheduleUpdateNotify = 1819;
-	public static final int QuestTransmitRsp = 2300;
 	public static final int NormalUidOpNotify = 8839;
 	public static final int ShowTemplateReminderNotify = 27975;
 	public static final int SceneEntityDrownRsp = 1742;
@@ -445,11 +444,11 @@ public final class PacketOpcodes {
 	public static final int AvatarChangeAnimHashRsp = 2231;
 	public static final int AvatarFetterLevelRewardReq = 7455;
 	public static final int AvatarFetterLevelRewardRsp = 21750;
-	public static final int AvatarFightPropUpdateNotify = 20328; // or 20328,287;
-	public static final int AvatarFightPropNotify = 287; // or 287,20328;
+	public static final int AvatarFightPropUpdateNotify = 20328;
+	public static final int AvatarFightPropNotify = 287;
 	public static final int AvatarPromoteGetRewardReq = 27656;
-	public static final int AvatarPromoteReq = 28642; // or 28642,1987,22083,27267,8787;
-	public static final int AvatarPromoteRsp = 27316; // or 27316,21598,22473,21972;
+	public static final int AvatarPromoteReq = 21972; // or 28642,1987,22083,27267,8787;
+	public static final int AvatarPromoteRsp = 1987; // or 27316,21598,22473,21972;
 	public static final int AvatarPropChangeReasonNotify = 24920;
 	public static final int AvatarRenameInfoNotify = 6549;
 	public static final int AvatarSkillChangeNotify = 4410;
@@ -497,12 +496,12 @@ public final class PacketOpcodes {
 	public static final int RechargeRsp = 24839;
 	public static final int ReliquaryDecomposeReq = 4929;
 	public static final int ReliquaryDecomposeRsp = 21659;
-	public static final int ReliquaryFilterStateNotify = 343; // 343 or 2827;
-	public static final int ReliquaryFilterStateSaveNotify = 2827; // 2827 or 343;
+	public static final int ReliquaryFilterStateNotify = 2827; // 343 or 2827;
+	public static final int ReliquaryFilterStateSaveNotify = 343; // 2827 or 343;
 	public static final int ReliquaryPromoteReq = 26120;
-	public static final int ReliquaryPromoteRsp = 3638; // 2unk;
+	public static final int ReliquaryPromoteRsp = 3638;
 	public static final int ReliquaryUpgradeReq = 24032;
-	public static final int ReliquaryUpgradeRsp = 20217; // 2unk;
+	public static final int ReliquaryUpgradeRsp = 20217;
 	public static final int ReserveRogueDiaryAvatarReq = 7597;
 	public static final int RogueDiaryReviveAvatarReq = 27544;
 	public static final int StartRogueDiaryPlayRsp = 9097;
@@ -519,8 +518,21 @@ public final class PacketOpcodes {
 	public static final int PlayerForceExitReq = 26372;
 	public static final int SetPlayerBornDataRsp = 26454;
 	public static final int SceneForceLockNotify = 27356;
-	
-	
+	public static final int QuestCreateEntityReq = 21882;
+	public static final int QuestCreateEntityRsp = 8838;
+	public static final int DestroyMaterialReq = 28057;
+	public static final int DestroyMaterialRsp = 21531;
+    public static final int QuestTransmitReq = 24079;
+    public static final int QuestTransmitRsp = 2300;
+	public static final int ChooseCurAvatarTeamReq = 29682;
+    public static final int ChooseCurAvatarTeamRsp = 5985;
+    public static final int SkipPlayerGameTimeReq = 29432;
+    public static final int SkipPlayerGameTimeRsp = 338;
+    public static final int ChangeGameTimeReq = 9437;
+    public static final int ChangeGameTimeRsp = 29694;
+	public static final int AvatarChangeElementTypeReq = 21263;
+	public static final int AvatarChangeElementTypeRsp = 50000;
+
 	// know
 	public static final int CoopDataNotify = 1;
 	public static final int DungeonSettleNotify = 1;
@@ -542,18 +554,11 @@ public final class PacketOpcodes {
 	public static final int QuestUpdateQuestVarReq = 1;
 	public static final int QuestUpdateQuestVarRsp = 1;
 	public static final int QuestGlobalVarNotify = 1;
-	public static final int QuestTransmitReq = 1;
 	public static final int QuestDestroyEntityReq = 1;
 	public static final int QuestDestroyEntityRsp = 1;
-	public static final int SkipPlayerGameTimeReq = 1;
-	public static final int SkipPlayerGameTimeRsp = 1;
-	public static final int ChangeGameTimeReq = 1;
-	public static final int ChangeGameTimeRsp = 1;
 	public static final int AvatarSatiationDataNotify = 1;
 	public static final int EvtAiSyncCombatThreatInfoNotify = 1;
 	public static final int DropHintNotify = 1;
-	public static final int DestroyMaterialReq = 1;
-	public static final int DestroyMaterialRsp = 1;
 	public static final int SceneEntityUpdateNotify = 1;
 	public static final int EvtEntityRenderersChangedNotify = 1;
 	public static final int TakePlayerLevelRewardReq = 1;
@@ -573,8 +578,6 @@ public final class PacketOpcodes {
 	public static final int AddNoGachaAvatarCardNotify = 1;
 	public static final int AllWidgetDataNotify = 1;
 	public static final int AskAddFriendRsp = 1;
-	public static final int AvatarChangeElementTypeReq = 1;
-	public static final int AvatarChangeElementTypeRsp = 1;
 	public static final int AvatarDelNotify = 1;
 	public static final int AvatarExpeditionAllDataReq = 1;
 	public static final int AvatarExpeditionAllDataRsp = 1;
@@ -604,8 +607,6 @@ public final class PacketOpcodes {
 	public static final int CheckUgcStateRsp = 1;
 	public static final int CheckUgcUpdateReq = 1;
 	public static final int CheckUgcUpdateRsp = 1;
-	public static final int ChooseCurAvatarTeamReq = 1;
-	public static final int ChooseCurAvatarTeamRsp = 1;
 	public static final int ClientAIStateNotify = 1;
 	public static final int ClientAbilitiesInitFinishCombineNotify = 1;
 	public static final int ClientLoadingCostumeVerificationNotify = 1;
@@ -751,8 +752,6 @@ public final class PacketOpcodes {
 	public static final int PlayerGetForceQuitBanInfoReq = 1;
 	public static final int PlayerLevelRewardUpdateNotify = 1;
 	public static final int ProudSkillExtraLevelNotify = 1;
-	public static final int QuestCreateEntityReq = 1;
-	public static final int QuestCreateEntityRsp = 1;
 	public static final int QuestDelNotify = 1;
 	public static final int QuickUseWidgetReq = 1;
 	public static final int QuickUseWidgetRsp = 1;
