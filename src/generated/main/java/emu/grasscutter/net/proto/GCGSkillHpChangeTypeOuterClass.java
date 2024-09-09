@@ -15,10 +15,6 @@ public final class GCGSkillHpChangeTypeOuterClass {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   /**
-   * <pre>
-   * Obf: EIJGIMEOODA
-   * </pre>
-   *
    * Protobuf enum {@code GCGSkillHpChangeType}
    */
   public enum GCGSkillHpChangeType
