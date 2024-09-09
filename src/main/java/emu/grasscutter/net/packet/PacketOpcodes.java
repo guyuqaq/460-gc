@@ -545,7 +545,7 @@ public final class PacketOpcodes {
 	public static final int BuyBattlePassLevelRsp = 7500;//26350,7408,23606,7500,3113,5074,28349,7072
 	public static final int SetBattlePassViewedReq = 26483;
 	// or 22048,533,26489,902,28919,9890,23101,21184,9036
-	public static final int SetBattlePassViewedRsp = 533;// or ,26489,902,23101,21184,9036
+	public static final int SetBattlePassViewedRsp = 26489;// or 902,23101,21184,9036
 	public static final int TakeBattlePassMissionPointReq = 6231;
 	public static final int TakeBattlePassRewardReq = 29828;
 	public static final int TakeBattlePassRewardRsp = 941;
