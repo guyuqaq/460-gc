@@ -543,18 +543,11 @@ public final class PacketOpcodes {
 	//might 7996 and 26350, 8721 and 7408, 6753 and 23606, 7055 and 7500, 29939 and 3113, 5487 and 5074, 4597 and 28349, 24615 and 7072
 	public static final int BuyBattlePassLevelReq = 7055;
 	public static final int BuyBattlePassLevelRsp = 7500;//26350,7408,23606,7500,3113,5074,28349,7072
-
-	public static final int SetBattlePassViewedReq = 26483
+	public static final int SetBattlePassViewedReq = 26483;
 	public static final int SetBattlePassViewedRsp = 9890;// or 22048,533,26489,902,28919,9890,23101,21184,9036
 	public static final int TakeBattlePassMissionPointReq = 6231;
 	public static final int TakeBattlePassRewardReq = 29828;
 	public static final int TakeBattlePassRewardRsp = 941;
-
-
-
-
-
-
 
 	// know
 	public static final int AchievementUpdateNotify = 26226;
