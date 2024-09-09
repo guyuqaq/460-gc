@@ -99,7 +99,7 @@ public class PacketEntityFightPropChangeReasonNotify extends BasePacket {
                 .setPropType(prop.getId())
                 .setPropDelta(value)
                 .setReason(reason)
-                .setChangeHpDebts(changeHpDebts)
+                .setChangeHpDebtsReason(changeHpDebts)
                 .build();
 
         this.setData(proto);

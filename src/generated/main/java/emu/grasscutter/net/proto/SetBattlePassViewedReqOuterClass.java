@@ -26,9 +26,8 @@ public final class SetBattlePassViewedReqOuterClass {
   }
   /**
    * <pre>
-   * CmdId: 4006
-   * Version: 4.7.0
-   * Obfs: ?
+   * CmdId: 26483
+   * obf: KKIGJEPPADN
    * </pre>
    *
    * Protobuf type {@code SetBattlePassViewedReq}
@@ -238,9 +237,8 @@ public final class SetBattlePassViewedReqOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 4006
-     * Version: 4.7.0
-     * Obfs: ?
+     * CmdId: 26483
+     * obf: KKIGJEPPADN
      * </pre>
      *
      * Protobuf type {@code SetBattlePassViewedReq}
