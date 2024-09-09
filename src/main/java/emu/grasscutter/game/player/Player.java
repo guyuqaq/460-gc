@@ -716,6 +716,7 @@ public class Player implements DatabaseObject<Player>, PlayerHook, FieldFetch {
         int currentLevel = this.getLevel();
 
         int newWorldLevel =
+        (currentLevel >= 58) ? 9 :
             (currentLevel >= 55) ? 8 :
                 (currentLevel >= 50) ? 7 :
                     (currentLevel >= 45) ? 6 :
