@@ -20,9 +20,7 @@ public final class AddBackupAvatarTeamReqOuterClass {
   }
   /**
    * <pre>
-   * 4.7.0
-   * CmdId: 22689
-   * Obf: IOBLPIFEACE
+   * CmdId: 23418
    * </pre>
    *
    * Protobuf type {@code AddBackupAvatarTeamReq}
@@ -210,9 +208,7 @@ public final class AddBackupAvatarTeamReqOuterClass {
     }
     /**
      * <pre>
-     * 4.7.0
-     * CmdId: 22689
-     * Obf: IOBLPIFEACE
+     * CmdId: 23418
      * </pre>
      *
      * Protobuf type {@code AddBackupAvatarTeamReq}

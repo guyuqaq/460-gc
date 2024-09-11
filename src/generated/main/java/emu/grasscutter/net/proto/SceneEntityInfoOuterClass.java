@@ -4606,11 +4606,11 @@ public final class SceneEntityInfoOuterClass {
       "\n\025SceneEntityInfo.proto\032\024ProtEntityType." +
       "proto\032\020MotionInfo.proto\032\016PropPair.proto\032" +
       "\023FightPropPair.proto\032$AnimatorParameterV" +
-      "alueInfoPair.proto\032\026EntityClientData.pro" +
-      "to\032\033EntityEnvironmentInfo.proto\032\031EntityA" +
-      "uthorityInfo.proto\032\020ServerBuff.proto\032\025Sc" +
-      "eneAvatarInfo.proto\032\026SceneMonsterInfo.pr" +
-      "oto\032\022SceneNpcInfo.proto\032\025SceneGadgetInfo" +
+      "alueInfoPair.proto\032\025SceneAvatarInfo.prot" +
+      "o\032\026SceneMonsterInfo.proto\032\022SceneNpcInfo." +
+      "proto\032\025SceneGadgetInfo.proto\032\026EntityClie" +
+      "ntData.proto\032\033EntityEnvironmentInfo.prot" +
+      "o\032\031EntityAuthorityInfo.proto\032\020ServerBuff" +
       ".proto\"\304\005\n\017SceneEntityInfo\022$\n\013entity_typ" +
       "e\030\001 \001(\0162\017.ProtEntityType\022\021\n\tentity_id\030\002 " +
       "\001(\r\022\014\n\004name\030\003 \001(\t\022 \n\013motion_info\030\004 \001(\0132\013" +
@@ -4639,14 +4639,14 @@ public final class SceneEntityInfoOuterClass {
           emu.grasscutter.net.proto.PropPairOuterClass.getDescriptor(),
           emu.grasscutter.net.proto.FightPropPairOuterClass.getDescriptor(),
           emu.grasscutter.net.proto.AnimatorParameterValueInfoPairOuterClass.getDescriptor(),
-          emu.grasscutter.net.proto.EntityClientDataOuterClass.getDescriptor(),
-          emu.grasscutter.net.proto.EntityEnvironmentInfoOuterClass.getDescriptor(),
-          emu.grasscutter.net.proto.EntityAuthorityInfoOuterClass.getDescriptor(),
-          emu.grasscutter.net.proto.ServerBuffOuterClass.getDescriptor(),
           emu.grasscutter.net.proto.SceneAvatarInfoOuterClass.getDescriptor(),
           emu.grasscutter.net.proto.SceneMonsterInfoOuterClass.getDescriptor(),
           emu.grasscutter.net.proto.SceneNpcInfoOuterClass.getDescriptor(),
           emu.grasscutter.net.proto.SceneGadgetInfoOuterClass.getDescriptor(),
+          emu.grasscutter.net.proto.EntityClientDataOuterClass.getDescriptor(),
+          emu.grasscutter.net.proto.EntityEnvironmentInfoOuterClass.getDescriptor(),
+          emu.grasscutter.net.proto.EntityAuthorityInfoOuterClass.getDescriptor(),
+          emu.grasscutter.net.proto.ServerBuffOuterClass.getDescriptor(),
         });
     internal_static_SceneEntityInfo_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -4659,14 +4659,14 @@ public final class SceneEntityInfoOuterClass {
     emu.grasscutter.net.proto.PropPairOuterClass.getDescriptor();
     emu.grasscutter.net.proto.FightPropPairOuterClass.getDescriptor();
     emu.grasscutter.net.proto.AnimatorParameterValueInfoPairOuterClass.getDescriptor();
-    emu.grasscutter.net.proto.EntityClientDataOuterClass.getDescriptor();
-    emu.grasscutter.net.proto.EntityEnvironmentInfoOuterClass.getDescriptor();
-    emu.grasscutter.net.proto.EntityAuthorityInfoOuterClass.getDescriptor();
-    emu.grasscutter.net.proto.ServerBuffOuterClass.getDescriptor();
     emu.grasscutter.net.proto.SceneAvatarInfoOuterClass.getDescriptor();
     emu.grasscutter.net.proto.SceneMonsterInfoOuterClass.getDescriptor();
     emu.grasscutter.net.proto.SceneNpcInfoOuterClass.getDescriptor();
     emu.grasscutter.net.proto.SceneGadgetInfoOuterClass.getDescriptor();
+    emu.grasscutter.net.proto.EntityClientDataOuterClass.getDescriptor();
+    emu.grasscutter.net.proto.EntityEnvironmentInfoOuterClass.getDescriptor();
+    emu.grasscutter.net.proto.EntityAuthorityInfoOuterClass.getDescriptor();
+    emu.grasscutter.net.proto.ServerBuffOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

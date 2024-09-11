@@ -26,8 +26,7 @@ public final class AddBackupAvatarTeamRspOuterClass {
   }
   /**
    * <pre>
-   * CmdId: 7930
-   * Obf: GDMKNCBFCEH
+   * CmdId: 7643
    * </pre>
    *
    * Protobuf type {@code AddBackupAvatarTeamRsp}
@@ -237,8 +236,7 @@ public final class AddBackupAvatarTeamRspOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 7930
-     * Obf: GDMKNCBFCEH
+     * CmdId: 7643
      * </pre>
      *
      * Protobuf type {@code AddBackupAvatarTeamRsp}

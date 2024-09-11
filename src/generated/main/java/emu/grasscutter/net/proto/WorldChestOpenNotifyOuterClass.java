@@ -19,28 +19,27 @@ public final class WorldChestOpenNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 scene_id = 9;</code>
+     * <code>uint32 scene_id = 5;</code>
      * @return The sceneId.
      */
     int getSceneId();
 
     /**
-     * <code>uint32 group_id = 10;</code>
+     * <code>uint32 group_id = 7;</code>
      * @return The groupId.
      */
     int getGroupId();
 
     /**
-     * <code>uint32 config_id = 3;</code>
+     * <code>uint32 config_id = 13;</code>
      * @return The configId.
      */
     int getConfigId();
   }
   /**
    * <pre>
-   * CmdId: 22669 ?
-   * Version: 4.7.0
-   * Obfs: HECPBJNCDBF
+   * CmdId: 2812
+   * obf: IEHIJGIEKLH
    * </pre>
    *
    * Protobuf type {@code WorldChestOpenNotify}
@@ -82,10 +81,10 @@ public final class WorldChestOpenNotifyOuterClass {
               emu.grasscutter.net.proto.WorldChestOpenNotifyOuterClass.WorldChestOpenNotify.class, emu.grasscutter.net.proto.WorldChestOpenNotifyOuterClass.WorldChestOpenNotify.Builder.class);
     }
 
-    public static final int SCENE_ID_FIELD_NUMBER = 9;
+    public static final int SCENE_ID_FIELD_NUMBER = 5;
     private int sceneId_;
     /**
-     * <code>uint32 scene_id = 9;</code>
+     * <code>uint32 scene_id = 5;</code>
      * @return The sceneId.
      */
     @java.lang.Override
@@ -93,10 +92,10 @@ public final class WorldChestOpenNotifyOuterClass {
       return sceneId_;
     }
 
-    public static final int GROUP_ID_FIELD_NUMBER = 10;
+    public static final int GROUP_ID_FIELD_NUMBER = 7;
     private int groupId_;
     /**
-     * <code>uint32 group_id = 10;</code>
+     * <code>uint32 group_id = 7;</code>
      * @return The groupId.
      */
     @java.lang.Override
@@ -104,10 +103,10 @@ public final class WorldChestOpenNotifyOuterClass {
       return groupId_;
     }
 
-    public static final int CONFIG_ID_FIELD_NUMBER = 3;
+    public static final int CONFIG_ID_FIELD_NUMBER = 13;
     private int configId_;
     /**
-     * <code>uint32 config_id = 3;</code>
+     * <code>uint32 config_id = 13;</code>
      * @return The configId.
      */
     @java.lang.Override
@@ -129,14 +128,14 @@ public final class WorldChestOpenNotifyOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (configId_ != 0) {
-        output.writeUInt32(3, configId_);
-      }
       if (sceneId_ != 0) {
-        output.writeUInt32(9, sceneId_);
+        output.writeUInt32(5, sceneId_);
       }
       if (groupId_ != 0) {
-        output.writeUInt32(10, groupId_);
+        output.writeUInt32(7, groupId_);
+      }
+      if (configId_ != 0) {
+        output.writeUInt32(13, configId_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -147,17 +146,17 @@ public final class WorldChestOpenNotifyOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (configId_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(3, configId_);
-      }
       if (sceneId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(9, sceneId_);
+          .computeUInt32Size(5, sceneId_);
       }
       if (groupId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(10, groupId_);
+          .computeUInt32Size(7, groupId_);
+      }
+      if (configId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(13, configId_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -294,9 +293,8 @@ public final class WorldChestOpenNotifyOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 22669 ?
-     * Version: 4.7.0
-     * Obfs: HECPBJNCDBF
+     * CmdId: 2812
+     * obf: IEHIJGIEKLH
      * </pre>
      *
      * Protobuf type {@code WorldChestOpenNotify}
@@ -449,21 +447,21 @@ public final class WorldChestOpenNotifyOuterClass {
               case 0:
                 done = true;
                 break;
-              case 24: {
-                configId_ = input.readUInt32();
-
-                break;
-              } // case 24
-              case 72: {
+              case 40: {
                 sceneId_ = input.readUInt32();
 
                 break;
-              } // case 72
-              case 80: {
+              } // case 40
+              case 56: {
                 groupId_ = input.readUInt32();
 
                 break;
-              } // case 80
+              } // case 56
+              case 104: {
+                configId_ = input.readUInt32();
+
+                break;
+              } // case 104
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -482,7 +480,7 @@ public final class WorldChestOpenNotifyOuterClass {
 
       private int sceneId_ ;
       /**
-       * <code>uint32 scene_id = 9;</code>
+       * <code>uint32 scene_id = 5;</code>
        * @return The sceneId.
        */
       @java.lang.Override
@@ -490,7 +488,7 @@ public final class WorldChestOpenNotifyOuterClass {
         return sceneId_;
       }
       /**
-       * <code>uint32 scene_id = 9;</code>
+       * <code>uint32 scene_id = 5;</code>
        * @param value The sceneId to set.
        * @return This builder for chaining.
        */
@@ -501,7 +499,7 @@ public final class WorldChestOpenNotifyOuterClass {
         return this;
       }
       /**
-       * <code>uint32 scene_id = 9;</code>
+       * <code>uint32 scene_id = 5;</code>
        * @return This builder for chaining.
        */
       public Builder clearSceneId() {
@@ -513,7 +511,7 @@ public final class WorldChestOpenNotifyOuterClass {
 
       private int groupId_ ;
       /**
-       * <code>uint32 group_id = 10;</code>
+       * <code>uint32 group_id = 7;</code>
        * @return The groupId.
        */
       @java.lang.Override
@@ -521,7 +519,7 @@ public final class WorldChestOpenNotifyOuterClass {
         return groupId_;
       }
       /**
-       * <code>uint32 group_id = 10;</code>
+       * <code>uint32 group_id = 7;</code>
        * @param value The groupId to set.
        * @return This builder for chaining.
        */
@@ -532,7 +530,7 @@ public final class WorldChestOpenNotifyOuterClass {
         return this;
       }
       /**
-       * <code>uint32 group_id = 10;</code>
+       * <code>uint32 group_id = 7;</code>
        * @return This builder for chaining.
        */
       public Builder clearGroupId() {
@@ -544,7 +542,7 @@ public final class WorldChestOpenNotifyOuterClass {
 
       private int configId_ ;
       /**
-       * <code>uint32 config_id = 3;</code>
+       * <code>uint32 config_id = 13;</code>
        * @return The configId.
        */
       @java.lang.Override
@@ -552,7 +550,7 @@ public final class WorldChestOpenNotifyOuterClass {
         return configId_;
       }
       /**
-       * <code>uint32 config_id = 3;</code>
+       * <code>uint32 config_id = 13;</code>
        * @param value The configId to set.
        * @return This builder for chaining.
        */
@@ -563,7 +561,7 @@ public final class WorldChestOpenNotifyOuterClass {
         return this;
       }
       /**
-       * <code>uint32 config_id = 3;</code>
+       * <code>uint32 config_id = 13;</code>
        * @return This builder for chaining.
        */
       public Builder clearConfigId() {
@@ -651,8 +649,8 @@ public final class WorldChestOpenNotifyOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\032WorldChestOpenNotify.proto\"M\n\024WorldChe" +
-      "stOpenNotify\022\020\n\010scene_id\030\t \001(\r\022\020\n\010group_" +
-      "id\030\n \001(\r\022\021\n\tconfig_id\030\003 \001(\rB\033\n\031emu.grass" +
+      "stOpenNotify\022\020\n\010scene_id\030\005 \001(\r\022\020\n\010group_" +
+      "id\030\007 \001(\r\022\021\n\tconfig_id\030\r \001(\rB\033\n\031emu.grass" +
       "cutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

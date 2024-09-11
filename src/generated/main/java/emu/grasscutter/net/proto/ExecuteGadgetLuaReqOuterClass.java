@@ -19,46 +19,33 @@ public final class ExecuteGadgetLuaReqOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int32 param1 = 6;</code>
-     * @return The param1.
-     */
-    int getParam1();
-
-    /**
-     * <code>int32 param3 = 7;</code>
+     * <code>int32 param3 = 10;</code>
      * @return The param3.
      */
     int getParam3();
 
     /**
-     * <code>uint32 source_entity_id = 12;</code>
-     * @return The sourceEntityId.
-     */
-    int getSourceEntityId();
-
-    /**
-     * <code>int32 param2 = 2;</code>
+     * <code>int32 param2 = 7;</code>
      * @return The param2.
      */
     int getParam2();
 
     /**
-     * <code>string BMDLHCMBPOA = 13;</code>
-     * @return The bMDLHCMBPOA.
+     * <code>int32 param1 = 1;</code>
+     * @return The param1.
      */
-    java.lang.String getBMDLHCMBPOA();
+    int getParam1();
+
     /**
-     * <code>string BMDLHCMBPOA = 13;</code>
-     * @return The bytes for bMDLHCMBPOA.
+     * <code>uint32 source_entity_id = 6;</code>
+     * @return The sourceEntityId.
      */
-    com.google.protobuf.ByteString
-        getBMDLHCMBPOABytes();
+    int getSourceEntityId();
   }
   /**
    * <pre>
-   * 4.7.0
-   * CmdId: 29143
-   * Obf: OMLEJENNIJM
+   * CmdId: 5759
+   * obf: JCNCIIDJLIF
    * </pre>
    *
    * Protobuf type {@code ExecuteGadgetLuaReq}
@@ -73,7 +60,6 @@ public final class ExecuteGadgetLuaReqOuterClass {
       super(builder);
     }
     private ExecuteGadgetLuaReq() {
-      bMDLHCMBPOA_ = "";
     }
 
     @java.lang.Override
@@ -101,21 +87,10 @@ public final class ExecuteGadgetLuaReqOuterClass {
               emu.grasscutter.net.proto.ExecuteGadgetLuaReqOuterClass.ExecuteGadgetLuaReq.class, emu.grasscutter.net.proto.ExecuteGadgetLuaReqOuterClass.ExecuteGadgetLuaReq.Builder.class);
     }
 
-    public static final int PARAM1_FIELD_NUMBER = 6;
-    private int param1_;
-    /**
-     * <code>int32 param1 = 6;</code>
-     * @return The param1.
-     */
-    @java.lang.Override
-    public int getParam1() {
-      return param1_;
-    }
-
-    public static final int PARAM3_FIELD_NUMBER = 7;
+    public static final int PARAM3_FIELD_NUMBER = 10;
     private int param3_;
     /**
-     * <code>int32 param3 = 7;</code>
+     * <code>int32 param3 = 10;</code>
      * @return The param3.
      */
     @java.lang.Override
@@ -123,21 +98,10 @@ public final class ExecuteGadgetLuaReqOuterClass {
       return param3_;
     }
 
-    public static final int SOURCE_ENTITY_ID_FIELD_NUMBER = 12;
-    private int sourceEntityId_;
-    /**
-     * <code>uint32 source_entity_id = 12;</code>
-     * @return The sourceEntityId.
-     */
-    @java.lang.Override
-    public int getSourceEntityId() {
-      return sourceEntityId_;
-    }
-
-    public static final int PARAM2_FIELD_NUMBER = 2;
+    public static final int PARAM2_FIELD_NUMBER = 7;
     private int param2_;
     /**
-     * <code>int32 param2 = 2;</code>
+     * <code>int32 param2 = 7;</code>
      * @return The param2.
      */
     @java.lang.Override
@@ -145,42 +109,26 @@ public final class ExecuteGadgetLuaReqOuterClass {
       return param2_;
     }
 
-    public static final int BMDLHCMBPOA_FIELD_NUMBER = 13;
-    private volatile java.lang.Object bMDLHCMBPOA_;
+    public static final int PARAM1_FIELD_NUMBER = 1;
+    private int param1_;
     /**
-     * <code>string BMDLHCMBPOA = 13;</code>
-     * @return The bMDLHCMBPOA.
+     * <code>int32 param1 = 1;</code>
+     * @return The param1.
      */
     @java.lang.Override
-    public java.lang.String getBMDLHCMBPOA() {
-      java.lang.Object ref = bMDLHCMBPOA_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        bMDLHCMBPOA_ = s;
-        return s;
-      }
+    public int getParam1() {
+      return param1_;
     }
+
+    public static final int SOURCE_ENTITY_ID_FIELD_NUMBER = 6;
+    private int sourceEntityId_;
     /**
-     * <code>string BMDLHCMBPOA = 13;</code>
-     * @return The bytes for bMDLHCMBPOA.
+     * <code>uint32 source_entity_id = 6;</code>
+     * @return The sourceEntityId.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
-        getBMDLHCMBPOABytes() {
-      java.lang.Object ref = bMDLHCMBPOA_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        bMDLHCMBPOA_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+    public int getSourceEntityId() {
+      return sourceEntityId_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -197,20 +145,17 @@ public final class ExecuteGadgetLuaReqOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (param2_ != 0) {
-        output.writeInt32(2, param2_);
-      }
       if (param1_ != 0) {
-        output.writeInt32(6, param1_);
-      }
-      if (param3_ != 0) {
-        output.writeInt32(7, param3_);
+        output.writeInt32(1, param1_);
       }
       if (sourceEntityId_ != 0) {
-        output.writeUInt32(12, sourceEntityId_);
+        output.writeUInt32(6, sourceEntityId_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bMDLHCMBPOA_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 13, bMDLHCMBPOA_);
+      if (param2_ != 0) {
+        output.writeInt32(7, param2_);
+      }
+      if (param3_ != 0) {
+        output.writeInt32(10, param3_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -221,24 +166,21 @@ public final class ExecuteGadgetLuaReqOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (param2_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(2, param2_);
-      }
       if (param1_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(6, param1_);
-      }
-      if (param3_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(7, param3_);
+          .computeInt32Size(1, param1_);
       }
       if (sourceEntityId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(12, sourceEntityId_);
+          .computeUInt32Size(6, sourceEntityId_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bMDLHCMBPOA_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, bMDLHCMBPOA_);
+      if (param2_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(7, param2_);
+      }
+      if (param3_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(10, param3_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -255,16 +197,14 @@ public final class ExecuteGadgetLuaReqOuterClass {
       }
       emu.grasscutter.net.proto.ExecuteGadgetLuaReqOuterClass.ExecuteGadgetLuaReq other = (emu.grasscutter.net.proto.ExecuteGadgetLuaReqOuterClass.ExecuteGadgetLuaReq) obj;
 
-      if (getParam1()
-          != other.getParam1()) return false;
       if (getParam3()
           != other.getParam3()) return false;
-      if (getSourceEntityId()
-          != other.getSourceEntityId()) return false;
       if (getParam2()
           != other.getParam2()) return false;
-      if (!getBMDLHCMBPOA()
-          .equals(other.getBMDLHCMBPOA())) return false;
+      if (getParam1()
+          != other.getParam1()) return false;
+      if (getSourceEntityId()
+          != other.getSourceEntityId()) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -276,16 +216,14 @@ public final class ExecuteGadgetLuaReqOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + PARAM1_FIELD_NUMBER;
-      hash = (53 * hash) + getParam1();
       hash = (37 * hash) + PARAM3_FIELD_NUMBER;
       hash = (53 * hash) + getParam3();
-      hash = (37 * hash) + SOURCE_ENTITY_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getSourceEntityId();
       hash = (37 * hash) + PARAM2_FIELD_NUMBER;
       hash = (53 * hash) + getParam2();
-      hash = (37 * hash) + BMDLHCMBPOA_FIELD_NUMBER;
-      hash = (53 * hash) + getBMDLHCMBPOA().hashCode();
+      hash = (37 * hash) + PARAM1_FIELD_NUMBER;
+      hash = (53 * hash) + getParam1();
+      hash = (37 * hash) + SOURCE_ENTITY_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSourceEntityId();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -383,9 +321,8 @@ public final class ExecuteGadgetLuaReqOuterClass {
     }
     /**
      * <pre>
-     * 4.7.0
-     * CmdId: 29143
-     * Obf: OMLEJENNIJM
+     * CmdId: 5759
+     * obf: JCNCIIDJLIF
      * </pre>
      *
      * Protobuf type {@code ExecuteGadgetLuaReq}
@@ -420,15 +357,13 @@ public final class ExecuteGadgetLuaReqOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        param1_ = 0;
-
         param3_ = 0;
-
-        sourceEntityId_ = 0;
 
         param2_ = 0;
 
-        bMDLHCMBPOA_ = "";
+        param1_ = 0;
+
+        sourceEntityId_ = 0;
 
         return this;
       }
@@ -456,11 +391,10 @@ public final class ExecuteGadgetLuaReqOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.ExecuteGadgetLuaReqOuterClass.ExecuteGadgetLuaReq buildPartial() {
         emu.grasscutter.net.proto.ExecuteGadgetLuaReqOuterClass.ExecuteGadgetLuaReq result = new emu.grasscutter.net.proto.ExecuteGadgetLuaReqOuterClass.ExecuteGadgetLuaReq(this);
-        result.param1_ = param1_;
         result.param3_ = param3_;
-        result.sourceEntityId_ = sourceEntityId_;
         result.param2_ = param2_;
-        result.bMDLHCMBPOA_ = bMDLHCMBPOA_;
+        result.param1_ = param1_;
+        result.sourceEntityId_ = sourceEntityId_;
         onBuilt();
         return result;
       }
@@ -509,21 +443,17 @@ public final class ExecuteGadgetLuaReqOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.ExecuteGadgetLuaReqOuterClass.ExecuteGadgetLuaReq other) {
         if (other == emu.grasscutter.net.proto.ExecuteGadgetLuaReqOuterClass.ExecuteGadgetLuaReq.getDefaultInstance()) return this;
-        if (other.getParam1() != 0) {
-          setParam1(other.getParam1());
-        }
         if (other.getParam3() != 0) {
           setParam3(other.getParam3());
-        }
-        if (other.getSourceEntityId() != 0) {
-          setSourceEntityId(other.getSourceEntityId());
         }
         if (other.getParam2() != 0) {
           setParam2(other.getParam2());
         }
-        if (!other.getBMDLHCMBPOA().isEmpty()) {
-          bMDLHCMBPOA_ = other.bMDLHCMBPOA_;
-          onChanged();
+        if (other.getParam1() != 0) {
+          setParam1(other.getParam1());
+        }
+        if (other.getSourceEntityId() != 0) {
+          setSourceEntityId(other.getSourceEntityId());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -551,31 +481,26 @@ public final class ExecuteGadgetLuaReqOuterClass {
               case 0:
                 done = true;
                 break;
-              case 16: {
-                param2_ = input.readInt32();
+              case 8: {
+                param1_ = input.readInt32();
 
                 break;
-              } // case 16
+              } // case 8
               case 48: {
-                param1_ = input.readInt32();
+                sourceEntityId_ = input.readUInt32();
 
                 break;
               } // case 48
               case 56: {
-                param3_ = input.readInt32();
+                param2_ = input.readInt32();
 
                 break;
               } // case 56
-              case 96: {
-                sourceEntityId_ = input.readUInt32();
+              case 80: {
+                param3_ = input.readInt32();
 
                 break;
-              } // case 96
-              case 106: {
-                bMDLHCMBPOA_ = input.readStringRequireUtf8();
-
-                break;
-              } // case 106
+              } // case 80
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -592,40 +517,9 @@ public final class ExecuteGadgetLuaReqOuterClass {
         return this;
       }
 
-      private int param1_ ;
-      /**
-       * <code>int32 param1 = 6;</code>
-       * @return The param1.
-       */
-      @java.lang.Override
-      public int getParam1() {
-        return param1_;
-      }
-      /**
-       * <code>int32 param1 = 6;</code>
-       * @param value The param1 to set.
-       * @return This builder for chaining.
-       */
-      public Builder setParam1(int value) {
-        
-        param1_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int32 param1 = 6;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearParam1() {
-        
-        param1_ = 0;
-        onChanged();
-        return this;
-      }
-
       private int param3_ ;
       /**
-       * <code>int32 param3 = 7;</code>
+       * <code>int32 param3 = 10;</code>
        * @return The param3.
        */
       @java.lang.Override
@@ -633,7 +527,7 @@ public final class ExecuteGadgetLuaReqOuterClass {
         return param3_;
       }
       /**
-       * <code>int32 param3 = 7;</code>
+       * <code>int32 param3 = 10;</code>
        * @param value The param3 to set.
        * @return This builder for chaining.
        */
@@ -644,7 +538,7 @@ public final class ExecuteGadgetLuaReqOuterClass {
         return this;
       }
       /**
-       * <code>int32 param3 = 7;</code>
+       * <code>int32 param3 = 10;</code>
        * @return This builder for chaining.
        */
       public Builder clearParam3() {
@@ -654,40 +548,9 @@ public final class ExecuteGadgetLuaReqOuterClass {
         return this;
       }
 
-      private int sourceEntityId_ ;
-      /**
-       * <code>uint32 source_entity_id = 12;</code>
-       * @return The sourceEntityId.
-       */
-      @java.lang.Override
-      public int getSourceEntityId() {
-        return sourceEntityId_;
-      }
-      /**
-       * <code>uint32 source_entity_id = 12;</code>
-       * @param value The sourceEntityId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSourceEntityId(int value) {
-        
-        sourceEntityId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 source_entity_id = 12;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearSourceEntityId() {
-        
-        sourceEntityId_ = 0;
-        onChanged();
-        return this;
-      }
-
       private int param2_ ;
       /**
-       * <code>int32 param2 = 2;</code>
+       * <code>int32 param2 = 7;</code>
        * @return The param2.
        */
       @java.lang.Override
@@ -695,7 +558,7 @@ public final class ExecuteGadgetLuaReqOuterClass {
         return param2_;
       }
       /**
-       * <code>int32 param2 = 2;</code>
+       * <code>int32 param2 = 7;</code>
        * @param value The param2 to set.
        * @return This builder for chaining.
        */
@@ -706,7 +569,7 @@ public final class ExecuteGadgetLuaReqOuterClass {
         return this;
       }
       /**
-       * <code>int32 param2 = 2;</code>
+       * <code>int32 param2 = 7;</code>
        * @return This builder for chaining.
        */
       public Builder clearParam2() {
@@ -716,78 +579,64 @@ public final class ExecuteGadgetLuaReqOuterClass {
         return this;
       }
 
-      private java.lang.Object bMDLHCMBPOA_ = "";
+      private int param1_ ;
       /**
-       * <code>string BMDLHCMBPOA = 13;</code>
-       * @return The bMDLHCMBPOA.
+       * <code>int32 param1 = 1;</code>
+       * @return The param1.
        */
-      public java.lang.String getBMDLHCMBPOA() {
-        java.lang.Object ref = bMDLHCMBPOA_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          bMDLHCMBPOA_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+      @java.lang.Override
+      public int getParam1() {
+        return param1_;
       }
       /**
-       * <code>string BMDLHCMBPOA = 13;</code>
-       * @return The bytes for bMDLHCMBPOA.
-       */
-      public com.google.protobuf.ByteString
-          getBMDLHCMBPOABytes() {
-        java.lang.Object ref = bMDLHCMBPOA_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          bMDLHCMBPOA_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string BMDLHCMBPOA = 13;</code>
-       * @param value The bMDLHCMBPOA to set.
+       * <code>int32 param1 = 1;</code>
+       * @param value The param1 to set.
        * @return This builder for chaining.
        */
-      public Builder setBMDLHCMBPOA(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        bMDLHCMBPOA_ = value;
+      public Builder setParam1(int value) {
+        
+        param1_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string BMDLHCMBPOA = 13;</code>
+       * <code>int32 param1 = 1;</code>
        * @return This builder for chaining.
        */
-      public Builder clearBMDLHCMBPOA() {
+      public Builder clearParam1() {
         
-        bMDLHCMBPOA_ = getDefaultInstance().getBMDLHCMBPOA();
+        param1_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int sourceEntityId_ ;
+      /**
+       * <code>uint32 source_entity_id = 6;</code>
+       * @return The sourceEntityId.
+       */
+      @java.lang.Override
+      public int getSourceEntityId() {
+        return sourceEntityId_;
+      }
+      /**
+       * <code>uint32 source_entity_id = 6;</code>
+       * @param value The sourceEntityId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSourceEntityId(int value) {
+        
+        sourceEntityId_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string BMDLHCMBPOA = 13;</code>
-       * @param value The bytes for bMDLHCMBPOA to set.
+       * <code>uint32 source_entity_id = 6;</code>
        * @return This builder for chaining.
        */
-      public Builder setBMDLHCMBPOABytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      public Builder clearSourceEntityId() {
         
-        bMDLHCMBPOA_ = value;
+        sourceEntityId_ = 0;
         onChanged();
         return this;
       }
@@ -869,11 +718,11 @@ public final class ExecuteGadgetLuaReqOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\031ExecuteGadgetLuaReq.proto\"t\n\023ExecuteGa" +
-      "dgetLuaReq\022\016\n\006param1\030\006 \001(\005\022\016\n\006param3\030\007 \001" +
-      "(\005\022\030\n\020source_entity_id\030\014 \001(\r\022\016\n\006param2\030\002" +
-      " \001(\005\022\023\n\013BMDLHCMBPOA\030\r \001(\tB\033\n\031emu.grasscu" +
-      "tter.net.protob\006proto3"
+      "\n\031ExecuteGadgetLuaReq.proto\"_\n\023ExecuteGa" +
+      "dgetLuaReq\022\016\n\006param3\030\n \001(\005\022\016\n\006param2\030\007 \001" +
+      "(\005\022\016\n\006param1\030\001 \001(\005\022\030\n\020source_entity_id\030\006" +
+      " \001(\rB\033\n\031emu.grasscutter.net.protob\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -884,7 +733,7 @@ public final class ExecuteGadgetLuaReqOuterClass {
     internal_static_ExecuteGadgetLuaReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ExecuteGadgetLuaReq_descriptor,
-        new java.lang.String[] { "Param1", "Param3", "SourceEntityId", "Param2", "BMDLHCMBPOA", });
+        new java.lang.String[] { "Param3", "Param2", "Param1", "SourceEntityId", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

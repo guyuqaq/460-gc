@@ -146,11 +146,6 @@ public final class OnlinePlayerInfoOuterClass {
         getPsnIdBytes();
   }
   /**
-   * <pre>
-   * 5.0.0
-   * CmdId: 
-   * </pre>
-   *
    * Protobuf type {@code OnlinePlayerInfo}
    */
   public static final class OnlinePlayerInfo extends
@@ -792,11 +787,6 @@ public final class OnlinePlayerInfoOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * 5.0.0
-     * CmdId: 
-     * </pre>
-     *
      * Protobuf type {@code OnlinePlayerInfo}
      */
     public static final class Builder extends

@@ -19,62 +19,38 @@ public final class TowerAllDataRspOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 tower_schedule_id = 4;</code>
-     * @return The towerScheduleId.
+     * <code>uint32 next_schedule_change_time = 1;</code>
+     * @return The nextScheduleChangeTime.
      */
-    int getTowerScheduleId();
+    int getNextScheduleChangeTime();
 
     /**
-     * <code>bool is_finished_entrance_floor = 10;</code>
-     * @return The isFinishedEntranceFloor.
-     */
-    boolean getIsFinishedEntranceFloor();
-
-    /**
-     * <pre>
-     * 1 SUS
-     * </pre>
-     *
-     * <code>uint32 valid_floor_record_list = 6;</code>
-     * @return The validFloorRecordList.
-     */
-    int getValidFloorRecordList();
-
-    /**
-     * <code>.TowerCurLevelRecord cur_level_record = 1;</code>
+     * <code>.TowerCurLevelRecord cur_level_record = 2;</code>
      * @return Whether the curLevelRecord field is set.
      */
     boolean hasCurLevelRecord();
     /**
-     * <code>.TowerCurLevelRecord cur_level_record = 1;</code>
+     * <code>.TowerCurLevelRecord cur_level_record = 2;</code>
      * @return The curLevelRecord.
      */
     emu.grasscutter.net.proto.TowerCurLevelRecordOuterClass.TowerCurLevelRecord getCurLevelRecord();
     /**
-     * <code>.TowerCurLevelRecord cur_level_record = 1;</code>
+     * <code>.TowerCurLevelRecord cur_level_record = 2;</code>
      */
     emu.grasscutter.net.proto.TowerCurLevelRecordOuterClass.TowerCurLevelRecordOrBuilder getCurLevelRecordOrBuilder();
 
     /**
-     * <code>int32 retcode = 11;</code>
-     * @return The retcode.
+     * <code>uint32 LICMPIDMCOI = 3;</code>
+     * @return The lICMPIDMCOI.
      */
-    int getRetcode();
+    int getLICMPIDMCOI();
 
     /**
-     * <pre>
-     * sus
-     * </pre>
-     *
-     * <code>map&lt;uint32, uint32&gt; skip_floor_granted_reward_item_map = 14;</code>
+     * <code>map&lt;uint32, uint32&gt; skip_floor_granted_reward_item_map = 4;</code>
      */
     int getSkipFloorGrantedRewardItemMapCount();
     /**
-     * <pre>
-     * sus
-     * </pre>
-     *
-     * <code>map&lt;uint32, uint32&gt; skip_floor_granted_reward_item_map = 14;</code>
+     * <code>map&lt;uint32, uint32&gt; skip_floor_granted_reward_item_map = 4;</code>
      */
     boolean containsSkipFloorGrantedRewardItemMap(
         int key);
@@ -85,56 +61,51 @@ public final class TowerAllDataRspOuterClass {
     java.util.Map<java.lang.Integer, java.lang.Integer>
     getSkipFloorGrantedRewardItemMap();
     /**
-     * <pre>
-     * sus
-     * </pre>
-     *
-     * <code>map&lt;uint32, uint32&gt; skip_floor_granted_reward_item_map = 14;</code>
+     * <code>map&lt;uint32, uint32&gt; skip_floor_granted_reward_item_map = 4;</code>
      */
     java.util.Map<java.lang.Integer, java.lang.Integer>
     getSkipFloorGrantedRewardItemMapMap();
     /**
-     * <pre>
-     * sus
-     * </pre>
-     *
-     * <code>map&lt;uint32, uint32&gt; skip_floor_granted_reward_item_map = 14;</code>
+     * <code>map&lt;uint32, uint32&gt; skip_floor_granted_reward_item_map = 4;</code>
      */
 
     int getSkipFloorGrantedRewardItemMapOrDefault(
         int key,
         int defaultValue);
     /**
-     * <pre>
-     * sus
-     * </pre>
-     *
-     * <code>map&lt;uint32, uint32&gt; skip_floor_granted_reward_item_map = 14;</code>
+     * <code>map&lt;uint32, uint32&gt; skip_floor_granted_reward_item_map = 4;</code>
      */
 
     int getSkipFloorGrantedRewardItemMapOrThrow(
         int key);
 
     /**
-     * <code>bool is_first_interact = 7;</code>
-     * @return The isFirstInteract.
+     * <code>uint32 valid_floor_record_list = 5;</code>
+     * @return The validFloorRecordList.
      */
-    boolean getIsFirstInteract();
+    int getValidFloorRecordList();
 
     /**
-     * <pre>
-     * sus
-     * </pre>
-     *
-     * <code>map&lt;uint32, uint32&gt; floor_open_time_map = 15;</code>
+     * <code>.TowerMonthlyBrief monthly_brief = 6;</code>
+     * @return Whether the monthlyBrief field is set.
+     */
+    boolean hasMonthlyBrief();
+    /**
+     * <code>.TowerMonthlyBrief monthly_brief = 6;</code>
+     * @return The monthlyBrief.
+     */
+    emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBrief getMonthlyBrief();
+    /**
+     * <code>.TowerMonthlyBrief monthly_brief = 6;</code>
+     */
+    emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBriefOrBuilder getMonthlyBriefOrBuilder();
+
+    /**
+     * <code>map&lt;uint32, uint32&gt; floor_open_time_map = 7;</code>
      */
     int getFloorOpenTimeMapCount();
     /**
-     * <pre>
-     * sus
-     * </pre>
-     *
-     * <code>map&lt;uint32, uint32&gt; floor_open_time_map = 15;</code>
+     * <code>map&lt;uint32, uint32&gt; floor_open_time_map = 7;</code>
      */
     boolean containsFloorOpenTimeMap(
         int key);
@@ -145,110 +116,114 @@ public final class TowerAllDataRspOuterClass {
     java.util.Map<java.lang.Integer, java.lang.Integer>
     getFloorOpenTimeMap();
     /**
-     * <pre>
-     * sus
-     * </pre>
-     *
-     * <code>map&lt;uint32, uint32&gt; floor_open_time_map = 15;</code>
+     * <code>map&lt;uint32, uint32&gt; floor_open_time_map = 7;</code>
      */
     java.util.Map<java.lang.Integer, java.lang.Integer>
     getFloorOpenTimeMapMap();
     /**
-     * <pre>
-     * sus
-     * </pre>
-     *
-     * <code>map&lt;uint32, uint32&gt; floor_open_time_map = 15;</code>
+     * <code>map&lt;uint32, uint32&gt; floor_open_time_map = 7;</code>
      */
 
     int getFloorOpenTimeMapOrDefault(
         int key,
         int defaultValue);
     /**
-     * <pre>
-     * sus
-     * </pre>
-     *
-     * <code>map&lt;uint32, uint32&gt; floor_open_time_map = 15;</code>
+     * <code>map&lt;uint32, uint32&gt; floor_open_time_map = 7;</code>
      */
 
     int getFloorOpenTimeMapOrThrow(
         int key);
 
     /**
-     * <pre>
-     * OK
-     * </pre>
-     *
-     * <code>uint32 next_schedule_change_time = 3;</code>
-     * @return The nextScheduleChangeTime.
+     * <code>uint32 ABPDHMJNBKD = 8;</code>
+     * @return The aBPDHMJNBKD.
      */
-    int getNextScheduleChangeTime();
+    int getABPDHMJNBKD();
 
     /**
-     * <code>.TowerMonthlyBrief monthly_brief = 8;</code>
-     * @return Whether the monthlyBrief field is set.
+     * <code>uint32 tower_schedule_id = 9;</code>
+     * @return The towerScheduleId.
      */
-    boolean hasMonthlyBrief();
-    /**
-     * <code>.TowerMonthlyBrief monthly_brief = 8;</code>
-     * @return The monthlyBrief.
-     */
-    emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBrief getMonthlyBrief();
-    /**
-     * <code>.TowerMonthlyBrief monthly_brief = 8;</code>
-     */
-    emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBriefOrBuilder getMonthlyBriefOrBuilder();
+    int getTowerScheduleId();
 
     /**
-     * <code>repeated .TowerFloorRecord tower_floor_record_list = 5;</code>
+     * <code>bool is_first_interact = 10;</code>
+     * @return The isFirstInteract.
+     */
+    boolean getIsFirstInteract();
+
+    /**
+     * <code>int32 retcode = 11;</code>
+     * @return The retcode.
+     */
+    int getRetcode();
+
+    /**
+     * <code>uint32 valid_tower_record_num = 12;</code>
+     * @return The validTowerRecordNum.
+     */
+    int getValidTowerRecordNum();
+
+    /**
+     * <code>uint32 commemorative_reward_id = 13;</code>
+     * @return The commemorativeRewardId.
+     */
+    int getCommemorativeRewardId();
+
+    /**
+     * <code>bool is_finished_entrance_floor = 14;</code>
+     * @return The isFinishedEntranceFloor.
+     */
+    boolean getIsFinishedEntranceFloor();
+
+    /**
+     * <code>repeated .TowerFloorRecord tower_floor_record_list = 15;</code>
      */
     java.util.List<emu.grasscutter.net.proto.TowerFloorRecordOuterClass.TowerFloorRecord> 
         getTowerFloorRecordListList();
     /**
-     * <code>repeated .TowerFloorRecord tower_floor_record_list = 5;</code>
+     * <code>repeated .TowerFloorRecord tower_floor_record_list = 15;</code>
      */
     emu.grasscutter.net.proto.TowerFloorRecordOuterClass.TowerFloorRecord getTowerFloorRecordList(int index);
     /**
-     * <code>repeated .TowerFloorRecord tower_floor_record_list = 5;</code>
+     * <code>repeated .TowerFloorRecord tower_floor_record_list = 15;</code>
      */
     int getTowerFloorRecordListCount();
     /**
-     * <code>repeated .TowerFloorRecord tower_floor_record_list = 5;</code>
+     * <code>repeated .TowerFloorRecord tower_floor_record_list = 15;</code>
      */
     java.util.List<? extends emu.grasscutter.net.proto.TowerFloorRecordOuterClass.TowerFloorRecordOrBuilder> 
         getTowerFloorRecordListOrBuilderList();
     /**
-     * <code>repeated .TowerFloorRecord tower_floor_record_list = 5;</code>
+     * <code>repeated .TowerFloorRecord tower_floor_record_list = 15;</code>
      */
     emu.grasscutter.net.proto.TowerFloorRecordOuterClass.TowerFloorRecordOrBuilder getTowerFloorRecordListOrBuilder(
         int index);
 
     /**
-     * <code>uint32 schedule_start_time = 1082;</code>
-     * @return The scheduleStartTime.
-     */
-    int getScheduleStartTime();
-
-    /**
-     * <code>.TowerMonthlyBrief last_schedule_monthly_brief = 1040;</code>
+     * <code>.TowerMonthlyBrief last_schedule_monthly_brief = 598;</code>
      * @return Whether the lastScheduleMonthlyBrief field is set.
      */
     boolean hasLastScheduleMonthlyBrief();
     /**
-     * <code>.TowerMonthlyBrief last_schedule_monthly_brief = 1040;</code>
+     * <code>.TowerMonthlyBrief last_schedule_monthly_brief = 598;</code>
      * @return The lastScheduleMonthlyBrief.
      */
     emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBrief getLastScheduleMonthlyBrief();
     /**
-     * <code>.TowerMonthlyBrief last_schedule_monthly_brief = 1040;</code>
+     * <code>.TowerMonthlyBrief last_schedule_monthly_brief = 598;</code>
      */
     emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBriefOrBuilder getLastScheduleMonthlyBriefOrBuilder();
+
+    /**
+     * <code>uint32 schedule_start_time = 1008;</code>
+     * @return The scheduleStartTime.
+     */
+    int getScheduleStartTime();
   }
   /**
    * <pre>
-   * 4.7.0
-   * CmdId: 2253
+   * CmdId: 22979
    * </pre>
    *
    * Protobuf type {@code TowerAllDataRsp}
@@ -288,9 +263,9 @@ public final class TowerAllDataRspOuterClass {
     protected com.google.protobuf.MapField internalGetMapField(
         int number) {
       switch (number) {
-        case 14:
+        case 4:
           return internalGetSkipFloorGrantedRewardItemMap();
-        case 15:
+        case 7:
           return internalGetFloorOpenTimeMap();
         default:
           throw new RuntimeException(
@@ -305,47 +280,21 @@ public final class TowerAllDataRspOuterClass {
               emu.grasscutter.net.proto.TowerAllDataRspOuterClass.TowerAllDataRsp.class, emu.grasscutter.net.proto.TowerAllDataRspOuterClass.TowerAllDataRsp.Builder.class);
     }
 
-    public static final int TOWER_SCHEDULE_ID_FIELD_NUMBER = 4;
-    private int towerScheduleId_;
+    public static final int NEXT_SCHEDULE_CHANGE_TIME_FIELD_NUMBER = 1;
+    private int nextScheduleChangeTime_;
     /**
-     * <code>uint32 tower_schedule_id = 4;</code>
-     * @return The towerScheduleId.
+     * <code>uint32 next_schedule_change_time = 1;</code>
+     * @return The nextScheduleChangeTime.
      */
     @java.lang.Override
-    public int getTowerScheduleId() {
-      return towerScheduleId_;
+    public int getNextScheduleChangeTime() {
+      return nextScheduleChangeTime_;
     }
 
-    public static final int IS_FINISHED_ENTRANCE_FLOOR_FIELD_NUMBER = 10;
-    private boolean isFinishedEntranceFloor_;
-    /**
-     * <code>bool is_finished_entrance_floor = 10;</code>
-     * @return The isFinishedEntranceFloor.
-     */
-    @java.lang.Override
-    public boolean getIsFinishedEntranceFloor() {
-      return isFinishedEntranceFloor_;
-    }
-
-    public static final int VALID_FLOOR_RECORD_LIST_FIELD_NUMBER = 6;
-    private int validFloorRecordList_;
-    /**
-     * <pre>
-     * 1 SUS
-     * </pre>
-     *
-     * <code>uint32 valid_floor_record_list = 6;</code>
-     * @return The validFloorRecordList.
-     */
-    @java.lang.Override
-    public int getValidFloorRecordList() {
-      return validFloorRecordList_;
-    }
-
-    public static final int CUR_LEVEL_RECORD_FIELD_NUMBER = 1;
+    public static final int CUR_LEVEL_RECORD_FIELD_NUMBER = 2;
     private emu.grasscutter.net.proto.TowerCurLevelRecordOuterClass.TowerCurLevelRecord curLevelRecord_;
     /**
-     * <code>.TowerCurLevelRecord cur_level_record = 1;</code>
+     * <code>.TowerCurLevelRecord cur_level_record = 2;</code>
      * @return Whether the curLevelRecord field is set.
      */
     @java.lang.Override
@@ -353,7 +302,7 @@ public final class TowerAllDataRspOuterClass {
       return curLevelRecord_ != null;
     }
     /**
-     * <code>.TowerCurLevelRecord cur_level_record = 1;</code>
+     * <code>.TowerCurLevelRecord cur_level_record = 2;</code>
      * @return The curLevelRecord.
      */
     @java.lang.Override
@@ -361,25 +310,25 @@ public final class TowerAllDataRspOuterClass {
       return curLevelRecord_ == null ? emu.grasscutter.net.proto.TowerCurLevelRecordOuterClass.TowerCurLevelRecord.getDefaultInstance() : curLevelRecord_;
     }
     /**
-     * <code>.TowerCurLevelRecord cur_level_record = 1;</code>
+     * <code>.TowerCurLevelRecord cur_level_record = 2;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.TowerCurLevelRecordOuterClass.TowerCurLevelRecordOrBuilder getCurLevelRecordOrBuilder() {
       return getCurLevelRecord();
     }
 
-    public static final int RETCODE_FIELD_NUMBER = 11;
-    private int retcode_;
+    public static final int LICMPIDMCOI_FIELD_NUMBER = 3;
+    private int lICMPIDMCOI_;
     /**
-     * <code>int32 retcode = 11;</code>
-     * @return The retcode.
+     * <code>uint32 LICMPIDMCOI = 3;</code>
+     * @return The lICMPIDMCOI.
      */
     @java.lang.Override
-    public int getRetcode() {
-      return retcode_;
+    public int getLICMPIDMCOI() {
+      return lICMPIDMCOI_;
     }
 
-    public static final int SKIP_FLOOR_GRANTED_REWARD_ITEM_MAP_FIELD_NUMBER = 14;
+    public static final int SKIP_FLOOR_GRANTED_REWARD_ITEM_MAP_FIELD_NUMBER = 4;
     private static final class SkipFloorGrantedRewardItemMapDefaultEntryHolder {
       static final com.google.protobuf.MapEntry<
           java.lang.Integer, java.lang.Integer> defaultEntry =
@@ -406,11 +355,7 @@ public final class TowerAllDataRspOuterClass {
       return internalGetSkipFloorGrantedRewardItemMap().getMap().size();
     }
     /**
-     * <pre>
-     * sus
-     * </pre>
-     *
-     * <code>map&lt;uint32, uint32&gt; skip_floor_granted_reward_item_map = 14;</code>
+     * <code>map&lt;uint32, uint32&gt; skip_floor_granted_reward_item_map = 4;</code>
      */
 
     @java.lang.Override
@@ -428,11 +373,7 @@ public final class TowerAllDataRspOuterClass {
       return getSkipFloorGrantedRewardItemMapMap();
     }
     /**
-     * <pre>
-     * sus
-     * </pre>
-     *
-     * <code>map&lt;uint32, uint32&gt; skip_floor_granted_reward_item_map = 14;</code>
+     * <code>map&lt;uint32, uint32&gt; skip_floor_granted_reward_item_map = 4;</code>
      */
     @java.lang.Override
 
@@ -440,11 +381,7 @@ public final class TowerAllDataRspOuterClass {
       return internalGetSkipFloorGrantedRewardItemMap().getMap();
     }
     /**
-     * <pre>
-     * sus
-     * </pre>
-     *
-     * <code>map&lt;uint32, uint32&gt; skip_floor_granted_reward_item_map = 14;</code>
+     * <code>map&lt;uint32, uint32&gt; skip_floor_granted_reward_item_map = 4;</code>
      */
     @java.lang.Override
 
@@ -457,11 +394,7 @@ public final class TowerAllDataRspOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
-     * <pre>
-     * sus
-     * </pre>
-     *
-     * <code>map&lt;uint32, uint32&gt; skip_floor_granted_reward_item_map = 14;</code>
+     * <code>map&lt;uint32, uint32&gt; skip_floor_granted_reward_item_map = 4;</code>
      */
     @java.lang.Override
 
@@ -476,18 +409,44 @@ public final class TowerAllDataRspOuterClass {
       return map.get(key);
     }
 
-    public static final int IS_FIRST_INTERACT_FIELD_NUMBER = 7;
-    private boolean isFirstInteract_;
+    public static final int VALID_FLOOR_RECORD_LIST_FIELD_NUMBER = 5;
+    private int validFloorRecordList_;
     /**
-     * <code>bool is_first_interact = 7;</code>
-     * @return The isFirstInteract.
+     * <code>uint32 valid_floor_record_list = 5;</code>
+     * @return The validFloorRecordList.
      */
     @java.lang.Override
-    public boolean getIsFirstInteract() {
-      return isFirstInteract_;
+    public int getValidFloorRecordList() {
+      return validFloorRecordList_;
     }
 
-    public static final int FLOOR_OPEN_TIME_MAP_FIELD_NUMBER = 15;
+    public static final int MONTHLY_BRIEF_FIELD_NUMBER = 6;
+    private emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBrief monthlyBrief_;
+    /**
+     * <code>.TowerMonthlyBrief monthly_brief = 6;</code>
+     * @return Whether the monthlyBrief field is set.
+     */
+    @java.lang.Override
+    public boolean hasMonthlyBrief() {
+      return monthlyBrief_ != null;
+    }
+    /**
+     * <code>.TowerMonthlyBrief monthly_brief = 6;</code>
+     * @return The monthlyBrief.
+     */
+    @java.lang.Override
+    public emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBrief getMonthlyBrief() {
+      return monthlyBrief_ == null ? emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBrief.getDefaultInstance() : monthlyBrief_;
+    }
+    /**
+     * <code>.TowerMonthlyBrief monthly_brief = 6;</code>
+     */
+    @java.lang.Override
+    public emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBriefOrBuilder getMonthlyBriefOrBuilder() {
+      return getMonthlyBrief();
+    }
+
+    public static final int FLOOR_OPEN_TIME_MAP_FIELD_NUMBER = 7;
     private static final class FloorOpenTimeMapDefaultEntryHolder {
       static final com.google.protobuf.MapEntry<
           java.lang.Integer, java.lang.Integer> defaultEntry =
@@ -514,11 +473,7 @@ public final class TowerAllDataRspOuterClass {
       return internalGetFloorOpenTimeMap().getMap().size();
     }
     /**
-     * <pre>
-     * sus
-     * </pre>
-     *
-     * <code>map&lt;uint32, uint32&gt; floor_open_time_map = 15;</code>
+     * <code>map&lt;uint32, uint32&gt; floor_open_time_map = 7;</code>
      */
 
     @java.lang.Override
@@ -536,11 +491,7 @@ public final class TowerAllDataRspOuterClass {
       return getFloorOpenTimeMapMap();
     }
     /**
-     * <pre>
-     * sus
-     * </pre>
-     *
-     * <code>map&lt;uint32, uint32&gt; floor_open_time_map = 15;</code>
+     * <code>map&lt;uint32, uint32&gt; floor_open_time_map = 7;</code>
      */
     @java.lang.Override
 
@@ -548,11 +499,7 @@ public final class TowerAllDataRspOuterClass {
       return internalGetFloorOpenTimeMap().getMap();
     }
     /**
-     * <pre>
-     * sus
-     * </pre>
-     *
-     * <code>map&lt;uint32, uint32&gt; floor_open_time_map = 15;</code>
+     * <code>map&lt;uint32, uint32&gt; floor_open_time_map = 7;</code>
      */
     @java.lang.Override
 
@@ -565,11 +512,7 @@ public final class TowerAllDataRspOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
-     * <pre>
-     * sus
-     * </pre>
-     *
-     * <code>map&lt;uint32, uint32&gt; floor_open_time_map = 15;</code>
+     * <code>map&lt;uint32, uint32&gt; floor_open_time_map = 7;</code>
      */
     @java.lang.Override
 
@@ -584,58 +527,94 @@ public final class TowerAllDataRspOuterClass {
       return map.get(key);
     }
 
-    public static final int NEXT_SCHEDULE_CHANGE_TIME_FIELD_NUMBER = 3;
-    private int nextScheduleChangeTime_;
+    public static final int ABPDHMJNBKD_FIELD_NUMBER = 8;
+    private int aBPDHMJNBKD_;
     /**
-     * <pre>
-     * OK
-     * </pre>
-     *
-     * <code>uint32 next_schedule_change_time = 3;</code>
-     * @return The nextScheduleChangeTime.
+     * <code>uint32 ABPDHMJNBKD = 8;</code>
+     * @return The aBPDHMJNBKD.
      */
     @java.lang.Override
-    public int getNextScheduleChangeTime() {
-      return nextScheduleChangeTime_;
+    public int getABPDHMJNBKD() {
+      return aBPDHMJNBKD_;
     }
 
-    public static final int MONTHLY_BRIEF_FIELD_NUMBER = 8;
-    private emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBrief monthlyBrief_;
+    public static final int TOWER_SCHEDULE_ID_FIELD_NUMBER = 9;
+    private int towerScheduleId_;
     /**
-     * <code>.TowerMonthlyBrief monthly_brief = 8;</code>
-     * @return Whether the monthlyBrief field is set.
+     * <code>uint32 tower_schedule_id = 9;</code>
+     * @return The towerScheduleId.
      */
     @java.lang.Override
-    public boolean hasMonthlyBrief() {
-      return monthlyBrief_ != null;
-    }
-    /**
-     * <code>.TowerMonthlyBrief monthly_brief = 8;</code>
-     * @return The monthlyBrief.
-     */
-    @java.lang.Override
-    public emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBrief getMonthlyBrief() {
-      return monthlyBrief_ == null ? emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBrief.getDefaultInstance() : monthlyBrief_;
-    }
-    /**
-     * <code>.TowerMonthlyBrief monthly_brief = 8;</code>
-     */
-    @java.lang.Override
-    public emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBriefOrBuilder getMonthlyBriefOrBuilder() {
-      return getMonthlyBrief();
+    public int getTowerScheduleId() {
+      return towerScheduleId_;
     }
 
-    public static final int TOWER_FLOOR_RECORD_LIST_FIELD_NUMBER = 5;
+    public static final int IS_FIRST_INTERACT_FIELD_NUMBER = 10;
+    private boolean isFirstInteract_;
+    /**
+     * <code>bool is_first_interact = 10;</code>
+     * @return The isFirstInteract.
+     */
+    @java.lang.Override
+    public boolean getIsFirstInteract() {
+      return isFirstInteract_;
+    }
+
+    public static final int RETCODE_FIELD_NUMBER = 11;
+    private int retcode_;
+    /**
+     * <code>int32 retcode = 11;</code>
+     * @return The retcode.
+     */
+    @java.lang.Override
+    public int getRetcode() {
+      return retcode_;
+    }
+
+    public static final int VALID_TOWER_RECORD_NUM_FIELD_NUMBER = 12;
+    private int validTowerRecordNum_;
+    /**
+     * <code>uint32 valid_tower_record_num = 12;</code>
+     * @return The validTowerRecordNum.
+     */
+    @java.lang.Override
+    public int getValidTowerRecordNum() {
+      return validTowerRecordNum_;
+    }
+
+    public static final int COMMEMORATIVE_REWARD_ID_FIELD_NUMBER = 13;
+    private int commemorativeRewardId_;
+    /**
+     * <code>uint32 commemorative_reward_id = 13;</code>
+     * @return The commemorativeRewardId.
+     */
+    @java.lang.Override
+    public int getCommemorativeRewardId() {
+      return commemorativeRewardId_;
+    }
+
+    public static final int IS_FINISHED_ENTRANCE_FLOOR_FIELD_NUMBER = 14;
+    private boolean isFinishedEntranceFloor_;
+    /**
+     * <code>bool is_finished_entrance_floor = 14;</code>
+     * @return The isFinishedEntranceFloor.
+     */
+    @java.lang.Override
+    public boolean getIsFinishedEntranceFloor() {
+      return isFinishedEntranceFloor_;
+    }
+
+    public static final int TOWER_FLOOR_RECORD_LIST_FIELD_NUMBER = 15;
     private java.util.List<emu.grasscutter.net.proto.TowerFloorRecordOuterClass.TowerFloorRecord> towerFloorRecordList_;
     /**
-     * <code>repeated .TowerFloorRecord tower_floor_record_list = 5;</code>
+     * <code>repeated .TowerFloorRecord tower_floor_record_list = 15;</code>
      */
     @java.lang.Override
     public java.util.List<emu.grasscutter.net.proto.TowerFloorRecordOuterClass.TowerFloorRecord> getTowerFloorRecordListList() {
       return towerFloorRecordList_;
     }
     /**
-     * <code>repeated .TowerFloorRecord tower_floor_record_list = 5;</code>
+     * <code>repeated .TowerFloorRecord tower_floor_record_list = 15;</code>
      */
     @java.lang.Override
     public java.util.List<? extends emu.grasscutter.net.proto.TowerFloorRecordOuterClass.TowerFloorRecordOrBuilder> 
@@ -643,21 +622,21 @@ public final class TowerAllDataRspOuterClass {
       return towerFloorRecordList_;
     }
     /**
-     * <code>repeated .TowerFloorRecord tower_floor_record_list = 5;</code>
+     * <code>repeated .TowerFloorRecord tower_floor_record_list = 15;</code>
      */
     @java.lang.Override
     public int getTowerFloorRecordListCount() {
       return towerFloorRecordList_.size();
     }
     /**
-     * <code>repeated .TowerFloorRecord tower_floor_record_list = 5;</code>
+     * <code>repeated .TowerFloorRecord tower_floor_record_list = 15;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.TowerFloorRecordOuterClass.TowerFloorRecord getTowerFloorRecordList(int index) {
       return towerFloorRecordList_.get(index);
     }
     /**
-     * <code>repeated .TowerFloorRecord tower_floor_record_list = 5;</code>
+     * <code>repeated .TowerFloorRecord tower_floor_record_list = 15;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.TowerFloorRecordOuterClass.TowerFloorRecordOrBuilder getTowerFloorRecordListOrBuilder(
@@ -665,21 +644,10 @@ public final class TowerAllDataRspOuterClass {
       return towerFloorRecordList_.get(index);
     }
 
-    public static final int SCHEDULE_START_TIME_FIELD_NUMBER = 1082;
-    private int scheduleStartTime_;
-    /**
-     * <code>uint32 schedule_start_time = 1082;</code>
-     * @return The scheduleStartTime.
-     */
-    @java.lang.Override
-    public int getScheduleStartTime() {
-      return scheduleStartTime_;
-    }
-
-    public static final int LAST_SCHEDULE_MONTHLY_BRIEF_FIELD_NUMBER = 1040;
+    public static final int LAST_SCHEDULE_MONTHLY_BRIEF_FIELD_NUMBER = 598;
     private emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBrief lastScheduleMonthlyBrief_;
     /**
-     * <code>.TowerMonthlyBrief last_schedule_monthly_brief = 1040;</code>
+     * <code>.TowerMonthlyBrief last_schedule_monthly_brief = 598;</code>
      * @return Whether the lastScheduleMonthlyBrief field is set.
      */
     @java.lang.Override
@@ -687,7 +655,7 @@ public final class TowerAllDataRspOuterClass {
       return lastScheduleMonthlyBrief_ != null;
     }
     /**
-     * <code>.TowerMonthlyBrief last_schedule_monthly_brief = 1040;</code>
+     * <code>.TowerMonthlyBrief last_schedule_monthly_brief = 598;</code>
      * @return The lastScheduleMonthlyBrief.
      */
     @java.lang.Override
@@ -695,11 +663,22 @@ public final class TowerAllDataRspOuterClass {
       return lastScheduleMonthlyBrief_ == null ? emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBrief.getDefaultInstance() : lastScheduleMonthlyBrief_;
     }
     /**
-     * <code>.TowerMonthlyBrief last_schedule_monthly_brief = 1040;</code>
+     * <code>.TowerMonthlyBrief last_schedule_monthly_brief = 598;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBriefOrBuilder getLastScheduleMonthlyBriefOrBuilder() {
       return getLastScheduleMonthlyBrief();
+    }
+
+    public static final int SCHEDULE_START_TIME_FIELD_NUMBER = 1008;
+    private int scheduleStartTime_;
+    /**
+     * <code>uint32 schedule_start_time = 1008;</code>
+     * @return The scheduleStartTime.
+     */
+    @java.lang.Override
+    public int getScheduleStartTime() {
+      return scheduleStartTime_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -716,50 +695,62 @@ public final class TowerAllDataRspOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (curLevelRecord_ != null) {
-        output.writeMessage(1, getCurLevelRecord());
-      }
       if (nextScheduleChangeTime_ != 0) {
-        output.writeUInt32(3, nextScheduleChangeTime_);
+        output.writeUInt32(1, nextScheduleChangeTime_);
       }
-      if (towerScheduleId_ != 0) {
-        output.writeUInt32(4, towerScheduleId_);
+      if (curLevelRecord_ != null) {
+        output.writeMessage(2, getCurLevelRecord());
       }
-      for (int i = 0; i < towerFloorRecordList_.size(); i++) {
-        output.writeMessage(5, towerFloorRecordList_.get(i));
-      }
-      if (validFloorRecordList_ != 0) {
-        output.writeUInt32(6, validFloorRecordList_);
-      }
-      if (isFirstInteract_ != false) {
-        output.writeBool(7, isFirstInteract_);
-      }
-      if (monthlyBrief_ != null) {
-        output.writeMessage(8, getMonthlyBrief());
-      }
-      if (isFinishedEntranceFloor_ != false) {
-        output.writeBool(10, isFinishedEntranceFloor_);
-      }
-      if (retcode_ != 0) {
-        output.writeInt32(11, retcode_);
+      if (lICMPIDMCOI_ != 0) {
+        output.writeUInt32(3, lICMPIDMCOI_);
       }
       com.google.protobuf.GeneratedMessageV3
         .serializeIntegerMapTo(
           output,
           internalGetSkipFloorGrantedRewardItemMap(),
           SkipFloorGrantedRewardItemMapDefaultEntryHolder.defaultEntry,
-          14);
+          4);
+      if (validFloorRecordList_ != 0) {
+        output.writeUInt32(5, validFloorRecordList_);
+      }
+      if (monthlyBrief_ != null) {
+        output.writeMessage(6, getMonthlyBrief());
+      }
       com.google.protobuf.GeneratedMessageV3
         .serializeIntegerMapTo(
           output,
           internalGetFloorOpenTimeMap(),
           FloorOpenTimeMapDefaultEntryHolder.defaultEntry,
-          15);
+          7);
+      if (aBPDHMJNBKD_ != 0) {
+        output.writeUInt32(8, aBPDHMJNBKD_);
+      }
+      if (towerScheduleId_ != 0) {
+        output.writeUInt32(9, towerScheduleId_);
+      }
+      if (isFirstInteract_ != false) {
+        output.writeBool(10, isFirstInteract_);
+      }
+      if (retcode_ != 0) {
+        output.writeInt32(11, retcode_);
+      }
+      if (validTowerRecordNum_ != 0) {
+        output.writeUInt32(12, validTowerRecordNum_);
+      }
+      if (commemorativeRewardId_ != 0) {
+        output.writeUInt32(13, commemorativeRewardId_);
+      }
+      if (isFinishedEntranceFloor_ != false) {
+        output.writeBool(14, isFinishedEntranceFloor_);
+      }
+      for (int i = 0; i < towerFloorRecordList_.size(); i++) {
+        output.writeMessage(15, towerFloorRecordList_.get(i));
+      }
       if (lastScheduleMonthlyBrief_ != null) {
-        output.writeMessage(1040, getLastScheduleMonthlyBrief());
+        output.writeMessage(598, getLastScheduleMonthlyBrief());
       }
       if (scheduleStartTime_ != 0) {
-        output.writeUInt32(1082, scheduleStartTime_);
+        output.writeUInt32(1008, scheduleStartTime_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -770,41 +761,17 @@ public final class TowerAllDataRspOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (curLevelRecord_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getCurLevelRecord());
-      }
       if (nextScheduleChangeTime_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(3, nextScheduleChangeTime_);
+          .computeUInt32Size(1, nextScheduleChangeTime_);
       }
-      if (towerScheduleId_ != 0) {
+      if (curLevelRecord_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(4, towerScheduleId_);
+          .computeMessageSize(2, getCurLevelRecord());
       }
-      for (int i = 0; i < towerFloorRecordList_.size(); i++) {
+      if (lICMPIDMCOI_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, towerFloorRecordList_.get(i));
-      }
-      if (validFloorRecordList_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(6, validFloorRecordList_);
-      }
-      if (isFirstInteract_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(7, isFirstInteract_);
-      }
-      if (monthlyBrief_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(8, getMonthlyBrief());
-      }
-      if (isFinishedEntranceFloor_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(10, isFinishedEntranceFloor_);
-      }
-      if (retcode_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(11, retcode_);
+          .computeUInt32Size(3, lICMPIDMCOI_);
       }
       for (java.util.Map.Entry<java.lang.Integer, java.lang.Integer> entry
            : internalGetSkipFloorGrantedRewardItemMap().getMap().entrySet()) {
@@ -814,7 +781,15 @@ public final class TowerAllDataRspOuterClass {
             .setValue(entry.getValue())
             .build();
         size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(14, skipFloorGrantedRewardItemMap__);
+            .computeMessageSize(4, skipFloorGrantedRewardItemMap__);
+      }
+      if (validFloorRecordList_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(5, validFloorRecordList_);
+      }
+      if (monthlyBrief_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getMonthlyBrief());
       }
       for (java.util.Map.Entry<java.lang.Integer, java.lang.Integer> entry
            : internalGetFloorOpenTimeMap().getMap().entrySet()) {
@@ -824,15 +799,47 @@ public final class TowerAllDataRspOuterClass {
             .setValue(entry.getValue())
             .build();
         size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(15, floorOpenTimeMap__);
+            .computeMessageSize(7, floorOpenTimeMap__);
+      }
+      if (aBPDHMJNBKD_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(8, aBPDHMJNBKD_);
+      }
+      if (towerScheduleId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(9, towerScheduleId_);
+      }
+      if (isFirstInteract_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(10, isFirstInteract_);
+      }
+      if (retcode_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(11, retcode_);
+      }
+      if (validTowerRecordNum_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(12, validTowerRecordNum_);
+      }
+      if (commemorativeRewardId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(13, commemorativeRewardId_);
+      }
+      if (isFinishedEntranceFloor_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(14, isFinishedEntranceFloor_);
+      }
+      for (int i = 0; i < towerFloorRecordList_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(15, towerFloorRecordList_.get(i));
       }
       if (lastScheduleMonthlyBrief_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1040, getLastScheduleMonthlyBrief());
+          .computeMessageSize(598, getLastScheduleMonthlyBrief());
       }
       if (scheduleStartTime_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(1082, scheduleStartTime_);
+          .computeUInt32Size(1008, scheduleStartTime_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -849,41 +856,49 @@ public final class TowerAllDataRspOuterClass {
       }
       emu.grasscutter.net.proto.TowerAllDataRspOuterClass.TowerAllDataRsp other = (emu.grasscutter.net.proto.TowerAllDataRspOuterClass.TowerAllDataRsp) obj;
 
-      if (getTowerScheduleId()
-          != other.getTowerScheduleId()) return false;
-      if (getIsFinishedEntranceFloor()
-          != other.getIsFinishedEntranceFloor()) return false;
-      if (getValidFloorRecordList()
-          != other.getValidFloorRecordList()) return false;
+      if (getNextScheduleChangeTime()
+          != other.getNextScheduleChangeTime()) return false;
       if (hasCurLevelRecord() != other.hasCurLevelRecord()) return false;
       if (hasCurLevelRecord()) {
         if (!getCurLevelRecord()
             .equals(other.getCurLevelRecord())) return false;
       }
-      if (getRetcode()
-          != other.getRetcode()) return false;
+      if (getLICMPIDMCOI()
+          != other.getLICMPIDMCOI()) return false;
       if (!internalGetSkipFloorGrantedRewardItemMap().equals(
           other.internalGetSkipFloorGrantedRewardItemMap())) return false;
-      if (getIsFirstInteract()
-          != other.getIsFirstInteract()) return false;
-      if (!internalGetFloorOpenTimeMap().equals(
-          other.internalGetFloorOpenTimeMap())) return false;
-      if (getNextScheduleChangeTime()
-          != other.getNextScheduleChangeTime()) return false;
+      if (getValidFloorRecordList()
+          != other.getValidFloorRecordList()) return false;
       if (hasMonthlyBrief() != other.hasMonthlyBrief()) return false;
       if (hasMonthlyBrief()) {
         if (!getMonthlyBrief()
             .equals(other.getMonthlyBrief())) return false;
       }
+      if (!internalGetFloorOpenTimeMap().equals(
+          other.internalGetFloorOpenTimeMap())) return false;
+      if (getABPDHMJNBKD()
+          != other.getABPDHMJNBKD()) return false;
+      if (getTowerScheduleId()
+          != other.getTowerScheduleId()) return false;
+      if (getIsFirstInteract()
+          != other.getIsFirstInteract()) return false;
+      if (getRetcode()
+          != other.getRetcode()) return false;
+      if (getValidTowerRecordNum()
+          != other.getValidTowerRecordNum()) return false;
+      if (getCommemorativeRewardId()
+          != other.getCommemorativeRewardId()) return false;
+      if (getIsFinishedEntranceFloor()
+          != other.getIsFinishedEntranceFloor()) return false;
       if (!getTowerFloorRecordListList()
           .equals(other.getTowerFloorRecordListList())) return false;
-      if (getScheduleStartTime()
-          != other.getScheduleStartTime()) return false;
       if (hasLastScheduleMonthlyBrief() != other.hasLastScheduleMonthlyBrief()) return false;
       if (hasLastScheduleMonthlyBrief()) {
         if (!getLastScheduleMonthlyBrief()
             .equals(other.getLastScheduleMonthlyBrief())) return false;
       }
+      if (getScheduleStartTime()
+          != other.getScheduleStartTime()) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -895,46 +910,54 @@ public final class TowerAllDataRspOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + TOWER_SCHEDULE_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getTowerScheduleId();
-      hash = (37 * hash) + IS_FINISHED_ENTRANCE_FLOOR_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getIsFinishedEntranceFloor());
-      hash = (37 * hash) + VALID_FLOOR_RECORD_LIST_FIELD_NUMBER;
-      hash = (53 * hash) + getValidFloorRecordList();
+      hash = (37 * hash) + NEXT_SCHEDULE_CHANGE_TIME_FIELD_NUMBER;
+      hash = (53 * hash) + getNextScheduleChangeTime();
       if (hasCurLevelRecord()) {
         hash = (37 * hash) + CUR_LEVEL_RECORD_FIELD_NUMBER;
         hash = (53 * hash) + getCurLevelRecord().hashCode();
       }
-      hash = (37 * hash) + RETCODE_FIELD_NUMBER;
-      hash = (53 * hash) + getRetcode();
+      hash = (37 * hash) + LICMPIDMCOI_FIELD_NUMBER;
+      hash = (53 * hash) + getLICMPIDMCOI();
       if (!internalGetSkipFloorGrantedRewardItemMap().getMap().isEmpty()) {
         hash = (37 * hash) + SKIP_FLOOR_GRANTED_REWARD_ITEM_MAP_FIELD_NUMBER;
         hash = (53 * hash) + internalGetSkipFloorGrantedRewardItemMap().hashCode();
       }
-      hash = (37 * hash) + IS_FIRST_INTERACT_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getIsFirstInteract());
-      if (!internalGetFloorOpenTimeMap().getMap().isEmpty()) {
-        hash = (37 * hash) + FLOOR_OPEN_TIME_MAP_FIELD_NUMBER;
-        hash = (53 * hash) + internalGetFloorOpenTimeMap().hashCode();
-      }
-      hash = (37 * hash) + NEXT_SCHEDULE_CHANGE_TIME_FIELD_NUMBER;
-      hash = (53 * hash) + getNextScheduleChangeTime();
+      hash = (37 * hash) + VALID_FLOOR_RECORD_LIST_FIELD_NUMBER;
+      hash = (53 * hash) + getValidFloorRecordList();
       if (hasMonthlyBrief()) {
         hash = (37 * hash) + MONTHLY_BRIEF_FIELD_NUMBER;
         hash = (53 * hash) + getMonthlyBrief().hashCode();
       }
+      if (!internalGetFloorOpenTimeMap().getMap().isEmpty()) {
+        hash = (37 * hash) + FLOOR_OPEN_TIME_MAP_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetFloorOpenTimeMap().hashCode();
+      }
+      hash = (37 * hash) + ABPDHMJNBKD_FIELD_NUMBER;
+      hash = (53 * hash) + getABPDHMJNBKD();
+      hash = (37 * hash) + TOWER_SCHEDULE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getTowerScheduleId();
+      hash = (37 * hash) + IS_FIRST_INTERACT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsFirstInteract());
+      hash = (37 * hash) + RETCODE_FIELD_NUMBER;
+      hash = (53 * hash) + getRetcode();
+      hash = (37 * hash) + VALID_TOWER_RECORD_NUM_FIELD_NUMBER;
+      hash = (53 * hash) + getValidTowerRecordNum();
+      hash = (37 * hash) + COMMEMORATIVE_REWARD_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getCommemorativeRewardId();
+      hash = (37 * hash) + IS_FINISHED_ENTRANCE_FLOOR_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsFinishedEntranceFloor());
       if (getTowerFloorRecordListCount() > 0) {
         hash = (37 * hash) + TOWER_FLOOR_RECORD_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getTowerFloorRecordListList().hashCode();
       }
-      hash = (37 * hash) + SCHEDULE_START_TIME_FIELD_NUMBER;
-      hash = (53 * hash) + getScheduleStartTime();
       if (hasLastScheduleMonthlyBrief()) {
         hash = (37 * hash) + LAST_SCHEDULE_MONTHLY_BRIEF_FIELD_NUMBER;
         hash = (53 * hash) + getLastScheduleMonthlyBrief().hashCode();
       }
+      hash = (37 * hash) + SCHEDULE_START_TIME_FIELD_NUMBER;
+      hash = (53 * hash) + getScheduleStartTime();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1032,8 +1055,7 @@ public final class TowerAllDataRspOuterClass {
     }
     /**
      * <pre>
-     * 4.7.0
-     * CmdId: 2253
+     * CmdId: 22979
      * </pre>
      *
      * Protobuf type {@code TowerAllDataRsp}
@@ -1051,9 +1073,9 @@ public final class TowerAllDataRspOuterClass {
       protected com.google.protobuf.MapField internalGetMapField(
           int number) {
         switch (number) {
-          case 14:
+          case 4:
             return internalGetSkipFloorGrantedRewardItemMap();
-          case 15:
+          case 7:
             return internalGetFloorOpenTimeMap();
           default:
             throw new RuntimeException(
@@ -1064,9 +1086,9 @@ public final class TowerAllDataRspOuterClass {
       protected com.google.protobuf.MapField internalGetMutableMapField(
           int number) {
         switch (number) {
-          case 14:
+          case 4:
             return internalGetMutableSkipFloorGrantedRewardItemMap();
-          case 15:
+          case 7:
             return internalGetMutableFloorOpenTimeMap();
           default:
             throw new RuntimeException(
@@ -1094,11 +1116,7 @@ public final class TowerAllDataRspOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        towerScheduleId_ = 0;
-
-        isFinishedEntranceFloor_ = false;
-
-        validFloorRecordList_ = 0;
+        nextScheduleChangeTime_ = 0;
 
         if (curLevelRecordBuilder_ == null) {
           curLevelRecord_ = null;
@@ -1106,13 +1124,10 @@ public final class TowerAllDataRspOuterClass {
           curLevelRecord_ = null;
           curLevelRecordBuilder_ = null;
         }
-        retcode_ = 0;
+        lICMPIDMCOI_ = 0;
 
         internalGetMutableSkipFloorGrantedRewardItemMap().clear();
-        isFirstInteract_ = false;
-
-        internalGetMutableFloorOpenTimeMap().clear();
-        nextScheduleChangeTime_ = 0;
+        validFloorRecordList_ = 0;
 
         if (monthlyBriefBuilder_ == null) {
           monthlyBrief_ = null;
@@ -1120,6 +1135,21 @@ public final class TowerAllDataRspOuterClass {
           monthlyBrief_ = null;
           monthlyBriefBuilder_ = null;
         }
+        internalGetMutableFloorOpenTimeMap().clear();
+        aBPDHMJNBKD_ = 0;
+
+        towerScheduleId_ = 0;
+
+        isFirstInteract_ = false;
+
+        retcode_ = 0;
+
+        validTowerRecordNum_ = 0;
+
+        commemorativeRewardId_ = 0;
+
+        isFinishedEntranceFloor_ = false;
+
         if (towerFloorRecordListBuilder_ == null) {
           towerFloorRecordList_ = java.util.Collections.emptyList();
         } else {
@@ -1127,14 +1157,14 @@ public final class TowerAllDataRspOuterClass {
           towerFloorRecordListBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000004);
-        scheduleStartTime_ = 0;
-
         if (lastScheduleMonthlyBriefBuilder_ == null) {
           lastScheduleMonthlyBrief_ = null;
         } else {
           lastScheduleMonthlyBrief_ = null;
           lastScheduleMonthlyBriefBuilder_ = null;
         }
+        scheduleStartTime_ = 0;
+
         return this;
       }
 
@@ -1162,26 +1192,30 @@ public final class TowerAllDataRspOuterClass {
       public emu.grasscutter.net.proto.TowerAllDataRspOuterClass.TowerAllDataRsp buildPartial() {
         emu.grasscutter.net.proto.TowerAllDataRspOuterClass.TowerAllDataRsp result = new emu.grasscutter.net.proto.TowerAllDataRspOuterClass.TowerAllDataRsp(this);
         int from_bitField0_ = bitField0_;
-        result.towerScheduleId_ = towerScheduleId_;
-        result.isFinishedEntranceFloor_ = isFinishedEntranceFloor_;
-        result.validFloorRecordList_ = validFloorRecordList_;
+        result.nextScheduleChangeTime_ = nextScheduleChangeTime_;
         if (curLevelRecordBuilder_ == null) {
           result.curLevelRecord_ = curLevelRecord_;
         } else {
           result.curLevelRecord_ = curLevelRecordBuilder_.build();
         }
-        result.retcode_ = retcode_;
+        result.lICMPIDMCOI_ = lICMPIDMCOI_;
         result.skipFloorGrantedRewardItemMap_ = internalGetSkipFloorGrantedRewardItemMap();
         result.skipFloorGrantedRewardItemMap_.makeImmutable();
-        result.isFirstInteract_ = isFirstInteract_;
-        result.floorOpenTimeMap_ = internalGetFloorOpenTimeMap();
-        result.floorOpenTimeMap_.makeImmutable();
-        result.nextScheduleChangeTime_ = nextScheduleChangeTime_;
+        result.validFloorRecordList_ = validFloorRecordList_;
         if (monthlyBriefBuilder_ == null) {
           result.monthlyBrief_ = monthlyBrief_;
         } else {
           result.monthlyBrief_ = monthlyBriefBuilder_.build();
         }
+        result.floorOpenTimeMap_ = internalGetFloorOpenTimeMap();
+        result.floorOpenTimeMap_.makeImmutable();
+        result.aBPDHMJNBKD_ = aBPDHMJNBKD_;
+        result.towerScheduleId_ = towerScheduleId_;
+        result.isFirstInteract_ = isFirstInteract_;
+        result.retcode_ = retcode_;
+        result.validTowerRecordNum_ = validTowerRecordNum_;
+        result.commemorativeRewardId_ = commemorativeRewardId_;
+        result.isFinishedEntranceFloor_ = isFinishedEntranceFloor_;
         if (towerFloorRecordListBuilder_ == null) {
           if (((bitField0_ & 0x00000004) != 0)) {
             towerFloorRecordList_ = java.util.Collections.unmodifiableList(towerFloorRecordList_);
@@ -1191,12 +1225,12 @@ public final class TowerAllDataRspOuterClass {
         } else {
           result.towerFloorRecordList_ = towerFloorRecordListBuilder_.build();
         }
-        result.scheduleStartTime_ = scheduleStartTime_;
         if (lastScheduleMonthlyBriefBuilder_ == null) {
           result.lastScheduleMonthlyBrief_ = lastScheduleMonthlyBrief_;
         } else {
           result.lastScheduleMonthlyBrief_ = lastScheduleMonthlyBriefBuilder_.build();
         }
+        result.scheduleStartTime_ = scheduleStartTime_;
         onBuilt();
         return result;
       }
@@ -1245,33 +1279,45 @@ public final class TowerAllDataRspOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.TowerAllDataRspOuterClass.TowerAllDataRsp other) {
         if (other == emu.grasscutter.net.proto.TowerAllDataRspOuterClass.TowerAllDataRsp.getDefaultInstance()) return this;
-        if (other.getTowerScheduleId() != 0) {
-          setTowerScheduleId(other.getTowerScheduleId());
-        }
-        if (other.getIsFinishedEntranceFloor() != false) {
-          setIsFinishedEntranceFloor(other.getIsFinishedEntranceFloor());
-        }
-        if (other.getValidFloorRecordList() != 0) {
-          setValidFloorRecordList(other.getValidFloorRecordList());
+        if (other.getNextScheduleChangeTime() != 0) {
+          setNextScheduleChangeTime(other.getNextScheduleChangeTime());
         }
         if (other.hasCurLevelRecord()) {
           mergeCurLevelRecord(other.getCurLevelRecord());
         }
-        if (other.getRetcode() != 0) {
-          setRetcode(other.getRetcode());
+        if (other.getLICMPIDMCOI() != 0) {
+          setLICMPIDMCOI(other.getLICMPIDMCOI());
         }
         internalGetMutableSkipFloorGrantedRewardItemMap().mergeFrom(
             other.internalGetSkipFloorGrantedRewardItemMap());
-        if (other.getIsFirstInteract() != false) {
-          setIsFirstInteract(other.getIsFirstInteract());
-        }
-        internalGetMutableFloorOpenTimeMap().mergeFrom(
-            other.internalGetFloorOpenTimeMap());
-        if (other.getNextScheduleChangeTime() != 0) {
-          setNextScheduleChangeTime(other.getNextScheduleChangeTime());
+        if (other.getValidFloorRecordList() != 0) {
+          setValidFloorRecordList(other.getValidFloorRecordList());
         }
         if (other.hasMonthlyBrief()) {
           mergeMonthlyBrief(other.getMonthlyBrief());
+        }
+        internalGetMutableFloorOpenTimeMap().mergeFrom(
+            other.internalGetFloorOpenTimeMap());
+        if (other.getABPDHMJNBKD() != 0) {
+          setABPDHMJNBKD(other.getABPDHMJNBKD());
+        }
+        if (other.getTowerScheduleId() != 0) {
+          setTowerScheduleId(other.getTowerScheduleId());
+        }
+        if (other.getIsFirstInteract() != false) {
+          setIsFirstInteract(other.getIsFirstInteract());
+        }
+        if (other.getRetcode() != 0) {
+          setRetcode(other.getRetcode());
+        }
+        if (other.getValidTowerRecordNum() != 0) {
+          setValidTowerRecordNum(other.getValidTowerRecordNum());
+        }
+        if (other.getCommemorativeRewardId() != 0) {
+          setCommemorativeRewardId(other.getCommemorativeRewardId());
+        }
+        if (other.getIsFinishedEntranceFloor() != false) {
+          setIsFinishedEntranceFloor(other.getIsFinishedEntranceFloor());
         }
         if (towerFloorRecordListBuilder_ == null) {
           if (!other.towerFloorRecordList_.isEmpty()) {
@@ -1299,11 +1345,11 @@ public final class TowerAllDataRspOuterClass {
             }
           }
         }
-        if (other.getScheduleStartTime() != 0) {
-          setScheduleStartTime(other.getScheduleStartTime());
-        }
         if (other.hasLastScheduleMonthlyBrief()) {
           mergeLastScheduleMonthlyBrief(other.getLastScheduleMonthlyBrief());
+        }
+        if (other.getScheduleStartTime() != 0) {
+          setScheduleStartTime(other.getScheduleStartTime());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -1331,24 +1377,87 @@ public final class TowerAllDataRspOuterClass {
               case 0:
                 done = true;
                 break;
-              case 10: {
+              case 8: {
+                nextScheduleChangeTime_ = input.readUInt32();
+
+                break;
+              } // case 8
+              case 18: {
                 input.readMessage(
                     getCurLevelRecordFieldBuilder().getBuilder(),
                     extensionRegistry);
 
                 break;
-              } // case 10
+              } // case 18
               case 24: {
-                nextScheduleChangeTime_ = input.readUInt32();
+                lICMPIDMCOI_ = input.readUInt32();
 
                 break;
               } // case 24
-              case 32: {
+              case 34: {
+                com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
+                skipFloorGrantedRewardItemMap__ = input.readMessage(
+                    SkipFloorGrantedRewardItemMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutableSkipFloorGrantedRewardItemMap().getMutableMap().put(
+                    skipFloorGrantedRewardItemMap__.getKey(), skipFloorGrantedRewardItemMap__.getValue());
+                break;
+              } // case 34
+              case 40: {
+                validFloorRecordList_ = input.readUInt32();
+
+                break;
+              } // case 40
+              case 50: {
+                input.readMessage(
+                    getMonthlyBriefFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 50
+              case 58: {
+                com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
+                floorOpenTimeMap__ = input.readMessage(
+                    FloorOpenTimeMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutableFloorOpenTimeMap().getMutableMap().put(
+                    floorOpenTimeMap__.getKey(), floorOpenTimeMap__.getValue());
+                break;
+              } // case 58
+              case 64: {
+                aBPDHMJNBKD_ = input.readUInt32();
+
+                break;
+              } // case 64
+              case 72: {
                 towerScheduleId_ = input.readUInt32();
 
                 break;
-              } // case 32
-              case 42: {
+              } // case 72
+              case 80: {
+                isFirstInteract_ = input.readBool();
+
+                break;
+              } // case 80
+              case 88: {
+                retcode_ = input.readInt32();
+
+                break;
+              } // case 88
+              case 96: {
+                validTowerRecordNum_ = input.readUInt32();
+
+                break;
+              } // case 96
+              case 104: {
+                commemorativeRewardId_ = input.readUInt32();
+
+                break;
+              } // case 104
+              case 112: {
+                isFinishedEntranceFloor_ = input.readBool();
+
+                break;
+              } // case 112
+              case 122: {
                 emu.grasscutter.net.proto.TowerFloorRecordOuterClass.TowerFloorRecord m =
                     input.readMessage(
                         emu.grasscutter.net.proto.TowerFloorRecordOuterClass.TowerFloorRecord.parser(),
@@ -1360,62 +1469,19 @@ public final class TowerAllDataRspOuterClass {
                   towerFloorRecordListBuilder_.addMessage(m);
                 }
                 break;
-              } // case 42
-              case 48: {
-                validFloorRecordList_ = input.readUInt32();
-
-                break;
-              } // case 48
-              case 56: {
-                isFirstInteract_ = input.readBool();
-
-                break;
-              } // case 56
-              case 66: {
-                input.readMessage(
-                    getMonthlyBriefFieldBuilder().getBuilder(),
-                    extensionRegistry);
-
-                break;
-              } // case 66
-              case 80: {
-                isFinishedEntranceFloor_ = input.readBool();
-
-                break;
-              } // case 80
-              case 88: {
-                retcode_ = input.readInt32();
-
-                break;
-              } // case 88
-              case 114: {
-                com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
-                skipFloorGrantedRewardItemMap__ = input.readMessage(
-                    SkipFloorGrantedRewardItemMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-                internalGetMutableSkipFloorGrantedRewardItemMap().getMutableMap().put(
-                    skipFloorGrantedRewardItemMap__.getKey(), skipFloorGrantedRewardItemMap__.getValue());
-                break;
-              } // case 114
-              case 122: {
-                com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
-                floorOpenTimeMap__ = input.readMessage(
-                    FloorOpenTimeMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-                internalGetMutableFloorOpenTimeMap().getMutableMap().put(
-                    floorOpenTimeMap__.getKey(), floorOpenTimeMap__.getValue());
-                break;
               } // case 122
-              case 8322: {
+              case 4786: {
                 input.readMessage(
                     getLastScheduleMonthlyBriefFieldBuilder().getBuilder(),
                     extensionRegistry);
 
                 break;
-              } // case 8322
-              case 8656: {
+              } // case 4786
+              case 8064: {
                 scheduleStartTime_ = input.readUInt32();
 
                 break;
-              } // case 8656
+              } // case 8064
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -1433,107 +1499,33 @@ public final class TowerAllDataRspOuterClass {
       }
       private int bitField0_;
 
-      private int towerScheduleId_ ;
+      private int nextScheduleChangeTime_ ;
       /**
-       * <code>uint32 tower_schedule_id = 4;</code>
-       * @return The towerScheduleId.
+       * <code>uint32 next_schedule_change_time = 1;</code>
+       * @return The nextScheduleChangeTime.
        */
       @java.lang.Override
-      public int getTowerScheduleId() {
-        return towerScheduleId_;
+      public int getNextScheduleChangeTime() {
+        return nextScheduleChangeTime_;
       }
       /**
-       * <code>uint32 tower_schedule_id = 4;</code>
-       * @param value The towerScheduleId to set.
+       * <code>uint32 next_schedule_change_time = 1;</code>
+       * @param value The nextScheduleChangeTime to set.
        * @return This builder for chaining.
        */
-      public Builder setTowerScheduleId(int value) {
+      public Builder setNextScheduleChangeTime(int value) {
         
-        towerScheduleId_ = value;
+        nextScheduleChangeTime_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 tower_schedule_id = 4;</code>
+       * <code>uint32 next_schedule_change_time = 1;</code>
        * @return This builder for chaining.
        */
-      public Builder clearTowerScheduleId() {
+      public Builder clearNextScheduleChangeTime() {
         
-        towerScheduleId_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private boolean isFinishedEntranceFloor_ ;
-      /**
-       * <code>bool is_finished_entrance_floor = 10;</code>
-       * @return The isFinishedEntranceFloor.
-       */
-      @java.lang.Override
-      public boolean getIsFinishedEntranceFloor() {
-        return isFinishedEntranceFloor_;
-      }
-      /**
-       * <code>bool is_finished_entrance_floor = 10;</code>
-       * @param value The isFinishedEntranceFloor to set.
-       * @return This builder for chaining.
-       */
-      public Builder setIsFinishedEntranceFloor(boolean value) {
-        
-        isFinishedEntranceFloor_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bool is_finished_entrance_floor = 10;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearIsFinishedEntranceFloor() {
-        
-        isFinishedEntranceFloor_ = false;
-        onChanged();
-        return this;
-      }
-
-      private int validFloorRecordList_ ;
-      /**
-       * <pre>
-       * 1 SUS
-       * </pre>
-       *
-       * <code>uint32 valid_floor_record_list = 6;</code>
-       * @return The validFloorRecordList.
-       */
-      @java.lang.Override
-      public int getValidFloorRecordList() {
-        return validFloorRecordList_;
-      }
-      /**
-       * <pre>
-       * 1 SUS
-       * </pre>
-       *
-       * <code>uint32 valid_floor_record_list = 6;</code>
-       * @param value The validFloorRecordList to set.
-       * @return This builder for chaining.
-       */
-      public Builder setValidFloorRecordList(int value) {
-        
-        validFloorRecordList_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * 1 SUS
-       * </pre>
-       *
-       * <code>uint32 valid_floor_record_list = 6;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearValidFloorRecordList() {
-        
-        validFloorRecordList_ = 0;
+        nextScheduleChangeTime_ = 0;
         onChanged();
         return this;
       }
@@ -1542,14 +1534,14 @@ public final class TowerAllDataRspOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.TowerCurLevelRecordOuterClass.TowerCurLevelRecord, emu.grasscutter.net.proto.TowerCurLevelRecordOuterClass.TowerCurLevelRecord.Builder, emu.grasscutter.net.proto.TowerCurLevelRecordOuterClass.TowerCurLevelRecordOrBuilder> curLevelRecordBuilder_;
       /**
-       * <code>.TowerCurLevelRecord cur_level_record = 1;</code>
+       * <code>.TowerCurLevelRecord cur_level_record = 2;</code>
        * @return Whether the curLevelRecord field is set.
        */
       public boolean hasCurLevelRecord() {
         return curLevelRecordBuilder_ != null || curLevelRecord_ != null;
       }
       /**
-       * <code>.TowerCurLevelRecord cur_level_record = 1;</code>
+       * <code>.TowerCurLevelRecord cur_level_record = 2;</code>
        * @return The curLevelRecord.
        */
       public emu.grasscutter.net.proto.TowerCurLevelRecordOuterClass.TowerCurLevelRecord getCurLevelRecord() {
@@ -1560,7 +1552,7 @@ public final class TowerAllDataRspOuterClass {
         }
       }
       /**
-       * <code>.TowerCurLevelRecord cur_level_record = 1;</code>
+       * <code>.TowerCurLevelRecord cur_level_record = 2;</code>
        */
       public Builder setCurLevelRecord(emu.grasscutter.net.proto.TowerCurLevelRecordOuterClass.TowerCurLevelRecord value) {
         if (curLevelRecordBuilder_ == null) {
@@ -1576,7 +1568,7 @@ public final class TowerAllDataRspOuterClass {
         return this;
       }
       /**
-       * <code>.TowerCurLevelRecord cur_level_record = 1;</code>
+       * <code>.TowerCurLevelRecord cur_level_record = 2;</code>
        */
       public Builder setCurLevelRecord(
           emu.grasscutter.net.proto.TowerCurLevelRecordOuterClass.TowerCurLevelRecord.Builder builderForValue) {
@@ -1590,7 +1582,7 @@ public final class TowerAllDataRspOuterClass {
         return this;
       }
       /**
-       * <code>.TowerCurLevelRecord cur_level_record = 1;</code>
+       * <code>.TowerCurLevelRecord cur_level_record = 2;</code>
        */
       public Builder mergeCurLevelRecord(emu.grasscutter.net.proto.TowerCurLevelRecordOuterClass.TowerCurLevelRecord value) {
         if (curLevelRecordBuilder_ == null) {
@@ -1608,7 +1600,7 @@ public final class TowerAllDataRspOuterClass {
         return this;
       }
       /**
-       * <code>.TowerCurLevelRecord cur_level_record = 1;</code>
+       * <code>.TowerCurLevelRecord cur_level_record = 2;</code>
        */
       public Builder clearCurLevelRecord() {
         if (curLevelRecordBuilder_ == null) {
@@ -1622,7 +1614,7 @@ public final class TowerAllDataRspOuterClass {
         return this;
       }
       /**
-       * <code>.TowerCurLevelRecord cur_level_record = 1;</code>
+       * <code>.TowerCurLevelRecord cur_level_record = 2;</code>
        */
       public emu.grasscutter.net.proto.TowerCurLevelRecordOuterClass.TowerCurLevelRecord.Builder getCurLevelRecordBuilder() {
         
@@ -1630,7 +1622,7 @@ public final class TowerAllDataRspOuterClass {
         return getCurLevelRecordFieldBuilder().getBuilder();
       }
       /**
-       * <code>.TowerCurLevelRecord cur_level_record = 1;</code>
+       * <code>.TowerCurLevelRecord cur_level_record = 2;</code>
        */
       public emu.grasscutter.net.proto.TowerCurLevelRecordOuterClass.TowerCurLevelRecordOrBuilder getCurLevelRecordOrBuilder() {
         if (curLevelRecordBuilder_ != null) {
@@ -1641,7 +1633,7 @@ public final class TowerAllDataRspOuterClass {
         }
       }
       /**
-       * <code>.TowerCurLevelRecord cur_level_record = 1;</code>
+       * <code>.TowerCurLevelRecord cur_level_record = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.TowerCurLevelRecordOuterClass.TowerCurLevelRecord, emu.grasscutter.net.proto.TowerCurLevelRecordOuterClass.TowerCurLevelRecord.Builder, emu.grasscutter.net.proto.TowerCurLevelRecordOuterClass.TowerCurLevelRecordOrBuilder> 
@@ -1655,6 +1647,536 @@ public final class TowerAllDataRspOuterClass {
           curLevelRecord_ = null;
         }
         return curLevelRecordBuilder_;
+      }
+
+      private int lICMPIDMCOI_ ;
+      /**
+       * <code>uint32 LICMPIDMCOI = 3;</code>
+       * @return The lICMPIDMCOI.
+       */
+      @java.lang.Override
+      public int getLICMPIDMCOI() {
+        return lICMPIDMCOI_;
+      }
+      /**
+       * <code>uint32 LICMPIDMCOI = 3;</code>
+       * @param value The lICMPIDMCOI to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLICMPIDMCOI(int value) {
+        
+        lICMPIDMCOI_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 LICMPIDMCOI = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLICMPIDMCOI() {
+        
+        lICMPIDMCOI_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.Integer, java.lang.Integer> skipFloorGrantedRewardItemMap_;
+      private com.google.protobuf.MapField<java.lang.Integer, java.lang.Integer>
+      internalGetSkipFloorGrantedRewardItemMap() {
+        if (skipFloorGrantedRewardItemMap_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              SkipFloorGrantedRewardItemMapDefaultEntryHolder.defaultEntry);
+        }
+        return skipFloorGrantedRewardItemMap_;
+      }
+      private com.google.protobuf.MapField<java.lang.Integer, java.lang.Integer>
+      internalGetMutableSkipFloorGrantedRewardItemMap() {
+        onChanged();;
+        if (skipFloorGrantedRewardItemMap_ == null) {
+          skipFloorGrantedRewardItemMap_ = com.google.protobuf.MapField.newMapField(
+              SkipFloorGrantedRewardItemMapDefaultEntryHolder.defaultEntry);
+        }
+        if (!skipFloorGrantedRewardItemMap_.isMutable()) {
+          skipFloorGrantedRewardItemMap_ = skipFloorGrantedRewardItemMap_.copy();
+        }
+        return skipFloorGrantedRewardItemMap_;
+      }
+
+      public int getSkipFloorGrantedRewardItemMapCount() {
+        return internalGetSkipFloorGrantedRewardItemMap().getMap().size();
+      }
+      /**
+       * <code>map&lt;uint32, uint32&gt; skip_floor_granted_reward_item_map = 4;</code>
+       */
+
+      @java.lang.Override
+      public boolean containsSkipFloorGrantedRewardItemMap(
+          int key) {
+        
+        return internalGetSkipFloorGrantedRewardItemMap().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getSkipFloorGrantedRewardItemMapMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.Integer, java.lang.Integer> getSkipFloorGrantedRewardItemMap() {
+        return getSkipFloorGrantedRewardItemMapMap();
+      }
+      /**
+       * <code>map&lt;uint32, uint32&gt; skip_floor_granted_reward_item_map = 4;</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.Integer, java.lang.Integer> getSkipFloorGrantedRewardItemMapMap() {
+        return internalGetSkipFloorGrantedRewardItemMap().getMap();
+      }
+      /**
+       * <code>map&lt;uint32, uint32&gt; skip_floor_granted_reward_item_map = 4;</code>
+       */
+      @java.lang.Override
+
+      public int getSkipFloorGrantedRewardItemMapOrDefault(
+          int key,
+          int defaultValue) {
+        
+        java.util.Map<java.lang.Integer, java.lang.Integer> map =
+            internalGetSkipFloorGrantedRewardItemMap().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;uint32, uint32&gt; skip_floor_granted_reward_item_map = 4;</code>
+       */
+      @java.lang.Override
+
+      public int getSkipFloorGrantedRewardItemMapOrThrow(
+          int key) {
+        
+        java.util.Map<java.lang.Integer, java.lang.Integer> map =
+            internalGetSkipFloorGrantedRewardItemMap().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearSkipFloorGrantedRewardItemMap() {
+        internalGetMutableSkipFloorGrantedRewardItemMap().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;uint32, uint32&gt; skip_floor_granted_reward_item_map = 4;</code>
+       */
+
+      public Builder removeSkipFloorGrantedRewardItemMap(
+          int key) {
+        
+        internalGetMutableSkipFloorGrantedRewardItemMap().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.Integer, java.lang.Integer>
+      getMutableSkipFloorGrantedRewardItemMap() {
+        return internalGetMutableSkipFloorGrantedRewardItemMap().getMutableMap();
+      }
+      /**
+       * <code>map&lt;uint32, uint32&gt; skip_floor_granted_reward_item_map = 4;</code>
+       */
+      public Builder putSkipFloorGrantedRewardItemMap(
+          int key,
+          int value) {
+        
+        
+        internalGetMutableSkipFloorGrantedRewardItemMap().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <code>map&lt;uint32, uint32&gt; skip_floor_granted_reward_item_map = 4;</code>
+       */
+
+      public Builder putAllSkipFloorGrantedRewardItemMap(
+          java.util.Map<java.lang.Integer, java.lang.Integer> values) {
+        internalGetMutableSkipFloorGrantedRewardItemMap().getMutableMap()
+            .putAll(values);
+        return this;
+      }
+
+      private int validFloorRecordList_ ;
+      /**
+       * <code>uint32 valid_floor_record_list = 5;</code>
+       * @return The validFloorRecordList.
+       */
+      @java.lang.Override
+      public int getValidFloorRecordList() {
+        return validFloorRecordList_;
+      }
+      /**
+       * <code>uint32 valid_floor_record_list = 5;</code>
+       * @param value The validFloorRecordList to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValidFloorRecordList(int value) {
+        
+        validFloorRecordList_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 valid_floor_record_list = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValidFloorRecordList() {
+        
+        validFloorRecordList_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBrief monthlyBrief_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBrief, emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBrief.Builder, emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBriefOrBuilder> monthlyBriefBuilder_;
+      /**
+       * <code>.TowerMonthlyBrief monthly_brief = 6;</code>
+       * @return Whether the monthlyBrief field is set.
+       */
+      public boolean hasMonthlyBrief() {
+        return monthlyBriefBuilder_ != null || monthlyBrief_ != null;
+      }
+      /**
+       * <code>.TowerMonthlyBrief monthly_brief = 6;</code>
+       * @return The monthlyBrief.
+       */
+      public emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBrief getMonthlyBrief() {
+        if (monthlyBriefBuilder_ == null) {
+          return monthlyBrief_ == null ? emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBrief.getDefaultInstance() : monthlyBrief_;
+        } else {
+          return monthlyBriefBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.TowerMonthlyBrief monthly_brief = 6;</code>
+       */
+      public Builder setMonthlyBrief(emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBrief value) {
+        if (monthlyBriefBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          monthlyBrief_ = value;
+          onChanged();
+        } else {
+          monthlyBriefBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.TowerMonthlyBrief monthly_brief = 6;</code>
+       */
+      public Builder setMonthlyBrief(
+          emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBrief.Builder builderForValue) {
+        if (monthlyBriefBuilder_ == null) {
+          monthlyBrief_ = builderForValue.build();
+          onChanged();
+        } else {
+          monthlyBriefBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.TowerMonthlyBrief monthly_brief = 6;</code>
+       */
+      public Builder mergeMonthlyBrief(emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBrief value) {
+        if (monthlyBriefBuilder_ == null) {
+          if (monthlyBrief_ != null) {
+            monthlyBrief_ =
+              emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBrief.newBuilder(monthlyBrief_).mergeFrom(value).buildPartial();
+          } else {
+            monthlyBrief_ = value;
+          }
+          onChanged();
+        } else {
+          monthlyBriefBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.TowerMonthlyBrief monthly_brief = 6;</code>
+       */
+      public Builder clearMonthlyBrief() {
+        if (monthlyBriefBuilder_ == null) {
+          monthlyBrief_ = null;
+          onChanged();
+        } else {
+          monthlyBrief_ = null;
+          monthlyBriefBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.TowerMonthlyBrief monthly_brief = 6;</code>
+       */
+      public emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBrief.Builder getMonthlyBriefBuilder() {
+        
+        onChanged();
+        return getMonthlyBriefFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.TowerMonthlyBrief monthly_brief = 6;</code>
+       */
+      public emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBriefOrBuilder getMonthlyBriefOrBuilder() {
+        if (monthlyBriefBuilder_ != null) {
+          return monthlyBriefBuilder_.getMessageOrBuilder();
+        } else {
+          return monthlyBrief_ == null ?
+              emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBrief.getDefaultInstance() : monthlyBrief_;
+        }
+      }
+      /**
+       * <code>.TowerMonthlyBrief monthly_brief = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBrief, emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBrief.Builder, emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBriefOrBuilder> 
+          getMonthlyBriefFieldBuilder() {
+        if (monthlyBriefBuilder_ == null) {
+          monthlyBriefBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBrief, emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBrief.Builder, emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBriefOrBuilder>(
+                  getMonthlyBrief(),
+                  getParentForChildren(),
+                  isClean());
+          monthlyBrief_ = null;
+        }
+        return monthlyBriefBuilder_;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.Integer, java.lang.Integer> floorOpenTimeMap_;
+      private com.google.protobuf.MapField<java.lang.Integer, java.lang.Integer>
+      internalGetFloorOpenTimeMap() {
+        if (floorOpenTimeMap_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              FloorOpenTimeMapDefaultEntryHolder.defaultEntry);
+        }
+        return floorOpenTimeMap_;
+      }
+      private com.google.protobuf.MapField<java.lang.Integer, java.lang.Integer>
+      internalGetMutableFloorOpenTimeMap() {
+        onChanged();;
+        if (floorOpenTimeMap_ == null) {
+          floorOpenTimeMap_ = com.google.protobuf.MapField.newMapField(
+              FloorOpenTimeMapDefaultEntryHolder.defaultEntry);
+        }
+        if (!floorOpenTimeMap_.isMutable()) {
+          floorOpenTimeMap_ = floorOpenTimeMap_.copy();
+        }
+        return floorOpenTimeMap_;
+      }
+
+      public int getFloorOpenTimeMapCount() {
+        return internalGetFloorOpenTimeMap().getMap().size();
+      }
+      /**
+       * <code>map&lt;uint32, uint32&gt; floor_open_time_map = 7;</code>
+       */
+
+      @java.lang.Override
+      public boolean containsFloorOpenTimeMap(
+          int key) {
+        
+        return internalGetFloorOpenTimeMap().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getFloorOpenTimeMapMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.Integer, java.lang.Integer> getFloorOpenTimeMap() {
+        return getFloorOpenTimeMapMap();
+      }
+      /**
+       * <code>map&lt;uint32, uint32&gt; floor_open_time_map = 7;</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.Integer, java.lang.Integer> getFloorOpenTimeMapMap() {
+        return internalGetFloorOpenTimeMap().getMap();
+      }
+      /**
+       * <code>map&lt;uint32, uint32&gt; floor_open_time_map = 7;</code>
+       */
+      @java.lang.Override
+
+      public int getFloorOpenTimeMapOrDefault(
+          int key,
+          int defaultValue) {
+        
+        java.util.Map<java.lang.Integer, java.lang.Integer> map =
+            internalGetFloorOpenTimeMap().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;uint32, uint32&gt; floor_open_time_map = 7;</code>
+       */
+      @java.lang.Override
+
+      public int getFloorOpenTimeMapOrThrow(
+          int key) {
+        
+        java.util.Map<java.lang.Integer, java.lang.Integer> map =
+            internalGetFloorOpenTimeMap().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearFloorOpenTimeMap() {
+        internalGetMutableFloorOpenTimeMap().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;uint32, uint32&gt; floor_open_time_map = 7;</code>
+       */
+
+      public Builder removeFloorOpenTimeMap(
+          int key) {
+        
+        internalGetMutableFloorOpenTimeMap().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.Integer, java.lang.Integer>
+      getMutableFloorOpenTimeMap() {
+        return internalGetMutableFloorOpenTimeMap().getMutableMap();
+      }
+      /**
+       * <code>map&lt;uint32, uint32&gt; floor_open_time_map = 7;</code>
+       */
+      public Builder putFloorOpenTimeMap(
+          int key,
+          int value) {
+        
+        
+        internalGetMutableFloorOpenTimeMap().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <code>map&lt;uint32, uint32&gt; floor_open_time_map = 7;</code>
+       */
+
+      public Builder putAllFloorOpenTimeMap(
+          java.util.Map<java.lang.Integer, java.lang.Integer> values) {
+        internalGetMutableFloorOpenTimeMap().getMutableMap()
+            .putAll(values);
+        return this;
+      }
+
+      private int aBPDHMJNBKD_ ;
+      /**
+       * <code>uint32 ABPDHMJNBKD = 8;</code>
+       * @return The aBPDHMJNBKD.
+       */
+      @java.lang.Override
+      public int getABPDHMJNBKD() {
+        return aBPDHMJNBKD_;
+      }
+      /**
+       * <code>uint32 ABPDHMJNBKD = 8;</code>
+       * @param value The aBPDHMJNBKD to set.
+       * @return This builder for chaining.
+       */
+      public Builder setABPDHMJNBKD(int value) {
+        
+        aBPDHMJNBKD_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 ABPDHMJNBKD = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearABPDHMJNBKD() {
+        
+        aBPDHMJNBKD_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int towerScheduleId_ ;
+      /**
+       * <code>uint32 tower_schedule_id = 9;</code>
+       * @return The towerScheduleId.
+       */
+      @java.lang.Override
+      public int getTowerScheduleId() {
+        return towerScheduleId_;
+      }
+      /**
+       * <code>uint32 tower_schedule_id = 9;</code>
+       * @param value The towerScheduleId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTowerScheduleId(int value) {
+        
+        towerScheduleId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 tower_schedule_id = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTowerScheduleId() {
+        
+        towerScheduleId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean isFirstInteract_ ;
+      /**
+       * <code>bool is_first_interact = 10;</code>
+       * @return The isFirstInteract.
+       */
+      @java.lang.Override
+      public boolean getIsFirstInteract() {
+        return isFirstInteract_;
+      }
+      /**
+       * <code>bool is_first_interact = 10;</code>
+       * @param value The isFirstInteract to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsFirstInteract(boolean value) {
+        
+        isFirstInteract_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool is_first_interact = 10;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsFirstInteract() {
+        
+        isFirstInteract_ = false;
+        onChanged();
+        return this;
       }
 
       private int retcode_ ;
@@ -1688,509 +2210,97 @@ public final class TowerAllDataRspOuterClass {
         return this;
       }
 
-      private com.google.protobuf.MapField<
-          java.lang.Integer, java.lang.Integer> skipFloorGrantedRewardItemMap_;
-      private com.google.protobuf.MapField<java.lang.Integer, java.lang.Integer>
-      internalGetSkipFloorGrantedRewardItemMap() {
-        if (skipFloorGrantedRewardItemMap_ == null) {
-          return com.google.protobuf.MapField.emptyMapField(
-              SkipFloorGrantedRewardItemMapDefaultEntryHolder.defaultEntry);
-        }
-        return skipFloorGrantedRewardItemMap_;
-      }
-      private com.google.protobuf.MapField<java.lang.Integer, java.lang.Integer>
-      internalGetMutableSkipFloorGrantedRewardItemMap() {
-        onChanged();;
-        if (skipFloorGrantedRewardItemMap_ == null) {
-          skipFloorGrantedRewardItemMap_ = com.google.protobuf.MapField.newMapField(
-              SkipFloorGrantedRewardItemMapDefaultEntryHolder.defaultEntry);
-        }
-        if (!skipFloorGrantedRewardItemMap_.isMutable()) {
-          skipFloorGrantedRewardItemMap_ = skipFloorGrantedRewardItemMap_.copy();
-        }
-        return skipFloorGrantedRewardItemMap_;
-      }
-
-      public int getSkipFloorGrantedRewardItemMapCount() {
-        return internalGetSkipFloorGrantedRewardItemMap().getMap().size();
-      }
+      private int validTowerRecordNum_ ;
       /**
-       * <pre>
-       * sus
-       * </pre>
-       *
-       * <code>map&lt;uint32, uint32&gt; skip_floor_granted_reward_item_map = 14;</code>
-       */
-
-      @java.lang.Override
-      public boolean containsSkipFloorGrantedRewardItemMap(
-          int key) {
-        
-        return internalGetSkipFloorGrantedRewardItemMap().getMap().containsKey(key);
-      }
-      /**
-       * Use {@link #getSkipFloorGrantedRewardItemMapMap()} instead.
+       * <code>uint32 valid_tower_record_num = 12;</code>
+       * @return The validTowerRecordNum.
        */
       @java.lang.Override
-      @java.lang.Deprecated
-      public java.util.Map<java.lang.Integer, java.lang.Integer> getSkipFloorGrantedRewardItemMap() {
-        return getSkipFloorGrantedRewardItemMapMap();
+      public int getValidTowerRecordNum() {
+        return validTowerRecordNum_;
       }
       /**
-       * <pre>
-       * sus
-       * </pre>
-       *
-       * <code>map&lt;uint32, uint32&gt; skip_floor_granted_reward_item_map = 14;</code>
-       */
-      @java.lang.Override
-
-      public java.util.Map<java.lang.Integer, java.lang.Integer> getSkipFloorGrantedRewardItemMapMap() {
-        return internalGetSkipFloorGrantedRewardItemMap().getMap();
-      }
-      /**
-       * <pre>
-       * sus
-       * </pre>
-       *
-       * <code>map&lt;uint32, uint32&gt; skip_floor_granted_reward_item_map = 14;</code>
-       */
-      @java.lang.Override
-
-      public int getSkipFloorGrantedRewardItemMapOrDefault(
-          int key,
-          int defaultValue) {
-        
-        java.util.Map<java.lang.Integer, java.lang.Integer> map =
-            internalGetSkipFloorGrantedRewardItemMap().getMap();
-        return map.containsKey(key) ? map.get(key) : defaultValue;
-      }
-      /**
-       * <pre>
-       * sus
-       * </pre>
-       *
-       * <code>map&lt;uint32, uint32&gt; skip_floor_granted_reward_item_map = 14;</code>
-       */
-      @java.lang.Override
-
-      public int getSkipFloorGrantedRewardItemMapOrThrow(
-          int key) {
-        
-        java.util.Map<java.lang.Integer, java.lang.Integer> map =
-            internalGetSkipFloorGrantedRewardItemMap().getMap();
-        if (!map.containsKey(key)) {
-          throw new java.lang.IllegalArgumentException();
-        }
-        return map.get(key);
-      }
-
-      public Builder clearSkipFloorGrantedRewardItemMap() {
-        internalGetMutableSkipFloorGrantedRewardItemMap().getMutableMap()
-            .clear();
-        return this;
-      }
-      /**
-       * <pre>
-       * sus
-       * </pre>
-       *
-       * <code>map&lt;uint32, uint32&gt; skip_floor_granted_reward_item_map = 14;</code>
-       */
-
-      public Builder removeSkipFloorGrantedRewardItemMap(
-          int key) {
-        
-        internalGetMutableSkipFloorGrantedRewardItemMap().getMutableMap()
-            .remove(key);
-        return this;
-      }
-      /**
-       * Use alternate mutation accessors instead.
-       */
-      @java.lang.Deprecated
-      public java.util.Map<java.lang.Integer, java.lang.Integer>
-      getMutableSkipFloorGrantedRewardItemMap() {
-        return internalGetMutableSkipFloorGrantedRewardItemMap().getMutableMap();
-      }
-      /**
-       * <pre>
-       * sus
-       * </pre>
-       *
-       * <code>map&lt;uint32, uint32&gt; skip_floor_granted_reward_item_map = 14;</code>
-       */
-      public Builder putSkipFloorGrantedRewardItemMap(
-          int key,
-          int value) {
-        
-        
-        internalGetMutableSkipFloorGrantedRewardItemMap().getMutableMap()
-            .put(key, value);
-        return this;
-      }
-      /**
-       * <pre>
-       * sus
-       * </pre>
-       *
-       * <code>map&lt;uint32, uint32&gt; skip_floor_granted_reward_item_map = 14;</code>
-       */
-
-      public Builder putAllSkipFloorGrantedRewardItemMap(
-          java.util.Map<java.lang.Integer, java.lang.Integer> values) {
-        internalGetMutableSkipFloorGrantedRewardItemMap().getMutableMap()
-            .putAll(values);
-        return this;
-      }
-
-      private boolean isFirstInteract_ ;
-      /**
-       * <code>bool is_first_interact = 7;</code>
-       * @return The isFirstInteract.
-       */
-      @java.lang.Override
-      public boolean getIsFirstInteract() {
-        return isFirstInteract_;
-      }
-      /**
-       * <code>bool is_first_interact = 7;</code>
-       * @param value The isFirstInteract to set.
+       * <code>uint32 valid_tower_record_num = 12;</code>
+       * @param value The validTowerRecordNum to set.
        * @return This builder for chaining.
        */
-      public Builder setIsFirstInteract(boolean value) {
+      public Builder setValidTowerRecordNum(int value) {
         
-        isFirstInteract_ = value;
+        validTowerRecordNum_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>bool is_first_interact = 7;</code>
+       * <code>uint32 valid_tower_record_num = 12;</code>
        * @return This builder for chaining.
        */
-      public Builder clearIsFirstInteract() {
+      public Builder clearValidTowerRecordNum() {
         
-        isFirstInteract_ = false;
+        validTowerRecordNum_ = 0;
         onChanged();
         return this;
       }
 
-      private com.google.protobuf.MapField<
-          java.lang.Integer, java.lang.Integer> floorOpenTimeMap_;
-      private com.google.protobuf.MapField<java.lang.Integer, java.lang.Integer>
-      internalGetFloorOpenTimeMap() {
-        if (floorOpenTimeMap_ == null) {
-          return com.google.protobuf.MapField.emptyMapField(
-              FloorOpenTimeMapDefaultEntryHolder.defaultEntry);
-        }
-        return floorOpenTimeMap_;
-      }
-      private com.google.protobuf.MapField<java.lang.Integer, java.lang.Integer>
-      internalGetMutableFloorOpenTimeMap() {
-        onChanged();;
-        if (floorOpenTimeMap_ == null) {
-          floorOpenTimeMap_ = com.google.protobuf.MapField.newMapField(
-              FloorOpenTimeMapDefaultEntryHolder.defaultEntry);
-        }
-        if (!floorOpenTimeMap_.isMutable()) {
-          floorOpenTimeMap_ = floorOpenTimeMap_.copy();
-        }
-        return floorOpenTimeMap_;
-      }
-
-      public int getFloorOpenTimeMapCount() {
-        return internalGetFloorOpenTimeMap().getMap().size();
-      }
+      private int commemorativeRewardId_ ;
       /**
-       * <pre>
-       * sus
-       * </pre>
-       *
-       * <code>map&lt;uint32, uint32&gt; floor_open_time_map = 15;</code>
-       */
-
-      @java.lang.Override
-      public boolean containsFloorOpenTimeMap(
-          int key) {
-        
-        return internalGetFloorOpenTimeMap().getMap().containsKey(key);
-      }
-      /**
-       * Use {@link #getFloorOpenTimeMapMap()} instead.
+       * <code>uint32 commemorative_reward_id = 13;</code>
+       * @return The commemorativeRewardId.
        */
       @java.lang.Override
-      @java.lang.Deprecated
-      public java.util.Map<java.lang.Integer, java.lang.Integer> getFloorOpenTimeMap() {
-        return getFloorOpenTimeMapMap();
+      public int getCommemorativeRewardId() {
+        return commemorativeRewardId_;
       }
       /**
-       * <pre>
-       * sus
-       * </pre>
-       *
-       * <code>map&lt;uint32, uint32&gt; floor_open_time_map = 15;</code>
-       */
-      @java.lang.Override
-
-      public java.util.Map<java.lang.Integer, java.lang.Integer> getFloorOpenTimeMapMap() {
-        return internalGetFloorOpenTimeMap().getMap();
-      }
-      /**
-       * <pre>
-       * sus
-       * </pre>
-       *
-       * <code>map&lt;uint32, uint32&gt; floor_open_time_map = 15;</code>
-       */
-      @java.lang.Override
-
-      public int getFloorOpenTimeMapOrDefault(
-          int key,
-          int defaultValue) {
-        
-        java.util.Map<java.lang.Integer, java.lang.Integer> map =
-            internalGetFloorOpenTimeMap().getMap();
-        return map.containsKey(key) ? map.get(key) : defaultValue;
-      }
-      /**
-       * <pre>
-       * sus
-       * </pre>
-       *
-       * <code>map&lt;uint32, uint32&gt; floor_open_time_map = 15;</code>
-       */
-      @java.lang.Override
-
-      public int getFloorOpenTimeMapOrThrow(
-          int key) {
-        
-        java.util.Map<java.lang.Integer, java.lang.Integer> map =
-            internalGetFloorOpenTimeMap().getMap();
-        if (!map.containsKey(key)) {
-          throw new java.lang.IllegalArgumentException();
-        }
-        return map.get(key);
-      }
-
-      public Builder clearFloorOpenTimeMap() {
-        internalGetMutableFloorOpenTimeMap().getMutableMap()
-            .clear();
-        return this;
-      }
-      /**
-       * <pre>
-       * sus
-       * </pre>
-       *
-       * <code>map&lt;uint32, uint32&gt; floor_open_time_map = 15;</code>
-       */
-
-      public Builder removeFloorOpenTimeMap(
-          int key) {
-        
-        internalGetMutableFloorOpenTimeMap().getMutableMap()
-            .remove(key);
-        return this;
-      }
-      /**
-       * Use alternate mutation accessors instead.
-       */
-      @java.lang.Deprecated
-      public java.util.Map<java.lang.Integer, java.lang.Integer>
-      getMutableFloorOpenTimeMap() {
-        return internalGetMutableFloorOpenTimeMap().getMutableMap();
-      }
-      /**
-       * <pre>
-       * sus
-       * </pre>
-       *
-       * <code>map&lt;uint32, uint32&gt; floor_open_time_map = 15;</code>
-       */
-      public Builder putFloorOpenTimeMap(
-          int key,
-          int value) {
-        
-        
-        internalGetMutableFloorOpenTimeMap().getMutableMap()
-            .put(key, value);
-        return this;
-      }
-      /**
-       * <pre>
-       * sus
-       * </pre>
-       *
-       * <code>map&lt;uint32, uint32&gt; floor_open_time_map = 15;</code>
-       */
-
-      public Builder putAllFloorOpenTimeMap(
-          java.util.Map<java.lang.Integer, java.lang.Integer> values) {
-        internalGetMutableFloorOpenTimeMap().getMutableMap()
-            .putAll(values);
-        return this;
-      }
-
-      private int nextScheduleChangeTime_ ;
-      /**
-       * <pre>
-       * OK
-       * </pre>
-       *
-       * <code>uint32 next_schedule_change_time = 3;</code>
-       * @return The nextScheduleChangeTime.
-       */
-      @java.lang.Override
-      public int getNextScheduleChangeTime() {
-        return nextScheduleChangeTime_;
-      }
-      /**
-       * <pre>
-       * OK
-       * </pre>
-       *
-       * <code>uint32 next_schedule_change_time = 3;</code>
-       * @param value The nextScheduleChangeTime to set.
+       * <code>uint32 commemorative_reward_id = 13;</code>
+       * @param value The commemorativeRewardId to set.
        * @return This builder for chaining.
        */
-      public Builder setNextScheduleChangeTime(int value) {
+      public Builder setCommemorativeRewardId(int value) {
         
-        nextScheduleChangeTime_ = value;
+        commemorativeRewardId_ = value;
         onChanged();
         return this;
       }
       /**
-       * <pre>
-       * OK
-       * </pre>
-       *
-       * <code>uint32 next_schedule_change_time = 3;</code>
+       * <code>uint32 commemorative_reward_id = 13;</code>
        * @return This builder for chaining.
        */
-      public Builder clearNextScheduleChangeTime() {
+      public Builder clearCommemorativeRewardId() {
         
-        nextScheduleChangeTime_ = 0;
+        commemorativeRewardId_ = 0;
         onChanged();
         return this;
       }
 
-      private emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBrief monthlyBrief_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBrief, emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBrief.Builder, emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBriefOrBuilder> monthlyBriefBuilder_;
+      private boolean isFinishedEntranceFloor_ ;
       /**
-       * <code>.TowerMonthlyBrief monthly_brief = 8;</code>
-       * @return Whether the monthlyBrief field is set.
+       * <code>bool is_finished_entrance_floor = 14;</code>
+       * @return The isFinishedEntranceFloor.
        */
-      public boolean hasMonthlyBrief() {
-        return monthlyBriefBuilder_ != null || monthlyBrief_ != null;
+      @java.lang.Override
+      public boolean getIsFinishedEntranceFloor() {
+        return isFinishedEntranceFloor_;
       }
       /**
-       * <code>.TowerMonthlyBrief monthly_brief = 8;</code>
-       * @return The monthlyBrief.
+       * <code>bool is_finished_entrance_floor = 14;</code>
+       * @param value The isFinishedEntranceFloor to set.
+       * @return This builder for chaining.
        */
-      public emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBrief getMonthlyBrief() {
-        if (monthlyBriefBuilder_ == null) {
-          return monthlyBrief_ == null ? emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBrief.getDefaultInstance() : monthlyBrief_;
-        } else {
-          return monthlyBriefBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>.TowerMonthlyBrief monthly_brief = 8;</code>
-       */
-      public Builder setMonthlyBrief(emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBrief value) {
-        if (monthlyBriefBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          monthlyBrief_ = value;
-          onChanged();
-        } else {
-          monthlyBriefBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.TowerMonthlyBrief monthly_brief = 8;</code>
-       */
-      public Builder setMonthlyBrief(
-          emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBrief.Builder builderForValue) {
-        if (monthlyBriefBuilder_ == null) {
-          monthlyBrief_ = builderForValue.build();
-          onChanged();
-        } else {
-          monthlyBriefBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <code>.TowerMonthlyBrief monthly_brief = 8;</code>
-       */
-      public Builder mergeMonthlyBrief(emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBrief value) {
-        if (monthlyBriefBuilder_ == null) {
-          if (monthlyBrief_ != null) {
-            monthlyBrief_ =
-              emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBrief.newBuilder(monthlyBrief_).mergeFrom(value).buildPartial();
-          } else {
-            monthlyBrief_ = value;
-          }
-          onChanged();
-        } else {
-          monthlyBriefBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.TowerMonthlyBrief monthly_brief = 8;</code>
-       */
-      public Builder clearMonthlyBrief() {
-        if (monthlyBriefBuilder_ == null) {
-          monthlyBrief_ = null;
-          onChanged();
-        } else {
-          monthlyBrief_ = null;
-          monthlyBriefBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <code>.TowerMonthlyBrief monthly_brief = 8;</code>
-       */
-      public emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBrief.Builder getMonthlyBriefBuilder() {
+      public Builder setIsFinishedEntranceFloor(boolean value) {
         
+        isFinishedEntranceFloor_ = value;
         onChanged();
-        return getMonthlyBriefFieldBuilder().getBuilder();
+        return this;
       }
       /**
-       * <code>.TowerMonthlyBrief monthly_brief = 8;</code>
+       * <code>bool is_finished_entrance_floor = 14;</code>
+       * @return This builder for chaining.
        */
-      public emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBriefOrBuilder getMonthlyBriefOrBuilder() {
-        if (monthlyBriefBuilder_ != null) {
-          return monthlyBriefBuilder_.getMessageOrBuilder();
-        } else {
-          return monthlyBrief_ == null ?
-              emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBrief.getDefaultInstance() : monthlyBrief_;
-        }
-      }
-      /**
-       * <code>.TowerMonthlyBrief monthly_brief = 8;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBrief, emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBrief.Builder, emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBriefOrBuilder> 
-          getMonthlyBriefFieldBuilder() {
-        if (monthlyBriefBuilder_ == null) {
-          monthlyBriefBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBrief, emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBrief.Builder, emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBriefOrBuilder>(
-                  getMonthlyBrief(),
-                  getParentForChildren(),
-                  isClean());
-          monthlyBrief_ = null;
-        }
-        return monthlyBriefBuilder_;
+      public Builder clearIsFinishedEntranceFloor() {
+        
+        isFinishedEntranceFloor_ = false;
+        onChanged();
+        return this;
       }
 
       private java.util.List<emu.grasscutter.net.proto.TowerFloorRecordOuterClass.TowerFloorRecord> towerFloorRecordList_ =
@@ -2206,7 +2316,7 @@ public final class TowerAllDataRspOuterClass {
           emu.grasscutter.net.proto.TowerFloorRecordOuterClass.TowerFloorRecord, emu.grasscutter.net.proto.TowerFloorRecordOuterClass.TowerFloorRecord.Builder, emu.grasscutter.net.proto.TowerFloorRecordOuterClass.TowerFloorRecordOrBuilder> towerFloorRecordListBuilder_;
 
       /**
-       * <code>repeated .TowerFloorRecord tower_floor_record_list = 5;</code>
+       * <code>repeated .TowerFloorRecord tower_floor_record_list = 15;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.TowerFloorRecordOuterClass.TowerFloorRecord> getTowerFloorRecordListList() {
         if (towerFloorRecordListBuilder_ == null) {
@@ -2216,7 +2326,7 @@ public final class TowerAllDataRspOuterClass {
         }
       }
       /**
-       * <code>repeated .TowerFloorRecord tower_floor_record_list = 5;</code>
+       * <code>repeated .TowerFloorRecord tower_floor_record_list = 15;</code>
        */
       public int getTowerFloorRecordListCount() {
         if (towerFloorRecordListBuilder_ == null) {
@@ -2226,7 +2336,7 @@ public final class TowerAllDataRspOuterClass {
         }
       }
       /**
-       * <code>repeated .TowerFloorRecord tower_floor_record_list = 5;</code>
+       * <code>repeated .TowerFloorRecord tower_floor_record_list = 15;</code>
        */
       public emu.grasscutter.net.proto.TowerFloorRecordOuterClass.TowerFloorRecord getTowerFloorRecordList(int index) {
         if (towerFloorRecordListBuilder_ == null) {
@@ -2236,7 +2346,7 @@ public final class TowerAllDataRspOuterClass {
         }
       }
       /**
-       * <code>repeated .TowerFloorRecord tower_floor_record_list = 5;</code>
+       * <code>repeated .TowerFloorRecord tower_floor_record_list = 15;</code>
        */
       public Builder setTowerFloorRecordList(
           int index, emu.grasscutter.net.proto.TowerFloorRecordOuterClass.TowerFloorRecord value) {
@@ -2253,7 +2363,7 @@ public final class TowerAllDataRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .TowerFloorRecord tower_floor_record_list = 5;</code>
+       * <code>repeated .TowerFloorRecord tower_floor_record_list = 15;</code>
        */
       public Builder setTowerFloorRecordList(
           int index, emu.grasscutter.net.proto.TowerFloorRecordOuterClass.TowerFloorRecord.Builder builderForValue) {
@@ -2267,7 +2377,7 @@ public final class TowerAllDataRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .TowerFloorRecord tower_floor_record_list = 5;</code>
+       * <code>repeated .TowerFloorRecord tower_floor_record_list = 15;</code>
        */
       public Builder addTowerFloorRecordList(emu.grasscutter.net.proto.TowerFloorRecordOuterClass.TowerFloorRecord value) {
         if (towerFloorRecordListBuilder_ == null) {
@@ -2283,7 +2393,7 @@ public final class TowerAllDataRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .TowerFloorRecord tower_floor_record_list = 5;</code>
+       * <code>repeated .TowerFloorRecord tower_floor_record_list = 15;</code>
        */
       public Builder addTowerFloorRecordList(
           int index, emu.grasscutter.net.proto.TowerFloorRecordOuterClass.TowerFloorRecord value) {
@@ -2300,7 +2410,7 @@ public final class TowerAllDataRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .TowerFloorRecord tower_floor_record_list = 5;</code>
+       * <code>repeated .TowerFloorRecord tower_floor_record_list = 15;</code>
        */
       public Builder addTowerFloorRecordList(
           emu.grasscutter.net.proto.TowerFloorRecordOuterClass.TowerFloorRecord.Builder builderForValue) {
@@ -2314,7 +2424,7 @@ public final class TowerAllDataRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .TowerFloorRecord tower_floor_record_list = 5;</code>
+       * <code>repeated .TowerFloorRecord tower_floor_record_list = 15;</code>
        */
       public Builder addTowerFloorRecordList(
           int index, emu.grasscutter.net.proto.TowerFloorRecordOuterClass.TowerFloorRecord.Builder builderForValue) {
@@ -2328,7 +2438,7 @@ public final class TowerAllDataRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .TowerFloorRecord tower_floor_record_list = 5;</code>
+       * <code>repeated .TowerFloorRecord tower_floor_record_list = 15;</code>
        */
       public Builder addAllTowerFloorRecordList(
           java.lang.Iterable<? extends emu.grasscutter.net.proto.TowerFloorRecordOuterClass.TowerFloorRecord> values) {
@@ -2343,7 +2453,7 @@ public final class TowerAllDataRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .TowerFloorRecord tower_floor_record_list = 5;</code>
+       * <code>repeated .TowerFloorRecord tower_floor_record_list = 15;</code>
        */
       public Builder clearTowerFloorRecordList() {
         if (towerFloorRecordListBuilder_ == null) {
@@ -2356,7 +2466,7 @@ public final class TowerAllDataRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .TowerFloorRecord tower_floor_record_list = 5;</code>
+       * <code>repeated .TowerFloorRecord tower_floor_record_list = 15;</code>
        */
       public Builder removeTowerFloorRecordList(int index) {
         if (towerFloorRecordListBuilder_ == null) {
@@ -2369,14 +2479,14 @@ public final class TowerAllDataRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .TowerFloorRecord tower_floor_record_list = 5;</code>
+       * <code>repeated .TowerFloorRecord tower_floor_record_list = 15;</code>
        */
       public emu.grasscutter.net.proto.TowerFloorRecordOuterClass.TowerFloorRecord.Builder getTowerFloorRecordListBuilder(
           int index) {
         return getTowerFloorRecordListFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .TowerFloorRecord tower_floor_record_list = 5;</code>
+       * <code>repeated .TowerFloorRecord tower_floor_record_list = 15;</code>
        */
       public emu.grasscutter.net.proto.TowerFloorRecordOuterClass.TowerFloorRecordOrBuilder getTowerFloorRecordListOrBuilder(
           int index) {
@@ -2386,7 +2496,7 @@ public final class TowerAllDataRspOuterClass {
         }
       }
       /**
-       * <code>repeated .TowerFloorRecord tower_floor_record_list = 5;</code>
+       * <code>repeated .TowerFloorRecord tower_floor_record_list = 15;</code>
        */
       public java.util.List<? extends emu.grasscutter.net.proto.TowerFloorRecordOuterClass.TowerFloorRecordOrBuilder> 
            getTowerFloorRecordListOrBuilderList() {
@@ -2397,14 +2507,14 @@ public final class TowerAllDataRspOuterClass {
         }
       }
       /**
-       * <code>repeated .TowerFloorRecord tower_floor_record_list = 5;</code>
+       * <code>repeated .TowerFloorRecord tower_floor_record_list = 15;</code>
        */
       public emu.grasscutter.net.proto.TowerFloorRecordOuterClass.TowerFloorRecord.Builder addTowerFloorRecordListBuilder() {
         return getTowerFloorRecordListFieldBuilder().addBuilder(
             emu.grasscutter.net.proto.TowerFloorRecordOuterClass.TowerFloorRecord.getDefaultInstance());
       }
       /**
-       * <code>repeated .TowerFloorRecord tower_floor_record_list = 5;</code>
+       * <code>repeated .TowerFloorRecord tower_floor_record_list = 15;</code>
        */
       public emu.grasscutter.net.proto.TowerFloorRecordOuterClass.TowerFloorRecord.Builder addTowerFloorRecordListBuilder(
           int index) {
@@ -2412,7 +2522,7 @@ public final class TowerAllDataRspOuterClass {
             index, emu.grasscutter.net.proto.TowerFloorRecordOuterClass.TowerFloorRecord.getDefaultInstance());
       }
       /**
-       * <code>repeated .TowerFloorRecord tower_floor_record_list = 5;</code>
+       * <code>repeated .TowerFloorRecord tower_floor_record_list = 15;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.TowerFloorRecordOuterClass.TowerFloorRecord.Builder> 
            getTowerFloorRecordListBuilderList() {
@@ -2433,49 +2543,18 @@ public final class TowerAllDataRspOuterClass {
         return towerFloorRecordListBuilder_;
       }
 
-      private int scheduleStartTime_ ;
-      /**
-       * <code>uint32 schedule_start_time = 1082;</code>
-       * @return The scheduleStartTime.
-       */
-      @java.lang.Override
-      public int getScheduleStartTime() {
-        return scheduleStartTime_;
-      }
-      /**
-       * <code>uint32 schedule_start_time = 1082;</code>
-       * @param value The scheduleStartTime to set.
-       * @return This builder for chaining.
-       */
-      public Builder setScheduleStartTime(int value) {
-        
-        scheduleStartTime_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 schedule_start_time = 1082;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearScheduleStartTime() {
-        
-        scheduleStartTime_ = 0;
-        onChanged();
-        return this;
-      }
-
       private emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBrief lastScheduleMonthlyBrief_;
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBrief, emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBrief.Builder, emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBriefOrBuilder> lastScheduleMonthlyBriefBuilder_;
       /**
-       * <code>.TowerMonthlyBrief last_schedule_monthly_brief = 1040;</code>
+       * <code>.TowerMonthlyBrief last_schedule_monthly_brief = 598;</code>
        * @return Whether the lastScheduleMonthlyBrief field is set.
        */
       public boolean hasLastScheduleMonthlyBrief() {
         return lastScheduleMonthlyBriefBuilder_ != null || lastScheduleMonthlyBrief_ != null;
       }
       /**
-       * <code>.TowerMonthlyBrief last_schedule_monthly_brief = 1040;</code>
+       * <code>.TowerMonthlyBrief last_schedule_monthly_brief = 598;</code>
        * @return The lastScheduleMonthlyBrief.
        */
       public emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBrief getLastScheduleMonthlyBrief() {
@@ -2486,7 +2565,7 @@ public final class TowerAllDataRspOuterClass {
         }
       }
       /**
-       * <code>.TowerMonthlyBrief last_schedule_monthly_brief = 1040;</code>
+       * <code>.TowerMonthlyBrief last_schedule_monthly_brief = 598;</code>
        */
       public Builder setLastScheduleMonthlyBrief(emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBrief value) {
         if (lastScheduleMonthlyBriefBuilder_ == null) {
@@ -2502,7 +2581,7 @@ public final class TowerAllDataRspOuterClass {
         return this;
       }
       /**
-       * <code>.TowerMonthlyBrief last_schedule_monthly_brief = 1040;</code>
+       * <code>.TowerMonthlyBrief last_schedule_monthly_brief = 598;</code>
        */
       public Builder setLastScheduleMonthlyBrief(
           emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBrief.Builder builderForValue) {
@@ -2516,7 +2595,7 @@ public final class TowerAllDataRspOuterClass {
         return this;
       }
       /**
-       * <code>.TowerMonthlyBrief last_schedule_monthly_brief = 1040;</code>
+       * <code>.TowerMonthlyBrief last_schedule_monthly_brief = 598;</code>
        */
       public Builder mergeLastScheduleMonthlyBrief(emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBrief value) {
         if (lastScheduleMonthlyBriefBuilder_ == null) {
@@ -2534,7 +2613,7 @@ public final class TowerAllDataRspOuterClass {
         return this;
       }
       /**
-       * <code>.TowerMonthlyBrief last_schedule_monthly_brief = 1040;</code>
+       * <code>.TowerMonthlyBrief last_schedule_monthly_brief = 598;</code>
        */
       public Builder clearLastScheduleMonthlyBrief() {
         if (lastScheduleMonthlyBriefBuilder_ == null) {
@@ -2548,7 +2627,7 @@ public final class TowerAllDataRspOuterClass {
         return this;
       }
       /**
-       * <code>.TowerMonthlyBrief last_schedule_monthly_brief = 1040;</code>
+       * <code>.TowerMonthlyBrief last_schedule_monthly_brief = 598;</code>
        */
       public emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBrief.Builder getLastScheduleMonthlyBriefBuilder() {
         
@@ -2556,7 +2635,7 @@ public final class TowerAllDataRspOuterClass {
         return getLastScheduleMonthlyBriefFieldBuilder().getBuilder();
       }
       /**
-       * <code>.TowerMonthlyBrief last_schedule_monthly_brief = 1040;</code>
+       * <code>.TowerMonthlyBrief last_schedule_monthly_brief = 598;</code>
        */
       public emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBriefOrBuilder getLastScheduleMonthlyBriefOrBuilder() {
         if (lastScheduleMonthlyBriefBuilder_ != null) {
@@ -2567,7 +2646,7 @@ public final class TowerAllDataRspOuterClass {
         }
       }
       /**
-       * <code>.TowerMonthlyBrief last_schedule_monthly_brief = 1040;</code>
+       * <code>.TowerMonthlyBrief last_schedule_monthly_brief = 598;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBrief, emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBrief.Builder, emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBriefOrBuilder> 
@@ -2581,6 +2660,37 @@ public final class TowerAllDataRspOuterClass {
           lastScheduleMonthlyBrief_ = null;
         }
         return lastScheduleMonthlyBriefBuilder_;
+      }
+
+      private int scheduleStartTime_ ;
+      /**
+       * <code>uint32 schedule_start_time = 1008;</code>
+       * @return The scheduleStartTime.
+       */
+      @java.lang.Override
+      public int getScheduleStartTime() {
+        return scheduleStartTime_;
+      }
+      /**
+       * <code>uint32 schedule_start_time = 1008;</code>
+       * @param value The scheduleStartTime to set.
+       * @return This builder for chaining.
+       */
+      public Builder setScheduleStartTime(int value) {
+        
+        scheduleStartTime_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 schedule_start_time = 1008;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearScheduleStartTime() {
+        
+        scheduleStartTime_ = 0;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -2672,26 +2782,29 @@ public final class TowerAllDataRspOuterClass {
     java.lang.String[] descriptorData = {
       "\n\025TowerAllDataRsp.proto\032\031TowerCurLevelRe" +
       "cord.proto\032\026TowerFloorRecord.proto\032\027Towe" +
-      "rMonthlyBrief.proto\"\314\005\n\017TowerAllDataRsp\022" +
-      "\031\n\021tower_schedule_id\030\004 \001(\r\022\"\n\032is_finishe" +
-      "d_entrance_floor\030\n \001(\010\022\037\n\027valid_floor_re" +
-      "cord_list\030\006 \001(\r\022.\n\020cur_level_record\030\001 \001(" +
-      "\0132\024.TowerCurLevelRecord\022\017\n\007retcode\030\013 \001(\005" +
-      "\022_\n\"skip_floor_granted_reward_item_map\030\016" +
-      " \003(\01323.TowerAllDataRsp.SkipFloorGrantedR" +
-      "ewardItemMapEntry\022\031\n\021is_first_interact\030\007" +
-      " \001(\010\022C\n\023floor_open_time_map\030\017 \003(\0132&.Towe" +
-      "rAllDataRsp.FloorOpenTimeMapEntry\022!\n\031nex" +
-      "t_schedule_change_time\030\003 \001(\r\022)\n\rmonthly_" +
-      "brief\030\010 \001(\0132\022.TowerMonthlyBrief\0222\n\027tower" +
-      "_floor_record_list\030\005 \003(\0132\021.TowerFloorRec" +
-      "ord\022\034\n\023schedule_start_time\030\272\010 \001(\r\0228\n\033las" +
-      "t_schedule_monthly_brief\030\220\010 \001(\0132\022.TowerM" +
-      "onthlyBrief\032D\n\"SkipFloorGrantedRewardIte" +
-      "mMapEntry\022\013\n\003key\030\001 \001(\r\022\r\n\005value\030\002 \001(\r:\0028" +
-      "\001\0327\n\025FloorOpenTimeMapEntry\022\013\n\003key\030\001 \001(\r\022" +
-      "\r\n\005value\030\002 \001(\r:\0028\001B\033\n\031emu.grasscutter.ne" +
-      "t.protob\006proto3"
+      "rMonthlyBrief.proto\"\267\006\n\017TowerAllDataRsp\022" +
+      "!\n\031next_schedule_change_time\030\001 \001(\r\022.\n\020cu" +
+      "r_level_record\030\002 \001(\0132\024.TowerCurLevelReco" +
+      "rd\022\023\n\013LICMPIDMCOI\030\003 \001(\r\022_\n\"skip_floor_gr" +
+      "anted_reward_item_map\030\004 \003(\01323.TowerAllDa" +
+      "taRsp.SkipFloorGrantedRewardItemMapEntry" +
+      "\022\037\n\027valid_floor_record_list\030\005 \001(\r\022)\n\rmon" +
+      "thly_brief\030\006 \001(\0132\022.TowerMonthlyBrief\022C\n\023" +
+      "floor_open_time_map\030\007 \003(\0132&.TowerAllData" +
+      "Rsp.FloorOpenTimeMapEntry\022\023\n\013ABPDHMJNBKD" +
+      "\030\010 \001(\r\022\031\n\021tower_schedule_id\030\t \001(\r\022\031\n\021is_" +
+      "first_interact\030\n \001(\010\022\017\n\007retcode\030\013 \001(\005\022\036\n" +
+      "\026valid_tower_record_num\030\014 \001(\r\022\037\n\027commemo" +
+      "rative_reward_id\030\r \001(\r\022\"\n\032is_finished_en" +
+      "trance_floor\030\016 \001(\010\0222\n\027tower_floor_record" +
+      "_list\030\017 \003(\0132\021.TowerFloorRecord\0228\n\033last_s" +
+      "chedule_monthly_brief\030\326\004 \001(\0132\022.TowerMont" +
+      "hlyBrief\022\034\n\023schedule_start_time\030\360\007 \001(\r\032D" +
+      "\n\"SkipFloorGrantedRewardItemMapEntry\022\013\n\003" +
+      "key\030\001 \001(\r\022\r\n\005value\030\002 \001(\r:\0028\001\0327\n\025FloorOpe" +
+      "nTimeMapEntry\022\013\n\003key\030\001 \001(\r\022\r\n\005value\030\002 \001(" +
+      "\r:\0028\001B\033\n\031emu.grasscutter.net.protob\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2705,7 +2818,7 @@ public final class TowerAllDataRspOuterClass {
     internal_static_TowerAllDataRsp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_TowerAllDataRsp_descriptor,
-        new java.lang.String[] { "TowerScheduleId", "IsFinishedEntranceFloor", "ValidFloorRecordList", "CurLevelRecord", "Retcode", "SkipFloorGrantedRewardItemMap", "IsFirstInteract", "FloorOpenTimeMap", "NextScheduleChangeTime", "MonthlyBrief", "TowerFloorRecordList", "ScheduleStartTime", "LastScheduleMonthlyBrief", });
+        new java.lang.String[] { "NextScheduleChangeTime", "CurLevelRecord", "LICMPIDMCOI", "SkipFloorGrantedRewardItemMap", "ValidFloorRecordList", "MonthlyBrief", "FloorOpenTimeMap", "ABPDHMJNBKD", "TowerScheduleId", "IsFirstInteract", "Retcode", "ValidTowerRecordNum", "CommemorativeRewardId", "IsFinishedEntranceFloor", "TowerFloorRecordList", "LastScheduleMonthlyBrief", "ScheduleStartTime", });
     internal_static_TowerAllDataRsp_SkipFloorGrantedRewardItemMapEntry_descriptor =
       internal_static_TowerAllDataRsp_descriptor.getNestedTypes().get(0);
     internal_static_TowerAllDataRsp_SkipFloorGrantedRewardItemMapEntry_fieldAccessorTable = new

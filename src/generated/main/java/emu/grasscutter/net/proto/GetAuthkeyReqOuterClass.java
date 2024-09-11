@@ -19,33 +19,33 @@ public final class GetAuthkeyReqOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string auth_appid = 1;</code>
+     * <code>string auth_appid = 10;</code>
      * @return The authAppid.
      */
     java.lang.String getAuthAppid();
     /**
-     * <code>string auth_appid = 1;</code>
+     * <code>string auth_appid = 10;</code>
      * @return The bytes for authAppid.
      */
     com.google.protobuf.ByteString
         getAuthAppidBytes();
 
     /**
-     * <code>uint32 authkey_ver = 6;</code>
-     * @return The authkeyVer.
+     * <code>uint32 CIJPMGMCJBA = 1;</code>
+     * @return The cIJPMGMCJBA.
      */
-    int getAuthkeyVer();
+    int getCIJPMGMCJBA();
 
     /**
-     * <code>uint32 sign_type = 7;</code>
-     * @return The signType.
+     * <code>uint32 MPGMOFLCEOF = 2;</code>
+     * @return The mPGMOFLCEOF.
      */
-    int getSignType();
+    int getMPGMOFLCEOF();
   }
   /**
    * <pre>
-   * 4.7.0
-   * CmdId: 20204
+   * CmdId: 28308
+   * obf: PGAFHBLJDKK
    * </pre>
    *
    * Protobuf type {@code GetAuthkeyReq}
@@ -88,10 +88,10 @@ public final class GetAuthkeyReqOuterClass {
               emu.grasscutter.net.proto.GetAuthkeyReqOuterClass.GetAuthkeyReq.class, emu.grasscutter.net.proto.GetAuthkeyReqOuterClass.GetAuthkeyReq.Builder.class);
     }
 
-    public static final int AUTH_APPID_FIELD_NUMBER = 1;
+    public static final int AUTH_APPID_FIELD_NUMBER = 10;
     private volatile java.lang.Object authAppid_;
     /**
-     * <code>string auth_appid = 1;</code>
+     * <code>string auth_appid = 10;</code>
      * @return The authAppid.
      */
     @java.lang.Override
@@ -108,7 +108,7 @@ public final class GetAuthkeyReqOuterClass {
       }
     }
     /**
-     * <code>string auth_appid = 1;</code>
+     * <code>string auth_appid = 10;</code>
      * @return The bytes for authAppid.
      */
     @java.lang.Override
@@ -126,26 +126,26 @@ public final class GetAuthkeyReqOuterClass {
       }
     }
 
-    public static final int AUTHKEY_VER_FIELD_NUMBER = 6;
-    private int authkeyVer_;
+    public static final int CIJPMGMCJBA_FIELD_NUMBER = 1;
+    private int cIJPMGMCJBA_;
     /**
-     * <code>uint32 authkey_ver = 6;</code>
-     * @return The authkeyVer.
+     * <code>uint32 CIJPMGMCJBA = 1;</code>
+     * @return The cIJPMGMCJBA.
      */
     @java.lang.Override
-    public int getAuthkeyVer() {
-      return authkeyVer_;
+    public int getCIJPMGMCJBA() {
+      return cIJPMGMCJBA_;
     }
 
-    public static final int SIGN_TYPE_FIELD_NUMBER = 7;
-    private int signType_;
+    public static final int MPGMOFLCEOF_FIELD_NUMBER = 2;
+    private int mPGMOFLCEOF_;
     /**
-     * <code>uint32 sign_type = 7;</code>
-     * @return The signType.
+     * <code>uint32 MPGMOFLCEOF = 2;</code>
+     * @return The mPGMOFLCEOF.
      */
     @java.lang.Override
-    public int getSignType() {
-      return signType_;
+    public int getMPGMOFLCEOF() {
+      return mPGMOFLCEOF_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -162,14 +162,14 @@ public final class GetAuthkeyReqOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (cIJPMGMCJBA_ != 0) {
+        output.writeUInt32(1, cIJPMGMCJBA_);
+      }
+      if (mPGMOFLCEOF_ != 0) {
+        output.writeUInt32(2, mPGMOFLCEOF_);
+      }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authAppid_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, authAppid_);
-      }
-      if (authkeyVer_ != 0) {
-        output.writeUInt32(6, authkeyVer_);
-      }
-      if (signType_ != 0) {
-        output.writeUInt32(7, signType_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, authAppid_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -180,16 +180,16 @@ public final class GetAuthkeyReqOuterClass {
       if (size != -1) return size;
 
       size = 0;
+      if (cIJPMGMCJBA_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, cIJPMGMCJBA_);
+      }
+      if (mPGMOFLCEOF_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(2, mPGMOFLCEOF_);
+      }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authAppid_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, authAppid_);
-      }
-      if (authkeyVer_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(6, authkeyVer_);
-      }
-      if (signType_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(7, signType_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, authAppid_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -208,10 +208,10 @@ public final class GetAuthkeyReqOuterClass {
 
       if (!getAuthAppid()
           .equals(other.getAuthAppid())) return false;
-      if (getAuthkeyVer()
-          != other.getAuthkeyVer()) return false;
-      if (getSignType()
-          != other.getSignType()) return false;
+      if (getCIJPMGMCJBA()
+          != other.getCIJPMGMCJBA()) return false;
+      if (getMPGMOFLCEOF()
+          != other.getMPGMOFLCEOF()) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -225,10 +225,10 @@ public final class GetAuthkeyReqOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + AUTH_APPID_FIELD_NUMBER;
       hash = (53 * hash) + getAuthAppid().hashCode();
-      hash = (37 * hash) + AUTHKEY_VER_FIELD_NUMBER;
-      hash = (53 * hash) + getAuthkeyVer();
-      hash = (37 * hash) + SIGN_TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + getSignType();
+      hash = (37 * hash) + CIJPMGMCJBA_FIELD_NUMBER;
+      hash = (53 * hash) + getCIJPMGMCJBA();
+      hash = (37 * hash) + MPGMOFLCEOF_FIELD_NUMBER;
+      hash = (53 * hash) + getMPGMOFLCEOF();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -326,8 +326,8 @@ public final class GetAuthkeyReqOuterClass {
     }
     /**
      * <pre>
-     * 4.7.0
-     * CmdId: 20204
+     * CmdId: 28308
+     * obf: PGAFHBLJDKK
      * </pre>
      *
      * Protobuf type {@code GetAuthkeyReq}
@@ -364,9 +364,9 @@ public final class GetAuthkeyReqOuterClass {
         super.clear();
         authAppid_ = "";
 
-        authkeyVer_ = 0;
+        cIJPMGMCJBA_ = 0;
 
-        signType_ = 0;
+        mPGMOFLCEOF_ = 0;
 
         return this;
       }
@@ -395,8 +395,8 @@ public final class GetAuthkeyReqOuterClass {
       public emu.grasscutter.net.proto.GetAuthkeyReqOuterClass.GetAuthkeyReq buildPartial() {
         emu.grasscutter.net.proto.GetAuthkeyReqOuterClass.GetAuthkeyReq result = new emu.grasscutter.net.proto.GetAuthkeyReqOuterClass.GetAuthkeyReq(this);
         result.authAppid_ = authAppid_;
-        result.authkeyVer_ = authkeyVer_;
-        result.signType_ = signType_;
+        result.cIJPMGMCJBA_ = cIJPMGMCJBA_;
+        result.mPGMOFLCEOF_ = mPGMOFLCEOF_;
         onBuilt();
         return result;
       }
@@ -449,11 +449,11 @@ public final class GetAuthkeyReqOuterClass {
           authAppid_ = other.authAppid_;
           onChanged();
         }
-        if (other.getAuthkeyVer() != 0) {
-          setAuthkeyVer(other.getAuthkeyVer());
+        if (other.getCIJPMGMCJBA() != 0) {
+          setCIJPMGMCJBA(other.getCIJPMGMCJBA());
         }
-        if (other.getSignType() != 0) {
-          setSignType(other.getSignType());
+        if (other.getMPGMOFLCEOF() != 0) {
+          setMPGMOFLCEOF(other.getMPGMOFLCEOF());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -481,21 +481,21 @@ public final class GetAuthkeyReqOuterClass {
               case 0:
                 done = true;
                 break;
-              case 10: {
+              case 8: {
+                cIJPMGMCJBA_ = input.readUInt32();
+
+                break;
+              } // case 8
+              case 16: {
+                mPGMOFLCEOF_ = input.readUInt32();
+
+                break;
+              } // case 16
+              case 82: {
                 authAppid_ = input.readStringRequireUtf8();
 
                 break;
-              } // case 10
-              case 48: {
-                authkeyVer_ = input.readUInt32();
-
-                break;
-              } // case 48
-              case 56: {
-                signType_ = input.readUInt32();
-
-                break;
-              } // case 56
+              } // case 82
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -514,7 +514,7 @@ public final class GetAuthkeyReqOuterClass {
 
       private java.lang.Object authAppid_ = "";
       /**
-       * <code>string auth_appid = 1;</code>
+       * <code>string auth_appid = 10;</code>
        * @return The authAppid.
        */
       public java.lang.String getAuthAppid() {
@@ -530,7 +530,7 @@ public final class GetAuthkeyReqOuterClass {
         }
       }
       /**
-       * <code>string auth_appid = 1;</code>
+       * <code>string auth_appid = 10;</code>
        * @return The bytes for authAppid.
        */
       public com.google.protobuf.ByteString
@@ -547,7 +547,7 @@ public final class GetAuthkeyReqOuterClass {
         }
       }
       /**
-       * <code>string auth_appid = 1;</code>
+       * <code>string auth_appid = 10;</code>
        * @param value The authAppid to set.
        * @return This builder for chaining.
        */
@@ -562,7 +562,7 @@ public final class GetAuthkeyReqOuterClass {
         return this;
       }
       /**
-       * <code>string auth_appid = 1;</code>
+       * <code>string auth_appid = 10;</code>
        * @return This builder for chaining.
        */
       public Builder clearAuthAppid() {
@@ -572,7 +572,7 @@ public final class GetAuthkeyReqOuterClass {
         return this;
       }
       /**
-       * <code>string auth_appid = 1;</code>
+       * <code>string auth_appid = 10;</code>
        * @param value The bytes for authAppid to set.
        * @return This builder for chaining.
        */
@@ -588,64 +588,64 @@ public final class GetAuthkeyReqOuterClass {
         return this;
       }
 
-      private int authkeyVer_ ;
+      private int cIJPMGMCJBA_ ;
       /**
-       * <code>uint32 authkey_ver = 6;</code>
-       * @return The authkeyVer.
+       * <code>uint32 CIJPMGMCJBA = 1;</code>
+       * @return The cIJPMGMCJBA.
        */
       @java.lang.Override
-      public int getAuthkeyVer() {
-        return authkeyVer_;
+      public int getCIJPMGMCJBA() {
+        return cIJPMGMCJBA_;
       }
       /**
-       * <code>uint32 authkey_ver = 6;</code>
-       * @param value The authkeyVer to set.
+       * <code>uint32 CIJPMGMCJBA = 1;</code>
+       * @param value The cIJPMGMCJBA to set.
        * @return This builder for chaining.
        */
-      public Builder setAuthkeyVer(int value) {
+      public Builder setCIJPMGMCJBA(int value) {
         
-        authkeyVer_ = value;
+        cIJPMGMCJBA_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 authkey_ver = 6;</code>
+       * <code>uint32 CIJPMGMCJBA = 1;</code>
        * @return This builder for chaining.
        */
-      public Builder clearAuthkeyVer() {
+      public Builder clearCIJPMGMCJBA() {
         
-        authkeyVer_ = 0;
+        cIJPMGMCJBA_ = 0;
         onChanged();
         return this;
       }
 
-      private int signType_ ;
+      private int mPGMOFLCEOF_ ;
       /**
-       * <code>uint32 sign_type = 7;</code>
-       * @return The signType.
+       * <code>uint32 MPGMOFLCEOF = 2;</code>
+       * @return The mPGMOFLCEOF.
        */
       @java.lang.Override
-      public int getSignType() {
-        return signType_;
+      public int getMPGMOFLCEOF() {
+        return mPGMOFLCEOF_;
       }
       /**
-       * <code>uint32 sign_type = 7;</code>
-       * @param value The signType to set.
+       * <code>uint32 MPGMOFLCEOF = 2;</code>
+       * @param value The mPGMOFLCEOF to set.
        * @return This builder for chaining.
        */
-      public Builder setSignType(int value) {
+      public Builder setMPGMOFLCEOF(int value) {
         
-        signType_ = value;
+        mPGMOFLCEOF_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 sign_type = 7;</code>
+       * <code>uint32 MPGMOFLCEOF = 2;</code>
        * @return This builder for chaining.
        */
-      public Builder clearSignType() {
+      public Builder clearMPGMOFLCEOF() {
         
-        signType_ = 0;
+        mPGMOFLCEOF_ = 0;
         onChanged();
         return this;
       }
@@ -727,10 +727,10 @@ public final class GetAuthkeyReqOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\023GetAuthkeyReq.proto\"K\n\rGetAuthkeyReq\022\022" +
-      "\n\nauth_appid\030\001 \001(\t\022\023\n\013authkey_ver\030\006 \001(\r\022" +
-      "\021\n\tsign_type\030\007 \001(\rB\033\n\031emu.grasscutter.ne" +
-      "t.protob\006proto3"
+      "\n\023GetAuthkeyReq.proto\"M\n\rGetAuthkeyReq\022\022" +
+      "\n\nauth_appid\030\n \001(\t\022\023\n\013CIJPMGMCJBA\030\001 \001(\r\022" +
+      "\023\n\013MPGMOFLCEOF\030\002 \001(\rB\033\n\031emu.grasscutter." +
+      "net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -741,7 +741,7 @@ public final class GetAuthkeyReqOuterClass {
     internal_static_GetAuthkeyReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_GetAuthkeyReq_descriptor,
-        new java.lang.String[] { "AuthAppid", "AuthkeyVer", "SignType", });
+        new java.lang.String[] { "AuthAppid", "CIJPMGMCJBA", "MPGMOFLCEOF", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

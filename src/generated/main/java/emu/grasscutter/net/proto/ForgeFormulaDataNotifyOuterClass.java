@@ -19,22 +19,21 @@ public final class ForgeFormulaDataNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>bool is_locked = 15;</code>
+     * <code>bool is_locked = 2;</code>
      * @return The isLocked.
      */
     boolean getIsLocked();
 
     /**
-     * <code>uint32 forge_id = 7;</code>
+     * <code>uint32 forge_id = 5;</code>
      * @return The forgeId.
      */
     int getForgeId();
   }
   /**
    * <pre>
-   * 4.7.0
-   * CmdId: 8543
-   * Obf: NADJCPKBCLM
+   * CmdId: 9617
+   * obf: IKKOMAKKLAO
    * </pre>
    *
    * Protobuf type {@code ForgeFormulaDataNotify}
@@ -76,10 +75,10 @@ public final class ForgeFormulaDataNotifyOuterClass {
               emu.grasscutter.net.proto.ForgeFormulaDataNotifyOuterClass.ForgeFormulaDataNotify.class, emu.grasscutter.net.proto.ForgeFormulaDataNotifyOuterClass.ForgeFormulaDataNotify.Builder.class);
     }
 
-    public static final int IS_LOCKED_FIELD_NUMBER = 15;
+    public static final int IS_LOCKED_FIELD_NUMBER = 2;
     private boolean isLocked_;
     /**
-     * <code>bool is_locked = 15;</code>
+     * <code>bool is_locked = 2;</code>
      * @return The isLocked.
      */
     @java.lang.Override
@@ -87,10 +86,10 @@ public final class ForgeFormulaDataNotifyOuterClass {
       return isLocked_;
     }
 
-    public static final int FORGE_ID_FIELD_NUMBER = 7;
+    public static final int FORGE_ID_FIELD_NUMBER = 5;
     private int forgeId_;
     /**
-     * <code>uint32 forge_id = 7;</code>
+     * <code>uint32 forge_id = 5;</code>
      * @return The forgeId.
      */
     @java.lang.Override
@@ -112,11 +111,11 @@ public final class ForgeFormulaDataNotifyOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (forgeId_ != 0) {
-        output.writeUInt32(7, forgeId_);
-      }
       if (isLocked_ != false) {
-        output.writeBool(15, isLocked_);
+        output.writeBool(2, isLocked_);
+      }
+      if (forgeId_ != 0) {
+        output.writeUInt32(5, forgeId_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -127,13 +126,13 @@ public final class ForgeFormulaDataNotifyOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (forgeId_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(7, forgeId_);
-      }
       if (isLocked_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(15, isLocked_);
+          .computeBoolSize(2, isLocked_);
+      }
+      if (forgeId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(5, forgeId_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -267,9 +266,8 @@ public final class ForgeFormulaDataNotifyOuterClass {
     }
     /**
      * <pre>
-     * 4.7.0
-     * CmdId: 8543
-     * Obf: NADJCPKBCLM
+     * CmdId: 9617
+     * obf: IKKOMAKKLAO
      * </pre>
      *
      * Protobuf type {@code ForgeFormulaDataNotify}
@@ -416,16 +414,16 @@ public final class ForgeFormulaDataNotifyOuterClass {
               case 0:
                 done = true;
                 break;
-              case 56: {
-                forgeId_ = input.readUInt32();
-
-                break;
-              } // case 56
-              case 120: {
+              case 16: {
                 isLocked_ = input.readBool();
 
                 break;
-              } // case 120
+              } // case 16
+              case 40: {
+                forgeId_ = input.readUInt32();
+
+                break;
+              } // case 40
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -444,7 +442,7 @@ public final class ForgeFormulaDataNotifyOuterClass {
 
       private boolean isLocked_ ;
       /**
-       * <code>bool is_locked = 15;</code>
+       * <code>bool is_locked = 2;</code>
        * @return The isLocked.
        */
       @java.lang.Override
@@ -452,7 +450,7 @@ public final class ForgeFormulaDataNotifyOuterClass {
         return isLocked_;
       }
       /**
-       * <code>bool is_locked = 15;</code>
+       * <code>bool is_locked = 2;</code>
        * @param value The isLocked to set.
        * @return This builder for chaining.
        */
@@ -463,7 +461,7 @@ public final class ForgeFormulaDataNotifyOuterClass {
         return this;
       }
       /**
-       * <code>bool is_locked = 15;</code>
+       * <code>bool is_locked = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearIsLocked() {
@@ -475,7 +473,7 @@ public final class ForgeFormulaDataNotifyOuterClass {
 
       private int forgeId_ ;
       /**
-       * <code>uint32 forge_id = 7;</code>
+       * <code>uint32 forge_id = 5;</code>
        * @return The forgeId.
        */
       @java.lang.Override
@@ -483,7 +481,7 @@ public final class ForgeFormulaDataNotifyOuterClass {
         return forgeId_;
       }
       /**
-       * <code>uint32 forge_id = 7;</code>
+       * <code>uint32 forge_id = 5;</code>
        * @param value The forgeId to set.
        * @return This builder for chaining.
        */
@@ -494,7 +492,7 @@ public final class ForgeFormulaDataNotifyOuterClass {
         return this;
       }
       /**
-       * <code>uint32 forge_id = 7;</code>
+       * <code>uint32 forge_id = 5;</code>
        * @return This builder for chaining.
        */
       public Builder clearForgeId() {
@@ -582,8 +580,8 @@ public final class ForgeFormulaDataNotifyOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\034ForgeFormulaDataNotify.proto\"=\n\026ForgeF" +
-      "ormulaDataNotify\022\021\n\tis_locked\030\017 \001(\010\022\020\n\010f" +
-      "orge_id\030\007 \001(\rB\033\n\031emu.grasscutter.net.pro" +
+      "ormulaDataNotify\022\021\n\tis_locked\030\002 \001(\010\022\020\n\010f" +
+      "orge_id\030\005 \001(\rB\033\n\031emu.grasscutter.net.pro" +
       "tob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

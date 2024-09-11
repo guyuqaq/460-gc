@@ -202,6 +202,7 @@ public class Player implements DatabaseObject<Player>, PlayerHook, FieldFetch {
     
     private transient boolean isNew;
     public static boolean isDialog;
+    public static boolean isLimit;
     @Getter private PlayerProgress playerProgress;
     @Getter private Set<Integer> activeQuestTimers;
 
@@ -213,6 +214,7 @@ public class Player implements DatabaseObject<Player>, PlayerHook, FieldFetch {
     @SuppressWarnings({"rawtypes", "unchecked"}) // Morphia only!
     public Player() {
         this.isDialog = false;
+        this.isLimit = false;
         this.inventory = new Inventory(this);
         this.avatars = new AvatarStorage(this);
         this.friendsList = new FriendsList(this);

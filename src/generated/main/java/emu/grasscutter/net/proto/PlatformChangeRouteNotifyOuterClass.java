@@ -19,37 +19,26 @@ public final class PlatformChangeRouteNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.PlatformInfo platform = 12;</code>
-     * @return Whether the platform field is set.
+     * <code>uint32 MBCALMMJAFA = 11;</code>
+     * @return The mBCALMMJAFA.
      */
-    boolean hasPlatform();
-    /**
-     * <code>.PlatformInfo platform = 12;</code>
-     * @return The platform.
-     */
-    emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfo getPlatform();
-    /**
-     * <code>.PlatformInfo platform = 12;</code>
-     */
-    emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfoOrBuilder getPlatformOrBuilder();
+    int getMBCALMMJAFA();
 
     /**
-     * <code>uint32 entity_id = 7;</code>
-     * @return The entityId.
+     * <code>uint32 page_id = 13;</code>
+     * @return The pageId.
      */
-    int getEntityId();
+    int getPageId();
 
     /**
-     * <code>uint32 scene_time = 8;</code>
-     * @return The sceneTime.
+     * <code>uint32 OHGAGHPNJFA = 14;</code>
+     * @return The oHGAGHPNJFA.
      */
-    int getSceneTime();
+    int getOHGAGHPNJFA();
   }
   /**
    * <pre>
-   * 4.7.0
-   * CmdId: 28607
-   * Obf: PNNLCKEICNA
+   * CmdId: 26187
    * </pre>
    *
    * Protobuf type {@code PlatformChangeRouteNotify}
@@ -91,52 +80,37 @@ public final class PlatformChangeRouteNotifyOuterClass {
               emu.grasscutter.net.proto.PlatformChangeRouteNotifyOuterClass.PlatformChangeRouteNotify.class, emu.grasscutter.net.proto.PlatformChangeRouteNotifyOuterClass.PlatformChangeRouteNotify.Builder.class);
     }
 
-    public static final int PLATFORM_FIELD_NUMBER = 12;
-    private emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfo platform_;
+    public static final int MBCALMMJAFA_FIELD_NUMBER = 11;
+    private int mBCALMMJAFA_;
     /**
-     * <code>.PlatformInfo platform = 12;</code>
-     * @return Whether the platform field is set.
+     * <code>uint32 MBCALMMJAFA = 11;</code>
+     * @return The mBCALMMJAFA.
      */
     @java.lang.Override
-    public boolean hasPlatform() {
-      return platform_ != null;
-    }
-    /**
-     * <code>.PlatformInfo platform = 12;</code>
-     * @return The platform.
-     */
-    @java.lang.Override
-    public emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfo getPlatform() {
-      return platform_ == null ? emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfo.getDefaultInstance() : platform_;
-    }
-    /**
-     * <code>.PlatformInfo platform = 12;</code>
-     */
-    @java.lang.Override
-    public emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfoOrBuilder getPlatformOrBuilder() {
-      return getPlatform();
+    public int getMBCALMMJAFA() {
+      return mBCALMMJAFA_;
     }
 
-    public static final int ENTITY_ID_FIELD_NUMBER = 7;
-    private int entityId_;
+    public static final int PAGE_ID_FIELD_NUMBER = 13;
+    private int pageId_;
     /**
-     * <code>uint32 entity_id = 7;</code>
-     * @return The entityId.
+     * <code>uint32 page_id = 13;</code>
+     * @return The pageId.
      */
     @java.lang.Override
-    public int getEntityId() {
-      return entityId_;
+    public int getPageId() {
+      return pageId_;
     }
 
-    public static final int SCENE_TIME_FIELD_NUMBER = 8;
-    private int sceneTime_;
+    public static final int OHGAGHPNJFA_FIELD_NUMBER = 14;
+    private int oHGAGHPNJFA_;
     /**
-     * <code>uint32 scene_time = 8;</code>
-     * @return The sceneTime.
+     * <code>uint32 OHGAGHPNJFA = 14;</code>
+     * @return The oHGAGHPNJFA.
      */
     @java.lang.Override
-    public int getSceneTime() {
-      return sceneTime_;
+    public int getOHGAGHPNJFA() {
+      return oHGAGHPNJFA_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -153,14 +127,14 @@ public final class PlatformChangeRouteNotifyOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (entityId_ != 0) {
-        output.writeUInt32(7, entityId_);
+      if (mBCALMMJAFA_ != 0) {
+        output.writeUInt32(11, mBCALMMJAFA_);
       }
-      if (sceneTime_ != 0) {
-        output.writeUInt32(8, sceneTime_);
+      if (pageId_ != 0) {
+        output.writeUInt32(13, pageId_);
       }
-      if (platform_ != null) {
-        output.writeMessage(12, getPlatform());
+      if (oHGAGHPNJFA_ != 0) {
+        output.writeUInt32(14, oHGAGHPNJFA_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -171,17 +145,17 @@ public final class PlatformChangeRouteNotifyOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (entityId_ != 0) {
+      if (mBCALMMJAFA_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(7, entityId_);
+          .computeUInt32Size(11, mBCALMMJAFA_);
       }
-      if (sceneTime_ != 0) {
+      if (pageId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(8, sceneTime_);
+          .computeUInt32Size(13, pageId_);
       }
-      if (platform_ != null) {
+      if (oHGAGHPNJFA_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(12, getPlatform());
+          .computeUInt32Size(14, oHGAGHPNJFA_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -198,15 +172,12 @@ public final class PlatformChangeRouteNotifyOuterClass {
       }
       emu.grasscutter.net.proto.PlatformChangeRouteNotifyOuterClass.PlatformChangeRouteNotify other = (emu.grasscutter.net.proto.PlatformChangeRouteNotifyOuterClass.PlatformChangeRouteNotify) obj;
 
-      if (hasPlatform() != other.hasPlatform()) return false;
-      if (hasPlatform()) {
-        if (!getPlatform()
-            .equals(other.getPlatform())) return false;
-      }
-      if (getEntityId()
-          != other.getEntityId()) return false;
-      if (getSceneTime()
-          != other.getSceneTime()) return false;
+      if (getMBCALMMJAFA()
+          != other.getMBCALMMJAFA()) return false;
+      if (getPageId()
+          != other.getPageId()) return false;
+      if (getOHGAGHPNJFA()
+          != other.getOHGAGHPNJFA()) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -218,14 +189,12 @@ public final class PlatformChangeRouteNotifyOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasPlatform()) {
-        hash = (37 * hash) + PLATFORM_FIELD_NUMBER;
-        hash = (53 * hash) + getPlatform().hashCode();
-      }
-      hash = (37 * hash) + ENTITY_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getEntityId();
-      hash = (37 * hash) + SCENE_TIME_FIELD_NUMBER;
-      hash = (53 * hash) + getSceneTime();
+      hash = (37 * hash) + MBCALMMJAFA_FIELD_NUMBER;
+      hash = (53 * hash) + getMBCALMMJAFA();
+      hash = (37 * hash) + PAGE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getPageId();
+      hash = (37 * hash) + OHGAGHPNJFA_FIELD_NUMBER;
+      hash = (53 * hash) + getOHGAGHPNJFA();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -323,9 +292,7 @@ public final class PlatformChangeRouteNotifyOuterClass {
     }
     /**
      * <pre>
-     * 4.7.0
-     * CmdId: 28607
-     * Obf: PNNLCKEICNA
+     * CmdId: 26187
      * </pre>
      *
      * Protobuf type {@code PlatformChangeRouteNotify}
@@ -360,15 +327,11 @@ public final class PlatformChangeRouteNotifyOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (platformBuilder_ == null) {
-          platform_ = null;
-        } else {
-          platform_ = null;
-          platformBuilder_ = null;
-        }
-        entityId_ = 0;
+        mBCALMMJAFA_ = 0;
 
-        sceneTime_ = 0;
+        pageId_ = 0;
+
+        oHGAGHPNJFA_ = 0;
 
         return this;
       }
@@ -396,13 +359,9 @@ public final class PlatformChangeRouteNotifyOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.PlatformChangeRouteNotifyOuterClass.PlatformChangeRouteNotify buildPartial() {
         emu.grasscutter.net.proto.PlatformChangeRouteNotifyOuterClass.PlatformChangeRouteNotify result = new emu.grasscutter.net.proto.PlatformChangeRouteNotifyOuterClass.PlatformChangeRouteNotify(this);
-        if (platformBuilder_ == null) {
-          result.platform_ = platform_;
-        } else {
-          result.platform_ = platformBuilder_.build();
-        }
-        result.entityId_ = entityId_;
-        result.sceneTime_ = sceneTime_;
+        result.mBCALMMJAFA_ = mBCALMMJAFA_;
+        result.pageId_ = pageId_;
+        result.oHGAGHPNJFA_ = oHGAGHPNJFA_;
         onBuilt();
         return result;
       }
@@ -451,14 +410,14 @@ public final class PlatformChangeRouteNotifyOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.PlatformChangeRouteNotifyOuterClass.PlatformChangeRouteNotify other) {
         if (other == emu.grasscutter.net.proto.PlatformChangeRouteNotifyOuterClass.PlatformChangeRouteNotify.getDefaultInstance()) return this;
-        if (other.hasPlatform()) {
-          mergePlatform(other.getPlatform());
+        if (other.getMBCALMMJAFA() != 0) {
+          setMBCALMMJAFA(other.getMBCALMMJAFA());
         }
-        if (other.getEntityId() != 0) {
-          setEntityId(other.getEntityId());
+        if (other.getPageId() != 0) {
+          setPageId(other.getPageId());
         }
-        if (other.getSceneTime() != 0) {
-          setSceneTime(other.getSceneTime());
+        if (other.getOHGAGHPNJFA() != 0) {
+          setOHGAGHPNJFA(other.getOHGAGHPNJFA());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -486,23 +445,21 @@ public final class PlatformChangeRouteNotifyOuterClass {
               case 0:
                 done = true;
                 break;
-              case 56: {
-                entityId_ = input.readUInt32();
+              case 88: {
+                mBCALMMJAFA_ = input.readUInt32();
 
                 break;
-              } // case 56
-              case 64: {
-                sceneTime_ = input.readUInt32();
+              } // case 88
+              case 104: {
+                pageId_ = input.readUInt32();
 
                 break;
-              } // case 64
-              case 98: {
-                input.readMessage(
-                    getPlatformFieldBuilder().getBuilder(),
-                    extensionRegistry);
+              } // case 104
+              case 112: {
+                oHGAGHPNJFA_ = input.readUInt32();
 
                 break;
-              } // case 98
+              } // case 112
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -519,183 +476,95 @@ public final class PlatformChangeRouteNotifyOuterClass {
         return this;
       }
 
-      private emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfo platform_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfo, emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfo.Builder, emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfoOrBuilder> platformBuilder_;
+      private int mBCALMMJAFA_ ;
       /**
-       * <code>.PlatformInfo platform = 12;</code>
-       * @return Whether the platform field is set.
-       */
-      public boolean hasPlatform() {
-        return platformBuilder_ != null || platform_ != null;
-      }
-      /**
-       * <code>.PlatformInfo platform = 12;</code>
-       * @return The platform.
-       */
-      public emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfo getPlatform() {
-        if (platformBuilder_ == null) {
-          return platform_ == null ? emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfo.getDefaultInstance() : platform_;
-        } else {
-          return platformBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>.PlatformInfo platform = 12;</code>
-       */
-      public Builder setPlatform(emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfo value) {
-        if (platformBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          platform_ = value;
-          onChanged();
-        } else {
-          platformBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.PlatformInfo platform = 12;</code>
-       */
-      public Builder setPlatform(
-          emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfo.Builder builderForValue) {
-        if (platformBuilder_ == null) {
-          platform_ = builderForValue.build();
-          onChanged();
-        } else {
-          platformBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <code>.PlatformInfo platform = 12;</code>
-       */
-      public Builder mergePlatform(emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfo value) {
-        if (platformBuilder_ == null) {
-          if (platform_ != null) {
-            platform_ =
-              emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfo.newBuilder(platform_).mergeFrom(value).buildPartial();
-          } else {
-            platform_ = value;
-          }
-          onChanged();
-        } else {
-          platformBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.PlatformInfo platform = 12;</code>
-       */
-      public Builder clearPlatform() {
-        if (platformBuilder_ == null) {
-          platform_ = null;
-          onChanged();
-        } else {
-          platform_ = null;
-          platformBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <code>.PlatformInfo platform = 12;</code>
-       */
-      public emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfo.Builder getPlatformBuilder() {
-        
-        onChanged();
-        return getPlatformFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.PlatformInfo platform = 12;</code>
-       */
-      public emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfoOrBuilder getPlatformOrBuilder() {
-        if (platformBuilder_ != null) {
-          return platformBuilder_.getMessageOrBuilder();
-        } else {
-          return platform_ == null ?
-              emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfo.getDefaultInstance() : platform_;
-        }
-      }
-      /**
-       * <code>.PlatformInfo platform = 12;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfo, emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfo.Builder, emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfoOrBuilder> 
-          getPlatformFieldBuilder() {
-        if (platformBuilder_ == null) {
-          platformBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfo, emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfo.Builder, emu.grasscutter.net.proto.PlatformInfoOuterClass.PlatformInfoOrBuilder>(
-                  getPlatform(),
-                  getParentForChildren(),
-                  isClean());
-          platform_ = null;
-        }
-        return platformBuilder_;
-      }
-
-      private int entityId_ ;
-      /**
-       * <code>uint32 entity_id = 7;</code>
-       * @return The entityId.
+       * <code>uint32 MBCALMMJAFA = 11;</code>
+       * @return The mBCALMMJAFA.
        */
       @java.lang.Override
-      public int getEntityId() {
-        return entityId_;
+      public int getMBCALMMJAFA() {
+        return mBCALMMJAFA_;
       }
       /**
-       * <code>uint32 entity_id = 7;</code>
-       * @param value The entityId to set.
+       * <code>uint32 MBCALMMJAFA = 11;</code>
+       * @param value The mBCALMMJAFA to set.
        * @return This builder for chaining.
        */
-      public Builder setEntityId(int value) {
+      public Builder setMBCALMMJAFA(int value) {
         
-        entityId_ = value;
+        mBCALMMJAFA_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 entity_id = 7;</code>
+       * <code>uint32 MBCALMMJAFA = 11;</code>
        * @return This builder for chaining.
        */
-      public Builder clearEntityId() {
+      public Builder clearMBCALMMJAFA() {
         
-        entityId_ = 0;
+        mBCALMMJAFA_ = 0;
         onChanged();
         return this;
       }
 
-      private int sceneTime_ ;
+      private int pageId_ ;
       /**
-       * <code>uint32 scene_time = 8;</code>
-       * @return The sceneTime.
+       * <code>uint32 page_id = 13;</code>
+       * @return The pageId.
        */
       @java.lang.Override
-      public int getSceneTime() {
-        return sceneTime_;
+      public int getPageId() {
+        return pageId_;
       }
       /**
-       * <code>uint32 scene_time = 8;</code>
-       * @param value The sceneTime to set.
+       * <code>uint32 page_id = 13;</code>
+       * @param value The pageId to set.
        * @return This builder for chaining.
        */
-      public Builder setSceneTime(int value) {
+      public Builder setPageId(int value) {
         
-        sceneTime_ = value;
+        pageId_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 scene_time = 8;</code>
+       * <code>uint32 page_id = 13;</code>
        * @return This builder for chaining.
        */
-      public Builder clearSceneTime() {
+      public Builder clearPageId() {
         
-        sceneTime_ = 0;
+        pageId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int oHGAGHPNJFA_ ;
+      /**
+       * <code>uint32 OHGAGHPNJFA = 14;</code>
+       * @return The oHGAGHPNJFA.
+       */
+      @java.lang.Override
+      public int getOHGAGHPNJFA() {
+        return oHGAGHPNJFA_;
+      }
+      /**
+       * <code>uint32 OHGAGHPNJFA = 14;</code>
+       * @param value The oHGAGHPNJFA to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOHGAGHPNJFA(int value) {
+        
+        oHGAGHPNJFA_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 OHGAGHPNJFA = 14;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOHGAGHPNJFA() {
+        
+        oHGAGHPNJFA_ = 0;
         onChanged();
         return this;
       }
@@ -778,10 +647,10 @@ public final class PlatformChangeRouteNotifyOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\037PlatformChangeRouteNotify.proto\032\022Platf" +
-      "ormInfo.proto\"c\n\031PlatformChangeRouteNoti" +
-      "fy\022\037\n\010platform\030\014 \001(\0132\r.PlatformInfo\022\021\n\te" +
-      "ntity_id\030\007 \001(\r\022\022\n\nscene_time\030\010 \001(\rB\033\n\031em" +
-      "u.grasscutter.net.protob\006proto3"
+      "ormInfo.proto\"V\n\031PlatformChangeRouteNoti" +
+      "fy\022\023\n\013MBCALMMJAFA\030\013 \001(\r\022\017\n\007page_id\030\r \001(\r" +
+      "\022\023\n\013OHGAGHPNJFA\030\016 \001(\rB\033\n\031emu.grasscutter" +
+      ".net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -793,7 +662,7 @@ public final class PlatformChangeRouteNotifyOuterClass {
     internal_static_PlatformChangeRouteNotify_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_PlatformChangeRouteNotify_descriptor,
-        new java.lang.String[] { "Platform", "EntityId", "SceneTime", });
+        new java.lang.String[] { "MBCALMMJAFA", "PageId", "OHGAGHPNJFA", });
     emu.grasscutter.net.proto.PlatformInfoOuterClass.getDescriptor();
   }
 

@@ -19,16 +19,15 @@ public final class QuestDelNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 quest_id = 8;</code>
+     * <code>uint32 quest_id = 4;</code>
      * @return The questId.
      */
     int getQuestId();
   }
   /**
    * <pre>
-   * 4.7.0
-   * CmdId: 21870 or 9734(?) or
-   * Obf: LCNFPGBNBFP
+   * CmdId: 1774
+   * obf: MMDDENPGBJG
    * </pre>
    *
    * Protobuf type {@code QuestDelNotify}
@@ -70,10 +69,10 @@ public final class QuestDelNotifyOuterClass {
               emu.grasscutter.net.proto.QuestDelNotifyOuterClass.QuestDelNotify.class, emu.grasscutter.net.proto.QuestDelNotifyOuterClass.QuestDelNotify.Builder.class);
     }
 
-    public static final int QUEST_ID_FIELD_NUMBER = 8;
+    public static final int QUEST_ID_FIELD_NUMBER = 4;
     private int questId_;
     /**
-     * <code>uint32 quest_id = 8;</code>
+     * <code>uint32 quest_id = 4;</code>
      * @return The questId.
      */
     @java.lang.Override
@@ -96,7 +95,7 @@ public final class QuestDelNotifyOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (questId_ != 0) {
-        output.writeUInt32(8, questId_);
+        output.writeUInt32(4, questId_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -109,7 +108,7 @@ public final class QuestDelNotifyOuterClass {
       size = 0;
       if (questId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(8, questId_);
+          .computeUInt32Size(4, questId_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -238,9 +237,8 @@ public final class QuestDelNotifyOuterClass {
     }
     /**
      * <pre>
-     * 4.7.0
-     * CmdId: 21870 or 9734(?) or
-     * Obf: LCNFPGBNBFP
+     * CmdId: 1774
+     * obf: MMDDENPGBJG
      * </pre>
      *
      * Protobuf type {@code QuestDelNotify}
@@ -381,11 +379,11 @@ public final class QuestDelNotifyOuterClass {
               case 0:
                 done = true;
                 break;
-              case 64: {
+              case 32: {
                 questId_ = input.readUInt32();
 
                 break;
-              } // case 64
+              } // case 32
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -404,7 +402,7 @@ public final class QuestDelNotifyOuterClass {
 
       private int questId_ ;
       /**
-       * <code>uint32 quest_id = 8;</code>
+       * <code>uint32 quest_id = 4;</code>
        * @return The questId.
        */
       @java.lang.Override
@@ -412,7 +410,7 @@ public final class QuestDelNotifyOuterClass {
         return questId_;
       }
       /**
-       * <code>uint32 quest_id = 8;</code>
+       * <code>uint32 quest_id = 4;</code>
        * @param value The questId to set.
        * @return This builder for chaining.
        */
@@ -423,7 +421,7 @@ public final class QuestDelNotifyOuterClass {
         return this;
       }
       /**
-       * <code>uint32 quest_id = 8;</code>
+       * <code>uint32 quest_id = 4;</code>
        * @return This builder for chaining.
        */
       public Builder clearQuestId() {
@@ -511,7 +509,7 @@ public final class QuestDelNotifyOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\024QuestDelNotify.proto\"\"\n\016QuestDelNotify" +
-      "\022\020\n\010quest_id\030\010 \001(\rB\033\n\031emu.grasscutter.ne" +
+      "\022\020\n\010quest_id\030\004 \001(\rB\033\n\031emu.grasscutter.ne" +
       "t.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

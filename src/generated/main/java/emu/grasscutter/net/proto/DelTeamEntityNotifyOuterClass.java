@@ -36,16 +36,16 @@ public final class DelTeamEntityNotifyOuterClass {
     int getDelEntityIdList(int index);
 
     /**
-     * <code>uint32 scene_id = 11;</code>
+     * <code>uint32 scene_id = 6;</code>
      * @return The sceneId.
      */
     int getSceneId();
   }
   /**
    * <pre>
-   * 4.7.0
-   * CmdId: 26087(3),25063(2?),9589(2)
-   * Obf: ?
+   * DelTeamEntityNotify or DelScenePlayTeamEntityNotify
+   * CmdId: 29714
+   * obf: GEIOMAELNGM
    * </pre>
    *
    * Protobuf type {@code DelTeamEntityNotify}
@@ -116,10 +116,10 @@ public final class DelTeamEntityNotifyOuterClass {
     }
     private int delEntityIdListMemoizedSerializedSize = -1;
 
-    public static final int SCENE_ID_FIELD_NUMBER = 11;
+    public static final int SCENE_ID_FIELD_NUMBER = 6;
     private int sceneId_;
     /**
-     * <code>uint32 scene_id = 11;</code>
+     * <code>uint32 scene_id = 6;</code>
      * @return The sceneId.
      */
     @java.lang.Override
@@ -150,7 +150,7 @@ public final class DelTeamEntityNotifyOuterClass {
         output.writeUInt32NoTag(delEntityIdList_.getInt(i));
       }
       if (sceneId_ != 0) {
-        output.writeUInt32(11, sceneId_);
+        output.writeUInt32(6, sceneId_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -177,7 +177,7 @@ public final class DelTeamEntityNotifyOuterClass {
       }
       if (sceneId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(11, sceneId_);
+          .computeUInt32Size(6, sceneId_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -312,9 +312,9 @@ public final class DelTeamEntityNotifyOuterClass {
     }
     /**
      * <pre>
-     * 4.7.0
-     * CmdId: 26087(3),25063(2?),9589(2)
-     * Obf: ?
+     * DelTeamEntityNotify or DelScenePlayTeamEntityNotify
+     * CmdId: 29714
+     * obf: GEIOMAELNGM
      * </pre>
      *
      * Protobuf type {@code DelTeamEntityNotify}
@@ -489,11 +489,11 @@ public final class DelTeamEntityNotifyOuterClass {
                 input.popLimit(limit);
                 break;
               } // case 26
-              case 88: {
+              case 48: {
                 sceneId_ = input.readUInt32();
 
                 break;
-              } // case 88
+              } // case 48
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -592,7 +592,7 @@ public final class DelTeamEntityNotifyOuterClass {
 
       private int sceneId_ ;
       /**
-       * <code>uint32 scene_id = 11;</code>
+       * <code>uint32 scene_id = 6;</code>
        * @return The sceneId.
        */
       @java.lang.Override
@@ -600,7 +600,7 @@ public final class DelTeamEntityNotifyOuterClass {
         return sceneId_;
       }
       /**
-       * <code>uint32 scene_id = 11;</code>
+       * <code>uint32 scene_id = 6;</code>
        * @param value The sceneId to set.
        * @return This builder for chaining.
        */
@@ -611,7 +611,7 @@ public final class DelTeamEntityNotifyOuterClass {
         return this;
       }
       /**
-       * <code>uint32 scene_id = 11;</code>
+       * <code>uint32 scene_id = 6;</code>
        * @return This builder for chaining.
        */
       public Builder clearSceneId() {
@@ -700,7 +700,7 @@ public final class DelTeamEntityNotifyOuterClass {
     java.lang.String[] descriptorData = {
       "\n\031DelTeamEntityNotify.proto\"C\n\023DelTeamEn" +
       "tityNotify\022\032\n\022del_entity_id_list\030\003 \003(\r\022\020" +
-      "\n\010scene_id\030\013 \001(\rB\033\n\031emu.grasscutter.net." +
+      "\n\010scene_id\030\006 \001(\rB\033\n\031emu.grasscutter.net." +
       "protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

@@ -15,10 +15,6 @@ public final class WindFieldDungeonFailReasonOuterClass {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   /**
-   * <pre>
-   * Obf: EPFKHGDAOCP
-   * </pre>
-   *
    * Protobuf enum {@code WindFieldDungeonFailReason}
    */
   public enum WindFieldDungeonFailReason

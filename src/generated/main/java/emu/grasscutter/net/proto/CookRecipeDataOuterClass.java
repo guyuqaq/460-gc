@@ -25,16 +25,12 @@ public final class CookRecipeDataOuterClass {
     int getRecipeId();
 
     /**
-     * <code>uint32 proficiency = 10;</code>
+     * <code>uint32 proficiency = 12;</code>
      * @return The proficiency.
      */
     int getProficiency();
   }
   /**
-   * <pre>
-   * Obf: LOFGLBBMMAL
-   * </pre>
-   *
    * Protobuf type {@code CookRecipeData}
    */
   public static final class CookRecipeData extends
@@ -61,53 +57,6 @@ public final class CookRecipeDataOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private CookRecipeData(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 40: {
-
-              recipeId_ = input.readUInt32();
-              break;
-            }
-            case 80: {
-
-              proficiency_ = input.readUInt32();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.CookRecipeDataOuterClass.internal_static_CookRecipeData_descriptor;
@@ -132,10 +81,10 @@ public final class CookRecipeDataOuterClass {
       return recipeId_;
     }
 
-    public static final int PROFICIENCY_FIELD_NUMBER = 10;
+    public static final int PROFICIENCY_FIELD_NUMBER = 12;
     private int proficiency_;
     /**
-     * <code>uint32 proficiency = 10;</code>
+     * <code>uint32 proficiency = 12;</code>
      * @return The proficiency.
      */
     @java.lang.Override
@@ -161,9 +110,9 @@ public final class CookRecipeDataOuterClass {
         output.writeUInt32(5, recipeId_);
       }
       if (proficiency_ != 0) {
-        output.writeUInt32(10, proficiency_);
+        output.writeUInt32(12, proficiency_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -178,9 +127,9 @@ public final class CookRecipeDataOuterClass {
       }
       if (proficiency_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(10, proficiency_);
+          .computeUInt32Size(12, proficiency_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -199,7 +148,7 @@ public final class CookRecipeDataOuterClass {
           != other.getRecipeId()) return false;
       if (getProficiency()
           != other.getProficiency()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -214,7 +163,7 @@ public final class CookRecipeDataOuterClass {
       hash = (53 * hash) + getRecipeId();
       hash = (37 * hash) + PROFICIENCY_FIELD_NUMBER;
       hash = (53 * hash) + getProficiency();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -310,10 +259,6 @@ public final class CookRecipeDataOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * Obf: LOFGLBBMMAL
-     * </pre>
-     *
      * Protobuf type {@code CookRecipeData}
      */
     public static final class Builder extends
@@ -335,18 +280,13 @@ public final class CookRecipeDataOuterClass {
 
       // Construct using emu.grasscutter.net.proto.CookRecipeDataOuterClass.CookRecipeData.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -437,7 +377,7 @@ public final class CookRecipeDataOuterClass {
         if (other.getProficiency() != 0) {
           setProficiency(other.getProficiency());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -452,17 +392,40 @@ public final class CookRecipeDataOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.CookRecipeDataOuterClass.CookRecipeData parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 40: {
+                recipeId_ = input.readUInt32();
+
+                break;
+              } // case 40
+              case 96: {
+                proficiency_ = input.readUInt32();
+
+                break;
+              } // case 96
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.CookRecipeDataOuterClass.CookRecipeData) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -499,7 +462,7 @@ public final class CookRecipeDataOuterClass {
 
       private int proficiency_ ;
       /**
-       * <code>uint32 proficiency = 10;</code>
+       * <code>uint32 proficiency = 12;</code>
        * @return The proficiency.
        */
       @java.lang.Override
@@ -507,7 +470,7 @@ public final class CookRecipeDataOuterClass {
         return proficiency_;
       }
       /**
-       * <code>uint32 proficiency = 10;</code>
+       * <code>uint32 proficiency = 12;</code>
        * @param value The proficiency to set.
        * @return This builder for chaining.
        */
@@ -518,7 +481,7 @@ public final class CookRecipeDataOuterClass {
         return this;
       }
       /**
-       * <code>uint32 proficiency = 10;</code>
+       * <code>uint32 proficiency = 12;</code>
        * @return This builder for chaining.
        */
       public Builder clearProficiency() {
@@ -560,7 +523,18 @@ public final class CookRecipeDataOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new CookRecipeData(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -595,7 +569,7 @@ public final class CookRecipeDataOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\024CookRecipeData.proto\"8\n\016CookRecipeData" +
-      "\022\021\n\trecipe_id\030\005 \001(\r\022\023\n\013proficiency\030\n \001(\r" +
+      "\022\021\n\trecipe_id\030\005 \001(\r\022\023\n\013proficiency\030\014 \001(\r" +
       "B\033\n\031emu.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

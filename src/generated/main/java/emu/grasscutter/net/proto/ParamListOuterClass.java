@@ -36,10 +36,6 @@ public final class ParamListOuterClass {
     int getParamList(int index);
   }
   /**
-   * <pre>
-   * 5.0.0
-   * </pre>
-   *
    * Protobuf type {@code ParamList}
    */
   public static final class ParamList extends
@@ -281,10 +277,6 @@ public final class ParamListOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * 5.0.0
-     * </pre>
-     *
      * Protobuf type {@code ParamList}
      */
     public static final class Builder extends

@@ -19,15 +19,15 @@ public final class MeetNpcReqOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 npc_id = 4;</code>
+     * <code>uint32 npc_id = 1;</code>
      * @return The npcId.
      */
     int getNpcId();
   }
   /**
    * <pre>
-   * CmdId: 25501
-   * Obf: LACPJBOMAAM
+   * CmdId: 5799
+   * obf: AICBEHIGDOB
    * </pre>
    *
    * Protobuf type {@code MeetNpcReq}
@@ -56,48 +56,6 @@ public final class MeetNpcReqOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private MeetNpcReq(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 32: {
-
-              npcId_ = input.readUInt32();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.MeetNpcReqOuterClass.internal_static_MeetNpcReq_descriptor;
@@ -111,10 +69,10 @@ public final class MeetNpcReqOuterClass {
               emu.grasscutter.net.proto.MeetNpcReqOuterClass.MeetNpcReq.class, emu.grasscutter.net.proto.MeetNpcReqOuterClass.MeetNpcReq.Builder.class);
     }
 
-    public static final int NPC_ID_FIELD_NUMBER = 4;
+    public static final int NPC_ID_FIELD_NUMBER = 1;
     private int npcId_;
     /**
-     * <code>uint32 npc_id = 4;</code>
+     * <code>uint32 npc_id = 1;</code>
      * @return The npcId.
      */
     @java.lang.Override
@@ -137,9 +95,9 @@ public final class MeetNpcReqOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (npcId_ != 0) {
-        output.writeUInt32(4, npcId_);
+        output.writeUInt32(1, npcId_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -150,9 +108,9 @@ public final class MeetNpcReqOuterClass {
       size = 0;
       if (npcId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(4, npcId_);
+          .computeUInt32Size(1, npcId_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -169,7 +127,7 @@ public final class MeetNpcReqOuterClass {
 
       if (getNpcId()
           != other.getNpcId()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -182,7 +140,7 @@ public final class MeetNpcReqOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + NPC_ID_FIELD_NUMBER;
       hash = (53 * hash) + getNpcId();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -279,8 +237,8 @@ public final class MeetNpcReqOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 25501
-     * Obf: LACPJBOMAAM
+     * CmdId: 5799
+     * obf: AICBEHIGDOB
      * </pre>
      *
      * Protobuf type {@code MeetNpcReq}
@@ -304,18 +262,13 @@ public final class MeetNpcReqOuterClass {
 
       // Construct using emu.grasscutter.net.proto.MeetNpcReqOuterClass.MeetNpcReq.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -400,7 +353,7 @@ public final class MeetNpcReqOuterClass {
         if (other.getNpcId() != 0) {
           setNpcId(other.getNpcId());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -415,23 +368,41 @@ public final class MeetNpcReqOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.MeetNpcReqOuterClass.MeetNpcReq parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                npcId_ = input.readUInt32();
+
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.MeetNpcReqOuterClass.MeetNpcReq) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
       private int npcId_ ;
       /**
-       * <code>uint32 npc_id = 4;</code>
+       * <code>uint32 npc_id = 1;</code>
        * @return The npcId.
        */
       @java.lang.Override
@@ -439,7 +410,7 @@ public final class MeetNpcReqOuterClass {
         return npcId_;
       }
       /**
-       * <code>uint32 npc_id = 4;</code>
+       * <code>uint32 npc_id = 1;</code>
        * @param value The npcId to set.
        * @return This builder for chaining.
        */
@@ -450,7 +421,7 @@ public final class MeetNpcReqOuterClass {
         return this;
       }
       /**
-       * <code>uint32 npc_id = 4;</code>
+       * <code>uint32 npc_id = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearNpcId() {
@@ -492,7 +463,18 @@ public final class MeetNpcReqOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new MeetNpcReq(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -527,7 +509,7 @@ public final class MeetNpcReqOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\020MeetNpcReq.proto\"\034\n\nMeetNpcReq\022\016\n\006npc_" +
-      "id\030\004 \001(\rB\033\n\031emu.grasscutter.net.protob\006p" +
+      "id\030\001 \001(\rB\033\n\031emu.grasscutter.net.protob\006p" +
       "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

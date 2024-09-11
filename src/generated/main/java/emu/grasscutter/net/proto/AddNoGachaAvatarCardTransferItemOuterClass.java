@@ -19,28 +19,24 @@ public final class AddNoGachaAvatarCardTransferItemOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 count = 1;</code>
+     * <code>uint32 count = 3;</code>
      * @return The count.
      */
     int getCount();
 
     /**
-     * <code>uint32 item_id = 15;</code>
+     * <code>uint32 item_id = 6;</code>
      * @return The itemId.
      */
     int getItemId();
 
     /**
-     * <code>bool is_new = 13;</code>
+     * <code>bool is_new = 11;</code>
      * @return The isNew.
      */
     boolean getIsNew();
   }
   /**
-   * <pre>
-   * Obf: APPDFAFBKIM
-   * </pre>
-   *
    * Protobuf type {@code AddNoGachaAvatarCardTransferItem}
    */
   public static final class AddNoGachaAvatarCardTransferItem extends
@@ -67,58 +63,6 @@ public final class AddNoGachaAvatarCardTransferItemOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private AddNoGachaAvatarCardTransferItem(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-
-              count_ = input.readUInt32();
-              break;
-            }
-            case 104: {
-
-              isNew_ = input.readBool();
-              break;
-            }
-            case 120: {
-
-              itemId_ = input.readUInt32();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.AddNoGachaAvatarCardTransferItemOuterClass.internal_static_AddNoGachaAvatarCardTransferItem_descriptor;
@@ -132,10 +76,10 @@ public final class AddNoGachaAvatarCardTransferItemOuterClass {
               emu.grasscutter.net.proto.AddNoGachaAvatarCardTransferItemOuterClass.AddNoGachaAvatarCardTransferItem.class, emu.grasscutter.net.proto.AddNoGachaAvatarCardTransferItemOuterClass.AddNoGachaAvatarCardTransferItem.Builder.class);
     }
 
-    public static final int COUNT_FIELD_NUMBER = 1;
+    public static final int COUNT_FIELD_NUMBER = 3;
     private int count_;
     /**
-     * <code>uint32 count = 1;</code>
+     * <code>uint32 count = 3;</code>
      * @return The count.
      */
     @java.lang.Override
@@ -143,10 +87,10 @@ public final class AddNoGachaAvatarCardTransferItemOuterClass {
       return count_;
     }
 
-    public static final int ITEM_ID_FIELD_NUMBER = 15;
+    public static final int ITEM_ID_FIELD_NUMBER = 6;
     private int itemId_;
     /**
-     * <code>uint32 item_id = 15;</code>
+     * <code>uint32 item_id = 6;</code>
      * @return The itemId.
      */
     @java.lang.Override
@@ -154,10 +98,10 @@ public final class AddNoGachaAvatarCardTransferItemOuterClass {
       return itemId_;
     }
 
-    public static final int IS_NEW_FIELD_NUMBER = 13;
+    public static final int IS_NEW_FIELD_NUMBER = 11;
     private boolean isNew_;
     /**
-     * <code>bool is_new = 13;</code>
+     * <code>bool is_new = 11;</code>
      * @return The isNew.
      */
     @java.lang.Override
@@ -180,15 +124,15 @@ public final class AddNoGachaAvatarCardTransferItemOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (count_ != 0) {
-        output.writeUInt32(1, count_);
-      }
-      if (isNew_ != false) {
-        output.writeBool(13, isNew_);
+        output.writeUInt32(3, count_);
       }
       if (itemId_ != 0) {
-        output.writeUInt32(15, itemId_);
+        output.writeUInt32(6, itemId_);
       }
-      unknownFields.writeTo(output);
+      if (isNew_ != false) {
+        output.writeBool(11, isNew_);
+      }
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -199,17 +143,17 @@ public final class AddNoGachaAvatarCardTransferItemOuterClass {
       size = 0;
       if (count_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(1, count_);
-      }
-      if (isNew_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(13, isNew_);
+          .computeUInt32Size(3, count_);
       }
       if (itemId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(15, itemId_);
+          .computeUInt32Size(6, itemId_);
       }
-      size += unknownFields.getSerializedSize();
+      if (isNew_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(11, isNew_);
+      }
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -230,7 +174,7 @@ public final class AddNoGachaAvatarCardTransferItemOuterClass {
           != other.getItemId()) return false;
       if (getIsNew()
           != other.getIsNew()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -248,7 +192,7 @@ public final class AddNoGachaAvatarCardTransferItemOuterClass {
       hash = (37 * hash) + IS_NEW_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsNew());
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -344,10 +288,6 @@ public final class AddNoGachaAvatarCardTransferItemOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * Obf: APPDFAFBKIM
-     * </pre>
-     *
      * Protobuf type {@code AddNoGachaAvatarCardTransferItem}
      */
     public static final class Builder extends
@@ -369,18 +309,13 @@ public final class AddNoGachaAvatarCardTransferItemOuterClass {
 
       // Construct using emu.grasscutter.net.proto.AddNoGachaAvatarCardTransferItemOuterClass.AddNoGachaAvatarCardTransferItem.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -477,7 +412,7 @@ public final class AddNoGachaAvatarCardTransferItemOuterClass {
         if (other.getIsNew() != false) {
           setIsNew(other.getIsNew());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -492,23 +427,51 @@ public final class AddNoGachaAvatarCardTransferItemOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.AddNoGachaAvatarCardTransferItemOuterClass.AddNoGachaAvatarCardTransferItem parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 24: {
+                count_ = input.readUInt32();
+
+                break;
+              } // case 24
+              case 48: {
+                itemId_ = input.readUInt32();
+
+                break;
+              } // case 48
+              case 88: {
+                isNew_ = input.readBool();
+
+                break;
+              } // case 88
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.AddNoGachaAvatarCardTransferItemOuterClass.AddNoGachaAvatarCardTransferItem) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
       private int count_ ;
       /**
-       * <code>uint32 count = 1;</code>
+       * <code>uint32 count = 3;</code>
        * @return The count.
        */
       @java.lang.Override
@@ -516,7 +479,7 @@ public final class AddNoGachaAvatarCardTransferItemOuterClass {
         return count_;
       }
       /**
-       * <code>uint32 count = 1;</code>
+       * <code>uint32 count = 3;</code>
        * @param value The count to set.
        * @return This builder for chaining.
        */
@@ -527,7 +490,7 @@ public final class AddNoGachaAvatarCardTransferItemOuterClass {
         return this;
       }
       /**
-       * <code>uint32 count = 1;</code>
+       * <code>uint32 count = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearCount() {
@@ -539,7 +502,7 @@ public final class AddNoGachaAvatarCardTransferItemOuterClass {
 
       private int itemId_ ;
       /**
-       * <code>uint32 item_id = 15;</code>
+       * <code>uint32 item_id = 6;</code>
        * @return The itemId.
        */
       @java.lang.Override
@@ -547,7 +510,7 @@ public final class AddNoGachaAvatarCardTransferItemOuterClass {
         return itemId_;
       }
       /**
-       * <code>uint32 item_id = 15;</code>
+       * <code>uint32 item_id = 6;</code>
        * @param value The itemId to set.
        * @return This builder for chaining.
        */
@@ -558,7 +521,7 @@ public final class AddNoGachaAvatarCardTransferItemOuterClass {
         return this;
       }
       /**
-       * <code>uint32 item_id = 15;</code>
+       * <code>uint32 item_id = 6;</code>
        * @return This builder for chaining.
        */
       public Builder clearItemId() {
@@ -570,7 +533,7 @@ public final class AddNoGachaAvatarCardTransferItemOuterClass {
 
       private boolean isNew_ ;
       /**
-       * <code>bool is_new = 13;</code>
+       * <code>bool is_new = 11;</code>
        * @return The isNew.
        */
       @java.lang.Override
@@ -578,7 +541,7 @@ public final class AddNoGachaAvatarCardTransferItemOuterClass {
         return isNew_;
       }
       /**
-       * <code>bool is_new = 13;</code>
+       * <code>bool is_new = 11;</code>
        * @param value The isNew to set.
        * @return This builder for chaining.
        */
@@ -589,7 +552,7 @@ public final class AddNoGachaAvatarCardTransferItemOuterClass {
         return this;
       }
       /**
-       * <code>bool is_new = 13;</code>
+       * <code>bool is_new = 11;</code>
        * @return This builder for chaining.
        */
       public Builder clearIsNew() {
@@ -631,7 +594,18 @@ public final class AddNoGachaAvatarCardTransferItemOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new AddNoGachaAvatarCardTransferItem(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -667,7 +641,7 @@ public final class AddNoGachaAvatarCardTransferItemOuterClass {
     java.lang.String[] descriptorData = {
       "\n&AddNoGachaAvatarCardTransferItem.proto" +
       "\"R\n AddNoGachaAvatarCardTransferItem\022\r\n\005" +
-      "count\030\001 \001(\r\022\017\n\007item_id\030\017 \001(\r\022\016\n\006is_new\030\r" +
+      "count\030\003 \001(\r\022\017\n\007item_id\030\006 \001(\r\022\016\n\006is_new\030\013" +
       " \001(\010B\033\n\031emu.grasscutter.net.protob\006proto" +
       "3"
     };

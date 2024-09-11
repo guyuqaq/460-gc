@@ -19,16 +19,6 @@ public final class ChangeMpTeamAvatarReqOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <pre>
-     * OK
-     * </pre>
-     *
-     * <code>uint64 cur_avatar_guid = 2;</code>
-     * @return The curAvatarGuid.
-     */
-    long getCurAvatarGuid();
-
-    /**
      * <code>repeated uint64 avatar_guid_list = 11;</code>
      * @return A list containing the avatarGuidList.
      */
@@ -44,12 +34,17 @@ public final class ChangeMpTeamAvatarReqOuterClass {
      * @return The avatarGuidList at the given index.
      */
     long getAvatarGuidList(int index);
+
+    /**
+     * <code>uint64 cur_avatar_guid = 4;</code>
+     * @return The curAvatarGuid.
+     */
+    long getCurAvatarGuid();
   }
   /**
    * <pre>
-   * 4.7.0
-   * CmdId: 26305
-   * Obf: MOANBPAGANO
+   * CmdId: 28747
+   * obf: DBEBGAGNGEG
    * </pre>
    *
    * Protobuf type {@code ChangeMpTeamAvatarReq}
@@ -92,21 +87,6 @@ public final class ChangeMpTeamAvatarReqOuterClass {
               emu.grasscutter.net.proto.ChangeMpTeamAvatarReqOuterClass.ChangeMpTeamAvatarReq.class, emu.grasscutter.net.proto.ChangeMpTeamAvatarReqOuterClass.ChangeMpTeamAvatarReq.Builder.class);
     }
 
-    public static final int CUR_AVATAR_GUID_FIELD_NUMBER = 2;
-    private long curAvatarGuid_;
-    /**
-     * <pre>
-     * OK
-     * </pre>
-     *
-     * <code>uint64 cur_avatar_guid = 2;</code>
-     * @return The curAvatarGuid.
-     */
-    @java.lang.Override
-    public long getCurAvatarGuid() {
-      return curAvatarGuid_;
-    }
-
     public static final int AVATAR_GUID_LIST_FIELD_NUMBER = 11;
     private com.google.protobuf.Internal.LongList avatarGuidList_;
     /**
@@ -135,6 +115,17 @@ public final class ChangeMpTeamAvatarReqOuterClass {
     }
     private int avatarGuidListMemoizedSerializedSize = -1;
 
+    public static final int CUR_AVATAR_GUID_FIELD_NUMBER = 4;
+    private long curAvatarGuid_;
+    /**
+     * <code>uint64 cur_avatar_guid = 4;</code>
+     * @return The curAvatarGuid.
+     */
+    @java.lang.Override
+    public long getCurAvatarGuid() {
+      return curAvatarGuid_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -151,7 +142,7 @@ public final class ChangeMpTeamAvatarReqOuterClass {
                         throws java.io.IOException {
       getSerializedSize();
       if (curAvatarGuid_ != 0L) {
-        output.writeUInt64(2, curAvatarGuid_);
+        output.writeUInt64(4, curAvatarGuid_);
       }
       if (getAvatarGuidListList().size() > 0) {
         output.writeUInt32NoTag(90);
@@ -171,7 +162,7 @@ public final class ChangeMpTeamAvatarReqOuterClass {
       size = 0;
       if (curAvatarGuid_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(2, curAvatarGuid_);
+          .computeUInt64Size(4, curAvatarGuid_);
       }
       {
         int dataSize = 0;
@@ -202,10 +193,10 @@ public final class ChangeMpTeamAvatarReqOuterClass {
       }
       emu.grasscutter.net.proto.ChangeMpTeamAvatarReqOuterClass.ChangeMpTeamAvatarReq other = (emu.grasscutter.net.proto.ChangeMpTeamAvatarReqOuterClass.ChangeMpTeamAvatarReq) obj;
 
-      if (getCurAvatarGuid()
-          != other.getCurAvatarGuid()) return false;
       if (!getAvatarGuidListList()
           .equals(other.getAvatarGuidListList())) return false;
+      if (getCurAvatarGuid()
+          != other.getCurAvatarGuid()) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -217,13 +208,13 @@ public final class ChangeMpTeamAvatarReqOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + CUR_AVATAR_GUID_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getCurAvatarGuid());
       if (getAvatarGuidListCount() > 0) {
         hash = (37 * hash) + AVATAR_GUID_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getAvatarGuidListList().hashCode();
       }
+      hash = (37 * hash) + CUR_AVATAR_GUID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getCurAvatarGuid());
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -321,9 +312,8 @@ public final class ChangeMpTeamAvatarReqOuterClass {
     }
     /**
      * <pre>
-     * 4.7.0
-     * CmdId: 26305
-     * Obf: MOANBPAGANO
+     * CmdId: 28747
+     * obf: DBEBGAGNGEG
      * </pre>
      *
      * Protobuf type {@code ChangeMpTeamAvatarReq}
@@ -358,10 +348,10 @@ public final class ChangeMpTeamAvatarReqOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        curAvatarGuid_ = 0L;
-
         avatarGuidList_ = emptyLongList();
         bitField0_ = (bitField0_ & ~0x00000001);
+        curAvatarGuid_ = 0L;
+
         return this;
       }
 
@@ -389,12 +379,12 @@ public final class ChangeMpTeamAvatarReqOuterClass {
       public emu.grasscutter.net.proto.ChangeMpTeamAvatarReqOuterClass.ChangeMpTeamAvatarReq buildPartial() {
         emu.grasscutter.net.proto.ChangeMpTeamAvatarReqOuterClass.ChangeMpTeamAvatarReq result = new emu.grasscutter.net.proto.ChangeMpTeamAvatarReqOuterClass.ChangeMpTeamAvatarReq(this);
         int from_bitField0_ = bitField0_;
-        result.curAvatarGuid_ = curAvatarGuid_;
         if (((bitField0_ & 0x00000001) != 0)) {
           avatarGuidList_.makeImmutable();
           bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.avatarGuidList_ = avatarGuidList_;
+        result.curAvatarGuid_ = curAvatarGuid_;
         onBuilt();
         return result;
       }
@@ -443,9 +433,6 @@ public final class ChangeMpTeamAvatarReqOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.ChangeMpTeamAvatarReqOuterClass.ChangeMpTeamAvatarReq other) {
         if (other == emu.grasscutter.net.proto.ChangeMpTeamAvatarReqOuterClass.ChangeMpTeamAvatarReq.getDefaultInstance()) return this;
-        if (other.getCurAvatarGuid() != 0L) {
-          setCurAvatarGuid(other.getCurAvatarGuid());
-        }
         if (!other.avatarGuidList_.isEmpty()) {
           if (avatarGuidList_.isEmpty()) {
             avatarGuidList_ = other.avatarGuidList_;
@@ -455,6 +442,9 @@ public final class ChangeMpTeamAvatarReqOuterClass {
             avatarGuidList_.addAll(other.avatarGuidList_);
           }
           onChanged();
+        }
+        if (other.getCurAvatarGuid() != 0L) {
+          setCurAvatarGuid(other.getCurAvatarGuid());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -482,11 +472,11 @@ public final class ChangeMpTeamAvatarReqOuterClass {
               case 0:
                 done = true;
                 break;
-              case 16: {
+              case 32: {
                 curAvatarGuid_ = input.readUInt64();
 
                 break;
-              } // case 16
+              } // case 32
               case 88: {
                 long v = input.readUInt64();
                 ensureAvatarGuidListIsMutable();
@@ -519,49 +509,6 @@ public final class ChangeMpTeamAvatarReqOuterClass {
         return this;
       }
       private int bitField0_;
-
-      private long curAvatarGuid_ ;
-      /**
-       * <pre>
-       * OK
-       * </pre>
-       *
-       * <code>uint64 cur_avatar_guid = 2;</code>
-       * @return The curAvatarGuid.
-       */
-      @java.lang.Override
-      public long getCurAvatarGuid() {
-        return curAvatarGuid_;
-      }
-      /**
-       * <pre>
-       * OK
-       * </pre>
-       *
-       * <code>uint64 cur_avatar_guid = 2;</code>
-       * @param value The curAvatarGuid to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCurAvatarGuid(long value) {
-        
-        curAvatarGuid_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * OK
-       * </pre>
-       *
-       * <code>uint64 cur_avatar_guid = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCurAvatarGuid() {
-        
-        curAvatarGuid_ = 0L;
-        onChanged();
-        return this;
-      }
 
       private com.google.protobuf.Internal.LongList avatarGuidList_ = emptyLongList();
       private void ensureAvatarGuidListIsMutable() {
@@ -638,6 +585,37 @@ public final class ChangeMpTeamAvatarReqOuterClass {
       public Builder clearAvatarGuidList() {
         avatarGuidList_ = emptyLongList();
         bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+
+      private long curAvatarGuid_ ;
+      /**
+       * <code>uint64 cur_avatar_guid = 4;</code>
+       * @return The curAvatarGuid.
+       */
+      @java.lang.Override
+      public long getCurAvatarGuid() {
+        return curAvatarGuid_;
+      }
+      /**
+       * <code>uint64 cur_avatar_guid = 4;</code>
+       * @param value The curAvatarGuid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCurAvatarGuid(long value) {
+        
+        curAvatarGuid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 cur_avatar_guid = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCurAvatarGuid() {
+        
+        curAvatarGuid_ = 0L;
         onChanged();
         return this;
       }
@@ -720,8 +698,8 @@ public final class ChangeMpTeamAvatarReqOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\033ChangeMpTeamAvatarReq.proto\"J\n\025ChangeM" +
-      "pTeamAvatarReq\022\027\n\017cur_avatar_guid\030\002 \001(\004\022" +
-      "\030\n\020avatar_guid_list\030\013 \003(\004B\033\n\031emu.grasscu" +
+      "pTeamAvatarReq\022\030\n\020avatar_guid_list\030\013 \003(\004" +
+      "\022\027\n\017cur_avatar_guid\030\004 \001(\004B\033\n\031emu.grasscu" +
       "tter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -733,7 +711,7 @@ public final class ChangeMpTeamAvatarReqOuterClass {
     internal_static_ChangeMpTeamAvatarReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ChangeMpTeamAvatarReq_descriptor,
-        new java.lang.String[] { "CurAvatarGuid", "AvatarGuidList", });
+        new java.lang.String[] { "AvatarGuidList", "CurAvatarGuid", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

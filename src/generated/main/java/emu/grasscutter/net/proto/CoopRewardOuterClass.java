@@ -19,27 +19,23 @@ public final class CoopRewardOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 id = 2;</code>
+     * <code>uint32 id = 3;</code>
      * @return The id.
      */
     int getId();
 
     /**
-     * <code>.CoopReward.State state = 10;</code>
+     * <code>.CoopReward.State state = 12;</code>
      * @return The enum numeric value on the wire for state.
      */
     int getStateValue();
     /**
-     * <code>.CoopReward.State state = 10;</code>
+     * <code>.CoopReward.State state = 12;</code>
      * @return The state.
      */
     emu.grasscutter.net.proto.CoopRewardOuterClass.CoopReward.State getState();
   }
   /**
-   * <pre>
-   * Obf: PCNHBJPDMOB
-   * </pre>
-   *
    * Protobuf type {@code CoopReward}
    */
   public static final class CoopReward extends
@@ -67,54 +63,6 @@ public final class CoopRewardOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private CoopReward(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 16: {
-
-              id_ = input.readUInt32();
-              break;
-            }
-            case 80: {
-              int rawValue = input.readEnum();
-
-              state_ = rawValue;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.CoopRewardOuterClass.internal_static_CoopReward_descriptor;
@@ -129,10 +77,6 @@ public final class CoopRewardOuterClass {
     }
 
     /**
-     * <pre>
-     * Obf: NNDLFEMBJMK
-     * </pre>
-     *
      * Protobuf enum {@code CoopReward.State}
      */
     public enum State
@@ -249,10 +193,10 @@ public final class CoopRewardOuterClass {
       // @@protoc_insertion_point(enum_scope:CoopReward.State)
     }
 
-    public static final int ID_FIELD_NUMBER = 2;
+    public static final int ID_FIELD_NUMBER = 3;
     private int id_;
     /**
-     * <code>uint32 id = 2;</code>
+     * <code>uint32 id = 3;</code>
      * @return The id.
      */
     @java.lang.Override
@@ -260,17 +204,17 @@ public final class CoopRewardOuterClass {
       return id_;
     }
 
-    public static final int STATE_FIELD_NUMBER = 10;
+    public static final int STATE_FIELD_NUMBER = 12;
     private int state_;
     /**
-     * <code>.CoopReward.State state = 10;</code>
+     * <code>.CoopReward.State state = 12;</code>
      * @return The enum numeric value on the wire for state.
      */
     @java.lang.Override public int getStateValue() {
       return state_;
     }
     /**
-     * <code>.CoopReward.State state = 10;</code>
+     * <code>.CoopReward.State state = 12;</code>
      * @return The state.
      */
     @java.lang.Override public emu.grasscutter.net.proto.CoopRewardOuterClass.CoopReward.State getState() {
@@ -294,12 +238,12 @@ public final class CoopRewardOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (id_ != 0) {
-        output.writeUInt32(2, id_);
+        output.writeUInt32(3, id_);
       }
       if (state_ != emu.grasscutter.net.proto.CoopRewardOuterClass.CoopReward.State.STATE_UNLOCK.getNumber()) {
-        output.writeEnum(10, state_);
+        output.writeEnum(12, state_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -310,13 +254,13 @@ public final class CoopRewardOuterClass {
       size = 0;
       if (id_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(2, id_);
+          .computeUInt32Size(3, id_);
       }
       if (state_ != emu.grasscutter.net.proto.CoopRewardOuterClass.CoopReward.State.STATE_UNLOCK.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(10, state_);
+          .computeEnumSize(12, state_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -334,7 +278,7 @@ public final class CoopRewardOuterClass {
       if (getId()
           != other.getId()) return false;
       if (state_ != other.state_) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -349,7 +293,7 @@ public final class CoopRewardOuterClass {
       hash = (53 * hash) + getId();
       hash = (37 * hash) + STATE_FIELD_NUMBER;
       hash = (53 * hash) + state_;
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -445,10 +389,6 @@ public final class CoopRewardOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * Obf: PCNHBJPDMOB
-     * </pre>
-     *
      * Protobuf type {@code CoopReward}
      */
     public static final class Builder extends
@@ -470,18 +410,13 @@ public final class CoopRewardOuterClass {
 
       // Construct using emu.grasscutter.net.proto.CoopRewardOuterClass.CoopReward.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -572,7 +507,7 @@ public final class CoopRewardOuterClass {
         if (other.state_ != 0) {
           setStateValue(other.getStateValue());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -587,23 +522,46 @@ public final class CoopRewardOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.CoopRewardOuterClass.CoopReward parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 24: {
+                id_ = input.readUInt32();
+
+                break;
+              } // case 24
+              case 96: {
+                state_ = input.readEnum();
+
+                break;
+              } // case 96
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.CoopRewardOuterClass.CoopReward) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
       private int id_ ;
       /**
-       * <code>uint32 id = 2;</code>
+       * <code>uint32 id = 3;</code>
        * @return The id.
        */
       @java.lang.Override
@@ -611,7 +569,7 @@ public final class CoopRewardOuterClass {
         return id_;
       }
       /**
-       * <code>uint32 id = 2;</code>
+       * <code>uint32 id = 3;</code>
        * @param value The id to set.
        * @return This builder for chaining.
        */
@@ -622,7 +580,7 @@ public final class CoopRewardOuterClass {
         return this;
       }
       /**
-       * <code>uint32 id = 2;</code>
+       * <code>uint32 id = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearId() {
@@ -634,14 +592,14 @@ public final class CoopRewardOuterClass {
 
       private int state_ = 0;
       /**
-       * <code>.CoopReward.State state = 10;</code>
+       * <code>.CoopReward.State state = 12;</code>
        * @return The enum numeric value on the wire for state.
        */
       @java.lang.Override public int getStateValue() {
         return state_;
       }
       /**
-       * <code>.CoopReward.State state = 10;</code>
+       * <code>.CoopReward.State state = 12;</code>
        * @param value The enum numeric value on the wire for state to set.
        * @return This builder for chaining.
        */
@@ -652,7 +610,7 @@ public final class CoopRewardOuterClass {
         return this;
       }
       /**
-       * <code>.CoopReward.State state = 10;</code>
+       * <code>.CoopReward.State state = 12;</code>
        * @return The state.
        */
       @java.lang.Override
@@ -662,7 +620,7 @@ public final class CoopRewardOuterClass {
         return result == null ? emu.grasscutter.net.proto.CoopRewardOuterClass.CoopReward.State.UNRECOGNIZED : result;
       }
       /**
-       * <code>.CoopReward.State state = 10;</code>
+       * <code>.CoopReward.State state = 12;</code>
        * @param value The state to set.
        * @return This builder for chaining.
        */
@@ -676,7 +634,7 @@ public final class CoopRewardOuterClass {
         return this;
       }
       /**
-       * <code>.CoopReward.State state = 10;</code>
+       * <code>.CoopReward.State state = 12;</code>
        * @return This builder for chaining.
        */
       public Builder clearState() {
@@ -718,7 +676,18 @@ public final class CoopRewardOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new CoopReward(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -752,8 +721,8 @@ public final class CoopRewardOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\020CoopReward.proto\"v\n\nCoopReward\022\n\n\002id\030\002" +
-      " \001(\r\022 \n\005state\030\n \001(\0162\021.CoopReward.State\":" +
+      "\n\020CoopReward.proto\"v\n\nCoopReward\022\n\n\002id\030\003" +
+      " \001(\r\022 \n\005state\030\014 \001(\0162\021.CoopReward.State\":" +
       "\n\005State\022\020\n\014STATE_UNLOCK\020\000\022\016\n\nSTATE_LOCK\020" +
       "\001\022\017\n\013STATE_TAKEN\020\002B\033\n\031emu.grasscutter.ne" +
       "t.protob\006proto3"

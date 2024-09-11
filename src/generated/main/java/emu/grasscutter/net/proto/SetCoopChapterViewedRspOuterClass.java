@@ -19,21 +19,20 @@ public final class SetCoopChapterViewedRspOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int32 retcode = 12;</code>
-     * @return The retcode.
-     */
-    int getRetcode();
-
-    /**
-     * <code>uint32 chapter_id = 6;</code>
+     * <code>uint32 chapter_id = 3;</code>
      * @return The chapterId.
      */
     int getChapterId();
+
+    /**
+     * <code>int32 retcode = 8;</code>
+     * @return The retcode.
+     */
+    int getRetcode();
   }
   /**
    * <pre>
-   * CmdId: 23389
-   * Obf: AIFNGABDBJK
+   * CmdId: 2246
    * </pre>
    *
    * Protobuf type {@code SetCoopChapterViewedRsp}
@@ -75,26 +74,26 @@ public final class SetCoopChapterViewedRspOuterClass {
               emu.grasscutter.net.proto.SetCoopChapterViewedRspOuterClass.SetCoopChapterViewedRsp.class, emu.grasscutter.net.proto.SetCoopChapterViewedRspOuterClass.SetCoopChapterViewedRsp.Builder.class);
     }
 
-    public static final int RETCODE_FIELD_NUMBER = 12;
-    private int retcode_;
-    /**
-     * <code>int32 retcode = 12;</code>
-     * @return The retcode.
-     */
-    @java.lang.Override
-    public int getRetcode() {
-      return retcode_;
-    }
-
-    public static final int CHAPTER_ID_FIELD_NUMBER = 6;
+    public static final int CHAPTER_ID_FIELD_NUMBER = 3;
     private int chapterId_;
     /**
-     * <code>uint32 chapter_id = 6;</code>
+     * <code>uint32 chapter_id = 3;</code>
      * @return The chapterId.
      */
     @java.lang.Override
     public int getChapterId() {
       return chapterId_;
+    }
+
+    public static final int RETCODE_FIELD_NUMBER = 8;
+    private int retcode_;
+    /**
+     * <code>int32 retcode = 8;</code>
+     * @return The retcode.
+     */
+    @java.lang.Override
+    public int getRetcode() {
+      return retcode_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -112,10 +111,10 @@ public final class SetCoopChapterViewedRspOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (chapterId_ != 0) {
-        output.writeUInt32(6, chapterId_);
+        output.writeUInt32(3, chapterId_);
       }
       if (retcode_ != 0) {
-        output.writeInt32(12, retcode_);
+        output.writeInt32(8, retcode_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -128,11 +127,11 @@ public final class SetCoopChapterViewedRspOuterClass {
       size = 0;
       if (chapterId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(6, chapterId_);
+          .computeUInt32Size(3, chapterId_);
       }
       if (retcode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(12, retcode_);
+          .computeInt32Size(8, retcode_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -149,10 +148,10 @@ public final class SetCoopChapterViewedRspOuterClass {
       }
       emu.grasscutter.net.proto.SetCoopChapterViewedRspOuterClass.SetCoopChapterViewedRsp other = (emu.grasscutter.net.proto.SetCoopChapterViewedRspOuterClass.SetCoopChapterViewedRsp) obj;
 
-      if (getRetcode()
-          != other.getRetcode()) return false;
       if (getChapterId()
           != other.getChapterId()) return false;
+      if (getRetcode()
+          != other.getRetcode()) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -164,10 +163,10 @@ public final class SetCoopChapterViewedRspOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + RETCODE_FIELD_NUMBER;
-      hash = (53 * hash) + getRetcode();
       hash = (37 * hash) + CHAPTER_ID_FIELD_NUMBER;
       hash = (53 * hash) + getChapterId();
+      hash = (37 * hash) + RETCODE_FIELD_NUMBER;
+      hash = (53 * hash) + getRetcode();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -265,8 +264,7 @@ public final class SetCoopChapterViewedRspOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 23389
-     * Obf: AIFNGABDBJK
+     * CmdId: 2246
      * </pre>
      *
      * Protobuf type {@code SetCoopChapterViewedRsp}
@@ -301,9 +299,9 @@ public final class SetCoopChapterViewedRspOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        retcode_ = 0;
-
         chapterId_ = 0;
+
+        retcode_ = 0;
 
         return this;
       }
@@ -331,8 +329,8 @@ public final class SetCoopChapterViewedRspOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.SetCoopChapterViewedRspOuterClass.SetCoopChapterViewedRsp buildPartial() {
         emu.grasscutter.net.proto.SetCoopChapterViewedRspOuterClass.SetCoopChapterViewedRsp result = new emu.grasscutter.net.proto.SetCoopChapterViewedRspOuterClass.SetCoopChapterViewedRsp(this);
-        result.retcode_ = retcode_;
         result.chapterId_ = chapterId_;
+        result.retcode_ = retcode_;
         onBuilt();
         return result;
       }
@@ -381,11 +379,11 @@ public final class SetCoopChapterViewedRspOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.SetCoopChapterViewedRspOuterClass.SetCoopChapterViewedRsp other) {
         if (other == emu.grasscutter.net.proto.SetCoopChapterViewedRspOuterClass.SetCoopChapterViewedRsp.getDefaultInstance()) return this;
-        if (other.getRetcode() != 0) {
-          setRetcode(other.getRetcode());
-        }
         if (other.getChapterId() != 0) {
           setChapterId(other.getChapterId());
+        }
+        if (other.getRetcode() != 0) {
+          setRetcode(other.getRetcode());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -413,16 +411,16 @@ public final class SetCoopChapterViewedRspOuterClass {
               case 0:
                 done = true;
                 break;
-              case 48: {
+              case 24: {
                 chapterId_ = input.readUInt32();
 
                 break;
-              } // case 48
-              case 96: {
+              } // case 24
+              case 64: {
                 retcode_ = input.readInt32();
 
                 break;
-              } // case 96
+              } // case 64
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -439,40 +437,9 @@ public final class SetCoopChapterViewedRspOuterClass {
         return this;
       }
 
-      private int retcode_ ;
-      /**
-       * <code>int32 retcode = 12;</code>
-       * @return The retcode.
-       */
-      @java.lang.Override
-      public int getRetcode() {
-        return retcode_;
-      }
-      /**
-       * <code>int32 retcode = 12;</code>
-       * @param value The retcode to set.
-       * @return This builder for chaining.
-       */
-      public Builder setRetcode(int value) {
-        
-        retcode_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int32 retcode = 12;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearRetcode() {
-        
-        retcode_ = 0;
-        onChanged();
-        return this;
-      }
-
       private int chapterId_ ;
       /**
-       * <code>uint32 chapter_id = 6;</code>
+       * <code>uint32 chapter_id = 3;</code>
        * @return The chapterId.
        */
       @java.lang.Override
@@ -480,7 +447,7 @@ public final class SetCoopChapterViewedRspOuterClass {
         return chapterId_;
       }
       /**
-       * <code>uint32 chapter_id = 6;</code>
+       * <code>uint32 chapter_id = 3;</code>
        * @param value The chapterId to set.
        * @return This builder for chaining.
        */
@@ -491,12 +458,43 @@ public final class SetCoopChapterViewedRspOuterClass {
         return this;
       }
       /**
-       * <code>uint32 chapter_id = 6;</code>
+       * <code>uint32 chapter_id = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearChapterId() {
         
         chapterId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int retcode_ ;
+      /**
+       * <code>int32 retcode = 8;</code>
+       * @return The retcode.
+       */
+      @java.lang.Override
+      public int getRetcode() {
+        return retcode_;
+      }
+      /**
+       * <code>int32 retcode = 8;</code>
+       * @param value The retcode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRetcode(int value) {
+        
+        retcode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 retcode = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRetcode() {
+        
+        retcode_ = 0;
         onChanged();
         return this;
       }
@@ -579,8 +577,8 @@ public final class SetCoopChapterViewedRspOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\035SetCoopChapterViewedRsp.proto\">\n\027SetCo" +
-      "opChapterViewedRsp\022\017\n\007retcode\030\014 \001(\005\022\022\n\nc" +
-      "hapter_id\030\006 \001(\rB\033\n\031emu.grasscutter.net.p" +
+      "opChapterViewedRsp\022\022\n\nchapter_id\030\003 \001(\r\022\017" +
+      "\n\007retcode\030\010 \001(\005B\033\n\031emu.grasscutter.net.p" +
       "rotob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -592,7 +590,7 @@ public final class SetCoopChapterViewedRspOuterClass {
     internal_static_SetCoopChapterViewedRsp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_SetCoopChapterViewedRsp_descriptor,
-        new java.lang.String[] { "Retcode", "ChapterId", });
+        new java.lang.String[] { "ChapterId", "Retcode", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

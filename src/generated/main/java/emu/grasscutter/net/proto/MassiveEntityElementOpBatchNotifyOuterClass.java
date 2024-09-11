@@ -19,104 +19,83 @@ public final class MassiveEntityElementOpBatchNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <pre>
-     * 1?
-     * </pre>
-     *
-     * <code>uint32 op_idx = 12;</code>
-     * @return The opIdx.
-     */
-    int getOpIdx();
-
-    /**
-     * <pre>
-     * OK
-     * </pre>
-     *
-     * <code>uint32 user_id = 7;</code>
-     * @return The userId.
-     */
-    int getUserId();
-
-    /**
-     * <pre>
-     * OK
-     * </pre>
-     *
-     * <code>uint32 attacker_id = 2;</code>
-     * @return The attackerId.
-     */
-    int getAttackerId();
-
-    /**
-     * <pre>
-     * OK
-     * </pre>
-     *
-     * <code>int32 entity_type = 3;</code>
+     * <code>int32 entity_type = 2;</code>
      * @return The entityType.
      */
     int getEntityType();
 
     /**
-     * <pre>
-     * OK
-     * </pre>
-     *
-     * <code>float attack_element_durability = 6;</code>
+     * <code>uint32 op_idx = 8;</code>
+     * @return The opIdx.
+     */
+    int getOpIdx();
+
+    /**
+     * <code>int32 KOANNGPCJBN = 9;</code>
+     * @return The kOANNGPCJBN.
+     */
+    int getKOANNGPCJBN();
+
+    /**
+     * <code>uint32 attacker_id = 12;</code>
+     * @return The attackerId.
+     */
+    int getAttackerId();
+
+    /**
+     * <code>float attack_element_durability = 13;</code>
      * @return The attackElementDurability.
      */
     float getAttackElementDurability();
 
     /**
-     * <code>int32 uk1 = 5;</code>
-     * @return The uk1.
+     * <code>int32 MKGDPHCIMKL = 14;</code>
+     * @return The mKGDPHCIMKL.
      */
-    int getUk1();
+    int getMKGDPHCIMKL();
 
     /**
-     * <code>int32 uk2 = 11;</code>
-     * @return The uk2.
+     * <code>uint32 user_id = 15;</code>
+     * @return The userId.
      */
-    int getUk2();
+    int getUserId();
 
     /**
-     * <code>.ShapeSphere shape_sphere = 4;</code>
+     * <code>.ShapeSphere shape_sphere = 5;</code>
      * @return Whether the shapeSphere field is set.
      */
     boolean hasShapeSphere();
     /**
-     * <code>.ShapeSphere shape_sphere = 4;</code>
+     * <code>.ShapeSphere shape_sphere = 5;</code>
      * @return The shapeSphere.
      */
     emu.grasscutter.net.proto.ShapeSphereOuterClass.ShapeSphere getShapeSphere();
     /**
-     * <code>.ShapeSphere shape_sphere = 4;</code>
+     * <code>.ShapeSphere shape_sphere = 5;</code>
      */
     emu.grasscutter.net.proto.ShapeSphereOuterClass.ShapeSphereOrBuilder getShapeSphereOrBuilder();
 
     /**
-     * <code>.ShapeBox shape_box = 8;</code>
+     * <code>.ShapeBox shape_box = 7;</code>
      * @return Whether the shapeBox field is set.
      */
     boolean hasShapeBox();
     /**
-     * <code>.ShapeBox shape_box = 8;</code>
+     * <code>.ShapeBox shape_box = 7;</code>
      * @return The shapeBox.
      */
     emu.grasscutter.net.proto.ShapeBoxOuterClass.ShapeBox getShapeBox();
     /**
-     * <code>.ShapeBox shape_box = 8;</code>
+     * <code>.ShapeBox shape_box = 7;</code>
      */
     emu.grasscutter.net.proto.ShapeBoxOuterClass.ShapeBoxOrBuilder getShapeBoxOrBuilder();
 
-    public emu.grasscutter.net.proto.MassiveEntityElementOpBatchNotifyOuterClass.MassiveEntityElementOpBatchNotify.ShapeCase getShapeCase();
+    public emu.grasscutter.net.proto.MassiveEntityElementOpBatchNotifyOuterClass.MassiveEntityElementOpBatchNotify.CheckShapeCase getCheckShapeCase();
   }
   /**
    * <pre>
-   * 4.7.0
-   * obf: IHJGCPGECHK
-   * CmdId: 25032
+   * CmdId: 29700
+   * obf: KGAEJDGFHMJ
    * </pre>
    *
    * Protobuf type {@code MassiveEntityElementOpBatchNotify}
@@ -158,16 +137,16 @@ public final class MassiveEntityElementOpBatchNotifyOuterClass {
               emu.grasscutter.net.proto.MassiveEntityElementOpBatchNotifyOuterClass.MassiveEntityElementOpBatchNotify.class, emu.grasscutter.net.proto.MassiveEntityElementOpBatchNotifyOuterClass.MassiveEntityElementOpBatchNotify.Builder.class);
     }
 
-    private int shapeCase_ = 0;
-    private java.lang.Object shape_;
-    public enum ShapeCase
+    private int checkShapeCase_ = 0;
+    private java.lang.Object checkShape_;
+    public enum CheckShapeCase
         implements com.google.protobuf.Internal.EnumLite,
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
-      SHAPE_SPHERE(4),
-      SHAPE_BOX(8),
-      SHAPE_NOT_SET(0);
+      SHAPE_SPHERE(5),
+      SHAPE_BOX(7),
+      CHECKSHAPE_NOT_SET(0);
       private final int value;
-      private ShapeCase(int value) {
+      private CheckShapeCase(int value) {
         this.value = value;
       }
       /**
@@ -176,15 +155,15 @@ public final class MassiveEntityElementOpBatchNotifyOuterClass {
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
-      public static ShapeCase valueOf(int value) {
+      public static CheckShapeCase valueOf(int value) {
         return forNumber(value);
       }
 
-      public static ShapeCase forNumber(int value) {
+      public static CheckShapeCase forNumber(int value) {
         switch (value) {
-          case 4: return SHAPE_SPHERE;
-          case 8: return SHAPE_BOX;
-          case 0: return SHAPE_NOT_SET;
+          case 5: return SHAPE_SPHERE;
+          case 7: return SHAPE_BOX;
+          case 0: return CHECKSHAPE_NOT_SET;
           default: return null;
         }
       }
@@ -193,65 +172,16 @@ public final class MassiveEntityElementOpBatchNotifyOuterClass {
       }
     };
 
-    public ShapeCase
-    getShapeCase() {
-      return ShapeCase.forNumber(
-          shapeCase_);
+    public CheckShapeCase
+    getCheckShapeCase() {
+      return CheckShapeCase.forNumber(
+          checkShapeCase_);
     }
 
-    public static final int OP_IDX_FIELD_NUMBER = 12;
-    private int opIdx_;
-    /**
-     * <pre>
-     * 1?
-     * </pre>
-     *
-     * <code>uint32 op_idx = 12;</code>
-     * @return The opIdx.
-     */
-    @java.lang.Override
-    public int getOpIdx() {
-      return opIdx_;
-    }
-
-    public static final int USER_ID_FIELD_NUMBER = 7;
-    private int userId_;
-    /**
-     * <pre>
-     * OK
-     * </pre>
-     *
-     * <code>uint32 user_id = 7;</code>
-     * @return The userId.
-     */
-    @java.lang.Override
-    public int getUserId() {
-      return userId_;
-    }
-
-    public static final int ATTACKER_ID_FIELD_NUMBER = 2;
-    private int attackerId_;
-    /**
-     * <pre>
-     * OK
-     * </pre>
-     *
-     * <code>uint32 attacker_id = 2;</code>
-     * @return The attackerId.
-     */
-    @java.lang.Override
-    public int getAttackerId() {
-      return attackerId_;
-    }
-
-    public static final int ENTITY_TYPE_FIELD_NUMBER = 3;
+    public static final int ENTITY_TYPE_FIELD_NUMBER = 2;
     private int entityType_;
     /**
-     * <pre>
-     * OK
-     * </pre>
-     *
-     * <code>int32 entity_type = 3;</code>
+     * <code>int32 entity_type = 2;</code>
      * @return The entityType.
      */
     @java.lang.Override
@@ -259,14 +189,43 @@ public final class MassiveEntityElementOpBatchNotifyOuterClass {
       return entityType_;
     }
 
-    public static final int ATTACK_ELEMENT_DURABILITY_FIELD_NUMBER = 6;
+    public static final int OP_IDX_FIELD_NUMBER = 8;
+    private int opIdx_;
+    /**
+     * <code>uint32 op_idx = 8;</code>
+     * @return The opIdx.
+     */
+    @java.lang.Override
+    public int getOpIdx() {
+      return opIdx_;
+    }
+
+    public static final int KOANNGPCJBN_FIELD_NUMBER = 9;
+    private int kOANNGPCJBN_;
+    /**
+     * <code>int32 KOANNGPCJBN = 9;</code>
+     * @return The kOANNGPCJBN.
+     */
+    @java.lang.Override
+    public int getKOANNGPCJBN() {
+      return kOANNGPCJBN_;
+    }
+
+    public static final int ATTACKER_ID_FIELD_NUMBER = 12;
+    private int attackerId_;
+    /**
+     * <code>uint32 attacker_id = 12;</code>
+     * @return The attackerId.
+     */
+    @java.lang.Override
+    public int getAttackerId() {
+      return attackerId_;
+    }
+
+    public static final int ATTACK_ELEMENT_DURABILITY_FIELD_NUMBER = 13;
     private float attackElementDurability_;
     /**
-     * <pre>
-     * OK
-     * </pre>
-     *
-     * <code>float attack_element_durability = 6;</code>
+     * <code>float attack_element_durability = 13;</code>
      * @return The attackElementDurability.
      */
     @java.lang.Override
@@ -274,86 +233,86 @@ public final class MassiveEntityElementOpBatchNotifyOuterClass {
       return attackElementDurability_;
     }
 
-    public static final int UK1_FIELD_NUMBER = 5;
-    private int uk1_;
+    public static final int MKGDPHCIMKL_FIELD_NUMBER = 14;
+    private int mKGDPHCIMKL_;
     /**
-     * <code>int32 uk1 = 5;</code>
-     * @return The uk1.
+     * <code>int32 MKGDPHCIMKL = 14;</code>
+     * @return The mKGDPHCIMKL.
      */
     @java.lang.Override
-    public int getUk1() {
-      return uk1_;
+    public int getMKGDPHCIMKL() {
+      return mKGDPHCIMKL_;
     }
 
-    public static final int UK2_FIELD_NUMBER = 11;
-    private int uk2_;
+    public static final int USER_ID_FIELD_NUMBER = 15;
+    private int userId_;
     /**
-     * <code>int32 uk2 = 11;</code>
-     * @return The uk2.
+     * <code>uint32 user_id = 15;</code>
+     * @return The userId.
      */
     @java.lang.Override
-    public int getUk2() {
-      return uk2_;
+    public int getUserId() {
+      return userId_;
     }
 
-    public static final int SHAPE_SPHERE_FIELD_NUMBER = 4;
+    public static final int SHAPE_SPHERE_FIELD_NUMBER = 5;
     /**
-     * <code>.ShapeSphere shape_sphere = 4;</code>
+     * <code>.ShapeSphere shape_sphere = 5;</code>
      * @return Whether the shapeSphere field is set.
      */
     @java.lang.Override
     public boolean hasShapeSphere() {
-      return shapeCase_ == 4;
+      return checkShapeCase_ == 5;
     }
     /**
-     * <code>.ShapeSphere shape_sphere = 4;</code>
+     * <code>.ShapeSphere shape_sphere = 5;</code>
      * @return The shapeSphere.
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.ShapeSphereOuterClass.ShapeSphere getShapeSphere() {
-      if (shapeCase_ == 4) {
-         return (emu.grasscutter.net.proto.ShapeSphereOuterClass.ShapeSphere) shape_;
+      if (checkShapeCase_ == 5) {
+         return (emu.grasscutter.net.proto.ShapeSphereOuterClass.ShapeSphere) checkShape_;
       }
       return emu.grasscutter.net.proto.ShapeSphereOuterClass.ShapeSphere.getDefaultInstance();
     }
     /**
-     * <code>.ShapeSphere shape_sphere = 4;</code>
+     * <code>.ShapeSphere shape_sphere = 5;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.ShapeSphereOuterClass.ShapeSphereOrBuilder getShapeSphereOrBuilder() {
-      if (shapeCase_ == 4) {
-         return (emu.grasscutter.net.proto.ShapeSphereOuterClass.ShapeSphere) shape_;
+      if (checkShapeCase_ == 5) {
+         return (emu.grasscutter.net.proto.ShapeSphereOuterClass.ShapeSphere) checkShape_;
       }
       return emu.grasscutter.net.proto.ShapeSphereOuterClass.ShapeSphere.getDefaultInstance();
     }
 
-    public static final int SHAPE_BOX_FIELD_NUMBER = 8;
+    public static final int SHAPE_BOX_FIELD_NUMBER = 7;
     /**
-     * <code>.ShapeBox shape_box = 8;</code>
+     * <code>.ShapeBox shape_box = 7;</code>
      * @return Whether the shapeBox field is set.
      */
     @java.lang.Override
     public boolean hasShapeBox() {
-      return shapeCase_ == 8;
+      return checkShapeCase_ == 7;
     }
     /**
-     * <code>.ShapeBox shape_box = 8;</code>
+     * <code>.ShapeBox shape_box = 7;</code>
      * @return The shapeBox.
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.ShapeBoxOuterClass.ShapeBox getShapeBox() {
-      if (shapeCase_ == 8) {
-         return (emu.grasscutter.net.proto.ShapeBoxOuterClass.ShapeBox) shape_;
+      if (checkShapeCase_ == 7) {
+         return (emu.grasscutter.net.proto.ShapeBoxOuterClass.ShapeBox) checkShape_;
       }
       return emu.grasscutter.net.proto.ShapeBoxOuterClass.ShapeBox.getDefaultInstance();
     }
     /**
-     * <code>.ShapeBox shape_box = 8;</code>
+     * <code>.ShapeBox shape_box = 7;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.ShapeBoxOuterClass.ShapeBoxOrBuilder getShapeBoxOrBuilder() {
-      if (shapeCase_ == 8) {
-         return (emu.grasscutter.net.proto.ShapeBoxOuterClass.ShapeBox) shape_;
+      if (checkShapeCase_ == 7) {
+         return (emu.grasscutter.net.proto.ShapeBoxOuterClass.ShapeBox) checkShape_;
       }
       return emu.grasscutter.net.proto.ShapeBoxOuterClass.ShapeBox.getDefaultInstance();
     }
@@ -372,32 +331,32 @@ public final class MassiveEntityElementOpBatchNotifyOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (attackerId_ != 0) {
-        output.writeUInt32(2, attackerId_);
-      }
       if (entityType_ != 0) {
-        output.writeInt32(3, entityType_);
+        output.writeInt32(2, entityType_);
       }
-      if (shapeCase_ == 4) {
-        output.writeMessage(4, (emu.grasscutter.net.proto.ShapeSphereOuterClass.ShapeSphere) shape_);
+      if (checkShapeCase_ == 5) {
+        output.writeMessage(5, (emu.grasscutter.net.proto.ShapeSphereOuterClass.ShapeSphere) checkShape_);
       }
-      if (uk1_ != 0) {
-        output.writeInt32(5, uk1_);
-      }
-      if (java.lang.Float.floatToRawIntBits(attackElementDurability_) != 0) {
-        output.writeFloat(6, attackElementDurability_);
-      }
-      if (userId_ != 0) {
-        output.writeUInt32(7, userId_);
-      }
-      if (shapeCase_ == 8) {
-        output.writeMessage(8, (emu.grasscutter.net.proto.ShapeBoxOuterClass.ShapeBox) shape_);
-      }
-      if (uk2_ != 0) {
-        output.writeInt32(11, uk2_);
+      if (checkShapeCase_ == 7) {
+        output.writeMessage(7, (emu.grasscutter.net.proto.ShapeBoxOuterClass.ShapeBox) checkShape_);
       }
       if (opIdx_ != 0) {
-        output.writeUInt32(12, opIdx_);
+        output.writeUInt32(8, opIdx_);
+      }
+      if (kOANNGPCJBN_ != 0) {
+        output.writeInt32(9, kOANNGPCJBN_);
+      }
+      if (attackerId_ != 0) {
+        output.writeUInt32(12, attackerId_);
+      }
+      if (java.lang.Float.floatToRawIntBits(attackElementDurability_) != 0) {
+        output.writeFloat(13, attackElementDurability_);
+      }
+      if (mKGDPHCIMKL_ != 0) {
+        output.writeInt32(14, mKGDPHCIMKL_);
+      }
+      if (userId_ != 0) {
+        output.writeUInt32(15, userId_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -408,41 +367,41 @@ public final class MassiveEntityElementOpBatchNotifyOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (attackerId_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(2, attackerId_);
-      }
       if (entityType_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(3, entityType_);
+          .computeInt32Size(2, entityType_);
       }
-      if (shapeCase_ == 4) {
+      if (checkShapeCase_ == 5) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, (emu.grasscutter.net.proto.ShapeSphereOuterClass.ShapeSphere) shape_);
+          .computeMessageSize(5, (emu.grasscutter.net.proto.ShapeSphereOuterClass.ShapeSphere) checkShape_);
       }
-      if (uk1_ != 0) {
+      if (checkShapeCase_ == 7) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(5, uk1_);
-      }
-      if (java.lang.Float.floatToRawIntBits(attackElementDurability_) != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(6, attackElementDurability_);
-      }
-      if (userId_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(7, userId_);
-      }
-      if (shapeCase_ == 8) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(8, (emu.grasscutter.net.proto.ShapeBoxOuterClass.ShapeBox) shape_);
-      }
-      if (uk2_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(11, uk2_);
+          .computeMessageSize(7, (emu.grasscutter.net.proto.ShapeBoxOuterClass.ShapeBox) checkShape_);
       }
       if (opIdx_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(12, opIdx_);
+          .computeUInt32Size(8, opIdx_);
+      }
+      if (kOANNGPCJBN_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(9, kOANNGPCJBN_);
+      }
+      if (attackerId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(12, attackerId_);
+      }
+      if (java.lang.Float.floatToRawIntBits(attackElementDurability_) != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(13, attackElementDurability_);
+      }
+      if (mKGDPHCIMKL_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(14, mKGDPHCIMKL_);
+      }
+      if (userId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(15, userId_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -459,28 +418,28 @@ public final class MassiveEntityElementOpBatchNotifyOuterClass {
       }
       emu.grasscutter.net.proto.MassiveEntityElementOpBatchNotifyOuterClass.MassiveEntityElementOpBatchNotify other = (emu.grasscutter.net.proto.MassiveEntityElementOpBatchNotifyOuterClass.MassiveEntityElementOpBatchNotify) obj;
 
-      if (getOpIdx()
-          != other.getOpIdx()) return false;
-      if (getUserId()
-          != other.getUserId()) return false;
-      if (getAttackerId()
-          != other.getAttackerId()) return false;
       if (getEntityType()
           != other.getEntityType()) return false;
+      if (getOpIdx()
+          != other.getOpIdx()) return false;
+      if (getKOANNGPCJBN()
+          != other.getKOANNGPCJBN()) return false;
+      if (getAttackerId()
+          != other.getAttackerId()) return false;
       if (java.lang.Float.floatToIntBits(getAttackElementDurability())
           != java.lang.Float.floatToIntBits(
               other.getAttackElementDurability())) return false;
-      if (getUk1()
-          != other.getUk1()) return false;
-      if (getUk2()
-          != other.getUk2()) return false;
-      if (!getShapeCase().equals(other.getShapeCase())) return false;
-      switch (shapeCase_) {
-        case 4:
+      if (getMKGDPHCIMKL()
+          != other.getMKGDPHCIMKL()) return false;
+      if (getUserId()
+          != other.getUserId()) return false;
+      if (!getCheckShapeCase().equals(other.getCheckShapeCase())) return false;
+      switch (checkShapeCase_) {
+        case 5:
           if (!getShapeSphere()
               .equals(other.getShapeSphere())) return false;
           break;
-        case 8:
+        case 7:
           if (!getShapeBox()
               .equals(other.getShapeBox())) return false;
           break;
@@ -498,27 +457,27 @@ public final class MassiveEntityElementOpBatchNotifyOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + OP_IDX_FIELD_NUMBER;
-      hash = (53 * hash) + getOpIdx();
-      hash = (37 * hash) + USER_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getUserId();
-      hash = (37 * hash) + ATTACKER_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getAttackerId();
       hash = (37 * hash) + ENTITY_TYPE_FIELD_NUMBER;
       hash = (53 * hash) + getEntityType();
+      hash = (37 * hash) + OP_IDX_FIELD_NUMBER;
+      hash = (53 * hash) + getOpIdx();
+      hash = (37 * hash) + KOANNGPCJBN_FIELD_NUMBER;
+      hash = (53 * hash) + getKOANNGPCJBN();
+      hash = (37 * hash) + ATTACKER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getAttackerId();
       hash = (37 * hash) + ATTACK_ELEMENT_DURABILITY_FIELD_NUMBER;
       hash = (53 * hash) + java.lang.Float.floatToIntBits(
           getAttackElementDurability());
-      hash = (37 * hash) + UK1_FIELD_NUMBER;
-      hash = (53 * hash) + getUk1();
-      hash = (37 * hash) + UK2_FIELD_NUMBER;
-      hash = (53 * hash) + getUk2();
-      switch (shapeCase_) {
-        case 4:
+      hash = (37 * hash) + MKGDPHCIMKL_FIELD_NUMBER;
+      hash = (53 * hash) + getMKGDPHCIMKL();
+      hash = (37 * hash) + USER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getUserId();
+      switch (checkShapeCase_) {
+        case 5:
           hash = (37 * hash) + SHAPE_SPHERE_FIELD_NUMBER;
           hash = (53 * hash) + getShapeSphere().hashCode();
           break;
-        case 8:
+        case 7:
           hash = (37 * hash) + SHAPE_BOX_FIELD_NUMBER;
           hash = (53 * hash) + getShapeBox().hashCode();
           break;
@@ -622,9 +581,8 @@ public final class MassiveEntityElementOpBatchNotifyOuterClass {
     }
     /**
      * <pre>
-     * 4.7.0
-     * obf: IHJGCPGECHK
-     * CmdId: 25032
+     * CmdId: 29700
+     * obf: KGAEJDGFHMJ
      * </pre>
      *
      * Protobuf type {@code MassiveEntityElementOpBatchNotify}
@@ -659,19 +617,19 @@ public final class MassiveEntityElementOpBatchNotifyOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        entityType_ = 0;
+
         opIdx_ = 0;
 
-        userId_ = 0;
+        kOANNGPCJBN_ = 0;
 
         attackerId_ = 0;
 
-        entityType_ = 0;
-
         attackElementDurability_ = 0F;
 
-        uk1_ = 0;
+        mKGDPHCIMKL_ = 0;
 
-        uk2_ = 0;
+        userId_ = 0;
 
         if (shapeSphereBuilder_ != null) {
           shapeSphereBuilder_.clear();
@@ -679,8 +637,8 @@ public final class MassiveEntityElementOpBatchNotifyOuterClass {
         if (shapeBoxBuilder_ != null) {
           shapeBoxBuilder_.clear();
         }
-        shapeCase_ = 0;
-        shape_ = null;
+        checkShapeCase_ = 0;
+        checkShape_ = null;
         return this;
       }
 
@@ -707,28 +665,28 @@ public final class MassiveEntityElementOpBatchNotifyOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.MassiveEntityElementOpBatchNotifyOuterClass.MassiveEntityElementOpBatchNotify buildPartial() {
         emu.grasscutter.net.proto.MassiveEntityElementOpBatchNotifyOuterClass.MassiveEntityElementOpBatchNotify result = new emu.grasscutter.net.proto.MassiveEntityElementOpBatchNotifyOuterClass.MassiveEntityElementOpBatchNotify(this);
-        result.opIdx_ = opIdx_;
-        result.userId_ = userId_;
-        result.attackerId_ = attackerId_;
         result.entityType_ = entityType_;
+        result.opIdx_ = opIdx_;
+        result.kOANNGPCJBN_ = kOANNGPCJBN_;
+        result.attackerId_ = attackerId_;
         result.attackElementDurability_ = attackElementDurability_;
-        result.uk1_ = uk1_;
-        result.uk2_ = uk2_;
-        if (shapeCase_ == 4) {
+        result.mKGDPHCIMKL_ = mKGDPHCIMKL_;
+        result.userId_ = userId_;
+        if (checkShapeCase_ == 5) {
           if (shapeSphereBuilder_ == null) {
-            result.shape_ = shape_;
+            result.checkShape_ = checkShape_;
           } else {
-            result.shape_ = shapeSphereBuilder_.build();
+            result.checkShape_ = shapeSphereBuilder_.build();
           }
         }
-        if (shapeCase_ == 8) {
+        if (checkShapeCase_ == 7) {
           if (shapeBoxBuilder_ == null) {
-            result.shape_ = shape_;
+            result.checkShape_ = checkShape_;
           } else {
-            result.shape_ = shapeBoxBuilder_.build();
+            result.checkShape_ = shapeBoxBuilder_.build();
           }
         }
-        result.shapeCase_ = shapeCase_;
+        result.checkShapeCase_ = checkShapeCase_;
         onBuilt();
         return result;
       }
@@ -777,28 +735,28 @@ public final class MassiveEntityElementOpBatchNotifyOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.MassiveEntityElementOpBatchNotifyOuterClass.MassiveEntityElementOpBatchNotify other) {
         if (other == emu.grasscutter.net.proto.MassiveEntityElementOpBatchNotifyOuterClass.MassiveEntityElementOpBatchNotify.getDefaultInstance()) return this;
+        if (other.getEntityType() != 0) {
+          setEntityType(other.getEntityType());
+        }
         if (other.getOpIdx() != 0) {
           setOpIdx(other.getOpIdx());
         }
-        if (other.getUserId() != 0) {
-          setUserId(other.getUserId());
+        if (other.getKOANNGPCJBN() != 0) {
+          setKOANNGPCJBN(other.getKOANNGPCJBN());
         }
         if (other.getAttackerId() != 0) {
           setAttackerId(other.getAttackerId());
         }
-        if (other.getEntityType() != 0) {
-          setEntityType(other.getEntityType());
-        }
         if (other.getAttackElementDurability() != 0F) {
           setAttackElementDurability(other.getAttackElementDurability());
         }
-        if (other.getUk1() != 0) {
-          setUk1(other.getUk1());
+        if (other.getMKGDPHCIMKL() != 0) {
+          setMKGDPHCIMKL(other.getMKGDPHCIMKL());
         }
-        if (other.getUk2() != 0) {
-          setUk2(other.getUk2());
+        if (other.getUserId() != 0) {
+          setUserId(other.getUserId());
         }
-        switch (other.getShapeCase()) {
+        switch (other.getCheckShapeCase()) {
           case SHAPE_SPHERE: {
             mergeShapeSphere(other.getShapeSphere());
             break;
@@ -807,7 +765,7 @@ public final class MassiveEntityElementOpBatchNotifyOuterClass {
             mergeShapeBox(other.getShapeBox());
             break;
           }
-          case SHAPE_NOT_SET: {
+          case CHECKSHAPE_NOT_SET: {
             break;
           }
         }
@@ -838,54 +796,54 @@ public final class MassiveEntityElementOpBatchNotifyOuterClass {
                 done = true;
                 break;
               case 16: {
-                attackerId_ = input.readUInt32();
-
-                break;
-              } // case 16
-              case 24: {
                 entityType_ = input.readInt32();
 
                 break;
-              } // case 24
-              case 34: {
+              } // case 16
+              case 42: {
                 input.readMessage(
                     getShapeSphereFieldBuilder().getBuilder(),
                     extensionRegistry);
-                shapeCase_ = 4;
+                checkShapeCase_ = 5;
                 break;
-              } // case 34
-              case 40: {
-                uk1_ = input.readInt32();
-
-                break;
-              } // case 40
-              case 53: {
-                attackElementDurability_ = input.readFloat();
-
-                break;
-              } // case 53
-              case 56: {
-                userId_ = input.readUInt32();
-
-                break;
-              } // case 56
-              case 66: {
+              } // case 42
+              case 58: {
                 input.readMessage(
                     getShapeBoxFieldBuilder().getBuilder(),
                     extensionRegistry);
-                shapeCase_ = 8;
+                checkShapeCase_ = 7;
                 break;
-              } // case 66
-              case 88: {
-                uk2_ = input.readInt32();
-
-                break;
-              } // case 88
-              case 96: {
+              } // case 58
+              case 64: {
                 opIdx_ = input.readUInt32();
 
                 break;
+              } // case 64
+              case 72: {
+                kOANNGPCJBN_ = input.readInt32();
+
+                break;
+              } // case 72
+              case 96: {
+                attackerId_ = input.readUInt32();
+
+                break;
               } // case 96
+              case 109: {
+                attackElementDurability_ = input.readFloat();
+
+                break;
+              } // case 109
+              case 112: {
+                mKGDPHCIMKL_ = input.readInt32();
+
+                break;
+              } // case 112
+              case 120: {
+                userId_ = input.readUInt32();
+
+                break;
+              } // case 120
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -901,158 +859,25 @@ public final class MassiveEntityElementOpBatchNotifyOuterClass {
         } // finally
         return this;
       }
-      private int shapeCase_ = 0;
-      private java.lang.Object shape_;
-      public ShapeCase
-          getShapeCase() {
-        return ShapeCase.forNumber(
-            shapeCase_);
+      private int checkShapeCase_ = 0;
+      private java.lang.Object checkShape_;
+      public CheckShapeCase
+          getCheckShapeCase() {
+        return CheckShapeCase.forNumber(
+            checkShapeCase_);
       }
 
-      public Builder clearShape() {
-        shapeCase_ = 0;
-        shape_ = null;
-        onChanged();
-        return this;
-      }
-
-
-      private int opIdx_ ;
-      /**
-       * <pre>
-       * 1?
-       * </pre>
-       *
-       * <code>uint32 op_idx = 12;</code>
-       * @return The opIdx.
-       */
-      @java.lang.Override
-      public int getOpIdx() {
-        return opIdx_;
-      }
-      /**
-       * <pre>
-       * 1?
-       * </pre>
-       *
-       * <code>uint32 op_idx = 12;</code>
-       * @param value The opIdx to set.
-       * @return This builder for chaining.
-       */
-      public Builder setOpIdx(int value) {
-        
-        opIdx_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * 1?
-       * </pre>
-       *
-       * <code>uint32 op_idx = 12;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearOpIdx() {
-        
-        opIdx_ = 0;
+      public Builder clearCheckShape() {
+        checkShapeCase_ = 0;
+        checkShape_ = null;
         onChanged();
         return this;
       }
 
-      private int userId_ ;
-      /**
-       * <pre>
-       * OK
-       * </pre>
-       *
-       * <code>uint32 user_id = 7;</code>
-       * @return The userId.
-       */
-      @java.lang.Override
-      public int getUserId() {
-        return userId_;
-      }
-      /**
-       * <pre>
-       * OK
-       * </pre>
-       *
-       * <code>uint32 user_id = 7;</code>
-       * @param value The userId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setUserId(int value) {
-        
-        userId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * OK
-       * </pre>
-       *
-       * <code>uint32 user_id = 7;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearUserId() {
-        
-        userId_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int attackerId_ ;
-      /**
-       * <pre>
-       * OK
-       * </pre>
-       *
-       * <code>uint32 attacker_id = 2;</code>
-       * @return The attackerId.
-       */
-      @java.lang.Override
-      public int getAttackerId() {
-        return attackerId_;
-      }
-      /**
-       * <pre>
-       * OK
-       * </pre>
-       *
-       * <code>uint32 attacker_id = 2;</code>
-       * @param value The attackerId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setAttackerId(int value) {
-        
-        attackerId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * OK
-       * </pre>
-       *
-       * <code>uint32 attacker_id = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearAttackerId() {
-        
-        attackerId_ = 0;
-        onChanged();
-        return this;
-      }
 
       private int entityType_ ;
       /**
-       * <pre>
-       * OK
-       * </pre>
-       *
-       * <code>int32 entity_type = 3;</code>
+       * <code>int32 entity_type = 2;</code>
        * @return The entityType.
        */
       @java.lang.Override
@@ -1060,11 +885,7 @@ public final class MassiveEntityElementOpBatchNotifyOuterClass {
         return entityType_;
       }
       /**
-       * <pre>
-       * OK
-       * </pre>
-       *
-       * <code>int32 entity_type = 3;</code>
+       * <code>int32 entity_type = 2;</code>
        * @param value The entityType to set.
        * @return This builder for chaining.
        */
@@ -1075,11 +896,7 @@ public final class MassiveEntityElementOpBatchNotifyOuterClass {
         return this;
       }
       /**
-       * <pre>
-       * OK
-       * </pre>
-       *
-       * <code>int32 entity_type = 3;</code>
+       * <code>int32 entity_type = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearEntityType() {
@@ -1089,13 +906,102 @@ public final class MassiveEntityElementOpBatchNotifyOuterClass {
         return this;
       }
 
+      private int opIdx_ ;
+      /**
+       * <code>uint32 op_idx = 8;</code>
+       * @return The opIdx.
+       */
+      @java.lang.Override
+      public int getOpIdx() {
+        return opIdx_;
+      }
+      /**
+       * <code>uint32 op_idx = 8;</code>
+       * @param value The opIdx to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOpIdx(int value) {
+        
+        opIdx_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 op_idx = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOpIdx() {
+        
+        opIdx_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int kOANNGPCJBN_ ;
+      /**
+       * <code>int32 KOANNGPCJBN = 9;</code>
+       * @return The kOANNGPCJBN.
+       */
+      @java.lang.Override
+      public int getKOANNGPCJBN() {
+        return kOANNGPCJBN_;
+      }
+      /**
+       * <code>int32 KOANNGPCJBN = 9;</code>
+       * @param value The kOANNGPCJBN to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKOANNGPCJBN(int value) {
+        
+        kOANNGPCJBN_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 KOANNGPCJBN = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearKOANNGPCJBN() {
+        
+        kOANNGPCJBN_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int attackerId_ ;
+      /**
+       * <code>uint32 attacker_id = 12;</code>
+       * @return The attackerId.
+       */
+      @java.lang.Override
+      public int getAttackerId() {
+        return attackerId_;
+      }
+      /**
+       * <code>uint32 attacker_id = 12;</code>
+       * @param value The attackerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAttackerId(int value) {
+        
+        attackerId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 attacker_id = 12;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAttackerId() {
+        
+        attackerId_ = 0;
+        onChanged();
+        return this;
+      }
+
       private float attackElementDurability_ ;
       /**
-       * <pre>
-       * OK
-       * </pre>
-       *
-       * <code>float attack_element_durability = 6;</code>
+       * <code>float attack_element_durability = 13;</code>
        * @return The attackElementDurability.
        */
       @java.lang.Override
@@ -1103,11 +1009,7 @@ public final class MassiveEntityElementOpBatchNotifyOuterClass {
         return attackElementDurability_;
       }
       /**
-       * <pre>
-       * OK
-       * </pre>
-       *
-       * <code>float attack_element_durability = 6;</code>
+       * <code>float attack_element_durability = 13;</code>
        * @param value The attackElementDurability to set.
        * @return This builder for chaining.
        */
@@ -1118,11 +1020,7 @@ public final class MassiveEntityElementOpBatchNotifyOuterClass {
         return this;
       }
       /**
-       * <pre>
-       * OK
-       * </pre>
-       *
-       * <code>float attack_element_durability = 6;</code>
+       * <code>float attack_element_durability = 13;</code>
        * @return This builder for chaining.
        */
       public Builder clearAttackElementDurability() {
@@ -1132,64 +1030,64 @@ public final class MassiveEntityElementOpBatchNotifyOuterClass {
         return this;
       }
 
-      private int uk1_ ;
+      private int mKGDPHCIMKL_ ;
       /**
-       * <code>int32 uk1 = 5;</code>
-       * @return The uk1.
+       * <code>int32 MKGDPHCIMKL = 14;</code>
+       * @return The mKGDPHCIMKL.
        */
       @java.lang.Override
-      public int getUk1() {
-        return uk1_;
+      public int getMKGDPHCIMKL() {
+        return mKGDPHCIMKL_;
       }
       /**
-       * <code>int32 uk1 = 5;</code>
-       * @param value The uk1 to set.
+       * <code>int32 MKGDPHCIMKL = 14;</code>
+       * @param value The mKGDPHCIMKL to set.
        * @return This builder for chaining.
        */
-      public Builder setUk1(int value) {
+      public Builder setMKGDPHCIMKL(int value) {
         
-        uk1_ = value;
+        mKGDPHCIMKL_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>int32 uk1 = 5;</code>
+       * <code>int32 MKGDPHCIMKL = 14;</code>
        * @return This builder for chaining.
        */
-      public Builder clearUk1() {
+      public Builder clearMKGDPHCIMKL() {
         
-        uk1_ = 0;
+        mKGDPHCIMKL_ = 0;
         onChanged();
         return this;
       }
 
-      private int uk2_ ;
+      private int userId_ ;
       /**
-       * <code>int32 uk2 = 11;</code>
-       * @return The uk2.
+       * <code>uint32 user_id = 15;</code>
+       * @return The userId.
        */
       @java.lang.Override
-      public int getUk2() {
-        return uk2_;
+      public int getUserId() {
+        return userId_;
       }
       /**
-       * <code>int32 uk2 = 11;</code>
-       * @param value The uk2 to set.
+       * <code>uint32 user_id = 15;</code>
+       * @param value The userId to set.
        * @return This builder for chaining.
        */
-      public Builder setUk2(int value) {
+      public Builder setUserId(int value) {
         
-        uk2_ = value;
+        userId_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>int32 uk2 = 11;</code>
+       * <code>uint32 user_id = 15;</code>
        * @return This builder for chaining.
        */
-      public Builder clearUk2() {
+      public Builder clearUserId() {
         
-        uk2_ = 0;
+        userId_ = 0;
         onChanged();
         return this;
       }
@@ -1197,140 +1095,140 @@ public final class MassiveEntityElementOpBatchNotifyOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.ShapeSphereOuterClass.ShapeSphere, emu.grasscutter.net.proto.ShapeSphereOuterClass.ShapeSphere.Builder, emu.grasscutter.net.proto.ShapeSphereOuterClass.ShapeSphereOrBuilder> shapeSphereBuilder_;
       /**
-       * <code>.ShapeSphere shape_sphere = 4;</code>
+       * <code>.ShapeSphere shape_sphere = 5;</code>
        * @return Whether the shapeSphere field is set.
        */
       @java.lang.Override
       public boolean hasShapeSphere() {
-        return shapeCase_ == 4;
+        return checkShapeCase_ == 5;
       }
       /**
-       * <code>.ShapeSphere shape_sphere = 4;</code>
+       * <code>.ShapeSphere shape_sphere = 5;</code>
        * @return The shapeSphere.
        */
       @java.lang.Override
       public emu.grasscutter.net.proto.ShapeSphereOuterClass.ShapeSphere getShapeSphere() {
         if (shapeSphereBuilder_ == null) {
-          if (shapeCase_ == 4) {
-            return (emu.grasscutter.net.proto.ShapeSphereOuterClass.ShapeSphere) shape_;
+          if (checkShapeCase_ == 5) {
+            return (emu.grasscutter.net.proto.ShapeSphereOuterClass.ShapeSphere) checkShape_;
           }
           return emu.grasscutter.net.proto.ShapeSphereOuterClass.ShapeSphere.getDefaultInstance();
         } else {
-          if (shapeCase_ == 4) {
+          if (checkShapeCase_ == 5) {
             return shapeSphereBuilder_.getMessage();
           }
           return emu.grasscutter.net.proto.ShapeSphereOuterClass.ShapeSphere.getDefaultInstance();
         }
       }
       /**
-       * <code>.ShapeSphere shape_sphere = 4;</code>
+       * <code>.ShapeSphere shape_sphere = 5;</code>
        */
       public Builder setShapeSphere(emu.grasscutter.net.proto.ShapeSphereOuterClass.ShapeSphere value) {
         if (shapeSphereBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          shape_ = value;
+          checkShape_ = value;
           onChanged();
         } else {
           shapeSphereBuilder_.setMessage(value);
         }
-        shapeCase_ = 4;
+        checkShapeCase_ = 5;
         return this;
       }
       /**
-       * <code>.ShapeSphere shape_sphere = 4;</code>
+       * <code>.ShapeSphere shape_sphere = 5;</code>
        */
       public Builder setShapeSphere(
           emu.grasscutter.net.proto.ShapeSphereOuterClass.ShapeSphere.Builder builderForValue) {
         if (shapeSphereBuilder_ == null) {
-          shape_ = builderForValue.build();
+          checkShape_ = builderForValue.build();
           onChanged();
         } else {
           shapeSphereBuilder_.setMessage(builderForValue.build());
         }
-        shapeCase_ = 4;
+        checkShapeCase_ = 5;
         return this;
       }
       /**
-       * <code>.ShapeSphere shape_sphere = 4;</code>
+       * <code>.ShapeSphere shape_sphere = 5;</code>
        */
       public Builder mergeShapeSphere(emu.grasscutter.net.proto.ShapeSphereOuterClass.ShapeSphere value) {
         if (shapeSphereBuilder_ == null) {
-          if (shapeCase_ == 4 &&
-              shape_ != emu.grasscutter.net.proto.ShapeSphereOuterClass.ShapeSphere.getDefaultInstance()) {
-            shape_ = emu.grasscutter.net.proto.ShapeSphereOuterClass.ShapeSphere.newBuilder((emu.grasscutter.net.proto.ShapeSphereOuterClass.ShapeSphere) shape_)
+          if (checkShapeCase_ == 5 &&
+              checkShape_ != emu.grasscutter.net.proto.ShapeSphereOuterClass.ShapeSphere.getDefaultInstance()) {
+            checkShape_ = emu.grasscutter.net.proto.ShapeSphereOuterClass.ShapeSphere.newBuilder((emu.grasscutter.net.proto.ShapeSphereOuterClass.ShapeSphere) checkShape_)
                 .mergeFrom(value).buildPartial();
           } else {
-            shape_ = value;
+            checkShape_ = value;
           }
           onChanged();
         } else {
-          if (shapeCase_ == 4) {
+          if (checkShapeCase_ == 5) {
             shapeSphereBuilder_.mergeFrom(value);
           }
           shapeSphereBuilder_.setMessage(value);
         }
-        shapeCase_ = 4;
+        checkShapeCase_ = 5;
         return this;
       }
       /**
-       * <code>.ShapeSphere shape_sphere = 4;</code>
+       * <code>.ShapeSphere shape_sphere = 5;</code>
        */
       public Builder clearShapeSphere() {
         if (shapeSphereBuilder_ == null) {
-          if (shapeCase_ == 4) {
-            shapeCase_ = 0;
-            shape_ = null;
+          if (checkShapeCase_ == 5) {
+            checkShapeCase_ = 0;
+            checkShape_ = null;
             onChanged();
           }
         } else {
-          if (shapeCase_ == 4) {
-            shapeCase_ = 0;
-            shape_ = null;
+          if (checkShapeCase_ == 5) {
+            checkShapeCase_ = 0;
+            checkShape_ = null;
           }
           shapeSphereBuilder_.clear();
         }
         return this;
       }
       /**
-       * <code>.ShapeSphere shape_sphere = 4;</code>
+       * <code>.ShapeSphere shape_sphere = 5;</code>
        */
       public emu.grasscutter.net.proto.ShapeSphereOuterClass.ShapeSphere.Builder getShapeSphereBuilder() {
         return getShapeSphereFieldBuilder().getBuilder();
       }
       /**
-       * <code>.ShapeSphere shape_sphere = 4;</code>
+       * <code>.ShapeSphere shape_sphere = 5;</code>
        */
       @java.lang.Override
       public emu.grasscutter.net.proto.ShapeSphereOuterClass.ShapeSphereOrBuilder getShapeSphereOrBuilder() {
-        if ((shapeCase_ == 4) && (shapeSphereBuilder_ != null)) {
+        if ((checkShapeCase_ == 5) && (shapeSphereBuilder_ != null)) {
           return shapeSphereBuilder_.getMessageOrBuilder();
         } else {
-          if (shapeCase_ == 4) {
-            return (emu.grasscutter.net.proto.ShapeSphereOuterClass.ShapeSphere) shape_;
+          if (checkShapeCase_ == 5) {
+            return (emu.grasscutter.net.proto.ShapeSphereOuterClass.ShapeSphere) checkShape_;
           }
           return emu.grasscutter.net.proto.ShapeSphereOuterClass.ShapeSphere.getDefaultInstance();
         }
       }
       /**
-       * <code>.ShapeSphere shape_sphere = 4;</code>
+       * <code>.ShapeSphere shape_sphere = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.ShapeSphereOuterClass.ShapeSphere, emu.grasscutter.net.proto.ShapeSphereOuterClass.ShapeSphere.Builder, emu.grasscutter.net.proto.ShapeSphereOuterClass.ShapeSphereOrBuilder> 
           getShapeSphereFieldBuilder() {
         if (shapeSphereBuilder_ == null) {
-          if (!(shapeCase_ == 4)) {
-            shape_ = emu.grasscutter.net.proto.ShapeSphereOuterClass.ShapeSphere.getDefaultInstance();
+          if (!(checkShapeCase_ == 5)) {
+            checkShape_ = emu.grasscutter.net.proto.ShapeSphereOuterClass.ShapeSphere.getDefaultInstance();
           }
           shapeSphereBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               emu.grasscutter.net.proto.ShapeSphereOuterClass.ShapeSphere, emu.grasscutter.net.proto.ShapeSphereOuterClass.ShapeSphere.Builder, emu.grasscutter.net.proto.ShapeSphereOuterClass.ShapeSphereOrBuilder>(
-                  (emu.grasscutter.net.proto.ShapeSphereOuterClass.ShapeSphere) shape_,
+                  (emu.grasscutter.net.proto.ShapeSphereOuterClass.ShapeSphere) checkShape_,
                   getParentForChildren(),
                   isClean());
-          shape_ = null;
+          checkShape_ = null;
         }
-        shapeCase_ = 4;
+        checkShapeCase_ = 5;
         onChanged();;
         return shapeSphereBuilder_;
       }
@@ -1338,140 +1236,140 @@ public final class MassiveEntityElementOpBatchNotifyOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.ShapeBoxOuterClass.ShapeBox, emu.grasscutter.net.proto.ShapeBoxOuterClass.ShapeBox.Builder, emu.grasscutter.net.proto.ShapeBoxOuterClass.ShapeBoxOrBuilder> shapeBoxBuilder_;
       /**
-       * <code>.ShapeBox shape_box = 8;</code>
+       * <code>.ShapeBox shape_box = 7;</code>
        * @return Whether the shapeBox field is set.
        */
       @java.lang.Override
       public boolean hasShapeBox() {
-        return shapeCase_ == 8;
+        return checkShapeCase_ == 7;
       }
       /**
-       * <code>.ShapeBox shape_box = 8;</code>
+       * <code>.ShapeBox shape_box = 7;</code>
        * @return The shapeBox.
        */
       @java.lang.Override
       public emu.grasscutter.net.proto.ShapeBoxOuterClass.ShapeBox getShapeBox() {
         if (shapeBoxBuilder_ == null) {
-          if (shapeCase_ == 8) {
-            return (emu.grasscutter.net.proto.ShapeBoxOuterClass.ShapeBox) shape_;
+          if (checkShapeCase_ == 7) {
+            return (emu.grasscutter.net.proto.ShapeBoxOuterClass.ShapeBox) checkShape_;
           }
           return emu.grasscutter.net.proto.ShapeBoxOuterClass.ShapeBox.getDefaultInstance();
         } else {
-          if (shapeCase_ == 8) {
+          if (checkShapeCase_ == 7) {
             return shapeBoxBuilder_.getMessage();
           }
           return emu.grasscutter.net.proto.ShapeBoxOuterClass.ShapeBox.getDefaultInstance();
         }
       }
       /**
-       * <code>.ShapeBox shape_box = 8;</code>
+       * <code>.ShapeBox shape_box = 7;</code>
        */
       public Builder setShapeBox(emu.grasscutter.net.proto.ShapeBoxOuterClass.ShapeBox value) {
         if (shapeBoxBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          shape_ = value;
+          checkShape_ = value;
           onChanged();
         } else {
           shapeBoxBuilder_.setMessage(value);
         }
-        shapeCase_ = 8;
+        checkShapeCase_ = 7;
         return this;
       }
       /**
-       * <code>.ShapeBox shape_box = 8;</code>
+       * <code>.ShapeBox shape_box = 7;</code>
        */
       public Builder setShapeBox(
           emu.grasscutter.net.proto.ShapeBoxOuterClass.ShapeBox.Builder builderForValue) {
         if (shapeBoxBuilder_ == null) {
-          shape_ = builderForValue.build();
+          checkShape_ = builderForValue.build();
           onChanged();
         } else {
           shapeBoxBuilder_.setMessage(builderForValue.build());
         }
-        shapeCase_ = 8;
+        checkShapeCase_ = 7;
         return this;
       }
       /**
-       * <code>.ShapeBox shape_box = 8;</code>
+       * <code>.ShapeBox shape_box = 7;</code>
        */
       public Builder mergeShapeBox(emu.grasscutter.net.proto.ShapeBoxOuterClass.ShapeBox value) {
         if (shapeBoxBuilder_ == null) {
-          if (shapeCase_ == 8 &&
-              shape_ != emu.grasscutter.net.proto.ShapeBoxOuterClass.ShapeBox.getDefaultInstance()) {
-            shape_ = emu.grasscutter.net.proto.ShapeBoxOuterClass.ShapeBox.newBuilder((emu.grasscutter.net.proto.ShapeBoxOuterClass.ShapeBox) shape_)
+          if (checkShapeCase_ == 7 &&
+              checkShape_ != emu.grasscutter.net.proto.ShapeBoxOuterClass.ShapeBox.getDefaultInstance()) {
+            checkShape_ = emu.grasscutter.net.proto.ShapeBoxOuterClass.ShapeBox.newBuilder((emu.grasscutter.net.proto.ShapeBoxOuterClass.ShapeBox) checkShape_)
                 .mergeFrom(value).buildPartial();
           } else {
-            shape_ = value;
+            checkShape_ = value;
           }
           onChanged();
         } else {
-          if (shapeCase_ == 8) {
+          if (checkShapeCase_ == 7) {
             shapeBoxBuilder_.mergeFrom(value);
           }
           shapeBoxBuilder_.setMessage(value);
         }
-        shapeCase_ = 8;
+        checkShapeCase_ = 7;
         return this;
       }
       /**
-       * <code>.ShapeBox shape_box = 8;</code>
+       * <code>.ShapeBox shape_box = 7;</code>
        */
       public Builder clearShapeBox() {
         if (shapeBoxBuilder_ == null) {
-          if (shapeCase_ == 8) {
-            shapeCase_ = 0;
-            shape_ = null;
+          if (checkShapeCase_ == 7) {
+            checkShapeCase_ = 0;
+            checkShape_ = null;
             onChanged();
           }
         } else {
-          if (shapeCase_ == 8) {
-            shapeCase_ = 0;
-            shape_ = null;
+          if (checkShapeCase_ == 7) {
+            checkShapeCase_ = 0;
+            checkShape_ = null;
           }
           shapeBoxBuilder_.clear();
         }
         return this;
       }
       /**
-       * <code>.ShapeBox shape_box = 8;</code>
+       * <code>.ShapeBox shape_box = 7;</code>
        */
       public emu.grasscutter.net.proto.ShapeBoxOuterClass.ShapeBox.Builder getShapeBoxBuilder() {
         return getShapeBoxFieldBuilder().getBuilder();
       }
       /**
-       * <code>.ShapeBox shape_box = 8;</code>
+       * <code>.ShapeBox shape_box = 7;</code>
        */
       @java.lang.Override
       public emu.grasscutter.net.proto.ShapeBoxOuterClass.ShapeBoxOrBuilder getShapeBoxOrBuilder() {
-        if ((shapeCase_ == 8) && (shapeBoxBuilder_ != null)) {
+        if ((checkShapeCase_ == 7) && (shapeBoxBuilder_ != null)) {
           return shapeBoxBuilder_.getMessageOrBuilder();
         } else {
-          if (shapeCase_ == 8) {
-            return (emu.grasscutter.net.proto.ShapeBoxOuterClass.ShapeBox) shape_;
+          if (checkShapeCase_ == 7) {
+            return (emu.grasscutter.net.proto.ShapeBoxOuterClass.ShapeBox) checkShape_;
           }
           return emu.grasscutter.net.proto.ShapeBoxOuterClass.ShapeBox.getDefaultInstance();
         }
       }
       /**
-       * <code>.ShapeBox shape_box = 8;</code>
+       * <code>.ShapeBox shape_box = 7;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.ShapeBoxOuterClass.ShapeBox, emu.grasscutter.net.proto.ShapeBoxOuterClass.ShapeBox.Builder, emu.grasscutter.net.proto.ShapeBoxOuterClass.ShapeBoxOrBuilder> 
           getShapeBoxFieldBuilder() {
         if (shapeBoxBuilder_ == null) {
-          if (!(shapeCase_ == 8)) {
-            shape_ = emu.grasscutter.net.proto.ShapeBoxOuterClass.ShapeBox.getDefaultInstance();
+          if (!(checkShapeCase_ == 7)) {
+            checkShape_ = emu.grasscutter.net.proto.ShapeBoxOuterClass.ShapeBox.getDefaultInstance();
           }
           shapeBoxBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               emu.grasscutter.net.proto.ShapeBoxOuterClass.ShapeBox, emu.grasscutter.net.proto.ShapeBoxOuterClass.ShapeBox.Builder, emu.grasscutter.net.proto.ShapeBoxOuterClass.ShapeBoxOrBuilder>(
-                  (emu.grasscutter.net.proto.ShapeBoxOuterClass.ShapeBox) shape_,
+                  (emu.grasscutter.net.proto.ShapeBoxOuterClass.ShapeBox) checkShape_,
                   getParentForChildren(),
                   isClean());
-          shape_ = null;
+          checkShape_ = null;
         }
-        shapeCase_ = 8;
+        checkShapeCase_ = 7;
         onChanged();;
         return shapeBoxBuilder_;
       }
@@ -1554,15 +1452,15 @@ public final class MassiveEntityElementOpBatchNotifyOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\'MassiveEntityElementOpBatchNotify.prot" +
-      "o\032\021ShapeSphere.proto\032\016ShapeBox.proto\"\372\001\n" +
-      "!MassiveEntityElementOpBatchNotify\022\016\n\006op" +
-      "_idx\030\014 \001(\r\022\017\n\007user_id\030\007 \001(\r\022\023\n\013attacker_" +
-      "id\030\002 \001(\r\022\023\n\013entity_type\030\003 \001(\005\022!\n\031attack_" +
-      "element_durability\030\006 \001(\002\022\013\n\003uk1\030\005 \001(\005\022\013\n" +
-      "\003uk2\030\013 \001(\005\022$\n\014shape_sphere\030\004 \001(\0132\014.Shape" +
-      "SphereH\000\022\036\n\tshape_box\030\010 \001(\0132\t.ShapeBoxH\000" +
-      "B\007\n\005shapeB\033\n\031emu.grasscutter.net.protob\006" +
-      "proto3"
+      "o\032\021ShapeSphere.proto\032\016ShapeBox.proto\"\220\002\n" +
+      "!MassiveEntityElementOpBatchNotify\022\023\n\013en" +
+      "tity_type\030\002 \001(\005\022\016\n\006op_idx\030\010 \001(\r\022\023\n\013KOANN" +
+      "GPCJBN\030\t \001(\005\022\023\n\013attacker_id\030\014 \001(\r\022!\n\031att" +
+      "ack_element_durability\030\r \001(\002\022\023\n\013MKGDPHCI" +
+      "MKL\030\016 \001(\005\022\017\n\007user_id\030\017 \001(\r\022$\n\014shape_sphe" +
+      "re\030\005 \001(\0132\014.ShapeSphereH\000\022\036\n\tshape_box\030\007 " +
+      "\001(\0132\t.ShapeBoxH\000B\r\n\013check_shapeB\033\n\031emu.g" +
+      "rasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1575,7 +1473,7 @@ public final class MassiveEntityElementOpBatchNotifyOuterClass {
     internal_static_MassiveEntityElementOpBatchNotify_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_MassiveEntityElementOpBatchNotify_descriptor,
-        new java.lang.String[] { "OpIdx", "UserId", "AttackerId", "EntityType", "AttackElementDurability", "Uk1", "Uk2", "ShapeSphere", "ShapeBox", "Shape", });
+        new java.lang.String[] { "EntityType", "OpIdx", "KOANNGPCJBN", "AttackerId", "AttackElementDurability", "MKGDPHCIMKL", "UserId", "ShapeSphere", "ShapeBox", "CheckShape", });
     emu.grasscutter.net.proto.ShapeSphereOuterClass.getDescriptor();
     emu.grasscutter.net.proto.ShapeBoxOuterClass.getDescriptor();
   }

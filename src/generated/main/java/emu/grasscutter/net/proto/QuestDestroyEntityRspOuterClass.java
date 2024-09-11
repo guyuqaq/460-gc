@@ -19,32 +19,33 @@ public final class QuestDestroyEntityRspOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 entity_id = 1;</code>
-     * @return The entityId.
-     */
-    int getEntityId();
-
-    /**
-     * <code>uint32 quest_id = 7;</code>
+     * <code>uint32 quest_id = 1;</code>
      * @return The questId.
      */
     int getQuestId();
 
     /**
-     * <code>int32 retcode = 12;</code>
-     * @return The retcode.
+     * <code>uint32 entity_id = 3;</code>
+     * @return The entityId.
      */
-    int getRetcode();
+    int getEntityId();
 
     /**
-     * <code>uint32 scene_id = 15;</code>
+     * <code>uint32 scene_id = 6;</code>
      * @return The sceneId.
      */
     int getSceneId();
+
+    /**
+     * <code>int32 retcode = 11;</code>
+     * @return The retcode.
+     */
+    int getRetcode();
   }
   /**
    * <pre>
-   * 4.7.0
+   * CmdId: 3908
+   * obf: IDMDPJLMEGL
    * </pre>
    *
    * Protobuf type {@code QuestDestroyEntityRsp}
@@ -86,21 +87,10 @@ public final class QuestDestroyEntityRspOuterClass {
               emu.grasscutter.net.proto.QuestDestroyEntityRspOuterClass.QuestDestroyEntityRsp.class, emu.grasscutter.net.proto.QuestDestroyEntityRspOuterClass.QuestDestroyEntityRsp.Builder.class);
     }
 
-    public static final int ENTITY_ID_FIELD_NUMBER = 1;
-    private int entityId_;
-    /**
-     * <code>uint32 entity_id = 1;</code>
-     * @return The entityId.
-     */
-    @java.lang.Override
-    public int getEntityId() {
-      return entityId_;
-    }
-
-    public static final int QUEST_ID_FIELD_NUMBER = 7;
+    public static final int QUEST_ID_FIELD_NUMBER = 1;
     private int questId_;
     /**
-     * <code>uint32 quest_id = 7;</code>
+     * <code>uint32 quest_id = 1;</code>
      * @return The questId.
      */
     @java.lang.Override
@@ -108,26 +98,37 @@ public final class QuestDestroyEntityRspOuterClass {
       return questId_;
     }
 
-    public static final int RETCODE_FIELD_NUMBER = 12;
-    private int retcode_;
+    public static final int ENTITY_ID_FIELD_NUMBER = 3;
+    private int entityId_;
     /**
-     * <code>int32 retcode = 12;</code>
-     * @return The retcode.
+     * <code>uint32 entity_id = 3;</code>
+     * @return The entityId.
      */
     @java.lang.Override
-    public int getRetcode() {
-      return retcode_;
+    public int getEntityId() {
+      return entityId_;
     }
 
-    public static final int SCENE_ID_FIELD_NUMBER = 15;
+    public static final int SCENE_ID_FIELD_NUMBER = 6;
     private int sceneId_;
     /**
-     * <code>uint32 scene_id = 15;</code>
+     * <code>uint32 scene_id = 6;</code>
      * @return The sceneId.
      */
     @java.lang.Override
     public int getSceneId() {
       return sceneId_;
+    }
+
+    public static final int RETCODE_FIELD_NUMBER = 11;
+    private int retcode_;
+    /**
+     * <code>int32 retcode = 11;</code>
+     * @return The retcode.
+     */
+    @java.lang.Override
+    public int getRetcode() {
+      return retcode_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -144,17 +145,17 @@ public final class QuestDestroyEntityRspOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (entityId_ != 0) {
-        output.writeUInt32(1, entityId_);
-      }
       if (questId_ != 0) {
-        output.writeUInt32(7, questId_);
+        output.writeUInt32(1, questId_);
       }
-      if (retcode_ != 0) {
-        output.writeInt32(12, retcode_);
+      if (entityId_ != 0) {
+        output.writeUInt32(3, entityId_);
       }
       if (sceneId_ != 0) {
-        output.writeUInt32(15, sceneId_);
+        output.writeUInt32(6, sceneId_);
+      }
+      if (retcode_ != 0) {
+        output.writeInt32(11, retcode_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -165,21 +166,21 @@ public final class QuestDestroyEntityRspOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (entityId_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(1, entityId_);
-      }
       if (questId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(7, questId_);
+          .computeUInt32Size(1, questId_);
       }
-      if (retcode_ != 0) {
+      if (entityId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(12, retcode_);
+          .computeUInt32Size(3, entityId_);
       }
       if (sceneId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(15, sceneId_);
+          .computeUInt32Size(6, sceneId_);
+      }
+      if (retcode_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(11, retcode_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -196,14 +197,14 @@ public final class QuestDestroyEntityRspOuterClass {
       }
       emu.grasscutter.net.proto.QuestDestroyEntityRspOuterClass.QuestDestroyEntityRsp other = (emu.grasscutter.net.proto.QuestDestroyEntityRspOuterClass.QuestDestroyEntityRsp) obj;
 
-      if (getEntityId()
-          != other.getEntityId()) return false;
       if (getQuestId()
           != other.getQuestId()) return false;
-      if (getRetcode()
-          != other.getRetcode()) return false;
+      if (getEntityId()
+          != other.getEntityId()) return false;
       if (getSceneId()
           != other.getSceneId()) return false;
+      if (getRetcode()
+          != other.getRetcode()) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -215,14 +216,14 @@ public final class QuestDestroyEntityRspOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ENTITY_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getEntityId();
       hash = (37 * hash) + QUEST_ID_FIELD_NUMBER;
       hash = (53 * hash) + getQuestId();
-      hash = (37 * hash) + RETCODE_FIELD_NUMBER;
-      hash = (53 * hash) + getRetcode();
+      hash = (37 * hash) + ENTITY_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getEntityId();
       hash = (37 * hash) + SCENE_ID_FIELD_NUMBER;
       hash = (53 * hash) + getSceneId();
+      hash = (37 * hash) + RETCODE_FIELD_NUMBER;
+      hash = (53 * hash) + getRetcode();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -320,7 +321,8 @@ public final class QuestDestroyEntityRspOuterClass {
     }
     /**
      * <pre>
-     * 4.7.0
+     * CmdId: 3908
+     * obf: IDMDPJLMEGL
      * </pre>
      *
      * Protobuf type {@code QuestDestroyEntityRsp}
@@ -355,13 +357,13 @@ public final class QuestDestroyEntityRspOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        entityId_ = 0;
-
         questId_ = 0;
 
-        retcode_ = 0;
+        entityId_ = 0;
 
         sceneId_ = 0;
+
+        retcode_ = 0;
 
         return this;
       }
@@ -389,10 +391,10 @@ public final class QuestDestroyEntityRspOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.QuestDestroyEntityRspOuterClass.QuestDestroyEntityRsp buildPartial() {
         emu.grasscutter.net.proto.QuestDestroyEntityRspOuterClass.QuestDestroyEntityRsp result = new emu.grasscutter.net.proto.QuestDestroyEntityRspOuterClass.QuestDestroyEntityRsp(this);
-        result.entityId_ = entityId_;
         result.questId_ = questId_;
-        result.retcode_ = retcode_;
+        result.entityId_ = entityId_;
         result.sceneId_ = sceneId_;
+        result.retcode_ = retcode_;
         onBuilt();
         return result;
       }
@@ -441,17 +443,17 @@ public final class QuestDestroyEntityRspOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.QuestDestroyEntityRspOuterClass.QuestDestroyEntityRsp other) {
         if (other == emu.grasscutter.net.proto.QuestDestroyEntityRspOuterClass.QuestDestroyEntityRsp.getDefaultInstance()) return this;
-        if (other.getEntityId() != 0) {
-          setEntityId(other.getEntityId());
-        }
         if (other.getQuestId() != 0) {
           setQuestId(other.getQuestId());
         }
-        if (other.getRetcode() != 0) {
-          setRetcode(other.getRetcode());
+        if (other.getEntityId() != 0) {
+          setEntityId(other.getEntityId());
         }
         if (other.getSceneId() != 0) {
           setSceneId(other.getSceneId());
+        }
+        if (other.getRetcode() != 0) {
+          setRetcode(other.getRetcode());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -480,25 +482,25 @@ public final class QuestDestroyEntityRspOuterClass {
                 done = true;
                 break;
               case 8: {
-                entityId_ = input.readUInt32();
-
-                break;
-              } // case 8
-              case 56: {
                 questId_ = input.readUInt32();
 
                 break;
-              } // case 56
-              case 96: {
-                retcode_ = input.readInt32();
+              } // case 8
+              case 24: {
+                entityId_ = input.readUInt32();
 
                 break;
-              } // case 96
-              case 120: {
+              } // case 24
+              case 48: {
                 sceneId_ = input.readUInt32();
 
                 break;
-              } // case 120
+              } // case 48
+              case 88: {
+                retcode_ = input.readInt32();
+
+                break;
+              } // case 88
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -515,40 +517,9 @@ public final class QuestDestroyEntityRspOuterClass {
         return this;
       }
 
-      private int entityId_ ;
-      /**
-       * <code>uint32 entity_id = 1;</code>
-       * @return The entityId.
-       */
-      @java.lang.Override
-      public int getEntityId() {
-        return entityId_;
-      }
-      /**
-       * <code>uint32 entity_id = 1;</code>
-       * @param value The entityId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setEntityId(int value) {
-        
-        entityId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 entity_id = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearEntityId() {
-        
-        entityId_ = 0;
-        onChanged();
-        return this;
-      }
-
       private int questId_ ;
       /**
-       * <code>uint32 quest_id = 7;</code>
+       * <code>uint32 quest_id = 1;</code>
        * @return The questId.
        */
       @java.lang.Override
@@ -556,7 +527,7 @@ public final class QuestDestroyEntityRspOuterClass {
         return questId_;
       }
       /**
-       * <code>uint32 quest_id = 7;</code>
+       * <code>uint32 quest_id = 1;</code>
        * @param value The questId to set.
        * @return This builder for chaining.
        */
@@ -567,7 +538,7 @@ public final class QuestDestroyEntityRspOuterClass {
         return this;
       }
       /**
-       * <code>uint32 quest_id = 7;</code>
+       * <code>uint32 quest_id = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearQuestId() {
@@ -577,40 +548,40 @@ public final class QuestDestroyEntityRspOuterClass {
         return this;
       }
 
-      private int retcode_ ;
+      private int entityId_ ;
       /**
-       * <code>int32 retcode = 12;</code>
-       * @return The retcode.
+       * <code>uint32 entity_id = 3;</code>
+       * @return The entityId.
        */
       @java.lang.Override
-      public int getRetcode() {
-        return retcode_;
+      public int getEntityId() {
+        return entityId_;
       }
       /**
-       * <code>int32 retcode = 12;</code>
-       * @param value The retcode to set.
+       * <code>uint32 entity_id = 3;</code>
+       * @param value The entityId to set.
        * @return This builder for chaining.
        */
-      public Builder setRetcode(int value) {
+      public Builder setEntityId(int value) {
         
-        retcode_ = value;
+        entityId_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>int32 retcode = 12;</code>
+       * <code>uint32 entity_id = 3;</code>
        * @return This builder for chaining.
        */
-      public Builder clearRetcode() {
+      public Builder clearEntityId() {
         
-        retcode_ = 0;
+        entityId_ = 0;
         onChanged();
         return this;
       }
 
       private int sceneId_ ;
       /**
-       * <code>uint32 scene_id = 15;</code>
+       * <code>uint32 scene_id = 6;</code>
        * @return The sceneId.
        */
       @java.lang.Override
@@ -618,7 +589,7 @@ public final class QuestDestroyEntityRspOuterClass {
         return sceneId_;
       }
       /**
-       * <code>uint32 scene_id = 15;</code>
+       * <code>uint32 scene_id = 6;</code>
        * @param value The sceneId to set.
        * @return This builder for chaining.
        */
@@ -629,12 +600,43 @@ public final class QuestDestroyEntityRspOuterClass {
         return this;
       }
       /**
-       * <code>uint32 scene_id = 15;</code>
+       * <code>uint32 scene_id = 6;</code>
        * @return This builder for chaining.
        */
       public Builder clearSceneId() {
         
         sceneId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int retcode_ ;
+      /**
+       * <code>int32 retcode = 11;</code>
+       * @return The retcode.
+       */
+      @java.lang.Override
+      public int getRetcode() {
+        return retcode_;
+      }
+      /**
+       * <code>int32 retcode = 11;</code>
+       * @param value The retcode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRetcode(int value) {
+        
+        retcode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 retcode = 11;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRetcode() {
+        
+        retcode_ = 0;
         onChanged();
         return this;
       }
@@ -717,9 +719,9 @@ public final class QuestDestroyEntityRspOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\033QuestDestroyEntityRsp.proto\"_\n\025QuestDe" +
-      "stroyEntityRsp\022\021\n\tentity_id\030\001 \001(\r\022\020\n\010que" +
-      "st_id\030\007 \001(\r\022\017\n\007retcode\030\014 \001(\005\022\020\n\010scene_id" +
-      "\030\017 \001(\rB\033\n\031emu.grasscutter.net.protob\006pro" +
+      "stroyEntityRsp\022\020\n\010quest_id\030\001 \001(\r\022\021\n\tenti" +
+      "ty_id\030\003 \001(\r\022\020\n\010scene_id\030\006 \001(\r\022\017\n\007retcode" +
+      "\030\013 \001(\005B\033\n\031emu.grasscutter.net.protob\006pro" +
       "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -731,7 +733,7 @@ public final class QuestDestroyEntityRspOuterClass {
     internal_static_QuestDestroyEntityRsp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_QuestDestroyEntityRsp_descriptor,
-        new java.lang.String[] { "EntityId", "QuestId", "Retcode", "SceneId", });
+        new java.lang.String[] { "QuestId", "EntityId", "SceneId", "Retcode", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

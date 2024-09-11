@@ -34,17 +34,17 @@ public final class DropHintNotifyOuterClass {
     emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getPositionOrBuilder();
 
     /**
-     * <code>repeated uint32 item_id_list = 12;</code>
+     * <code>repeated uint32 item_id_list = 5;</code>
      * @return A list containing the itemIdList.
      */
     java.util.List<java.lang.Integer> getItemIdListList();
     /**
-     * <code>repeated uint32 item_id_list = 12;</code>
+     * <code>repeated uint32 item_id_list = 5;</code>
      * @return The count of itemIdList.
      */
     int getItemIdListCount();
     /**
-     * <code>repeated uint32 item_id_list = 12;</code>
+     * <code>repeated uint32 item_id_list = 5;</code>
      * @param index The index of the element to return.
      * @return The itemIdList at the given index.
      */
@@ -52,7 +52,8 @@ public final class DropHintNotifyOuterClass {
   }
   /**
    * <pre>
-   * 4.7.0
+   * CmdId: 3881
+   * obf: BNAGKNMHKEJ
    * </pre>
    *
    * Protobuf type {@code DropHintNotify}
@@ -121,10 +122,10 @@ public final class DropHintNotifyOuterClass {
       return getPosition();
     }
 
-    public static final int ITEM_ID_LIST_FIELD_NUMBER = 12;
+    public static final int ITEM_ID_LIST_FIELD_NUMBER = 5;
     private com.google.protobuf.Internal.IntList itemIdList_;
     /**
-     * <code>repeated uint32 item_id_list = 12;</code>
+     * <code>repeated uint32 item_id_list = 5;</code>
      * @return A list containing the itemIdList.
      */
     @java.lang.Override
@@ -133,14 +134,14 @@ public final class DropHintNotifyOuterClass {
       return itemIdList_;
     }
     /**
-     * <code>repeated uint32 item_id_list = 12;</code>
+     * <code>repeated uint32 item_id_list = 5;</code>
      * @return The count of itemIdList.
      */
     public int getItemIdListCount() {
       return itemIdList_.size();
     }
     /**
-     * <code>repeated uint32 item_id_list = 12;</code>
+     * <code>repeated uint32 item_id_list = 5;</code>
      * @param index The index of the element to return.
      * @return The itemIdList at the given index.
      */
@@ -168,7 +169,7 @@ public final class DropHintNotifyOuterClass {
         output.writeMessage(1, getPosition());
       }
       if (getItemIdListList().size() > 0) {
-        output.writeUInt32NoTag(98);
+        output.writeUInt32NoTag(42);
         output.writeUInt32NoTag(itemIdListMemoizedSerializedSize);
       }
       for (int i = 0; i < itemIdList_.size(); i++) {
@@ -339,7 +340,8 @@ public final class DropHintNotifyOuterClass {
     }
     /**
      * <pre>
-     * 4.7.0
+     * CmdId: 3881
+     * obf: BNAGKNMHKEJ
      * </pre>
      *
      * Protobuf type {@code DropHintNotify}
@@ -513,13 +515,13 @@ public final class DropHintNotifyOuterClass {
 
                 break;
               } // case 10
-              case 96: {
+              case 40: {
                 int v = input.readUInt32();
                 ensureItemIdListIsMutable();
                 itemIdList_.addInt(v);
                 break;
-              } // case 96
-              case 98: {
+              } // case 40
+              case 42: {
                 int length = input.readRawVarint32();
                 int limit = input.pushLimit(length);
                 ensureItemIdListIsMutable();
@@ -528,7 +530,7 @@ public final class DropHintNotifyOuterClass {
                 }
                 input.popLimit(limit);
                 break;
-              } // case 98
+              } // case 42
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -673,7 +675,7 @@ public final class DropHintNotifyOuterClass {
          }
       }
       /**
-       * <code>repeated uint32 item_id_list = 12;</code>
+       * <code>repeated uint32 item_id_list = 5;</code>
        * @return A list containing the itemIdList.
        */
       public java.util.List<java.lang.Integer>
@@ -682,14 +684,14 @@ public final class DropHintNotifyOuterClass {
                  java.util.Collections.unmodifiableList(itemIdList_) : itemIdList_;
       }
       /**
-       * <code>repeated uint32 item_id_list = 12;</code>
+       * <code>repeated uint32 item_id_list = 5;</code>
        * @return The count of itemIdList.
        */
       public int getItemIdListCount() {
         return itemIdList_.size();
       }
       /**
-       * <code>repeated uint32 item_id_list = 12;</code>
+       * <code>repeated uint32 item_id_list = 5;</code>
        * @param index The index of the element to return.
        * @return The itemIdList at the given index.
        */
@@ -697,7 +699,7 @@ public final class DropHintNotifyOuterClass {
         return itemIdList_.getInt(index);
       }
       /**
-       * <code>repeated uint32 item_id_list = 12;</code>
+       * <code>repeated uint32 item_id_list = 5;</code>
        * @param index The index to set the value at.
        * @param value The itemIdList to set.
        * @return This builder for chaining.
@@ -710,7 +712,7 @@ public final class DropHintNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 item_id_list = 12;</code>
+       * <code>repeated uint32 item_id_list = 5;</code>
        * @param value The itemIdList to add.
        * @return This builder for chaining.
        */
@@ -721,7 +723,7 @@ public final class DropHintNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 item_id_list = 12;</code>
+       * <code>repeated uint32 item_id_list = 5;</code>
        * @param values The itemIdList to add.
        * @return This builder for chaining.
        */
@@ -734,7 +736,7 @@ public final class DropHintNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 item_id_list = 12;</code>
+       * <code>repeated uint32 item_id_list = 5;</code>
        * @return This builder for chaining.
        */
       public Builder clearItemIdList() {
@@ -823,7 +825,7 @@ public final class DropHintNotifyOuterClass {
     java.lang.String[] descriptorData = {
       "\n\024DropHintNotify.proto\032\014Vector.proto\"A\n\016" +
       "DropHintNotify\022\031\n\010position\030\001 \001(\0132\007.Vecto" +
-      "r\022\024\n\014item_id_list\030\014 \003(\rB\033\n\031emu.grasscutt" +
+      "r\022\024\n\014item_id_list\030\005 \003(\rB\033\n\031emu.grasscutt" +
       "er.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
