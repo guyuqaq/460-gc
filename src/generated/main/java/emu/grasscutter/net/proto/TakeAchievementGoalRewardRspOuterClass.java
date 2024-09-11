@@ -67,7 +67,7 @@ public final class TakeAchievementGoalRewardRspOuterClass {
   }
   /**
    * <pre>
-   * CmdId: 26805
+   * CmdId: 1595
    * </pre>
    *
    * Protobuf type {@code TakeAchievementGoalRewardRsp}
@@ -388,7 +388,7 @@ public final class TakeAchievementGoalRewardRspOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 26805
+     * CmdId: 1595
      * </pre>
      *
      * Protobuf type {@code TakeAchievementGoalRewardRsp}

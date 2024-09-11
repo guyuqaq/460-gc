@@ -644,9 +644,9 @@ public final class PacketOpcodes {
     public static final int ShowCommonTipsNotify = 20003;
     public static final int StartCoopPointReq = 27436;
     public static final int StartCoopPointRsp = 2147;
-    public static final int TakeAchievementGoalRewardReq = 4455; // or 4455,24332
+	public static final int TakeAchievementGoalRewardReq = 24332; // or 4455,24332
     public static final int TakeAchievementGoalRewardRsp = 26805; // or 26805,1595
-    public static final int TakeAchievementRewardReq = 24332; // or 4455,24332
+    public static final int TakeAchievementRewardReq = 4455; // or 4455,24332
     public static final int TakeAchievementRewardRsp = 1595; // or 26805,1595
     public static final int TakeFurnitureMakeReq = 2795;
     public static final int TakeFurnitureMakeRsp = 6584;
