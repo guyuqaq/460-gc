@@ -45,7 +45,6 @@ public final class PlayerCookReqOuterClass {
   /**
    * <pre>
    * CmdId: 192
-   * obf: OBPNJHOFBED
    * </pre>
    *
    * Protobuf type {@code PlayerCookReq}
@@ -322,7 +321,6 @@ public final class PlayerCookReqOuterClass {
     /**
      * <pre>
      * CmdId: 192
-     * obf: OBPNJHOFBED
      * </pre>
      *
      * Protobuf type {@code PlayerCookReq}

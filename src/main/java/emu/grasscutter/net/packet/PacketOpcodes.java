@@ -644,10 +644,10 @@ public final class PacketOpcodes {
     public static final int ShowCommonTipsNotify = 20003;
     public static final int StartCoopPointReq = 27436;
     public static final int StartCoopPointRsp = 2147;
-	public static final int TakeAchievementGoalRewardReq = 24332; // or 4455,24332
-    public static final int TakeAchievementGoalRewardRsp = 26805; // or 26805,1595
-    public static final int TakeAchievementRewardReq = 4455; // or 4455,24332
-    public static final int TakeAchievementRewardRsp = 1595; // or 26805,1595
+	public static final int TakeAchievementGoalRewardReq = 24332;
+    public static final int TakeAchievementGoalRewardRsp = 26805;
+    public static final int TakeAchievementRewardReq = 4455;
+    public static final int TakeAchievementRewardRsp = 1595;
     public static final int TakeFurnitureMakeReq = 2795;
     public static final int TakeFurnitureMakeRsp = 6584;
     public static final int TakePlayerLevelRewardRsp = 21700;
@@ -658,6 +658,11 @@ public final class PacketOpcodes {
     public static final int PlayerCookArgsRsp = 7024;
     public static final int PlayerCookReq = 192;
     public static final int PlayerCookRsp = 23979;
+	public static final int CookDataNotify = 27676;
+	public static final int CookRecipeDataNotify = 27153;
+	public static final int CookGradeDataNotify = 2574;
+	public static final int PlayerRandomCookReq = 23985;
+	public static final int PlayerRandomCookRsp = 50010;// unknow cmdid
     public static final int SceneKickPlayerReq = 27213;
     public static final int SceneKickPlayerRsp = 7966; // 7966,20150,9301,24287,5497,21021,7700
     public static final int PlayerGetForceQuitBanInfoReq = 2641;
@@ -725,8 +730,6 @@ public final class PacketOpcodes {
 	public static final int ClientLoadingCostumeVerificationNotify = 1;
 	public static final int ClientLockGameTimeNotify = 1;
 	public static final int CloseCommonTipsNotify = 1;
-	public static final int CookDataNotify = 1;
-	public static final int CookRecipeDataNotify = 1;
 	public static final int DailyTaskDataNotify = 1;
 	public static final int DailyTaskFilterCityReq = 1;
 	public static final int DailyTaskFilterCityRsp = 1;
@@ -1082,7 +1085,6 @@ public final class PacketOpcodes {
 	public static final int CoinCollectPrepareRsp = 1;
 	public static final int CoinCollectPrepareStageNotify = 1;
 	public static final int CommonPlayerTipsNotify = 1;
-	public static final int CookGradeDataNotify = 1;
 	public static final int CoopCgShowNotify = 1;
 	public static final int CoopCgUpdateNotify = 1;
 	public static final int CoopPointUpdateNotify = 1;
@@ -1935,8 +1937,6 @@ public final class PacketOpcodes {
 	public static final int PlayerNicknameNotify = 1;
 	public static final int PlayerNormalLuaShellNotify = 1;
 	public static final int PlayerQuitFromMpNotify = 1;
-	public static final int PlayerRandomCookReq = 1;
-	public static final int PlayerRandomCookRsp = 1;
 	public static final int PlayerReportReq = 1;
 	public static final int PlayerReportRsp = 1;
 	public static final int PlayerRoutineDataNotify = 1;

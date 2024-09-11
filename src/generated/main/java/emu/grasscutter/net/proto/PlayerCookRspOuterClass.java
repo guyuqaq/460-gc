@@ -102,7 +102,6 @@ public final class PlayerCookRspOuterClass {
   /**
    * <pre>
    * CmdId: 23979
-   * obf: OJPDNBKPIKI
    * </pre>
    *
    * Protobuf type {@code PlayerCookRsp}
@@ -507,7 +506,6 @@ public final class PlayerCookRspOuterClass {
     /**
      * <pre>
      * CmdId: 23979
-     * obf: OJPDNBKPIKI
      * </pre>
      *
      * Protobuf type {@code PlayerCookRsp}
@@ -1593,8 +1591,8 @@ public final class PlayerCookRspOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\023PlayerCookRsp.proto\032\017ItemParam.proto\032\024" +
-      "CookRecipeData.proto\"\264\001\n\rPlayerCookRsp\022\022" +
+      "\n\023PlayerCookRsp.proto\032\024CookRecipeData.pr" +
+      "oto\032\017ItemParam.proto\"\264\001\n\rPlayerCookRsp\022\022" +
       "\n\ncook_count\030\001 \001(\r\022$\n\020extral_item_list\030\003" +
       " \003(\0132\n.ItemParam\022$\n\013recipe_data\030\t \001(\0132\017." +
       "CookRecipeData\022\017\n\007retcode\030\013 \001(\005\022\035\n\titem_" +
@@ -1604,8 +1602,8 @@ public final class PlayerCookRspOuterClass {
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          emu.grasscutter.net.proto.ItemParamOuterClass.getDescriptor(),
           emu.grasscutter.net.proto.CookRecipeDataOuterClass.getDescriptor(),
+          emu.grasscutter.net.proto.ItemParamOuterClass.getDescriptor(),
         });
     internal_static_PlayerCookRsp_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -1613,8 +1611,8 @@ public final class PlayerCookRspOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_PlayerCookRsp_descriptor,
         new java.lang.String[] { "CookCount", "ExtralItemList", "RecipeData", "Retcode", "ItemList", "QteQuality", });
-    emu.grasscutter.net.proto.ItemParamOuterClass.getDescriptor();
     emu.grasscutter.net.proto.CookRecipeDataOuterClass.getDescriptor();
+    emu.grasscutter.net.proto.ItemParamOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

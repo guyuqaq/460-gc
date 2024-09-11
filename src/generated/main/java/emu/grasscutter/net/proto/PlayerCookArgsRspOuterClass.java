@@ -25,10 +25,10 @@ public final class PlayerCookArgsRspOuterClass {
     int getRetcode();
 
     /**
-     * <code>float DIKKLMDPMAN = 15;</code>
-     * @return The dIKKLMDPMAN.
+     * <code>float qte_range_ratio = 15;</code>
+     * @return The qteRangeRatio.
      */
-    float getDIKKLMDPMAN();
+    float getQteRangeRatio();
   }
   /**
    * <pre>
@@ -85,15 +85,15 @@ public final class PlayerCookArgsRspOuterClass {
       return retcode_;
     }
 
-    public static final int DIKKLMDPMAN_FIELD_NUMBER = 15;
-    private float dIKKLMDPMAN_;
+    public static final int QTE_RANGE_RATIO_FIELD_NUMBER = 15;
+    private float qteRangeRatio_;
     /**
-     * <code>float DIKKLMDPMAN = 15;</code>
-     * @return The dIKKLMDPMAN.
+     * <code>float qte_range_ratio = 15;</code>
+     * @return The qteRangeRatio.
      */
     @java.lang.Override
-    public float getDIKKLMDPMAN() {
-      return dIKKLMDPMAN_;
+    public float getQteRangeRatio() {
+      return qteRangeRatio_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -113,8 +113,8 @@ public final class PlayerCookArgsRspOuterClass {
       if (retcode_ != 0) {
         output.writeInt32(6, retcode_);
       }
-      if (java.lang.Float.floatToRawIntBits(dIKKLMDPMAN_) != 0) {
-        output.writeFloat(15, dIKKLMDPMAN_);
+      if (java.lang.Float.floatToRawIntBits(qteRangeRatio_) != 0) {
+        output.writeFloat(15, qteRangeRatio_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -129,9 +129,9 @@ public final class PlayerCookArgsRspOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(6, retcode_);
       }
-      if (java.lang.Float.floatToRawIntBits(dIKKLMDPMAN_) != 0) {
+      if (java.lang.Float.floatToRawIntBits(qteRangeRatio_) != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(15, dIKKLMDPMAN_);
+          .computeFloatSize(15, qteRangeRatio_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -150,9 +150,9 @@ public final class PlayerCookArgsRspOuterClass {
 
       if (getRetcode()
           != other.getRetcode()) return false;
-      if (java.lang.Float.floatToIntBits(getDIKKLMDPMAN())
+      if (java.lang.Float.floatToIntBits(getQteRangeRatio())
           != java.lang.Float.floatToIntBits(
-              other.getDIKKLMDPMAN())) return false;
+              other.getQteRangeRatio())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -166,9 +166,9 @@ public final class PlayerCookArgsRspOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + RETCODE_FIELD_NUMBER;
       hash = (53 * hash) + getRetcode();
-      hash = (37 * hash) + DIKKLMDPMAN_FIELD_NUMBER;
+      hash = (37 * hash) + QTE_RANGE_RATIO_FIELD_NUMBER;
       hash = (53 * hash) + java.lang.Float.floatToIntBits(
-          getDIKKLMDPMAN());
+          getQteRangeRatio());
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -303,7 +303,7 @@ public final class PlayerCookArgsRspOuterClass {
         super.clear();
         retcode_ = 0;
 
-        dIKKLMDPMAN_ = 0F;
+        qteRangeRatio_ = 0F;
 
         return this;
       }
@@ -332,7 +332,7 @@ public final class PlayerCookArgsRspOuterClass {
       public emu.grasscutter.net.proto.PlayerCookArgsRspOuterClass.PlayerCookArgsRsp buildPartial() {
         emu.grasscutter.net.proto.PlayerCookArgsRspOuterClass.PlayerCookArgsRsp result = new emu.grasscutter.net.proto.PlayerCookArgsRspOuterClass.PlayerCookArgsRsp(this);
         result.retcode_ = retcode_;
-        result.dIKKLMDPMAN_ = dIKKLMDPMAN_;
+        result.qteRangeRatio_ = qteRangeRatio_;
         onBuilt();
         return result;
       }
@@ -384,8 +384,8 @@ public final class PlayerCookArgsRspOuterClass {
         if (other.getRetcode() != 0) {
           setRetcode(other.getRetcode());
         }
-        if (other.getDIKKLMDPMAN() != 0F) {
-          setDIKKLMDPMAN(other.getDIKKLMDPMAN());
+        if (other.getQteRangeRatio() != 0F) {
+          setQteRangeRatio(other.getQteRangeRatio());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -419,7 +419,7 @@ public final class PlayerCookArgsRspOuterClass {
                 break;
               } // case 48
               case 125: {
-                dIKKLMDPMAN_ = input.readFloat();
+                qteRangeRatio_ = input.readFloat();
 
                 break;
               } // case 125
@@ -470,33 +470,33 @@ public final class PlayerCookArgsRspOuterClass {
         return this;
       }
 
-      private float dIKKLMDPMAN_ ;
+      private float qteRangeRatio_ ;
       /**
-       * <code>float DIKKLMDPMAN = 15;</code>
-       * @return The dIKKLMDPMAN.
+       * <code>float qte_range_ratio = 15;</code>
+       * @return The qteRangeRatio.
        */
       @java.lang.Override
-      public float getDIKKLMDPMAN() {
-        return dIKKLMDPMAN_;
+      public float getQteRangeRatio() {
+        return qteRangeRatio_;
       }
       /**
-       * <code>float DIKKLMDPMAN = 15;</code>
-       * @param value The dIKKLMDPMAN to set.
+       * <code>float qte_range_ratio = 15;</code>
+       * @param value The qteRangeRatio to set.
        * @return This builder for chaining.
        */
-      public Builder setDIKKLMDPMAN(float value) {
+      public Builder setQteRangeRatio(float value) {
         
-        dIKKLMDPMAN_ = value;
+        qteRangeRatio_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>float DIKKLMDPMAN = 15;</code>
+       * <code>float qte_range_ratio = 15;</code>
        * @return This builder for chaining.
        */
-      public Builder clearDIKKLMDPMAN() {
+      public Builder clearQteRangeRatio() {
         
-        dIKKLMDPMAN_ = 0F;
+        qteRangeRatio_ = 0F;
         onChanged();
         return this;
       }
@@ -578,10 +578,10 @@ public final class PlayerCookArgsRspOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\027PlayerCookArgsRsp.proto\"9\n\021PlayerCookA" +
-      "rgsRsp\022\017\n\007retcode\030\006 \001(\005\022\023\n\013DIKKLMDPMAN\030\017" +
-      " \001(\002B\033\n\031emu.grasscutter.net.protob\006proto" +
-      "3"
+      "\n\027PlayerCookArgsRsp.proto\"=\n\021PlayerCookA" +
+      "rgsRsp\022\017\n\007retcode\030\006 \001(\005\022\027\n\017qte_range_rat" +
+      "io\030\017 \001(\002B\033\n\031emu.grasscutter.net.protob\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -592,7 +592,7 @@ public final class PlayerCookArgsRspOuterClass {
     internal_static_PlayerCookArgsRsp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_PlayerCookArgsRsp_descriptor,
-        new java.lang.String[] { "Retcode", "DIKKLMDPMAN", });
+        new java.lang.String[] { "Retcode", "QteRangeRatio", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

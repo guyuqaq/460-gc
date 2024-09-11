@@ -33,7 +33,6 @@ public final class PlayerCookArgsReqOuterClass {
   /**
    * <pre>
    * CmdId: 6593
-   * obf: FHKJJIBPEBH
    * </pre>
    *
    * Protobuf type {@code PlayerCookArgsReq}
@@ -266,7 +265,6 @@ public final class PlayerCookArgsReqOuterClass {
     /**
      * <pre>
      * CmdId: 6593
-     * obf: FHKJJIBPEBH
      * </pre>
      *
      * Protobuf type {@code PlayerCookArgsReq}

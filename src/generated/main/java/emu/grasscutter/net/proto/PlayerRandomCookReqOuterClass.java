@@ -19,33 +19,32 @@ public final class PlayerRandomCookReqOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .ItemParam material_list = 3;</code>
+     * <code>repeated .ItemParam material_list = 15;</code>
      */
     java.util.List<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam> 
         getMaterialListList();
     /**
-     * <code>repeated .ItemParam material_list = 3;</code>
+     * <code>repeated .ItemParam material_list = 15;</code>
      */
     emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam getMaterialList(int index);
     /**
-     * <code>repeated .ItemParam material_list = 3;</code>
+     * <code>repeated .ItemParam material_list = 15;</code>
      */
     int getMaterialListCount();
     /**
-     * <code>repeated .ItemParam material_list = 3;</code>
+     * <code>repeated .ItemParam material_list = 15;</code>
      */
     java.util.List<? extends emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder> 
         getMaterialListOrBuilderList();
     /**
-     * <code>repeated .ItemParam material_list = 3;</code>
+     * <code>repeated .ItemParam material_list = 15;</code>
      */
     emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder getMaterialListOrBuilder(
         int index);
   }
   /**
    * <pre>
-   * CmdId: 7190
-   * Obf: DPMOJNLNJPL
+   * CmdId: 23985
    * </pre>
    *
    * Protobuf type {@code PlayerRandomCookReq}
@@ -75,56 +74,6 @@ public final class PlayerRandomCookReqOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private PlayerRandomCookReq(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 26: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                materialList_ = new java.util.ArrayList<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              materialList_.add(
-                  input.readMessage(emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.parser(), extensionRegistry));
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          materialList_ = java.util.Collections.unmodifiableList(materialList_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.PlayerRandomCookReqOuterClass.internal_static_PlayerRandomCookReq_descriptor;
@@ -138,17 +87,17 @@ public final class PlayerRandomCookReqOuterClass {
               emu.grasscutter.net.proto.PlayerRandomCookReqOuterClass.PlayerRandomCookReq.class, emu.grasscutter.net.proto.PlayerRandomCookReqOuterClass.PlayerRandomCookReq.Builder.class);
     }
 
-    public static final int MATERIAL_LIST_FIELD_NUMBER = 3;
+    public static final int MATERIAL_LIST_FIELD_NUMBER = 15;
     private java.util.List<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam> materialList_;
     /**
-     * <code>repeated .ItemParam material_list = 3;</code>
+     * <code>repeated .ItemParam material_list = 15;</code>
      */
     @java.lang.Override
     public java.util.List<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam> getMaterialListList() {
       return materialList_;
     }
     /**
-     * <code>repeated .ItemParam material_list = 3;</code>
+     * <code>repeated .ItemParam material_list = 15;</code>
      */
     @java.lang.Override
     public java.util.List<? extends emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder> 
@@ -156,21 +105,21 @@ public final class PlayerRandomCookReqOuterClass {
       return materialList_;
     }
     /**
-     * <code>repeated .ItemParam material_list = 3;</code>
+     * <code>repeated .ItemParam material_list = 15;</code>
      */
     @java.lang.Override
     public int getMaterialListCount() {
       return materialList_.size();
     }
     /**
-     * <code>repeated .ItemParam material_list = 3;</code>
+     * <code>repeated .ItemParam material_list = 15;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam getMaterialList(int index) {
       return materialList_.get(index);
     }
     /**
-     * <code>repeated .ItemParam material_list = 3;</code>
+     * <code>repeated .ItemParam material_list = 15;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder getMaterialListOrBuilder(
@@ -193,9 +142,9 @@ public final class PlayerRandomCookReqOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       for (int i = 0; i < materialList_.size(); i++) {
-        output.writeMessage(3, materialList_.get(i));
+        output.writeMessage(15, materialList_.get(i));
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -206,9 +155,9 @@ public final class PlayerRandomCookReqOuterClass {
       size = 0;
       for (int i = 0; i < materialList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, materialList_.get(i));
+          .computeMessageSize(15, materialList_.get(i));
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -225,7 +174,7 @@ public final class PlayerRandomCookReqOuterClass {
 
       if (!getMaterialListList()
           .equals(other.getMaterialListList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -240,7 +189,7 @@ public final class PlayerRandomCookReqOuterClass {
         hash = (37 * hash) + MATERIAL_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getMaterialListList().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -337,8 +286,7 @@ public final class PlayerRandomCookReqOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 7190
-     * Obf: DPMOJNLNJPL
+     * CmdId: 23985
      * </pre>
      *
      * Protobuf type {@code PlayerRandomCookReq}
@@ -362,29 +310,24 @@ public final class PlayerRandomCookReqOuterClass {
 
       // Construct using emu.grasscutter.net.proto.PlayerRandomCookReqOuterClass.PlayerRandomCookReq.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getMaterialListFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
         if (materialListBuilder_ == null) {
           materialList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          materialList_ = null;
           materialListBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -495,7 +438,7 @@ public final class PlayerRandomCookReqOuterClass {
             }
           }
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -510,17 +453,43 @@ public final class PlayerRandomCookReqOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.PlayerRandomCookReqOuterClass.PlayerRandomCookReq parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 122: {
+                emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam m =
+                    input.readMessage(
+                        emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.parser(),
+                        extensionRegistry);
+                if (materialListBuilder_ == null) {
+                  ensureMaterialListIsMutable();
+                  materialList_.add(m);
+                } else {
+                  materialListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 122
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.PlayerRandomCookReqOuterClass.PlayerRandomCookReq) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -538,7 +507,7 @@ public final class PlayerRandomCookReqOuterClass {
           emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam, emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder, emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder> materialListBuilder_;
 
       /**
-       * <code>repeated .ItemParam material_list = 3;</code>
+       * <code>repeated .ItemParam material_list = 15;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam> getMaterialListList() {
         if (materialListBuilder_ == null) {
@@ -548,7 +517,7 @@ public final class PlayerRandomCookReqOuterClass {
         }
       }
       /**
-       * <code>repeated .ItemParam material_list = 3;</code>
+       * <code>repeated .ItemParam material_list = 15;</code>
        */
       public int getMaterialListCount() {
         if (materialListBuilder_ == null) {
@@ -558,7 +527,7 @@ public final class PlayerRandomCookReqOuterClass {
         }
       }
       /**
-       * <code>repeated .ItemParam material_list = 3;</code>
+       * <code>repeated .ItemParam material_list = 15;</code>
        */
       public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam getMaterialList(int index) {
         if (materialListBuilder_ == null) {
@@ -568,7 +537,7 @@ public final class PlayerRandomCookReqOuterClass {
         }
       }
       /**
-       * <code>repeated .ItemParam material_list = 3;</code>
+       * <code>repeated .ItemParam material_list = 15;</code>
        */
       public Builder setMaterialList(
           int index, emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam value) {
@@ -585,7 +554,7 @@ public final class PlayerRandomCookReqOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ItemParam material_list = 3;</code>
+       * <code>repeated .ItemParam material_list = 15;</code>
        */
       public Builder setMaterialList(
           int index, emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder builderForValue) {
@@ -599,7 +568,7 @@ public final class PlayerRandomCookReqOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ItemParam material_list = 3;</code>
+       * <code>repeated .ItemParam material_list = 15;</code>
        */
       public Builder addMaterialList(emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam value) {
         if (materialListBuilder_ == null) {
@@ -615,7 +584,7 @@ public final class PlayerRandomCookReqOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ItemParam material_list = 3;</code>
+       * <code>repeated .ItemParam material_list = 15;</code>
        */
       public Builder addMaterialList(
           int index, emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam value) {
@@ -632,7 +601,7 @@ public final class PlayerRandomCookReqOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ItemParam material_list = 3;</code>
+       * <code>repeated .ItemParam material_list = 15;</code>
        */
       public Builder addMaterialList(
           emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder builderForValue) {
@@ -646,7 +615,7 @@ public final class PlayerRandomCookReqOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ItemParam material_list = 3;</code>
+       * <code>repeated .ItemParam material_list = 15;</code>
        */
       public Builder addMaterialList(
           int index, emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder builderForValue) {
@@ -660,7 +629,7 @@ public final class PlayerRandomCookReqOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ItemParam material_list = 3;</code>
+       * <code>repeated .ItemParam material_list = 15;</code>
        */
       public Builder addAllMaterialList(
           java.lang.Iterable<? extends emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam> values) {
@@ -675,7 +644,7 @@ public final class PlayerRandomCookReqOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ItemParam material_list = 3;</code>
+       * <code>repeated .ItemParam material_list = 15;</code>
        */
       public Builder clearMaterialList() {
         if (materialListBuilder_ == null) {
@@ -688,7 +657,7 @@ public final class PlayerRandomCookReqOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ItemParam material_list = 3;</code>
+       * <code>repeated .ItemParam material_list = 15;</code>
        */
       public Builder removeMaterialList(int index) {
         if (materialListBuilder_ == null) {
@@ -701,14 +670,14 @@ public final class PlayerRandomCookReqOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ItemParam material_list = 3;</code>
+       * <code>repeated .ItemParam material_list = 15;</code>
        */
       public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder getMaterialListBuilder(
           int index) {
         return getMaterialListFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .ItemParam material_list = 3;</code>
+       * <code>repeated .ItemParam material_list = 15;</code>
        */
       public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder getMaterialListOrBuilder(
           int index) {
@@ -718,7 +687,7 @@ public final class PlayerRandomCookReqOuterClass {
         }
       }
       /**
-       * <code>repeated .ItemParam material_list = 3;</code>
+       * <code>repeated .ItemParam material_list = 15;</code>
        */
       public java.util.List<? extends emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder> 
            getMaterialListOrBuilderList() {
@@ -729,14 +698,14 @@ public final class PlayerRandomCookReqOuterClass {
         }
       }
       /**
-       * <code>repeated .ItemParam material_list = 3;</code>
+       * <code>repeated .ItemParam material_list = 15;</code>
        */
       public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder addMaterialListBuilder() {
         return getMaterialListFieldBuilder().addBuilder(
             emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.getDefaultInstance());
       }
       /**
-       * <code>repeated .ItemParam material_list = 3;</code>
+       * <code>repeated .ItemParam material_list = 15;</code>
        */
       public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder addMaterialListBuilder(
           int index) {
@@ -744,7 +713,7 @@ public final class PlayerRandomCookReqOuterClass {
             index, emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.getDefaultInstance());
       }
       /**
-       * <code>repeated .ItemParam material_list = 3;</code>
+       * <code>repeated .ItemParam material_list = 15;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder> 
            getMaterialListBuilderList() {
@@ -797,7 +766,18 @@ public final class PlayerRandomCookReqOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new PlayerRandomCookReq(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -833,7 +813,7 @@ public final class PlayerRandomCookReqOuterClass {
     java.lang.String[] descriptorData = {
       "\n\031PlayerRandomCookReq.proto\032\017ItemParam.p" +
       "roto\"8\n\023PlayerRandomCookReq\022!\n\rmaterial_" +
-      "list\030\003 \003(\0132\n.ItemParamB\033\n\031emu.grasscutte" +
+      "list\030\017 \003(\0132\n.ItemParamB\033\n\031emu.grasscutte" +
       "r.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
