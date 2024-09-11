@@ -266,10 +266,6 @@ public final class GiveCommand implements CommandHandler {
     }
 
     private static void giveAll(Player player, GiveItemParameters param) {
-        if (player.getPlayer().isLimit){
-            CommandHandler.sendTranslatedMessage(sender, "commands.give.giveall_fail");
-                    return;
-        }
         player.getPlayer().isLimit = true;
         giveAllAvatars(player, param);
         giveAllMats(player, param);
@@ -402,8 +398,12 @@ public final class GiveCommand implements CommandHandler {
 
             switch (param.giveAllType) {
                 case ALL:
-                    giveAll(targetPlayer, param);
-                    CommandHandler.sendTranslatedMessage(sender, "commands.give.giveall_success");
+                    if (targetPlayer.getPlayer().isLimit) {
+                        CommandHandler.sendTranslatedMessage(sender, "commands.give.giveall_fail");
+                    }else{
+                        giveAll(targetPlayer, param);
+                        CommandHandler.sendTranslatedMessage(sender, "commands.give.giveall_success");   
+                    }
                     return;
                 case WEAPONS:
                     giveAllWeapons(targetPlayer, param);

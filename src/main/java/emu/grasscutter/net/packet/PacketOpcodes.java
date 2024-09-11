@@ -689,6 +689,7 @@ public final class PacketOpcodes {
     public static final int TrialAvatarFirstPassDungeonNotify = 8103;
 
 	// obfuscated
+	public static final int CombineDataNotify = 1;
 	public static final int SceneKickPlayerNotify = 1;
 	public static final int ItemRenameAvatarRsp = 1;
 	public static final int TowerMiddleLevelChangeTeamNotify = 1;
