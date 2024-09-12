@@ -269,24 +269,6 @@ public final class GiveCommand implements CommandHandler {
         addItemsChunked(player, itemList, 100);
     }
     
-        private static void giveAll(Player player, GiveItemParameters param) {
-            // 检查冷却时间
-            long currentTime = System.currentTimeMillis();
-            long lastUsedTime = giveAllCooldowns.getOrDefault(player, 0L);
-
-            if (currentTime - lastUsedTime < GIVE_ALL_COOLDOWN) {
-                long remainingTime = (GIVE_ALL_COOLDOWN - (currentTime - lastUsedTime)) / 1000;
-                CommandHandler.sendMessage(player, "你需要等待 " + remainingTime + " 秒才能再次使用获取全部物品指令");
-                return;
-            }
-
-            giveAllAvatars(player, param);
-            giveAllMats(player, param);
-            giveAllWeapons(player, param);
-            // 记录调用时间
-            giveAllCooldowns.put(player, currentTime);
-        }
-
     private static void giveAllArt(Player player, GiveItemParameters param) {
 
         List<GameItem> itemList = new ArrayList<>();
@@ -309,6 +291,27 @@ public final class GiveCommand implements CommandHandler {
 
         CommandHandler.sendMessage(player, "Successfully got all item art");
     }
+    
+    private static void giveAll(Player player, GiveItemParameters param) {
+        // 检查冷却时间
+        long currentTime = System.currentTimeMillis();
+        long lastUsedTime = giveAllCooldowns.getOrDefault(player, 0L);
+
+        if (currentTime - lastUsedTime < GIVE_ALL_COOLDOWN) {
+            long remainingTime = (GIVE_ALL_COOLDOWN - (currentTime - lastUsedTime)) / 1000;
+            CommandHandler.sendMessage(player, "获取全部物品指令冷却时间剩余 " + remainingTime + " 秒");
+            return;
+        }
+
+        giveAllAvatars(player, param);
+        giveAllMats(player, param);
+        giveAllWeapons(player, param);
+        giveAllArt(player,param);
+        CommandHandler.sendMessage(player, "成功给予所有角色、材料、武器、圣遗物");
+        // 记录调用时间
+        giveAllCooldowns.put(player, currentTime);
+    }
+
 
     private GiveItemParameters parseArgs(Player sender, List<String> args)
             throws IllegalArgumentException {
@@ -414,7 +417,6 @@ public final class GiveCommand implements CommandHandler {
             switch (param.giveAllType) {
                 case ALL:
                     giveAll(targetPlayer, param);
-                    CommandHandler.sendTranslatedMessage(sender, "commands.give.giveall_success");
                     return;
                 case WEAPONS:
                     giveAllWeapons(targetPlayer, param);
