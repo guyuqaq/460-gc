@@ -225,20 +225,30 @@ public final class Grasscutter {
         Grasscutter.getGameServer().getShopSystem().load();
     }
 
-    private static void forceExit() {
-        Grasscutter.getLogger().warn(translate("messages.status.warnning_tip1"));
-        Thread.sleep(1000);
-        Grasscutter.getLogger().warn(translate("messages.status.warnning_tip2"));
-        Grasscutter.getLogger().warn(translate("messages.status.warnning_tip3"));
-        Grasscutter.getLogger().warn(translate("messages.status.warnning_tip4"));
-        Thread.sleep(1000);
-        Grasscutter.getLogger().warn(translate("messages.status.warnning_tip5"));
-        Thread.sleep(1000);
-        DatabaseManager.delAllDatabases();
-        Grasscutter.getLogger().warn(translate("messages.status.warnning_tip6"));
-        Thread.sleep(3000);
-        System.exit(1);
-    }
+	private static void forceExit() {
+		try {
+			Grasscutter.getLogger().warn(translate("messages.status.warnning_tip1"));
+			Thread.sleep(1000);
+			Grasscutter.getLogger().warn(translate("messages.status.warnning_tip2"));
+			Grasscutter.getLogger().warn(translate("messages.status.warnning_tip3"));
+			Grasscutter.getLogger().warn(translate("messages.status.warnning_tip4"));
+			Thread.sleep(1000);
+			Grasscutter.getLogger().warn(translate("messages.status.warnning_tip5"));
+			Thread.sleep(1000);
+			DatabaseManager.delAllDatabases();
+			Grasscutter.getLogger().warn(translate("messages.status.warnning_tip6"));
+			Thread.sleep(3000);
+			System.exit(1);
+		} catch (InterruptedException e) {
+			Grasscutter.getLogger().warn(translate("发生未知错误"), e);
+			System.exit(1);
+		} catch (Exception e) {
+			// 处理其他可能的异常
+			Grasscutter.getLogger().warn(translate("发生未知错误"), e);
+			System.exit(1);
+		}
+	}
+
 
 
     /** Server shutdown event. */
