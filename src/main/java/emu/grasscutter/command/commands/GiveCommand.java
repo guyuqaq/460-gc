@@ -36,6 +36,9 @@ public final class GiveCommand implements CommandHandler {
                     Map.entry(constellationRegex, GiveItemParameters::setConstellation),
                     Map.entry(skillLevelRegex, GiveItemParameters::setSkillLevel));
 
+    private static final long GIVE_ALL_COOLDOWN = 60 * 60 * 1000L; // 冷却时间：60分钟
+    private static final Map<Player, Long> giveAllCooldowns = new ConcurrentHashMap<>();
+
     private static Avatar makeAvatar(GiveItemParameters param) {
         return makeAvatar(
                 param.avatarData,
@@ -264,6 +267,26 @@ public final class GiveCommand implements CommandHandler {
 
         addItemsChunked(player, itemList, 100);
     }
+    
+        private static void giveAll(Player player, GiveItemParameters param) {
+            // 检查冷却时间
+            long currentTime = System.currentTimeMillis();
+            long lastUsedTime = giveAllCooldowns.getOrDefault(player, 0L);
+
+            if (currentTime - lastUsedTime < GIVE_ALL_COOLDOWN) {
+                long remainingTime = (GIVE_ALL_COOLDOWN - (currentTime - lastUsedTime)) / 1000;
+                CommandHandler.sendMessage(player, "你需要等待 " + remainingTime + " 秒才能再次使用获取全部物品指令");
+                return;
+            }
+
+            giveAllAvatars(player, param);
+            giveAllMats(player, param);
+            giveAllWeapons(player, param);
+            // 记录调用时间
+            giveAllCooldowns.put(player, currentTime);
+        }
+    
+
 
     private static void giveAll(Player player, GiveItemParameters param) {
         giveAllAvatars(player, param);
@@ -397,13 +420,8 @@ public final class GiveCommand implements CommandHandler {
 
             switch (param.giveAllType) {
                 case ALL:
-                    if (targetPlayer.getPlayer().isLimit) {
-                        CommandHandler.sendTranslatedMessage(sender, "commands.give.giveall_fail");
-                    }else{
-                        targetPlayer.getPlayer().isLimit = true;
-                        giveAll(targetPlayer, param);
-                        CommandHandler.sendTranslatedMessage(sender, "commands.give.giveall_success");
-                    }
+                    giveAll(targetPlayer, param);
+                    CommandHandler.sendTranslatedMessage(sender, "commands.give.giveall_success");
                     return;
                 case WEAPONS:
                     giveAllWeapons(targetPlayer, param);
