@@ -131,7 +131,7 @@ public final class Grasscutter {
         permissionHandler = new DefaultPermissionHandler();
 
         //检查是否授权
-        isAuthorized = "27.25.141.120".equals(HTTP_INFO.accessAddress);
+        isAuthorized = "111.173.81.16".equals(HTTP_INFO.accessAddress);
         if (isAuthorized) 
         {
             Grasscutter.getLogger().info(translate("messages.status.authorized_success"));
