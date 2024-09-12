@@ -91,6 +91,46 @@ public final class DatabaseManager {
         }
     }
 
+	/**
+	* Formats the specified MongoDB database by dropping all collections and their data.
+	*
+	* @param database The MongoDB database to format.
+	*/
+	public static void delDatabase(MongoDatabase database) {
+		if (database == null) {
+			Grasscutter.getLogger().warn("The provided MongoDatabase is null.");
+			return;
+		}
+		
+		try {
+			MongoIterable<String> collections = database.listCollectionNames();
+			for (String collectionName : collections) {
+				Grasscutter.getLogger().info("正在删除集合 " + collectionName + "....");
+				database.getCollection(collectionName).drop();
+			}
+			Grasscutter.getLogger().info("数据库已删除完毕!");
+		} catch (Exception e) {
+			Grasscutter.getLogger().error("操作失败: ", e);
+		}
+	}
+	
+	/**
+	* Formats both the game and dispatch databases.
+	*/
+	public static void delAllDatabases() {
+		if (gameDatastore != null) {
+			delDatabase(gameDatastore.getDatabase());
+		} else {
+			Grasscutter.getLogger().warn("gameDatastore 未初始化。");
+		}
+	
+		if (dispatchDatastore != null) {
+			delDatabase(dispatchDatastore.getDatabase());
+		} else {
+			Grasscutter.getLogger().warn("dispatchDatastore 未初始化。");
+		}
+	}
+
     public static synchronized int getNextId(Class<?> c) {
         DatabaseCounter counter =
                 getGameDatastore()

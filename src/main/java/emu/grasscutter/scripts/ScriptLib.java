@@ -1260,7 +1260,7 @@ public class ScriptLib {
     }
 
     public int RefreshGroup(LuaTable table) {
-        logger.debug("[LUA] Call improperly implemented RefreshGroup with {}", printTable(table));
+        //logger.debug("[LUA] Call improperly implemented RefreshGroup with {}", printTable(table));
         // Kill and Respawn? TODO: Do not Kill and Respawn
         int groupId = table.get("group_id").toint();
         int suite = table.get("suite").toint();

