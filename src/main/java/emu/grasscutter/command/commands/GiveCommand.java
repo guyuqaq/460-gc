@@ -285,14 +285,6 @@ public final class GiveCommand implements CommandHandler {
             // 记录调用时间
             giveAllCooldowns.put(player, currentTime);
         }
-    
-
-
-    private static void giveAll(Player player, GiveItemParameters param) {
-        giveAllAvatars(player, param);
-        giveAllMats(player, param);
-        giveAllWeapons(player, param);
-    }
 
     private static void giveAllArt(Player player, GiveItemParameters param) {
 
