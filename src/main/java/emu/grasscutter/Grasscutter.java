@@ -1,7 +1,5 @@
 package emu.grasscutter;
 
-import static emu.grasscutter.config.Configuration.*;
-
 import ch.qos.logback.classic.*;
 import emu.grasscutter.auth.*;
 import emu.grasscutter.command.*;
@@ -38,6 +36,8 @@ import java.text.DecimalFormat;
 import java.time.Duration;
 import java.time.Instant;
 
+import static emu.grasscutter.config.Configuration.SERVER;
+import static emu.grasscutter.config.Configuration.HTTP_INFO;
 import static emu.grasscutter.utils.lang.Language.translate;
 
 public final class Grasscutter {
