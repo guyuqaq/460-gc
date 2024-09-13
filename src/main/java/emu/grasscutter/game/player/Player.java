@@ -1474,10 +1474,11 @@ public class Player implements DatabaseObject<Player>, PlayerHook, FieldFetch {
         session.send(new PacketStoreWeightLimitNotify());
         session.send(new PacketPlayerStoreNotify(this));
         session.send(new PacketAvatarDataNotify(this));
+
         
-        Avatar mainCharacter = new Avatar(10000007);
         // Check if the default Anemo skill should be given.
         if (this.isWind) {
+            Avatar mainCharacter = new Avatar(10000007);
             mainCharacter.setSkillDepotData(
                 GameData.getAvatarSkillDepotDataMap().get(704));
             }
