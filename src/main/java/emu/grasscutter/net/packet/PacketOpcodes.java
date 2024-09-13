@@ -731,6 +731,8 @@ public final class PacketOpcodes {
 	public static final int TakeCityReputationExploreRewardRsp = 7292;
 	public static final int TakeCityReputationLevelRewardReq = 3880; //or 3752,3880
 	public static final int TakeCityReputationLevelRewardRsp = 24356;
+	public static final int TakePlayerLevelRewardReq = 21606; // or 21606,28655,9556
+	public static final int PlayerLevelRewardUpdateNotify = 27750; 
 
 	public static final int SceneEntityDrownReq = 1;
 	public static final int SceneCreateEntityReq = 1;
@@ -768,7 +770,6 @@ public final class PacketOpcodes {
 	public static final int ItemRenameAvatarRsp = 1;
 	public static final int TowerMiddleLevelChangeTeamNotify = 1;
 	public static final int GetRecentMpPlayerListReq = 1;
-	public static final int TakePlayerLevelRewardReq = 1;
 	public static final int GetDungeonEntryExploreConditionRsp = 1;
 	public static final int PlayerEnterMapLayerNotify = 1;
 	public static final int ActivityTakeWatcherRewardReq = 1;
@@ -874,7 +875,6 @@ public final class PacketOpcodes {
 	public static final int PSPlayerApplyEnterMpReq = 1;
 	public static final int PSPlayerApplyEnterMpRsp = 1;
 	public static final int PlayerChatRsp = 1;
-	public static final int PlayerLevelRewardUpdateNotify = 1;
 	public static final int QuickUseWidgetReq = 1;
 	public static final int QuickUseWidgetRsp = 1;
 	public static final int ReadPrivateChatReq = 1;
