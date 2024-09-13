@@ -958,8 +958,6 @@ public final class PacketOpcodes {
 	public static final int AkaFesReasoningChooseQuestionRsp = 1;
 	public static final int AkaFesPotionDungeonInfoNotify = 1;
 	public static final int AkaFesPotionDungeonSettleNotify = 1;
-	public static final int AkaFesReasoningChooseQuestionReq = 1;
-	public static final int AkaFesReasoningChooseQuestionRsp = 1;
 	public static final int AkaFesReasoningFinishLevelReq = 1;
 	public static final int AkaFesReasoningFinishLevelRsp = 1;
 	public static final int AkaFesRhythmDungeonRestartReq = 1;
@@ -1143,7 +1141,6 @@ public final class PacketOpcodes {
 	public static final int CoopCgUpdateNotify = 1;
 	public static final int CoopPointUpdateNotify = 1;
 	public static final int CoopRewardUpdateNotify = 1;
-
 	public static final int CrystalLinkDungeonInfoNotify = 1;
 	public static final int CrystalLinkEnterDungeonReq = 1;
 	public static final int CrystalLinkEnterDungeonRsp = 1;
