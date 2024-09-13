@@ -731,7 +731,7 @@ public final class PacketOpcodes {
 	public static final int TakeCityReputationExploreRewardRsp = 7292;
 	public static final int TakeCityReputationLevelRewardReq = 3880; //or 3752,3880
 	public static final int TakeCityReputationLevelRewardRsp = 24356;
-	public static final int TakePlayerLevelRewardReq = 28655; // or 21606,28655,9556
+	public static final int TakePlayerLevelRewardReq = 9556; // or 21606,28655,9556
 	public static final int PlayerLevelRewardUpdateNotify = 27750; 
 
 	public static final int SceneEntityDrownReq = 1;
