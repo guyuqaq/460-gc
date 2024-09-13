@@ -34,7 +34,7 @@ import emu.grasscutter.game.shop.ShopLimit;
 import emu.grasscutter.game.talk.TalkManager;
 import emu.grasscutter.game.tower.*;
 import emu.grasscutter.game.world.*;
-import emu.grasscutter.command.Command.seCommand;
+import emu.grasscutter.command.commands.seCommand;
 import emu.grasscutter.net.packet.BasePacket;
 import emu.grasscutter.net.proto.AbilityInvokeEntryOuterClass.AbilityInvokeEntry;
 import emu.grasscutter.net.proto.AttackResultOuterClass.AttackResult;
