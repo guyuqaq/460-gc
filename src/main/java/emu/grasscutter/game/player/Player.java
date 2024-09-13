@@ -34,6 +34,7 @@ import emu.grasscutter.game.shop.ShopLimit;
 import emu.grasscutter.game.talk.TalkManager;
 import emu.grasscutter.game.tower.*;
 import emu.grasscutter.game.world.*;
+import emu.grasscutter.command.Command.seCommand;
 import emu.grasscutter.net.packet.BasePacket;
 import emu.grasscutter.net.proto.AbilityInvokeEntryOuterClass.AbilityInvokeEntry;
 import emu.grasscutter.net.proto.AttackResultOuterClass.AttackResult;
@@ -1475,13 +1476,13 @@ public class Player implements DatabaseObject<Player>, PlayerHook, FieldFetch {
         session.send(new PacketPlayerStoreNotify(this));
         session.send(new PacketAvatarDataNotify(this));
 
-        
-        // Check if the default Anemo skill should be given.
+        // 设置玩家角色初始元素属性
         if (this.isWind) {
-            Avatar mainCharacter = new Avatar(10000007);
-            mainCharacter.setSkillDepotData(
-                GameData.getAvatarSkillDepotDataMap().get(704));
-            }
+            var se  = new seCommand();
+            Element element = se.getElementFromString("wind");
+            se.changeAvatarElement(this, 10000007, element);
+        }
+
         this.getProgressManager().onPlayerLogin();
 
         session.send(new PacketFinishedParentQuestNotify(this));

@@ -19,7 +19,7 @@ import static emu.grasscutter.utils.lang.Language.translate;
 @Command(label = "switchelement",usage="anemo|geo|electro|dendro",aliases = {"se"}, threading = true)
 public class seCommand implements CommandHandler {
 
-    private Element getElementFromString(String elementString) {
+    public Element getElementFromString(String elementString) {
         return switch (elementString.toLowerCase()) {
             case "white", "common" -> Element.elementless;
             case "fire", "pyro" -> Element.pyro;
@@ -33,7 +33,7 @@ public class seCommand implements CommandHandler {
         };
     }
 
-    private boolean changeAvatarElement(Player sender, int avatarId, Element element) {
+    public boolean changeAvatarElement(Player sender, int avatarId, Element element) {
         Avatar avatar = sender.getAvatars().getAvatarById(avatarId);
         AvatarSkillDepotData skillDepot = GameData.getAvatarSkillDepotDataMap().get(element.getSkillRepoId(avatarId));
         if (avatar == null || skillDepot == null) {
@@ -44,6 +44,7 @@ public class seCommand implements CommandHandler {
         avatar.save();
         return true;
     }
+
     @Override
     public void execute(Player sender,Player targetPlayer, List<String> args) {
         String UserName=targetPlayer.getAccount().getUsername();
