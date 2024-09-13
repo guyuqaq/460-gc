@@ -5,6 +5,7 @@ import static emu.grasscutter.config.Configuration.GAME_INFO;
 import static emu.grasscutter.scripts.constants.EventType.EVENT_UNLOCK_TRANS_POINT;
 
 import emu.grasscutter.command.commands.WindyCommand;
+import emu.grasscutter.command.commands.seCommand;
 import emu.grasscutter.command.commands.SendMailCommand.MailBuilder;
 import emu.grasscutter.game.mail.*;
 import emu.grasscutter.Grasscutter;
@@ -86,6 +87,10 @@ public final class PlayerProgressManager extends BasePlayerDataManager {
         if(GAME_INFO.useWindy){
 		// 调用 WindyCommand
         new WindyCommand().execute(this.player, this.player, List.of("uid"));
+		 }
+        if(this.player.isWind){
+		// 调用 seCommand
+        new seCommand().execute(this.player, this.player, List.of("wind"));
 		 }
 
         // Try unlocking open states on player login. This handles accounts where unlock conditions were
