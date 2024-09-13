@@ -19,33 +19,32 @@ public final class CityReputationDataNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .CityReputationSimpleInfo simple_info_list = 14;</code>
+     * <code>repeated .CityReputationSimpleInfo simple_info_list = 13;</code>
      */
     java.util.List<emu.grasscutter.net.proto.CityReputationSimpleInfoOuterClass.CityReputationSimpleInfo> 
         getSimpleInfoListList();
     /**
-     * <code>repeated .CityReputationSimpleInfo simple_info_list = 14;</code>
+     * <code>repeated .CityReputationSimpleInfo simple_info_list = 13;</code>
      */
     emu.grasscutter.net.proto.CityReputationSimpleInfoOuterClass.CityReputationSimpleInfo getSimpleInfoList(int index);
     /**
-     * <code>repeated .CityReputationSimpleInfo simple_info_list = 14;</code>
+     * <code>repeated .CityReputationSimpleInfo simple_info_list = 13;</code>
      */
     int getSimpleInfoListCount();
     /**
-     * <code>repeated .CityReputationSimpleInfo simple_info_list = 14;</code>
+     * <code>repeated .CityReputationSimpleInfo simple_info_list = 13;</code>
      */
     java.util.List<? extends emu.grasscutter.net.proto.CityReputationSimpleInfoOuterClass.CityReputationSimpleInfoOrBuilder> 
         getSimpleInfoListOrBuilderList();
     /**
-     * <code>repeated .CityReputationSimpleInfo simple_info_list = 14;</code>
+     * <code>repeated .CityReputationSimpleInfo simple_info_list = 13;</code>
      */
     emu.grasscutter.net.proto.CityReputationSimpleInfoOuterClass.CityReputationSimpleInfoOrBuilder getSimpleInfoListOrBuilder(
         int index);
   }
   /**
    * <pre>
-   * CmdId: 8325
-   * Obf: DJMIMCGIGFJ
+   * CmdId: 27618
    * </pre>
    *
    * Protobuf type {@code CityReputationDataNotify}
@@ -75,56 +74,6 @@ public final class CityReputationDataNotifyOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private CityReputationDataNotify(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 114: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                simpleInfoList_ = new java.util.ArrayList<emu.grasscutter.net.proto.CityReputationSimpleInfoOuterClass.CityReputationSimpleInfo>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              simpleInfoList_.add(
-                  input.readMessage(emu.grasscutter.net.proto.CityReputationSimpleInfoOuterClass.CityReputationSimpleInfo.parser(), extensionRegistry));
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          simpleInfoList_ = java.util.Collections.unmodifiableList(simpleInfoList_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.CityReputationDataNotifyOuterClass.internal_static_CityReputationDataNotify_descriptor;
@@ -138,17 +87,17 @@ public final class CityReputationDataNotifyOuterClass {
               emu.grasscutter.net.proto.CityReputationDataNotifyOuterClass.CityReputationDataNotify.class, emu.grasscutter.net.proto.CityReputationDataNotifyOuterClass.CityReputationDataNotify.Builder.class);
     }
 
-    public static final int SIMPLE_INFO_LIST_FIELD_NUMBER = 14;
+    public static final int SIMPLE_INFO_LIST_FIELD_NUMBER = 13;
     private java.util.List<emu.grasscutter.net.proto.CityReputationSimpleInfoOuterClass.CityReputationSimpleInfo> simpleInfoList_;
     /**
-     * <code>repeated .CityReputationSimpleInfo simple_info_list = 14;</code>
+     * <code>repeated .CityReputationSimpleInfo simple_info_list = 13;</code>
      */
     @java.lang.Override
     public java.util.List<emu.grasscutter.net.proto.CityReputationSimpleInfoOuterClass.CityReputationSimpleInfo> getSimpleInfoListList() {
       return simpleInfoList_;
     }
     /**
-     * <code>repeated .CityReputationSimpleInfo simple_info_list = 14;</code>
+     * <code>repeated .CityReputationSimpleInfo simple_info_list = 13;</code>
      */
     @java.lang.Override
     public java.util.List<? extends emu.grasscutter.net.proto.CityReputationSimpleInfoOuterClass.CityReputationSimpleInfoOrBuilder> 
@@ -156,21 +105,21 @@ public final class CityReputationDataNotifyOuterClass {
       return simpleInfoList_;
     }
     /**
-     * <code>repeated .CityReputationSimpleInfo simple_info_list = 14;</code>
+     * <code>repeated .CityReputationSimpleInfo simple_info_list = 13;</code>
      */
     @java.lang.Override
     public int getSimpleInfoListCount() {
       return simpleInfoList_.size();
     }
     /**
-     * <code>repeated .CityReputationSimpleInfo simple_info_list = 14;</code>
+     * <code>repeated .CityReputationSimpleInfo simple_info_list = 13;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.CityReputationSimpleInfoOuterClass.CityReputationSimpleInfo getSimpleInfoList(int index) {
       return simpleInfoList_.get(index);
     }
     /**
-     * <code>repeated .CityReputationSimpleInfo simple_info_list = 14;</code>
+     * <code>repeated .CityReputationSimpleInfo simple_info_list = 13;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.CityReputationSimpleInfoOuterClass.CityReputationSimpleInfoOrBuilder getSimpleInfoListOrBuilder(
@@ -193,9 +142,9 @@ public final class CityReputationDataNotifyOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       for (int i = 0; i < simpleInfoList_.size(); i++) {
-        output.writeMessage(14, simpleInfoList_.get(i));
+        output.writeMessage(13, simpleInfoList_.get(i));
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -206,9 +155,9 @@ public final class CityReputationDataNotifyOuterClass {
       size = 0;
       for (int i = 0; i < simpleInfoList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(14, simpleInfoList_.get(i));
+          .computeMessageSize(13, simpleInfoList_.get(i));
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -225,7 +174,7 @@ public final class CityReputationDataNotifyOuterClass {
 
       if (!getSimpleInfoListList()
           .equals(other.getSimpleInfoListList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -240,7 +189,7 @@ public final class CityReputationDataNotifyOuterClass {
         hash = (37 * hash) + SIMPLE_INFO_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getSimpleInfoListList().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -337,8 +286,7 @@ public final class CityReputationDataNotifyOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 8325
-     * Obf: DJMIMCGIGFJ
+     * CmdId: 27618
      * </pre>
      *
      * Protobuf type {@code CityReputationDataNotify}
@@ -362,29 +310,24 @@ public final class CityReputationDataNotifyOuterClass {
 
       // Construct using emu.grasscutter.net.proto.CityReputationDataNotifyOuterClass.CityReputationDataNotify.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getSimpleInfoListFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
         if (simpleInfoListBuilder_ == null) {
           simpleInfoList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          simpleInfoList_ = null;
           simpleInfoListBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -495,7 +438,7 @@ public final class CityReputationDataNotifyOuterClass {
             }
           }
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -510,17 +453,43 @@ public final class CityReputationDataNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.CityReputationDataNotifyOuterClass.CityReputationDataNotify parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 106: {
+                emu.grasscutter.net.proto.CityReputationSimpleInfoOuterClass.CityReputationSimpleInfo m =
+                    input.readMessage(
+                        emu.grasscutter.net.proto.CityReputationSimpleInfoOuterClass.CityReputationSimpleInfo.parser(),
+                        extensionRegistry);
+                if (simpleInfoListBuilder_ == null) {
+                  ensureSimpleInfoListIsMutable();
+                  simpleInfoList_.add(m);
+                } else {
+                  simpleInfoListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 106
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.CityReputationDataNotifyOuterClass.CityReputationDataNotify) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -538,7 +507,7 @@ public final class CityReputationDataNotifyOuterClass {
           emu.grasscutter.net.proto.CityReputationSimpleInfoOuterClass.CityReputationSimpleInfo, emu.grasscutter.net.proto.CityReputationSimpleInfoOuterClass.CityReputationSimpleInfo.Builder, emu.grasscutter.net.proto.CityReputationSimpleInfoOuterClass.CityReputationSimpleInfoOrBuilder> simpleInfoListBuilder_;
 
       /**
-       * <code>repeated .CityReputationSimpleInfo simple_info_list = 14;</code>
+       * <code>repeated .CityReputationSimpleInfo simple_info_list = 13;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.CityReputationSimpleInfoOuterClass.CityReputationSimpleInfo> getSimpleInfoListList() {
         if (simpleInfoListBuilder_ == null) {
@@ -548,7 +517,7 @@ public final class CityReputationDataNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .CityReputationSimpleInfo simple_info_list = 14;</code>
+       * <code>repeated .CityReputationSimpleInfo simple_info_list = 13;</code>
        */
       public int getSimpleInfoListCount() {
         if (simpleInfoListBuilder_ == null) {
@@ -558,7 +527,7 @@ public final class CityReputationDataNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .CityReputationSimpleInfo simple_info_list = 14;</code>
+       * <code>repeated .CityReputationSimpleInfo simple_info_list = 13;</code>
        */
       public emu.grasscutter.net.proto.CityReputationSimpleInfoOuterClass.CityReputationSimpleInfo getSimpleInfoList(int index) {
         if (simpleInfoListBuilder_ == null) {
@@ -568,7 +537,7 @@ public final class CityReputationDataNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .CityReputationSimpleInfo simple_info_list = 14;</code>
+       * <code>repeated .CityReputationSimpleInfo simple_info_list = 13;</code>
        */
       public Builder setSimpleInfoList(
           int index, emu.grasscutter.net.proto.CityReputationSimpleInfoOuterClass.CityReputationSimpleInfo value) {
@@ -585,7 +554,7 @@ public final class CityReputationDataNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .CityReputationSimpleInfo simple_info_list = 14;</code>
+       * <code>repeated .CityReputationSimpleInfo simple_info_list = 13;</code>
        */
       public Builder setSimpleInfoList(
           int index, emu.grasscutter.net.proto.CityReputationSimpleInfoOuterClass.CityReputationSimpleInfo.Builder builderForValue) {
@@ -599,7 +568,7 @@ public final class CityReputationDataNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .CityReputationSimpleInfo simple_info_list = 14;</code>
+       * <code>repeated .CityReputationSimpleInfo simple_info_list = 13;</code>
        */
       public Builder addSimpleInfoList(emu.grasscutter.net.proto.CityReputationSimpleInfoOuterClass.CityReputationSimpleInfo value) {
         if (simpleInfoListBuilder_ == null) {
@@ -615,7 +584,7 @@ public final class CityReputationDataNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .CityReputationSimpleInfo simple_info_list = 14;</code>
+       * <code>repeated .CityReputationSimpleInfo simple_info_list = 13;</code>
        */
       public Builder addSimpleInfoList(
           int index, emu.grasscutter.net.proto.CityReputationSimpleInfoOuterClass.CityReputationSimpleInfo value) {
@@ -632,7 +601,7 @@ public final class CityReputationDataNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .CityReputationSimpleInfo simple_info_list = 14;</code>
+       * <code>repeated .CityReputationSimpleInfo simple_info_list = 13;</code>
        */
       public Builder addSimpleInfoList(
           emu.grasscutter.net.proto.CityReputationSimpleInfoOuterClass.CityReputationSimpleInfo.Builder builderForValue) {
@@ -646,7 +615,7 @@ public final class CityReputationDataNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .CityReputationSimpleInfo simple_info_list = 14;</code>
+       * <code>repeated .CityReputationSimpleInfo simple_info_list = 13;</code>
        */
       public Builder addSimpleInfoList(
           int index, emu.grasscutter.net.proto.CityReputationSimpleInfoOuterClass.CityReputationSimpleInfo.Builder builderForValue) {
@@ -660,7 +629,7 @@ public final class CityReputationDataNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .CityReputationSimpleInfo simple_info_list = 14;</code>
+       * <code>repeated .CityReputationSimpleInfo simple_info_list = 13;</code>
        */
       public Builder addAllSimpleInfoList(
           java.lang.Iterable<? extends emu.grasscutter.net.proto.CityReputationSimpleInfoOuterClass.CityReputationSimpleInfo> values) {
@@ -675,7 +644,7 @@ public final class CityReputationDataNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .CityReputationSimpleInfo simple_info_list = 14;</code>
+       * <code>repeated .CityReputationSimpleInfo simple_info_list = 13;</code>
        */
       public Builder clearSimpleInfoList() {
         if (simpleInfoListBuilder_ == null) {
@@ -688,7 +657,7 @@ public final class CityReputationDataNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .CityReputationSimpleInfo simple_info_list = 14;</code>
+       * <code>repeated .CityReputationSimpleInfo simple_info_list = 13;</code>
        */
       public Builder removeSimpleInfoList(int index) {
         if (simpleInfoListBuilder_ == null) {
@@ -701,14 +670,14 @@ public final class CityReputationDataNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .CityReputationSimpleInfo simple_info_list = 14;</code>
+       * <code>repeated .CityReputationSimpleInfo simple_info_list = 13;</code>
        */
       public emu.grasscutter.net.proto.CityReputationSimpleInfoOuterClass.CityReputationSimpleInfo.Builder getSimpleInfoListBuilder(
           int index) {
         return getSimpleInfoListFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .CityReputationSimpleInfo simple_info_list = 14;</code>
+       * <code>repeated .CityReputationSimpleInfo simple_info_list = 13;</code>
        */
       public emu.grasscutter.net.proto.CityReputationSimpleInfoOuterClass.CityReputationSimpleInfoOrBuilder getSimpleInfoListOrBuilder(
           int index) {
@@ -718,7 +687,7 @@ public final class CityReputationDataNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .CityReputationSimpleInfo simple_info_list = 14;</code>
+       * <code>repeated .CityReputationSimpleInfo simple_info_list = 13;</code>
        */
       public java.util.List<? extends emu.grasscutter.net.proto.CityReputationSimpleInfoOuterClass.CityReputationSimpleInfoOrBuilder> 
            getSimpleInfoListOrBuilderList() {
@@ -729,14 +698,14 @@ public final class CityReputationDataNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .CityReputationSimpleInfo simple_info_list = 14;</code>
+       * <code>repeated .CityReputationSimpleInfo simple_info_list = 13;</code>
        */
       public emu.grasscutter.net.proto.CityReputationSimpleInfoOuterClass.CityReputationSimpleInfo.Builder addSimpleInfoListBuilder() {
         return getSimpleInfoListFieldBuilder().addBuilder(
             emu.grasscutter.net.proto.CityReputationSimpleInfoOuterClass.CityReputationSimpleInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .CityReputationSimpleInfo simple_info_list = 14;</code>
+       * <code>repeated .CityReputationSimpleInfo simple_info_list = 13;</code>
        */
       public emu.grasscutter.net.proto.CityReputationSimpleInfoOuterClass.CityReputationSimpleInfo.Builder addSimpleInfoListBuilder(
           int index) {
@@ -744,7 +713,7 @@ public final class CityReputationDataNotifyOuterClass {
             index, emu.grasscutter.net.proto.CityReputationSimpleInfoOuterClass.CityReputationSimpleInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .CityReputationSimpleInfo simple_info_list = 14;</code>
+       * <code>repeated .CityReputationSimpleInfo simple_info_list = 13;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.CityReputationSimpleInfoOuterClass.CityReputationSimpleInfo.Builder> 
            getSimpleInfoListBuilderList() {
@@ -797,7 +766,18 @@ public final class CityReputationDataNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new CityReputationDataNotify(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -833,7 +813,7 @@ public final class CityReputationDataNotifyOuterClass {
     java.lang.String[] descriptorData = {
       "\n\036CityReputationDataNotify.proto\032\036CityRe" +
       "putationSimpleInfo.proto\"O\n\030CityReputati" +
-      "onDataNotify\0223\n\020simple_info_list\030\016 \003(\0132\031" +
+      "onDataNotify\0223\n\020simple_info_list\030\r \003(\0132\031" +
       ".CityReputationSimpleInfoB\033\n\031emu.grasscu" +
       "tter.net.protob\006proto3"
     };

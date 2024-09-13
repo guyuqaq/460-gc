@@ -32,9 +32,7 @@ public final class TakeInvestigationRewardRspOuterClass {
   }
   /**
    * <pre>
-   * 4.7.0
-   * CmdId: 4841
-   * Obf: NIJGKFDJBIL ?
+   * CmdId: 1847
    * </pre>
    *
    * Protobuf type {@code TakeInvestigationRewardRsp}
@@ -266,9 +264,7 @@ public final class TakeInvestigationRewardRspOuterClass {
     }
     /**
      * <pre>
-     * 4.7.0
-     * CmdId: 4841
-     * Obf: NIJGKFDJBIL ?
+     * CmdId: 1847
      * </pre>
      *
      * Protobuf type {@code TakeInvestigationRewardRsp}

@@ -19,31 +19,31 @@ public final class TakeCityReputationExploreRewardReqOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 city_id = 4;</code>
-     * @return The cityId.
-     */
-    int getCityId();
-
-    /**
-     * <code>repeated uint32 explore_id_list = 6;</code>
+     * <code>repeated uint32 explore_id_list = 3;</code>
      * @return A list containing the exploreIdList.
      */
     java.util.List<java.lang.Integer> getExploreIdListList();
     /**
-     * <code>repeated uint32 explore_id_list = 6;</code>
+     * <code>repeated uint32 explore_id_list = 3;</code>
      * @return The count of exploreIdList.
      */
     int getExploreIdListCount();
     /**
-     * <code>repeated uint32 explore_id_list = 6;</code>
+     * <code>repeated uint32 explore_id_list = 3;</code>
      * @param index The index of the element to return.
      * @return The exploreIdList at the given index.
      */
     int getExploreIdList(int index);
+
+    /**
+     * <code>uint32 city_id = 12;</code>
+     * @return The cityId.
+     */
+    int getCityId();
   }
   /**
    * <pre>
-   * CmdId: 29140
+   * CmdId: 3175
    * </pre>
    *
    * Protobuf type {@code TakeCityReputationExploreRewardReq}
@@ -73,73 +73,6 @@ public final class TakeCityReputationExploreRewardReqOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private TakeCityReputationExploreRewardReq(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 32: {
-
-              cityId_ = input.readUInt32();
-              break;
-            }
-            case 48: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                exploreIdList_ = newIntList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              exploreIdList_.addInt(input.readUInt32());
-              break;
-            }
-            case 50: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
-                exploreIdList_ = newIntList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                exploreIdList_.addInt(input.readUInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          exploreIdList_.makeImmutable(); // C
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.TakeCityReputationExploreRewardReqOuterClass.internal_static_TakeCityReputationExploreRewardReq_descriptor;
@@ -153,21 +86,10 @@ public final class TakeCityReputationExploreRewardReqOuterClass {
               emu.grasscutter.net.proto.TakeCityReputationExploreRewardReqOuterClass.TakeCityReputationExploreRewardReq.class, emu.grasscutter.net.proto.TakeCityReputationExploreRewardReqOuterClass.TakeCityReputationExploreRewardReq.Builder.class);
     }
 
-    public static final int CITY_ID_FIELD_NUMBER = 4;
-    private int cityId_;
-    /**
-     * <code>uint32 city_id = 4;</code>
-     * @return The cityId.
-     */
-    @java.lang.Override
-    public int getCityId() {
-      return cityId_;
-    }
-
-    public static final int EXPLORE_ID_LIST_FIELD_NUMBER = 6;
+    public static final int EXPLORE_ID_LIST_FIELD_NUMBER = 3;
     private com.google.protobuf.Internal.IntList exploreIdList_;
     /**
-     * <code>repeated uint32 explore_id_list = 6;</code>
+     * <code>repeated uint32 explore_id_list = 3;</code>
      * @return A list containing the exploreIdList.
      */
     @java.lang.Override
@@ -176,14 +98,14 @@ public final class TakeCityReputationExploreRewardReqOuterClass {
       return exploreIdList_;
     }
     /**
-     * <code>repeated uint32 explore_id_list = 6;</code>
+     * <code>repeated uint32 explore_id_list = 3;</code>
      * @return The count of exploreIdList.
      */
     public int getExploreIdListCount() {
       return exploreIdList_.size();
     }
     /**
-     * <code>repeated uint32 explore_id_list = 6;</code>
+     * <code>repeated uint32 explore_id_list = 3;</code>
      * @param index The index of the element to return.
      * @return The exploreIdList at the given index.
      */
@@ -191,6 +113,17 @@ public final class TakeCityReputationExploreRewardReqOuterClass {
       return exploreIdList_.getInt(index);
     }
     private int exploreIdListMemoizedSerializedSize = -1;
+
+    public static final int CITY_ID_FIELD_NUMBER = 12;
+    private int cityId_;
+    /**
+     * <code>uint32 city_id = 12;</code>
+     * @return The cityId.
+     */
+    @java.lang.Override
+    public int getCityId() {
+      return cityId_;
+    }
 
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
@@ -207,17 +140,17 @@ public final class TakeCityReputationExploreRewardReqOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
-      if (cityId_ != 0) {
-        output.writeUInt32(4, cityId_);
-      }
       if (getExploreIdListList().size() > 0) {
-        output.writeUInt32NoTag(50);
+        output.writeUInt32NoTag(26);
         output.writeUInt32NoTag(exploreIdListMemoizedSerializedSize);
       }
       for (int i = 0; i < exploreIdList_.size(); i++) {
         output.writeUInt32NoTag(exploreIdList_.getInt(i));
       }
-      unknownFields.writeTo(output);
+      if (cityId_ != 0) {
+        output.writeUInt32(12, cityId_);
+      }
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -226,10 +159,6 @@ public final class TakeCityReputationExploreRewardReqOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (cityId_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(4, cityId_);
-      }
       {
         int dataSize = 0;
         for (int i = 0; i < exploreIdList_.size(); i++) {
@@ -244,7 +173,11 @@ public final class TakeCityReputationExploreRewardReqOuterClass {
         }
         exploreIdListMemoizedSerializedSize = dataSize;
       }
-      size += unknownFields.getSerializedSize();
+      if (cityId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(12, cityId_);
+      }
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -259,11 +192,11 @@ public final class TakeCityReputationExploreRewardReqOuterClass {
       }
       emu.grasscutter.net.proto.TakeCityReputationExploreRewardReqOuterClass.TakeCityReputationExploreRewardReq other = (emu.grasscutter.net.proto.TakeCityReputationExploreRewardReqOuterClass.TakeCityReputationExploreRewardReq) obj;
 
-      if (getCityId()
-          != other.getCityId()) return false;
       if (!getExploreIdListList()
           .equals(other.getExploreIdListList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (getCityId()
+          != other.getCityId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -274,13 +207,13 @@ public final class TakeCityReputationExploreRewardReqOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + CITY_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getCityId();
       if (getExploreIdListCount() > 0) {
         hash = (37 * hash) + EXPLORE_ID_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getExploreIdListList().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (37 * hash) + CITY_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getCityId();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -377,7 +310,7 @@ public final class TakeCityReputationExploreRewardReqOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 29140
+     * CmdId: 3175
      * </pre>
      *
      * Protobuf type {@code TakeCityReputationExploreRewardReq}
@@ -401,26 +334,21 @@ public final class TakeCityReputationExploreRewardReqOuterClass {
 
       // Construct using emu.grasscutter.net.proto.TakeCityReputationExploreRewardReqOuterClass.TakeCityReputationExploreRewardReq.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        cityId_ = 0;
-
         exploreIdList_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000001);
+        cityId_ = 0;
+
         return this;
       }
 
@@ -448,12 +376,12 @@ public final class TakeCityReputationExploreRewardReqOuterClass {
       public emu.grasscutter.net.proto.TakeCityReputationExploreRewardReqOuterClass.TakeCityReputationExploreRewardReq buildPartial() {
         emu.grasscutter.net.proto.TakeCityReputationExploreRewardReqOuterClass.TakeCityReputationExploreRewardReq result = new emu.grasscutter.net.proto.TakeCityReputationExploreRewardReqOuterClass.TakeCityReputationExploreRewardReq(this);
         int from_bitField0_ = bitField0_;
-        result.cityId_ = cityId_;
         if (((bitField0_ & 0x00000001) != 0)) {
           exploreIdList_.makeImmutable();
           bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.exploreIdList_ = exploreIdList_;
+        result.cityId_ = cityId_;
         onBuilt();
         return result;
       }
@@ -502,9 +430,6 @@ public final class TakeCityReputationExploreRewardReqOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.TakeCityReputationExploreRewardReqOuterClass.TakeCityReputationExploreRewardReq other) {
         if (other == emu.grasscutter.net.proto.TakeCityReputationExploreRewardReqOuterClass.TakeCityReputationExploreRewardReq.getDefaultInstance()) return this;
-        if (other.getCityId() != 0) {
-          setCityId(other.getCityId());
-        }
         if (!other.exploreIdList_.isEmpty()) {
           if (exploreIdList_.isEmpty()) {
             exploreIdList_ = other.exploreIdList_;
@@ -515,7 +440,10 @@ public final class TakeCityReputationExploreRewardReqOuterClass {
           }
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        if (other.getCityId() != 0) {
+          setCityId(other.getCityId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -530,51 +458,54 @@ public final class TakeCityReputationExploreRewardReqOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.TakeCityReputationExploreRewardReqOuterClass.TakeCityReputationExploreRewardReq parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 24: {
+                int v = input.readUInt32();
+                ensureExploreIdListIsMutable();
+                exploreIdList_.addInt(v);
+                break;
+              } // case 24
+              case 26: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureExploreIdListIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  exploreIdList_.addInt(input.readUInt32());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 26
+              case 96: {
+                cityId_ = input.readUInt32();
+
+                break;
+              } // case 96
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.TakeCityReputationExploreRewardReqOuterClass.TakeCityReputationExploreRewardReq) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
-
-      private int cityId_ ;
-      /**
-       * <code>uint32 city_id = 4;</code>
-       * @return The cityId.
-       */
-      @java.lang.Override
-      public int getCityId() {
-        return cityId_;
-      }
-      /**
-       * <code>uint32 city_id = 4;</code>
-       * @param value The cityId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCityId(int value) {
-        
-        cityId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 city_id = 4;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCityId() {
-        
-        cityId_ = 0;
-        onChanged();
-        return this;
-      }
 
       private com.google.protobuf.Internal.IntList exploreIdList_ = emptyIntList();
       private void ensureExploreIdListIsMutable() {
@@ -584,7 +515,7 @@ public final class TakeCityReputationExploreRewardReqOuterClass {
          }
       }
       /**
-       * <code>repeated uint32 explore_id_list = 6;</code>
+       * <code>repeated uint32 explore_id_list = 3;</code>
        * @return A list containing the exploreIdList.
        */
       public java.util.List<java.lang.Integer>
@@ -593,14 +524,14 @@ public final class TakeCityReputationExploreRewardReqOuterClass {
                  java.util.Collections.unmodifiableList(exploreIdList_) : exploreIdList_;
       }
       /**
-       * <code>repeated uint32 explore_id_list = 6;</code>
+       * <code>repeated uint32 explore_id_list = 3;</code>
        * @return The count of exploreIdList.
        */
       public int getExploreIdListCount() {
         return exploreIdList_.size();
       }
       /**
-       * <code>repeated uint32 explore_id_list = 6;</code>
+       * <code>repeated uint32 explore_id_list = 3;</code>
        * @param index The index of the element to return.
        * @return The exploreIdList at the given index.
        */
@@ -608,7 +539,7 @@ public final class TakeCityReputationExploreRewardReqOuterClass {
         return exploreIdList_.getInt(index);
       }
       /**
-       * <code>repeated uint32 explore_id_list = 6;</code>
+       * <code>repeated uint32 explore_id_list = 3;</code>
        * @param index The index to set the value at.
        * @param value The exploreIdList to set.
        * @return This builder for chaining.
@@ -621,7 +552,7 @@ public final class TakeCityReputationExploreRewardReqOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 explore_id_list = 6;</code>
+       * <code>repeated uint32 explore_id_list = 3;</code>
        * @param value The exploreIdList to add.
        * @return This builder for chaining.
        */
@@ -632,7 +563,7 @@ public final class TakeCityReputationExploreRewardReqOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 explore_id_list = 6;</code>
+       * <code>repeated uint32 explore_id_list = 3;</code>
        * @param values The exploreIdList to add.
        * @return This builder for chaining.
        */
@@ -645,12 +576,43 @@ public final class TakeCityReputationExploreRewardReqOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 explore_id_list = 6;</code>
+       * <code>repeated uint32 explore_id_list = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearExploreIdList() {
         exploreIdList_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+
+      private int cityId_ ;
+      /**
+       * <code>uint32 city_id = 12;</code>
+       * @return The cityId.
+       */
+      @java.lang.Override
+      public int getCityId() {
+        return cityId_;
+      }
+      /**
+       * <code>uint32 city_id = 12;</code>
+       * @param value The cityId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCityId(int value) {
+        
+        cityId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 city_id = 12;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCityId() {
+        
+        cityId_ = 0;
         onChanged();
         return this;
       }
@@ -687,7 +649,18 @@ public final class TakeCityReputationExploreRewardReqOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new TakeCityReputationExploreRewardReq(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -723,7 +696,7 @@ public final class TakeCityReputationExploreRewardReqOuterClass {
     java.lang.String[] descriptorData = {
       "\n(TakeCityReputationExploreRewardReq.pro" +
       "to\"N\n\"TakeCityReputationExploreRewardReq" +
-      "\022\017\n\007city_id\030\004 \001(\r\022\027\n\017explore_id_list\030\006 \003" +
+      "\022\027\n\017explore_id_list\030\003 \003(\r\022\017\n\007city_id\030\014 \001" +
       "(\rB\033\n\031emu.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -735,7 +708,7 @@ public final class TakeCityReputationExploreRewardReqOuterClass {
     internal_static_TakeCityReputationExploreRewardReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_TakeCityReputationExploreRewardReq_descriptor,
-        new java.lang.String[] { "CityId", "ExploreIdList", });
+        new java.lang.String[] { "ExploreIdList", "CityId", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

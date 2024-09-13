@@ -19,16 +19,14 @@ public final class TakeInvestigationRewardReqOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 id = 7;</code>
+     * <code>uint32 id = 5;</code>
      * @return The id.
      */
     int getId();
   }
   /**
    * <pre>
-   * 4.7.0
-   * CmdId: 25416ok or 2516x or 25450 or 9438 or 20310 or 23959 or 20220
-   * Obf: MKCBNOMFKMB
+   * CmdId: 24914
    * </pre>
    *
    * Protobuf type {@code TakeInvestigationRewardReq}
@@ -70,10 +68,10 @@ public final class TakeInvestigationRewardReqOuterClass {
               emu.grasscutter.net.proto.TakeInvestigationRewardReqOuterClass.TakeInvestigationRewardReq.class, emu.grasscutter.net.proto.TakeInvestigationRewardReqOuterClass.TakeInvestigationRewardReq.Builder.class);
     }
 
-    public static final int ID_FIELD_NUMBER = 7;
+    public static final int ID_FIELD_NUMBER = 5;
     private int id_;
     /**
-     * <code>uint32 id = 7;</code>
+     * <code>uint32 id = 5;</code>
      * @return The id.
      */
     @java.lang.Override
@@ -96,7 +94,7 @@ public final class TakeInvestigationRewardReqOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (id_ != 0) {
-        output.writeUInt32(7, id_);
+        output.writeUInt32(5, id_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -109,7 +107,7 @@ public final class TakeInvestigationRewardReqOuterClass {
       size = 0;
       if (id_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(7, id_);
+          .computeUInt32Size(5, id_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -238,9 +236,7 @@ public final class TakeInvestigationRewardReqOuterClass {
     }
     /**
      * <pre>
-     * 4.7.0
-     * CmdId: 25416ok or 2516x or 25450 or 9438 or 20310 or 23959 or 20220
-     * Obf: MKCBNOMFKMB
+     * CmdId: 24914
      * </pre>
      *
      * Protobuf type {@code TakeInvestigationRewardReq}
@@ -381,11 +377,11 @@ public final class TakeInvestigationRewardReqOuterClass {
               case 0:
                 done = true;
                 break;
-              case 56: {
+              case 40: {
                 id_ = input.readUInt32();
 
                 break;
-              } // case 56
+              } // case 40
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -404,7 +400,7 @@ public final class TakeInvestigationRewardReqOuterClass {
 
       private int id_ ;
       /**
-       * <code>uint32 id = 7;</code>
+       * <code>uint32 id = 5;</code>
        * @return The id.
        */
       @java.lang.Override
@@ -412,7 +408,7 @@ public final class TakeInvestigationRewardReqOuterClass {
         return id_;
       }
       /**
-       * <code>uint32 id = 7;</code>
+       * <code>uint32 id = 5;</code>
        * @param value The id to set.
        * @return This builder for chaining.
        */
@@ -423,7 +419,7 @@ public final class TakeInvestigationRewardReqOuterClass {
         return this;
       }
       /**
-       * <code>uint32 id = 7;</code>
+       * <code>uint32 id = 5;</code>
        * @return This builder for chaining.
        */
       public Builder clearId() {
@@ -511,7 +507,7 @@ public final class TakeInvestigationRewardReqOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n TakeInvestigationRewardReq.proto\"(\n\032Ta" +
-      "keInvestigationRewardReq\022\n\n\002id\030\007 \001(\rB\033\n\031" +
+      "keInvestigationRewardReq\022\n\n\002id\030\005 \001(\rB\033\n\031" +
       "emu.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

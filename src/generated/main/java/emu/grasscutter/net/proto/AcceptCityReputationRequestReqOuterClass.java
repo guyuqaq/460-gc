@@ -19,21 +19,20 @@ public final class AcceptCityReputationRequestReqOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 city_id = 5;</code>
+     * <code>uint32 city_id = 9;</code>
      * @return The cityId.
      */
     int getCityId();
 
     /**
-     * <code>uint32 request_id = 10;</code>
+     * <code>uint32 request_id = 8;</code>
      * @return The requestId.
      */
     int getRequestId();
   }
   /**
    * <pre>
-   * CmdId: 6832
-   * Obf: IDPFBCKMKLE
+   * CmdId: 21376
    * </pre>
    *
    * Protobuf type {@code AcceptCityReputationRequestReq}
@@ -62,53 +61,6 @@ public final class AcceptCityReputationRequestReqOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private AcceptCityReputationRequestReq(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 40: {
-
-              cityId_ = input.readUInt32();
-              break;
-            }
-            case 80: {
-
-              requestId_ = input.readUInt32();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.AcceptCityReputationRequestReqOuterClass.internal_static_AcceptCityReputationRequestReq_descriptor;
@@ -122,10 +74,10 @@ public final class AcceptCityReputationRequestReqOuterClass {
               emu.grasscutter.net.proto.AcceptCityReputationRequestReqOuterClass.AcceptCityReputationRequestReq.class, emu.grasscutter.net.proto.AcceptCityReputationRequestReqOuterClass.AcceptCityReputationRequestReq.Builder.class);
     }
 
-    public static final int CITY_ID_FIELD_NUMBER = 5;
+    public static final int CITY_ID_FIELD_NUMBER = 9;
     private int cityId_;
     /**
-     * <code>uint32 city_id = 5;</code>
+     * <code>uint32 city_id = 9;</code>
      * @return The cityId.
      */
     @java.lang.Override
@@ -133,10 +85,10 @@ public final class AcceptCityReputationRequestReqOuterClass {
       return cityId_;
     }
 
-    public static final int REQUEST_ID_FIELD_NUMBER = 10;
+    public static final int REQUEST_ID_FIELD_NUMBER = 8;
     private int requestId_;
     /**
-     * <code>uint32 request_id = 10;</code>
+     * <code>uint32 request_id = 8;</code>
      * @return The requestId.
      */
     @java.lang.Override
@@ -158,13 +110,13 @@ public final class AcceptCityReputationRequestReqOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (cityId_ != 0) {
-        output.writeUInt32(5, cityId_);
-      }
       if (requestId_ != 0) {
-        output.writeUInt32(10, requestId_);
+        output.writeUInt32(8, requestId_);
       }
-      unknownFields.writeTo(output);
+      if (cityId_ != 0) {
+        output.writeUInt32(9, cityId_);
+      }
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -173,15 +125,15 @@ public final class AcceptCityReputationRequestReqOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (cityId_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(5, cityId_);
-      }
       if (requestId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(10, requestId_);
+          .computeUInt32Size(8, requestId_);
       }
-      size += unknownFields.getSerializedSize();
+      if (cityId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(9, cityId_);
+      }
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -200,7 +152,7 @@ public final class AcceptCityReputationRequestReqOuterClass {
           != other.getCityId()) return false;
       if (getRequestId()
           != other.getRequestId()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -215,7 +167,7 @@ public final class AcceptCityReputationRequestReqOuterClass {
       hash = (53 * hash) + getCityId();
       hash = (37 * hash) + REQUEST_ID_FIELD_NUMBER;
       hash = (53 * hash) + getRequestId();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -312,8 +264,7 @@ public final class AcceptCityReputationRequestReqOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 6832
-     * Obf: IDPFBCKMKLE
+     * CmdId: 21376
      * </pre>
      *
      * Protobuf type {@code AcceptCityReputationRequestReq}
@@ -337,18 +288,13 @@ public final class AcceptCityReputationRequestReqOuterClass {
 
       // Construct using emu.grasscutter.net.proto.AcceptCityReputationRequestReqOuterClass.AcceptCityReputationRequestReq.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -439,7 +385,7 @@ public final class AcceptCityReputationRequestReqOuterClass {
         if (other.getRequestId() != 0) {
           setRequestId(other.getRequestId());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -454,23 +400,46 @@ public final class AcceptCityReputationRequestReqOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.AcceptCityReputationRequestReqOuterClass.AcceptCityReputationRequestReq parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 64: {
+                requestId_ = input.readUInt32();
+
+                break;
+              } // case 64
+              case 72: {
+                cityId_ = input.readUInt32();
+
+                break;
+              } // case 72
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.AcceptCityReputationRequestReqOuterClass.AcceptCityReputationRequestReq) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
       private int cityId_ ;
       /**
-       * <code>uint32 city_id = 5;</code>
+       * <code>uint32 city_id = 9;</code>
        * @return The cityId.
        */
       @java.lang.Override
@@ -478,7 +447,7 @@ public final class AcceptCityReputationRequestReqOuterClass {
         return cityId_;
       }
       /**
-       * <code>uint32 city_id = 5;</code>
+       * <code>uint32 city_id = 9;</code>
        * @param value The cityId to set.
        * @return This builder for chaining.
        */
@@ -489,7 +458,7 @@ public final class AcceptCityReputationRequestReqOuterClass {
         return this;
       }
       /**
-       * <code>uint32 city_id = 5;</code>
+       * <code>uint32 city_id = 9;</code>
        * @return This builder for chaining.
        */
       public Builder clearCityId() {
@@ -501,7 +470,7 @@ public final class AcceptCityReputationRequestReqOuterClass {
 
       private int requestId_ ;
       /**
-       * <code>uint32 request_id = 10;</code>
+       * <code>uint32 request_id = 8;</code>
        * @return The requestId.
        */
       @java.lang.Override
@@ -509,7 +478,7 @@ public final class AcceptCityReputationRequestReqOuterClass {
         return requestId_;
       }
       /**
-       * <code>uint32 request_id = 10;</code>
+       * <code>uint32 request_id = 8;</code>
        * @param value The requestId to set.
        * @return This builder for chaining.
        */
@@ -520,7 +489,7 @@ public final class AcceptCityReputationRequestReqOuterClass {
         return this;
       }
       /**
-       * <code>uint32 request_id = 10;</code>
+       * <code>uint32 request_id = 8;</code>
        * @return This builder for chaining.
        */
       public Builder clearRequestId() {
@@ -562,7 +531,18 @@ public final class AcceptCityReputationRequestReqOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new AcceptCityReputationRequestReq(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -598,7 +578,7 @@ public final class AcceptCityReputationRequestReqOuterClass {
     java.lang.String[] descriptorData = {
       "\n$AcceptCityReputationRequestReq.proto\"E" +
       "\n\036AcceptCityReputationRequestReq\022\017\n\007city" +
-      "_id\030\005 \001(\r\022\022\n\nrequest_id\030\n \001(\rB\033\n\031emu.gra" +
+      "_id\030\t \001(\r\022\022\n\nrequest_id\030\010 \001(\rB\033\n\031emu.gra" +
       "sscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

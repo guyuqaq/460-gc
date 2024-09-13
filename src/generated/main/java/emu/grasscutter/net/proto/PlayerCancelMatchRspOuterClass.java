@@ -19,26 +19,25 @@ public final class PlayerCancelMatchRspOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.MatchType match_type = 1;</code>
+     * <code>int32 retcode = 4;</code>
+     * @return The retcode.
+     */
+    int getRetcode();
+
+    /**
+     * <code>.MatchType match_type = 14;</code>
      * @return The enum numeric value on the wire for matchType.
      */
     int getMatchTypeValue();
     /**
-     * <code>.MatchType match_type = 1;</code>
+     * <code>.MatchType match_type = 14;</code>
      * @return The matchType.
      */
     emu.grasscutter.net.proto.MatchTypeOuterClass.MatchType getMatchType();
-
-    /**
-     * <code>int32 retcode = 8;</code>
-     * @return The retcode.
-     */
-    int getRetcode();
   }
   /**
    * <pre>
-   * CmdId: 4875
-   * Obf: HEEJIEDBDJP
+   * CmdId: 538
    * </pre>
    *
    * Protobuf type {@code PlayerCancelMatchRsp}
@@ -68,54 +67,6 @@ public final class PlayerCancelMatchRspOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private PlayerCancelMatchRsp(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              int rawValue = input.readEnum();
-
-              matchType_ = rawValue;
-              break;
-            }
-            case 64: {
-
-              retcode_ = input.readInt32();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.PlayerCancelMatchRspOuterClass.internal_static_PlayerCancelMatchRsp_descriptor;
@@ -129,34 +80,34 @@ public final class PlayerCancelMatchRspOuterClass {
               emu.grasscutter.net.proto.PlayerCancelMatchRspOuterClass.PlayerCancelMatchRsp.class, emu.grasscutter.net.proto.PlayerCancelMatchRspOuterClass.PlayerCancelMatchRsp.Builder.class);
     }
 
-    public static final int MATCH_TYPE_FIELD_NUMBER = 1;
+    public static final int RETCODE_FIELD_NUMBER = 4;
+    private int retcode_;
+    /**
+     * <code>int32 retcode = 4;</code>
+     * @return The retcode.
+     */
+    @java.lang.Override
+    public int getRetcode() {
+      return retcode_;
+    }
+
+    public static final int MATCH_TYPE_FIELD_NUMBER = 14;
     private int matchType_;
     /**
-     * <code>.MatchType match_type = 1;</code>
+     * <code>.MatchType match_type = 14;</code>
      * @return The enum numeric value on the wire for matchType.
      */
     @java.lang.Override public int getMatchTypeValue() {
       return matchType_;
     }
     /**
-     * <code>.MatchType match_type = 1;</code>
+     * <code>.MatchType match_type = 14;</code>
      * @return The matchType.
      */
     @java.lang.Override public emu.grasscutter.net.proto.MatchTypeOuterClass.MatchType getMatchType() {
       @SuppressWarnings("deprecation")
       emu.grasscutter.net.proto.MatchTypeOuterClass.MatchType result = emu.grasscutter.net.proto.MatchTypeOuterClass.MatchType.valueOf(matchType_);
       return result == null ? emu.grasscutter.net.proto.MatchTypeOuterClass.MatchType.UNRECOGNIZED : result;
-    }
-
-    public static final int RETCODE_FIELD_NUMBER = 8;
-    private int retcode_;
-    /**
-     * <code>int32 retcode = 8;</code>
-     * @return The retcode.
-     */
-    @java.lang.Override
-    public int getRetcode() {
-      return retcode_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -173,13 +124,13 @@ public final class PlayerCancelMatchRspOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (matchType_ != emu.grasscutter.net.proto.MatchTypeOuterClass.MatchType.MATCH_TYPE_NONE.getNumber()) {
-        output.writeEnum(1, matchType_);
-      }
       if (retcode_ != 0) {
-        output.writeInt32(8, retcode_);
+        output.writeInt32(4, retcode_);
       }
-      unknownFields.writeTo(output);
+      if (matchType_ != emu.grasscutter.net.proto.MatchTypeOuterClass.MatchType.MATCH_TYPE_NONE.getNumber()) {
+        output.writeEnum(14, matchType_);
+      }
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -188,15 +139,15 @@ public final class PlayerCancelMatchRspOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (matchType_ != emu.grasscutter.net.proto.MatchTypeOuterClass.MatchType.MATCH_TYPE_NONE.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(1, matchType_);
-      }
       if (retcode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(8, retcode_);
+          .computeInt32Size(4, retcode_);
       }
-      size += unknownFields.getSerializedSize();
+      if (matchType_ != emu.grasscutter.net.proto.MatchTypeOuterClass.MatchType.MATCH_TYPE_NONE.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(14, matchType_);
+      }
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -211,10 +162,10 @@ public final class PlayerCancelMatchRspOuterClass {
       }
       emu.grasscutter.net.proto.PlayerCancelMatchRspOuterClass.PlayerCancelMatchRsp other = (emu.grasscutter.net.proto.PlayerCancelMatchRspOuterClass.PlayerCancelMatchRsp) obj;
 
-      if (matchType_ != other.matchType_) return false;
       if (getRetcode()
           != other.getRetcode()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (matchType_ != other.matchType_) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -225,11 +176,11 @@ public final class PlayerCancelMatchRspOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + MATCH_TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + matchType_;
       hash = (37 * hash) + RETCODE_FIELD_NUMBER;
       hash = (53 * hash) + getRetcode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (37 * hash) + MATCH_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + matchType_;
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -326,8 +277,7 @@ public final class PlayerCancelMatchRspOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 4875
-     * Obf: HEEJIEDBDJP
+     * CmdId: 538
      * </pre>
      *
      * Protobuf type {@code PlayerCancelMatchRsp}
@@ -351,25 +301,20 @@ public final class PlayerCancelMatchRspOuterClass {
 
       // Construct using emu.grasscutter.net.proto.PlayerCancelMatchRspOuterClass.PlayerCancelMatchRsp.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        matchType_ = 0;
-
         retcode_ = 0;
+
+        matchType_ = 0;
 
         return this;
       }
@@ -397,8 +342,8 @@ public final class PlayerCancelMatchRspOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.PlayerCancelMatchRspOuterClass.PlayerCancelMatchRsp buildPartial() {
         emu.grasscutter.net.proto.PlayerCancelMatchRspOuterClass.PlayerCancelMatchRsp result = new emu.grasscutter.net.proto.PlayerCancelMatchRspOuterClass.PlayerCancelMatchRsp(this);
-        result.matchType_ = matchType_;
         result.retcode_ = retcode_;
+        result.matchType_ = matchType_;
         onBuilt();
         return result;
       }
@@ -447,13 +392,13 @@ public final class PlayerCancelMatchRspOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.PlayerCancelMatchRspOuterClass.PlayerCancelMatchRsp other) {
         if (other == emu.grasscutter.net.proto.PlayerCancelMatchRspOuterClass.PlayerCancelMatchRsp.getDefaultInstance()) return this;
-        if (other.matchType_ != 0) {
-          setMatchTypeValue(other.getMatchTypeValue());
-        }
         if (other.getRetcode() != 0) {
           setRetcode(other.getRetcode());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        if (other.matchType_ != 0) {
+          setMatchTypeValue(other.getMatchTypeValue());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -468,30 +413,84 @@ public final class PlayerCancelMatchRspOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.PlayerCancelMatchRspOuterClass.PlayerCancelMatchRsp parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 32: {
+                retcode_ = input.readInt32();
+
+                break;
+              } // case 32
+              case 112: {
+                matchType_ = input.readEnum();
+
+                break;
+              } // case 112
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.PlayerCancelMatchRspOuterClass.PlayerCancelMatchRsp) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
+        return this;
+      }
+
+      private int retcode_ ;
+      /**
+       * <code>int32 retcode = 4;</code>
+       * @return The retcode.
+       */
+      @java.lang.Override
+      public int getRetcode() {
+        return retcode_;
+      }
+      /**
+       * <code>int32 retcode = 4;</code>
+       * @param value The retcode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRetcode(int value) {
+        
+        retcode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 retcode = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRetcode() {
+        
+        retcode_ = 0;
+        onChanged();
         return this;
       }
 
       private int matchType_ = 0;
       /**
-       * <code>.MatchType match_type = 1;</code>
+       * <code>.MatchType match_type = 14;</code>
        * @return The enum numeric value on the wire for matchType.
        */
       @java.lang.Override public int getMatchTypeValue() {
         return matchType_;
       }
       /**
-       * <code>.MatchType match_type = 1;</code>
+       * <code>.MatchType match_type = 14;</code>
        * @param value The enum numeric value on the wire for matchType to set.
        * @return This builder for chaining.
        */
@@ -502,7 +501,7 @@ public final class PlayerCancelMatchRspOuterClass {
         return this;
       }
       /**
-       * <code>.MatchType match_type = 1;</code>
+       * <code>.MatchType match_type = 14;</code>
        * @return The matchType.
        */
       @java.lang.Override
@@ -512,7 +511,7 @@ public final class PlayerCancelMatchRspOuterClass {
         return result == null ? emu.grasscutter.net.proto.MatchTypeOuterClass.MatchType.UNRECOGNIZED : result;
       }
       /**
-       * <code>.MatchType match_type = 1;</code>
+       * <code>.MatchType match_type = 14;</code>
        * @param value The matchType to set.
        * @return This builder for chaining.
        */
@@ -526,43 +525,12 @@ public final class PlayerCancelMatchRspOuterClass {
         return this;
       }
       /**
-       * <code>.MatchType match_type = 1;</code>
+       * <code>.MatchType match_type = 14;</code>
        * @return This builder for chaining.
        */
       public Builder clearMatchType() {
         
         matchType_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int retcode_ ;
-      /**
-       * <code>int32 retcode = 8;</code>
-       * @return The retcode.
-       */
-      @java.lang.Override
-      public int getRetcode() {
-        return retcode_;
-      }
-      /**
-       * <code>int32 retcode = 8;</code>
-       * @param value The retcode to set.
-       * @return This builder for chaining.
-       */
-      public Builder setRetcode(int value) {
-        
-        retcode_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int32 retcode = 8;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearRetcode() {
-        
-        retcode_ = 0;
         onChanged();
         return this;
       }
@@ -599,7 +567,18 @@ public final class PlayerCancelMatchRspOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new PlayerCancelMatchRsp(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -634,8 +613,8 @@ public final class PlayerCancelMatchRspOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\032PlayerCancelMatchRsp.proto\032\017MatchType." +
-      "proto\"G\n\024PlayerCancelMatchRsp\022\036\n\nmatch_t" +
-      "ype\030\001 \001(\0162\n.MatchType\022\017\n\007retcode\030\010 \001(\005B\033" +
+      "proto\"G\n\024PlayerCancelMatchRsp\022\017\n\007retcode" +
+      "\030\004 \001(\005\022\036\n\nmatch_type\030\016 \001(\0162\n.MatchTypeB\033" +
       "\n\031emu.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -648,7 +627,7 @@ public final class PlayerCancelMatchRspOuterClass {
     internal_static_PlayerCancelMatchRsp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_PlayerCancelMatchRsp_descriptor,
-        new java.lang.String[] { "MatchType", "Retcode", });
+        new java.lang.String[] { "Retcode", "MatchType", });
     emu.grasscutter.net.proto.MatchTypeOuterClass.getDescriptor();
   }
 

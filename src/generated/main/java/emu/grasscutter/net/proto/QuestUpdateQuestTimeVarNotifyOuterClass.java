@@ -19,17 +19,17 @@ public final class QuestUpdateQuestTimeVarNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 parent_quest_id = 3;</code>
+     * <code>uint32 parent_quest_id = 8;</code>
      * @return The parentQuestId.
      */
     int getParentQuestId();
 
     /**
-     * <code>map&lt;uint32, uint32&gt; time_var_map = 7;</code>
+     * <code>map&lt;uint32, uint32&gt; time_var_map = 12;</code>
      */
     int getTimeVarMapCount();
     /**
-     * <code>map&lt;uint32, uint32&gt; time_var_map = 7;</code>
+     * <code>map&lt;uint32, uint32&gt; time_var_map = 12;</code>
      */
     boolean containsTimeVarMap(
         int key);
@@ -40,19 +40,19 @@ public final class QuestUpdateQuestTimeVarNotifyOuterClass {
     java.util.Map<java.lang.Integer, java.lang.Integer>
     getTimeVarMap();
     /**
-     * <code>map&lt;uint32, uint32&gt; time_var_map = 7;</code>
+     * <code>map&lt;uint32, uint32&gt; time_var_map = 12;</code>
      */
     java.util.Map<java.lang.Integer, java.lang.Integer>
     getTimeVarMapMap();
     /**
-     * <code>map&lt;uint32, uint32&gt; time_var_map = 7;</code>
+     * <code>map&lt;uint32, uint32&gt; time_var_map = 12;</code>
      */
 
     int getTimeVarMapOrDefault(
         int key,
         int defaultValue);
     /**
-     * <code>map&lt;uint32, uint32&gt; time_var_map = 7;</code>
+     * <code>map&lt;uint32, uint32&gt; time_var_map = 12;</code>
      */
 
     int getTimeVarMapOrThrow(
@@ -60,7 +60,7 @@ public final class QuestUpdateQuestTimeVarNotifyOuterClass {
   }
   /**
    * <pre>
-   * CmdId: 26969
+   * CmdId: 9835
    * </pre>
    *
    * Protobuf type {@code QuestUpdateQuestTimeVarNotify}
@@ -89,62 +89,6 @@ public final class QuestUpdateQuestTimeVarNotifyOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private QuestUpdateQuestTimeVarNotify(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 24: {
-
-              parentQuestId_ = input.readUInt32();
-              break;
-            }
-            case 58: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                timeVarMap_ = com.google.protobuf.MapField.newMapField(
-                    TimeVarMapDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000001;
-              }
-              com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
-              timeVarMap__ = input.readMessage(
-                  TimeVarMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              timeVarMap_.getMutableMap().put(
-                  timeVarMap__.getKey(), timeVarMap__.getValue());
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.QuestUpdateQuestTimeVarNotifyOuterClass.internal_static_QuestUpdateQuestTimeVarNotify_descriptor;
@@ -155,7 +99,7 @@ public final class QuestUpdateQuestTimeVarNotifyOuterClass {
     protected com.google.protobuf.MapField internalGetMapField(
         int number) {
       switch (number) {
-        case 7:
+        case 12:
           return internalGetTimeVarMap();
         default:
           throw new RuntimeException(
@@ -170,10 +114,10 @@ public final class QuestUpdateQuestTimeVarNotifyOuterClass {
               emu.grasscutter.net.proto.QuestUpdateQuestTimeVarNotifyOuterClass.QuestUpdateQuestTimeVarNotify.class, emu.grasscutter.net.proto.QuestUpdateQuestTimeVarNotifyOuterClass.QuestUpdateQuestTimeVarNotify.Builder.class);
     }
 
-    public static final int PARENT_QUEST_ID_FIELD_NUMBER = 3;
+    public static final int PARENT_QUEST_ID_FIELD_NUMBER = 8;
     private int parentQuestId_;
     /**
-     * <code>uint32 parent_quest_id = 3;</code>
+     * <code>uint32 parent_quest_id = 8;</code>
      * @return The parentQuestId.
      */
     @java.lang.Override
@@ -181,7 +125,7 @@ public final class QuestUpdateQuestTimeVarNotifyOuterClass {
       return parentQuestId_;
     }
 
-    public static final int TIME_VAR_MAP_FIELD_NUMBER = 7;
+    public static final int TIME_VAR_MAP_FIELD_NUMBER = 12;
     private static final class TimeVarMapDefaultEntryHolder {
       static final com.google.protobuf.MapEntry<
           java.lang.Integer, java.lang.Integer> defaultEntry =
@@ -208,7 +152,7 @@ public final class QuestUpdateQuestTimeVarNotifyOuterClass {
       return internalGetTimeVarMap().getMap().size();
     }
     /**
-     * <code>map&lt;uint32, uint32&gt; time_var_map = 7;</code>
+     * <code>map&lt;uint32, uint32&gt; time_var_map = 12;</code>
      */
 
     @java.lang.Override
@@ -226,7 +170,7 @@ public final class QuestUpdateQuestTimeVarNotifyOuterClass {
       return getTimeVarMapMap();
     }
     /**
-     * <code>map&lt;uint32, uint32&gt; time_var_map = 7;</code>
+     * <code>map&lt;uint32, uint32&gt; time_var_map = 12;</code>
      */
     @java.lang.Override
 
@@ -234,7 +178,7 @@ public final class QuestUpdateQuestTimeVarNotifyOuterClass {
       return internalGetTimeVarMap().getMap();
     }
     /**
-     * <code>map&lt;uint32, uint32&gt; time_var_map = 7;</code>
+     * <code>map&lt;uint32, uint32&gt; time_var_map = 12;</code>
      */
     @java.lang.Override
 
@@ -247,7 +191,7 @@ public final class QuestUpdateQuestTimeVarNotifyOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
-     * <code>map&lt;uint32, uint32&gt; time_var_map = 7;</code>
+     * <code>map&lt;uint32, uint32&gt; time_var_map = 12;</code>
      */
     @java.lang.Override
 
@@ -277,15 +221,15 @@ public final class QuestUpdateQuestTimeVarNotifyOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (parentQuestId_ != 0) {
-        output.writeUInt32(3, parentQuestId_);
+        output.writeUInt32(8, parentQuestId_);
       }
       com.google.protobuf.GeneratedMessageV3
         .serializeIntegerMapTo(
           output,
           internalGetTimeVarMap(),
           TimeVarMapDefaultEntryHolder.defaultEntry,
-          7);
-      unknownFields.writeTo(output);
+          12);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -296,7 +240,7 @@ public final class QuestUpdateQuestTimeVarNotifyOuterClass {
       size = 0;
       if (parentQuestId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(3, parentQuestId_);
+          .computeUInt32Size(8, parentQuestId_);
       }
       for (java.util.Map.Entry<java.lang.Integer, java.lang.Integer> entry
            : internalGetTimeVarMap().getMap().entrySet()) {
@@ -306,9 +250,9 @@ public final class QuestUpdateQuestTimeVarNotifyOuterClass {
             .setValue(entry.getValue())
             .build();
         size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(7, timeVarMap__);
+            .computeMessageSize(12, timeVarMap__);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -327,7 +271,7 @@ public final class QuestUpdateQuestTimeVarNotifyOuterClass {
           != other.getParentQuestId()) return false;
       if (!internalGetTimeVarMap().equals(
           other.internalGetTimeVarMap())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -344,7 +288,7 @@ public final class QuestUpdateQuestTimeVarNotifyOuterClass {
         hash = (37 * hash) + TIME_VAR_MAP_FIELD_NUMBER;
         hash = (53 * hash) + internalGetTimeVarMap().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -441,7 +385,7 @@ public final class QuestUpdateQuestTimeVarNotifyOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 26969
+     * CmdId: 9835
      * </pre>
      *
      * Protobuf type {@code QuestUpdateQuestTimeVarNotify}
@@ -459,7 +403,7 @@ public final class QuestUpdateQuestTimeVarNotifyOuterClass {
       protected com.google.protobuf.MapField internalGetMapField(
           int number) {
         switch (number) {
-          case 7:
+          case 12:
             return internalGetTimeVarMap();
           default:
             throw new RuntimeException(
@@ -470,7 +414,7 @@ public final class QuestUpdateQuestTimeVarNotifyOuterClass {
       protected com.google.protobuf.MapField internalGetMutableMapField(
           int number) {
         switch (number) {
-          case 7:
+          case 12:
             return internalGetMutableTimeVarMap();
           default:
             throw new RuntimeException(
@@ -487,18 +431,13 @@ public final class QuestUpdateQuestTimeVarNotifyOuterClass {
 
       // Construct using emu.grasscutter.net.proto.QuestUpdateQuestTimeVarNotifyOuterClass.QuestUpdateQuestTimeVarNotify.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -589,7 +528,7 @@ public final class QuestUpdateQuestTimeVarNotifyOuterClass {
         }
         internalGetMutableTimeVarMap().mergeFrom(
             other.internalGetTimeVarMap());
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -604,24 +543,50 @@ public final class QuestUpdateQuestTimeVarNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.QuestUpdateQuestTimeVarNotifyOuterClass.QuestUpdateQuestTimeVarNotify parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 64: {
+                parentQuestId_ = input.readUInt32();
+
+                break;
+              } // case 64
+              case 98: {
+                com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
+                timeVarMap__ = input.readMessage(
+                    TimeVarMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutableTimeVarMap().getMutableMap().put(
+                    timeVarMap__.getKey(), timeVarMap__.getValue());
+                break;
+              } // case 98
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.QuestUpdateQuestTimeVarNotifyOuterClass.QuestUpdateQuestTimeVarNotify) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
 
       private int parentQuestId_ ;
       /**
-       * <code>uint32 parent_quest_id = 3;</code>
+       * <code>uint32 parent_quest_id = 8;</code>
        * @return The parentQuestId.
        */
       @java.lang.Override
@@ -629,7 +594,7 @@ public final class QuestUpdateQuestTimeVarNotifyOuterClass {
         return parentQuestId_;
       }
       /**
-       * <code>uint32 parent_quest_id = 3;</code>
+       * <code>uint32 parent_quest_id = 8;</code>
        * @param value The parentQuestId to set.
        * @return This builder for chaining.
        */
@@ -640,7 +605,7 @@ public final class QuestUpdateQuestTimeVarNotifyOuterClass {
         return this;
       }
       /**
-       * <code>uint32 parent_quest_id = 3;</code>
+       * <code>uint32 parent_quest_id = 8;</code>
        * @return This builder for chaining.
        */
       public Builder clearParentQuestId() {
@@ -677,7 +642,7 @@ public final class QuestUpdateQuestTimeVarNotifyOuterClass {
         return internalGetTimeVarMap().getMap().size();
       }
       /**
-       * <code>map&lt;uint32, uint32&gt; time_var_map = 7;</code>
+       * <code>map&lt;uint32, uint32&gt; time_var_map = 12;</code>
        */
 
       @java.lang.Override
@@ -695,7 +660,7 @@ public final class QuestUpdateQuestTimeVarNotifyOuterClass {
         return getTimeVarMapMap();
       }
       /**
-       * <code>map&lt;uint32, uint32&gt; time_var_map = 7;</code>
+       * <code>map&lt;uint32, uint32&gt; time_var_map = 12;</code>
        */
       @java.lang.Override
 
@@ -703,7 +668,7 @@ public final class QuestUpdateQuestTimeVarNotifyOuterClass {
         return internalGetTimeVarMap().getMap();
       }
       /**
-       * <code>map&lt;uint32, uint32&gt; time_var_map = 7;</code>
+       * <code>map&lt;uint32, uint32&gt; time_var_map = 12;</code>
        */
       @java.lang.Override
 
@@ -716,7 +681,7 @@ public final class QuestUpdateQuestTimeVarNotifyOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
-       * <code>map&lt;uint32, uint32&gt; time_var_map = 7;</code>
+       * <code>map&lt;uint32, uint32&gt; time_var_map = 12;</code>
        */
       @java.lang.Override
 
@@ -737,7 +702,7 @@ public final class QuestUpdateQuestTimeVarNotifyOuterClass {
         return this;
       }
       /**
-       * <code>map&lt;uint32, uint32&gt; time_var_map = 7;</code>
+       * <code>map&lt;uint32, uint32&gt; time_var_map = 12;</code>
        */
 
       public Builder removeTimeVarMap(
@@ -756,7 +721,7 @@ public final class QuestUpdateQuestTimeVarNotifyOuterClass {
         return internalGetMutableTimeVarMap().getMutableMap();
       }
       /**
-       * <code>map&lt;uint32, uint32&gt; time_var_map = 7;</code>
+       * <code>map&lt;uint32, uint32&gt; time_var_map = 12;</code>
        */
       public Builder putTimeVarMap(
           int key,
@@ -768,7 +733,7 @@ public final class QuestUpdateQuestTimeVarNotifyOuterClass {
         return this;
       }
       /**
-       * <code>map&lt;uint32, uint32&gt; time_var_map = 7;</code>
+       * <code>map&lt;uint32, uint32&gt; time_var_map = 12;</code>
        */
 
       public Builder putAllTimeVarMap(
@@ -810,7 +775,18 @@ public final class QuestUpdateQuestTimeVarNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new QuestUpdateQuestTimeVarNotify(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -851,7 +827,7 @@ public final class QuestUpdateQuestTimeVarNotifyOuterClass {
     java.lang.String[] descriptorData = {
       "\n#QuestUpdateQuestTimeVarNotify.proto\"\261\001" +
       "\n\035QuestUpdateQuestTimeVarNotify\022\027\n\017paren" +
-      "t_quest_id\030\003 \001(\r\022D\n\014time_var_map\030\007 \003(\0132." +
+      "t_quest_id\030\010 \001(\r\022D\n\014time_var_map\030\014 \003(\0132." +
       ".QuestUpdateQuestTimeVarNotify.TimeVarMa" +
       "pEntry\0321\n\017TimeVarMapEntry\022\013\n\003key\030\001 \001(\r\022\r" +
       "\n\005value\030\002 \001(\r:\0028\001B\033\n\031emu.grasscutter.net" +

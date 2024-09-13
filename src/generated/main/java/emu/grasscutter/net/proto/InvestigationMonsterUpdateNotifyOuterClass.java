@@ -19,24 +19,29 @@ public final class InvestigationMonsterUpdateNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.InvestigationMonster investigation_monster = 13;</code>
+     * <code>bool EJAIAEKGMBC = 3;</code>
+     * @return The eJAIAEKGMBC.
+     */
+    boolean getEJAIAEKGMBC();
+
+    /**
+     * <code>.InvestigationMonster investigation_monster = 15;</code>
      * @return Whether the investigationMonster field is set.
      */
     boolean hasInvestigationMonster();
     /**
-     * <code>.InvestigationMonster investigation_monster = 13;</code>
+     * <code>.InvestigationMonster investigation_monster = 15;</code>
      * @return The investigationMonster.
      */
     emu.grasscutter.net.proto.InvestigationMonsterOuterClass.InvestigationMonster getInvestigationMonster();
     /**
-     * <code>.InvestigationMonster investigation_monster = 13;</code>
+     * <code>.InvestigationMonster investigation_monster = 15;</code>
      */
     emu.grasscutter.net.proto.InvestigationMonsterOuterClass.InvestigationMonsterOrBuilder getInvestigationMonsterOrBuilder();
   }
   /**
    * <pre>
-   * CmdId: 23884
-   * Obf: FFNIIIKPNCC
+   * CmdId: 8875
    * </pre>
    *
    * Protobuf type {@code InvestigationMonsterUpdateNotify}
@@ -65,56 +70,6 @@ public final class InvestigationMonsterUpdateNotifyOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private InvestigationMonsterUpdateNotify(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 106: {
-              emu.grasscutter.net.proto.InvestigationMonsterOuterClass.InvestigationMonster.Builder subBuilder = null;
-              if (investigationMonster_ != null) {
-                subBuilder = investigationMonster_.toBuilder();
-              }
-              investigationMonster_ = input.readMessage(emu.grasscutter.net.proto.InvestigationMonsterOuterClass.InvestigationMonster.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(investigationMonster_);
-                investigationMonster_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.InvestigationMonsterUpdateNotifyOuterClass.internal_static_InvestigationMonsterUpdateNotify_descriptor;
@@ -128,10 +83,21 @@ public final class InvestigationMonsterUpdateNotifyOuterClass {
               emu.grasscutter.net.proto.InvestigationMonsterUpdateNotifyOuterClass.InvestigationMonsterUpdateNotify.class, emu.grasscutter.net.proto.InvestigationMonsterUpdateNotifyOuterClass.InvestigationMonsterUpdateNotify.Builder.class);
     }
 
-    public static final int INVESTIGATION_MONSTER_FIELD_NUMBER = 13;
+    public static final int EJAIAEKGMBC_FIELD_NUMBER = 3;
+    private boolean eJAIAEKGMBC_;
+    /**
+     * <code>bool EJAIAEKGMBC = 3;</code>
+     * @return The eJAIAEKGMBC.
+     */
+    @java.lang.Override
+    public boolean getEJAIAEKGMBC() {
+      return eJAIAEKGMBC_;
+    }
+
+    public static final int INVESTIGATION_MONSTER_FIELD_NUMBER = 15;
     private emu.grasscutter.net.proto.InvestigationMonsterOuterClass.InvestigationMonster investigationMonster_;
     /**
-     * <code>.InvestigationMonster investigation_monster = 13;</code>
+     * <code>.InvestigationMonster investigation_monster = 15;</code>
      * @return Whether the investigationMonster field is set.
      */
     @java.lang.Override
@@ -139,7 +105,7 @@ public final class InvestigationMonsterUpdateNotifyOuterClass {
       return investigationMonster_ != null;
     }
     /**
-     * <code>.InvestigationMonster investigation_monster = 13;</code>
+     * <code>.InvestigationMonster investigation_monster = 15;</code>
      * @return The investigationMonster.
      */
     @java.lang.Override
@@ -147,7 +113,7 @@ public final class InvestigationMonsterUpdateNotifyOuterClass {
       return investigationMonster_ == null ? emu.grasscutter.net.proto.InvestigationMonsterOuterClass.InvestigationMonster.getDefaultInstance() : investigationMonster_;
     }
     /**
-     * <code>.InvestigationMonster investigation_monster = 13;</code>
+     * <code>.InvestigationMonster investigation_monster = 15;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.InvestigationMonsterOuterClass.InvestigationMonsterOrBuilder getInvestigationMonsterOrBuilder() {
@@ -168,10 +134,13 @@ public final class InvestigationMonsterUpdateNotifyOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (investigationMonster_ != null) {
-        output.writeMessage(13, getInvestigationMonster());
+      if (eJAIAEKGMBC_ != false) {
+        output.writeBool(3, eJAIAEKGMBC_);
       }
-      unknownFields.writeTo(output);
+      if (investigationMonster_ != null) {
+        output.writeMessage(15, getInvestigationMonster());
+      }
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -180,11 +149,15 @@ public final class InvestigationMonsterUpdateNotifyOuterClass {
       if (size != -1) return size;
 
       size = 0;
+      if (eJAIAEKGMBC_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, eJAIAEKGMBC_);
+      }
       if (investigationMonster_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(13, getInvestigationMonster());
+          .computeMessageSize(15, getInvestigationMonster());
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -199,12 +172,14 @@ public final class InvestigationMonsterUpdateNotifyOuterClass {
       }
       emu.grasscutter.net.proto.InvestigationMonsterUpdateNotifyOuterClass.InvestigationMonsterUpdateNotify other = (emu.grasscutter.net.proto.InvestigationMonsterUpdateNotifyOuterClass.InvestigationMonsterUpdateNotify) obj;
 
+      if (getEJAIAEKGMBC()
+          != other.getEJAIAEKGMBC()) return false;
       if (hasInvestigationMonster() != other.hasInvestigationMonster()) return false;
       if (hasInvestigationMonster()) {
         if (!getInvestigationMonster()
             .equals(other.getInvestigationMonster())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -215,11 +190,14 @@ public final class InvestigationMonsterUpdateNotifyOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + EJAIAEKGMBC_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getEJAIAEKGMBC());
       if (hasInvestigationMonster()) {
         hash = (37 * hash) + INVESTIGATION_MONSTER_FIELD_NUMBER;
         hash = (53 * hash) + getInvestigationMonster().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -316,8 +294,7 @@ public final class InvestigationMonsterUpdateNotifyOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 23884
-     * Obf: FFNIIIKPNCC
+     * CmdId: 8875
      * </pre>
      *
      * Protobuf type {@code InvestigationMonsterUpdateNotify}
@@ -341,22 +318,19 @@ public final class InvestigationMonsterUpdateNotifyOuterClass {
 
       // Construct using emu.grasscutter.net.proto.InvestigationMonsterUpdateNotifyOuterClass.InvestigationMonsterUpdateNotify.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        eJAIAEKGMBC_ = false;
+
         if (investigationMonsterBuilder_ == null) {
           investigationMonster_ = null;
         } else {
@@ -389,6 +363,7 @@ public final class InvestigationMonsterUpdateNotifyOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.InvestigationMonsterUpdateNotifyOuterClass.InvestigationMonsterUpdateNotify buildPartial() {
         emu.grasscutter.net.proto.InvestigationMonsterUpdateNotifyOuterClass.InvestigationMonsterUpdateNotify result = new emu.grasscutter.net.proto.InvestigationMonsterUpdateNotifyOuterClass.InvestigationMonsterUpdateNotify(this);
+        result.eJAIAEKGMBC_ = eJAIAEKGMBC_;
         if (investigationMonsterBuilder_ == null) {
           result.investigationMonster_ = investigationMonster_;
         } else {
@@ -442,10 +417,13 @@ public final class InvestigationMonsterUpdateNotifyOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.InvestigationMonsterUpdateNotifyOuterClass.InvestigationMonsterUpdateNotify other) {
         if (other == emu.grasscutter.net.proto.InvestigationMonsterUpdateNotifyOuterClass.InvestigationMonsterUpdateNotify.getDefaultInstance()) return this;
+        if (other.getEJAIAEKGMBC() != false) {
+          setEJAIAEKGMBC(other.getEJAIAEKGMBC());
+        }
         if (other.hasInvestigationMonster()) {
           mergeInvestigationMonster(other.getInvestigationMonster());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -460,17 +438,73 @@ public final class InvestigationMonsterUpdateNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.InvestigationMonsterUpdateNotifyOuterClass.InvestigationMonsterUpdateNotify parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 24: {
+                eJAIAEKGMBC_ = input.readBool();
+
+                break;
+              } // case 24
+              case 122: {
+                input.readMessage(
+                    getInvestigationMonsterFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 122
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.InvestigationMonsterUpdateNotifyOuterClass.InvestigationMonsterUpdateNotify) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
+        return this;
+      }
+
+      private boolean eJAIAEKGMBC_ ;
+      /**
+       * <code>bool EJAIAEKGMBC = 3;</code>
+       * @return The eJAIAEKGMBC.
+       */
+      @java.lang.Override
+      public boolean getEJAIAEKGMBC() {
+        return eJAIAEKGMBC_;
+      }
+      /**
+       * <code>bool EJAIAEKGMBC = 3;</code>
+       * @param value The eJAIAEKGMBC to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEJAIAEKGMBC(boolean value) {
+        
+        eJAIAEKGMBC_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool EJAIAEKGMBC = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEJAIAEKGMBC() {
+        
+        eJAIAEKGMBC_ = false;
+        onChanged();
         return this;
       }
 
@@ -478,14 +512,14 @@ public final class InvestigationMonsterUpdateNotifyOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.InvestigationMonsterOuterClass.InvestigationMonster, emu.grasscutter.net.proto.InvestigationMonsterOuterClass.InvestigationMonster.Builder, emu.grasscutter.net.proto.InvestigationMonsterOuterClass.InvestigationMonsterOrBuilder> investigationMonsterBuilder_;
       /**
-       * <code>.InvestigationMonster investigation_monster = 13;</code>
+       * <code>.InvestigationMonster investigation_monster = 15;</code>
        * @return Whether the investigationMonster field is set.
        */
       public boolean hasInvestigationMonster() {
         return investigationMonsterBuilder_ != null || investigationMonster_ != null;
       }
       /**
-       * <code>.InvestigationMonster investigation_monster = 13;</code>
+       * <code>.InvestigationMonster investigation_monster = 15;</code>
        * @return The investigationMonster.
        */
       public emu.grasscutter.net.proto.InvestigationMonsterOuterClass.InvestigationMonster getInvestigationMonster() {
@@ -496,7 +530,7 @@ public final class InvestigationMonsterUpdateNotifyOuterClass {
         }
       }
       /**
-       * <code>.InvestigationMonster investigation_monster = 13;</code>
+       * <code>.InvestigationMonster investigation_monster = 15;</code>
        */
       public Builder setInvestigationMonster(emu.grasscutter.net.proto.InvestigationMonsterOuterClass.InvestigationMonster value) {
         if (investigationMonsterBuilder_ == null) {
@@ -512,7 +546,7 @@ public final class InvestigationMonsterUpdateNotifyOuterClass {
         return this;
       }
       /**
-       * <code>.InvestigationMonster investigation_monster = 13;</code>
+       * <code>.InvestigationMonster investigation_monster = 15;</code>
        */
       public Builder setInvestigationMonster(
           emu.grasscutter.net.proto.InvestigationMonsterOuterClass.InvestigationMonster.Builder builderForValue) {
@@ -526,7 +560,7 @@ public final class InvestigationMonsterUpdateNotifyOuterClass {
         return this;
       }
       /**
-       * <code>.InvestigationMonster investigation_monster = 13;</code>
+       * <code>.InvestigationMonster investigation_monster = 15;</code>
        */
       public Builder mergeInvestigationMonster(emu.grasscutter.net.proto.InvestigationMonsterOuterClass.InvestigationMonster value) {
         if (investigationMonsterBuilder_ == null) {
@@ -544,7 +578,7 @@ public final class InvestigationMonsterUpdateNotifyOuterClass {
         return this;
       }
       /**
-       * <code>.InvestigationMonster investigation_monster = 13;</code>
+       * <code>.InvestigationMonster investigation_monster = 15;</code>
        */
       public Builder clearInvestigationMonster() {
         if (investigationMonsterBuilder_ == null) {
@@ -558,7 +592,7 @@ public final class InvestigationMonsterUpdateNotifyOuterClass {
         return this;
       }
       /**
-       * <code>.InvestigationMonster investigation_monster = 13;</code>
+       * <code>.InvestigationMonster investigation_monster = 15;</code>
        */
       public emu.grasscutter.net.proto.InvestigationMonsterOuterClass.InvestigationMonster.Builder getInvestigationMonsterBuilder() {
         
@@ -566,7 +600,7 @@ public final class InvestigationMonsterUpdateNotifyOuterClass {
         return getInvestigationMonsterFieldBuilder().getBuilder();
       }
       /**
-       * <code>.InvestigationMonster investigation_monster = 13;</code>
+       * <code>.InvestigationMonster investigation_monster = 15;</code>
        */
       public emu.grasscutter.net.proto.InvestigationMonsterOuterClass.InvestigationMonsterOrBuilder getInvestigationMonsterOrBuilder() {
         if (investigationMonsterBuilder_ != null) {
@@ -577,7 +611,7 @@ public final class InvestigationMonsterUpdateNotifyOuterClass {
         }
       }
       /**
-       * <code>.InvestigationMonster investigation_monster = 13;</code>
+       * <code>.InvestigationMonster investigation_monster = 15;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.InvestigationMonsterOuterClass.InvestigationMonster, emu.grasscutter.net.proto.InvestigationMonsterOuterClass.InvestigationMonster.Builder, emu.grasscutter.net.proto.InvestigationMonsterOuterClass.InvestigationMonsterOrBuilder> 
@@ -625,7 +659,18 @@ public final class InvestigationMonsterUpdateNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new InvestigationMonsterUpdateNotify(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -660,10 +705,11 @@ public final class InvestigationMonsterUpdateNotifyOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n&InvestigationMonsterUpdateNotify.proto" +
-      "\032\032InvestigationMonster.proto\"X\n Investig" +
-      "ationMonsterUpdateNotify\0224\n\025investigatio" +
-      "n_monster\030\r \001(\0132\025.InvestigationMonsterB\033" +
-      "\n\031emu.grasscutter.net.protob\006proto3"
+      "\032\032InvestigationMonster.proto\"m\n Investig" +
+      "ationMonsterUpdateNotify\022\023\n\013EJAIAEKGMBC\030" +
+      "\003 \001(\010\0224\n\025investigation_monster\030\017 \001(\0132\025.I" +
+      "nvestigationMonsterB\033\n\031emu.grasscutter.n" +
+      "et.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -675,7 +721,7 @@ public final class InvestigationMonsterUpdateNotifyOuterClass {
     internal_static_InvestigationMonsterUpdateNotify_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_InvestigationMonsterUpdateNotify_descriptor,
-        new java.lang.String[] { "InvestigationMonster", });
+        new java.lang.String[] { "EJAIAEKGMBC", "InvestigationMonster", });
     emu.grasscutter.net.proto.InvestigationMonsterOuterClass.getDescriptor();
   }
 
