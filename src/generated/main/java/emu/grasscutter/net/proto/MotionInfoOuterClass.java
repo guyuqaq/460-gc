@@ -27,11 +27,11 @@ public final class MotionInfoOuterClass {
      * <code>.Vector pos = 1;</code>
      * @return The pos.
      */
-    org.sorapointa.proto.VectorOuterClass.Vector getPos();
+    emu.grasscutter.net.proto.VectorOuterClass.Vector getPos();
     /**
      * <code>.Vector pos = 1;</code>
      */
-    org.sorapointa.proto.VectorOuterClass.VectorOrBuilder getPosOrBuilder();
+    emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getPosOrBuilder();
 
     /**
      * <code>.Vector rot = 2;</code>
@@ -42,11 +42,11 @@ public final class MotionInfoOuterClass {
      * <code>.Vector rot = 2;</code>
      * @return The rot.
      */
-    org.sorapointa.proto.VectorOuterClass.Vector getRot();
+    emu.grasscutter.net.proto.VectorOuterClass.Vector getRot();
     /**
      * <code>.Vector rot = 2;</code>
      */
-    org.sorapointa.proto.VectorOuterClass.VectorOrBuilder getRotOrBuilder();
+    emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getRotOrBuilder();
 
     /**
      * <code>.Vector speed = 3;</code>
@@ -57,11 +57,11 @@ public final class MotionInfoOuterClass {
      * <code>.Vector speed = 3;</code>
      * @return The speed.
      */
-    org.sorapointa.proto.VectorOuterClass.Vector getSpeed();
+    emu.grasscutter.net.proto.VectorOuterClass.Vector getSpeed();
     /**
      * <code>.Vector speed = 3;</code>
      */
-    org.sorapointa.proto.VectorOuterClass.VectorOrBuilder getSpeedOrBuilder();
+    emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getSpeedOrBuilder();
 
     /**
      * <code>.MotionState state = 4;</code>
@@ -77,12 +77,12 @@ public final class MotionInfoOuterClass {
     /**
      * <code>repeated .Vector params = 5;</code>
      */
-    java.util.List<org.sorapointa.proto.VectorOuterClass.Vector> 
+    java.util.List<emu.grasscutter.net.proto.VectorOuterClass.Vector> 
         getParamsList();
     /**
      * <code>repeated .Vector params = 5;</code>
      */
-    org.sorapointa.proto.VectorOuterClass.Vector getParams(int index);
+    emu.grasscutter.net.proto.VectorOuterClass.Vector getParams(int index);
     /**
      * <code>repeated .Vector params = 5;</code>
      */
@@ -90,12 +90,12 @@ public final class MotionInfoOuterClass {
     /**
      * <code>repeated .Vector params = 5;</code>
      */
-    java.util.List<? extends org.sorapointa.proto.VectorOuterClass.VectorOrBuilder> 
+    java.util.List<? extends emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder> 
         getParamsOrBuilderList();
     /**
      * <code>repeated .Vector params = 5;</code>
      */
-    org.sorapointa.proto.VectorOuterClass.VectorOrBuilder getParamsOrBuilder(
+    emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getParamsOrBuilder(
         int index);
 
     /**
@@ -107,11 +107,11 @@ public final class MotionInfoOuterClass {
      * <code>.Vector ref_pos = 6;</code>
      * @return The refPos.
      */
-    org.sorapointa.proto.VectorOuterClass.Vector getRefPos();
+    emu.grasscutter.net.proto.VectorOuterClass.Vector getRefPos();
     /**
      * <code>.Vector ref_pos = 6;</code>
      */
-    org.sorapointa.proto.VectorOuterClass.VectorOrBuilder getRefPosOrBuilder();
+    emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getRefPosOrBuilder();
 
     /**
      * <code>uint32 ref_id = 7;</code>
@@ -186,7 +186,7 @@ public final class MotionInfoOuterClass {
     }
 
     public static final int POS_FIELD_NUMBER = 1;
-    private org.sorapointa.proto.VectorOuterClass.Vector pos_;
+    private emu.grasscutter.net.proto.VectorOuterClass.Vector pos_;
     /**
      * <code>.Vector pos = 1;</code>
      * @return Whether the pos field is set.
@@ -200,19 +200,19 @@ public final class MotionInfoOuterClass {
      * @return The pos.
      */
     @java.lang.Override
-    public org.sorapointa.proto.VectorOuterClass.Vector getPos() {
-      return pos_ == null ? org.sorapointa.proto.VectorOuterClass.Vector.getDefaultInstance() : pos_;
+    public emu.grasscutter.net.proto.VectorOuterClass.Vector getPos() {
+      return pos_ == null ? emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance() : pos_;
     }
     /**
      * <code>.Vector pos = 1;</code>
      */
     @java.lang.Override
-    public org.sorapointa.proto.VectorOuterClass.VectorOrBuilder getPosOrBuilder() {
+    public emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getPosOrBuilder() {
       return getPos();
     }
 
     public static final int ROT_FIELD_NUMBER = 2;
-    private org.sorapointa.proto.VectorOuterClass.Vector rot_;
+    private emu.grasscutter.net.proto.VectorOuterClass.Vector rot_;
     /**
      * <code>.Vector rot = 2;</code>
      * @return Whether the rot field is set.
@@ -226,19 +226,19 @@ public final class MotionInfoOuterClass {
      * @return The rot.
      */
     @java.lang.Override
-    public org.sorapointa.proto.VectorOuterClass.Vector getRot() {
-      return rot_ == null ? org.sorapointa.proto.VectorOuterClass.Vector.getDefaultInstance() : rot_;
+    public emu.grasscutter.net.proto.VectorOuterClass.Vector getRot() {
+      return rot_ == null ? emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance() : rot_;
     }
     /**
      * <code>.Vector rot = 2;</code>
      */
     @java.lang.Override
-    public org.sorapointa.proto.VectorOuterClass.VectorOrBuilder getRotOrBuilder() {
+    public emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getRotOrBuilder() {
       return getRot();
     }
 
     public static final int SPEED_FIELD_NUMBER = 3;
-    private org.sorapointa.proto.VectorOuterClass.Vector speed_;
+    private emu.grasscutter.net.proto.VectorOuterClass.Vector speed_;
     /**
      * <code>.Vector speed = 3;</code>
      * @return Whether the speed field is set.
@@ -252,14 +252,14 @@ public final class MotionInfoOuterClass {
      * @return The speed.
      */
     @java.lang.Override
-    public org.sorapointa.proto.VectorOuterClass.Vector getSpeed() {
-      return speed_ == null ? org.sorapointa.proto.VectorOuterClass.Vector.getDefaultInstance() : speed_;
+    public emu.grasscutter.net.proto.VectorOuterClass.Vector getSpeed() {
+      return speed_ == null ? emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance() : speed_;
     }
     /**
      * <code>.Vector speed = 3;</code>
      */
     @java.lang.Override
-    public org.sorapointa.proto.VectorOuterClass.VectorOrBuilder getSpeedOrBuilder() {
+    public emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getSpeedOrBuilder() {
       return getSpeed();
     }
 
@@ -283,19 +283,19 @@ public final class MotionInfoOuterClass {
     }
 
     public static final int PARAMS_FIELD_NUMBER = 5;
-    private java.util.List<org.sorapointa.proto.VectorOuterClass.Vector> params_;
+    private java.util.List<emu.grasscutter.net.proto.VectorOuterClass.Vector> params_;
     /**
      * <code>repeated .Vector params = 5;</code>
      */
     @java.lang.Override
-    public java.util.List<org.sorapointa.proto.VectorOuterClass.Vector> getParamsList() {
+    public java.util.List<emu.grasscutter.net.proto.VectorOuterClass.Vector> getParamsList() {
       return params_;
     }
     /**
      * <code>repeated .Vector params = 5;</code>
      */
     @java.lang.Override
-    public java.util.List<? extends org.sorapointa.proto.VectorOuterClass.VectorOrBuilder> 
+    public java.util.List<? extends emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder> 
         getParamsOrBuilderList() {
       return params_;
     }
@@ -310,20 +310,20 @@ public final class MotionInfoOuterClass {
      * <code>repeated .Vector params = 5;</code>
      */
     @java.lang.Override
-    public org.sorapointa.proto.VectorOuterClass.Vector getParams(int index) {
+    public emu.grasscutter.net.proto.VectorOuterClass.Vector getParams(int index) {
       return params_.get(index);
     }
     /**
      * <code>repeated .Vector params = 5;</code>
      */
     @java.lang.Override
-    public org.sorapointa.proto.VectorOuterClass.VectorOrBuilder getParamsOrBuilder(
+    public emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getParamsOrBuilder(
         int index) {
       return params_.get(index);
     }
 
     public static final int REF_POS_FIELD_NUMBER = 6;
-    private org.sorapointa.proto.VectorOuterClass.Vector refPos_;
+    private emu.grasscutter.net.proto.VectorOuterClass.Vector refPos_;
     /**
      * <code>.Vector ref_pos = 6;</code>
      * @return Whether the refPos field is set.
@@ -337,14 +337,14 @@ public final class MotionInfoOuterClass {
      * @return The refPos.
      */
     @java.lang.Override
-    public org.sorapointa.proto.VectorOuterClass.Vector getRefPos() {
-      return refPos_ == null ? org.sorapointa.proto.VectorOuterClass.Vector.getDefaultInstance() : refPos_;
+    public emu.grasscutter.net.proto.VectorOuterClass.Vector getRefPos() {
+      return refPos_ == null ? emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance() : refPos_;
     }
     /**
      * <code>.Vector ref_pos = 6;</code>
      */
     @java.lang.Override
-    public org.sorapointa.proto.VectorOuterClass.VectorOrBuilder getRefPosOrBuilder() {
+    public emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getRefPosOrBuilder() {
       return getRefPos();
     }
 
@@ -985,9 +985,9 @@ public final class MotionInfoOuterClass {
                 break;
               } // case 32
               case 42: {
-                org.sorapointa.proto.VectorOuterClass.Vector m =
+                emu.grasscutter.net.proto.VectorOuterClass.Vector m =
                     input.readMessage(
-                        org.sorapointa.proto.VectorOuterClass.Vector.parser(),
+                        emu.grasscutter.net.proto.VectorOuterClass.Vector.parser(),
                         extensionRegistry);
                 if (paramsBuilder_ == null) {
                   ensureParamsIsMutable();
@@ -1046,9 +1046,9 @@ public final class MotionInfoOuterClass {
       }
       private int bitField0_;
 
-      private org.sorapointa.proto.VectorOuterClass.Vector pos_;
+      private emu.grasscutter.net.proto.VectorOuterClass.Vector pos_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          org.sorapointa.proto.VectorOuterClass.Vector, org.sorapointa.proto.VectorOuterClass.Vector.Builder, org.sorapointa.proto.VectorOuterClass.VectorOrBuilder> posBuilder_;
+          emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder> posBuilder_;
       /**
        * <code>.Vector pos = 1;</code>
        * @return Whether the pos field is set.
@@ -1060,9 +1060,9 @@ public final class MotionInfoOuterClass {
        * <code>.Vector pos = 1;</code>
        * @return The pos.
        */
-      public org.sorapointa.proto.VectorOuterClass.Vector getPos() {
+      public emu.grasscutter.net.proto.VectorOuterClass.Vector getPos() {
         if (posBuilder_ == null) {
-          return pos_ == null ? org.sorapointa.proto.VectorOuterClass.Vector.getDefaultInstance() : pos_;
+          return pos_ == null ? emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance() : pos_;
         } else {
           return posBuilder_.getMessage();
         }
@@ -1070,7 +1070,7 @@ public final class MotionInfoOuterClass {
       /**
        * <code>.Vector pos = 1;</code>
        */
-      public Builder setPos(org.sorapointa.proto.VectorOuterClass.Vector value) {
+      public Builder setPos(emu.grasscutter.net.proto.VectorOuterClass.Vector value) {
         if (posBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1087,7 +1087,7 @@ public final class MotionInfoOuterClass {
        * <code>.Vector pos = 1;</code>
        */
       public Builder setPos(
-          org.sorapointa.proto.VectorOuterClass.Vector.Builder builderForValue) {
+          emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder builderForValue) {
         if (posBuilder_ == null) {
           pos_ = builderForValue.build();
           onChanged();
@@ -1100,11 +1100,11 @@ public final class MotionInfoOuterClass {
       /**
        * <code>.Vector pos = 1;</code>
        */
-      public Builder mergePos(org.sorapointa.proto.VectorOuterClass.Vector value) {
+      public Builder mergePos(emu.grasscutter.net.proto.VectorOuterClass.Vector value) {
         if (posBuilder_ == null) {
           if (pos_ != null) {
             pos_ =
-              org.sorapointa.proto.VectorOuterClass.Vector.newBuilder(pos_).mergeFrom(value).buildPartial();
+              emu.grasscutter.net.proto.VectorOuterClass.Vector.newBuilder(pos_).mergeFrom(value).buildPartial();
           } else {
             pos_ = value;
           }
@@ -1132,7 +1132,7 @@ public final class MotionInfoOuterClass {
       /**
        * <code>.Vector pos = 1;</code>
        */
-      public org.sorapointa.proto.VectorOuterClass.Vector.Builder getPosBuilder() {
+      public emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder getPosBuilder() {
         
         onChanged();
         return getPosFieldBuilder().getBuilder();
@@ -1140,23 +1140,23 @@ public final class MotionInfoOuterClass {
       /**
        * <code>.Vector pos = 1;</code>
        */
-      public org.sorapointa.proto.VectorOuterClass.VectorOrBuilder getPosOrBuilder() {
+      public emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getPosOrBuilder() {
         if (posBuilder_ != null) {
           return posBuilder_.getMessageOrBuilder();
         } else {
           return pos_ == null ?
-              org.sorapointa.proto.VectorOuterClass.Vector.getDefaultInstance() : pos_;
+              emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance() : pos_;
         }
       }
       /**
        * <code>.Vector pos = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          org.sorapointa.proto.VectorOuterClass.Vector, org.sorapointa.proto.VectorOuterClass.Vector.Builder, org.sorapointa.proto.VectorOuterClass.VectorOrBuilder> 
+          emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder> 
           getPosFieldBuilder() {
         if (posBuilder_ == null) {
           posBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              org.sorapointa.proto.VectorOuterClass.Vector, org.sorapointa.proto.VectorOuterClass.Vector.Builder, org.sorapointa.proto.VectorOuterClass.VectorOrBuilder>(
+              emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder>(
                   getPos(),
                   getParentForChildren(),
                   isClean());
@@ -1165,9 +1165,9 @@ public final class MotionInfoOuterClass {
         return posBuilder_;
       }
 
-      private org.sorapointa.proto.VectorOuterClass.Vector rot_;
+      private emu.grasscutter.net.proto.VectorOuterClass.Vector rot_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          org.sorapointa.proto.VectorOuterClass.Vector, org.sorapointa.proto.VectorOuterClass.Vector.Builder, org.sorapointa.proto.VectorOuterClass.VectorOrBuilder> rotBuilder_;
+          emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder> rotBuilder_;
       /**
        * <code>.Vector rot = 2;</code>
        * @return Whether the rot field is set.
@@ -1179,9 +1179,9 @@ public final class MotionInfoOuterClass {
        * <code>.Vector rot = 2;</code>
        * @return The rot.
        */
-      public org.sorapointa.proto.VectorOuterClass.Vector getRot() {
+      public emu.grasscutter.net.proto.VectorOuterClass.Vector getRot() {
         if (rotBuilder_ == null) {
-          return rot_ == null ? org.sorapointa.proto.VectorOuterClass.Vector.getDefaultInstance() : rot_;
+          return rot_ == null ? emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance() : rot_;
         } else {
           return rotBuilder_.getMessage();
         }
@@ -1189,7 +1189,7 @@ public final class MotionInfoOuterClass {
       /**
        * <code>.Vector rot = 2;</code>
        */
-      public Builder setRot(org.sorapointa.proto.VectorOuterClass.Vector value) {
+      public Builder setRot(emu.grasscutter.net.proto.VectorOuterClass.Vector value) {
         if (rotBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1206,7 +1206,7 @@ public final class MotionInfoOuterClass {
        * <code>.Vector rot = 2;</code>
        */
       public Builder setRot(
-          org.sorapointa.proto.VectorOuterClass.Vector.Builder builderForValue) {
+          emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder builderForValue) {
         if (rotBuilder_ == null) {
           rot_ = builderForValue.build();
           onChanged();
@@ -1219,11 +1219,11 @@ public final class MotionInfoOuterClass {
       /**
        * <code>.Vector rot = 2;</code>
        */
-      public Builder mergeRot(org.sorapointa.proto.VectorOuterClass.Vector value) {
+      public Builder mergeRot(emu.grasscutter.net.proto.VectorOuterClass.Vector value) {
         if (rotBuilder_ == null) {
           if (rot_ != null) {
             rot_ =
-              org.sorapointa.proto.VectorOuterClass.Vector.newBuilder(rot_).mergeFrom(value).buildPartial();
+              emu.grasscutter.net.proto.VectorOuterClass.Vector.newBuilder(rot_).mergeFrom(value).buildPartial();
           } else {
             rot_ = value;
           }
@@ -1251,7 +1251,7 @@ public final class MotionInfoOuterClass {
       /**
        * <code>.Vector rot = 2;</code>
        */
-      public org.sorapointa.proto.VectorOuterClass.Vector.Builder getRotBuilder() {
+      public emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder getRotBuilder() {
         
         onChanged();
         return getRotFieldBuilder().getBuilder();
@@ -1259,23 +1259,23 @@ public final class MotionInfoOuterClass {
       /**
        * <code>.Vector rot = 2;</code>
        */
-      public org.sorapointa.proto.VectorOuterClass.VectorOrBuilder getRotOrBuilder() {
+      public emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getRotOrBuilder() {
         if (rotBuilder_ != null) {
           return rotBuilder_.getMessageOrBuilder();
         } else {
           return rot_ == null ?
-              org.sorapointa.proto.VectorOuterClass.Vector.getDefaultInstance() : rot_;
+              emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance() : rot_;
         }
       }
       /**
        * <code>.Vector rot = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          org.sorapointa.proto.VectorOuterClass.Vector, org.sorapointa.proto.VectorOuterClass.Vector.Builder, org.sorapointa.proto.VectorOuterClass.VectorOrBuilder> 
+          emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder> 
           getRotFieldBuilder() {
         if (rotBuilder_ == null) {
           rotBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              org.sorapointa.proto.VectorOuterClass.Vector, org.sorapointa.proto.VectorOuterClass.Vector.Builder, org.sorapointa.proto.VectorOuterClass.VectorOrBuilder>(
+              emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder>(
                   getRot(),
                   getParentForChildren(),
                   isClean());
@@ -1284,9 +1284,9 @@ public final class MotionInfoOuterClass {
         return rotBuilder_;
       }
 
-      private org.sorapointa.proto.VectorOuterClass.Vector speed_;
+      private emu.grasscutter.net.proto.VectorOuterClass.Vector speed_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          org.sorapointa.proto.VectorOuterClass.Vector, org.sorapointa.proto.VectorOuterClass.Vector.Builder, org.sorapointa.proto.VectorOuterClass.VectorOrBuilder> speedBuilder_;
+          emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder> speedBuilder_;
       /**
        * <code>.Vector speed = 3;</code>
        * @return Whether the speed field is set.
@@ -1298,9 +1298,9 @@ public final class MotionInfoOuterClass {
        * <code>.Vector speed = 3;</code>
        * @return The speed.
        */
-      public org.sorapointa.proto.VectorOuterClass.Vector getSpeed() {
+      public emu.grasscutter.net.proto.VectorOuterClass.Vector getSpeed() {
         if (speedBuilder_ == null) {
-          return speed_ == null ? org.sorapointa.proto.VectorOuterClass.Vector.getDefaultInstance() : speed_;
+          return speed_ == null ? emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance() : speed_;
         } else {
           return speedBuilder_.getMessage();
         }
@@ -1308,7 +1308,7 @@ public final class MotionInfoOuterClass {
       /**
        * <code>.Vector speed = 3;</code>
        */
-      public Builder setSpeed(org.sorapointa.proto.VectorOuterClass.Vector value) {
+      public Builder setSpeed(emu.grasscutter.net.proto.VectorOuterClass.Vector value) {
         if (speedBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1325,7 +1325,7 @@ public final class MotionInfoOuterClass {
        * <code>.Vector speed = 3;</code>
        */
       public Builder setSpeed(
-          org.sorapointa.proto.VectorOuterClass.Vector.Builder builderForValue) {
+          emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder builderForValue) {
         if (speedBuilder_ == null) {
           speed_ = builderForValue.build();
           onChanged();
@@ -1338,11 +1338,11 @@ public final class MotionInfoOuterClass {
       /**
        * <code>.Vector speed = 3;</code>
        */
-      public Builder mergeSpeed(org.sorapointa.proto.VectorOuterClass.Vector value) {
+      public Builder mergeSpeed(emu.grasscutter.net.proto.VectorOuterClass.Vector value) {
         if (speedBuilder_ == null) {
           if (speed_ != null) {
             speed_ =
-              org.sorapointa.proto.VectorOuterClass.Vector.newBuilder(speed_).mergeFrom(value).buildPartial();
+              emu.grasscutter.net.proto.VectorOuterClass.Vector.newBuilder(speed_).mergeFrom(value).buildPartial();
           } else {
             speed_ = value;
           }
@@ -1370,7 +1370,7 @@ public final class MotionInfoOuterClass {
       /**
        * <code>.Vector speed = 3;</code>
        */
-      public org.sorapointa.proto.VectorOuterClass.Vector.Builder getSpeedBuilder() {
+      public emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder getSpeedBuilder() {
         
         onChanged();
         return getSpeedFieldBuilder().getBuilder();
@@ -1378,23 +1378,23 @@ public final class MotionInfoOuterClass {
       /**
        * <code>.Vector speed = 3;</code>
        */
-      public org.sorapointa.proto.VectorOuterClass.VectorOrBuilder getSpeedOrBuilder() {
+      public emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getSpeedOrBuilder() {
         if (speedBuilder_ != null) {
           return speedBuilder_.getMessageOrBuilder();
         } else {
           return speed_ == null ?
-              org.sorapointa.proto.VectorOuterClass.Vector.getDefaultInstance() : speed_;
+              emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance() : speed_;
         }
       }
       /**
        * <code>.Vector speed = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          org.sorapointa.proto.VectorOuterClass.Vector, org.sorapointa.proto.VectorOuterClass.Vector.Builder, org.sorapointa.proto.VectorOuterClass.VectorOrBuilder> 
+          emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder> 
           getSpeedFieldBuilder() {
         if (speedBuilder_ == null) {
           speedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              org.sorapointa.proto.VectorOuterClass.Vector, org.sorapointa.proto.VectorOuterClass.Vector.Builder, org.sorapointa.proto.VectorOuterClass.VectorOrBuilder>(
+              emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder>(
                   getSpeed(),
                   getParentForChildren(),
                   isClean());
@@ -1457,22 +1457,22 @@ public final class MotionInfoOuterClass {
         return this;
       }
 
-      private java.util.List<org.sorapointa.proto.VectorOuterClass.Vector> params_ =
+      private java.util.List<emu.grasscutter.net.proto.VectorOuterClass.Vector> params_ =
         java.util.Collections.emptyList();
       private void ensureParamsIsMutable() {
         if (!((bitField0_ & 0x00000001) != 0)) {
-          params_ = new java.util.ArrayList<org.sorapointa.proto.VectorOuterClass.Vector>(params_);
+          params_ = new java.util.ArrayList<emu.grasscutter.net.proto.VectorOuterClass.Vector>(params_);
           bitField0_ |= 0x00000001;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          org.sorapointa.proto.VectorOuterClass.Vector, org.sorapointa.proto.VectorOuterClass.Vector.Builder, org.sorapointa.proto.VectorOuterClass.VectorOrBuilder> paramsBuilder_;
+          emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder> paramsBuilder_;
 
       /**
        * <code>repeated .Vector params = 5;</code>
        */
-      public java.util.List<org.sorapointa.proto.VectorOuterClass.Vector> getParamsList() {
+      public java.util.List<emu.grasscutter.net.proto.VectorOuterClass.Vector> getParamsList() {
         if (paramsBuilder_ == null) {
           return java.util.Collections.unmodifiableList(params_);
         } else {
@@ -1492,7 +1492,7 @@ public final class MotionInfoOuterClass {
       /**
        * <code>repeated .Vector params = 5;</code>
        */
-      public org.sorapointa.proto.VectorOuterClass.Vector getParams(int index) {
+      public emu.grasscutter.net.proto.VectorOuterClass.Vector getParams(int index) {
         if (paramsBuilder_ == null) {
           return params_.get(index);
         } else {
@@ -1503,7 +1503,7 @@ public final class MotionInfoOuterClass {
        * <code>repeated .Vector params = 5;</code>
        */
       public Builder setParams(
-          int index, org.sorapointa.proto.VectorOuterClass.Vector value) {
+          int index, emu.grasscutter.net.proto.VectorOuterClass.Vector value) {
         if (paramsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1520,7 +1520,7 @@ public final class MotionInfoOuterClass {
        * <code>repeated .Vector params = 5;</code>
        */
       public Builder setParams(
-          int index, org.sorapointa.proto.VectorOuterClass.Vector.Builder builderForValue) {
+          int index, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder builderForValue) {
         if (paramsBuilder_ == null) {
           ensureParamsIsMutable();
           params_.set(index, builderForValue.build());
@@ -1533,7 +1533,7 @@ public final class MotionInfoOuterClass {
       /**
        * <code>repeated .Vector params = 5;</code>
        */
-      public Builder addParams(org.sorapointa.proto.VectorOuterClass.Vector value) {
+      public Builder addParams(emu.grasscutter.net.proto.VectorOuterClass.Vector value) {
         if (paramsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1550,7 +1550,7 @@ public final class MotionInfoOuterClass {
        * <code>repeated .Vector params = 5;</code>
        */
       public Builder addParams(
-          int index, org.sorapointa.proto.VectorOuterClass.Vector value) {
+          int index, emu.grasscutter.net.proto.VectorOuterClass.Vector value) {
         if (paramsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1567,7 +1567,7 @@ public final class MotionInfoOuterClass {
        * <code>repeated .Vector params = 5;</code>
        */
       public Builder addParams(
-          org.sorapointa.proto.VectorOuterClass.Vector.Builder builderForValue) {
+          emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder builderForValue) {
         if (paramsBuilder_ == null) {
           ensureParamsIsMutable();
           params_.add(builderForValue.build());
@@ -1581,7 +1581,7 @@ public final class MotionInfoOuterClass {
        * <code>repeated .Vector params = 5;</code>
        */
       public Builder addParams(
-          int index, org.sorapointa.proto.VectorOuterClass.Vector.Builder builderForValue) {
+          int index, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder builderForValue) {
         if (paramsBuilder_ == null) {
           ensureParamsIsMutable();
           params_.add(index, builderForValue.build());
@@ -1595,7 +1595,7 @@ public final class MotionInfoOuterClass {
        * <code>repeated .Vector params = 5;</code>
        */
       public Builder addAllParams(
-          java.lang.Iterable<? extends org.sorapointa.proto.VectorOuterClass.Vector> values) {
+          java.lang.Iterable<? extends emu.grasscutter.net.proto.VectorOuterClass.Vector> values) {
         if (paramsBuilder_ == null) {
           ensureParamsIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -1635,14 +1635,14 @@ public final class MotionInfoOuterClass {
       /**
        * <code>repeated .Vector params = 5;</code>
        */
-      public org.sorapointa.proto.VectorOuterClass.Vector.Builder getParamsBuilder(
+      public emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder getParamsBuilder(
           int index) {
         return getParamsFieldBuilder().getBuilder(index);
       }
       /**
        * <code>repeated .Vector params = 5;</code>
        */
-      public org.sorapointa.proto.VectorOuterClass.VectorOrBuilder getParamsOrBuilder(
+      public emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getParamsOrBuilder(
           int index) {
         if (paramsBuilder_ == null) {
           return params_.get(index);  } else {
@@ -1652,7 +1652,7 @@ public final class MotionInfoOuterClass {
       /**
        * <code>repeated .Vector params = 5;</code>
        */
-      public java.util.List<? extends org.sorapointa.proto.VectorOuterClass.VectorOrBuilder> 
+      public java.util.List<? extends emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder> 
            getParamsOrBuilderList() {
         if (paramsBuilder_ != null) {
           return paramsBuilder_.getMessageOrBuilderList();
@@ -1663,31 +1663,31 @@ public final class MotionInfoOuterClass {
       /**
        * <code>repeated .Vector params = 5;</code>
        */
-      public org.sorapointa.proto.VectorOuterClass.Vector.Builder addParamsBuilder() {
+      public emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder addParamsBuilder() {
         return getParamsFieldBuilder().addBuilder(
-            org.sorapointa.proto.VectorOuterClass.Vector.getDefaultInstance());
+            emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance());
       }
       /**
        * <code>repeated .Vector params = 5;</code>
        */
-      public org.sorapointa.proto.VectorOuterClass.Vector.Builder addParamsBuilder(
+      public emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder addParamsBuilder(
           int index) {
         return getParamsFieldBuilder().addBuilder(
-            index, org.sorapointa.proto.VectorOuterClass.Vector.getDefaultInstance());
+            index, emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance());
       }
       /**
        * <code>repeated .Vector params = 5;</code>
        */
-      public java.util.List<org.sorapointa.proto.VectorOuterClass.Vector.Builder> 
+      public java.util.List<emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder> 
            getParamsBuilderList() {
         return getParamsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          org.sorapointa.proto.VectorOuterClass.Vector, org.sorapointa.proto.VectorOuterClass.Vector.Builder, org.sorapointa.proto.VectorOuterClass.VectorOrBuilder> 
+          emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder> 
           getParamsFieldBuilder() {
         if (paramsBuilder_ == null) {
           paramsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              org.sorapointa.proto.VectorOuterClass.Vector, org.sorapointa.proto.VectorOuterClass.Vector.Builder, org.sorapointa.proto.VectorOuterClass.VectorOrBuilder>(
+              emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder>(
                   params_,
                   ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
@@ -1697,9 +1697,9 @@ public final class MotionInfoOuterClass {
         return paramsBuilder_;
       }
 
-      private org.sorapointa.proto.VectorOuterClass.Vector refPos_;
+      private emu.grasscutter.net.proto.VectorOuterClass.Vector refPos_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          org.sorapointa.proto.VectorOuterClass.Vector, org.sorapointa.proto.VectorOuterClass.Vector.Builder, org.sorapointa.proto.VectorOuterClass.VectorOrBuilder> refPosBuilder_;
+          emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder> refPosBuilder_;
       /**
        * <code>.Vector ref_pos = 6;</code>
        * @return Whether the refPos field is set.
@@ -1711,9 +1711,9 @@ public final class MotionInfoOuterClass {
        * <code>.Vector ref_pos = 6;</code>
        * @return The refPos.
        */
-      public org.sorapointa.proto.VectorOuterClass.Vector getRefPos() {
+      public emu.grasscutter.net.proto.VectorOuterClass.Vector getRefPos() {
         if (refPosBuilder_ == null) {
-          return refPos_ == null ? org.sorapointa.proto.VectorOuterClass.Vector.getDefaultInstance() : refPos_;
+          return refPos_ == null ? emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance() : refPos_;
         } else {
           return refPosBuilder_.getMessage();
         }
@@ -1721,7 +1721,7 @@ public final class MotionInfoOuterClass {
       /**
        * <code>.Vector ref_pos = 6;</code>
        */
-      public Builder setRefPos(org.sorapointa.proto.VectorOuterClass.Vector value) {
+      public Builder setRefPos(emu.grasscutter.net.proto.VectorOuterClass.Vector value) {
         if (refPosBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1738,7 +1738,7 @@ public final class MotionInfoOuterClass {
        * <code>.Vector ref_pos = 6;</code>
        */
       public Builder setRefPos(
-          org.sorapointa.proto.VectorOuterClass.Vector.Builder builderForValue) {
+          emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder builderForValue) {
         if (refPosBuilder_ == null) {
           refPos_ = builderForValue.build();
           onChanged();
@@ -1751,11 +1751,11 @@ public final class MotionInfoOuterClass {
       /**
        * <code>.Vector ref_pos = 6;</code>
        */
-      public Builder mergeRefPos(org.sorapointa.proto.VectorOuterClass.Vector value) {
+      public Builder mergeRefPos(emu.grasscutter.net.proto.VectorOuterClass.Vector value) {
         if (refPosBuilder_ == null) {
           if (refPos_ != null) {
             refPos_ =
-              org.sorapointa.proto.VectorOuterClass.Vector.newBuilder(refPos_).mergeFrom(value).buildPartial();
+              emu.grasscutter.net.proto.VectorOuterClass.Vector.newBuilder(refPos_).mergeFrom(value).buildPartial();
           } else {
             refPos_ = value;
           }
@@ -1783,7 +1783,7 @@ public final class MotionInfoOuterClass {
       /**
        * <code>.Vector ref_pos = 6;</code>
        */
-      public org.sorapointa.proto.VectorOuterClass.Vector.Builder getRefPosBuilder() {
+      public emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder getRefPosBuilder() {
         
         onChanged();
         return getRefPosFieldBuilder().getBuilder();
@@ -1791,23 +1791,23 @@ public final class MotionInfoOuterClass {
       /**
        * <code>.Vector ref_pos = 6;</code>
        */
-      public org.sorapointa.proto.VectorOuterClass.VectorOrBuilder getRefPosOrBuilder() {
+      public emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getRefPosOrBuilder() {
         if (refPosBuilder_ != null) {
           return refPosBuilder_.getMessageOrBuilder();
         } else {
           return refPos_ == null ?
-              org.sorapointa.proto.VectorOuterClass.Vector.getDefaultInstance() : refPos_;
+              emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance() : refPos_;
         }
       }
       /**
        * <code>.Vector ref_pos = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          org.sorapointa.proto.VectorOuterClass.Vector, org.sorapointa.proto.VectorOuterClass.Vector.Builder, org.sorapointa.proto.VectorOuterClass.VectorOrBuilder> 
+          emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder> 
           getRefPosFieldBuilder() {
         if (refPosBuilder_ == null) {
           refPosBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              org.sorapointa.proto.VectorOuterClass.Vector, org.sorapointa.proto.VectorOuterClass.Vector.Builder, org.sorapointa.proto.VectorOuterClass.VectorOrBuilder>(
+              emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder>(
                   getRefPos(),
                   getParentForChildren(),
                   isClean());
@@ -2061,7 +2061,7 @@ public final class MotionInfoOuterClass {
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          org.sorapointa.proto.VectorOuterClass.getDescriptor(),
+          emu.grasscutter.net.proto.VectorOuterClass.getDescriptor(),
           emu.grasscutter.net.proto.MotionStateOuterClass.getDescriptor(),
         });
     internal_static_MotionInfo_descriptor =
@@ -2070,7 +2070,7 @@ public final class MotionInfoOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_MotionInfo_descriptor,
         new java.lang.String[] { "Pos", "Rot", "Speed", "State", "Params", "RefPos", "RefId", "SceneTime", "IntervalVelocity", "BIMCAJGDDOI", "HJCDICMBDKE", });
-    org.sorapointa.proto.VectorOuterClass.getDescriptor();
+    emu.grasscutter.net.proto.VectorOuterClass.getDescriptor();
     emu.grasscutter.net.proto.MotionStateOuterClass.getDescriptor();
   }
 

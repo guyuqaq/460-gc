@@ -63,11 +63,11 @@ public final class TreasureMapRegionInfoOuterClass {
      * <code>.Vector region_center_pos = 11;</code>
      * @return The regionCenterPos.
      */
-    org.sorapointa.proto.VectorOuterClass.Vector getRegionCenterPos();
+    emu.grasscutter.net.proto.VectorOuterClass.Vector getRegionCenterPos();
     /**
      * <code>.Vector region_center_pos = 11;</code>
      */
-    org.sorapointa.proto.VectorOuterClass.VectorOrBuilder getRegionCenterPosOrBuilder();
+    emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getRegionCenterPosOrBuilder();
 
     /**
      * <code>bool OCKCPKPMPJP = 14;</code>
@@ -188,7 +188,7 @@ public final class TreasureMapRegionInfoOuterClass {
     }
 
     public static final int REGION_CENTER_POS_FIELD_NUMBER = 11;
-    private org.sorapointa.proto.VectorOuterClass.Vector regionCenterPos_;
+    private emu.grasscutter.net.proto.VectorOuterClass.Vector regionCenterPos_;
     /**
      * <code>.Vector region_center_pos = 11;</code>
      * @return Whether the regionCenterPos field is set.
@@ -202,14 +202,14 @@ public final class TreasureMapRegionInfoOuterClass {
      * @return The regionCenterPos.
      */
     @java.lang.Override
-    public org.sorapointa.proto.VectorOuterClass.Vector getRegionCenterPos() {
-      return regionCenterPos_ == null ? org.sorapointa.proto.VectorOuterClass.Vector.getDefaultInstance() : regionCenterPos_;
+    public emu.grasscutter.net.proto.VectorOuterClass.Vector getRegionCenterPos() {
+      return regionCenterPos_ == null ? emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance() : regionCenterPos_;
     }
     /**
      * <code>.Vector region_center_pos = 11;</code>
      */
     @java.lang.Override
-    public org.sorapointa.proto.VectorOuterClass.VectorOrBuilder getRegionCenterPosOrBuilder() {
+    public emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getRegionCenterPosOrBuilder() {
       return getRegionCenterPos();
     }
 
@@ -929,9 +929,9 @@ public final class TreasureMapRegionInfoOuterClass {
         return this;
       }
 
-      private org.sorapointa.proto.VectorOuterClass.Vector regionCenterPos_;
+      private emu.grasscutter.net.proto.VectorOuterClass.Vector regionCenterPos_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          org.sorapointa.proto.VectorOuterClass.Vector, org.sorapointa.proto.VectorOuterClass.Vector.Builder, org.sorapointa.proto.VectorOuterClass.VectorOrBuilder> regionCenterPosBuilder_;
+          emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder> regionCenterPosBuilder_;
       /**
        * <code>.Vector region_center_pos = 11;</code>
        * @return Whether the regionCenterPos field is set.
@@ -943,9 +943,9 @@ public final class TreasureMapRegionInfoOuterClass {
        * <code>.Vector region_center_pos = 11;</code>
        * @return The regionCenterPos.
        */
-      public org.sorapointa.proto.VectorOuterClass.Vector getRegionCenterPos() {
+      public emu.grasscutter.net.proto.VectorOuterClass.Vector getRegionCenterPos() {
         if (regionCenterPosBuilder_ == null) {
-          return regionCenterPos_ == null ? org.sorapointa.proto.VectorOuterClass.Vector.getDefaultInstance() : regionCenterPos_;
+          return regionCenterPos_ == null ? emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance() : regionCenterPos_;
         } else {
           return regionCenterPosBuilder_.getMessage();
         }
@@ -953,7 +953,7 @@ public final class TreasureMapRegionInfoOuterClass {
       /**
        * <code>.Vector region_center_pos = 11;</code>
        */
-      public Builder setRegionCenterPos(org.sorapointa.proto.VectorOuterClass.Vector value) {
+      public Builder setRegionCenterPos(emu.grasscutter.net.proto.VectorOuterClass.Vector value) {
         if (regionCenterPosBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -970,7 +970,7 @@ public final class TreasureMapRegionInfoOuterClass {
        * <code>.Vector region_center_pos = 11;</code>
        */
       public Builder setRegionCenterPos(
-          org.sorapointa.proto.VectorOuterClass.Vector.Builder builderForValue) {
+          emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder builderForValue) {
         if (regionCenterPosBuilder_ == null) {
           regionCenterPos_ = builderForValue.build();
           onChanged();
@@ -983,11 +983,11 @@ public final class TreasureMapRegionInfoOuterClass {
       /**
        * <code>.Vector region_center_pos = 11;</code>
        */
-      public Builder mergeRegionCenterPos(org.sorapointa.proto.VectorOuterClass.Vector value) {
+      public Builder mergeRegionCenterPos(emu.grasscutter.net.proto.VectorOuterClass.Vector value) {
         if (regionCenterPosBuilder_ == null) {
           if (regionCenterPos_ != null) {
             regionCenterPos_ =
-              org.sorapointa.proto.VectorOuterClass.Vector.newBuilder(regionCenterPos_).mergeFrom(value).buildPartial();
+              emu.grasscutter.net.proto.VectorOuterClass.Vector.newBuilder(regionCenterPos_).mergeFrom(value).buildPartial();
           } else {
             regionCenterPos_ = value;
           }
@@ -1015,7 +1015,7 @@ public final class TreasureMapRegionInfoOuterClass {
       /**
        * <code>.Vector region_center_pos = 11;</code>
        */
-      public org.sorapointa.proto.VectorOuterClass.Vector.Builder getRegionCenterPosBuilder() {
+      public emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder getRegionCenterPosBuilder() {
         
         onChanged();
         return getRegionCenterPosFieldBuilder().getBuilder();
@@ -1023,23 +1023,23 @@ public final class TreasureMapRegionInfoOuterClass {
       /**
        * <code>.Vector region_center_pos = 11;</code>
        */
-      public org.sorapointa.proto.VectorOuterClass.VectorOrBuilder getRegionCenterPosOrBuilder() {
+      public emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getRegionCenterPosOrBuilder() {
         if (regionCenterPosBuilder_ != null) {
           return regionCenterPosBuilder_.getMessageOrBuilder();
         } else {
           return regionCenterPos_ == null ?
-              org.sorapointa.proto.VectorOuterClass.Vector.getDefaultInstance() : regionCenterPos_;
+              emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance() : regionCenterPos_;
         }
       }
       /**
        * <code>.Vector region_center_pos = 11;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          org.sorapointa.proto.VectorOuterClass.Vector, org.sorapointa.proto.VectorOuterClass.Vector.Builder, org.sorapointa.proto.VectorOuterClass.VectorOrBuilder> 
+          emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder> 
           getRegionCenterPosFieldBuilder() {
         if (regionCenterPosBuilder_ == null) {
           regionCenterPosBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              org.sorapointa.proto.VectorOuterClass.Vector, org.sorapointa.proto.VectorOuterClass.Vector.Builder, org.sorapointa.proto.VectorOuterClass.VectorOrBuilder>(
+              emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder>(
                   getRegionCenterPos(),
                   getParentForChildren(),
                   isClean());
@@ -1199,7 +1199,7 @@ public final class TreasureMapRegionInfoOuterClass {
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          org.sorapointa.proto.VectorOuterClass.getDescriptor(),
+          emu.grasscutter.net.proto.VectorOuterClass.getDescriptor(),
         });
     internal_static_TreasureMapRegionInfo_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -1207,7 +1207,7 @@ public final class TreasureMapRegionInfoOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_TreasureMapRegionInfo_descriptor,
         new java.lang.String[] { "SceneId", "FLIMAEDAOIK", "RegionRadius", "StartTime", "RegionId", "OEPLMKCMLIO", "RegionCenterPos", "OCKCPKPMPJP", "LILFANMIPOJ", });
-    org.sorapointa.proto.VectorOuterClass.getDescriptor();
+    emu.grasscutter.net.proto.VectorOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

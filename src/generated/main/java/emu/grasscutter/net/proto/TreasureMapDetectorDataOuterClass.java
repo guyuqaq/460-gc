@@ -27,21 +27,21 @@ public final class TreasureMapDetectorDataOuterClass {
      * <code>.Vector center_pos = 1;</code>
      * @return The centerPos.
      */
-    org.sorapointa.proto.VectorOuterClass.Vector getCenterPos();
+    emu.grasscutter.net.proto.VectorOuterClass.Vector getCenterPos();
     /**
      * <code>.Vector center_pos = 1;</code>
      */
-    org.sorapointa.proto.VectorOuterClass.VectorOrBuilder getCenterPosOrBuilder();
+    emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getCenterPosOrBuilder();
 
     /**
      * <code>repeated .Vector spot_list = 2;</code>
      */
-    java.util.List<org.sorapointa.proto.VectorOuterClass.Vector> 
+    java.util.List<emu.grasscutter.net.proto.VectorOuterClass.Vector> 
         getSpotListList();
     /**
      * <code>repeated .Vector spot_list = 2;</code>
      */
-    org.sorapointa.proto.VectorOuterClass.Vector getSpotList(int index);
+    emu.grasscutter.net.proto.VectorOuterClass.Vector getSpotList(int index);
     /**
      * <code>repeated .Vector spot_list = 2;</code>
      */
@@ -49,12 +49,12 @@ public final class TreasureMapDetectorDataOuterClass {
     /**
      * <code>repeated .Vector spot_list = 2;</code>
      */
-    java.util.List<? extends org.sorapointa.proto.VectorOuterClass.VectorOrBuilder> 
+    java.util.List<? extends emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder> 
         getSpotListOrBuilderList();
     /**
      * <code>repeated .Vector spot_list = 2;</code>
      */
-    org.sorapointa.proto.VectorOuterClass.VectorOrBuilder getSpotListOrBuilder(
+    emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getSpotListOrBuilder(
         int index);
 
     /**
@@ -117,7 +117,7 @@ public final class TreasureMapDetectorDataOuterClass {
     }
 
     public static final int CENTER_POS_FIELD_NUMBER = 1;
-    private org.sorapointa.proto.VectorOuterClass.Vector centerPos_;
+    private emu.grasscutter.net.proto.VectorOuterClass.Vector centerPos_;
     /**
      * <code>.Vector center_pos = 1;</code>
      * @return Whether the centerPos field is set.
@@ -131,31 +131,31 @@ public final class TreasureMapDetectorDataOuterClass {
      * @return The centerPos.
      */
     @java.lang.Override
-    public org.sorapointa.proto.VectorOuterClass.Vector getCenterPos() {
-      return centerPos_ == null ? org.sorapointa.proto.VectorOuterClass.Vector.getDefaultInstance() : centerPos_;
+    public emu.grasscutter.net.proto.VectorOuterClass.Vector getCenterPos() {
+      return centerPos_ == null ? emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance() : centerPos_;
     }
     /**
      * <code>.Vector center_pos = 1;</code>
      */
     @java.lang.Override
-    public org.sorapointa.proto.VectorOuterClass.VectorOrBuilder getCenterPosOrBuilder() {
+    public emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getCenterPosOrBuilder() {
       return getCenterPos();
     }
 
     public static final int SPOT_LIST_FIELD_NUMBER = 2;
-    private java.util.List<org.sorapointa.proto.VectorOuterClass.Vector> spotList_;
+    private java.util.List<emu.grasscutter.net.proto.VectorOuterClass.Vector> spotList_;
     /**
      * <code>repeated .Vector spot_list = 2;</code>
      */
     @java.lang.Override
-    public java.util.List<org.sorapointa.proto.VectorOuterClass.Vector> getSpotListList() {
+    public java.util.List<emu.grasscutter.net.proto.VectorOuterClass.Vector> getSpotListList() {
       return spotList_;
     }
     /**
      * <code>repeated .Vector spot_list = 2;</code>
      */
     @java.lang.Override
-    public java.util.List<? extends org.sorapointa.proto.VectorOuterClass.VectorOrBuilder> 
+    public java.util.List<? extends emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder> 
         getSpotListOrBuilderList() {
       return spotList_;
     }
@@ -170,14 +170,14 @@ public final class TreasureMapDetectorDataOuterClass {
      * <code>repeated .Vector spot_list = 2;</code>
      */
     @java.lang.Override
-    public org.sorapointa.proto.VectorOuterClass.Vector getSpotList(int index) {
+    public emu.grasscutter.net.proto.VectorOuterClass.Vector getSpotList(int index) {
       return spotList_.get(index);
     }
     /**
      * <code>repeated .Vector spot_list = 2;</code>
      */
     @java.lang.Override
-    public org.sorapointa.proto.VectorOuterClass.VectorOrBuilder getSpotListOrBuilder(
+    public emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getSpotListOrBuilder(
         int index) {
       return spotList_.get(index);
     }
@@ -638,9 +638,9 @@ public final class TreasureMapDetectorDataOuterClass {
                 break;
               } // case 10
               case 18: {
-                org.sorapointa.proto.VectorOuterClass.Vector m =
+                emu.grasscutter.net.proto.VectorOuterClass.Vector m =
                     input.readMessage(
-                        org.sorapointa.proto.VectorOuterClass.Vector.parser(),
+                        emu.grasscutter.net.proto.VectorOuterClass.Vector.parser(),
                         extensionRegistry);
                 if (spotListBuilder_ == null) {
                   ensureSpotListIsMutable();
@@ -682,9 +682,9 @@ public final class TreasureMapDetectorDataOuterClass {
       }
       private int bitField0_;
 
-      private org.sorapointa.proto.VectorOuterClass.Vector centerPos_;
+      private emu.grasscutter.net.proto.VectorOuterClass.Vector centerPos_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          org.sorapointa.proto.VectorOuterClass.Vector, org.sorapointa.proto.VectorOuterClass.Vector.Builder, org.sorapointa.proto.VectorOuterClass.VectorOrBuilder> centerPosBuilder_;
+          emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder> centerPosBuilder_;
       /**
        * <code>.Vector center_pos = 1;</code>
        * @return Whether the centerPos field is set.
@@ -696,9 +696,9 @@ public final class TreasureMapDetectorDataOuterClass {
        * <code>.Vector center_pos = 1;</code>
        * @return The centerPos.
        */
-      public org.sorapointa.proto.VectorOuterClass.Vector getCenterPos() {
+      public emu.grasscutter.net.proto.VectorOuterClass.Vector getCenterPos() {
         if (centerPosBuilder_ == null) {
-          return centerPos_ == null ? org.sorapointa.proto.VectorOuterClass.Vector.getDefaultInstance() : centerPos_;
+          return centerPos_ == null ? emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance() : centerPos_;
         } else {
           return centerPosBuilder_.getMessage();
         }
@@ -706,7 +706,7 @@ public final class TreasureMapDetectorDataOuterClass {
       /**
        * <code>.Vector center_pos = 1;</code>
        */
-      public Builder setCenterPos(org.sorapointa.proto.VectorOuterClass.Vector value) {
+      public Builder setCenterPos(emu.grasscutter.net.proto.VectorOuterClass.Vector value) {
         if (centerPosBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -723,7 +723,7 @@ public final class TreasureMapDetectorDataOuterClass {
        * <code>.Vector center_pos = 1;</code>
        */
       public Builder setCenterPos(
-          org.sorapointa.proto.VectorOuterClass.Vector.Builder builderForValue) {
+          emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder builderForValue) {
         if (centerPosBuilder_ == null) {
           centerPos_ = builderForValue.build();
           onChanged();
@@ -736,11 +736,11 @@ public final class TreasureMapDetectorDataOuterClass {
       /**
        * <code>.Vector center_pos = 1;</code>
        */
-      public Builder mergeCenterPos(org.sorapointa.proto.VectorOuterClass.Vector value) {
+      public Builder mergeCenterPos(emu.grasscutter.net.proto.VectorOuterClass.Vector value) {
         if (centerPosBuilder_ == null) {
           if (centerPos_ != null) {
             centerPos_ =
-              org.sorapointa.proto.VectorOuterClass.Vector.newBuilder(centerPos_).mergeFrom(value).buildPartial();
+              emu.grasscutter.net.proto.VectorOuterClass.Vector.newBuilder(centerPos_).mergeFrom(value).buildPartial();
           } else {
             centerPos_ = value;
           }
@@ -768,7 +768,7 @@ public final class TreasureMapDetectorDataOuterClass {
       /**
        * <code>.Vector center_pos = 1;</code>
        */
-      public org.sorapointa.proto.VectorOuterClass.Vector.Builder getCenterPosBuilder() {
+      public emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder getCenterPosBuilder() {
         
         onChanged();
         return getCenterPosFieldBuilder().getBuilder();
@@ -776,23 +776,23 @@ public final class TreasureMapDetectorDataOuterClass {
       /**
        * <code>.Vector center_pos = 1;</code>
        */
-      public org.sorapointa.proto.VectorOuterClass.VectorOrBuilder getCenterPosOrBuilder() {
+      public emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getCenterPosOrBuilder() {
         if (centerPosBuilder_ != null) {
           return centerPosBuilder_.getMessageOrBuilder();
         } else {
           return centerPos_ == null ?
-              org.sorapointa.proto.VectorOuterClass.Vector.getDefaultInstance() : centerPos_;
+              emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance() : centerPos_;
         }
       }
       /**
        * <code>.Vector center_pos = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          org.sorapointa.proto.VectorOuterClass.Vector, org.sorapointa.proto.VectorOuterClass.Vector.Builder, org.sorapointa.proto.VectorOuterClass.VectorOrBuilder> 
+          emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder> 
           getCenterPosFieldBuilder() {
         if (centerPosBuilder_ == null) {
           centerPosBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              org.sorapointa.proto.VectorOuterClass.Vector, org.sorapointa.proto.VectorOuterClass.Vector.Builder, org.sorapointa.proto.VectorOuterClass.VectorOrBuilder>(
+              emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder>(
                   getCenterPos(),
                   getParentForChildren(),
                   isClean());
@@ -801,22 +801,22 @@ public final class TreasureMapDetectorDataOuterClass {
         return centerPosBuilder_;
       }
 
-      private java.util.List<org.sorapointa.proto.VectorOuterClass.Vector> spotList_ =
+      private java.util.List<emu.grasscutter.net.proto.VectorOuterClass.Vector> spotList_ =
         java.util.Collections.emptyList();
       private void ensureSpotListIsMutable() {
         if (!((bitField0_ & 0x00000001) != 0)) {
-          spotList_ = new java.util.ArrayList<org.sorapointa.proto.VectorOuterClass.Vector>(spotList_);
+          spotList_ = new java.util.ArrayList<emu.grasscutter.net.proto.VectorOuterClass.Vector>(spotList_);
           bitField0_ |= 0x00000001;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          org.sorapointa.proto.VectorOuterClass.Vector, org.sorapointa.proto.VectorOuterClass.Vector.Builder, org.sorapointa.proto.VectorOuterClass.VectorOrBuilder> spotListBuilder_;
+          emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder> spotListBuilder_;
 
       /**
        * <code>repeated .Vector spot_list = 2;</code>
        */
-      public java.util.List<org.sorapointa.proto.VectorOuterClass.Vector> getSpotListList() {
+      public java.util.List<emu.grasscutter.net.proto.VectorOuterClass.Vector> getSpotListList() {
         if (spotListBuilder_ == null) {
           return java.util.Collections.unmodifiableList(spotList_);
         } else {
@@ -836,7 +836,7 @@ public final class TreasureMapDetectorDataOuterClass {
       /**
        * <code>repeated .Vector spot_list = 2;</code>
        */
-      public org.sorapointa.proto.VectorOuterClass.Vector getSpotList(int index) {
+      public emu.grasscutter.net.proto.VectorOuterClass.Vector getSpotList(int index) {
         if (spotListBuilder_ == null) {
           return spotList_.get(index);
         } else {
@@ -847,7 +847,7 @@ public final class TreasureMapDetectorDataOuterClass {
        * <code>repeated .Vector spot_list = 2;</code>
        */
       public Builder setSpotList(
-          int index, org.sorapointa.proto.VectorOuterClass.Vector value) {
+          int index, emu.grasscutter.net.proto.VectorOuterClass.Vector value) {
         if (spotListBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -864,7 +864,7 @@ public final class TreasureMapDetectorDataOuterClass {
        * <code>repeated .Vector spot_list = 2;</code>
        */
       public Builder setSpotList(
-          int index, org.sorapointa.proto.VectorOuterClass.Vector.Builder builderForValue) {
+          int index, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder builderForValue) {
         if (spotListBuilder_ == null) {
           ensureSpotListIsMutable();
           spotList_.set(index, builderForValue.build());
@@ -877,7 +877,7 @@ public final class TreasureMapDetectorDataOuterClass {
       /**
        * <code>repeated .Vector spot_list = 2;</code>
        */
-      public Builder addSpotList(org.sorapointa.proto.VectorOuterClass.Vector value) {
+      public Builder addSpotList(emu.grasscutter.net.proto.VectorOuterClass.Vector value) {
         if (spotListBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -894,7 +894,7 @@ public final class TreasureMapDetectorDataOuterClass {
        * <code>repeated .Vector spot_list = 2;</code>
        */
       public Builder addSpotList(
-          int index, org.sorapointa.proto.VectorOuterClass.Vector value) {
+          int index, emu.grasscutter.net.proto.VectorOuterClass.Vector value) {
         if (spotListBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -911,7 +911,7 @@ public final class TreasureMapDetectorDataOuterClass {
        * <code>repeated .Vector spot_list = 2;</code>
        */
       public Builder addSpotList(
-          org.sorapointa.proto.VectorOuterClass.Vector.Builder builderForValue) {
+          emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder builderForValue) {
         if (spotListBuilder_ == null) {
           ensureSpotListIsMutable();
           spotList_.add(builderForValue.build());
@@ -925,7 +925,7 @@ public final class TreasureMapDetectorDataOuterClass {
        * <code>repeated .Vector spot_list = 2;</code>
        */
       public Builder addSpotList(
-          int index, org.sorapointa.proto.VectorOuterClass.Vector.Builder builderForValue) {
+          int index, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder builderForValue) {
         if (spotListBuilder_ == null) {
           ensureSpotListIsMutable();
           spotList_.add(index, builderForValue.build());
@@ -939,7 +939,7 @@ public final class TreasureMapDetectorDataOuterClass {
        * <code>repeated .Vector spot_list = 2;</code>
        */
       public Builder addAllSpotList(
-          java.lang.Iterable<? extends org.sorapointa.proto.VectorOuterClass.Vector> values) {
+          java.lang.Iterable<? extends emu.grasscutter.net.proto.VectorOuterClass.Vector> values) {
         if (spotListBuilder_ == null) {
           ensureSpotListIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -979,14 +979,14 @@ public final class TreasureMapDetectorDataOuterClass {
       /**
        * <code>repeated .Vector spot_list = 2;</code>
        */
-      public org.sorapointa.proto.VectorOuterClass.Vector.Builder getSpotListBuilder(
+      public emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder getSpotListBuilder(
           int index) {
         return getSpotListFieldBuilder().getBuilder(index);
       }
       /**
        * <code>repeated .Vector spot_list = 2;</code>
        */
-      public org.sorapointa.proto.VectorOuterClass.VectorOrBuilder getSpotListOrBuilder(
+      public emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getSpotListOrBuilder(
           int index) {
         if (spotListBuilder_ == null) {
           return spotList_.get(index);  } else {
@@ -996,7 +996,7 @@ public final class TreasureMapDetectorDataOuterClass {
       /**
        * <code>repeated .Vector spot_list = 2;</code>
        */
-      public java.util.List<? extends org.sorapointa.proto.VectorOuterClass.VectorOrBuilder> 
+      public java.util.List<? extends emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder> 
            getSpotListOrBuilderList() {
         if (spotListBuilder_ != null) {
           return spotListBuilder_.getMessageOrBuilderList();
@@ -1007,31 +1007,31 @@ public final class TreasureMapDetectorDataOuterClass {
       /**
        * <code>repeated .Vector spot_list = 2;</code>
        */
-      public org.sorapointa.proto.VectorOuterClass.Vector.Builder addSpotListBuilder() {
+      public emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder addSpotListBuilder() {
         return getSpotListFieldBuilder().addBuilder(
-            org.sorapointa.proto.VectorOuterClass.Vector.getDefaultInstance());
+            emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance());
       }
       /**
        * <code>repeated .Vector spot_list = 2;</code>
        */
-      public org.sorapointa.proto.VectorOuterClass.Vector.Builder addSpotListBuilder(
+      public emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder addSpotListBuilder(
           int index) {
         return getSpotListFieldBuilder().addBuilder(
-            index, org.sorapointa.proto.VectorOuterClass.Vector.getDefaultInstance());
+            index, emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance());
       }
       /**
        * <code>repeated .Vector spot_list = 2;</code>
        */
-      public java.util.List<org.sorapointa.proto.VectorOuterClass.Vector.Builder> 
+      public java.util.List<emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder> 
            getSpotListBuilderList() {
         return getSpotListFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          org.sorapointa.proto.VectorOuterClass.Vector, org.sorapointa.proto.VectorOuterClass.Vector.Builder, org.sorapointa.proto.VectorOuterClass.VectorOrBuilder> 
+          emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder> 
           getSpotListFieldBuilder() {
         if (spotListBuilder_ == null) {
           spotListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              org.sorapointa.proto.VectorOuterClass.Vector, org.sorapointa.proto.VectorOuterClass.Vector.Builder, org.sorapointa.proto.VectorOuterClass.VectorOrBuilder>(
+              emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder>(
                   spotList_,
                   ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
@@ -1221,7 +1221,7 @@ public final class TreasureMapDetectorDataOuterClass {
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          org.sorapointa.proto.VectorOuterClass.getDescriptor(),
+          emu.grasscutter.net.proto.VectorOuterClass.getDescriptor(),
         });
     internal_static_TreasureMapDetectorData_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -1229,7 +1229,7 @@ public final class TreasureMapDetectorDataOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_TreasureMapDetectorData_descriptor,
         new java.lang.String[] { "CenterPos", "SpotList", "RegionId", "Radius", "IsRegionDetected", });
-    org.sorapointa.proto.VectorOuterClass.getDescriptor();
+    emu.grasscutter.net.proto.VectorOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
