@@ -28,6 +28,8 @@ public class HandlerCombatInvocationsNotify extends PacketHandler {
 
     @Override
     public void handle(GameSession session, byte[] header, byte[] payload) throws Exception {
+        Player player = session.getPlayer();
+        if (player == null || player.getScene() == null || player.getSceneLoadState() == Player.SceneLoadState.LOADING) return;
         CombatInvocationsNotify notify = CombatInvocationsNotify.parseFrom(payload);
         for (CombatInvokeEntry entry : notify.getInvokeListList()) {
             // Handle combat invoke
