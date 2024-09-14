@@ -19,28 +19,24 @@ public final class CityReputationHuntInfoOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>bool is_open = 10;</code>
+     * <code>uint32 cur_week_finish_num = 4;</code>
+     * @return The curWeekFinishNum.
+     */
+    int getCurWeekFinishNum();
+
+    /**
+     * <code>bool is_open = 8;</code>
      * @return The isOpen.
      */
     boolean getIsOpen();
 
     /**
-     * <code>bool has_reward = 4;</code>
+     * <code>bool has_reward = 10;</code>
      * @return The hasReward.
      */
     boolean getHasReward();
-
-    /**
-     * <code>uint32 cur_week_finish_num = 3;</code>
-     * @return The curWeekFinishNum.
-     */
-    int getCurWeekFinishNum();
   }
   /**
-   * <pre>
-   * Obf: JGMFFPHIBEL
-   * </pre>
-   *
    * Protobuf type {@code CityReputationHuntInfo}
    */
   public static final class CityReputationHuntInfo extends
@@ -67,58 +63,6 @@ public final class CityReputationHuntInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private CityReputationHuntInfo(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 24: {
-
-              curWeekFinishNum_ = input.readUInt32();
-              break;
-            }
-            case 32: {
-
-              hasReward_ = input.readBool();
-              break;
-            }
-            case 80: {
-
-              isOpen_ = input.readBool();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.CityReputationHuntInfoOuterClass.internal_static_CityReputationHuntInfo_descriptor;
@@ -132,10 +76,21 @@ public final class CityReputationHuntInfoOuterClass {
               emu.grasscutter.net.proto.CityReputationHuntInfoOuterClass.CityReputationHuntInfo.class, emu.grasscutter.net.proto.CityReputationHuntInfoOuterClass.CityReputationHuntInfo.Builder.class);
     }
 
-    public static final int IS_OPEN_FIELD_NUMBER = 10;
+    public static final int CUR_WEEK_FINISH_NUM_FIELD_NUMBER = 4;
+    private int curWeekFinishNum_;
+    /**
+     * <code>uint32 cur_week_finish_num = 4;</code>
+     * @return The curWeekFinishNum.
+     */
+    @java.lang.Override
+    public int getCurWeekFinishNum() {
+      return curWeekFinishNum_;
+    }
+
+    public static final int IS_OPEN_FIELD_NUMBER = 8;
     private boolean isOpen_;
     /**
-     * <code>bool is_open = 10;</code>
+     * <code>bool is_open = 8;</code>
      * @return The isOpen.
      */
     @java.lang.Override
@@ -143,26 +98,15 @@ public final class CityReputationHuntInfoOuterClass {
       return isOpen_;
     }
 
-    public static final int HAS_REWARD_FIELD_NUMBER = 4;
+    public static final int HAS_REWARD_FIELD_NUMBER = 10;
     private boolean hasReward_;
     /**
-     * <code>bool has_reward = 4;</code>
+     * <code>bool has_reward = 10;</code>
      * @return The hasReward.
      */
     @java.lang.Override
     public boolean getHasReward() {
       return hasReward_;
-    }
-
-    public static final int CUR_WEEK_FINISH_NUM_FIELD_NUMBER = 3;
-    private int curWeekFinishNum_;
-    /**
-     * <code>uint32 cur_week_finish_num = 3;</code>
-     * @return The curWeekFinishNum.
-     */
-    @java.lang.Override
-    public int getCurWeekFinishNum() {
-      return curWeekFinishNum_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -180,15 +124,15 @@ public final class CityReputationHuntInfoOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (curWeekFinishNum_ != 0) {
-        output.writeUInt32(3, curWeekFinishNum_);
-      }
-      if (hasReward_ != false) {
-        output.writeBool(4, hasReward_);
+        output.writeUInt32(4, curWeekFinishNum_);
       }
       if (isOpen_ != false) {
-        output.writeBool(10, isOpen_);
+        output.writeBool(8, isOpen_);
       }
-      unknownFields.writeTo(output);
+      if (hasReward_ != false) {
+        output.writeBool(10, hasReward_);
+      }
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -199,17 +143,17 @@ public final class CityReputationHuntInfoOuterClass {
       size = 0;
       if (curWeekFinishNum_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(3, curWeekFinishNum_);
-      }
-      if (hasReward_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(4, hasReward_);
+          .computeUInt32Size(4, curWeekFinishNum_);
       }
       if (isOpen_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(10, isOpen_);
+          .computeBoolSize(8, isOpen_);
       }
-      size += unknownFields.getSerializedSize();
+      if (hasReward_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(10, hasReward_);
+      }
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -224,13 +168,13 @@ public final class CityReputationHuntInfoOuterClass {
       }
       emu.grasscutter.net.proto.CityReputationHuntInfoOuterClass.CityReputationHuntInfo other = (emu.grasscutter.net.proto.CityReputationHuntInfoOuterClass.CityReputationHuntInfo) obj;
 
+      if (getCurWeekFinishNum()
+          != other.getCurWeekFinishNum()) return false;
       if (getIsOpen()
           != other.getIsOpen()) return false;
       if (getHasReward()
           != other.getHasReward()) return false;
-      if (getCurWeekFinishNum()
-          != other.getCurWeekFinishNum()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -241,15 +185,15 @@ public final class CityReputationHuntInfoOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CUR_WEEK_FINISH_NUM_FIELD_NUMBER;
+      hash = (53 * hash) + getCurWeekFinishNum();
       hash = (37 * hash) + IS_OPEN_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsOpen());
       hash = (37 * hash) + HAS_REWARD_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getHasReward());
-      hash = (37 * hash) + CUR_WEEK_FINISH_NUM_FIELD_NUMBER;
-      hash = (53 * hash) + getCurWeekFinishNum();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -345,10 +289,6 @@ public final class CityReputationHuntInfoOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * Obf: JGMFFPHIBEL
-     * </pre>
-     *
      * Protobuf type {@code CityReputationHuntInfo}
      */
     public static final class Builder extends
@@ -370,27 +310,22 @@ public final class CityReputationHuntInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.CityReputationHuntInfoOuterClass.CityReputationHuntInfo.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        curWeekFinishNum_ = 0;
+
         isOpen_ = false;
 
         hasReward_ = false;
-
-        curWeekFinishNum_ = 0;
 
         return this;
       }
@@ -418,9 +353,9 @@ public final class CityReputationHuntInfoOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.CityReputationHuntInfoOuterClass.CityReputationHuntInfo buildPartial() {
         emu.grasscutter.net.proto.CityReputationHuntInfoOuterClass.CityReputationHuntInfo result = new emu.grasscutter.net.proto.CityReputationHuntInfoOuterClass.CityReputationHuntInfo(this);
+        result.curWeekFinishNum_ = curWeekFinishNum_;
         result.isOpen_ = isOpen_;
         result.hasReward_ = hasReward_;
-        result.curWeekFinishNum_ = curWeekFinishNum_;
         onBuilt();
         return result;
       }
@@ -469,16 +404,16 @@ public final class CityReputationHuntInfoOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.CityReputationHuntInfoOuterClass.CityReputationHuntInfo other) {
         if (other == emu.grasscutter.net.proto.CityReputationHuntInfoOuterClass.CityReputationHuntInfo.getDefaultInstance()) return this;
+        if (other.getCurWeekFinishNum() != 0) {
+          setCurWeekFinishNum(other.getCurWeekFinishNum());
+        }
         if (other.getIsOpen() != false) {
           setIsOpen(other.getIsOpen());
         }
         if (other.getHasReward() != false) {
           setHasReward(other.getHasReward());
         }
-        if (other.getCurWeekFinishNum() != 0) {
-          setCurWeekFinishNum(other.getCurWeekFinishNum());
-        }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -493,23 +428,82 @@ public final class CityReputationHuntInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.CityReputationHuntInfoOuterClass.CityReputationHuntInfo parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 32: {
+                curWeekFinishNum_ = input.readUInt32();
+
+                break;
+              } // case 32
+              case 64: {
+                isOpen_ = input.readBool();
+
+                break;
+              } // case 64
+              case 80: {
+                hasReward_ = input.readBool();
+
+                break;
+              } // case 80
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.CityReputationHuntInfoOuterClass.CityReputationHuntInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
+        return this;
+      }
+
+      private int curWeekFinishNum_ ;
+      /**
+       * <code>uint32 cur_week_finish_num = 4;</code>
+       * @return The curWeekFinishNum.
+       */
+      @java.lang.Override
+      public int getCurWeekFinishNum() {
+        return curWeekFinishNum_;
+      }
+      /**
+       * <code>uint32 cur_week_finish_num = 4;</code>
+       * @param value The curWeekFinishNum to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCurWeekFinishNum(int value) {
+        
+        curWeekFinishNum_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 cur_week_finish_num = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCurWeekFinishNum() {
+        
+        curWeekFinishNum_ = 0;
+        onChanged();
         return this;
       }
 
       private boolean isOpen_ ;
       /**
-       * <code>bool is_open = 10;</code>
+       * <code>bool is_open = 8;</code>
        * @return The isOpen.
        */
       @java.lang.Override
@@ -517,7 +511,7 @@ public final class CityReputationHuntInfoOuterClass {
         return isOpen_;
       }
       /**
-       * <code>bool is_open = 10;</code>
+       * <code>bool is_open = 8;</code>
        * @param value The isOpen to set.
        * @return This builder for chaining.
        */
@@ -528,7 +522,7 @@ public final class CityReputationHuntInfoOuterClass {
         return this;
       }
       /**
-       * <code>bool is_open = 10;</code>
+       * <code>bool is_open = 8;</code>
        * @return This builder for chaining.
        */
       public Builder clearIsOpen() {
@@ -540,7 +534,7 @@ public final class CityReputationHuntInfoOuterClass {
 
       private boolean hasReward_ ;
       /**
-       * <code>bool has_reward = 4;</code>
+       * <code>bool has_reward = 10;</code>
        * @return The hasReward.
        */
       @java.lang.Override
@@ -548,7 +542,7 @@ public final class CityReputationHuntInfoOuterClass {
         return hasReward_;
       }
       /**
-       * <code>bool has_reward = 4;</code>
+       * <code>bool has_reward = 10;</code>
        * @param value The hasReward to set.
        * @return This builder for chaining.
        */
@@ -559,43 +553,12 @@ public final class CityReputationHuntInfoOuterClass {
         return this;
       }
       /**
-       * <code>bool has_reward = 4;</code>
+       * <code>bool has_reward = 10;</code>
        * @return This builder for chaining.
        */
       public Builder clearHasReward() {
         
         hasReward_ = false;
-        onChanged();
-        return this;
-      }
-
-      private int curWeekFinishNum_ ;
-      /**
-       * <code>uint32 cur_week_finish_num = 3;</code>
-       * @return The curWeekFinishNum.
-       */
-      @java.lang.Override
-      public int getCurWeekFinishNum() {
-        return curWeekFinishNum_;
-      }
-      /**
-       * <code>uint32 cur_week_finish_num = 3;</code>
-       * @param value The curWeekFinishNum to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCurWeekFinishNum(int value) {
-        
-        curWeekFinishNum_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 cur_week_finish_num = 3;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCurWeekFinishNum() {
-        
-        curWeekFinishNum_ = 0;
         onChanged();
         return this;
       }
@@ -632,7 +595,18 @@ public final class CityReputationHuntInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new CityReputationHuntInfo(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -667,9 +641,9 @@ public final class CityReputationHuntInfoOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\034CityReputationHuntInfo.proto\"Z\n\026CityRe" +
-      "putationHuntInfo\022\017\n\007is_open\030\n \001(\010\022\022\n\nhas" +
-      "_reward\030\004 \001(\010\022\033\n\023cur_week_finish_num\030\003 \001" +
-      "(\rB\033\n\031emu.grasscutter.net.protob\006proto3"
+      "putationHuntInfo\022\033\n\023cur_week_finish_num\030" +
+      "\004 \001(\r\022\017\n\007is_open\030\010 \001(\010\022\022\n\nhas_reward\030\n \001" +
+      "(\010B\033\n\031emu.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -680,7 +654,7 @@ public final class CityReputationHuntInfoOuterClass {
     internal_static_CityReputationHuntInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CityReputationHuntInfo_descriptor,
-        new java.lang.String[] { "IsOpen", "HasReward", "CurWeekFinishNum", });
+        new java.lang.String[] { "CurWeekFinishNum", "IsOpen", "HasReward", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

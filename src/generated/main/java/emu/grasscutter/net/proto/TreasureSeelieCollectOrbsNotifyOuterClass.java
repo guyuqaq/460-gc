@@ -19,20 +19,20 @@ public final class TreasureSeelieCollectOrbsNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 total_num = 9;</code>
+     * <code>uint32 total_num = 2;</code>
      * @return The totalNum.
      */
     int getTotalNum();
 
     /**
-     * <code>uint32 current_num = 15;</code>
+     * <code>uint32 current_num = 10;</code>
      * @return The currentNum.
      */
     int getCurrentNum();
   }
   /**
    * <pre>
-   * CmdId: 28836
+   * CmdId: 25896
    * Obf: DEKFKAKMIAP
    * </pre>
    *
@@ -62,53 +62,6 @@ public final class TreasureSeelieCollectOrbsNotifyOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private TreasureSeelieCollectOrbsNotify(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 72: {
-
-              totalNum_ = input.readUInt32();
-              break;
-            }
-            case 120: {
-
-              currentNum_ = input.readUInt32();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.TreasureSeelieCollectOrbsNotifyOuterClass.internal_static_TreasureSeelieCollectOrbsNotify_descriptor;
@@ -122,10 +75,10 @@ public final class TreasureSeelieCollectOrbsNotifyOuterClass {
               emu.grasscutter.net.proto.TreasureSeelieCollectOrbsNotifyOuterClass.TreasureSeelieCollectOrbsNotify.class, emu.grasscutter.net.proto.TreasureSeelieCollectOrbsNotifyOuterClass.TreasureSeelieCollectOrbsNotify.Builder.class);
     }
 
-    public static final int TOTAL_NUM_FIELD_NUMBER = 9;
+    public static final int TOTAL_NUM_FIELD_NUMBER = 2;
     private int totalNum_;
     /**
-     * <code>uint32 total_num = 9;</code>
+     * <code>uint32 total_num = 2;</code>
      * @return The totalNum.
      */
     @java.lang.Override
@@ -133,10 +86,10 @@ public final class TreasureSeelieCollectOrbsNotifyOuterClass {
       return totalNum_;
     }
 
-    public static final int CURRENT_NUM_FIELD_NUMBER = 15;
+    public static final int CURRENT_NUM_FIELD_NUMBER = 10;
     private int currentNum_;
     /**
-     * <code>uint32 current_num = 15;</code>
+     * <code>uint32 current_num = 10;</code>
      * @return The currentNum.
      */
     @java.lang.Override
@@ -159,12 +112,12 @@ public final class TreasureSeelieCollectOrbsNotifyOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (totalNum_ != 0) {
-        output.writeUInt32(9, totalNum_);
+        output.writeUInt32(2, totalNum_);
       }
       if (currentNum_ != 0) {
-        output.writeUInt32(15, currentNum_);
+        output.writeUInt32(10, currentNum_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -175,13 +128,13 @@ public final class TreasureSeelieCollectOrbsNotifyOuterClass {
       size = 0;
       if (totalNum_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(9, totalNum_);
+          .computeUInt32Size(2, totalNum_);
       }
       if (currentNum_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(15, currentNum_);
+          .computeUInt32Size(10, currentNum_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -200,7 +153,7 @@ public final class TreasureSeelieCollectOrbsNotifyOuterClass {
           != other.getTotalNum()) return false;
       if (getCurrentNum()
           != other.getCurrentNum()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -215,7 +168,7 @@ public final class TreasureSeelieCollectOrbsNotifyOuterClass {
       hash = (53 * hash) + getTotalNum();
       hash = (37 * hash) + CURRENT_NUM_FIELD_NUMBER;
       hash = (53 * hash) + getCurrentNum();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -312,7 +265,7 @@ public final class TreasureSeelieCollectOrbsNotifyOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 28836
+     * CmdId: 25896
      * Obf: DEKFKAKMIAP
      * </pre>
      *
@@ -337,18 +290,13 @@ public final class TreasureSeelieCollectOrbsNotifyOuterClass {
 
       // Construct using emu.grasscutter.net.proto.TreasureSeelieCollectOrbsNotifyOuterClass.TreasureSeelieCollectOrbsNotify.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -439,7 +387,7 @@ public final class TreasureSeelieCollectOrbsNotifyOuterClass {
         if (other.getCurrentNum() != 0) {
           setCurrentNum(other.getCurrentNum());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -454,23 +402,46 @@ public final class TreasureSeelieCollectOrbsNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.TreasureSeelieCollectOrbsNotifyOuterClass.TreasureSeelieCollectOrbsNotify parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 16: {
+                totalNum_ = input.readUInt32();
+
+                break;
+              } // case 16
+              case 80: {
+                currentNum_ = input.readUInt32();
+
+                break;
+              } // case 80
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.TreasureSeelieCollectOrbsNotifyOuterClass.TreasureSeelieCollectOrbsNotify) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
       private int totalNum_ ;
       /**
-       * <code>uint32 total_num = 9;</code>
+       * <code>uint32 total_num = 2;</code>
        * @return The totalNum.
        */
       @java.lang.Override
@@ -478,7 +449,7 @@ public final class TreasureSeelieCollectOrbsNotifyOuterClass {
         return totalNum_;
       }
       /**
-       * <code>uint32 total_num = 9;</code>
+       * <code>uint32 total_num = 2;</code>
        * @param value The totalNum to set.
        * @return This builder for chaining.
        */
@@ -489,7 +460,7 @@ public final class TreasureSeelieCollectOrbsNotifyOuterClass {
         return this;
       }
       /**
-       * <code>uint32 total_num = 9;</code>
+       * <code>uint32 total_num = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearTotalNum() {
@@ -501,7 +472,7 @@ public final class TreasureSeelieCollectOrbsNotifyOuterClass {
 
       private int currentNum_ ;
       /**
-       * <code>uint32 current_num = 15;</code>
+       * <code>uint32 current_num = 10;</code>
        * @return The currentNum.
        */
       @java.lang.Override
@@ -509,7 +480,7 @@ public final class TreasureSeelieCollectOrbsNotifyOuterClass {
         return currentNum_;
       }
       /**
-       * <code>uint32 current_num = 15;</code>
+       * <code>uint32 current_num = 10;</code>
        * @param value The currentNum to set.
        * @return This builder for chaining.
        */
@@ -520,7 +491,7 @@ public final class TreasureSeelieCollectOrbsNotifyOuterClass {
         return this;
       }
       /**
-       * <code>uint32 current_num = 15;</code>
+       * <code>uint32 current_num = 10;</code>
        * @return This builder for chaining.
        */
       public Builder clearCurrentNum() {
@@ -562,7 +533,18 @@ public final class TreasureSeelieCollectOrbsNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new TreasureSeelieCollectOrbsNotify(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -598,7 +580,7 @@ public final class TreasureSeelieCollectOrbsNotifyOuterClass {
     java.lang.String[] descriptorData = {
       "\n%TreasureSeelieCollectOrbsNotify.proto\"" +
       "I\n\037TreasureSeelieCollectOrbsNotify\022\021\n\tto" +
-      "tal_num\030\t \001(\r\022\023\n\013current_num\030\017 \001(\rB\033\n\031em" +
+      "tal_num\030\002 \001(\r\022\023\n\013current_num\030\n \001(\rB\033\n\031em" +
       "u.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

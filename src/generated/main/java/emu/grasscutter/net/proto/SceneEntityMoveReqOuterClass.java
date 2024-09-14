@@ -19,42 +19,41 @@ public final class SceneEntityMoveReqOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 scene_time = 13;</code>
-     * @return The sceneTime.
+     * <code>.MotionInfo motion_info = 7;</code>
+     * @return Whether the motionInfo field is set.
      */
-    int getSceneTime();
+    boolean hasMotionInfo();
+    /**
+     * <code>.MotionInfo motion_info = 7;</code>
+     * @return The motionInfo.
+     */
+    emu.grasscutter.net.proto.MotionInfoOuterClass.MotionInfo getMotionInfo();
+    /**
+     * <code>.MotionInfo motion_info = 7;</code>
+     */
+    emu.grasscutter.net.proto.MotionInfoOuterClass.MotionInfoOrBuilder getMotionInfoOrBuilder();
 
     /**
-     * <code>uint32 reliable_seq = 9;</code>
+     * <code>uint32 reliable_seq = 5;</code>
      * @return The reliableSeq.
      */
     int getReliableSeq();
 
     /**
-     * <code>uint32 entity_id = 6;</code>
+     * <code>uint32 scene_time = 14;</code>
+     * @return The sceneTime.
+     */
+    int getSceneTime();
+
+    /**
+     * <code>uint32 entity_id = 15;</code>
      * @return The entityId.
      */
     int getEntityId();
-
-    /**
-     * <code>.MotionInfo motion_info = 8;</code>
-     * @return Whether the motionInfo field is set.
-     */
-    boolean hasMotionInfo();
-    /**
-     * <code>.MotionInfo motion_info = 8;</code>
-     * @return The motionInfo.
-     */
-    emu.grasscutter.net.proto.MotionInfoOuterClass.MotionInfo getMotionInfo();
-    /**
-     * <code>.MotionInfo motion_info = 8;</code>
-     */
-    emu.grasscutter.net.proto.MotionInfoOuterClass.MotionInfoOrBuilder getMotionInfoOrBuilder();
   }
   /**
    * <pre>
-   * CmdId: 26916
-   * Obf: MMLNPAIKGGB
+   * CmdId: 7026
    * </pre>
    *
    * Protobuf type {@code SceneEntityMoveReq}
@@ -83,71 +82,6 @@ public final class SceneEntityMoveReqOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private SceneEntityMoveReq(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 48: {
-
-              entityId_ = input.readUInt32();
-              break;
-            }
-            case 66: {
-              emu.grasscutter.net.proto.MotionInfoOuterClass.MotionInfo.Builder subBuilder = null;
-              if (motionInfo_ != null) {
-                subBuilder = motionInfo_.toBuilder();
-              }
-              motionInfo_ = input.readMessage(emu.grasscutter.net.proto.MotionInfoOuterClass.MotionInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(motionInfo_);
-                motionInfo_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 72: {
-
-              reliableSeq_ = input.readUInt32();
-              break;
-            }
-            case 104: {
-
-              sceneTime_ = input.readUInt32();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.SceneEntityMoveReqOuterClass.internal_static_SceneEntityMoveReq_descriptor;
@@ -161,43 +95,10 @@ public final class SceneEntityMoveReqOuterClass {
               emu.grasscutter.net.proto.SceneEntityMoveReqOuterClass.SceneEntityMoveReq.class, emu.grasscutter.net.proto.SceneEntityMoveReqOuterClass.SceneEntityMoveReq.Builder.class);
     }
 
-    public static final int SCENE_TIME_FIELD_NUMBER = 13;
-    private int sceneTime_;
-    /**
-     * <code>uint32 scene_time = 13;</code>
-     * @return The sceneTime.
-     */
-    @java.lang.Override
-    public int getSceneTime() {
-      return sceneTime_;
-    }
-
-    public static final int RELIABLE_SEQ_FIELD_NUMBER = 9;
-    private int reliableSeq_;
-    /**
-     * <code>uint32 reliable_seq = 9;</code>
-     * @return The reliableSeq.
-     */
-    @java.lang.Override
-    public int getReliableSeq() {
-      return reliableSeq_;
-    }
-
-    public static final int ENTITY_ID_FIELD_NUMBER = 6;
-    private int entityId_;
-    /**
-     * <code>uint32 entity_id = 6;</code>
-     * @return The entityId.
-     */
-    @java.lang.Override
-    public int getEntityId() {
-      return entityId_;
-    }
-
-    public static final int MOTION_INFO_FIELD_NUMBER = 8;
+    public static final int MOTION_INFO_FIELD_NUMBER = 7;
     private emu.grasscutter.net.proto.MotionInfoOuterClass.MotionInfo motionInfo_;
     /**
-     * <code>.MotionInfo motion_info = 8;</code>
+     * <code>.MotionInfo motion_info = 7;</code>
      * @return Whether the motionInfo field is set.
      */
     @java.lang.Override
@@ -205,7 +106,7 @@ public final class SceneEntityMoveReqOuterClass {
       return motionInfo_ != null;
     }
     /**
-     * <code>.MotionInfo motion_info = 8;</code>
+     * <code>.MotionInfo motion_info = 7;</code>
      * @return The motionInfo.
      */
     @java.lang.Override
@@ -213,11 +114,44 @@ public final class SceneEntityMoveReqOuterClass {
       return motionInfo_ == null ? emu.grasscutter.net.proto.MotionInfoOuterClass.MotionInfo.getDefaultInstance() : motionInfo_;
     }
     /**
-     * <code>.MotionInfo motion_info = 8;</code>
+     * <code>.MotionInfo motion_info = 7;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.MotionInfoOuterClass.MotionInfoOrBuilder getMotionInfoOrBuilder() {
       return getMotionInfo();
+    }
+
+    public static final int RELIABLE_SEQ_FIELD_NUMBER = 5;
+    private int reliableSeq_;
+    /**
+     * <code>uint32 reliable_seq = 5;</code>
+     * @return The reliableSeq.
+     */
+    @java.lang.Override
+    public int getReliableSeq() {
+      return reliableSeq_;
+    }
+
+    public static final int SCENE_TIME_FIELD_NUMBER = 14;
+    private int sceneTime_;
+    /**
+     * <code>uint32 scene_time = 14;</code>
+     * @return The sceneTime.
+     */
+    @java.lang.Override
+    public int getSceneTime() {
+      return sceneTime_;
+    }
+
+    public static final int ENTITY_ID_FIELD_NUMBER = 15;
+    private int entityId_;
+    /**
+     * <code>uint32 entity_id = 15;</code>
+     * @return The entityId.
+     */
+    @java.lang.Override
+    public int getEntityId() {
+      return entityId_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -234,19 +168,19 @@ public final class SceneEntityMoveReqOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (entityId_ != 0) {
-        output.writeUInt32(6, entityId_);
+      if (reliableSeq_ != 0) {
+        output.writeUInt32(5, reliableSeq_);
       }
       if (motionInfo_ != null) {
-        output.writeMessage(8, getMotionInfo());
-      }
-      if (reliableSeq_ != 0) {
-        output.writeUInt32(9, reliableSeq_);
+        output.writeMessage(7, getMotionInfo());
       }
       if (sceneTime_ != 0) {
-        output.writeUInt32(13, sceneTime_);
+        output.writeUInt32(14, sceneTime_);
       }
-      unknownFields.writeTo(output);
+      if (entityId_ != 0) {
+        output.writeUInt32(15, entityId_);
+      }
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -255,23 +189,23 @@ public final class SceneEntityMoveReqOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (entityId_ != 0) {
+      if (reliableSeq_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(6, entityId_);
+          .computeUInt32Size(5, reliableSeq_);
       }
       if (motionInfo_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(8, getMotionInfo());
-      }
-      if (reliableSeq_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(9, reliableSeq_);
+          .computeMessageSize(7, getMotionInfo());
       }
       if (sceneTime_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(13, sceneTime_);
+          .computeUInt32Size(14, sceneTime_);
       }
-      size += unknownFields.getSerializedSize();
+      if (entityId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(15, entityId_);
+      }
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -286,18 +220,18 @@ public final class SceneEntityMoveReqOuterClass {
       }
       emu.grasscutter.net.proto.SceneEntityMoveReqOuterClass.SceneEntityMoveReq other = (emu.grasscutter.net.proto.SceneEntityMoveReqOuterClass.SceneEntityMoveReq) obj;
 
-      if (getSceneTime()
-          != other.getSceneTime()) return false;
-      if (getReliableSeq()
-          != other.getReliableSeq()) return false;
-      if (getEntityId()
-          != other.getEntityId()) return false;
       if (hasMotionInfo() != other.hasMotionInfo()) return false;
       if (hasMotionInfo()) {
         if (!getMotionInfo()
             .equals(other.getMotionInfo())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (getReliableSeq()
+          != other.getReliableSeq()) return false;
+      if (getSceneTime()
+          != other.getSceneTime()) return false;
+      if (getEntityId()
+          != other.getEntityId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -308,17 +242,17 @@ public final class SceneEntityMoveReqOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + SCENE_TIME_FIELD_NUMBER;
-      hash = (53 * hash) + getSceneTime();
-      hash = (37 * hash) + RELIABLE_SEQ_FIELD_NUMBER;
-      hash = (53 * hash) + getReliableSeq();
-      hash = (37 * hash) + ENTITY_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getEntityId();
       if (hasMotionInfo()) {
         hash = (37 * hash) + MOTION_INFO_FIELD_NUMBER;
         hash = (53 * hash) + getMotionInfo().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (37 * hash) + RELIABLE_SEQ_FIELD_NUMBER;
+      hash = (53 * hash) + getReliableSeq();
+      hash = (37 * hash) + SCENE_TIME_FIELD_NUMBER;
+      hash = (53 * hash) + getSceneTime();
+      hash = (37 * hash) + ENTITY_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getEntityId();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -415,8 +349,7 @@ public final class SceneEntityMoveReqOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 26916
-     * Obf: MMLNPAIKGGB
+     * CmdId: 7026
      * </pre>
      *
      * Protobuf type {@code SceneEntityMoveReq}
@@ -440,34 +373,29 @@ public final class SceneEntityMoveReqOuterClass {
 
       // Construct using emu.grasscutter.net.proto.SceneEntityMoveReqOuterClass.SceneEntityMoveReq.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        sceneTime_ = 0;
-
-        reliableSeq_ = 0;
-
-        entityId_ = 0;
-
         if (motionInfoBuilder_ == null) {
           motionInfo_ = null;
         } else {
           motionInfo_ = null;
           motionInfoBuilder_ = null;
         }
+        reliableSeq_ = 0;
+
+        sceneTime_ = 0;
+
+        entityId_ = 0;
+
         return this;
       }
 
@@ -494,14 +422,14 @@ public final class SceneEntityMoveReqOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.SceneEntityMoveReqOuterClass.SceneEntityMoveReq buildPartial() {
         emu.grasscutter.net.proto.SceneEntityMoveReqOuterClass.SceneEntityMoveReq result = new emu.grasscutter.net.proto.SceneEntityMoveReqOuterClass.SceneEntityMoveReq(this);
-        result.sceneTime_ = sceneTime_;
-        result.reliableSeq_ = reliableSeq_;
-        result.entityId_ = entityId_;
         if (motionInfoBuilder_ == null) {
           result.motionInfo_ = motionInfo_;
         } else {
           result.motionInfo_ = motionInfoBuilder_.build();
         }
+        result.reliableSeq_ = reliableSeq_;
+        result.sceneTime_ = sceneTime_;
+        result.entityId_ = entityId_;
         onBuilt();
         return result;
       }
@@ -550,19 +478,19 @@ public final class SceneEntityMoveReqOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.SceneEntityMoveReqOuterClass.SceneEntityMoveReq other) {
         if (other == emu.grasscutter.net.proto.SceneEntityMoveReqOuterClass.SceneEntityMoveReq.getDefaultInstance()) return this;
-        if (other.getSceneTime() != 0) {
-          setSceneTime(other.getSceneTime());
+        if (other.hasMotionInfo()) {
+          mergeMotionInfo(other.getMotionInfo());
         }
         if (other.getReliableSeq() != 0) {
           setReliableSeq(other.getReliableSeq());
         }
+        if (other.getSceneTime() != 0) {
+          setSceneTime(other.getSceneTime());
+        }
         if (other.getEntityId() != 0) {
           setEntityId(other.getEntityId());
         }
-        if (other.hasMotionInfo()) {
-          mergeMotionInfo(other.getMotionInfo());
-        }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -577,110 +505,52 @@ public final class SceneEntityMoveReqOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.SceneEntityMoveReqOuterClass.SceneEntityMoveReq parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 40: {
+                reliableSeq_ = input.readUInt32();
+
+                break;
+              } // case 40
+              case 58: {
+                input.readMessage(
+                    getMotionInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 58
+              case 112: {
+                sceneTime_ = input.readUInt32();
+
+                break;
+              } // case 112
+              case 120: {
+                entityId_ = input.readUInt32();
+
+                break;
+              } // case 120
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.SceneEntityMoveReqOuterClass.SceneEntityMoveReq) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private int sceneTime_ ;
-      /**
-       * <code>uint32 scene_time = 13;</code>
-       * @return The sceneTime.
-       */
-      @java.lang.Override
-      public int getSceneTime() {
-        return sceneTime_;
-      }
-      /**
-       * <code>uint32 scene_time = 13;</code>
-       * @param value The sceneTime to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSceneTime(int value) {
-        
-        sceneTime_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 scene_time = 13;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearSceneTime() {
-        
-        sceneTime_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int reliableSeq_ ;
-      /**
-       * <code>uint32 reliable_seq = 9;</code>
-       * @return The reliableSeq.
-       */
-      @java.lang.Override
-      public int getReliableSeq() {
-        return reliableSeq_;
-      }
-      /**
-       * <code>uint32 reliable_seq = 9;</code>
-       * @param value The reliableSeq to set.
-       * @return This builder for chaining.
-       */
-      public Builder setReliableSeq(int value) {
-        
-        reliableSeq_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 reliable_seq = 9;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearReliableSeq() {
-        
-        reliableSeq_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int entityId_ ;
-      /**
-       * <code>uint32 entity_id = 6;</code>
-       * @return The entityId.
-       */
-      @java.lang.Override
-      public int getEntityId() {
-        return entityId_;
-      }
-      /**
-       * <code>uint32 entity_id = 6;</code>
-       * @param value The entityId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setEntityId(int value) {
-        
-        entityId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 entity_id = 6;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearEntityId() {
-        
-        entityId_ = 0;
-        onChanged();
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -688,14 +558,14 @@ public final class SceneEntityMoveReqOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.MotionInfoOuterClass.MotionInfo, emu.grasscutter.net.proto.MotionInfoOuterClass.MotionInfo.Builder, emu.grasscutter.net.proto.MotionInfoOuterClass.MotionInfoOrBuilder> motionInfoBuilder_;
       /**
-       * <code>.MotionInfo motion_info = 8;</code>
+       * <code>.MotionInfo motion_info = 7;</code>
        * @return Whether the motionInfo field is set.
        */
       public boolean hasMotionInfo() {
         return motionInfoBuilder_ != null || motionInfo_ != null;
       }
       /**
-       * <code>.MotionInfo motion_info = 8;</code>
+       * <code>.MotionInfo motion_info = 7;</code>
        * @return The motionInfo.
        */
       public emu.grasscutter.net.proto.MotionInfoOuterClass.MotionInfo getMotionInfo() {
@@ -706,7 +576,7 @@ public final class SceneEntityMoveReqOuterClass {
         }
       }
       /**
-       * <code>.MotionInfo motion_info = 8;</code>
+       * <code>.MotionInfo motion_info = 7;</code>
        */
       public Builder setMotionInfo(emu.grasscutter.net.proto.MotionInfoOuterClass.MotionInfo value) {
         if (motionInfoBuilder_ == null) {
@@ -722,7 +592,7 @@ public final class SceneEntityMoveReqOuterClass {
         return this;
       }
       /**
-       * <code>.MotionInfo motion_info = 8;</code>
+       * <code>.MotionInfo motion_info = 7;</code>
        */
       public Builder setMotionInfo(
           emu.grasscutter.net.proto.MotionInfoOuterClass.MotionInfo.Builder builderForValue) {
@@ -736,7 +606,7 @@ public final class SceneEntityMoveReqOuterClass {
         return this;
       }
       /**
-       * <code>.MotionInfo motion_info = 8;</code>
+       * <code>.MotionInfo motion_info = 7;</code>
        */
       public Builder mergeMotionInfo(emu.grasscutter.net.proto.MotionInfoOuterClass.MotionInfo value) {
         if (motionInfoBuilder_ == null) {
@@ -754,7 +624,7 @@ public final class SceneEntityMoveReqOuterClass {
         return this;
       }
       /**
-       * <code>.MotionInfo motion_info = 8;</code>
+       * <code>.MotionInfo motion_info = 7;</code>
        */
       public Builder clearMotionInfo() {
         if (motionInfoBuilder_ == null) {
@@ -768,7 +638,7 @@ public final class SceneEntityMoveReqOuterClass {
         return this;
       }
       /**
-       * <code>.MotionInfo motion_info = 8;</code>
+       * <code>.MotionInfo motion_info = 7;</code>
        */
       public emu.grasscutter.net.proto.MotionInfoOuterClass.MotionInfo.Builder getMotionInfoBuilder() {
         
@@ -776,7 +646,7 @@ public final class SceneEntityMoveReqOuterClass {
         return getMotionInfoFieldBuilder().getBuilder();
       }
       /**
-       * <code>.MotionInfo motion_info = 8;</code>
+       * <code>.MotionInfo motion_info = 7;</code>
        */
       public emu.grasscutter.net.proto.MotionInfoOuterClass.MotionInfoOrBuilder getMotionInfoOrBuilder() {
         if (motionInfoBuilder_ != null) {
@@ -787,7 +657,7 @@ public final class SceneEntityMoveReqOuterClass {
         }
       }
       /**
-       * <code>.MotionInfo motion_info = 8;</code>
+       * <code>.MotionInfo motion_info = 7;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.MotionInfoOuterClass.MotionInfo, emu.grasscutter.net.proto.MotionInfoOuterClass.MotionInfo.Builder, emu.grasscutter.net.proto.MotionInfoOuterClass.MotionInfoOrBuilder> 
@@ -801,6 +671,99 @@ public final class SceneEntityMoveReqOuterClass {
           motionInfo_ = null;
         }
         return motionInfoBuilder_;
+      }
+
+      private int reliableSeq_ ;
+      /**
+       * <code>uint32 reliable_seq = 5;</code>
+       * @return The reliableSeq.
+       */
+      @java.lang.Override
+      public int getReliableSeq() {
+        return reliableSeq_;
+      }
+      /**
+       * <code>uint32 reliable_seq = 5;</code>
+       * @param value The reliableSeq to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReliableSeq(int value) {
+        
+        reliableSeq_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 reliable_seq = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearReliableSeq() {
+        
+        reliableSeq_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int sceneTime_ ;
+      /**
+       * <code>uint32 scene_time = 14;</code>
+       * @return The sceneTime.
+       */
+      @java.lang.Override
+      public int getSceneTime() {
+        return sceneTime_;
+      }
+      /**
+       * <code>uint32 scene_time = 14;</code>
+       * @param value The sceneTime to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSceneTime(int value) {
+        
+        sceneTime_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 scene_time = 14;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSceneTime() {
+        
+        sceneTime_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int entityId_ ;
+      /**
+       * <code>uint32 entity_id = 15;</code>
+       * @return The entityId.
+       */
+      @java.lang.Override
+      public int getEntityId() {
+        return entityId_;
+      }
+      /**
+       * <code>uint32 entity_id = 15;</code>
+       * @param value The entityId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEntityId(int value) {
+        
+        entityId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 entity_id = 15;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEntityId() {
+        
+        entityId_ = 0;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -835,7 +798,18 @@ public final class SceneEntityMoveReqOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new SceneEntityMoveReq(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -870,10 +844,10 @@ public final class SceneEntityMoveReqOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\030SceneEntityMoveReq.proto\032\020MotionInfo.p" +
-      "roto\"s\n\022SceneEntityMoveReq\022\022\n\nscene_time" +
-      "\030\r \001(\r\022\024\n\014reliable_seq\030\t \001(\r\022\021\n\tentity_i" +
-      "d\030\006 \001(\r\022 \n\013motion_info\030\010 \001(\0132\013.MotionInf" +
-      "oB\033\n\031emu.grasscutter.net.protob\006proto3"
+      "roto\"s\n\022SceneEntityMoveReq\022 \n\013motion_inf" +
+      "o\030\007 \001(\0132\013.MotionInfo\022\024\n\014reliable_seq\030\005 \001" +
+      "(\r\022\022\n\nscene_time\030\016 \001(\r\022\021\n\tentity_id\030\017 \001(" +
+      "\rB\033\n\031emu.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -885,7 +859,7 @@ public final class SceneEntityMoveReqOuterClass {
     internal_static_SceneEntityMoveReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_SceneEntityMoveReq_descriptor,
-        new java.lang.String[] { "SceneTime", "ReliableSeq", "EntityId", "MotionInfo", });
+        new java.lang.String[] { "MotionInfo", "ReliableSeq", "SceneTime", "EntityId", });
     emu.grasscutter.net.proto.MotionInfoOuterClass.getDescriptor();
   }
 

@@ -26,8 +26,7 @@ public final class SetFriendEnterHomeOptionRspOuterClass {
   }
   /**
    * <pre>
-   * CmdId: 21101
-   * Obf: NPIGIKMGBIE
+   * CmdId: 50020
    * </pre>
    *
    * Protobuf type {@code SetFriendEnterHomeOptionRsp}
@@ -237,8 +236,7 @@ public final class SetFriendEnterHomeOptionRspOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 21101
-     * Obf: NPIGIKMGBIE
+     * CmdId: 50020
      * </pre>
      *
      * Protobuf type {@code SetFriendEnterHomeOptionRsp}

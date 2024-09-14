@@ -33,11 +33,11 @@ public final class CreateEntityInfoOuterClass {
      * <code>.Vector pos = 6;</code>
      * @return The pos.
      */
-    emu.grasscutter.net.proto.VectorOuterClass.Vector getPos();
+    org.sorapointa.proto.VectorOuterClass.Vector getPos();
     /**
      * <code>.Vector pos = 6;</code>
      */
-    emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getPosOrBuilder();
+    org.sorapointa.proto.VectorOuterClass.VectorOrBuilder getPosOrBuilder();
 
     /**
      * <code>.Vector rot = 7;</code>
@@ -48,11 +48,11 @@ public final class CreateEntityInfoOuterClass {
      * <code>.Vector rot = 7;</code>
      * @return The rot.
      */
-    emu.grasscutter.net.proto.VectorOuterClass.Vector getRot();
+    org.sorapointa.proto.VectorOuterClass.Vector getRot();
     /**
      * <code>.Vector rot = 7;</code>
      */
-    emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getRotOrBuilder();
+    org.sorapointa.proto.VectorOuterClass.VectorOrBuilder getRotOrBuilder();
 
     /**
      * <code>uint32 scene_id = 10;</code>
@@ -271,7 +271,7 @@ public final class CreateEntityInfoOuterClass {
     }
 
     public static final int POS_FIELD_NUMBER = 6;
-    private emu.grasscutter.net.proto.VectorOuterClass.Vector pos_;
+    private org.sorapointa.proto.VectorOuterClass.Vector pos_;
     /**
      * <code>.Vector pos = 6;</code>
      * @return Whether the pos field is set.
@@ -285,19 +285,19 @@ public final class CreateEntityInfoOuterClass {
      * @return The pos.
      */
     @java.lang.Override
-    public emu.grasscutter.net.proto.VectorOuterClass.Vector getPos() {
-      return pos_ == null ? emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance() : pos_;
+    public org.sorapointa.proto.VectorOuterClass.Vector getPos() {
+      return pos_ == null ? org.sorapointa.proto.VectorOuterClass.Vector.getDefaultInstance() : pos_;
     }
     /**
      * <code>.Vector pos = 6;</code>
      */
     @java.lang.Override
-    public emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getPosOrBuilder() {
+    public org.sorapointa.proto.VectorOuterClass.VectorOrBuilder getPosOrBuilder() {
       return getPos();
     }
 
     public static final int ROT_FIELD_NUMBER = 7;
-    private emu.grasscutter.net.proto.VectorOuterClass.Vector rot_;
+    private org.sorapointa.proto.VectorOuterClass.Vector rot_;
     /**
      * <code>.Vector rot = 7;</code>
      * @return Whether the rot field is set.
@@ -311,14 +311,14 @@ public final class CreateEntityInfoOuterClass {
      * @return The rot.
      */
     @java.lang.Override
-    public emu.grasscutter.net.proto.VectorOuterClass.Vector getRot() {
-      return rot_ == null ? emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance() : rot_;
+    public org.sorapointa.proto.VectorOuterClass.Vector getRot() {
+      return rot_ == null ? org.sorapointa.proto.VectorOuterClass.Vector.getDefaultInstance() : rot_;
     }
     /**
      * <code>.Vector rot = 7;</code>
      */
     @java.lang.Override
-    public emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getRotOrBuilder() {
+    public org.sorapointa.proto.VectorOuterClass.VectorOrBuilder getRotOrBuilder() {
       return getRot();
     }
 
@@ -1172,9 +1172,9 @@ public final class CreateEntityInfoOuterClass {
         return this;
       }
 
-      private emu.grasscutter.net.proto.VectorOuterClass.Vector pos_;
+      private org.sorapointa.proto.VectorOuterClass.Vector pos_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder> posBuilder_;
+          org.sorapointa.proto.VectorOuterClass.Vector, org.sorapointa.proto.VectorOuterClass.Vector.Builder, org.sorapointa.proto.VectorOuterClass.VectorOrBuilder> posBuilder_;
       /**
        * <code>.Vector pos = 6;</code>
        * @return Whether the pos field is set.
@@ -1186,9 +1186,9 @@ public final class CreateEntityInfoOuterClass {
        * <code>.Vector pos = 6;</code>
        * @return The pos.
        */
-      public emu.grasscutter.net.proto.VectorOuterClass.Vector getPos() {
+      public org.sorapointa.proto.VectorOuterClass.Vector getPos() {
         if (posBuilder_ == null) {
-          return pos_ == null ? emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance() : pos_;
+          return pos_ == null ? org.sorapointa.proto.VectorOuterClass.Vector.getDefaultInstance() : pos_;
         } else {
           return posBuilder_.getMessage();
         }
@@ -1196,7 +1196,7 @@ public final class CreateEntityInfoOuterClass {
       /**
        * <code>.Vector pos = 6;</code>
        */
-      public Builder setPos(emu.grasscutter.net.proto.VectorOuterClass.Vector value) {
+      public Builder setPos(org.sorapointa.proto.VectorOuterClass.Vector value) {
         if (posBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1213,7 +1213,7 @@ public final class CreateEntityInfoOuterClass {
        * <code>.Vector pos = 6;</code>
        */
       public Builder setPos(
-          emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder builderForValue) {
+          org.sorapointa.proto.VectorOuterClass.Vector.Builder builderForValue) {
         if (posBuilder_ == null) {
           pos_ = builderForValue.build();
           onChanged();
@@ -1226,11 +1226,11 @@ public final class CreateEntityInfoOuterClass {
       /**
        * <code>.Vector pos = 6;</code>
        */
-      public Builder mergePos(emu.grasscutter.net.proto.VectorOuterClass.Vector value) {
+      public Builder mergePos(org.sorapointa.proto.VectorOuterClass.Vector value) {
         if (posBuilder_ == null) {
           if (pos_ != null) {
             pos_ =
-              emu.grasscutter.net.proto.VectorOuterClass.Vector.newBuilder(pos_).mergeFrom(value).buildPartial();
+              org.sorapointa.proto.VectorOuterClass.Vector.newBuilder(pos_).mergeFrom(value).buildPartial();
           } else {
             pos_ = value;
           }
@@ -1258,7 +1258,7 @@ public final class CreateEntityInfoOuterClass {
       /**
        * <code>.Vector pos = 6;</code>
        */
-      public emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder getPosBuilder() {
+      public org.sorapointa.proto.VectorOuterClass.Vector.Builder getPosBuilder() {
         
         onChanged();
         return getPosFieldBuilder().getBuilder();
@@ -1266,23 +1266,23 @@ public final class CreateEntityInfoOuterClass {
       /**
        * <code>.Vector pos = 6;</code>
        */
-      public emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getPosOrBuilder() {
+      public org.sorapointa.proto.VectorOuterClass.VectorOrBuilder getPosOrBuilder() {
         if (posBuilder_ != null) {
           return posBuilder_.getMessageOrBuilder();
         } else {
           return pos_ == null ?
-              emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance() : pos_;
+              org.sorapointa.proto.VectorOuterClass.Vector.getDefaultInstance() : pos_;
         }
       }
       /**
        * <code>.Vector pos = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder> 
+          org.sorapointa.proto.VectorOuterClass.Vector, org.sorapointa.proto.VectorOuterClass.Vector.Builder, org.sorapointa.proto.VectorOuterClass.VectorOrBuilder> 
           getPosFieldBuilder() {
         if (posBuilder_ == null) {
           posBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder>(
+              org.sorapointa.proto.VectorOuterClass.Vector, org.sorapointa.proto.VectorOuterClass.Vector.Builder, org.sorapointa.proto.VectorOuterClass.VectorOrBuilder>(
                   getPos(),
                   getParentForChildren(),
                   isClean());
@@ -1291,9 +1291,9 @@ public final class CreateEntityInfoOuterClass {
         return posBuilder_;
       }
 
-      private emu.grasscutter.net.proto.VectorOuterClass.Vector rot_;
+      private org.sorapointa.proto.VectorOuterClass.Vector rot_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder> rotBuilder_;
+          org.sorapointa.proto.VectorOuterClass.Vector, org.sorapointa.proto.VectorOuterClass.Vector.Builder, org.sorapointa.proto.VectorOuterClass.VectorOrBuilder> rotBuilder_;
       /**
        * <code>.Vector rot = 7;</code>
        * @return Whether the rot field is set.
@@ -1305,9 +1305,9 @@ public final class CreateEntityInfoOuterClass {
        * <code>.Vector rot = 7;</code>
        * @return The rot.
        */
-      public emu.grasscutter.net.proto.VectorOuterClass.Vector getRot() {
+      public org.sorapointa.proto.VectorOuterClass.Vector getRot() {
         if (rotBuilder_ == null) {
-          return rot_ == null ? emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance() : rot_;
+          return rot_ == null ? org.sorapointa.proto.VectorOuterClass.Vector.getDefaultInstance() : rot_;
         } else {
           return rotBuilder_.getMessage();
         }
@@ -1315,7 +1315,7 @@ public final class CreateEntityInfoOuterClass {
       /**
        * <code>.Vector rot = 7;</code>
        */
-      public Builder setRot(emu.grasscutter.net.proto.VectorOuterClass.Vector value) {
+      public Builder setRot(org.sorapointa.proto.VectorOuterClass.Vector value) {
         if (rotBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1332,7 +1332,7 @@ public final class CreateEntityInfoOuterClass {
        * <code>.Vector rot = 7;</code>
        */
       public Builder setRot(
-          emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder builderForValue) {
+          org.sorapointa.proto.VectorOuterClass.Vector.Builder builderForValue) {
         if (rotBuilder_ == null) {
           rot_ = builderForValue.build();
           onChanged();
@@ -1345,11 +1345,11 @@ public final class CreateEntityInfoOuterClass {
       /**
        * <code>.Vector rot = 7;</code>
        */
-      public Builder mergeRot(emu.grasscutter.net.proto.VectorOuterClass.Vector value) {
+      public Builder mergeRot(org.sorapointa.proto.VectorOuterClass.Vector value) {
         if (rotBuilder_ == null) {
           if (rot_ != null) {
             rot_ =
-              emu.grasscutter.net.proto.VectorOuterClass.Vector.newBuilder(rot_).mergeFrom(value).buildPartial();
+              org.sorapointa.proto.VectorOuterClass.Vector.newBuilder(rot_).mergeFrom(value).buildPartial();
           } else {
             rot_ = value;
           }
@@ -1377,7 +1377,7 @@ public final class CreateEntityInfoOuterClass {
       /**
        * <code>.Vector rot = 7;</code>
        */
-      public emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder getRotBuilder() {
+      public org.sorapointa.proto.VectorOuterClass.Vector.Builder getRotBuilder() {
         
         onChanged();
         return getRotFieldBuilder().getBuilder();
@@ -1385,23 +1385,23 @@ public final class CreateEntityInfoOuterClass {
       /**
        * <code>.Vector rot = 7;</code>
        */
-      public emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getRotOrBuilder() {
+      public org.sorapointa.proto.VectorOuterClass.VectorOrBuilder getRotOrBuilder() {
         if (rotBuilder_ != null) {
           return rotBuilder_.getMessageOrBuilder();
         } else {
           return rot_ == null ?
-              emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance() : rot_;
+              org.sorapointa.proto.VectorOuterClass.Vector.getDefaultInstance() : rot_;
         }
       }
       /**
        * <code>.Vector rot = 7;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder> 
+          org.sorapointa.proto.VectorOuterClass.Vector, org.sorapointa.proto.VectorOuterClass.Vector.Builder, org.sorapointa.proto.VectorOuterClass.VectorOrBuilder> 
           getRotFieldBuilder() {
         if (rotBuilder_ == null) {
           rotBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder>(
+              org.sorapointa.proto.VectorOuterClass.Vector, org.sorapointa.proto.VectorOuterClass.Vector.Builder, org.sorapointa.proto.VectorOuterClass.VectorOrBuilder>(
                   getRot(),
                   getParentForChildren(),
                   isClean());
@@ -1899,7 +1899,7 @@ public final class CreateEntityInfoOuterClass {
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          emu.grasscutter.net.proto.VectorOuterClass.getDescriptor(),
+          org.sorapointa.proto.VectorOuterClass.getDescriptor(),
           emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.getDescriptor(),
         });
     internal_static_CreateEntityInfo_descriptor =
@@ -1908,7 +1908,7 @@ public final class CreateEntityInfoOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CreateEntityInfo_descriptor,
         new java.lang.String[] { "Level", "Pos", "Rot", "SceneId", "RoomId", "ClientUniqueId", "MonsterId", "NpcId", "GadgetId", "ItemId", "Gadget", "Entity", "EntityCreateInfo", });
-    emu.grasscutter.net.proto.VectorOuterClass.getDescriptor();
+    org.sorapointa.proto.VectorOuterClass.getDescriptor();
     emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.getDescriptor();
   }
 

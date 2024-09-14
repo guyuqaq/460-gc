@@ -218,8 +218,6 @@ public final class PacketOpcodes {
 	public static final int EvtAiSyncSkillCdNotify = 28128;
 	public static final int DungeonChallengeBeginNotify = 28604;
 	public static final int ChallengeDataNotify = 25295;
-	public static final int GetCityReputationInfoReq = 23347;
-	public static final int GetCityReputationInfoRsp = 9100;
 	public static final int GetTribeReputationInfoReq = 2288;
 	public static final int GetTribeReputationInfoRsp = 198;
 	public static final int WorktopOptionNotify = 28583;
@@ -362,8 +360,6 @@ public final class PacketOpcodes {
 	public static final int SetOpenStateReq = 24291;
 	public static final int GetMapMarkTipsReq = 22105;
 	public static final int GetMapMarkTipsRsp = 4123;
-	public static final int GetCityReputationMapInfoReq = 22557;
-	public static final int GetCityReputationMapInfoRsp = 8829;
 	public static final int GetMapAreaReq = 20412;
 	public static final int GetMapAreaRsp = 22235;
 	public static final int GetQuestLackingResourceReq = 25557;
@@ -692,7 +688,6 @@ public final class PacketOpcodes {
     public static final int TowerTeamSelectRsp = 50009; // unknow cmdid
     public static final int TrialAvatarFirstPassDungeonNotify = 8103;
     public static final int PlayerGetForceQuitBanInfoReq = 50015;
-
 	public static final int LeaveWorldNotify = 50016;
 	public static final int ParentQuestInferenceDataNotify = 474;
 	public static final int HomeKickPlayerReq = 6544;
@@ -731,18 +726,36 @@ public final class PacketOpcodes {
 	public static final int TakeCityReputationExploreRewardRsp = 7292;
 	public static final int TakeCityReputationLevelRewardReq = 3880; //or 3752,3880
 	public static final int TakeCityReputationLevelRewardRsp = 24356;
-	public static final int TakePlayerLevelRewardReq = 9556; // or 21606,28655,9556
+	public static final int TakePlayerLevelRewardReq = 9556; 
 	public static final int PlayerLevelRewardUpdateNotify = 27750; 
 
-	public static final int SceneEntityDrownReq = 1;
-	public static final int SceneCreateEntityReq = 1;
-	public static final int SceneCreateEntityRsp = 1;
-	public static final int SceneDestroyEntityReq = 1;
-	public static final int SceneDestroyEntityRsp = 1;
-	public static final int SceneEntitiesMoveCombineNotify = 1;
-	public static final int SceneEntitiesMovesReq = 1;
-	public static final int SceneEntityMoveReq = 1;
-	public static final int SceneEntityMoveRsp = 1;
+	public static final int GetCityReputationInfoReq = 23347;
+	public static final int GetCityReputationInfoRsp = 24488;
+	public static final int GetCityReputationMapInfoReq = 22557;
+	public static final int GetCityReputationMapInfoRsp = 8829;// unknow fields
+	public static final int SetFriendEnterHomeOptionRsp = 50020;// unknow cmdid
+	public static final int SetPlayerPropRsp = 50021;// unknow cmdid
+	public static final int SceneEntityDrownReq = 50022;// unknow cmdid 5341
+	public static final int SceneEntityMoveReq = 7026; // or 7026,22008 
+	public static final int SceneEntityMoveRsp = 9718;
+	public static final int SceneEntitiesMoveCombineNotify = 3166; //or 29269,3166
+	public static final int SceneEntitiesMovesReq = 29269; //or 29269,3166
+	public static final int SceneCreateEntityReq = 8882;
+	public static final int SceneCreateEntityRsp = 7039;
+	public static final int SceneDestroyEntityReq = 50023; // unknow cmdid 9552
+	public static final int SceneDestroyEntityRsp = 3005; // or 3005,6592,22550,20767,23366
+	public static final int TreasureMapBonusChallengeNotify = 1741;
+	public static final int TreasureMapCurrencyNotify = 9476; // or 9476,28662
+	public static final int TreasureMapDetectorDataNotify = 6337;
+	public static final int TreasureMapGuideTaskDoneNotify = 50024;
+	public static final int TreasureMapHostInfoNotify = 50025; // unknow cmdid 2888
+	public static final int TreasureMapMpChallengeNotify = 50026;
+	public static final int TreasureMapPreTaskDoneNotify = 50027;
+	public static final int TreasureMapRegionActiveNotify = 28662; // or 9476,28662
+	public static final int TreasureMapRegionInfoNotify = 4694;
+	public static final int TreasureSeelieCollectOrbsNotify = 25896; //or 25896,23140
+
+
 	public static final int CreateMassiveEntityNotify = 1;
 	public static final int CreateMassiveEntityReq = 1;
 	public static final int CreateMassiveEntityRsp = 1;
@@ -887,8 +900,6 @@ public final class PacketOpcodes {
 	public static final int ServerAnnounceRevokeNotify = 1;
 	public static final int SetChatEmojiCollectionReq = 1;
 	public static final int SetChatEmojiCollectionRsp = 1;
-	public static final int SetFriendEnterHomeOptionRsp = 1;
-	public static final int SetPlayerPropRsp = 1;
 	public static final int SetUpLunchBoxWidgetReq = 1;
 	public static final int SetUpLunchBoxWidgetRsp = 1;
 	public static final int ShowClientGuideNotify = 1;
@@ -2282,16 +2293,6 @@ public final class PacketOpcodes {
 	public static final int TowerRecordHandbookReq = 1;
 	public static final int TowerSurrenderReq = 1;
 	public static final int TowerSurrenderRsp = 1;
-	public static final int TreasureMapBonusChallengeNotify = 1;
-	public static final int TreasureMapCurrencyNotify = 1;
-	public static final int TreasureMapDetectorDataNotify = 1;
-	public static final int TreasureMapGuideTaskDoneNotify = 1;
-	public static final int TreasureMapHostInfoNotify = 1;
-	public static final int TreasureMapMpChallengeNotify = 1;
-	public static final int TreasureMapPreTaskDoneNotify = 1;
-	public static final int TreasureMapRegionActiveNotify = 1;
-	public static final int TreasureMapRegionInfoNotify = 1;
-	public static final int TreasureSeelieCollectOrbsNotify = 1;
 	public static final int TrialAvatarInDungeonIndexNotify = 1;
 	public static final int TriggerCreateGadgetToEquipPartNotify = 1;
 	public static final int TriggerRoguelikeCurseNotify = 1;

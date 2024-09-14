@@ -25,6 +25,10 @@ public final class GetCityReputationInfoReqOuterClass {
     int getCityId();
   }
   /**
+   * <pre>
+   * CmdId: 23347
+   * </pre>
+   *
    * Protobuf type {@code GetCityReputationInfoReq}
    */
   public static final class GetCityReputationInfoReq extends
@@ -231,6 +235,10 @@ public final class GetCityReputationInfoReqOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * CmdId: 23347
+     * </pre>
+     *
      * Protobuf type {@code GetCityReputationInfoReq}
      */
     public static final class Builder extends

@@ -19,24 +19,23 @@ public final class TreasureMapBonusChallengeNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.TreasureMapBonusChallengeInfo info = 11;</code>
+     * <code>.TreasureMapBonusChallengeInfo info = 9;</code>
      * @return Whether the info field is set.
      */
     boolean hasInfo();
     /**
-     * <code>.TreasureMapBonusChallengeInfo info = 11;</code>
+     * <code>.TreasureMapBonusChallengeInfo info = 9;</code>
      * @return The info.
      */
     emu.grasscutter.net.proto.TreasureMapBonusChallengeInfoOuterClass.TreasureMapBonusChallengeInfo getInfo();
     /**
-     * <code>.TreasureMapBonusChallengeInfo info = 11;</code>
+     * <code>.TreasureMapBonusChallengeInfo info = 9;</code>
      */
     emu.grasscutter.net.proto.TreasureMapBonusChallengeInfoOuterClass.TreasureMapBonusChallengeInfoOrBuilder getInfoOrBuilder();
   }
   /**
    * <pre>
-   * CmdId: 23317
-   * Obf: JLLLKAKIGKC
+   * CmdId: 1741
    * </pre>
    *
    * Protobuf type {@code TreasureMapBonusChallengeNotify}
@@ -65,56 +64,6 @@ public final class TreasureMapBonusChallengeNotifyOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private TreasureMapBonusChallengeNotify(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 90: {
-              emu.grasscutter.net.proto.TreasureMapBonusChallengeInfoOuterClass.TreasureMapBonusChallengeInfo.Builder subBuilder = null;
-              if (info_ != null) {
-                subBuilder = info_.toBuilder();
-              }
-              info_ = input.readMessage(emu.grasscutter.net.proto.TreasureMapBonusChallengeInfoOuterClass.TreasureMapBonusChallengeInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(info_);
-                info_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.TreasureMapBonusChallengeNotifyOuterClass.internal_static_TreasureMapBonusChallengeNotify_descriptor;
@@ -128,10 +77,10 @@ public final class TreasureMapBonusChallengeNotifyOuterClass {
               emu.grasscutter.net.proto.TreasureMapBonusChallengeNotifyOuterClass.TreasureMapBonusChallengeNotify.class, emu.grasscutter.net.proto.TreasureMapBonusChallengeNotifyOuterClass.TreasureMapBonusChallengeNotify.Builder.class);
     }
 
-    public static final int INFO_FIELD_NUMBER = 11;
+    public static final int INFO_FIELD_NUMBER = 9;
     private emu.grasscutter.net.proto.TreasureMapBonusChallengeInfoOuterClass.TreasureMapBonusChallengeInfo info_;
     /**
-     * <code>.TreasureMapBonusChallengeInfo info = 11;</code>
+     * <code>.TreasureMapBonusChallengeInfo info = 9;</code>
      * @return Whether the info field is set.
      */
     @java.lang.Override
@@ -139,7 +88,7 @@ public final class TreasureMapBonusChallengeNotifyOuterClass {
       return info_ != null;
     }
     /**
-     * <code>.TreasureMapBonusChallengeInfo info = 11;</code>
+     * <code>.TreasureMapBonusChallengeInfo info = 9;</code>
      * @return The info.
      */
     @java.lang.Override
@@ -147,7 +96,7 @@ public final class TreasureMapBonusChallengeNotifyOuterClass {
       return info_ == null ? emu.grasscutter.net.proto.TreasureMapBonusChallengeInfoOuterClass.TreasureMapBonusChallengeInfo.getDefaultInstance() : info_;
     }
     /**
-     * <code>.TreasureMapBonusChallengeInfo info = 11;</code>
+     * <code>.TreasureMapBonusChallengeInfo info = 9;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.TreasureMapBonusChallengeInfoOuterClass.TreasureMapBonusChallengeInfoOrBuilder getInfoOrBuilder() {
@@ -169,9 +118,9 @@ public final class TreasureMapBonusChallengeNotifyOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (info_ != null) {
-        output.writeMessage(11, getInfo());
+        output.writeMessage(9, getInfo());
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -182,9 +131,9 @@ public final class TreasureMapBonusChallengeNotifyOuterClass {
       size = 0;
       if (info_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(11, getInfo());
+          .computeMessageSize(9, getInfo());
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -204,7 +153,7 @@ public final class TreasureMapBonusChallengeNotifyOuterClass {
         if (!getInfo()
             .equals(other.getInfo())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -219,7 +168,7 @@ public final class TreasureMapBonusChallengeNotifyOuterClass {
         hash = (37 * hash) + INFO_FIELD_NUMBER;
         hash = (53 * hash) + getInfo().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -316,8 +265,7 @@ public final class TreasureMapBonusChallengeNotifyOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 23317
-     * Obf: JLLLKAKIGKC
+     * CmdId: 1741
      * </pre>
      *
      * Protobuf type {@code TreasureMapBonusChallengeNotify}
@@ -341,18 +289,13 @@ public final class TreasureMapBonusChallengeNotifyOuterClass {
 
       // Construct using emu.grasscutter.net.proto.TreasureMapBonusChallengeNotifyOuterClass.TreasureMapBonusChallengeNotify.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -445,7 +388,7 @@ public final class TreasureMapBonusChallengeNotifyOuterClass {
         if (other.hasInfo()) {
           mergeInfo(other.getInfo());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -460,17 +403,37 @@ public final class TreasureMapBonusChallengeNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.TreasureMapBonusChallengeNotifyOuterClass.TreasureMapBonusChallengeNotify parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 74: {
+                input.readMessage(
+                    getInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 74
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.TreasureMapBonusChallengeNotifyOuterClass.TreasureMapBonusChallengeNotify) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -478,14 +441,14 @@ public final class TreasureMapBonusChallengeNotifyOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.TreasureMapBonusChallengeInfoOuterClass.TreasureMapBonusChallengeInfo, emu.grasscutter.net.proto.TreasureMapBonusChallengeInfoOuterClass.TreasureMapBonusChallengeInfo.Builder, emu.grasscutter.net.proto.TreasureMapBonusChallengeInfoOuterClass.TreasureMapBonusChallengeInfoOrBuilder> infoBuilder_;
       /**
-       * <code>.TreasureMapBonusChallengeInfo info = 11;</code>
+       * <code>.TreasureMapBonusChallengeInfo info = 9;</code>
        * @return Whether the info field is set.
        */
       public boolean hasInfo() {
         return infoBuilder_ != null || info_ != null;
       }
       /**
-       * <code>.TreasureMapBonusChallengeInfo info = 11;</code>
+       * <code>.TreasureMapBonusChallengeInfo info = 9;</code>
        * @return The info.
        */
       public emu.grasscutter.net.proto.TreasureMapBonusChallengeInfoOuterClass.TreasureMapBonusChallengeInfo getInfo() {
@@ -496,7 +459,7 @@ public final class TreasureMapBonusChallengeNotifyOuterClass {
         }
       }
       /**
-       * <code>.TreasureMapBonusChallengeInfo info = 11;</code>
+       * <code>.TreasureMapBonusChallengeInfo info = 9;</code>
        */
       public Builder setInfo(emu.grasscutter.net.proto.TreasureMapBonusChallengeInfoOuterClass.TreasureMapBonusChallengeInfo value) {
         if (infoBuilder_ == null) {
@@ -512,7 +475,7 @@ public final class TreasureMapBonusChallengeNotifyOuterClass {
         return this;
       }
       /**
-       * <code>.TreasureMapBonusChallengeInfo info = 11;</code>
+       * <code>.TreasureMapBonusChallengeInfo info = 9;</code>
        */
       public Builder setInfo(
           emu.grasscutter.net.proto.TreasureMapBonusChallengeInfoOuterClass.TreasureMapBonusChallengeInfo.Builder builderForValue) {
@@ -526,7 +489,7 @@ public final class TreasureMapBonusChallengeNotifyOuterClass {
         return this;
       }
       /**
-       * <code>.TreasureMapBonusChallengeInfo info = 11;</code>
+       * <code>.TreasureMapBonusChallengeInfo info = 9;</code>
        */
       public Builder mergeInfo(emu.grasscutter.net.proto.TreasureMapBonusChallengeInfoOuterClass.TreasureMapBonusChallengeInfo value) {
         if (infoBuilder_ == null) {
@@ -544,7 +507,7 @@ public final class TreasureMapBonusChallengeNotifyOuterClass {
         return this;
       }
       /**
-       * <code>.TreasureMapBonusChallengeInfo info = 11;</code>
+       * <code>.TreasureMapBonusChallengeInfo info = 9;</code>
        */
       public Builder clearInfo() {
         if (infoBuilder_ == null) {
@@ -558,7 +521,7 @@ public final class TreasureMapBonusChallengeNotifyOuterClass {
         return this;
       }
       /**
-       * <code>.TreasureMapBonusChallengeInfo info = 11;</code>
+       * <code>.TreasureMapBonusChallengeInfo info = 9;</code>
        */
       public emu.grasscutter.net.proto.TreasureMapBonusChallengeInfoOuterClass.TreasureMapBonusChallengeInfo.Builder getInfoBuilder() {
         
@@ -566,7 +529,7 @@ public final class TreasureMapBonusChallengeNotifyOuterClass {
         return getInfoFieldBuilder().getBuilder();
       }
       /**
-       * <code>.TreasureMapBonusChallengeInfo info = 11;</code>
+       * <code>.TreasureMapBonusChallengeInfo info = 9;</code>
        */
       public emu.grasscutter.net.proto.TreasureMapBonusChallengeInfoOuterClass.TreasureMapBonusChallengeInfoOrBuilder getInfoOrBuilder() {
         if (infoBuilder_ != null) {
@@ -577,7 +540,7 @@ public final class TreasureMapBonusChallengeNotifyOuterClass {
         }
       }
       /**
-       * <code>.TreasureMapBonusChallengeInfo info = 11;</code>
+       * <code>.TreasureMapBonusChallengeInfo info = 9;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.TreasureMapBonusChallengeInfoOuterClass.TreasureMapBonusChallengeInfo, emu.grasscutter.net.proto.TreasureMapBonusChallengeInfoOuterClass.TreasureMapBonusChallengeInfo.Builder, emu.grasscutter.net.proto.TreasureMapBonusChallengeInfoOuterClass.TreasureMapBonusChallengeInfoOrBuilder> 
@@ -625,7 +588,18 @@ public final class TreasureMapBonusChallengeNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new TreasureMapBonusChallengeNotify(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -662,7 +636,7 @@ public final class TreasureMapBonusChallengeNotifyOuterClass {
       "\n%TreasureMapBonusChallengeNotify.proto\032" +
       "#TreasureMapBonusChallengeInfo.proto\"O\n\037" +
       "TreasureMapBonusChallengeNotify\022,\n\004info\030" +
-      "\013 \001(\0132\036.TreasureMapBonusChallengeInfoB\033\n" +
+      "\t \001(\0132\036.TreasureMapBonusChallengeInfoB\033\n" +
       "\031emu.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

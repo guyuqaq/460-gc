@@ -19,39 +19,35 @@ public final class CityReputationExploreInfoOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <code>bool is_open = 8;</code>
+     * @return The isOpen.
+     */
+    boolean getIsOpen();
+
+    /**
      * <code>uint32 explore_percent = 13;</code>
      * @return The explorePercent.
      */
     int getExplorePercent();
 
     /**
-     * <code>repeated uint32 taken_explore_reward_list = 14;</code>
+     * <code>repeated uint32 taken_explore_reward_list = 15;</code>
      * @return A list containing the takenExploreRewardList.
      */
     java.util.List<java.lang.Integer> getTakenExploreRewardListList();
     /**
-     * <code>repeated uint32 taken_explore_reward_list = 14;</code>
+     * <code>repeated uint32 taken_explore_reward_list = 15;</code>
      * @return The count of takenExploreRewardList.
      */
     int getTakenExploreRewardListCount();
     /**
-     * <code>repeated uint32 taken_explore_reward_list = 14;</code>
+     * <code>repeated uint32 taken_explore_reward_list = 15;</code>
      * @param index The index of the element to return.
      * @return The takenExploreRewardList at the given index.
      */
     int getTakenExploreRewardList(int index);
-
-    /**
-     * <code>bool is_open = 10;</code>
-     * @return The isOpen.
-     */
-    boolean getIsOpen();
   }
   /**
-   * <pre>
-   * Obf: LMGKLDPAHJD
-   * </pre>
-   *
    * Protobuf type {@code CityReputationExploreInfo}
    */
   public static final class CityReputationExploreInfo extends
@@ -79,78 +75,6 @@ public final class CityReputationExploreInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private CityReputationExploreInfo(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 80: {
-
-              isOpen_ = input.readBool();
-              break;
-            }
-            case 104: {
-
-              explorePercent_ = input.readUInt32();
-              break;
-            }
-            case 112: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                takenExploreRewardList_ = newIntList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              takenExploreRewardList_.addInt(input.readUInt32());
-              break;
-            }
-            case 114: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
-                takenExploreRewardList_ = newIntList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                takenExploreRewardList_.addInt(input.readUInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          takenExploreRewardList_.makeImmutable(); // C
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.CityReputationExploreInfoOuterClass.internal_static_CityReputationExploreInfo_descriptor;
@@ -164,6 +88,17 @@ public final class CityReputationExploreInfoOuterClass {
               emu.grasscutter.net.proto.CityReputationExploreInfoOuterClass.CityReputationExploreInfo.class, emu.grasscutter.net.proto.CityReputationExploreInfoOuterClass.CityReputationExploreInfo.Builder.class);
     }
 
+    public static final int IS_OPEN_FIELD_NUMBER = 8;
+    private boolean isOpen_;
+    /**
+     * <code>bool is_open = 8;</code>
+     * @return The isOpen.
+     */
+    @java.lang.Override
+    public boolean getIsOpen() {
+      return isOpen_;
+    }
+
     public static final int EXPLORE_PERCENT_FIELD_NUMBER = 13;
     private int explorePercent_;
     /**
@@ -175,10 +110,10 @@ public final class CityReputationExploreInfoOuterClass {
       return explorePercent_;
     }
 
-    public static final int TAKEN_EXPLORE_REWARD_LIST_FIELD_NUMBER = 14;
+    public static final int TAKEN_EXPLORE_REWARD_LIST_FIELD_NUMBER = 15;
     private com.google.protobuf.Internal.IntList takenExploreRewardList_;
     /**
-     * <code>repeated uint32 taken_explore_reward_list = 14;</code>
+     * <code>repeated uint32 taken_explore_reward_list = 15;</code>
      * @return A list containing the takenExploreRewardList.
      */
     @java.lang.Override
@@ -187,14 +122,14 @@ public final class CityReputationExploreInfoOuterClass {
       return takenExploreRewardList_;
     }
     /**
-     * <code>repeated uint32 taken_explore_reward_list = 14;</code>
+     * <code>repeated uint32 taken_explore_reward_list = 15;</code>
      * @return The count of takenExploreRewardList.
      */
     public int getTakenExploreRewardListCount() {
       return takenExploreRewardList_.size();
     }
     /**
-     * <code>repeated uint32 taken_explore_reward_list = 14;</code>
+     * <code>repeated uint32 taken_explore_reward_list = 15;</code>
      * @param index The index of the element to return.
      * @return The takenExploreRewardList at the given index.
      */
@@ -202,17 +137,6 @@ public final class CityReputationExploreInfoOuterClass {
       return takenExploreRewardList_.getInt(index);
     }
     private int takenExploreRewardListMemoizedSerializedSize = -1;
-
-    public static final int IS_OPEN_FIELD_NUMBER = 10;
-    private boolean isOpen_;
-    /**
-     * <code>bool is_open = 10;</code>
-     * @return The isOpen.
-     */
-    @java.lang.Override
-    public boolean getIsOpen() {
-      return isOpen_;
-    }
 
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
@@ -230,19 +154,19 @@ public final class CityReputationExploreInfoOuterClass {
                         throws java.io.IOException {
       getSerializedSize();
       if (isOpen_ != false) {
-        output.writeBool(10, isOpen_);
+        output.writeBool(8, isOpen_);
       }
       if (explorePercent_ != 0) {
         output.writeUInt32(13, explorePercent_);
       }
       if (getTakenExploreRewardListList().size() > 0) {
-        output.writeUInt32NoTag(114);
+        output.writeUInt32NoTag(122);
         output.writeUInt32NoTag(takenExploreRewardListMemoizedSerializedSize);
       }
       for (int i = 0; i < takenExploreRewardList_.size(); i++) {
         output.writeUInt32NoTag(takenExploreRewardList_.getInt(i));
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -253,7 +177,7 @@ public final class CityReputationExploreInfoOuterClass {
       size = 0;
       if (isOpen_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(10, isOpen_);
+          .computeBoolSize(8, isOpen_);
       }
       if (explorePercent_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -273,7 +197,7 @@ public final class CityReputationExploreInfoOuterClass {
         }
         takenExploreRewardListMemoizedSerializedSize = dataSize;
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -288,13 +212,13 @@ public final class CityReputationExploreInfoOuterClass {
       }
       emu.grasscutter.net.proto.CityReputationExploreInfoOuterClass.CityReputationExploreInfo other = (emu.grasscutter.net.proto.CityReputationExploreInfoOuterClass.CityReputationExploreInfo) obj;
 
+      if (getIsOpen()
+          != other.getIsOpen()) return false;
       if (getExplorePercent()
           != other.getExplorePercent()) return false;
       if (!getTakenExploreRewardListList()
           .equals(other.getTakenExploreRewardListList())) return false;
-      if (getIsOpen()
-          != other.getIsOpen()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -305,16 +229,16 @@ public final class CityReputationExploreInfoOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + IS_OPEN_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsOpen());
       hash = (37 * hash) + EXPLORE_PERCENT_FIELD_NUMBER;
       hash = (53 * hash) + getExplorePercent();
       if (getTakenExploreRewardListCount() > 0) {
         hash = (37 * hash) + TAKEN_EXPLORE_REWARD_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getTakenExploreRewardListList().hashCode();
       }
-      hash = (37 * hash) + IS_OPEN_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getIsOpen());
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -410,10 +334,6 @@ public final class CityReputationExploreInfoOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * Obf: LMGKLDPAHJD
-     * </pre>
-     *
      * Protobuf type {@code CityReputationExploreInfo}
      */
     public static final class Builder extends
@@ -435,28 +355,23 @@ public final class CityReputationExploreInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.CityReputationExploreInfoOuterClass.CityReputationExploreInfo.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        isOpen_ = false;
+
         explorePercent_ = 0;
 
         takenExploreRewardList_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000001);
-        isOpen_ = false;
-
         return this;
       }
 
@@ -484,13 +399,13 @@ public final class CityReputationExploreInfoOuterClass {
       public emu.grasscutter.net.proto.CityReputationExploreInfoOuterClass.CityReputationExploreInfo buildPartial() {
         emu.grasscutter.net.proto.CityReputationExploreInfoOuterClass.CityReputationExploreInfo result = new emu.grasscutter.net.proto.CityReputationExploreInfoOuterClass.CityReputationExploreInfo(this);
         int from_bitField0_ = bitField0_;
+        result.isOpen_ = isOpen_;
         result.explorePercent_ = explorePercent_;
         if (((bitField0_ & 0x00000001) != 0)) {
           takenExploreRewardList_.makeImmutable();
           bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.takenExploreRewardList_ = takenExploreRewardList_;
-        result.isOpen_ = isOpen_;
         onBuilt();
         return result;
       }
@@ -539,6 +454,9 @@ public final class CityReputationExploreInfoOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.CityReputationExploreInfoOuterClass.CityReputationExploreInfo other) {
         if (other == emu.grasscutter.net.proto.CityReputationExploreInfoOuterClass.CityReputationExploreInfo.getDefaultInstance()) return this;
+        if (other.getIsOpen() != false) {
+          setIsOpen(other.getIsOpen());
+        }
         if (other.getExplorePercent() != 0) {
           setExplorePercent(other.getExplorePercent());
         }
@@ -552,10 +470,7 @@ public final class CityReputationExploreInfoOuterClass {
           }
           onChanged();
         }
-        if (other.getIsOpen() != false) {
-          setIsOpen(other.getIsOpen());
-        }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -570,20 +485,90 @@ public final class CityReputationExploreInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.CityReputationExploreInfoOuterClass.CityReputationExploreInfo parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 64: {
+                isOpen_ = input.readBool();
+
+                break;
+              } // case 64
+              case 104: {
+                explorePercent_ = input.readUInt32();
+
+                break;
+              } // case 104
+              case 120: {
+                int v = input.readUInt32();
+                ensureTakenExploreRewardListIsMutable();
+                takenExploreRewardList_.addInt(v);
+                break;
+              } // case 120
+              case 122: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureTakenExploreRewardListIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  takenExploreRewardList_.addInt(input.readUInt32());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 122
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.CityReputationExploreInfoOuterClass.CityReputationExploreInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
+
+      private boolean isOpen_ ;
+      /**
+       * <code>bool is_open = 8;</code>
+       * @return The isOpen.
+       */
+      @java.lang.Override
+      public boolean getIsOpen() {
+        return isOpen_;
+      }
+      /**
+       * <code>bool is_open = 8;</code>
+       * @param value The isOpen to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsOpen(boolean value) {
+        
+        isOpen_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool is_open = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsOpen() {
+        
+        isOpen_ = false;
+        onChanged();
+        return this;
+      }
 
       private int explorePercent_ ;
       /**
@@ -624,7 +609,7 @@ public final class CityReputationExploreInfoOuterClass {
          }
       }
       /**
-       * <code>repeated uint32 taken_explore_reward_list = 14;</code>
+       * <code>repeated uint32 taken_explore_reward_list = 15;</code>
        * @return A list containing the takenExploreRewardList.
        */
       public java.util.List<java.lang.Integer>
@@ -633,14 +618,14 @@ public final class CityReputationExploreInfoOuterClass {
                  java.util.Collections.unmodifiableList(takenExploreRewardList_) : takenExploreRewardList_;
       }
       /**
-       * <code>repeated uint32 taken_explore_reward_list = 14;</code>
+       * <code>repeated uint32 taken_explore_reward_list = 15;</code>
        * @return The count of takenExploreRewardList.
        */
       public int getTakenExploreRewardListCount() {
         return takenExploreRewardList_.size();
       }
       /**
-       * <code>repeated uint32 taken_explore_reward_list = 14;</code>
+       * <code>repeated uint32 taken_explore_reward_list = 15;</code>
        * @param index The index of the element to return.
        * @return The takenExploreRewardList at the given index.
        */
@@ -648,7 +633,7 @@ public final class CityReputationExploreInfoOuterClass {
         return takenExploreRewardList_.getInt(index);
       }
       /**
-       * <code>repeated uint32 taken_explore_reward_list = 14;</code>
+       * <code>repeated uint32 taken_explore_reward_list = 15;</code>
        * @param index The index to set the value at.
        * @param value The takenExploreRewardList to set.
        * @return This builder for chaining.
@@ -661,7 +646,7 @@ public final class CityReputationExploreInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 taken_explore_reward_list = 14;</code>
+       * <code>repeated uint32 taken_explore_reward_list = 15;</code>
        * @param value The takenExploreRewardList to add.
        * @return This builder for chaining.
        */
@@ -672,7 +657,7 @@ public final class CityReputationExploreInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 taken_explore_reward_list = 14;</code>
+       * <code>repeated uint32 taken_explore_reward_list = 15;</code>
        * @param values The takenExploreRewardList to add.
        * @return This builder for chaining.
        */
@@ -685,43 +670,12 @@ public final class CityReputationExploreInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 taken_explore_reward_list = 14;</code>
+       * <code>repeated uint32 taken_explore_reward_list = 15;</code>
        * @return This builder for chaining.
        */
       public Builder clearTakenExploreRewardList() {
         takenExploreRewardList_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
-        return this;
-      }
-
-      private boolean isOpen_ ;
-      /**
-       * <code>bool is_open = 10;</code>
-       * @return The isOpen.
-       */
-      @java.lang.Override
-      public boolean getIsOpen() {
-        return isOpen_;
-      }
-      /**
-       * <code>bool is_open = 10;</code>
-       * @param value The isOpen to set.
-       * @return This builder for chaining.
-       */
-      public Builder setIsOpen(boolean value) {
-        
-        isOpen_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bool is_open = 10;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearIsOpen() {
-        
-        isOpen_ = false;
         onChanged();
         return this;
       }
@@ -758,7 +712,18 @@ public final class CityReputationExploreInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new CityReputationExploreInfo(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -793,9 +758,9 @@ public final class CityReputationExploreInfoOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\037CityReputationExploreInfo.proto\"h\n\031Cit" +
-      "yReputationExploreInfo\022\027\n\017explore_percen" +
-      "t\030\r \001(\r\022!\n\031taken_explore_reward_list\030\016 \003" +
-      "(\r\022\017\n\007is_open\030\n \001(\010B\033\n\031emu.grasscutter.n" +
+      "yReputationExploreInfo\022\017\n\007is_open\030\010 \001(\010\022" +
+      "\027\n\017explore_percent\030\r \001(\r\022!\n\031taken_explor" +
+      "e_reward_list\030\017 \003(\rB\033\n\031emu.grasscutter.n" +
       "et.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -807,7 +772,7 @@ public final class CityReputationExploreInfoOuterClass {
     internal_static_CityReputationExploreInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CityReputationExploreInfo_descriptor,
-        new java.lang.String[] { "ExplorePercent", "TakenExploreRewardList", "IsOpen", });
+        new java.lang.String[] { "IsOpen", "ExplorePercent", "TakenExploreRewardList", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

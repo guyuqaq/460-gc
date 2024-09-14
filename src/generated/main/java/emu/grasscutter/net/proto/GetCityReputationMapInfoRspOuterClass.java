@@ -19,61 +19,151 @@ public final class GetCityReputationMapInfoRspOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int32 retcode = 14;</code>
+     * <code>bool DJBPPBLKEGB = 1;</code>
+     * @return The dJBPPBLKEGB.
+     */
+    boolean getDJBPPBLKEGB();
+
+    /**
+     * <code>bool DOGDMGNBBOC = 2;</code>
+     * @return The dOGDMGNBBOC.
+     */
+    boolean getDOGDMGNBBOC();
+
+    /**
+     * <code>repeated uint32 PEJNIFPFCFC = 3;</code>
+     * @return A list containing the pEJNIFPFCFC.
+     */
+    java.util.List<java.lang.Integer> getPEJNIFPFCFCList();
+    /**
+     * <code>repeated uint32 PEJNIFPFCFC = 3;</code>
+     * @return The count of pEJNIFPFCFC.
+     */
+    int getPEJNIFPFCFCCount();
+    /**
+     * <code>repeated uint32 PEJNIFPFCFC = 3;</code>
+     * @param index The index of the element to return.
+     * @return The pEJNIFPFCFC at the given index.
+     */
+    int getPEJNIFPFCFC(int index);
+
+    /**
+     * <code>repeated uint32 LLKHPOOCCOJ = 4;</code>
+     * @return A list containing the lLKHPOOCCOJ.
+     */
+    java.util.List<java.lang.Integer> getLLKHPOOCCOJList();
+    /**
+     * <code>repeated uint32 LLKHPOOCCOJ = 4;</code>
+     * @return The count of lLKHPOOCCOJ.
+     */
+    int getLLKHPOOCCOJCount();
+    /**
+     * <code>repeated uint32 LLKHPOOCCOJ = 4;</code>
+     * @param index The index of the element to return.
+     * @return The lLKHPOOCCOJ at the given index.
+     */
+    int getLLKHPOOCCOJ(int index);
+
+    /**
+     * <code>repeated uint32 BAFPIBOPILO = 5;</code>
+     * @return A list containing the bAFPIBOPILO.
+     */
+    java.util.List<java.lang.Integer> getBAFPIBOPILOList();
+    /**
+     * <code>repeated uint32 BAFPIBOPILO = 5;</code>
+     * @return The count of bAFPIBOPILO.
+     */
+    int getBAFPIBOPILOCount();
+    /**
+     * <code>repeated uint32 BAFPIBOPILO = 5;</code>
+     * @param index The index of the element to return.
+     * @return The bAFPIBOPILO at the given index.
+     */
+    int getBAFPIBOPILO(int index);
+
+    /**
+     * <code>repeated uint32 JDDPGPMPBFI = 6;</code>
+     * @return A list containing the jDDPGPMPBFI.
+     */
+    java.util.List<java.lang.Integer> getJDDPGPMPBFIList();
+    /**
+     * <code>repeated uint32 JDDPGPMPBFI = 6;</code>
+     * @return The count of jDDPGPMPBFI.
+     */
+    int getJDDPGPMPBFICount();
+    /**
+     * <code>repeated uint32 JDDPGPMPBFI = 6;</code>
+     * @param index The index of the element to return.
+     * @return The jDDPGPMPBFI at the given index.
+     */
+    int getJDDPGPMPBFI(int index);
+
+    /**
+     * <code>int32 retcode = 7;</code>
      * @return The retcode.
      */
     int getRetcode();
 
     /**
-     * <code>bool JJGPNHBKGHG = 9;</code>
-     * @return The jJGPNHBKGHG.
+     * <code>repeated uint32 IGIBBILCLJE = 8;</code>
+     * @return A list containing the iGIBBILCLJE.
      */
-    boolean getJJGPNHBKGHG();
-
+    java.util.List<java.lang.Integer> getIGIBBILCLJEList();
     /**
-     * <code>bool MOEFCHCBNGE = 8;</code>
-     * @return The mOEFCHCBNGE.
+     * <code>repeated uint32 IGIBBILCLJE = 8;</code>
+     * @return The count of iGIBBILCLJE.
      */
-    boolean getMOEFCHCBNGE();
-
+    int getIGIBBILCLJECount();
     /**
-     * <code>repeated uint32 BIDOKKBGJLG = 3;</code>
-     * @return A list containing the bIDOKKBGJLG.
-     */
-    java.util.List<java.lang.Integer> getBIDOKKBGJLGList();
-    /**
-     * <code>repeated uint32 BIDOKKBGJLG = 3;</code>
-     * @return The count of bIDOKKBGJLG.
-     */
-    int getBIDOKKBGJLGCount();
-    /**
-     * <code>repeated uint32 BIDOKKBGJLG = 3;</code>
+     * <code>repeated uint32 IGIBBILCLJE = 8;</code>
      * @param index The index of the element to return.
-     * @return The bIDOKKBGJLG at the given index.
+     * @return The iGIBBILCLJE at the given index.
      */
-    int getBIDOKKBGJLG(int index);
+    int getIGIBBILCLJE(int index);
 
     /**
-     * <code>repeated uint32 BOMGJJFKDOC = 5;</code>
-     * @return A list containing the bOMGJJFKDOC.
+     * <code>repeated uint32 NGMJKIHMFAJ = 11;</code>
+     * @return A list containing the nGMJKIHMFAJ.
      */
-    java.util.List<java.lang.Integer> getBOMGJJFKDOCList();
+    java.util.List<java.lang.Integer> getNGMJKIHMFAJList();
     /**
-     * <code>repeated uint32 BOMGJJFKDOC = 5;</code>
-     * @return The count of bOMGJJFKDOC.
+     * <code>repeated uint32 NGMJKIHMFAJ = 11;</code>
+     * @return The count of nGMJKIHMFAJ.
      */
-    int getBOMGJJFKDOCCount();
+    int getNGMJKIHMFAJCount();
     /**
-     * <code>repeated uint32 BOMGJJFKDOC = 5;</code>
+     * <code>repeated uint32 NGMJKIHMFAJ = 11;</code>
      * @param index The index of the element to return.
-     * @return The bOMGJJFKDOC at the given index.
+     * @return The nGMJKIHMFAJ at the given index.
      */
-    int getBOMGJJFKDOC(int index);
+    int getNGMJKIHMFAJ(int index);
+
+    /**
+     * <code>repeated uint32 EJGFNIJMAJC = 13;</code>
+     * @return A list containing the eJGFNIJMAJC.
+     */
+    java.util.List<java.lang.Integer> getEJGFNIJMAJCList();
+    /**
+     * <code>repeated uint32 EJGFNIJMAJC = 13;</code>
+     * @return The count of eJGFNIJMAJC.
+     */
+    int getEJGFNIJMAJCCount();
+    /**
+     * <code>repeated uint32 EJGFNIJMAJC = 13;</code>
+     * @param index The index of the element to return.
+     * @return The eJGFNIJMAJC at the given index.
+     */
+    int getEJGFNIJMAJC(int index);
+
+    /**
+     * <code>bool PBLIMBGNNNB = 14;</code>
+     * @return The pBLIMBGNNNB.
+     */
+    boolean getPBLIMBGNNNB();
   }
   /**
    * <pre>
-   * CmdId: 24830
-   * Obf: NFLPNFKGHED
+   * CmdId: 8829
    * </pre>
    *
    * Protobuf type {@code GetCityReputationMapInfoRsp}
@@ -88,8 +178,13 @@ public final class GetCityReputationMapInfoRspOuterClass {
       super(builder);
     }
     private GetCityReputationMapInfoRsp() {
-      bIDOKKBGJLG_ = emptyIntList();
-      bOMGJJFKDOC_ = emptyIntList();
+      pEJNIFPFCFC_ = emptyIntList();
+      lLKHPOOCCOJ_ = emptyIntList();
+      bAFPIBOPILO_ = emptyIntList();
+      jDDPGPMPBFI_ = emptyIntList();
+      iGIBBILCLJE_ = emptyIntList();
+      nGMJKIHMFAJ_ = emptyIntList();
+      eJGFNIJMAJC_ = emptyIntList();
     }
 
     @java.lang.Override
@@ -104,107 +199,6 @@ public final class GetCityReputationMapInfoRspOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private GetCityReputationMapInfoRsp(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 24: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                bIDOKKBGJLG_ = newIntList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              bIDOKKBGJLG_.addInt(input.readUInt32());
-              break;
-            }
-            case 26: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
-                bIDOKKBGJLG_ = newIntList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                bIDOKKBGJLG_.addInt(input.readUInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            case 40: {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                bOMGJJFKDOC_ = newIntList();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              bOMGJJFKDOC_.addInt(input.readUInt32());
-              break;
-            }
-            case 42: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000002) != 0) && input.getBytesUntilLimit() > 0) {
-                bOMGJJFKDOC_ = newIntList();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                bOMGJJFKDOC_.addInt(input.readUInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            case 64: {
-
-              mOEFCHCBNGE_ = input.readBool();
-              break;
-            }
-            case 72: {
-
-              jJGPNHBKGHG_ = input.readBool();
-              break;
-            }
-            case 112: {
-
-              retcode_ = input.readInt32();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          bIDOKKBGJLG_.makeImmutable(); // C
-        }
-        if (((mutable_bitField0_ & 0x00000002) != 0)) {
-          bOMGJJFKDOC_.makeImmutable(); // C
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.GetCityReputationMapInfoRspOuterClass.internal_static_GetCityReputationMapInfoRsp_descriptor;
@@ -218,10 +212,144 @@ public final class GetCityReputationMapInfoRspOuterClass {
               emu.grasscutter.net.proto.GetCityReputationMapInfoRspOuterClass.GetCityReputationMapInfoRsp.class, emu.grasscutter.net.proto.GetCityReputationMapInfoRspOuterClass.GetCityReputationMapInfoRsp.Builder.class);
     }
 
-    public static final int RETCODE_FIELD_NUMBER = 14;
+    public static final int DJBPPBLKEGB_FIELD_NUMBER = 1;
+    private boolean dJBPPBLKEGB_;
+    /**
+     * <code>bool DJBPPBLKEGB = 1;</code>
+     * @return The dJBPPBLKEGB.
+     */
+    @java.lang.Override
+    public boolean getDJBPPBLKEGB() {
+      return dJBPPBLKEGB_;
+    }
+
+    public static final int DOGDMGNBBOC_FIELD_NUMBER = 2;
+    private boolean dOGDMGNBBOC_;
+    /**
+     * <code>bool DOGDMGNBBOC = 2;</code>
+     * @return The dOGDMGNBBOC.
+     */
+    @java.lang.Override
+    public boolean getDOGDMGNBBOC() {
+      return dOGDMGNBBOC_;
+    }
+
+    public static final int PEJNIFPFCFC_FIELD_NUMBER = 3;
+    private com.google.protobuf.Internal.IntList pEJNIFPFCFC_;
+    /**
+     * <code>repeated uint32 PEJNIFPFCFC = 3;</code>
+     * @return A list containing the pEJNIFPFCFC.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Integer>
+        getPEJNIFPFCFCList() {
+      return pEJNIFPFCFC_;
+    }
+    /**
+     * <code>repeated uint32 PEJNIFPFCFC = 3;</code>
+     * @return The count of pEJNIFPFCFC.
+     */
+    public int getPEJNIFPFCFCCount() {
+      return pEJNIFPFCFC_.size();
+    }
+    /**
+     * <code>repeated uint32 PEJNIFPFCFC = 3;</code>
+     * @param index The index of the element to return.
+     * @return The pEJNIFPFCFC at the given index.
+     */
+    public int getPEJNIFPFCFC(int index) {
+      return pEJNIFPFCFC_.getInt(index);
+    }
+    private int pEJNIFPFCFCMemoizedSerializedSize = -1;
+
+    public static final int LLKHPOOCCOJ_FIELD_NUMBER = 4;
+    private com.google.protobuf.Internal.IntList lLKHPOOCCOJ_;
+    /**
+     * <code>repeated uint32 LLKHPOOCCOJ = 4;</code>
+     * @return A list containing the lLKHPOOCCOJ.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Integer>
+        getLLKHPOOCCOJList() {
+      return lLKHPOOCCOJ_;
+    }
+    /**
+     * <code>repeated uint32 LLKHPOOCCOJ = 4;</code>
+     * @return The count of lLKHPOOCCOJ.
+     */
+    public int getLLKHPOOCCOJCount() {
+      return lLKHPOOCCOJ_.size();
+    }
+    /**
+     * <code>repeated uint32 LLKHPOOCCOJ = 4;</code>
+     * @param index The index of the element to return.
+     * @return The lLKHPOOCCOJ at the given index.
+     */
+    public int getLLKHPOOCCOJ(int index) {
+      return lLKHPOOCCOJ_.getInt(index);
+    }
+    private int lLKHPOOCCOJMemoizedSerializedSize = -1;
+
+    public static final int BAFPIBOPILO_FIELD_NUMBER = 5;
+    private com.google.protobuf.Internal.IntList bAFPIBOPILO_;
+    /**
+     * <code>repeated uint32 BAFPIBOPILO = 5;</code>
+     * @return A list containing the bAFPIBOPILO.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Integer>
+        getBAFPIBOPILOList() {
+      return bAFPIBOPILO_;
+    }
+    /**
+     * <code>repeated uint32 BAFPIBOPILO = 5;</code>
+     * @return The count of bAFPIBOPILO.
+     */
+    public int getBAFPIBOPILOCount() {
+      return bAFPIBOPILO_.size();
+    }
+    /**
+     * <code>repeated uint32 BAFPIBOPILO = 5;</code>
+     * @param index The index of the element to return.
+     * @return The bAFPIBOPILO at the given index.
+     */
+    public int getBAFPIBOPILO(int index) {
+      return bAFPIBOPILO_.getInt(index);
+    }
+    private int bAFPIBOPILOMemoizedSerializedSize = -1;
+
+    public static final int JDDPGPMPBFI_FIELD_NUMBER = 6;
+    private com.google.protobuf.Internal.IntList jDDPGPMPBFI_;
+    /**
+     * <code>repeated uint32 JDDPGPMPBFI = 6;</code>
+     * @return A list containing the jDDPGPMPBFI.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Integer>
+        getJDDPGPMPBFIList() {
+      return jDDPGPMPBFI_;
+    }
+    /**
+     * <code>repeated uint32 JDDPGPMPBFI = 6;</code>
+     * @return The count of jDDPGPMPBFI.
+     */
+    public int getJDDPGPMPBFICount() {
+      return jDDPGPMPBFI_.size();
+    }
+    /**
+     * <code>repeated uint32 JDDPGPMPBFI = 6;</code>
+     * @param index The index of the element to return.
+     * @return The jDDPGPMPBFI at the given index.
+     */
+    public int getJDDPGPMPBFI(int index) {
+      return jDDPGPMPBFI_.getInt(index);
+    }
+    private int jDDPGPMPBFIMemoizedSerializedSize = -1;
+
+    public static final int RETCODE_FIELD_NUMBER = 7;
     private int retcode_;
     /**
-     * <code>int32 retcode = 14;</code>
+     * <code>int32 retcode = 7;</code>
      * @return The retcode.
      */
     @java.lang.Override
@@ -229,83 +357,100 @@ public final class GetCityReputationMapInfoRspOuterClass {
       return retcode_;
     }
 
-    public static final int JJGPNHBKGHG_FIELD_NUMBER = 9;
-    private boolean jJGPNHBKGHG_;
+    public static final int IGIBBILCLJE_FIELD_NUMBER = 8;
+    private com.google.protobuf.Internal.IntList iGIBBILCLJE_;
     /**
-     * <code>bool JJGPNHBKGHG = 9;</code>
-     * @return The jJGPNHBKGHG.
-     */
-    @java.lang.Override
-    public boolean getJJGPNHBKGHG() {
-      return jJGPNHBKGHG_;
-    }
-
-    public static final int MOEFCHCBNGE_FIELD_NUMBER = 8;
-    private boolean mOEFCHCBNGE_;
-    /**
-     * <code>bool MOEFCHCBNGE = 8;</code>
-     * @return The mOEFCHCBNGE.
-     */
-    @java.lang.Override
-    public boolean getMOEFCHCBNGE() {
-      return mOEFCHCBNGE_;
-    }
-
-    public static final int BIDOKKBGJLG_FIELD_NUMBER = 3;
-    private com.google.protobuf.Internal.IntList bIDOKKBGJLG_;
-    /**
-     * <code>repeated uint32 BIDOKKBGJLG = 3;</code>
-     * @return A list containing the bIDOKKBGJLG.
+     * <code>repeated uint32 IGIBBILCLJE = 8;</code>
+     * @return A list containing the iGIBBILCLJE.
      */
     @java.lang.Override
     public java.util.List<java.lang.Integer>
-        getBIDOKKBGJLGList() {
-      return bIDOKKBGJLG_;
+        getIGIBBILCLJEList() {
+      return iGIBBILCLJE_;
     }
     /**
-     * <code>repeated uint32 BIDOKKBGJLG = 3;</code>
-     * @return The count of bIDOKKBGJLG.
+     * <code>repeated uint32 IGIBBILCLJE = 8;</code>
+     * @return The count of iGIBBILCLJE.
      */
-    public int getBIDOKKBGJLGCount() {
-      return bIDOKKBGJLG_.size();
+    public int getIGIBBILCLJECount() {
+      return iGIBBILCLJE_.size();
     }
     /**
-     * <code>repeated uint32 BIDOKKBGJLG = 3;</code>
+     * <code>repeated uint32 IGIBBILCLJE = 8;</code>
      * @param index The index of the element to return.
-     * @return The bIDOKKBGJLG at the given index.
+     * @return The iGIBBILCLJE at the given index.
      */
-    public int getBIDOKKBGJLG(int index) {
-      return bIDOKKBGJLG_.getInt(index);
+    public int getIGIBBILCLJE(int index) {
+      return iGIBBILCLJE_.getInt(index);
     }
-    private int bIDOKKBGJLGMemoizedSerializedSize = -1;
+    private int iGIBBILCLJEMemoizedSerializedSize = -1;
 
-    public static final int BOMGJJFKDOC_FIELD_NUMBER = 5;
-    private com.google.protobuf.Internal.IntList bOMGJJFKDOC_;
+    public static final int NGMJKIHMFAJ_FIELD_NUMBER = 11;
+    private com.google.protobuf.Internal.IntList nGMJKIHMFAJ_;
     /**
-     * <code>repeated uint32 BOMGJJFKDOC = 5;</code>
-     * @return A list containing the bOMGJJFKDOC.
+     * <code>repeated uint32 NGMJKIHMFAJ = 11;</code>
+     * @return A list containing the nGMJKIHMFAJ.
      */
     @java.lang.Override
     public java.util.List<java.lang.Integer>
-        getBOMGJJFKDOCList() {
-      return bOMGJJFKDOC_;
+        getNGMJKIHMFAJList() {
+      return nGMJKIHMFAJ_;
     }
     /**
-     * <code>repeated uint32 BOMGJJFKDOC = 5;</code>
-     * @return The count of bOMGJJFKDOC.
+     * <code>repeated uint32 NGMJKIHMFAJ = 11;</code>
+     * @return The count of nGMJKIHMFAJ.
      */
-    public int getBOMGJJFKDOCCount() {
-      return bOMGJJFKDOC_.size();
+    public int getNGMJKIHMFAJCount() {
+      return nGMJKIHMFAJ_.size();
     }
     /**
-     * <code>repeated uint32 BOMGJJFKDOC = 5;</code>
+     * <code>repeated uint32 NGMJKIHMFAJ = 11;</code>
      * @param index The index of the element to return.
-     * @return The bOMGJJFKDOC at the given index.
+     * @return The nGMJKIHMFAJ at the given index.
      */
-    public int getBOMGJJFKDOC(int index) {
-      return bOMGJJFKDOC_.getInt(index);
+    public int getNGMJKIHMFAJ(int index) {
+      return nGMJKIHMFAJ_.getInt(index);
     }
-    private int bOMGJJFKDOCMemoizedSerializedSize = -1;
+    private int nGMJKIHMFAJMemoizedSerializedSize = -1;
+
+    public static final int EJGFNIJMAJC_FIELD_NUMBER = 13;
+    private com.google.protobuf.Internal.IntList eJGFNIJMAJC_;
+    /**
+     * <code>repeated uint32 EJGFNIJMAJC = 13;</code>
+     * @return A list containing the eJGFNIJMAJC.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Integer>
+        getEJGFNIJMAJCList() {
+      return eJGFNIJMAJC_;
+    }
+    /**
+     * <code>repeated uint32 EJGFNIJMAJC = 13;</code>
+     * @return The count of eJGFNIJMAJC.
+     */
+    public int getEJGFNIJMAJCCount() {
+      return eJGFNIJMAJC_.size();
+    }
+    /**
+     * <code>repeated uint32 EJGFNIJMAJC = 13;</code>
+     * @param index The index of the element to return.
+     * @return The eJGFNIJMAJC at the given index.
+     */
+    public int getEJGFNIJMAJC(int index) {
+      return eJGFNIJMAJC_.getInt(index);
+    }
+    private int eJGFNIJMAJCMemoizedSerializedSize = -1;
+
+    public static final int PBLIMBGNNNB_FIELD_NUMBER = 14;
+    private boolean pBLIMBGNNNB_;
+    /**
+     * <code>bool PBLIMBGNNNB = 14;</code>
+     * @return The pBLIMBGNNNB.
+     */
+    @java.lang.Override
+    public boolean getPBLIMBGNNNB() {
+      return pBLIMBGNNNB_;
+    }
 
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
@@ -322,30 +467,68 @@ public final class GetCityReputationMapInfoRspOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
-      if (getBIDOKKBGJLGList().size() > 0) {
+      if (dJBPPBLKEGB_ != false) {
+        output.writeBool(1, dJBPPBLKEGB_);
+      }
+      if (dOGDMGNBBOC_ != false) {
+        output.writeBool(2, dOGDMGNBBOC_);
+      }
+      if (getPEJNIFPFCFCList().size() > 0) {
         output.writeUInt32NoTag(26);
-        output.writeUInt32NoTag(bIDOKKBGJLGMemoizedSerializedSize);
+        output.writeUInt32NoTag(pEJNIFPFCFCMemoizedSerializedSize);
       }
-      for (int i = 0; i < bIDOKKBGJLG_.size(); i++) {
-        output.writeUInt32NoTag(bIDOKKBGJLG_.getInt(i));
+      for (int i = 0; i < pEJNIFPFCFC_.size(); i++) {
+        output.writeUInt32NoTag(pEJNIFPFCFC_.getInt(i));
       }
-      if (getBOMGJJFKDOCList().size() > 0) {
+      if (getLLKHPOOCCOJList().size() > 0) {
+        output.writeUInt32NoTag(34);
+        output.writeUInt32NoTag(lLKHPOOCCOJMemoizedSerializedSize);
+      }
+      for (int i = 0; i < lLKHPOOCCOJ_.size(); i++) {
+        output.writeUInt32NoTag(lLKHPOOCCOJ_.getInt(i));
+      }
+      if (getBAFPIBOPILOList().size() > 0) {
         output.writeUInt32NoTag(42);
-        output.writeUInt32NoTag(bOMGJJFKDOCMemoizedSerializedSize);
+        output.writeUInt32NoTag(bAFPIBOPILOMemoizedSerializedSize);
       }
-      for (int i = 0; i < bOMGJJFKDOC_.size(); i++) {
-        output.writeUInt32NoTag(bOMGJJFKDOC_.getInt(i));
+      for (int i = 0; i < bAFPIBOPILO_.size(); i++) {
+        output.writeUInt32NoTag(bAFPIBOPILO_.getInt(i));
       }
-      if (mOEFCHCBNGE_ != false) {
-        output.writeBool(8, mOEFCHCBNGE_);
+      if (getJDDPGPMPBFIList().size() > 0) {
+        output.writeUInt32NoTag(50);
+        output.writeUInt32NoTag(jDDPGPMPBFIMemoizedSerializedSize);
       }
-      if (jJGPNHBKGHG_ != false) {
-        output.writeBool(9, jJGPNHBKGHG_);
+      for (int i = 0; i < jDDPGPMPBFI_.size(); i++) {
+        output.writeUInt32NoTag(jDDPGPMPBFI_.getInt(i));
       }
       if (retcode_ != 0) {
-        output.writeInt32(14, retcode_);
+        output.writeInt32(7, retcode_);
       }
-      unknownFields.writeTo(output);
+      if (getIGIBBILCLJEList().size() > 0) {
+        output.writeUInt32NoTag(66);
+        output.writeUInt32NoTag(iGIBBILCLJEMemoizedSerializedSize);
+      }
+      for (int i = 0; i < iGIBBILCLJE_.size(); i++) {
+        output.writeUInt32NoTag(iGIBBILCLJE_.getInt(i));
+      }
+      if (getNGMJKIHMFAJList().size() > 0) {
+        output.writeUInt32NoTag(90);
+        output.writeUInt32NoTag(nGMJKIHMFAJMemoizedSerializedSize);
+      }
+      for (int i = 0; i < nGMJKIHMFAJ_.size(); i++) {
+        output.writeUInt32NoTag(nGMJKIHMFAJ_.getInt(i));
+      }
+      if (getEJGFNIJMAJCList().size() > 0) {
+        output.writeUInt32NoTag(106);
+        output.writeUInt32NoTag(eJGFNIJMAJCMemoizedSerializedSize);
+      }
+      for (int i = 0; i < eJGFNIJMAJC_.size(); i++) {
+        output.writeUInt32NoTag(eJGFNIJMAJC_.getInt(i));
+      }
+      if (pBLIMBGNNNB_ != false) {
+        output.writeBool(14, pBLIMBGNNNB_);
+      }
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -354,47 +537,121 @@ public final class GetCityReputationMapInfoRspOuterClass {
       if (size != -1) return size;
 
       size = 0;
+      if (dJBPPBLKEGB_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, dJBPPBLKEGB_);
+      }
+      if (dOGDMGNBBOC_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, dOGDMGNBBOC_);
+      }
       {
         int dataSize = 0;
-        for (int i = 0; i < bIDOKKBGJLG_.size(); i++) {
+        for (int i = 0; i < pEJNIFPFCFC_.size(); i++) {
           dataSize += com.google.protobuf.CodedOutputStream
-            .computeUInt32SizeNoTag(bIDOKKBGJLG_.getInt(i));
+            .computeUInt32SizeNoTag(pEJNIFPFCFC_.getInt(i));
         }
         size += dataSize;
-        if (!getBIDOKKBGJLGList().isEmpty()) {
+        if (!getPEJNIFPFCFCList().isEmpty()) {
           size += 1;
           size += com.google.protobuf.CodedOutputStream
               .computeInt32SizeNoTag(dataSize);
         }
-        bIDOKKBGJLGMemoizedSerializedSize = dataSize;
+        pEJNIFPFCFCMemoizedSerializedSize = dataSize;
       }
       {
         int dataSize = 0;
-        for (int i = 0; i < bOMGJJFKDOC_.size(); i++) {
+        for (int i = 0; i < lLKHPOOCCOJ_.size(); i++) {
           dataSize += com.google.protobuf.CodedOutputStream
-            .computeUInt32SizeNoTag(bOMGJJFKDOC_.getInt(i));
+            .computeUInt32SizeNoTag(lLKHPOOCCOJ_.getInt(i));
         }
         size += dataSize;
-        if (!getBOMGJJFKDOCList().isEmpty()) {
+        if (!getLLKHPOOCCOJList().isEmpty()) {
           size += 1;
           size += com.google.protobuf.CodedOutputStream
               .computeInt32SizeNoTag(dataSize);
         }
-        bOMGJJFKDOCMemoizedSerializedSize = dataSize;
+        lLKHPOOCCOJMemoizedSerializedSize = dataSize;
       }
-      if (mOEFCHCBNGE_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(8, mOEFCHCBNGE_);
+      {
+        int dataSize = 0;
+        for (int i = 0; i < bAFPIBOPILO_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(bAFPIBOPILO_.getInt(i));
+        }
+        size += dataSize;
+        if (!getBAFPIBOPILOList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        bAFPIBOPILOMemoizedSerializedSize = dataSize;
       }
-      if (jJGPNHBKGHG_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(9, jJGPNHBKGHG_);
+      {
+        int dataSize = 0;
+        for (int i = 0; i < jDDPGPMPBFI_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(jDDPGPMPBFI_.getInt(i));
+        }
+        size += dataSize;
+        if (!getJDDPGPMPBFIList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        jDDPGPMPBFIMemoizedSerializedSize = dataSize;
       }
       if (retcode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(14, retcode_);
+          .computeInt32Size(7, retcode_);
       }
-      size += unknownFields.getSerializedSize();
+      {
+        int dataSize = 0;
+        for (int i = 0; i < iGIBBILCLJE_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(iGIBBILCLJE_.getInt(i));
+        }
+        size += dataSize;
+        if (!getIGIBBILCLJEList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        iGIBBILCLJEMemoizedSerializedSize = dataSize;
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < nGMJKIHMFAJ_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(nGMJKIHMFAJ_.getInt(i));
+        }
+        size += dataSize;
+        if (!getNGMJKIHMFAJList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        nGMJKIHMFAJMemoizedSerializedSize = dataSize;
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < eJGFNIJMAJC_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(eJGFNIJMAJC_.getInt(i));
+        }
+        size += dataSize;
+        if (!getEJGFNIJMAJCList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        eJGFNIJMAJCMemoizedSerializedSize = dataSize;
+      }
+      if (pBLIMBGNNNB_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(14, pBLIMBGNNNB_);
+      }
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -409,17 +666,29 @@ public final class GetCityReputationMapInfoRspOuterClass {
       }
       emu.grasscutter.net.proto.GetCityReputationMapInfoRspOuterClass.GetCityReputationMapInfoRsp other = (emu.grasscutter.net.proto.GetCityReputationMapInfoRspOuterClass.GetCityReputationMapInfoRsp) obj;
 
+      if (getDJBPPBLKEGB()
+          != other.getDJBPPBLKEGB()) return false;
+      if (getDOGDMGNBBOC()
+          != other.getDOGDMGNBBOC()) return false;
+      if (!getPEJNIFPFCFCList()
+          .equals(other.getPEJNIFPFCFCList())) return false;
+      if (!getLLKHPOOCCOJList()
+          .equals(other.getLLKHPOOCCOJList())) return false;
+      if (!getBAFPIBOPILOList()
+          .equals(other.getBAFPIBOPILOList())) return false;
+      if (!getJDDPGPMPBFIList()
+          .equals(other.getJDDPGPMPBFIList())) return false;
       if (getRetcode()
           != other.getRetcode()) return false;
-      if (getJJGPNHBKGHG()
-          != other.getJJGPNHBKGHG()) return false;
-      if (getMOEFCHCBNGE()
-          != other.getMOEFCHCBNGE()) return false;
-      if (!getBIDOKKBGJLGList()
-          .equals(other.getBIDOKKBGJLGList())) return false;
-      if (!getBOMGJJFKDOCList()
-          .equals(other.getBOMGJJFKDOCList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getIGIBBILCLJEList()
+          .equals(other.getIGIBBILCLJEList())) return false;
+      if (!getNGMJKIHMFAJList()
+          .equals(other.getNGMJKIHMFAJList())) return false;
+      if (!getEJGFNIJMAJCList()
+          .equals(other.getEJGFNIJMAJCList())) return false;
+      if (getPBLIMBGNNNB()
+          != other.getPBLIMBGNNNB()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -430,23 +699,46 @@ public final class GetCityReputationMapInfoRspOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DJBPPBLKEGB_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getDJBPPBLKEGB());
+      hash = (37 * hash) + DOGDMGNBBOC_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getDOGDMGNBBOC());
+      if (getPEJNIFPFCFCCount() > 0) {
+        hash = (37 * hash) + PEJNIFPFCFC_FIELD_NUMBER;
+        hash = (53 * hash) + getPEJNIFPFCFCList().hashCode();
+      }
+      if (getLLKHPOOCCOJCount() > 0) {
+        hash = (37 * hash) + LLKHPOOCCOJ_FIELD_NUMBER;
+        hash = (53 * hash) + getLLKHPOOCCOJList().hashCode();
+      }
+      if (getBAFPIBOPILOCount() > 0) {
+        hash = (37 * hash) + BAFPIBOPILO_FIELD_NUMBER;
+        hash = (53 * hash) + getBAFPIBOPILOList().hashCode();
+      }
+      if (getJDDPGPMPBFICount() > 0) {
+        hash = (37 * hash) + JDDPGPMPBFI_FIELD_NUMBER;
+        hash = (53 * hash) + getJDDPGPMPBFIList().hashCode();
+      }
       hash = (37 * hash) + RETCODE_FIELD_NUMBER;
       hash = (53 * hash) + getRetcode();
-      hash = (37 * hash) + JJGPNHBKGHG_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getJJGPNHBKGHG());
-      hash = (37 * hash) + MOEFCHCBNGE_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getMOEFCHCBNGE());
-      if (getBIDOKKBGJLGCount() > 0) {
-        hash = (37 * hash) + BIDOKKBGJLG_FIELD_NUMBER;
-        hash = (53 * hash) + getBIDOKKBGJLGList().hashCode();
+      if (getIGIBBILCLJECount() > 0) {
+        hash = (37 * hash) + IGIBBILCLJE_FIELD_NUMBER;
+        hash = (53 * hash) + getIGIBBILCLJEList().hashCode();
       }
-      if (getBOMGJJFKDOCCount() > 0) {
-        hash = (37 * hash) + BOMGJJFKDOC_FIELD_NUMBER;
-        hash = (53 * hash) + getBOMGJJFKDOCList().hashCode();
+      if (getNGMJKIHMFAJCount() > 0) {
+        hash = (37 * hash) + NGMJKIHMFAJ_FIELD_NUMBER;
+        hash = (53 * hash) + getNGMJKIHMFAJList().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      if (getEJGFNIJMAJCCount() > 0) {
+        hash = (37 * hash) + EJGFNIJMAJC_FIELD_NUMBER;
+        hash = (53 * hash) + getEJGFNIJMAJCList().hashCode();
+      }
+      hash = (37 * hash) + PBLIMBGNNNB_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getPBLIMBGNNNB());
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -543,8 +835,7 @@ public final class GetCityReputationMapInfoRspOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 24830
-     * Obf: NFLPNFKGHED
+     * CmdId: 8829
      * </pre>
      *
      * Protobuf type {@code GetCityReputationMapInfoRsp}
@@ -568,32 +859,39 @@ public final class GetCityReputationMapInfoRspOuterClass {
 
       // Construct using emu.grasscutter.net.proto.GetCityReputationMapInfoRspOuterClass.GetCityReputationMapInfoRsp.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        dJBPPBLKEGB_ = false;
+
+        dOGDMGNBBOC_ = false;
+
+        pEJNIFPFCFC_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        lLKHPOOCCOJ_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        bAFPIBOPILO_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        jDDPGPMPBFI_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000008);
         retcode_ = 0;
 
-        jJGPNHBKGHG_ = false;
+        iGIBBILCLJE_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        nGMJKIHMFAJ_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        eJGFNIJMAJC_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000040);
+        pBLIMBGNNNB_ = false;
 
-        mOEFCHCBNGE_ = false;
-
-        bIDOKKBGJLG_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        bOMGJJFKDOC_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -621,19 +919,45 @@ public final class GetCityReputationMapInfoRspOuterClass {
       public emu.grasscutter.net.proto.GetCityReputationMapInfoRspOuterClass.GetCityReputationMapInfoRsp buildPartial() {
         emu.grasscutter.net.proto.GetCityReputationMapInfoRspOuterClass.GetCityReputationMapInfoRsp result = new emu.grasscutter.net.proto.GetCityReputationMapInfoRspOuterClass.GetCityReputationMapInfoRsp(this);
         int from_bitField0_ = bitField0_;
-        result.retcode_ = retcode_;
-        result.jJGPNHBKGHG_ = jJGPNHBKGHG_;
-        result.mOEFCHCBNGE_ = mOEFCHCBNGE_;
+        result.dJBPPBLKEGB_ = dJBPPBLKEGB_;
+        result.dOGDMGNBBOC_ = dOGDMGNBBOC_;
         if (((bitField0_ & 0x00000001) != 0)) {
-          bIDOKKBGJLG_.makeImmutable();
+          pEJNIFPFCFC_.makeImmutable();
           bitField0_ = (bitField0_ & ~0x00000001);
         }
-        result.bIDOKKBGJLG_ = bIDOKKBGJLG_;
+        result.pEJNIFPFCFC_ = pEJNIFPFCFC_;
         if (((bitField0_ & 0x00000002) != 0)) {
-          bOMGJJFKDOC_.makeImmutable();
+          lLKHPOOCCOJ_.makeImmutable();
           bitField0_ = (bitField0_ & ~0x00000002);
         }
-        result.bOMGJJFKDOC_ = bOMGJJFKDOC_;
+        result.lLKHPOOCCOJ_ = lLKHPOOCCOJ_;
+        if (((bitField0_ & 0x00000004) != 0)) {
+          bAFPIBOPILO_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.bAFPIBOPILO_ = bAFPIBOPILO_;
+        if (((bitField0_ & 0x00000008) != 0)) {
+          jDDPGPMPBFI_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000008);
+        }
+        result.jDDPGPMPBFI_ = jDDPGPMPBFI_;
+        result.retcode_ = retcode_;
+        if (((bitField0_ & 0x00000010) != 0)) {
+          iGIBBILCLJE_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000010);
+        }
+        result.iGIBBILCLJE_ = iGIBBILCLJE_;
+        if (((bitField0_ & 0x00000020) != 0)) {
+          nGMJKIHMFAJ_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000020);
+        }
+        result.nGMJKIHMFAJ_ = nGMJKIHMFAJ_;
+        if (((bitField0_ & 0x00000040) != 0)) {
+          eJGFNIJMAJC_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000040);
+        }
+        result.eJGFNIJMAJC_ = eJGFNIJMAJC_;
+        result.pBLIMBGNNNB_ = pBLIMBGNNNB_;
         onBuilt();
         return result;
       }
@@ -682,36 +1006,89 @@ public final class GetCityReputationMapInfoRspOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.GetCityReputationMapInfoRspOuterClass.GetCityReputationMapInfoRsp other) {
         if (other == emu.grasscutter.net.proto.GetCityReputationMapInfoRspOuterClass.GetCityReputationMapInfoRsp.getDefaultInstance()) return this;
+        if (other.getDJBPPBLKEGB() != false) {
+          setDJBPPBLKEGB(other.getDJBPPBLKEGB());
+        }
+        if (other.getDOGDMGNBBOC() != false) {
+          setDOGDMGNBBOC(other.getDOGDMGNBBOC());
+        }
+        if (!other.pEJNIFPFCFC_.isEmpty()) {
+          if (pEJNIFPFCFC_.isEmpty()) {
+            pEJNIFPFCFC_ = other.pEJNIFPFCFC_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensurePEJNIFPFCFCIsMutable();
+            pEJNIFPFCFC_.addAll(other.pEJNIFPFCFC_);
+          }
+          onChanged();
+        }
+        if (!other.lLKHPOOCCOJ_.isEmpty()) {
+          if (lLKHPOOCCOJ_.isEmpty()) {
+            lLKHPOOCCOJ_ = other.lLKHPOOCCOJ_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureLLKHPOOCCOJIsMutable();
+            lLKHPOOCCOJ_.addAll(other.lLKHPOOCCOJ_);
+          }
+          onChanged();
+        }
+        if (!other.bAFPIBOPILO_.isEmpty()) {
+          if (bAFPIBOPILO_.isEmpty()) {
+            bAFPIBOPILO_ = other.bAFPIBOPILO_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            ensureBAFPIBOPILOIsMutable();
+            bAFPIBOPILO_.addAll(other.bAFPIBOPILO_);
+          }
+          onChanged();
+        }
+        if (!other.jDDPGPMPBFI_.isEmpty()) {
+          if (jDDPGPMPBFI_.isEmpty()) {
+            jDDPGPMPBFI_ = other.jDDPGPMPBFI_;
+            bitField0_ = (bitField0_ & ~0x00000008);
+          } else {
+            ensureJDDPGPMPBFIIsMutable();
+            jDDPGPMPBFI_.addAll(other.jDDPGPMPBFI_);
+          }
+          onChanged();
+        }
         if (other.getRetcode() != 0) {
           setRetcode(other.getRetcode());
         }
-        if (other.getJJGPNHBKGHG() != false) {
-          setJJGPNHBKGHG(other.getJJGPNHBKGHG());
-        }
-        if (other.getMOEFCHCBNGE() != false) {
-          setMOEFCHCBNGE(other.getMOEFCHCBNGE());
-        }
-        if (!other.bIDOKKBGJLG_.isEmpty()) {
-          if (bIDOKKBGJLG_.isEmpty()) {
-            bIDOKKBGJLG_ = other.bIDOKKBGJLG_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+        if (!other.iGIBBILCLJE_.isEmpty()) {
+          if (iGIBBILCLJE_.isEmpty()) {
+            iGIBBILCLJE_ = other.iGIBBILCLJE_;
+            bitField0_ = (bitField0_ & ~0x00000010);
           } else {
-            ensureBIDOKKBGJLGIsMutable();
-            bIDOKKBGJLG_.addAll(other.bIDOKKBGJLG_);
+            ensureIGIBBILCLJEIsMutable();
+            iGIBBILCLJE_.addAll(other.iGIBBILCLJE_);
           }
           onChanged();
         }
-        if (!other.bOMGJJFKDOC_.isEmpty()) {
-          if (bOMGJJFKDOC_.isEmpty()) {
-            bOMGJJFKDOC_ = other.bOMGJJFKDOC_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+        if (!other.nGMJKIHMFAJ_.isEmpty()) {
+          if (nGMJKIHMFAJ_.isEmpty()) {
+            nGMJKIHMFAJ_ = other.nGMJKIHMFAJ_;
+            bitField0_ = (bitField0_ & ~0x00000020);
           } else {
-            ensureBOMGJJFKDOCIsMutable();
-            bOMGJJFKDOC_.addAll(other.bOMGJJFKDOC_);
+            ensureNGMJKIHMFAJIsMutable();
+            nGMJKIHMFAJ_.addAll(other.nGMJKIHMFAJ_);
           }
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        if (!other.eJGFNIJMAJC_.isEmpty()) {
+          if (eJGFNIJMAJC_.isEmpty()) {
+            eJGFNIJMAJC_ = other.eJGFNIJMAJC_;
+            bitField0_ = (bitField0_ & ~0x00000040);
+          } else {
+            ensureEJGFNIJMAJCIsMutable();
+            eJGFNIJMAJC_.addAll(other.eJGFNIJMAJC_);
+          }
+          onChanged();
+        }
+        if (other.getPBLIMBGNNNB() != false) {
+          setPBLIMBGNNNB(other.getPBLIMBGNNNB());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -726,24 +1103,547 @@ public final class GetCityReputationMapInfoRspOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.GetCityReputationMapInfoRspOuterClass.GetCityReputationMapInfoRsp parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                dJBPPBLKEGB_ = input.readBool();
+
+                break;
+              } // case 8
+              case 16: {
+                dOGDMGNBBOC_ = input.readBool();
+
+                break;
+              } // case 16
+              case 24: {
+                int v = input.readUInt32();
+                ensurePEJNIFPFCFCIsMutable();
+                pEJNIFPFCFC_.addInt(v);
+                break;
+              } // case 24
+              case 26: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensurePEJNIFPFCFCIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  pEJNIFPFCFC_.addInt(input.readUInt32());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 26
+              case 32: {
+                int v = input.readUInt32();
+                ensureLLKHPOOCCOJIsMutable();
+                lLKHPOOCCOJ_.addInt(v);
+                break;
+              } // case 32
+              case 34: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureLLKHPOOCCOJIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  lLKHPOOCCOJ_.addInt(input.readUInt32());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 34
+              case 40: {
+                int v = input.readUInt32();
+                ensureBAFPIBOPILOIsMutable();
+                bAFPIBOPILO_.addInt(v);
+                break;
+              } // case 40
+              case 42: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureBAFPIBOPILOIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  bAFPIBOPILO_.addInt(input.readUInt32());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 42
+              case 48: {
+                int v = input.readUInt32();
+                ensureJDDPGPMPBFIIsMutable();
+                jDDPGPMPBFI_.addInt(v);
+                break;
+              } // case 48
+              case 50: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureJDDPGPMPBFIIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  jDDPGPMPBFI_.addInt(input.readUInt32());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 50
+              case 56: {
+                retcode_ = input.readInt32();
+
+                break;
+              } // case 56
+              case 64: {
+                int v = input.readUInt32();
+                ensureIGIBBILCLJEIsMutable();
+                iGIBBILCLJE_.addInt(v);
+                break;
+              } // case 64
+              case 66: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureIGIBBILCLJEIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  iGIBBILCLJE_.addInt(input.readUInt32());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 66
+              case 88: {
+                int v = input.readUInt32();
+                ensureNGMJKIHMFAJIsMutable();
+                nGMJKIHMFAJ_.addInt(v);
+                break;
+              } // case 88
+              case 90: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureNGMJKIHMFAJIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  nGMJKIHMFAJ_.addInt(input.readUInt32());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 90
+              case 104: {
+                int v = input.readUInt32();
+                ensureEJGFNIJMAJCIsMutable();
+                eJGFNIJMAJC_.addInt(v);
+                break;
+              } // case 104
+              case 106: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureEJGFNIJMAJCIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  eJGFNIJMAJC_.addInt(input.readUInt32());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 106
+              case 112: {
+                pBLIMBGNNNB_ = input.readBool();
+
+                break;
+              } // case 112
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.GetCityReputationMapInfoRspOuterClass.GetCityReputationMapInfoRsp) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
 
+      private boolean dJBPPBLKEGB_ ;
+      /**
+       * <code>bool DJBPPBLKEGB = 1;</code>
+       * @return The dJBPPBLKEGB.
+       */
+      @java.lang.Override
+      public boolean getDJBPPBLKEGB() {
+        return dJBPPBLKEGB_;
+      }
+      /**
+       * <code>bool DJBPPBLKEGB = 1;</code>
+       * @param value The dJBPPBLKEGB to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDJBPPBLKEGB(boolean value) {
+        
+        dJBPPBLKEGB_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool DJBPPBLKEGB = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDJBPPBLKEGB() {
+        
+        dJBPPBLKEGB_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean dOGDMGNBBOC_ ;
+      /**
+       * <code>bool DOGDMGNBBOC = 2;</code>
+       * @return The dOGDMGNBBOC.
+       */
+      @java.lang.Override
+      public boolean getDOGDMGNBBOC() {
+        return dOGDMGNBBOC_;
+      }
+      /**
+       * <code>bool DOGDMGNBBOC = 2;</code>
+       * @param value The dOGDMGNBBOC to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDOGDMGNBBOC(boolean value) {
+        
+        dOGDMGNBBOC_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool DOGDMGNBBOC = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDOGDMGNBBOC() {
+        
+        dOGDMGNBBOC_ = false;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Internal.IntList pEJNIFPFCFC_ = emptyIntList();
+      private void ensurePEJNIFPFCFCIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          pEJNIFPFCFC_ = mutableCopy(pEJNIFPFCFC_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <code>repeated uint32 PEJNIFPFCFC = 3;</code>
+       * @return A list containing the pEJNIFPFCFC.
+       */
+      public java.util.List<java.lang.Integer>
+          getPEJNIFPFCFCList() {
+        return ((bitField0_ & 0x00000001) != 0) ?
+                 java.util.Collections.unmodifiableList(pEJNIFPFCFC_) : pEJNIFPFCFC_;
+      }
+      /**
+       * <code>repeated uint32 PEJNIFPFCFC = 3;</code>
+       * @return The count of pEJNIFPFCFC.
+       */
+      public int getPEJNIFPFCFCCount() {
+        return pEJNIFPFCFC_.size();
+      }
+      /**
+       * <code>repeated uint32 PEJNIFPFCFC = 3;</code>
+       * @param index The index of the element to return.
+       * @return The pEJNIFPFCFC at the given index.
+       */
+      public int getPEJNIFPFCFC(int index) {
+        return pEJNIFPFCFC_.getInt(index);
+      }
+      /**
+       * <code>repeated uint32 PEJNIFPFCFC = 3;</code>
+       * @param index The index to set the value at.
+       * @param value The pEJNIFPFCFC to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPEJNIFPFCFC(
+          int index, int value) {
+        ensurePEJNIFPFCFCIsMutable();
+        pEJNIFPFCFC_.setInt(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 PEJNIFPFCFC = 3;</code>
+       * @param value The pEJNIFPFCFC to add.
+       * @return This builder for chaining.
+       */
+      public Builder addPEJNIFPFCFC(int value) {
+        ensurePEJNIFPFCFCIsMutable();
+        pEJNIFPFCFC_.addInt(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 PEJNIFPFCFC = 3;</code>
+       * @param values The pEJNIFPFCFC to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllPEJNIFPFCFC(
+          java.lang.Iterable<? extends java.lang.Integer> values) {
+        ensurePEJNIFPFCFCIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, pEJNIFPFCFC_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 PEJNIFPFCFC = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPEJNIFPFCFC() {
+        pEJNIFPFCFC_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Internal.IntList lLKHPOOCCOJ_ = emptyIntList();
+      private void ensureLLKHPOOCCOJIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          lLKHPOOCCOJ_ = mutableCopy(lLKHPOOCCOJ_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+      /**
+       * <code>repeated uint32 LLKHPOOCCOJ = 4;</code>
+       * @return A list containing the lLKHPOOCCOJ.
+       */
+      public java.util.List<java.lang.Integer>
+          getLLKHPOOCCOJList() {
+        return ((bitField0_ & 0x00000002) != 0) ?
+                 java.util.Collections.unmodifiableList(lLKHPOOCCOJ_) : lLKHPOOCCOJ_;
+      }
+      /**
+       * <code>repeated uint32 LLKHPOOCCOJ = 4;</code>
+       * @return The count of lLKHPOOCCOJ.
+       */
+      public int getLLKHPOOCCOJCount() {
+        return lLKHPOOCCOJ_.size();
+      }
+      /**
+       * <code>repeated uint32 LLKHPOOCCOJ = 4;</code>
+       * @param index The index of the element to return.
+       * @return The lLKHPOOCCOJ at the given index.
+       */
+      public int getLLKHPOOCCOJ(int index) {
+        return lLKHPOOCCOJ_.getInt(index);
+      }
+      /**
+       * <code>repeated uint32 LLKHPOOCCOJ = 4;</code>
+       * @param index The index to set the value at.
+       * @param value The lLKHPOOCCOJ to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLLKHPOOCCOJ(
+          int index, int value) {
+        ensureLLKHPOOCCOJIsMutable();
+        lLKHPOOCCOJ_.setInt(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 LLKHPOOCCOJ = 4;</code>
+       * @param value The lLKHPOOCCOJ to add.
+       * @return This builder for chaining.
+       */
+      public Builder addLLKHPOOCCOJ(int value) {
+        ensureLLKHPOOCCOJIsMutable();
+        lLKHPOOCCOJ_.addInt(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 LLKHPOOCCOJ = 4;</code>
+       * @param values The lLKHPOOCCOJ to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllLLKHPOOCCOJ(
+          java.lang.Iterable<? extends java.lang.Integer> values) {
+        ensureLLKHPOOCCOJIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, lLKHPOOCCOJ_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 LLKHPOOCCOJ = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLLKHPOOCCOJ() {
+        lLKHPOOCCOJ_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Internal.IntList bAFPIBOPILO_ = emptyIntList();
+      private void ensureBAFPIBOPILOIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          bAFPIBOPILO_ = mutableCopy(bAFPIBOPILO_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+      /**
+       * <code>repeated uint32 BAFPIBOPILO = 5;</code>
+       * @return A list containing the bAFPIBOPILO.
+       */
+      public java.util.List<java.lang.Integer>
+          getBAFPIBOPILOList() {
+        return ((bitField0_ & 0x00000004) != 0) ?
+                 java.util.Collections.unmodifiableList(bAFPIBOPILO_) : bAFPIBOPILO_;
+      }
+      /**
+       * <code>repeated uint32 BAFPIBOPILO = 5;</code>
+       * @return The count of bAFPIBOPILO.
+       */
+      public int getBAFPIBOPILOCount() {
+        return bAFPIBOPILO_.size();
+      }
+      /**
+       * <code>repeated uint32 BAFPIBOPILO = 5;</code>
+       * @param index The index of the element to return.
+       * @return The bAFPIBOPILO at the given index.
+       */
+      public int getBAFPIBOPILO(int index) {
+        return bAFPIBOPILO_.getInt(index);
+      }
+      /**
+       * <code>repeated uint32 BAFPIBOPILO = 5;</code>
+       * @param index The index to set the value at.
+       * @param value The bAFPIBOPILO to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBAFPIBOPILO(
+          int index, int value) {
+        ensureBAFPIBOPILOIsMutable();
+        bAFPIBOPILO_.setInt(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 BAFPIBOPILO = 5;</code>
+       * @param value The bAFPIBOPILO to add.
+       * @return This builder for chaining.
+       */
+      public Builder addBAFPIBOPILO(int value) {
+        ensureBAFPIBOPILOIsMutable();
+        bAFPIBOPILO_.addInt(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 BAFPIBOPILO = 5;</code>
+       * @param values The bAFPIBOPILO to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllBAFPIBOPILO(
+          java.lang.Iterable<? extends java.lang.Integer> values) {
+        ensureBAFPIBOPILOIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, bAFPIBOPILO_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 BAFPIBOPILO = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBAFPIBOPILO() {
+        bAFPIBOPILO_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Internal.IntList jDDPGPMPBFI_ = emptyIntList();
+      private void ensureJDDPGPMPBFIIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          jDDPGPMPBFI_ = mutableCopy(jDDPGPMPBFI_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+      /**
+       * <code>repeated uint32 JDDPGPMPBFI = 6;</code>
+       * @return A list containing the jDDPGPMPBFI.
+       */
+      public java.util.List<java.lang.Integer>
+          getJDDPGPMPBFIList() {
+        return ((bitField0_ & 0x00000008) != 0) ?
+                 java.util.Collections.unmodifiableList(jDDPGPMPBFI_) : jDDPGPMPBFI_;
+      }
+      /**
+       * <code>repeated uint32 JDDPGPMPBFI = 6;</code>
+       * @return The count of jDDPGPMPBFI.
+       */
+      public int getJDDPGPMPBFICount() {
+        return jDDPGPMPBFI_.size();
+      }
+      /**
+       * <code>repeated uint32 JDDPGPMPBFI = 6;</code>
+       * @param index The index of the element to return.
+       * @return The jDDPGPMPBFI at the given index.
+       */
+      public int getJDDPGPMPBFI(int index) {
+        return jDDPGPMPBFI_.getInt(index);
+      }
+      /**
+       * <code>repeated uint32 JDDPGPMPBFI = 6;</code>
+       * @param index The index to set the value at.
+       * @param value The jDDPGPMPBFI to set.
+       * @return This builder for chaining.
+       */
+      public Builder setJDDPGPMPBFI(
+          int index, int value) {
+        ensureJDDPGPMPBFIIsMutable();
+        jDDPGPMPBFI_.setInt(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 JDDPGPMPBFI = 6;</code>
+       * @param value The jDDPGPMPBFI to add.
+       * @return This builder for chaining.
+       */
+      public Builder addJDDPGPMPBFI(int value) {
+        ensureJDDPGPMPBFIIsMutable();
+        jDDPGPMPBFI_.addInt(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 JDDPGPMPBFI = 6;</code>
+       * @param values The jDDPGPMPBFI to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllJDDPGPMPBFI(
+          java.lang.Iterable<? extends java.lang.Integer> values) {
+        ensureJDDPGPMPBFIIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, jDDPGPMPBFI_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 JDDPGPMPBFI = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearJDDPGPMPBFI() {
+        jDDPGPMPBFI_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+
       private int retcode_ ;
       /**
-       * <code>int32 retcode = 14;</code>
+       * <code>int32 retcode = 7;</code>
        * @return The retcode.
        */
       @java.lang.Override
@@ -751,7 +1651,7 @@ public final class GetCityReputationMapInfoRspOuterClass {
         return retcode_;
       }
       /**
-       * <code>int32 retcode = 14;</code>
+       * <code>int32 retcode = 7;</code>
        * @param value The retcode to set.
        * @return This builder for chaining.
        */
@@ -762,7 +1662,7 @@ public final class GetCityReputationMapInfoRspOuterClass {
         return this;
       }
       /**
-       * <code>int32 retcode = 14;</code>
+       * <code>int32 retcode = 7;</code>
        * @return This builder for chaining.
        */
       public Builder clearRetcode() {
@@ -772,222 +1672,270 @@ public final class GetCityReputationMapInfoRspOuterClass {
         return this;
       }
 
-      private boolean jJGPNHBKGHG_ ;
-      /**
-       * <code>bool JJGPNHBKGHG = 9;</code>
-       * @return The jJGPNHBKGHG.
-       */
-      @java.lang.Override
-      public boolean getJJGPNHBKGHG() {
-        return jJGPNHBKGHG_;
-      }
-      /**
-       * <code>bool JJGPNHBKGHG = 9;</code>
-       * @param value The jJGPNHBKGHG to set.
-       * @return This builder for chaining.
-       */
-      public Builder setJJGPNHBKGHG(boolean value) {
-        
-        jJGPNHBKGHG_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bool JJGPNHBKGHG = 9;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearJJGPNHBKGHG() {
-        
-        jJGPNHBKGHG_ = false;
-        onChanged();
-        return this;
-      }
-
-      private boolean mOEFCHCBNGE_ ;
-      /**
-       * <code>bool MOEFCHCBNGE = 8;</code>
-       * @return The mOEFCHCBNGE.
-       */
-      @java.lang.Override
-      public boolean getMOEFCHCBNGE() {
-        return mOEFCHCBNGE_;
-      }
-      /**
-       * <code>bool MOEFCHCBNGE = 8;</code>
-       * @param value The mOEFCHCBNGE to set.
-       * @return This builder for chaining.
-       */
-      public Builder setMOEFCHCBNGE(boolean value) {
-        
-        mOEFCHCBNGE_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bool MOEFCHCBNGE = 8;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearMOEFCHCBNGE() {
-        
-        mOEFCHCBNGE_ = false;
-        onChanged();
-        return this;
-      }
-
-      private com.google.protobuf.Internal.IntList bIDOKKBGJLG_ = emptyIntList();
-      private void ensureBIDOKKBGJLGIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          bIDOKKBGJLG_ = mutableCopy(bIDOKKBGJLG_);
-          bitField0_ |= 0x00000001;
+      private com.google.protobuf.Internal.IntList iGIBBILCLJE_ = emptyIntList();
+      private void ensureIGIBBILCLJEIsMutable() {
+        if (!((bitField0_ & 0x00000010) != 0)) {
+          iGIBBILCLJE_ = mutableCopy(iGIBBILCLJE_);
+          bitField0_ |= 0x00000010;
          }
       }
       /**
-       * <code>repeated uint32 BIDOKKBGJLG = 3;</code>
-       * @return A list containing the bIDOKKBGJLG.
+       * <code>repeated uint32 IGIBBILCLJE = 8;</code>
+       * @return A list containing the iGIBBILCLJE.
        */
       public java.util.List<java.lang.Integer>
-          getBIDOKKBGJLGList() {
-        return ((bitField0_ & 0x00000001) != 0) ?
-                 java.util.Collections.unmodifiableList(bIDOKKBGJLG_) : bIDOKKBGJLG_;
+          getIGIBBILCLJEList() {
+        return ((bitField0_ & 0x00000010) != 0) ?
+                 java.util.Collections.unmodifiableList(iGIBBILCLJE_) : iGIBBILCLJE_;
       }
       /**
-       * <code>repeated uint32 BIDOKKBGJLG = 3;</code>
-       * @return The count of bIDOKKBGJLG.
+       * <code>repeated uint32 IGIBBILCLJE = 8;</code>
+       * @return The count of iGIBBILCLJE.
        */
-      public int getBIDOKKBGJLGCount() {
-        return bIDOKKBGJLG_.size();
+      public int getIGIBBILCLJECount() {
+        return iGIBBILCLJE_.size();
       }
       /**
-       * <code>repeated uint32 BIDOKKBGJLG = 3;</code>
+       * <code>repeated uint32 IGIBBILCLJE = 8;</code>
        * @param index The index of the element to return.
-       * @return The bIDOKKBGJLG at the given index.
+       * @return The iGIBBILCLJE at the given index.
        */
-      public int getBIDOKKBGJLG(int index) {
-        return bIDOKKBGJLG_.getInt(index);
+      public int getIGIBBILCLJE(int index) {
+        return iGIBBILCLJE_.getInt(index);
       }
       /**
-       * <code>repeated uint32 BIDOKKBGJLG = 3;</code>
+       * <code>repeated uint32 IGIBBILCLJE = 8;</code>
        * @param index The index to set the value at.
-       * @param value The bIDOKKBGJLG to set.
+       * @param value The iGIBBILCLJE to set.
        * @return This builder for chaining.
        */
-      public Builder setBIDOKKBGJLG(
+      public Builder setIGIBBILCLJE(
           int index, int value) {
-        ensureBIDOKKBGJLGIsMutable();
-        bIDOKKBGJLG_.setInt(index, value);
+        ensureIGIBBILCLJEIsMutable();
+        iGIBBILCLJE_.setInt(index, value);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated uint32 BIDOKKBGJLG = 3;</code>
-       * @param value The bIDOKKBGJLG to add.
+       * <code>repeated uint32 IGIBBILCLJE = 8;</code>
+       * @param value The iGIBBILCLJE to add.
        * @return This builder for chaining.
        */
-      public Builder addBIDOKKBGJLG(int value) {
-        ensureBIDOKKBGJLGIsMutable();
-        bIDOKKBGJLG_.addInt(value);
+      public Builder addIGIBBILCLJE(int value) {
+        ensureIGIBBILCLJEIsMutable();
+        iGIBBILCLJE_.addInt(value);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated uint32 BIDOKKBGJLG = 3;</code>
-       * @param values The bIDOKKBGJLG to add.
+       * <code>repeated uint32 IGIBBILCLJE = 8;</code>
+       * @param values The iGIBBILCLJE to add.
        * @return This builder for chaining.
        */
-      public Builder addAllBIDOKKBGJLG(
+      public Builder addAllIGIBBILCLJE(
           java.lang.Iterable<? extends java.lang.Integer> values) {
-        ensureBIDOKKBGJLGIsMutable();
+        ensureIGIBBILCLJEIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, bIDOKKBGJLG_);
+            values, iGIBBILCLJE_);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated uint32 BIDOKKBGJLG = 3;</code>
+       * <code>repeated uint32 IGIBBILCLJE = 8;</code>
        * @return This builder for chaining.
        */
-      public Builder clearBIDOKKBGJLG() {
-        bIDOKKBGJLG_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+      public Builder clearIGIBBILCLJE() {
+        iGIBBILCLJE_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
         return this;
       }
 
-      private com.google.protobuf.Internal.IntList bOMGJJFKDOC_ = emptyIntList();
-      private void ensureBOMGJJFKDOCIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
-          bOMGJJFKDOC_ = mutableCopy(bOMGJJFKDOC_);
-          bitField0_ |= 0x00000002;
+      private com.google.protobuf.Internal.IntList nGMJKIHMFAJ_ = emptyIntList();
+      private void ensureNGMJKIHMFAJIsMutable() {
+        if (!((bitField0_ & 0x00000020) != 0)) {
+          nGMJKIHMFAJ_ = mutableCopy(nGMJKIHMFAJ_);
+          bitField0_ |= 0x00000020;
          }
       }
       /**
-       * <code>repeated uint32 BOMGJJFKDOC = 5;</code>
-       * @return A list containing the bOMGJJFKDOC.
+       * <code>repeated uint32 NGMJKIHMFAJ = 11;</code>
+       * @return A list containing the nGMJKIHMFAJ.
        */
       public java.util.List<java.lang.Integer>
-          getBOMGJJFKDOCList() {
-        return ((bitField0_ & 0x00000002) != 0) ?
-                 java.util.Collections.unmodifiableList(bOMGJJFKDOC_) : bOMGJJFKDOC_;
+          getNGMJKIHMFAJList() {
+        return ((bitField0_ & 0x00000020) != 0) ?
+                 java.util.Collections.unmodifiableList(nGMJKIHMFAJ_) : nGMJKIHMFAJ_;
       }
       /**
-       * <code>repeated uint32 BOMGJJFKDOC = 5;</code>
-       * @return The count of bOMGJJFKDOC.
+       * <code>repeated uint32 NGMJKIHMFAJ = 11;</code>
+       * @return The count of nGMJKIHMFAJ.
        */
-      public int getBOMGJJFKDOCCount() {
-        return bOMGJJFKDOC_.size();
+      public int getNGMJKIHMFAJCount() {
+        return nGMJKIHMFAJ_.size();
       }
       /**
-       * <code>repeated uint32 BOMGJJFKDOC = 5;</code>
+       * <code>repeated uint32 NGMJKIHMFAJ = 11;</code>
        * @param index The index of the element to return.
-       * @return The bOMGJJFKDOC at the given index.
+       * @return The nGMJKIHMFAJ at the given index.
        */
-      public int getBOMGJJFKDOC(int index) {
-        return bOMGJJFKDOC_.getInt(index);
+      public int getNGMJKIHMFAJ(int index) {
+        return nGMJKIHMFAJ_.getInt(index);
       }
       /**
-       * <code>repeated uint32 BOMGJJFKDOC = 5;</code>
+       * <code>repeated uint32 NGMJKIHMFAJ = 11;</code>
        * @param index The index to set the value at.
-       * @param value The bOMGJJFKDOC to set.
+       * @param value The nGMJKIHMFAJ to set.
        * @return This builder for chaining.
        */
-      public Builder setBOMGJJFKDOC(
+      public Builder setNGMJKIHMFAJ(
           int index, int value) {
-        ensureBOMGJJFKDOCIsMutable();
-        bOMGJJFKDOC_.setInt(index, value);
+        ensureNGMJKIHMFAJIsMutable();
+        nGMJKIHMFAJ_.setInt(index, value);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated uint32 BOMGJJFKDOC = 5;</code>
-       * @param value The bOMGJJFKDOC to add.
+       * <code>repeated uint32 NGMJKIHMFAJ = 11;</code>
+       * @param value The nGMJKIHMFAJ to add.
        * @return This builder for chaining.
        */
-      public Builder addBOMGJJFKDOC(int value) {
-        ensureBOMGJJFKDOCIsMutable();
-        bOMGJJFKDOC_.addInt(value);
+      public Builder addNGMJKIHMFAJ(int value) {
+        ensureNGMJKIHMFAJIsMutable();
+        nGMJKIHMFAJ_.addInt(value);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated uint32 BOMGJJFKDOC = 5;</code>
-       * @param values The bOMGJJFKDOC to add.
+       * <code>repeated uint32 NGMJKIHMFAJ = 11;</code>
+       * @param values The nGMJKIHMFAJ to add.
        * @return This builder for chaining.
        */
-      public Builder addAllBOMGJJFKDOC(
+      public Builder addAllNGMJKIHMFAJ(
           java.lang.Iterable<? extends java.lang.Integer> values) {
-        ensureBOMGJJFKDOCIsMutable();
+        ensureNGMJKIHMFAJIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, bOMGJJFKDOC_);
+            values, nGMJKIHMFAJ_);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated uint32 BOMGJJFKDOC = 5;</code>
+       * <code>repeated uint32 NGMJKIHMFAJ = 11;</code>
        * @return This builder for chaining.
        */
-      public Builder clearBOMGJJFKDOC() {
-        bOMGJJFKDOC_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+      public Builder clearNGMJKIHMFAJ() {
+        nGMJKIHMFAJ_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Internal.IntList eJGFNIJMAJC_ = emptyIntList();
+      private void ensureEJGFNIJMAJCIsMutable() {
+        if (!((bitField0_ & 0x00000040) != 0)) {
+          eJGFNIJMAJC_ = mutableCopy(eJGFNIJMAJC_);
+          bitField0_ |= 0x00000040;
+         }
+      }
+      /**
+       * <code>repeated uint32 EJGFNIJMAJC = 13;</code>
+       * @return A list containing the eJGFNIJMAJC.
+       */
+      public java.util.List<java.lang.Integer>
+          getEJGFNIJMAJCList() {
+        return ((bitField0_ & 0x00000040) != 0) ?
+                 java.util.Collections.unmodifiableList(eJGFNIJMAJC_) : eJGFNIJMAJC_;
+      }
+      /**
+       * <code>repeated uint32 EJGFNIJMAJC = 13;</code>
+       * @return The count of eJGFNIJMAJC.
+       */
+      public int getEJGFNIJMAJCCount() {
+        return eJGFNIJMAJC_.size();
+      }
+      /**
+       * <code>repeated uint32 EJGFNIJMAJC = 13;</code>
+       * @param index The index of the element to return.
+       * @return The eJGFNIJMAJC at the given index.
+       */
+      public int getEJGFNIJMAJC(int index) {
+        return eJGFNIJMAJC_.getInt(index);
+      }
+      /**
+       * <code>repeated uint32 EJGFNIJMAJC = 13;</code>
+       * @param index The index to set the value at.
+       * @param value The eJGFNIJMAJC to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEJGFNIJMAJC(
+          int index, int value) {
+        ensureEJGFNIJMAJCIsMutable();
+        eJGFNIJMAJC_.setInt(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 EJGFNIJMAJC = 13;</code>
+       * @param value The eJGFNIJMAJC to add.
+       * @return This builder for chaining.
+       */
+      public Builder addEJGFNIJMAJC(int value) {
+        ensureEJGFNIJMAJCIsMutable();
+        eJGFNIJMAJC_.addInt(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 EJGFNIJMAJC = 13;</code>
+       * @param values The eJGFNIJMAJC to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllEJGFNIJMAJC(
+          java.lang.Iterable<? extends java.lang.Integer> values) {
+        ensureEJGFNIJMAJCIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, eJGFNIJMAJC_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 EJGFNIJMAJC = 13;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEJGFNIJMAJC() {
+        eJGFNIJMAJC_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000040);
+        onChanged();
+        return this;
+      }
+
+      private boolean pBLIMBGNNNB_ ;
+      /**
+       * <code>bool PBLIMBGNNNB = 14;</code>
+       * @return The pBLIMBGNNNB.
+       */
+      @java.lang.Override
+      public boolean getPBLIMBGNNNB() {
+        return pBLIMBGNNNB_;
+      }
+      /**
+       * <code>bool PBLIMBGNNNB = 14;</code>
+       * @param value The pBLIMBGNNNB to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPBLIMBGNNNB(boolean value) {
+        
+        pBLIMBGNNNB_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool PBLIMBGNNNB = 14;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPBLIMBGNNNB() {
+        
+        pBLIMBGNNNB_ = false;
         onChanged();
         return this;
       }
@@ -1024,7 +1972,18 @@ public final class GetCityReputationMapInfoRspOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new GetCityReputationMapInfoRsp(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -1058,12 +2017,15 @@ public final class GetCityReputationMapInfoRspOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n!GetCityReputationMapInfoRsp.proto\"\202\001\n\033" +
-      "GetCityReputationMapInfoRsp\022\017\n\007retcode\030\016" +
-      " \001(\005\022\023\n\013JJGPNHBKGHG\030\t \001(\010\022\023\n\013MOEFCHCBNGE" +
-      "\030\010 \001(\010\022\023\n\013BIDOKKBGJLG\030\003 \003(\r\022\023\n\013BOMGJJFKD" +
-      "OC\030\005 \003(\rB\033\n\031emu.grasscutter.net.protob\006p" +
-      "roto3"
+      "\n!GetCityReputationMapInfoRsp.proto\"\200\002\n\033" +
+      "GetCityReputationMapInfoRsp\022\023\n\013DJBPPBLKE" +
+      "GB\030\001 \001(\010\022\023\n\013DOGDMGNBBOC\030\002 \001(\010\022\023\n\013PEJNIFP" +
+      "FCFC\030\003 \003(\r\022\023\n\013LLKHPOOCCOJ\030\004 \003(\r\022\023\n\013BAFPI" +
+      "BOPILO\030\005 \003(\r\022\023\n\013JDDPGPMPBFI\030\006 \003(\r\022\017\n\007ret" +
+      "code\030\007 \001(\005\022\023\n\013IGIBBILCLJE\030\010 \003(\r\022\023\n\013NGMJK" +
+      "IHMFAJ\030\013 \003(\r\022\023\n\013EJGFNIJMAJC\030\r \003(\r\022\023\n\013PBL" +
+      "IMBGNNNB\030\016 \001(\010B\033\n\031emu.grasscutter.net.pr" +
+      "otob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1074,7 +2036,7 @@ public final class GetCityReputationMapInfoRspOuterClass {
     internal_static_GetCityReputationMapInfoRsp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_GetCityReputationMapInfoRsp_descriptor,
-        new java.lang.String[] { "Retcode", "JJGPNHBKGHG", "MOEFCHCBNGE", "BIDOKKBGJLG", "BOMGJJFKDOC", });
+        new java.lang.String[] { "DJBPPBLKEGB", "DOGDMGNBBOC", "PEJNIFPFCFC", "LLKHPOOCCOJ", "BAFPIBOPILO", "JDDPGPMPBFI", "Retcode", "IGIBBILCLJE", "NGMJKIHMFAJ", "EJGFNIJMAJC", "PBLIMBGNNNB", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

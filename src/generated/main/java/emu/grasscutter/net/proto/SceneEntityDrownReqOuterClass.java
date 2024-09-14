@@ -26,9 +26,7 @@ public final class SceneEntityDrownReqOuterClass {
   }
   /**
    * <pre>
-   * CmdId: 23233
-   * Version: 4.7.0
-   * Obfs: ?
+   * CmdId: 5341
    * </pre>
    *
    * Protobuf type {@code SceneEntityDrownReq}
@@ -238,9 +236,7 @@ public final class SceneEntityDrownReqOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 23233
-     * Version: 4.7.0
-     * Obfs: ?
+     * CmdId: 5341
      * </pre>
      *
      * Protobuf type {@code SceneEntityDrownReq}

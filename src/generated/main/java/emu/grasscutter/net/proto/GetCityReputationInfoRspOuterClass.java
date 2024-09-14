@@ -19,39 +19,37 @@ public final class GetCityReputationInfoRspOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated uint32 LIDPFAAPFMM = 4;</code>
-     * @return A list containing the lIDPFAAPFMM.
+     * <code>uint32 city_id = 1;</code>
+     * @return The cityId.
      */
-    java.util.List<java.lang.Integer> getLIDPFAAPFMMList();
-    /**
-     * <code>repeated uint32 LIDPFAAPFMM = 4;</code>
-     * @return The count of lIDPFAAPFMM.
-     */
-    int getLIDPFAAPFMMCount();
-    /**
-     * <code>repeated uint32 LIDPFAAPFMM = 4;</code>
-     * @param index The index of the element to return.
-     * @return The lIDPFAAPFMM at the given index.
-     */
-    int getLIDPFAAPFMM(int index);
+    int getCityId();
 
     /**
-     * <code>int32 retcode = 5;</code>
+     * <code>int32 retcode = 12;</code>
      * @return The retcode.
      */
     int getRetcode();
 
     /**
-     * <pre>
-     *repeated LCBGDOHINDD GAGAHOFMJLM = 9;
-     * </pre>
-     *
-     * <code>uint32 city_id = 8;</code>
-     * @return The cityId.
+     * <code>.CityReputationInfo city_reputation_info = 15;</code>
+     * @return Whether the cityReputationInfo field is set.
      */
-    int getCityId();
+    boolean hasCityReputationInfo();
+    /**
+     * <code>.CityReputationInfo city_reputation_info = 15;</code>
+     * @return The cityReputationInfo.
+     */
+    emu.grasscutter.net.proto.CityReputationInfoOuterClass.CityReputationInfo getCityReputationInfo();
+    /**
+     * <code>.CityReputationInfo city_reputation_info = 15;</code>
+     */
+    emu.grasscutter.net.proto.CityReputationInfoOuterClass.CityReputationInfoOrBuilder getCityReputationInfoOrBuilder();
   }
   /**
+   * <pre>
+   * CmdId: 24488
+   * </pre>
+   *
    * Protobuf type {@code GetCityReputationInfoRsp}
    */
   public static final class GetCityReputationInfoRsp extends
@@ -64,7 +62,6 @@ public final class GetCityReputationInfoRspOuterClass {
       super(builder);
     }
     private GetCityReputationInfoRsp() {
-      lIDPFAAPFMM_ = emptyIntList();
     }
 
     @java.lang.Override
@@ -92,38 +89,21 @@ public final class GetCityReputationInfoRspOuterClass {
               emu.grasscutter.net.proto.GetCityReputationInfoRspOuterClass.GetCityReputationInfoRsp.class, emu.grasscutter.net.proto.GetCityReputationInfoRspOuterClass.GetCityReputationInfoRsp.Builder.class);
     }
 
-    public static final int LIDPFAAPFMM_FIELD_NUMBER = 4;
-    private com.google.protobuf.Internal.IntList lIDPFAAPFMM_;
+    public static final int CITY_ID_FIELD_NUMBER = 1;
+    private int cityId_;
     /**
-     * <code>repeated uint32 LIDPFAAPFMM = 4;</code>
-     * @return A list containing the lIDPFAAPFMM.
+     * <code>uint32 city_id = 1;</code>
+     * @return The cityId.
      */
     @java.lang.Override
-    public java.util.List<java.lang.Integer>
-        getLIDPFAAPFMMList() {
-      return lIDPFAAPFMM_;
+    public int getCityId() {
+      return cityId_;
     }
-    /**
-     * <code>repeated uint32 LIDPFAAPFMM = 4;</code>
-     * @return The count of lIDPFAAPFMM.
-     */
-    public int getLIDPFAAPFMMCount() {
-      return lIDPFAAPFMM_.size();
-    }
-    /**
-     * <code>repeated uint32 LIDPFAAPFMM = 4;</code>
-     * @param index The index of the element to return.
-     * @return The lIDPFAAPFMM at the given index.
-     */
-    public int getLIDPFAAPFMM(int index) {
-      return lIDPFAAPFMM_.getInt(index);
-    }
-    private int lIDPFAAPFMMMemoizedSerializedSize = -1;
 
-    public static final int RETCODE_FIELD_NUMBER = 5;
+    public static final int RETCODE_FIELD_NUMBER = 12;
     private int retcode_;
     /**
-     * <code>int32 retcode = 5;</code>
+     * <code>int32 retcode = 12;</code>
      * @return The retcode.
      */
     @java.lang.Override
@@ -131,19 +111,30 @@ public final class GetCityReputationInfoRspOuterClass {
       return retcode_;
     }
 
-    public static final int CITY_ID_FIELD_NUMBER = 8;
-    private int cityId_;
+    public static final int CITY_REPUTATION_INFO_FIELD_NUMBER = 15;
+    private emu.grasscutter.net.proto.CityReputationInfoOuterClass.CityReputationInfo cityReputationInfo_;
     /**
-     * <pre>
-     *repeated LCBGDOHINDD GAGAHOFMJLM = 9;
-     * </pre>
-     *
-     * <code>uint32 city_id = 8;</code>
-     * @return The cityId.
+     * <code>.CityReputationInfo city_reputation_info = 15;</code>
+     * @return Whether the cityReputationInfo field is set.
      */
     @java.lang.Override
-    public int getCityId() {
-      return cityId_;
+    public boolean hasCityReputationInfo() {
+      return cityReputationInfo_ != null;
+    }
+    /**
+     * <code>.CityReputationInfo city_reputation_info = 15;</code>
+     * @return The cityReputationInfo.
+     */
+    @java.lang.Override
+    public emu.grasscutter.net.proto.CityReputationInfoOuterClass.CityReputationInfo getCityReputationInfo() {
+      return cityReputationInfo_ == null ? emu.grasscutter.net.proto.CityReputationInfoOuterClass.CityReputationInfo.getDefaultInstance() : cityReputationInfo_;
+    }
+    /**
+     * <code>.CityReputationInfo city_reputation_info = 15;</code>
+     */
+    @java.lang.Override
+    public emu.grasscutter.net.proto.CityReputationInfoOuterClass.CityReputationInfoOrBuilder getCityReputationInfoOrBuilder() {
+      return getCityReputationInfo();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -160,19 +151,14 @@ public final class GetCityReputationInfoRspOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      getSerializedSize();
-      if (getLIDPFAAPFMMList().size() > 0) {
-        output.writeUInt32NoTag(34);
-        output.writeUInt32NoTag(lIDPFAAPFMMMemoizedSerializedSize);
-      }
-      for (int i = 0; i < lIDPFAAPFMM_.size(); i++) {
-        output.writeUInt32NoTag(lIDPFAAPFMM_.getInt(i));
+      if (cityId_ != 0) {
+        output.writeUInt32(1, cityId_);
       }
       if (retcode_ != 0) {
-        output.writeInt32(5, retcode_);
+        output.writeInt32(12, retcode_);
       }
-      if (cityId_ != 0) {
-        output.writeUInt32(8, cityId_);
+      if (cityReputationInfo_ != null) {
+        output.writeMessage(15, getCityReputationInfo());
       }
       getUnknownFields().writeTo(output);
     }
@@ -183,27 +169,17 @@ public final class GetCityReputationInfoRspOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      {
-        int dataSize = 0;
-        for (int i = 0; i < lIDPFAAPFMM_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
-            .computeUInt32SizeNoTag(lIDPFAAPFMM_.getInt(i));
-        }
-        size += dataSize;
-        if (!getLIDPFAAPFMMList().isEmpty()) {
-          size += 1;
-          size += com.google.protobuf.CodedOutputStream
-              .computeInt32SizeNoTag(dataSize);
-        }
-        lIDPFAAPFMMMemoizedSerializedSize = dataSize;
+      if (cityId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, cityId_);
       }
       if (retcode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(5, retcode_);
+          .computeInt32Size(12, retcode_);
       }
-      if (cityId_ != 0) {
+      if (cityReputationInfo_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(8, cityId_);
+          .computeMessageSize(15, getCityReputationInfo());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -220,12 +196,15 @@ public final class GetCityReputationInfoRspOuterClass {
       }
       emu.grasscutter.net.proto.GetCityReputationInfoRspOuterClass.GetCityReputationInfoRsp other = (emu.grasscutter.net.proto.GetCityReputationInfoRspOuterClass.GetCityReputationInfoRsp) obj;
 
-      if (!getLIDPFAAPFMMList()
-          .equals(other.getLIDPFAAPFMMList())) return false;
-      if (getRetcode()
-          != other.getRetcode()) return false;
       if (getCityId()
           != other.getCityId()) return false;
+      if (getRetcode()
+          != other.getRetcode()) return false;
+      if (hasCityReputationInfo() != other.hasCityReputationInfo()) return false;
+      if (hasCityReputationInfo()) {
+        if (!getCityReputationInfo()
+            .equals(other.getCityReputationInfo())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -237,14 +216,14 @@ public final class GetCityReputationInfoRspOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (getLIDPFAAPFMMCount() > 0) {
-        hash = (37 * hash) + LIDPFAAPFMM_FIELD_NUMBER;
-        hash = (53 * hash) + getLIDPFAAPFMMList().hashCode();
-      }
-      hash = (37 * hash) + RETCODE_FIELD_NUMBER;
-      hash = (53 * hash) + getRetcode();
       hash = (37 * hash) + CITY_ID_FIELD_NUMBER;
       hash = (53 * hash) + getCityId();
+      hash = (37 * hash) + RETCODE_FIELD_NUMBER;
+      hash = (53 * hash) + getRetcode();
+      if (hasCityReputationInfo()) {
+        hash = (37 * hash) + CITY_REPUTATION_INFO_FIELD_NUMBER;
+        hash = (53 * hash) + getCityReputationInfo().hashCode();
+      }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -341,6 +320,10 @@ public final class GetCityReputationInfoRspOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * CmdId: 24488
+     * </pre>
+     *
      * Protobuf type {@code GetCityReputationInfoRsp}
      */
     public static final class Builder extends
@@ -373,12 +356,16 @@ public final class GetCityReputationInfoRspOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        lIDPFAAPFMM_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        retcode_ = 0;
-
         cityId_ = 0;
 
+        retcode_ = 0;
+
+        if (cityReputationInfoBuilder_ == null) {
+          cityReputationInfo_ = null;
+        } else {
+          cityReputationInfo_ = null;
+          cityReputationInfoBuilder_ = null;
+        }
         return this;
       }
 
@@ -405,14 +392,13 @@ public final class GetCityReputationInfoRspOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.GetCityReputationInfoRspOuterClass.GetCityReputationInfoRsp buildPartial() {
         emu.grasscutter.net.proto.GetCityReputationInfoRspOuterClass.GetCityReputationInfoRsp result = new emu.grasscutter.net.proto.GetCityReputationInfoRspOuterClass.GetCityReputationInfoRsp(this);
-        int from_bitField0_ = bitField0_;
-        if (((bitField0_ & 0x00000001) != 0)) {
-          lIDPFAAPFMM_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.lIDPFAAPFMM_ = lIDPFAAPFMM_;
-        result.retcode_ = retcode_;
         result.cityId_ = cityId_;
+        result.retcode_ = retcode_;
+        if (cityReputationInfoBuilder_ == null) {
+          result.cityReputationInfo_ = cityReputationInfo_;
+        } else {
+          result.cityReputationInfo_ = cityReputationInfoBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -461,21 +447,14 @@ public final class GetCityReputationInfoRspOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.GetCityReputationInfoRspOuterClass.GetCityReputationInfoRsp other) {
         if (other == emu.grasscutter.net.proto.GetCityReputationInfoRspOuterClass.GetCityReputationInfoRsp.getDefaultInstance()) return this;
-        if (!other.lIDPFAAPFMM_.isEmpty()) {
-          if (lIDPFAAPFMM_.isEmpty()) {
-            lIDPFAAPFMM_ = other.lIDPFAAPFMM_;
-            bitField0_ = (bitField0_ & ~0x00000001);
-          } else {
-            ensureLIDPFAAPFMMIsMutable();
-            lIDPFAAPFMM_.addAll(other.lIDPFAAPFMM_);
-          }
-          onChanged();
+        if (other.getCityId() != 0) {
+          setCityId(other.getCityId());
         }
         if (other.getRetcode() != 0) {
           setRetcode(other.getRetcode());
         }
-        if (other.getCityId() != 0) {
-          setCityId(other.getCityId());
+        if (other.hasCityReputationInfo()) {
+          mergeCityReputationInfo(other.getCityReputationInfo());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -503,32 +482,23 @@ public final class GetCityReputationInfoRspOuterClass {
               case 0:
                 done = true;
                 break;
-              case 32: {
-                int v = input.readUInt32();
-                ensureLIDPFAAPFMMIsMutable();
-                lIDPFAAPFMM_.addInt(v);
-                break;
-              } // case 32
-              case 34: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureLIDPFAAPFMMIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  lIDPFAAPFMM_.addInt(input.readUInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 34
-              case 40: {
-                retcode_ = input.readInt32();
-
-                break;
-              } // case 40
-              case 64: {
+              case 8: {
                 cityId_ = input.readUInt32();
 
                 break;
-              } // case 64
+              } // case 8
+              case 96: {
+                retcode_ = input.readInt32();
+
+                break;
+              } // case 96
+              case 122: {
+                input.readMessage(
+                    getCityReputationInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 122
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -544,125 +514,10 @@ public final class GetCityReputationInfoRspOuterClass {
         } // finally
         return this;
       }
-      private int bitField0_;
-
-      private com.google.protobuf.Internal.IntList lIDPFAAPFMM_ = emptyIntList();
-      private void ensureLIDPFAAPFMMIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          lIDPFAAPFMM_ = mutableCopy(lIDPFAAPFMM_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-      /**
-       * <code>repeated uint32 LIDPFAAPFMM = 4;</code>
-       * @return A list containing the lIDPFAAPFMM.
-       */
-      public java.util.List<java.lang.Integer>
-          getLIDPFAAPFMMList() {
-        return ((bitField0_ & 0x00000001) != 0) ?
-                 java.util.Collections.unmodifiableList(lIDPFAAPFMM_) : lIDPFAAPFMM_;
-      }
-      /**
-       * <code>repeated uint32 LIDPFAAPFMM = 4;</code>
-       * @return The count of lIDPFAAPFMM.
-       */
-      public int getLIDPFAAPFMMCount() {
-        return lIDPFAAPFMM_.size();
-      }
-      /**
-       * <code>repeated uint32 LIDPFAAPFMM = 4;</code>
-       * @param index The index of the element to return.
-       * @return The lIDPFAAPFMM at the given index.
-       */
-      public int getLIDPFAAPFMM(int index) {
-        return lIDPFAAPFMM_.getInt(index);
-      }
-      /**
-       * <code>repeated uint32 LIDPFAAPFMM = 4;</code>
-       * @param index The index to set the value at.
-       * @param value The lIDPFAAPFMM to set.
-       * @return This builder for chaining.
-       */
-      public Builder setLIDPFAAPFMM(
-          int index, int value) {
-        ensureLIDPFAAPFMMIsMutable();
-        lIDPFAAPFMM_.setInt(index, value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated uint32 LIDPFAAPFMM = 4;</code>
-       * @param value The lIDPFAAPFMM to add.
-       * @return This builder for chaining.
-       */
-      public Builder addLIDPFAAPFMM(int value) {
-        ensureLIDPFAAPFMMIsMutable();
-        lIDPFAAPFMM_.addInt(value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated uint32 LIDPFAAPFMM = 4;</code>
-       * @param values The lIDPFAAPFMM to add.
-       * @return This builder for chaining.
-       */
-      public Builder addAllLIDPFAAPFMM(
-          java.lang.Iterable<? extends java.lang.Integer> values) {
-        ensureLIDPFAAPFMMIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, lIDPFAAPFMM_);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated uint32 LIDPFAAPFMM = 4;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearLIDPFAAPFMM() {
-        lIDPFAAPFMM_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
-        return this;
-      }
-
-      private int retcode_ ;
-      /**
-       * <code>int32 retcode = 5;</code>
-       * @return The retcode.
-       */
-      @java.lang.Override
-      public int getRetcode() {
-        return retcode_;
-      }
-      /**
-       * <code>int32 retcode = 5;</code>
-       * @param value The retcode to set.
-       * @return This builder for chaining.
-       */
-      public Builder setRetcode(int value) {
-        
-        retcode_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int32 retcode = 5;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearRetcode() {
-        
-        retcode_ = 0;
-        onChanged();
-        return this;
-      }
 
       private int cityId_ ;
       /**
-       * <pre>
-       *repeated LCBGDOHINDD GAGAHOFMJLM = 9;
-       * </pre>
-       *
-       * <code>uint32 city_id = 8;</code>
+       * <code>uint32 city_id = 1;</code>
        * @return The cityId.
        */
       @java.lang.Override
@@ -670,11 +525,7 @@ public final class GetCityReputationInfoRspOuterClass {
         return cityId_;
       }
       /**
-       * <pre>
-       *repeated LCBGDOHINDD GAGAHOFMJLM = 9;
-       * </pre>
-       *
-       * <code>uint32 city_id = 8;</code>
+       * <code>uint32 city_id = 1;</code>
        * @param value The cityId to set.
        * @return This builder for chaining.
        */
@@ -685,11 +536,7 @@ public final class GetCityReputationInfoRspOuterClass {
         return this;
       }
       /**
-       * <pre>
-       *repeated LCBGDOHINDD GAGAHOFMJLM = 9;
-       * </pre>
-       *
-       * <code>uint32 city_id = 8;</code>
+       * <code>uint32 city_id = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearCityId() {
@@ -697,6 +544,156 @@ public final class GetCityReputationInfoRspOuterClass {
         cityId_ = 0;
         onChanged();
         return this;
+      }
+
+      private int retcode_ ;
+      /**
+       * <code>int32 retcode = 12;</code>
+       * @return The retcode.
+       */
+      @java.lang.Override
+      public int getRetcode() {
+        return retcode_;
+      }
+      /**
+       * <code>int32 retcode = 12;</code>
+       * @param value The retcode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRetcode(int value) {
+        
+        retcode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 retcode = 12;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRetcode() {
+        
+        retcode_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private emu.grasscutter.net.proto.CityReputationInfoOuterClass.CityReputationInfo cityReputationInfo_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          emu.grasscutter.net.proto.CityReputationInfoOuterClass.CityReputationInfo, emu.grasscutter.net.proto.CityReputationInfoOuterClass.CityReputationInfo.Builder, emu.grasscutter.net.proto.CityReputationInfoOuterClass.CityReputationInfoOrBuilder> cityReputationInfoBuilder_;
+      /**
+       * <code>.CityReputationInfo city_reputation_info = 15;</code>
+       * @return Whether the cityReputationInfo field is set.
+       */
+      public boolean hasCityReputationInfo() {
+        return cityReputationInfoBuilder_ != null || cityReputationInfo_ != null;
+      }
+      /**
+       * <code>.CityReputationInfo city_reputation_info = 15;</code>
+       * @return The cityReputationInfo.
+       */
+      public emu.grasscutter.net.proto.CityReputationInfoOuterClass.CityReputationInfo getCityReputationInfo() {
+        if (cityReputationInfoBuilder_ == null) {
+          return cityReputationInfo_ == null ? emu.grasscutter.net.proto.CityReputationInfoOuterClass.CityReputationInfo.getDefaultInstance() : cityReputationInfo_;
+        } else {
+          return cityReputationInfoBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.CityReputationInfo city_reputation_info = 15;</code>
+       */
+      public Builder setCityReputationInfo(emu.grasscutter.net.proto.CityReputationInfoOuterClass.CityReputationInfo value) {
+        if (cityReputationInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          cityReputationInfo_ = value;
+          onChanged();
+        } else {
+          cityReputationInfoBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.CityReputationInfo city_reputation_info = 15;</code>
+       */
+      public Builder setCityReputationInfo(
+          emu.grasscutter.net.proto.CityReputationInfoOuterClass.CityReputationInfo.Builder builderForValue) {
+        if (cityReputationInfoBuilder_ == null) {
+          cityReputationInfo_ = builderForValue.build();
+          onChanged();
+        } else {
+          cityReputationInfoBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.CityReputationInfo city_reputation_info = 15;</code>
+       */
+      public Builder mergeCityReputationInfo(emu.grasscutter.net.proto.CityReputationInfoOuterClass.CityReputationInfo value) {
+        if (cityReputationInfoBuilder_ == null) {
+          if (cityReputationInfo_ != null) {
+            cityReputationInfo_ =
+              emu.grasscutter.net.proto.CityReputationInfoOuterClass.CityReputationInfo.newBuilder(cityReputationInfo_).mergeFrom(value).buildPartial();
+          } else {
+            cityReputationInfo_ = value;
+          }
+          onChanged();
+        } else {
+          cityReputationInfoBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.CityReputationInfo city_reputation_info = 15;</code>
+       */
+      public Builder clearCityReputationInfo() {
+        if (cityReputationInfoBuilder_ == null) {
+          cityReputationInfo_ = null;
+          onChanged();
+        } else {
+          cityReputationInfo_ = null;
+          cityReputationInfoBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.CityReputationInfo city_reputation_info = 15;</code>
+       */
+      public emu.grasscutter.net.proto.CityReputationInfoOuterClass.CityReputationInfo.Builder getCityReputationInfoBuilder() {
+        
+        onChanged();
+        return getCityReputationInfoFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.CityReputationInfo city_reputation_info = 15;</code>
+       */
+      public emu.grasscutter.net.proto.CityReputationInfoOuterClass.CityReputationInfoOrBuilder getCityReputationInfoOrBuilder() {
+        if (cityReputationInfoBuilder_ != null) {
+          return cityReputationInfoBuilder_.getMessageOrBuilder();
+        } else {
+          return cityReputationInfo_ == null ?
+              emu.grasscutter.net.proto.CityReputationInfoOuterClass.CityReputationInfo.getDefaultInstance() : cityReputationInfo_;
+        }
+      }
+      /**
+       * <code>.CityReputationInfo city_reputation_info = 15;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          emu.grasscutter.net.proto.CityReputationInfoOuterClass.CityReputationInfo, emu.grasscutter.net.proto.CityReputationInfoOuterClass.CityReputationInfo.Builder, emu.grasscutter.net.proto.CityReputationInfoOuterClass.CityReputationInfoOrBuilder> 
+          getCityReputationInfoFieldBuilder() {
+        if (cityReputationInfoBuilder_ == null) {
+          cityReputationInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              emu.grasscutter.net.proto.CityReputationInfoOuterClass.CityReputationInfo, emu.grasscutter.net.proto.CityReputationInfoOuterClass.CityReputationInfo.Builder, emu.grasscutter.net.proto.CityReputationInfoOuterClass.CityReputationInfoOrBuilder>(
+                  getCityReputationInfo(),
+                  getParentForChildren(),
+                  isClean());
+          cityReputationInfo_ = null;
+        }
+        return cityReputationInfoBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -776,21 +773,25 @@ public final class GetCityReputationInfoRspOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\036GetCityReputationInfoRsp.proto\"Q\n\030GetC" +
-      "ityReputationInfoRsp\022\023\n\013LIDPFAAPFMM\030\004 \003(" +
-      "\r\022\017\n\007retcode\030\005 \001(\005\022\017\n\007city_id\030\010 \001(\rB\033\n\031e" +
-      "mu.grasscutter.net.protob\006proto3"
+      "\n\036GetCityReputationInfoRsp.proto\032\030CityRe" +
+      "putationInfo.proto\"o\n\030GetCityReputationI" +
+      "nfoRsp\022\017\n\007city_id\030\001 \001(\r\022\017\n\007retcode\030\014 \001(\005" +
+      "\0221\n\024city_reputation_info\030\017 \001(\0132\023.CityRep" +
+      "utationInfoB\033\n\031emu.grasscutter.net.proto" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          emu.grasscutter.net.proto.CityReputationInfoOuterClass.getDescriptor(),
         });
     internal_static_GetCityReputationInfoRsp_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_GetCityReputationInfoRsp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_GetCityReputationInfoRsp_descriptor,
-        new java.lang.String[] { "LIDPFAAPFMM", "Retcode", "CityId", });
+        new java.lang.String[] { "CityId", "Retcode", "CityReputationInfo", });
+    emu.grasscutter.net.proto.CityReputationInfoOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
