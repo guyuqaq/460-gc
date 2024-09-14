@@ -29,7 +29,10 @@ public class HandlerCombatInvocationsNotify extends PacketHandler {
     @Override
     public void handle(GameSession session, byte[] header, byte[] payload) throws Exception {
         Player player = session.getPlayer();
-        if (player == null || player.getScene() == null || player.getSceneLoadState() == Player.SceneLoadState.LOADING) return;
+         if (player == null || player.getScene() == null) {
+            Grasscutter.getLogger().("Cannot handle leave scene request. Player or scene is null.");
+            return;
+        }
         CombatInvocationsNotify notify = CombatInvocationsNotify.parseFrom(payload);
         for (CombatInvokeEntry entry : notify.getInvokeListList()) {
             // Handle combat invoke
@@ -37,7 +40,6 @@ public class HandlerCombatInvocationsNotify extends PacketHandler {
                 case COMBAT_TYPE_ARGUMENT_EVT_BEING_HIT -> {
                     EvtBeingHitInfo hitInfo = EvtBeingHitInfo.parseFrom(entry.getCombatData());
                     AttackResult attackResult = hitInfo.getAttackResult();
-                    Player player = session.getPlayer();
 
                     // Check if the player is invulnerable.
                     if (attackResult.getAttackerId()
