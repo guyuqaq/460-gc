@@ -107,6 +107,78 @@ public final class BlitzRushActivityDetailInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private BlitzRushActivityDetailInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 42: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                parkourLevelInfoList_ = new java.util.ArrayList<emu.grasscutter.net.proto.ParkourLevelInfoOuterClass.ParkourLevelInfo>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              parkourLevelInfoList_.add(
+                  input.readMessage(emu.grasscutter.net.proto.ParkourLevelInfoOuterClass.ParkourLevelInfo.parser(), extensionRegistry));
+              break;
+            }
+            case 88: {
+
+              contentCloseTime_ = input.readUInt32();
+              break;
+            }
+            case 104: {
+
+              isContentClosed_ = input.readBool();
+              break;
+            }
+            case 122: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                stageList_ = new java.util.ArrayList<emu.grasscutter.net.proto.BlitzRushStageOuterClass.BlitzRushStage>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              stageList_.add(
+                  input.readMessage(emu.grasscutter.net.proto.BlitzRushStageOuterClass.BlitzRushStage.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          parkourLevelInfoList_ = java.util.Collections.unmodifiableList(parkourLevelInfoList_);
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          stageList_ = java.util.Collections.unmodifiableList(stageList_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.BlitzRushActivityDetailInfoOuterClass.internal_static_BlitzRushActivityDetailInfo_descriptor;
@@ -248,7 +320,7 @@ public final class BlitzRushActivityDetailInfoOuterClass {
       for (int i = 0; i < stageList_.size(); i++) {
         output.writeMessage(15, stageList_.get(i));
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -273,7 +345,7 @@ public final class BlitzRushActivityDetailInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(15, stageList_.get(i));
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -296,7 +368,7 @@ public final class BlitzRushActivityDetailInfoOuterClass {
           != other.getIsContentClosed()) return false;
       if (!getStageListList()
           .equals(other.getStageListList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -320,7 +392,7 @@ public final class BlitzRushActivityDetailInfoOuterClass {
         hash = (37 * hash) + STAGE_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getStageListList().hashCode();
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -437,35 +509,40 @@ public final class BlitzRushActivityDetailInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.BlitzRushActivityDetailInfoOuterClass.BlitzRushActivityDetailInfo.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getParkourLevelInfoListFieldBuilder();
+          getStageListFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
         if (parkourLevelInfoListBuilder_ == null) {
           parkourLevelInfoList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
-          parkourLevelInfoList_ = null;
           parkourLevelInfoListBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000001);
         contentCloseTime_ = 0;
 
         isContentClosed_ = false;
 
         if (stageListBuilder_ == null) {
           stageList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
-          stageList_ = null;
           stageListBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -619,7 +696,7 @@ public final class BlitzRushActivityDetailInfoOuterClass {
             }
           }
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -634,66 +711,17 @@ public final class BlitzRushActivityDetailInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.BlitzRushActivityDetailInfoOuterClass.BlitzRushActivityDetailInfo parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 42: {
-                emu.grasscutter.net.proto.ParkourLevelInfoOuterClass.ParkourLevelInfo m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.ParkourLevelInfoOuterClass.ParkourLevelInfo.parser(),
-                        extensionRegistry);
-                if (parkourLevelInfoListBuilder_ == null) {
-                  ensureParkourLevelInfoListIsMutable();
-                  parkourLevelInfoList_.add(m);
-                } else {
-                  parkourLevelInfoListBuilder_.addMessage(m);
-                }
-                break;
-              } // case 42
-              case 88: {
-                contentCloseTime_ = input.readUInt32();
-
-                break;
-              } // case 88
-              case 104: {
-                isContentClosed_ = input.readBool();
-
-                break;
-              } // case 104
-              case 122: {
-                emu.grasscutter.net.proto.BlitzRushStageOuterClass.BlitzRushStage m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.BlitzRushStageOuterClass.BlitzRushStage.parser(),
-                        extensionRegistry);
-                if (stageListBuilder_ == null) {
-                  ensureStageListIsMutable();
-                  stageList_.add(m);
-                } else {
-                  stageListBuilder_.addMessage(m);
-                }
-                break;
-              } // case 122
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.BlitzRushActivityDetailInfoOuterClass.BlitzRushActivityDetailInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -1272,18 +1300,7 @@ public final class BlitzRushActivityDetailInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new BlitzRushActivityDetailInfo(input, extensionRegistry);
       }
     };
 

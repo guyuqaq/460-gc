@@ -76,6 +76,61 @@ public final class SyncScenePlayTeamEntityNotifyOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private SyncScenePlayTeamEntityNotify(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 64: {
+
+              sceneId_ = input.readUInt32();
+              break;
+            }
+            case 114: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                entityInfoList_ = new java.util.ArrayList<emu.grasscutter.net.proto.PlayTeamEntityInfoOuterClass.PlayTeamEntityInfo>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              entityInfoList_.add(
+                  input.readMessage(emu.grasscutter.net.proto.PlayTeamEntityInfoOuterClass.PlayTeamEntityInfo.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          entityInfoList_ = java.util.Collections.unmodifiableList(entityInfoList_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.SyncScenePlayTeamEntityNotifyOuterClass.internal_static_SyncScenePlayTeamEntityNotify_descriptor;
@@ -160,7 +215,7 @@ public final class SyncScenePlayTeamEntityNotifyOuterClass {
       for (int i = 0; i < entityInfoList_.size(); i++) {
         output.writeMessage(14, entityInfoList_.get(i));
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -177,7 +232,7 @@ public final class SyncScenePlayTeamEntityNotifyOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(14, entityInfoList_.get(i));
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -196,7 +251,7 @@ public final class SyncScenePlayTeamEntityNotifyOuterClass {
           != other.getSceneId()) return false;
       if (!getEntityInfoListList()
           .equals(other.getEntityInfoListList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -213,7 +268,7 @@ public final class SyncScenePlayTeamEntityNotifyOuterClass {
         hash = (37 * hash) + ENTITY_INFO_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getEntityInfoListList().hashCode();
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -330,13 +385,19 @@ public final class SyncScenePlayTeamEntityNotifyOuterClass {
 
       // Construct using emu.grasscutter.net.proto.SyncScenePlayTeamEntityNotifyOuterClass.SyncScenePlayTeamEntityNotify.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getEntityInfoListFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -345,11 +406,10 @@ public final class SyncScenePlayTeamEntityNotifyOuterClass {
 
         if (entityInfoListBuilder_ == null) {
           entityInfoList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
-          entityInfoList_ = null;
           entityInfoListBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -464,7 +524,7 @@ public final class SyncScenePlayTeamEntityNotifyOuterClass {
             }
           }
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -479,48 +539,17 @@ public final class SyncScenePlayTeamEntityNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.SyncScenePlayTeamEntityNotifyOuterClass.SyncScenePlayTeamEntityNotify parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 64: {
-                sceneId_ = input.readUInt32();
-
-                break;
-              } // case 64
-              case 114: {
-                emu.grasscutter.net.proto.PlayTeamEntityInfoOuterClass.PlayTeamEntityInfo m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.PlayTeamEntityInfoOuterClass.PlayTeamEntityInfo.parser(),
-                        extensionRegistry);
-                if (entityInfoListBuilder_ == null) {
-                  ensureEntityInfoListIsMutable();
-                  entityInfoList_.add(m);
-                } else {
-                  entityInfoListBuilder_.addMessage(m);
-                }
-                break;
-              } // case 114
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.SyncScenePlayTeamEntityNotifyOuterClass.SyncScenePlayTeamEntityNotify) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -828,18 +857,7 @@ public final class SyncScenePlayTeamEntityNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new SyncScenePlayTeamEntityNotify(input, extensionRegistry);
       }
     };
 

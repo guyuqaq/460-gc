@@ -82,6 +82,66 @@ public final class WorldRoutineTypeInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private WorldRoutineTypeInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              nextRefreshTime_ = input.readUInt32();
+              break;
+            }
+            case 42: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                worldRoutineInfoList_ = new java.util.ArrayList<emu.grasscutter.net.proto.WorldRoutineInfoOuterClass.WorldRoutineInfo>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              worldRoutineInfoList_.add(
+                  input.readMessage(emu.grasscutter.net.proto.WorldRoutineInfoOuterClass.WorldRoutineInfo.parser(), extensionRegistry));
+              break;
+            }
+            case 96: {
+
+              routineType_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          worldRoutineInfoList_ = java.util.Collections.unmodifiableList(worldRoutineInfoList_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.WorldRoutineTypeInfoOuterClass.internal_static_WorldRoutineTypeInfo_descriptor;
@@ -180,7 +240,7 @@ public final class WorldRoutineTypeInfoOuterClass {
       if (routineType_ != 0) {
         output.writeUInt32(12, routineType_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -201,7 +261,7 @@ public final class WorldRoutineTypeInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(12, routineType_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -222,7 +282,7 @@ public final class WorldRoutineTypeInfoOuterClass {
           .equals(other.getWorldRoutineInfoListList())) return false;
       if (getRoutineType()
           != other.getRoutineType()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -241,7 +301,7 @@ public final class WorldRoutineTypeInfoOuterClass {
       }
       hash = (37 * hash) + ROUTINE_TYPE_FIELD_NUMBER;
       hash = (53 * hash) + getRoutineType();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -358,13 +418,19 @@ public final class WorldRoutineTypeInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.WorldRoutineTypeInfoOuterClass.WorldRoutineTypeInfo.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getWorldRoutineInfoListFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -373,11 +439,10 @@ public final class WorldRoutineTypeInfoOuterClass {
 
         if (worldRoutineInfoListBuilder_ == null) {
           worldRoutineInfoList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
-          worldRoutineInfoList_ = null;
           worldRoutineInfoListBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000001);
         routineType_ = 0;
 
         return this;
@@ -498,7 +563,7 @@ public final class WorldRoutineTypeInfoOuterClass {
         if (other.getRoutineType() != 0) {
           setRoutineType(other.getRoutineType());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -513,53 +578,17 @@ public final class WorldRoutineTypeInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.WorldRoutineTypeInfoOuterClass.WorldRoutineTypeInfo parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                nextRefreshTime_ = input.readUInt32();
-
-                break;
-              } // case 8
-              case 42: {
-                emu.grasscutter.net.proto.WorldRoutineInfoOuterClass.WorldRoutineInfo m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.WorldRoutineInfoOuterClass.WorldRoutineInfo.parser(),
-                        extensionRegistry);
-                if (worldRoutineInfoListBuilder_ == null) {
-                  ensureWorldRoutineInfoListIsMutable();
-                  worldRoutineInfoList_.add(m);
-                } else {
-                  worldRoutineInfoListBuilder_.addMessage(m);
-                }
-                break;
-              } // case 42
-              case 96: {
-                routineType_ = input.readUInt32();
-
-                break;
-              } // case 96
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.WorldRoutineTypeInfoOuterClass.WorldRoutineTypeInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -898,18 +927,7 @@ public final class WorldRoutineTypeInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new WorldRoutineTypeInfo(input, extensionRegistry);
       }
     };
 

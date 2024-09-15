@@ -113,6 +113,79 @@ public final class GetUgcDungeonBriefListRspOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private GetUgcDungeonBriefListRsp(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 58: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                starredRoomList_ = new java.util.ArrayList<emu.grasscutter.net.proto.UgcDungeonStarredRoomDataOuterClass.UgcDungeonStarredRoomData>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              starredRoomList_.add(
+                  input.readMessage(emu.grasscutter.net.proto.UgcDungeonStarredRoomDataOuterClass.UgcDungeonStarredRoomData.parser(), extensionRegistry));
+              break;
+            }
+            case 66: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                briefList_ = new java.util.ArrayList<emu.grasscutter.net.proto.UgcDungeonBriefOuterClass.UgcDungeonBrief>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              briefList_.add(
+                  input.readMessage(emu.grasscutter.net.proto.UgcDungeonBriefOuterClass.UgcDungeonBrief.parser(), extensionRegistry));
+              break;
+            }
+            case 72: {
+
+              retcode_ = input.readInt32();
+              break;
+            }
+            case 96: {
+              int rawValue = input.readEnum();
+
+              getBriefType_ = rawValue;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          starredRoomList_ = java.util.Collections.unmodifiableList(starredRoomList_);
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          briefList_ = java.util.Collections.unmodifiableList(briefList_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.GetUgcDungeonBriefListRspOuterClass.internal_static_GetUgcDungeonBriefListRsp_descriptor;
@@ -262,7 +335,7 @@ public final class GetUgcDungeonBriefListRspOuterClass {
       if (getBriefType_ != emu.grasscutter.net.proto.GetUgcDungeonBriefTypeOuterClass.GetUgcDungeonBriefType.GetUgcDungeonBriefType_NONE.getNumber()) {
         output.writeEnum(12, getBriefType_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -287,7 +360,7 @@ public final class GetUgcDungeonBriefListRspOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(12, getBriefType_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -309,7 +382,7 @@ public final class GetUgcDungeonBriefListRspOuterClass {
       if (getRetcode()
           != other.getRetcode()) return false;
       if (getBriefType_ != other.getBriefType_) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -332,7 +405,7 @@ public final class GetUgcDungeonBriefListRspOuterClass {
       hash = (53 * hash) + getRetcode();
       hash = (37 * hash) + GET_BRIEF_TYPE_FIELD_NUMBER;
       hash = (53 * hash) + getBriefType_;
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -449,31 +522,36 @@ public final class GetUgcDungeonBriefListRspOuterClass {
 
       // Construct using emu.grasscutter.net.proto.GetUgcDungeonBriefListRspOuterClass.GetUgcDungeonBriefListRsp.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getStarredRoomListFieldBuilder();
+          getBriefListFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
         if (starredRoomListBuilder_ == null) {
           starredRoomList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
-          starredRoomList_ = null;
           starredRoomListBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000001);
         if (briefListBuilder_ == null) {
           briefList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
-          briefList_ = null;
           briefListBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000002);
         retcode_ = 0;
 
         getBriefType_ = 0;
@@ -631,7 +709,7 @@ public final class GetUgcDungeonBriefListRspOuterClass {
         if (other.getBriefType_ != 0) {
           setGetBriefTypeValue(other.getGetBriefTypeValue());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -646,66 +724,17 @@ public final class GetUgcDungeonBriefListRspOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.GetUgcDungeonBriefListRspOuterClass.GetUgcDungeonBriefListRsp parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 58: {
-                emu.grasscutter.net.proto.UgcDungeonStarredRoomDataOuterClass.UgcDungeonStarredRoomData m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.UgcDungeonStarredRoomDataOuterClass.UgcDungeonStarredRoomData.parser(),
-                        extensionRegistry);
-                if (starredRoomListBuilder_ == null) {
-                  ensureStarredRoomListIsMutable();
-                  starredRoomList_.add(m);
-                } else {
-                  starredRoomListBuilder_.addMessage(m);
-                }
-                break;
-              } // case 58
-              case 66: {
-                emu.grasscutter.net.proto.UgcDungeonBriefOuterClass.UgcDungeonBrief m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.UgcDungeonBriefOuterClass.UgcDungeonBrief.parser(),
-                        extensionRegistry);
-                if (briefListBuilder_ == null) {
-                  ensureBriefListIsMutable();
-                  briefList_.add(m);
-                } else {
-                  briefListBuilder_.addMessage(m);
-                }
-                break;
-              } // case 66
-              case 72: {
-                retcode_ = input.readInt32();
-
-                break;
-              } // case 72
-              case 96: {
-                getBriefType_ = input.readEnum();
-
-                break;
-              } // case 96
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.GetUgcDungeonBriefListRspOuterClass.GetUgcDungeonBriefListRsp) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -1307,18 +1336,7 @@ public final class GetUgcDungeonBriefListRspOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new GetUgcDungeonBriefListRsp(input, extensionRegistry);
       }
     };
 

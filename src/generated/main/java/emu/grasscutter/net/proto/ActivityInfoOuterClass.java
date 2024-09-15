@@ -422,6 +422,318 @@ public final class ActivityInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private ActivityInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                meetCondList_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              meetCondList_.addInt(input.readUInt32());
+              break;
+            }
+            case 10: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
+                meetCondList_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                meetCondList_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 32: {
+
+              endTime_ = input.readUInt32();
+              break;
+            }
+            case 48: {
+
+              beginTime_ = input.readUInt32();
+              break;
+            }
+            case 56: {
+
+              isFinished_ = input.readBool();
+              break;
+            }
+            case 64: {
+
+              fALGLCJDKCL_ = input.readBool();
+              break;
+            }
+            case 82: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                watcherInfoList_ = new java.util.ArrayList<emu.grasscutter.net.proto.ActivityWatcherInfoOuterClass.ActivityWatcherInfo>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              watcherInfoList_.add(
+                  input.readMessage(emu.grasscutter.net.proto.ActivityWatcherInfoOuterClass.ActivityWatcherInfo.parser(), extensionRegistry));
+              break;
+            }
+            case 88: {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                expireCondList_ = newIntList();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              expireCondList_.addInt(input.readUInt32());
+              break;
+            }
+            case 90: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000004) != 0) && input.getBytesUntilLimit() > 0) {
+                expireCondList_ = newIntList();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                expireCondList_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 96: {
+
+              scheduleId_ = input.readUInt32();
+              break;
+            }
+            case 104: {
+
+              oNCLIGBKLPF_ = input.readBool();
+              break;
+            }
+            case 112: {
+
+              activityType_ = input.readUInt32();
+              break;
+            }
+            case 120: {
+
+              activityId_ = input.readUInt32();
+              break;
+            }
+            case 504: {
+
+              curScore_ = input.readUInt32();
+              break;
+            }
+            case 2024: {
+
+              fFGHMFNFPNL_ = input.readUInt32();
+              break;
+            }
+            case 2984: {
+
+              firstDayStartTime_ = input.readUInt32();
+              break;
+            }
+            case 3408: {
+
+              lKODGHFICBH_ = input.readUInt32();
+              break;
+            }
+            case 4072: {
+
+              cDBIIEIPBFF_ = input.readBool();
+              break;
+            }
+            case 5424: {
+
+              lCHFFKHPJIO_ = input.readBool();
+              break;
+            }
+            case 5912: {
+
+              iLKPGDKEIEG_ = input.readBool();
+              break;
+            }
+            case 6544: {
+              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
+                takenRewardList_ = newIntList();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              takenRewardList_.addInt(input.readUInt32());
+              break;
+            }
+            case 6546: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000008) != 0) && input.getBytesUntilLimit() > 0) {
+                takenRewardList_ = newIntList();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                takenRewardList_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 7136: {
+
+              cIDDJFNIMPJ_ = input.readUInt64();
+              break;
+            }
+            case 7866: {
+              if (!((mutable_bitField0_ & 0x00000010) != 0)) {
+                activityPushTipsDataList_ = new java.util.ArrayList<emu.grasscutter.net.proto.ActivityPushTipsDataOuterClass.ActivityPushTipsData>();
+                mutable_bitField0_ |= 0x00000010;
+              }
+              activityPushTipsDataList_.add(
+                  input.readMessage(emu.grasscutter.net.proto.ActivityPushTipsDataOuterClass.ActivityPushTipsData.parser(), extensionRegistry));
+              break;
+            }
+            case 8320: {
+
+              mPPFCLCENAP_ = input.readUInt32();
+              break;
+            }
+            case 8794: {
+              emu.grasscutter.net.proto.MusicGameActivityDetailInfoOuterClass.MusicGameActivityDetailInfo.Builder subBuilder = null;
+              if (detailCase_ == 1099) {
+                subBuilder = ((emu.grasscutter.net.proto.MusicGameActivityDetailInfoOuterClass.MusicGameActivityDetailInfo) detail_).toBuilder();
+              }
+              detail_ =
+                  input.readMessage(emu.grasscutter.net.proto.MusicGameActivityDetailInfoOuterClass.MusicGameActivityDetailInfo.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((emu.grasscutter.net.proto.MusicGameActivityDetailInfoOuterClass.MusicGameActivityDetailInfo) detail_);
+                detail_ = subBuilder.buildPartial();
+              }
+              detailCase_ = 1099;
+              break;
+            }
+            case 9968: {
+              if (!((mutable_bitField0_ & 0x00000020) != 0)) {
+                gONEPFEDMEL_ = newLongList();
+                mutable_bitField0_ |= 0x00000020;
+              }
+              gONEPFEDMEL_.addLong(input.readUInt64());
+              break;
+            }
+            case 9970: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000020) != 0) && input.getBytesUntilLimit() > 0) {
+                gONEPFEDMEL_ = newLongList();
+                mutable_bitField0_ |= 0x00000020;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                gONEPFEDMEL_.addLong(input.readUInt64());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 10136: {
+              if (!((mutable_bitField0_ & 0x00000040) != 0)) {
+                nJCGNGLKPBJ_ = newIntList();
+                mutable_bitField0_ |= 0x00000040;
+              }
+              nJCGNGLKPBJ_.addInt(input.readUInt32());
+              break;
+            }
+            case 10138: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000040) != 0) && input.getBytesUntilLimit() > 0) {
+                nJCGNGLKPBJ_ = newIntList();
+                mutable_bitField0_ |= 0x00000040;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                nJCGNGLKPBJ_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 11264: {
+
+              oDMJHPBFIKO_ = input.readBool();
+              break;
+            }
+            case 14330: {
+              if (!((mutable_bitField0_ & 0x00000080) != 0)) {
+                activityCoinMap_ = com.google.protobuf.MapField.newMapField(
+                    ActivityCoinMapDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000080;
+              }
+              com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
+              activityCoinMap__ = input.readMessage(
+                  ActivityCoinMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              activityCoinMap_.getMutableMap().put(
+                  activityCoinMap__.getKey(), activityCoinMap__.getValue());
+              break;
+            }
+            case 15634: {
+              if (!((mutable_bitField0_ & 0x00000100) != 0)) {
+                wishGiftNumMap_ = com.google.protobuf.MapField.newMapField(
+                    WishGiftNumMapDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000100;
+              }
+              com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
+              wishGiftNumMap__ = input.readMessage(
+                  WishGiftNumMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              wishGiftNumMap_.getMutableMap().put(
+                  wishGiftNumMap__.getKey(), wishGiftNumMap__.getValue());
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          meetCondList_.makeImmutable(); // C
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          watcherInfoList_ = java.util.Collections.unmodifiableList(watcherInfoList_);
+        }
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
+          expireCondList_.makeImmutable(); // C
+        }
+        if (((mutable_bitField0_ & 0x00000008) != 0)) {
+          takenRewardList_.makeImmutable(); // C
+        }
+        if (((mutable_bitField0_ & 0x00000010) != 0)) {
+          activityPushTipsDataList_ = java.util.Collections.unmodifiableList(activityPushTipsDataList_);
+        }
+        if (((mutable_bitField0_ & 0x00000020) != 0)) {
+          gONEPFEDMEL_.makeImmutable(); // C
+        }
+        if (((mutable_bitField0_ & 0x00000040) != 0)) {
+          nJCGNGLKPBJ_.makeImmutable(); // C
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.ActivityInfoOuterClass.internal_static_ActivityInfo_descriptor;
@@ -1264,7 +1576,7 @@ public final class ActivityInfoOuterClass {
           internalGetWishGiftNumMap(),
           WishGiftNumMapDefaultEntryHolder.defaultEntry,
           1954);
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -1447,7 +1759,7 @@ public final class ActivityInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(1954, wishGiftNumMap__);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -1525,7 +1837,7 @@ public final class ActivityInfoOuterClass {
         case 0:
         default:
       }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -1624,7 +1936,7 @@ public final class ActivityInfoOuterClass {
         case 0:
         default:
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -1767,13 +2079,20 @@ public final class ActivityInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.ActivityInfoOuterClass.ActivityInfo.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getWatcherInfoListFieldBuilder();
+          getActivityPushTipsDataListFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1790,11 +2109,10 @@ public final class ActivityInfoOuterClass {
 
         if (watcherInfoListBuilder_ == null) {
           watcherInfoList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
-          watcherInfoList_ = null;
           watcherInfoListBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000002);
         expireCondList_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000004);
         scheduleId_ = 0;
@@ -1825,11 +2143,10 @@ public final class ActivityInfoOuterClass {
 
         if (activityPushTipsDataListBuilder_ == null) {
           activityPushTipsDataList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
         } else {
-          activityPushTipsDataList_ = null;
           activityPushTipsDataListBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000010);
         mPPFCLCENAP_ = 0;
 
         gONEPFEDMEL_ = emptyLongList();
@@ -1840,9 +2157,6 @@ public final class ActivityInfoOuterClass {
 
         internalGetMutableActivityCoinMap().clear();
         internalGetMutableWishGiftNumMap().clear();
-        if (musicGameInfoBuilder_ != null) {
-          musicGameInfoBuilder_.clear();
-        }
         detailCase_ = 0;
         detail_ = null;
         return this;
@@ -2162,7 +2476,7 @@ public final class ActivityInfoOuterClass {
             break;
           }
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -2177,249 +2491,17 @@ public final class ActivityInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.ActivityInfoOuterClass.ActivityInfo parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                int v = input.readUInt32();
-                ensureMeetCondListIsMutable();
-                meetCondList_.addInt(v);
-                break;
-              } // case 8
-              case 10: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureMeetCondListIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  meetCondList_.addInt(input.readUInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 10
-              case 32: {
-                endTime_ = input.readUInt32();
-
-                break;
-              } // case 32
-              case 48: {
-                beginTime_ = input.readUInt32();
-
-                break;
-              } // case 48
-              case 56: {
-                isFinished_ = input.readBool();
-
-                break;
-              } // case 56
-              case 64: {
-                fALGLCJDKCL_ = input.readBool();
-
-                break;
-              } // case 64
-              case 82: {
-                emu.grasscutter.net.proto.ActivityWatcherInfoOuterClass.ActivityWatcherInfo m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.ActivityWatcherInfoOuterClass.ActivityWatcherInfo.parser(),
-                        extensionRegistry);
-                if (watcherInfoListBuilder_ == null) {
-                  ensureWatcherInfoListIsMutable();
-                  watcherInfoList_.add(m);
-                } else {
-                  watcherInfoListBuilder_.addMessage(m);
-                }
-                break;
-              } // case 82
-              case 88: {
-                int v = input.readUInt32();
-                ensureExpireCondListIsMutable();
-                expireCondList_.addInt(v);
-                break;
-              } // case 88
-              case 90: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureExpireCondListIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  expireCondList_.addInt(input.readUInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 90
-              case 96: {
-                scheduleId_ = input.readUInt32();
-
-                break;
-              } // case 96
-              case 104: {
-                oNCLIGBKLPF_ = input.readBool();
-
-                break;
-              } // case 104
-              case 112: {
-                activityType_ = input.readUInt32();
-
-                break;
-              } // case 112
-              case 120: {
-                activityId_ = input.readUInt32();
-
-                break;
-              } // case 120
-              case 504: {
-                curScore_ = input.readUInt32();
-
-                break;
-              } // case 504
-              case 2024: {
-                fFGHMFNFPNL_ = input.readUInt32();
-
-                break;
-              } // case 2024
-              case 2984: {
-                firstDayStartTime_ = input.readUInt32();
-
-                break;
-              } // case 2984
-              case 3408: {
-                lKODGHFICBH_ = input.readUInt32();
-
-                break;
-              } // case 3408
-              case 4072: {
-                cDBIIEIPBFF_ = input.readBool();
-
-                break;
-              } // case 4072
-              case 5424: {
-                lCHFFKHPJIO_ = input.readBool();
-
-                break;
-              } // case 5424
-              case 5912: {
-                iLKPGDKEIEG_ = input.readBool();
-
-                break;
-              } // case 5912
-              case 6544: {
-                int v = input.readUInt32();
-                ensureTakenRewardListIsMutable();
-                takenRewardList_.addInt(v);
-                break;
-              } // case 6544
-              case 6546: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureTakenRewardListIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  takenRewardList_.addInt(input.readUInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 6546
-              case 7136: {
-                cIDDJFNIMPJ_ = input.readUInt64();
-
-                break;
-              } // case 7136
-              case 7866: {
-                emu.grasscutter.net.proto.ActivityPushTipsDataOuterClass.ActivityPushTipsData m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.ActivityPushTipsDataOuterClass.ActivityPushTipsData.parser(),
-                        extensionRegistry);
-                if (activityPushTipsDataListBuilder_ == null) {
-                  ensureActivityPushTipsDataListIsMutable();
-                  activityPushTipsDataList_.add(m);
-                } else {
-                  activityPushTipsDataListBuilder_.addMessage(m);
-                }
-                break;
-              } // case 7866
-              case 8320: {
-                mPPFCLCENAP_ = input.readUInt32();
-
-                break;
-              } // case 8320
-              case 8794: {
-                input.readMessage(
-                    getMusicGameInfoFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                detailCase_ = 1099;
-                break;
-              } // case 8794
-              case 9968: {
-                long v = input.readUInt64();
-                ensureGONEPFEDMELIsMutable();
-                gONEPFEDMEL_.addLong(v);
-                break;
-              } // case 9968
-              case 9970: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureGONEPFEDMELIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  gONEPFEDMEL_.addLong(input.readUInt64());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 9970
-              case 10136: {
-                int v = input.readUInt32();
-                ensureNJCGNGLKPBJIsMutable();
-                nJCGNGLKPBJ_.addInt(v);
-                break;
-              } // case 10136
-              case 10138: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureNJCGNGLKPBJIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  nJCGNGLKPBJ_.addInt(input.readUInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 10138
-              case 11264: {
-                oDMJHPBFIKO_ = input.readBool();
-
-                break;
-              } // case 11264
-              case 14330: {
-                com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
-                activityCoinMap__ = input.readMessage(
-                    ActivityCoinMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-                internalGetMutableActivityCoinMap().getMutableMap().put(
-                    activityCoinMap__.getKey(), activityCoinMap__.getValue());
-                break;
-              } // case 14330
-              case 15634: {
-                com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
-                wishGiftNumMap__ = input.readMessage(
-                    WishGiftNumMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-                internalGetMutableWishGiftNumMap().getMutableMap().put(
-                    wishGiftNumMap__.getKey(), wishGiftNumMap__.getValue());
-                break;
-              } // case 15634
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.ActivityInfoOuterClass.ActivityInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int detailCase_ = 0;
@@ -4385,18 +4467,7 @@ public final class ActivityInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new ActivityInfo(input, extensionRegistry);
       }
     };
 

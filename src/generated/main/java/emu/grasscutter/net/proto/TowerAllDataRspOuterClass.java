@@ -253,6 +253,176 @@ public final class TowerAllDataRspOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private TowerAllDataRsp(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              nextScheduleChangeTime_ = input.readUInt32();
+              break;
+            }
+            case 18: {
+              emu.grasscutter.net.proto.TowerCurLevelRecordOuterClass.TowerCurLevelRecord.Builder subBuilder = null;
+              if (curLevelRecord_ != null) {
+                subBuilder = curLevelRecord_.toBuilder();
+              }
+              curLevelRecord_ = input.readMessage(emu.grasscutter.net.proto.TowerCurLevelRecordOuterClass.TowerCurLevelRecord.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(curLevelRecord_);
+                curLevelRecord_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 24: {
+
+              lICMPIDMCOI_ = input.readUInt32();
+              break;
+            }
+            case 34: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                skipFloorGrantedRewardItemMap_ = com.google.protobuf.MapField.newMapField(
+                    SkipFloorGrantedRewardItemMapDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
+              skipFloorGrantedRewardItemMap__ = input.readMessage(
+                  SkipFloorGrantedRewardItemMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              skipFloorGrantedRewardItemMap_.getMutableMap().put(
+                  skipFloorGrantedRewardItemMap__.getKey(), skipFloorGrantedRewardItemMap__.getValue());
+              break;
+            }
+            case 40: {
+
+              validFloorRecordList_ = input.readUInt32();
+              break;
+            }
+            case 50: {
+              emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBrief.Builder subBuilder = null;
+              if (monthlyBrief_ != null) {
+                subBuilder = monthlyBrief_.toBuilder();
+              }
+              monthlyBrief_ = input.readMessage(emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBrief.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(monthlyBrief_);
+                monthlyBrief_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 58: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                floorOpenTimeMap_ = com.google.protobuf.MapField.newMapField(
+                    FloorOpenTimeMapDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000002;
+              }
+              com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
+              floorOpenTimeMap__ = input.readMessage(
+                  FloorOpenTimeMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              floorOpenTimeMap_.getMutableMap().put(
+                  floorOpenTimeMap__.getKey(), floorOpenTimeMap__.getValue());
+              break;
+            }
+            case 64: {
+
+              aBPDHMJNBKD_ = input.readUInt32();
+              break;
+            }
+            case 72: {
+
+              towerScheduleId_ = input.readUInt32();
+              break;
+            }
+            case 80: {
+
+              isFirstInteract_ = input.readBool();
+              break;
+            }
+            case 88: {
+
+              retcode_ = input.readInt32();
+              break;
+            }
+            case 96: {
+
+              validTowerRecordNum_ = input.readUInt32();
+              break;
+            }
+            case 104: {
+
+              commemorativeRewardId_ = input.readUInt32();
+              break;
+            }
+            case 112: {
+
+              isFinishedEntranceFloor_ = input.readBool();
+              break;
+            }
+            case 122: {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                towerFloorRecordList_ = new java.util.ArrayList<emu.grasscutter.net.proto.TowerFloorRecordOuterClass.TowerFloorRecord>();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              towerFloorRecordList_.add(
+                  input.readMessage(emu.grasscutter.net.proto.TowerFloorRecordOuterClass.TowerFloorRecord.parser(), extensionRegistry));
+              break;
+            }
+            case 4786: {
+              emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBrief.Builder subBuilder = null;
+              if (lastScheduleMonthlyBrief_ != null) {
+                subBuilder = lastScheduleMonthlyBrief_.toBuilder();
+              }
+              lastScheduleMonthlyBrief_ = input.readMessage(emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBrief.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(lastScheduleMonthlyBrief_);
+                lastScheduleMonthlyBrief_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 8064: {
+
+              scheduleStartTime_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
+          towerFloorRecordList_ = java.util.Collections.unmodifiableList(towerFloorRecordList_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.TowerAllDataRspOuterClass.internal_static_TowerAllDataRsp_descriptor;
@@ -752,7 +922,7 @@ public final class TowerAllDataRspOuterClass {
       if (scheduleStartTime_ != 0) {
         output.writeUInt32(1008, scheduleStartTime_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -841,7 +1011,7 @@ public final class TowerAllDataRspOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(1008, scheduleStartTime_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -899,7 +1069,7 @@ public final class TowerAllDataRspOuterClass {
       }
       if (getScheduleStartTime()
           != other.getScheduleStartTime()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -958,7 +1128,7 @@ public final class TowerAllDataRspOuterClass {
       }
       hash = (37 * hash) + SCHEDULE_START_TIME_FIELD_NUMBER;
       hash = (53 * hash) + getScheduleStartTime();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -1105,13 +1275,19 @@ public final class TowerAllDataRspOuterClass {
 
       // Construct using emu.grasscutter.net.proto.TowerAllDataRspOuterClass.TowerAllDataRsp.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getTowerFloorRecordListFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1152,11 +1328,10 @@ public final class TowerAllDataRspOuterClass {
 
         if (towerFloorRecordListBuilder_ == null) {
           towerFloorRecordList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
         } else {
-          towerFloorRecordList_ = null;
           towerFloorRecordListBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000004);
         if (lastScheduleMonthlyBriefBuilder_ == null) {
           lastScheduleMonthlyBrief_ = null;
         } else {
@@ -1351,7 +1526,7 @@ public final class TowerAllDataRspOuterClass {
         if (other.getScheduleStartTime() != 0) {
           setScheduleStartTime(other.getScheduleStartTime());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -1366,135 +1541,17 @@ public final class TowerAllDataRspOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.TowerAllDataRspOuterClass.TowerAllDataRsp parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                nextScheduleChangeTime_ = input.readUInt32();
-
-                break;
-              } // case 8
-              case 18: {
-                input.readMessage(
-                    getCurLevelRecordFieldBuilder().getBuilder(),
-                    extensionRegistry);
-
-                break;
-              } // case 18
-              case 24: {
-                lICMPIDMCOI_ = input.readUInt32();
-
-                break;
-              } // case 24
-              case 34: {
-                com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
-                skipFloorGrantedRewardItemMap__ = input.readMessage(
-                    SkipFloorGrantedRewardItemMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-                internalGetMutableSkipFloorGrantedRewardItemMap().getMutableMap().put(
-                    skipFloorGrantedRewardItemMap__.getKey(), skipFloorGrantedRewardItemMap__.getValue());
-                break;
-              } // case 34
-              case 40: {
-                validFloorRecordList_ = input.readUInt32();
-
-                break;
-              } // case 40
-              case 50: {
-                input.readMessage(
-                    getMonthlyBriefFieldBuilder().getBuilder(),
-                    extensionRegistry);
-
-                break;
-              } // case 50
-              case 58: {
-                com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
-                floorOpenTimeMap__ = input.readMessage(
-                    FloorOpenTimeMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-                internalGetMutableFloorOpenTimeMap().getMutableMap().put(
-                    floorOpenTimeMap__.getKey(), floorOpenTimeMap__.getValue());
-                break;
-              } // case 58
-              case 64: {
-                aBPDHMJNBKD_ = input.readUInt32();
-
-                break;
-              } // case 64
-              case 72: {
-                towerScheduleId_ = input.readUInt32();
-
-                break;
-              } // case 72
-              case 80: {
-                isFirstInteract_ = input.readBool();
-
-                break;
-              } // case 80
-              case 88: {
-                retcode_ = input.readInt32();
-
-                break;
-              } // case 88
-              case 96: {
-                validTowerRecordNum_ = input.readUInt32();
-
-                break;
-              } // case 96
-              case 104: {
-                commemorativeRewardId_ = input.readUInt32();
-
-                break;
-              } // case 104
-              case 112: {
-                isFinishedEntranceFloor_ = input.readBool();
-
-                break;
-              } // case 112
-              case 122: {
-                emu.grasscutter.net.proto.TowerFloorRecordOuterClass.TowerFloorRecord m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.TowerFloorRecordOuterClass.TowerFloorRecord.parser(),
-                        extensionRegistry);
-                if (towerFloorRecordListBuilder_ == null) {
-                  ensureTowerFloorRecordListIsMutable();
-                  towerFloorRecordList_.add(m);
-                } else {
-                  towerFloorRecordListBuilder_.addMessage(m);
-                }
-                break;
-              } // case 122
-              case 4786: {
-                input.readMessage(
-                    getLastScheduleMonthlyBriefFieldBuilder().getBuilder(),
-                    extensionRegistry);
-
-                break;
-              } // case 4786
-              case 8064: {
-                scheduleStartTime_ = input.readUInt32();
-
-                break;
-              } // case 8064
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.TowerAllDataRspOuterClass.TowerAllDataRsp) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -2725,18 +2782,7 @@ public final class TowerAllDataRspOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new TowerAllDataRsp(input, extensionRegistry);
       }
     };
 

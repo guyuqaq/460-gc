@@ -112,6 +112,100 @@ public final class MultiCharacterDungeonSettleInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private MultiCharacterDungeonSettleInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              difficulty_ = input.readUInt32();
+              break;
+            }
+            case 26: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                teamInfoList_ = new java.util.ArrayList<emu.grasscutter.net.proto.EBCKDJAFDDPOuterClass.EBCKDJAFDDP>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              teamInfoList_.add(
+                  input.readMessage(emu.grasscutter.net.proto.EBCKDJAFDDPOuterClass.EBCKDJAFDDP.parser(), extensionRegistry));
+              break;
+            }
+            case 32: {
+
+              stageId_ = input.readUInt32();
+              break;
+            }
+            case 56: {
+
+              levelId_ = input.readUInt32();
+              break;
+            }
+            case 64: {
+
+              isNewRecord_ = input.readBool();
+              break;
+            }
+            case 72: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                lCJICEEEKBI_ = newIntList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              lCJICEEEKBI_.addInt(input.readUInt32());
+              break;
+            }
+            case 74: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000002) != 0) && input.getBytesUntilLimit() > 0) {
+                lCJICEEEKBI_ = newIntList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                lCJICEEEKBI_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          teamInfoList_ = java.util.Collections.unmodifiableList(teamInfoList_);
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          lCJICEEEKBI_.makeImmutable(); // C
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.MultiCharacterDungeonSettleInfoOuterClass.internal_static_MultiCharacterDungeonSettleInfo_descriptor;
@@ -274,7 +368,7 @@ public final class MultiCharacterDungeonSettleInfoOuterClass {
       for (int i = 0; i < lCJICEEEKBI_.size(); i++) {
         output.writeUInt32NoTag(lCJICEEEKBI_.getInt(i));
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -317,7 +411,7 @@ public final class MultiCharacterDungeonSettleInfoOuterClass {
         }
         lCJICEEEKBIMemoizedSerializedSize = dataSize;
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -344,7 +438,7 @@ public final class MultiCharacterDungeonSettleInfoOuterClass {
           != other.getIsNewRecord()) return false;
       if (!getLCJICEEEKBIList()
           .equals(other.getLCJICEEEKBIList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -372,7 +466,7 @@ public final class MultiCharacterDungeonSettleInfoOuterClass {
         hash = (37 * hash) + LCJICEEEKBI_FIELD_NUMBER;
         hash = (53 * hash) + getLCJICEEEKBIList().hashCode();
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -489,13 +583,19 @@ public final class MultiCharacterDungeonSettleInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.MultiCharacterDungeonSettleInfoOuterClass.MultiCharacterDungeonSettleInfo.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getTeamInfoListFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -504,11 +604,10 @@ public final class MultiCharacterDungeonSettleInfoOuterClass {
 
         if (teamInfoListBuilder_ == null) {
           teamInfoList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
-          teamInfoList_ = null;
           teamInfoListBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000001);
         stageId_ = 0;
 
         levelId_ = 0;
@@ -658,7 +757,7 @@ public final class MultiCharacterDungeonSettleInfoOuterClass {
           }
           onChanged();
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -673,79 +772,17 @@ public final class MultiCharacterDungeonSettleInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.MultiCharacterDungeonSettleInfoOuterClass.MultiCharacterDungeonSettleInfo parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                difficulty_ = input.readUInt32();
-
-                break;
-              } // case 8
-              case 26: {
-                emu.grasscutter.net.proto.EBCKDJAFDDPOuterClass.EBCKDJAFDDP m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.EBCKDJAFDDPOuterClass.EBCKDJAFDDP.parser(),
-                        extensionRegistry);
-                if (teamInfoListBuilder_ == null) {
-                  ensureTeamInfoListIsMutable();
-                  teamInfoList_.add(m);
-                } else {
-                  teamInfoListBuilder_.addMessage(m);
-                }
-                break;
-              } // case 26
-              case 32: {
-                stageId_ = input.readUInt32();
-
-                break;
-              } // case 32
-              case 56: {
-                levelId_ = input.readUInt32();
-
-                break;
-              } // case 56
-              case 64: {
-                isNewRecord_ = input.readBool();
-
-                break;
-              } // case 64
-              case 72: {
-                int v = input.readUInt32();
-                ensureLCJICEEEKBIIsMutable();
-                lCJICEEEKBI_.addInt(v);
-                break;
-              } // case 72
-              case 74: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureLCJICEEEKBIIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  lCJICEEEKBI_.addInt(input.readUInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 74
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.MultiCharacterDungeonSettleInfoOuterClass.MultiCharacterDungeonSettleInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -1225,18 +1262,7 @@ public final class MultiCharacterDungeonSettleInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new MultiCharacterDungeonSettleInfo(input, extensionRegistry);
       }
     };
 

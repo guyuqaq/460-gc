@@ -20,10 +20,10 @@ public final class EvtBeingHealedNotifyOuterClass {
 
     /**
      * <pre>
-     * 4
+     * 8
      * </pre>
      *
-     * <code>float heal_amount = 8;</code>
+     * <code>float heal_amount = 4;</code>
      * @return The healAmount.
      */
     float getHealAmount();
@@ -36,10 +36,10 @@ public final class EvtBeingHealedNotifyOuterClass {
 
     /**
      * <pre>
-     * 8
+     * 4
      * </pre>
      *
-     * <code>float real_heal_amount = 4;</code>
+     * <code>float real_heal_amount = 8;</code>
      * @return The realHealAmount.
      */
     float getRealHealAmount();
@@ -96,6 +96,74 @@ public final class EvtBeingHealedNotifyOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private EvtBeingHealedNotify(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 37: {
+
+              healAmount_ = input.readFloat();
+              break;
+            }
+            case 56: {
+
+              nNDDEADLGGD_ = input.readBool();
+              break;
+            }
+            case 69: {
+
+              realHealAmount_ = input.readFloat();
+              break;
+            }
+            case 72: {
+
+              sourceId_ = input.readUInt32();
+              break;
+            }
+            case 90: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              aHCFMJJLEJN_ = s;
+              break;
+            }
+            case 104: {
+
+              targetId_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.EvtBeingHealedNotifyOuterClass.internal_static_EvtBeingHealedNotify_descriptor;
@@ -109,14 +177,14 @@ public final class EvtBeingHealedNotifyOuterClass {
               emu.grasscutter.net.proto.EvtBeingHealedNotifyOuterClass.EvtBeingHealedNotify.class, emu.grasscutter.net.proto.EvtBeingHealedNotifyOuterClass.EvtBeingHealedNotify.Builder.class);
     }
 
-    public static final int HEAL_AMOUNT_FIELD_NUMBER = 8;
+    public static final int HEAL_AMOUNT_FIELD_NUMBER = 4;
     private float healAmount_;
     /**
      * <pre>
-     * 4
+     * 8
      * </pre>
      *
-     * <code>float heal_amount = 8;</code>
+     * <code>float heal_amount = 4;</code>
      * @return The healAmount.
      */
     @java.lang.Override
@@ -135,14 +203,14 @@ public final class EvtBeingHealedNotifyOuterClass {
       return nNDDEADLGGD_;
     }
 
-    public static final int REAL_HEAL_AMOUNT_FIELD_NUMBER = 4;
+    public static final int REAL_HEAL_AMOUNT_FIELD_NUMBER = 8;
     private float realHealAmount_;
     /**
      * <pre>
-     * 8
+     * 4
      * </pre>
      *
-     * <code>float real_heal_amount = 4;</code>
+     * <code>float real_heal_amount = 8;</code>
      * @return The realHealAmount.
      */
     @java.lang.Override
@@ -224,14 +292,14 @@ public final class EvtBeingHealedNotifyOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (java.lang.Float.floatToRawIntBits(realHealAmount_) != 0) {
-        output.writeFloat(4, realHealAmount_);
+      if (healAmount_ != 0F) {
+        output.writeFloat(4, healAmount_);
       }
       if (nNDDEADLGGD_ != false) {
         output.writeBool(7, nNDDEADLGGD_);
       }
-      if (java.lang.Float.floatToRawIntBits(healAmount_) != 0) {
-        output.writeFloat(8, healAmount_);
+      if (realHealAmount_ != 0F) {
+        output.writeFloat(8, realHealAmount_);
       }
       if (sourceId_ != 0) {
         output.writeUInt32(9, sourceId_);
@@ -242,7 +310,7 @@ public final class EvtBeingHealedNotifyOuterClass {
       if (targetId_ != 0) {
         output.writeUInt32(13, targetId_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -251,17 +319,17 @@ public final class EvtBeingHealedNotifyOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (java.lang.Float.floatToRawIntBits(realHealAmount_) != 0) {
+      if (healAmount_ != 0F) {
         size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(4, realHealAmount_);
+          .computeFloatSize(4, healAmount_);
       }
       if (nNDDEADLGGD_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(7, nNDDEADLGGD_);
       }
-      if (java.lang.Float.floatToRawIntBits(healAmount_) != 0) {
+      if (realHealAmount_ != 0F) {
         size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(8, healAmount_);
+          .computeFloatSize(8, realHealAmount_);
       }
       if (sourceId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -274,7 +342,7 @@ public final class EvtBeingHealedNotifyOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(13, targetId_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -303,7 +371,7 @@ public final class EvtBeingHealedNotifyOuterClass {
           .equals(other.getAHCFMJJLEJN())) return false;
       if (getTargetId()
           != other.getTargetId()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -329,7 +397,7 @@ public final class EvtBeingHealedNotifyOuterClass {
       hash = (53 * hash) + getAHCFMJJLEJN().hashCode();
       hash = (37 * hash) + TARGET_ID_FIELD_NUMBER;
       hash = (53 * hash) + getTargetId();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -446,13 +514,18 @@ public final class EvtBeingHealedNotifyOuterClass {
 
       // Construct using emu.grasscutter.net.proto.EvtBeingHealedNotifyOuterClass.EvtBeingHealedNotify.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -568,7 +641,7 @@ public final class EvtBeingHealedNotifyOuterClass {
         if (other.getTargetId() != 0) {
           setTargetId(other.getTargetId());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -583,70 +656,27 @@ public final class EvtBeingHealedNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.EvtBeingHealedNotifyOuterClass.EvtBeingHealedNotify parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 37: {
-                realHealAmount_ = input.readFloat();
-
-                break;
-              } // case 37
-              case 56: {
-                nNDDEADLGGD_ = input.readBool();
-
-                break;
-              } // case 56
-              case 69: {
-                healAmount_ = input.readFloat();
-
-                break;
-              } // case 69
-              case 72: {
-                sourceId_ = input.readUInt32();
-
-                break;
-              } // case 72
-              case 90: {
-                aHCFMJJLEJN_ = input.readStringRequireUtf8();
-
-                break;
-              } // case 90
-              case 104: {
-                targetId_ = input.readUInt32();
-
-                break;
-              } // case 104
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.EvtBeingHealedNotifyOuterClass.EvtBeingHealedNotify) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
 
       private float healAmount_ ;
       /**
        * <pre>
-       * 4
+       * 8
        * </pre>
        *
-       * <code>float heal_amount = 8;</code>
+       * <code>float heal_amount = 4;</code>
        * @return The healAmount.
        */
       @java.lang.Override
@@ -655,10 +685,10 @@ public final class EvtBeingHealedNotifyOuterClass {
       }
       /**
        * <pre>
-       * 4
+       * 8
        * </pre>
        *
-       * <code>float heal_amount = 8;</code>
+       * <code>float heal_amount = 4;</code>
        * @param value The healAmount to set.
        * @return This builder for chaining.
        */
@@ -670,10 +700,10 @@ public final class EvtBeingHealedNotifyOuterClass {
       }
       /**
        * <pre>
-       * 4
+       * 8
        * </pre>
        *
-       * <code>float heal_amount = 8;</code>
+       * <code>float heal_amount = 4;</code>
        * @return This builder for chaining.
        */
       public Builder clearHealAmount() {
@@ -717,10 +747,10 @@ public final class EvtBeingHealedNotifyOuterClass {
       private float realHealAmount_ ;
       /**
        * <pre>
-       * 8
+       * 4
        * </pre>
        *
-       * <code>float real_heal_amount = 4;</code>
+       * <code>float real_heal_amount = 8;</code>
        * @return The realHealAmount.
        */
       @java.lang.Override
@@ -729,10 +759,10 @@ public final class EvtBeingHealedNotifyOuterClass {
       }
       /**
        * <pre>
-       * 8
+       * 4
        * </pre>
        *
-       * <code>float real_heal_amount = 4;</code>
+       * <code>float real_heal_amount = 8;</code>
        * @param value The realHealAmount to set.
        * @return This builder for chaining.
        */
@@ -744,10 +774,10 @@ public final class EvtBeingHealedNotifyOuterClass {
       }
       /**
        * <pre>
-       * 8
+       * 4
        * </pre>
        *
-       * <code>float real_heal_amount = 4;</code>
+       * <code>float real_heal_amount = 8;</code>
        * @return This builder for chaining.
        */
       public Builder clearRealHealAmount() {
@@ -927,18 +957,7 @@ public final class EvtBeingHealedNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new EvtBeingHealedNotify(input, extensionRegistry);
       }
     };
 
@@ -973,8 +992,8 @@ public final class EvtBeingHealedNotifyOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\032EvtBeingHealedNotify.proto\"\225\001\n\024EvtBein" +
-      "gHealedNotify\022\023\n\013heal_amount\030\010 \001(\002\022\023\n\013NN" +
-      "DDEADLGGD\030\007 \001(\010\022\030\n\020real_heal_amount\030\004 \001(" +
+      "gHealedNotify\022\023\n\013heal_amount\030\004 \001(\002\022\023\n\013NN" +
+      "DDEADLGGD\030\007 \001(\010\022\030\n\020real_heal_amount\030\010 \001(" +
       "\002\022\021\n\tsource_id\030\t \001(\r\022\023\n\013AHCFMJJLEJN\030\013 \001(" +
       "\t\022\021\n\ttarget_id\030\r \001(\rB\033\n\031emu.grasscutter." +
       "net.protob\006proto3"

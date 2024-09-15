@@ -109,6 +109,95 @@ public final class RechargeReqOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private RechargeReq(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 18: {
+              emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct.Builder subBuilder = null;
+              if (cardProduct_ != null) {
+                subBuilder = cardProduct_.toBuilder();
+              }
+              cardProduct_ = input.readMessage(emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(cardProduct_);
+                cardProduct_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 66: {
+              emu.grasscutter.net.proto.PlayProductOuterClass.PlayProduct.Builder subBuilder = null;
+              if (playProduct_ != null) {
+                subBuilder = playProduct_.toBuilder();
+              }
+              playProduct_ = input.readMessage(emu.grasscutter.net.proto.PlayProductOuterClass.PlayProduct.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(playProduct_);
+                playProduct_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 90: {
+              emu.grasscutter.net.proto.ShopMcoinProductOuterClass.ShopMcoinProduct.Builder subBuilder = null;
+              if (mcoinProduct_ != null) {
+                subBuilder = mcoinProduct_.toBuilder();
+              }
+              mcoinProduct_ = input.readMessage(emu.grasscutter.net.proto.ShopMcoinProductOuterClass.ShopMcoinProduct.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(mcoinProduct_);
+                mcoinProduct_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 122: {
+              emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProduct.Builder subBuilder = null;
+              if (concertProduct_ != null) {
+                subBuilder = concertProduct_.toBuilder();
+              }
+              concertProduct_ = input.readMessage(emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProduct.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(concertProduct_);
+                concertProduct_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.RechargeReqOuterClass.internal_static_RechargeReq_descriptor;
@@ -252,7 +341,7 @@ public final class RechargeReqOuterClass {
       if (concertProduct_ != null) {
         output.writeMessage(15, getConcertProduct());
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -277,7 +366,7 @@ public final class RechargeReqOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(15, getConcertProduct());
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -312,7 +401,7 @@ public final class RechargeReqOuterClass {
         if (!getMcoinProduct()
             .equals(other.getMcoinProduct())) return false;
       }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -339,7 +428,7 @@ public final class RechargeReqOuterClass {
         hash = (37 * hash) + MCOIN_PRODUCT_FIELD_NUMBER;
         hash = (53 * hash) + getMcoinProduct().hashCode();
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -460,13 +549,18 @@ public final class RechargeReqOuterClass {
 
       // Construct using emu.grasscutter.net.proto.RechargeReqOuterClass.RechargeReq.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -601,7 +695,7 @@ public final class RechargeReqOuterClass {
         if (other.hasMcoinProduct()) {
           mergeMcoinProduct(other.getMcoinProduct());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -616,58 +710,17 @@ public final class RechargeReqOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.RechargeReqOuterClass.RechargeReq parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 18: {
-                input.readMessage(
-                    getCardProductFieldBuilder().getBuilder(),
-                    extensionRegistry);
-
-                break;
-              } // case 18
-              case 66: {
-                input.readMessage(
-                    getPlayProductFieldBuilder().getBuilder(),
-                    extensionRegistry);
-
-                break;
-              } // case 66
-              case 90: {
-                input.readMessage(
-                    getMcoinProductFieldBuilder().getBuilder(),
-                    extensionRegistry);
-
-                break;
-              } // case 90
-              case 122: {
-                input.readMessage(
-                    getConcertProductFieldBuilder().getBuilder(),
-                    extensionRegistry);
-
-                break;
-              } // case 122
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.RechargeReqOuterClass.RechargeReq) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
 
@@ -1179,18 +1232,7 @@ public final class RechargeReqOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new RechargeReq(input, extensionRegistry);
       }
     };
 

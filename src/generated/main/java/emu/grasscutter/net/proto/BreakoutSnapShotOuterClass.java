@@ -334,6 +334,219 @@ public final class BreakoutSnapShotOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private BreakoutSnapShot(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              clientGameTime_ = input.readUInt64();
+              break;
+            }
+            case 16: {
+
+              serverGameTime_ = input.readUInt64();
+              break;
+            }
+            case 26: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                ballList_ = new java.util.ArrayList<emu.grasscutter.net.proto.BreakoutPhysicalObjectOuterClass.BreakoutPhysicalObject>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              ballList_.add(
+                  input.readMessage(emu.grasscutter.net.proto.BreakoutPhysicalObjectOuterClass.BreakoutPhysicalObject.parser(), extensionRegistry));
+              break;
+            }
+            case 34: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                physicalObjectList_ = new java.util.ArrayList<emu.grasscutter.net.proto.BreakoutPhysicalObjectOuterClass.BreakoutPhysicalObject>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              physicalObjectList_.add(
+                  input.readMessage(emu.grasscutter.net.proto.BreakoutPhysicalObjectOuterClass.BreakoutPhysicalObject.parser(), extensionRegistry));
+              break;
+            }
+            case 42: {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                actionList_ = new java.util.ArrayList<emu.grasscutter.net.proto.BreakoutActionOuterClass.BreakoutAction>();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              actionList_.add(
+                  input.readMessage(emu.grasscutter.net.proto.BreakoutActionOuterClass.BreakoutAction.parser(), extensionRegistry));
+              break;
+            }
+            case 48: {
+
+              waveIndex_ = input.readUInt32();
+              break;
+            }
+            case 56: {
+
+              isFinish_ = input.readBool();
+              break;
+            }
+            case 64: {
+
+              score_ = input.readUInt32();
+              break;
+            }
+            case 72: {
+
+              combo_ = input.readUInt32();
+              break;
+            }
+            case 80: {
+
+              maxCombo_ = input.readUInt32();
+              break;
+            }
+            case 88: {
+
+              lifeCount_ = input.readUInt32();
+              break;
+            }
+            case 96: {
+
+              waveSuiteIndex_ = input.readUInt32();
+              break;
+            }
+            case 106: {
+              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
+                spawnPointList_ = new java.util.ArrayList<emu.grasscutter.net.proto.BreakoutSpawnPointOuterClass.BreakoutSpawnPoint>();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              spawnPointList_.add(
+                  input.readMessage(emu.grasscutter.net.proto.BreakoutSpawnPointOuterClass.BreakoutSpawnPoint.parser(), extensionRegistry));
+              break;
+            }
+            case 112: {
+
+              remainingBossHp_ = input.readUInt32();
+              break;
+            }
+            case 122: {
+              if (!((mutable_bitField0_ & 0x00000010) != 0)) {
+                brickElementReactionList_ = new java.util.ArrayList<emu.grasscutter.net.proto.BreakoutElementReactionCounterOuterClass.BreakoutElementReactionCounter>();
+                mutable_bitField0_ |= 0x00000010;
+              }
+              brickElementReactionList_.add(
+                  input.readMessage(emu.grasscutter.net.proto.BreakoutElementReactionCounterOuterClass.BreakoutElementReactionCounter.parser(), extensionRegistry));
+              break;
+            }
+            case 130: {
+              if (!((mutable_bitField0_ & 0x00000020) != 0)) {
+                ballElementReactionList_ = new java.util.ArrayList<emu.grasscutter.net.proto.BreakoutElementReactionCounterOuterClass.BreakoutElementReactionCounter>();
+                mutable_bitField0_ |= 0x00000020;
+              }
+              ballElementReactionList_.add(
+                  input.readMessage(emu.grasscutter.net.proto.BreakoutElementReactionCounterOuterClass.BreakoutElementReactionCounter.parser(), extensionRegistry));
+              break;
+            }
+            case 138: {
+              if (!((mutable_bitField0_ & 0x00000040) != 0)) {
+                uidInfoList_ = new java.util.ArrayList<emu.grasscutter.net.proto.BreakoutSyncConnectUidInfoOuterClass.BreakoutSyncConnectUidInfo>();
+                mutable_bitField0_ |= 0x00000040;
+              }
+              uidInfoList_.add(
+                  input.readMessage(emu.grasscutter.net.proto.BreakoutSyncConnectUidInfoOuterClass.BreakoutSyncConnectUidInfo.parser(), extensionRegistry));
+              break;
+            }
+            case 146: {
+              if (!((mutable_bitField0_ & 0x00000080) != 0)) {
+                dynamicObjectList_ = new java.util.ArrayList<emu.grasscutter.net.proto.BreakoutPhysicalObjectOuterClass.BreakoutPhysicalObject>();
+                mutable_bitField0_ |= 0x00000080;
+              }
+              dynamicObjectList_.add(
+                  input.readMessage(emu.grasscutter.net.proto.BreakoutPhysicalObjectOuterClass.BreakoutPhysicalObject.parser(), extensionRegistry));
+              break;
+            }
+            case 152: {
+              if (!((mutable_bitField0_ & 0x00000100) != 0)) {
+                idIndexList_ = newIntList();
+                mutable_bitField0_ |= 0x00000100;
+              }
+              idIndexList_.addInt(input.readUInt32());
+              break;
+            }
+            case 154: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000100) != 0) && input.getBytesUntilLimit() > 0) {
+                idIndexList_ = newIntList();
+                mutable_bitField0_ |= 0x00000100;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                idIndexList_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 160: {
+
+              rawClientGameTime_ = input.readInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          ballList_ = java.util.Collections.unmodifiableList(ballList_);
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          physicalObjectList_ = java.util.Collections.unmodifiableList(physicalObjectList_);
+        }
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
+          actionList_ = java.util.Collections.unmodifiableList(actionList_);
+        }
+        if (((mutable_bitField0_ & 0x00000008) != 0)) {
+          spawnPointList_ = java.util.Collections.unmodifiableList(spawnPointList_);
+        }
+        if (((mutable_bitField0_ & 0x00000010) != 0)) {
+          brickElementReactionList_ = java.util.Collections.unmodifiableList(brickElementReactionList_);
+        }
+        if (((mutable_bitField0_ & 0x00000020) != 0)) {
+          ballElementReactionList_ = java.util.Collections.unmodifiableList(ballElementReactionList_);
+        }
+        if (((mutable_bitField0_ & 0x00000040) != 0)) {
+          uidInfoList_ = java.util.Collections.unmodifiableList(uidInfoList_);
+        }
+        if (((mutable_bitField0_ & 0x00000080) != 0)) {
+          dynamicObjectList_ = java.util.Collections.unmodifiableList(dynamicObjectList_);
+        }
+        if (((mutable_bitField0_ & 0x00000100) != 0)) {
+          idIndexList_.makeImmutable(); // C
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.BreakoutSnapShotOuterClass.internal_static_BreakoutSnapShot_descriptor;
@@ -895,7 +1108,7 @@ public final class BreakoutSnapShotOuterClass {
       if (rawClientGameTime_ != 0) {
         output.writeInt32(20, rawClientGameTime_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -994,7 +1207,7 @@ public final class BreakoutSnapShotOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(20, rawClientGameTime_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -1049,7 +1262,7 @@ public final class BreakoutSnapShotOuterClass {
           .equals(other.getIdIndexListList())) return false;
       if (getRawClientGameTime()
           != other.getRawClientGameTime()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -1121,7 +1334,7 @@ public final class BreakoutSnapShotOuterClass {
       }
       hash = (37 * hash) + RAW_CLIENT_GAME_TIME_FIELD_NUMBER;
       hash = (53 * hash) + getRawClientGameTime();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -1243,13 +1456,26 @@ public final class BreakoutSnapShotOuterClass {
 
       // Construct using emu.grasscutter.net.proto.BreakoutSnapShotOuterClass.BreakoutSnapShot.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getBallListFieldBuilder();
+          getPhysicalObjectListFieldBuilder();
+          getActionListFieldBuilder();
+          getSpawnPointListFieldBuilder();
+          getBrickElementReactionListFieldBuilder();
+          getBallElementReactionListFieldBuilder();
+          getUidInfoListFieldBuilder();
+          getDynamicObjectListFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1260,25 +1486,22 @@ public final class BreakoutSnapShotOuterClass {
 
         if (ballListBuilder_ == null) {
           ballList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
-          ballList_ = null;
           ballListBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000001);
         if (physicalObjectListBuilder_ == null) {
           physicalObjectList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
-          physicalObjectList_ = null;
           physicalObjectListBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000002);
         if (actionListBuilder_ == null) {
           actionList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
         } else {
-          actionList_ = null;
           actionListBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000004);
         waveIndex_ = 0;
 
         isFinish_ = false;
@@ -1295,41 +1518,36 @@ public final class BreakoutSnapShotOuterClass {
 
         if (spawnPointListBuilder_ == null) {
           spawnPointList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
         } else {
-          spawnPointList_ = null;
           spawnPointListBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000008);
         remainingBossHp_ = 0;
 
         if (brickElementReactionListBuilder_ == null) {
           brickElementReactionList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
         } else {
-          brickElementReactionList_ = null;
           brickElementReactionListBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000010);
         if (ballElementReactionListBuilder_ == null) {
           ballElementReactionList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000020);
         } else {
-          ballElementReactionList_ = null;
           ballElementReactionListBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000020);
         if (uidInfoListBuilder_ == null) {
           uidInfoList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000040);
         } else {
-          uidInfoList_ = null;
           uidInfoListBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000040);
         if (dynamicObjectListBuilder_ == null) {
           dynamicObjectList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000080);
         } else {
-          dynamicObjectList_ = null;
           dynamicObjectListBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000080);
         idIndexList_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000100);
         rawClientGameTime_ = 0;
@@ -1748,7 +1966,7 @@ public final class BreakoutSnapShotOuterClass {
         if (other.getRawClientGameTime() != 0) {
           setRawClientGameTime(other.getRawClientGameTime());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -1763,205 +1981,17 @@ public final class BreakoutSnapShotOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.BreakoutSnapShotOuterClass.BreakoutSnapShot parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                clientGameTime_ = input.readUInt64();
-
-                break;
-              } // case 8
-              case 16: {
-                serverGameTime_ = input.readUInt64();
-
-                break;
-              } // case 16
-              case 26: {
-                emu.grasscutter.net.proto.BreakoutPhysicalObjectOuterClass.BreakoutPhysicalObject m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.BreakoutPhysicalObjectOuterClass.BreakoutPhysicalObject.parser(),
-                        extensionRegistry);
-                if (ballListBuilder_ == null) {
-                  ensureBallListIsMutable();
-                  ballList_.add(m);
-                } else {
-                  ballListBuilder_.addMessage(m);
-                }
-                break;
-              } // case 26
-              case 34: {
-                emu.grasscutter.net.proto.BreakoutPhysicalObjectOuterClass.BreakoutPhysicalObject m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.BreakoutPhysicalObjectOuterClass.BreakoutPhysicalObject.parser(),
-                        extensionRegistry);
-                if (physicalObjectListBuilder_ == null) {
-                  ensurePhysicalObjectListIsMutable();
-                  physicalObjectList_.add(m);
-                } else {
-                  physicalObjectListBuilder_.addMessage(m);
-                }
-                break;
-              } // case 34
-              case 42: {
-                emu.grasscutter.net.proto.BreakoutActionOuterClass.BreakoutAction m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.BreakoutActionOuterClass.BreakoutAction.parser(),
-                        extensionRegistry);
-                if (actionListBuilder_ == null) {
-                  ensureActionListIsMutable();
-                  actionList_.add(m);
-                } else {
-                  actionListBuilder_.addMessage(m);
-                }
-                break;
-              } // case 42
-              case 48: {
-                waveIndex_ = input.readUInt32();
-
-                break;
-              } // case 48
-              case 56: {
-                isFinish_ = input.readBool();
-
-                break;
-              } // case 56
-              case 64: {
-                score_ = input.readUInt32();
-
-                break;
-              } // case 64
-              case 72: {
-                combo_ = input.readUInt32();
-
-                break;
-              } // case 72
-              case 80: {
-                maxCombo_ = input.readUInt32();
-
-                break;
-              } // case 80
-              case 88: {
-                lifeCount_ = input.readUInt32();
-
-                break;
-              } // case 88
-              case 96: {
-                waveSuiteIndex_ = input.readUInt32();
-
-                break;
-              } // case 96
-              case 106: {
-                emu.grasscutter.net.proto.BreakoutSpawnPointOuterClass.BreakoutSpawnPoint m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.BreakoutSpawnPointOuterClass.BreakoutSpawnPoint.parser(),
-                        extensionRegistry);
-                if (spawnPointListBuilder_ == null) {
-                  ensureSpawnPointListIsMutable();
-                  spawnPointList_.add(m);
-                } else {
-                  spawnPointListBuilder_.addMessage(m);
-                }
-                break;
-              } // case 106
-              case 112: {
-                remainingBossHp_ = input.readUInt32();
-
-                break;
-              } // case 112
-              case 122: {
-                emu.grasscutter.net.proto.BreakoutElementReactionCounterOuterClass.BreakoutElementReactionCounter m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.BreakoutElementReactionCounterOuterClass.BreakoutElementReactionCounter.parser(),
-                        extensionRegistry);
-                if (brickElementReactionListBuilder_ == null) {
-                  ensureBrickElementReactionListIsMutable();
-                  brickElementReactionList_.add(m);
-                } else {
-                  brickElementReactionListBuilder_.addMessage(m);
-                }
-                break;
-              } // case 122
-              case 130: {
-                emu.grasscutter.net.proto.BreakoutElementReactionCounterOuterClass.BreakoutElementReactionCounter m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.BreakoutElementReactionCounterOuterClass.BreakoutElementReactionCounter.parser(),
-                        extensionRegistry);
-                if (ballElementReactionListBuilder_ == null) {
-                  ensureBallElementReactionListIsMutable();
-                  ballElementReactionList_.add(m);
-                } else {
-                  ballElementReactionListBuilder_.addMessage(m);
-                }
-                break;
-              } // case 130
-              case 138: {
-                emu.grasscutter.net.proto.BreakoutSyncConnectUidInfoOuterClass.BreakoutSyncConnectUidInfo m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.BreakoutSyncConnectUidInfoOuterClass.BreakoutSyncConnectUidInfo.parser(),
-                        extensionRegistry);
-                if (uidInfoListBuilder_ == null) {
-                  ensureUidInfoListIsMutable();
-                  uidInfoList_.add(m);
-                } else {
-                  uidInfoListBuilder_.addMessage(m);
-                }
-                break;
-              } // case 138
-              case 146: {
-                emu.grasscutter.net.proto.BreakoutPhysicalObjectOuterClass.BreakoutPhysicalObject m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.BreakoutPhysicalObjectOuterClass.BreakoutPhysicalObject.parser(),
-                        extensionRegistry);
-                if (dynamicObjectListBuilder_ == null) {
-                  ensureDynamicObjectListIsMutable();
-                  dynamicObjectList_.add(m);
-                } else {
-                  dynamicObjectListBuilder_.addMessage(m);
-                }
-                break;
-              } // case 146
-              case 152: {
-                int v = input.readUInt32();
-                ensureIdIndexListIsMutable();
-                idIndexList_.addInt(v);
-                break;
-              } // case 152
-              case 154: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureIdIndexListIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  idIndexList_.addInt(input.readUInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 154
-              case 160: {
-                rawClientGameTime_ = input.readInt32();
-
-                break;
-              } // case 160
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.BreakoutSnapShotOuterClass.BreakoutSnapShot) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -4338,18 +4368,7 @@ public final class BreakoutSnapShotOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new BreakoutSnapShot(input, extensionRegistry);
       }
     };
 

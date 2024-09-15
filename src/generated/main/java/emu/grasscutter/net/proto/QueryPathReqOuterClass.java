@@ -154,6 +154,124 @@ public final class QueryPathReqOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private QueryPathReq(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 24: {
+
+              queryId_ = input.readInt32();
+              break;
+            }
+            case 34: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                destinationPos_ = new java.util.ArrayList<emu.grasscutter.net.proto.VectorOuterClass.Vector>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              destinationPos_.add(
+                  input.readMessage(emu.grasscutter.net.proto.VectorOuterClass.Vector.parser(), extensionRegistry));
+              break;
+            }
+            case 42: {
+              emu.grasscutter.net.proto.Vector3IntOuterClass.Vector3Int.Builder subBuilder = null;
+              if (oDFIFCKDODJ_ != null) {
+                subBuilder = oDFIFCKDODJ_.toBuilder();
+              }
+              oDFIFCKDODJ_ = input.readMessage(emu.grasscutter.net.proto.Vector3IntOuterClass.Vector3Int.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(oDFIFCKDODJ_);
+                oDFIFCKDODJ_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 56: {
+              int rawValue = input.readEnum();
+
+              queryType_ = rawValue;
+              break;
+            }
+            case 74: {
+              emu.grasscutter.net.proto.Vector3IntOuterClass.Vector3Int.Builder subBuilder = null;
+              if (dNFDJPHIOBD_ != null) {
+                subBuilder = dNFDJPHIOBD_.toBuilder();
+              }
+              dNFDJPHIOBD_ = input.readMessage(emu.grasscutter.net.proto.Vector3IntOuterClass.Vector3Int.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(dNFDJPHIOBD_);
+                dNFDJPHIOBD_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 98: {
+              emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder subBuilder = null;
+              if (sourcePos_ != null) {
+                subBuilder = sourcePos_.toBuilder();
+              }
+              sourcePos_ = input.readMessage(emu.grasscutter.net.proto.VectorOuterClass.Vector.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(sourcePos_);
+                sourcePos_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 104: {
+
+              sceneId_ = input.readUInt32();
+              break;
+            }
+            case 114: {
+              emu.grasscutter.net.proto.QueryFilterOuterClass.QueryFilter.Builder subBuilder = null;
+              if (filter_ != null) {
+                subBuilder = filter_.toBuilder();
+              }
+              filter_ = input.readMessage(emu.grasscutter.net.proto.QueryFilterOuterClass.QueryFilter.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(filter_);
+                filter_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          destinationPos_ = java.util.Collections.unmodifiableList(destinationPos_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.QueryPathReqOuterClass.internal_static_QueryPathReq_descriptor;
@@ -390,7 +508,7 @@ public final class QueryPathReqOuterClass {
       if (filter_ != null) {
         output.writeMessage(14, getFilter());
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -431,7 +549,7 @@ public final class QueryPathReqOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(14, getFilter());
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -473,7 +591,7 @@ public final class QueryPathReqOuterClass {
       if (getSceneId()
           != other.getSceneId()) return false;
       if (queryType_ != other.queryType_) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -510,7 +628,7 @@ public final class QueryPathReqOuterClass {
       hash = (53 * hash) + getSceneId();
       hash = (37 * hash) + QUERY_TYPE_FIELD_NUMBER;
       hash = (53 * hash) + queryType_;
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -627,13 +745,19 @@ public final class QueryPathReqOuterClass {
 
       // Construct using emu.grasscutter.net.proto.QueryPathReqOuterClass.QueryPathReq.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getDestinationPosFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -646,11 +770,10 @@ public final class QueryPathReqOuterClass {
         }
         if (destinationPosBuilder_ == null) {
           destinationPos_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
-          destinationPos_ = null;
           destinationPosBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000001);
         if (dNFDJPHIOBDBuilder_ == null) {
           dNFDJPHIOBD_ = null;
         } else {
@@ -829,7 +952,7 @@ public final class QueryPathReqOuterClass {
         if (other.queryType_ != 0) {
           setQueryTypeValue(other.getQueryTypeValue());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -844,86 +967,17 @@ public final class QueryPathReqOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.QueryPathReqOuterClass.QueryPathReq parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 24: {
-                queryId_ = input.readInt32();
-
-                break;
-              } // case 24
-              case 34: {
-                emu.grasscutter.net.proto.VectorOuterClass.Vector m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.VectorOuterClass.Vector.parser(),
-                        extensionRegistry);
-                if (destinationPosBuilder_ == null) {
-                  ensureDestinationPosIsMutable();
-                  destinationPos_.add(m);
-                } else {
-                  destinationPosBuilder_.addMessage(m);
-                }
-                break;
-              } // case 34
-              case 42: {
-                input.readMessage(
-                    getODFIFCKDODJFieldBuilder().getBuilder(),
-                    extensionRegistry);
-
-                break;
-              } // case 42
-              case 56: {
-                queryType_ = input.readEnum();
-
-                break;
-              } // case 56
-              case 74: {
-                input.readMessage(
-                    getDNFDJPHIOBDFieldBuilder().getBuilder(),
-                    extensionRegistry);
-
-                break;
-              } // case 74
-              case 98: {
-                input.readMessage(
-                    getSourcePosFieldBuilder().getBuilder(),
-                    extensionRegistry);
-
-                break;
-              } // case 98
-              case 104: {
-                sceneId_ = input.readUInt32();
-
-                break;
-              } // case 104
-              case 114: {
-                input.readMessage(
-                    getFilterFieldBuilder().getBuilder(),
-                    extensionRegistry);
-
-                break;
-              } // case 114
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.QueryPathReqOuterClass.QueryPathReq) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -1792,18 +1846,7 @@ public final class QueryPathReqOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new QueryPathReq(input, extensionRegistry);
       }
     };
 

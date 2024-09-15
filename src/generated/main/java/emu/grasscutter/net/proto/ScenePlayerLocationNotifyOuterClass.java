@@ -101,6 +101,73 @@ public final class ScenePlayerLocationNotifyOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private ScenePlayerLocationNotify(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 26: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                playerLocList_ = new java.util.ArrayList<emu.grasscutter.net.proto.PlayerLocationInfoOuterClass.PlayerLocationInfo>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              playerLocList_.add(
+                  input.readMessage(emu.grasscutter.net.proto.PlayerLocationInfoOuterClass.PlayerLocationInfo.parser(), extensionRegistry));
+              break;
+            }
+            case 80: {
+
+              sceneId_ = input.readUInt32();
+              break;
+            }
+            case 90: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                vehicleLocList_ = new java.util.ArrayList<emu.grasscutter.net.proto.VehicleLocationInfoOuterClass.VehicleLocationInfo>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              vehicleLocList_.add(
+                  input.readMessage(emu.grasscutter.net.proto.VehicleLocationInfoOuterClass.VehicleLocationInfo.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          playerLocList_ = java.util.Collections.unmodifiableList(playerLocList_);
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          vehicleLocList_ = java.util.Collections.unmodifiableList(vehicleLocList_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.ScenePlayerLocationNotifyOuterClass.internal_static_ScenePlayerLocationNotify_descriptor;
@@ -228,7 +295,7 @@ public final class ScenePlayerLocationNotifyOuterClass {
       for (int i = 0; i < vehicleLocList_.size(); i++) {
         output.writeMessage(11, vehicleLocList_.get(i));
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -249,7 +316,7 @@ public final class ScenePlayerLocationNotifyOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(11, vehicleLocList_.get(i));
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -270,7 +337,7 @@ public final class ScenePlayerLocationNotifyOuterClass {
           != other.getSceneId()) return false;
       if (!getVehicleLocListList()
           .equals(other.getVehicleLocListList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -291,7 +358,7 @@ public final class ScenePlayerLocationNotifyOuterClass {
         hash = (37 * hash) + VEHICLE_LOC_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getVehicleLocListList().hashCode();
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -408,33 +475,38 @@ public final class ScenePlayerLocationNotifyOuterClass {
 
       // Construct using emu.grasscutter.net.proto.ScenePlayerLocationNotifyOuterClass.ScenePlayerLocationNotify.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPlayerLocListFieldBuilder();
+          getVehicleLocListFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
         if (playerLocListBuilder_ == null) {
           playerLocList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
-          playerLocList_ = null;
           playerLocListBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000001);
         sceneId_ = 0;
 
         if (vehicleLocListBuilder_ == null) {
           vehicleLocList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
-          vehicleLocList_ = null;
           vehicleLocListBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -584,7 +656,7 @@ public final class ScenePlayerLocationNotifyOuterClass {
             }
           }
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -599,61 +671,17 @@ public final class ScenePlayerLocationNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.ScenePlayerLocationNotifyOuterClass.ScenePlayerLocationNotify parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 26: {
-                emu.grasscutter.net.proto.PlayerLocationInfoOuterClass.PlayerLocationInfo m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.PlayerLocationInfoOuterClass.PlayerLocationInfo.parser(),
-                        extensionRegistry);
-                if (playerLocListBuilder_ == null) {
-                  ensurePlayerLocListIsMutable();
-                  playerLocList_.add(m);
-                } else {
-                  playerLocListBuilder_.addMessage(m);
-                }
-                break;
-              } // case 26
-              case 80: {
-                sceneId_ = input.readUInt32();
-
-                break;
-              } // case 80
-              case 90: {
-                emu.grasscutter.net.proto.VehicleLocationInfoOuterClass.VehicleLocationInfo m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.VehicleLocationInfoOuterClass.VehicleLocationInfo.parser(),
-                        extensionRegistry);
-                if (vehicleLocListBuilder_ == null) {
-                  ensureVehicleLocListIsMutable();
-                  vehicleLocList_.add(m);
-                } else {
-                  vehicleLocListBuilder_.addMessage(m);
-                }
-                break;
-              } // case 90
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.ScenePlayerLocationNotifyOuterClass.ScenePlayerLocationNotify) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -1201,18 +1229,7 @@ public final class ScenePlayerLocationNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new ScenePlayerLocationNotify(input, extensionRegistry);
       }
     };
 

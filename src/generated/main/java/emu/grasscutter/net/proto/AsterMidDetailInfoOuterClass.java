@@ -88,6 +88,71 @@ public final class AsterMidDetailInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private AsterMidDetailInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              beginTime_ = input.readUInt32();
+              break;
+            }
+            case 64: {
+
+              collectCount_ = input.readUInt32();
+              break;
+            }
+            case 104: {
+
+              isOpen_ = input.readBool();
+              break;
+            }
+            case 122: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                campList_ = new java.util.ArrayList<emu.grasscutter.net.proto.AsterMidCampInfoOuterClass.AsterMidCampInfo>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              campList_.add(
+                  input.readMessage(emu.grasscutter.net.proto.AsterMidCampInfoOuterClass.AsterMidCampInfo.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          campList_ = java.util.Collections.unmodifiableList(campList_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.AsterMidDetailInfoOuterClass.internal_static_AsterMidDetailInfo_descriptor;
@@ -200,7 +265,7 @@ public final class AsterMidDetailInfoOuterClass {
       for (int i = 0; i < campList_.size(); i++) {
         output.writeMessage(15, campList_.get(i));
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -225,7 +290,7 @@ public final class AsterMidDetailInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(15, campList_.get(i));
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -248,7 +313,7 @@ public final class AsterMidDetailInfoOuterClass {
           != other.getIsOpen()) return false;
       if (!getCampListList()
           .equals(other.getCampListList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -270,7 +335,7 @@ public final class AsterMidDetailInfoOuterClass {
         hash = (37 * hash) + CAMP_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getCampListList().hashCode();
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -387,13 +452,19 @@ public final class AsterMidDetailInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.AsterMidDetailInfoOuterClass.AsterMidDetailInfo.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getCampListFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -406,11 +477,10 @@ public final class AsterMidDetailInfoOuterClass {
 
         if (campListBuilder_ == null) {
           campList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
-          campList_ = null;
           campListBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -533,7 +603,7 @@ public final class AsterMidDetailInfoOuterClass {
             }
           }
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -548,58 +618,17 @@ public final class AsterMidDetailInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.AsterMidDetailInfoOuterClass.AsterMidDetailInfo parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                beginTime_ = input.readUInt32();
-
-                break;
-              } // case 8
-              case 64: {
-                collectCount_ = input.readUInt32();
-
-                break;
-              } // case 64
-              case 104: {
-                isOpen_ = input.readBool();
-
-                break;
-              } // case 104
-              case 122: {
-                emu.grasscutter.net.proto.AsterMidCampInfoOuterClass.AsterMidCampInfo m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.AsterMidCampInfoOuterClass.AsterMidCampInfo.parser(),
-                        extensionRegistry);
-                if (campListBuilder_ == null) {
-                  ensureCampListIsMutable();
-                  campList_.add(m);
-                } else {
-                  campListBuilder_.addMessage(m);
-                }
-                break;
-              } // case 122
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.AsterMidDetailInfoOuterClass.AsterMidDetailInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -969,18 +998,7 @@ public final class AsterMidDetailInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new AsterMidDetailInfo(input, extensionRegistry);
       }
     };
 

@@ -156,6 +156,102 @@ public final class FishBattleEndRspOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private FishBattleEndRsp(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                oICHDIANAEE_ = new java.util.ArrayList<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              oICHDIANAEE_.add(
+                  input.readMessage(emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.parser(), extensionRegistry));
+              break;
+            }
+            case 16: {
+
+              retcode_ = input.readInt32();
+              break;
+            }
+            case 26: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                rewardItemList_ = new java.util.ArrayList<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              rewardItemList_.add(
+                  input.readMessage(emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.parser(), extensionRegistry));
+              break;
+            }
+            case 48: {
+              int rawValue = input.readEnum();
+
+              noRewardReason_ = rawValue;
+              break;
+            }
+            case 56: {
+              int rawValue = input.readEnum();
+
+              battleResult_ = rawValue;
+              break;
+            }
+            case 88: {
+
+              isGotReward_ = input.readBool();
+              break;
+            }
+            case 98: {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                lEPOMLNOAPK_ = new java.util.ArrayList<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam>();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              lEPOMLNOAPK_.add(
+                  input.readMessage(emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          oICHDIANAEE_ = java.util.Collections.unmodifiableList(oICHDIANAEE_);
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          rewardItemList_ = java.util.Collections.unmodifiableList(rewardItemList_);
+        }
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
+          lEPOMLNOAPK_ = java.util.Collections.unmodifiableList(lEPOMLNOAPK_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.FishBattleEndRspOuterClass.internal_static_FishBattleEndRsp_descriptor;
@@ -384,7 +480,7 @@ public final class FishBattleEndRspOuterClass {
       for (int i = 0; i < lEPOMLNOAPK_.size(); i++) {
         output.writeMessage(12, lEPOMLNOAPK_.get(i));
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -421,7 +517,7 @@ public final class FishBattleEndRspOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(12, lEPOMLNOAPK_.get(i));
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -448,7 +544,7 @@ public final class FishBattleEndRspOuterClass {
           != other.getIsGotReward()) return false;
       if (!getLEPOMLNOAPKList()
           .equals(other.getLEPOMLNOAPKList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -480,7 +576,7 @@ public final class FishBattleEndRspOuterClass {
         hash = (37 * hash) + LEPOMLNOAPK_FIELD_NUMBER;
         hash = (53 * hash) + getLEPOMLNOAPKList().hashCode();
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -597,33 +693,39 @@ public final class FishBattleEndRspOuterClass {
 
       // Construct using emu.grasscutter.net.proto.FishBattleEndRspOuterClass.FishBattleEndRsp.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getOICHDIANAEEFieldBuilder();
+          getRewardItemListFieldBuilder();
+          getLEPOMLNOAPKFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
         if (oICHDIANAEEBuilder_ == null) {
           oICHDIANAEE_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
-          oICHDIANAEE_ = null;
           oICHDIANAEEBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000001);
         retcode_ = 0;
 
         if (rewardItemListBuilder_ == null) {
           rewardItemList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
-          rewardItemList_ = null;
           rewardItemListBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000002);
         noRewardReason_ = 0;
 
         battleResult_ = 0;
@@ -632,11 +734,10 @@ public final class FishBattleEndRspOuterClass {
 
         if (lEPOMLNOAPKBuilder_ == null) {
           lEPOMLNOAPK_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
         } else {
-          lEPOMLNOAPK_ = null;
           lEPOMLNOAPKBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
 
@@ -833,7 +934,7 @@ public final class FishBattleEndRspOuterClass {
             }
           }
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -848,89 +949,17 @@ public final class FishBattleEndRspOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.FishBattleEndRspOuterClass.FishBattleEndRsp parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.parser(),
-                        extensionRegistry);
-                if (oICHDIANAEEBuilder_ == null) {
-                  ensureOICHDIANAEEIsMutable();
-                  oICHDIANAEE_.add(m);
-                } else {
-                  oICHDIANAEEBuilder_.addMessage(m);
-                }
-                break;
-              } // case 10
-              case 16: {
-                retcode_ = input.readInt32();
-
-                break;
-              } // case 16
-              case 26: {
-                emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.parser(),
-                        extensionRegistry);
-                if (rewardItemListBuilder_ == null) {
-                  ensureRewardItemListIsMutable();
-                  rewardItemList_.add(m);
-                } else {
-                  rewardItemListBuilder_.addMessage(m);
-                }
-                break;
-              } // case 26
-              case 48: {
-                noRewardReason_ = input.readEnum();
-
-                break;
-              } // case 48
-              case 56: {
-                battleResult_ = input.readEnum();
-
-                break;
-              } // case 56
-              case 88: {
-                isGotReward_ = input.readBool();
-
-                break;
-              } // case 88
-              case 98: {
-                emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.parser(),
-                        extensionRegistry);
-                if (lEPOMLNOAPKBuilder_ == null) {
-                  ensureLEPOMLNOAPKIsMutable();
-                  lEPOMLNOAPK_.add(m);
-                } else {
-                  lEPOMLNOAPKBuilder_.addMessage(m);
-                }
-                break;
-              } // case 98
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.FishBattleEndRspOuterClass.FishBattleEndRsp) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -1857,18 +1886,7 @@ public final class FishBattleEndRspOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new FishBattleEndRsp(input, extensionRegistry);
       }
     };
 

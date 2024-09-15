@@ -80,6 +80,61 @@ public final class PlayerRechargeDataNotifyOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private PlayerRechargeDataNotify(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 50: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                productPriceTierList_ = new java.util.ArrayList<emu.grasscutter.net.proto.ProductPriceTierOuterClass.ProductPriceTier>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              productPriceTierList_.add(
+                  input.readMessage(emu.grasscutter.net.proto.ProductPriceTierOuterClass.ProductPriceTier.parser(), extensionRegistry));
+              break;
+            }
+            case 72: {
+
+              cardProductRemainDays_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          productPriceTierList_ = java.util.Collections.unmodifiableList(productPriceTierList_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.PlayerRechargeDataNotifyOuterClass.internal_static_PlayerRechargeDataNotify_descriptor;
@@ -164,7 +219,7 @@ public final class PlayerRechargeDataNotifyOuterClass {
       if (cardProductRemainDays_ != 0) {
         output.writeUInt32(9, cardProductRemainDays_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -181,7 +236,7 @@ public final class PlayerRechargeDataNotifyOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(9, cardProductRemainDays_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -200,7 +255,7 @@ public final class PlayerRechargeDataNotifyOuterClass {
           .equals(other.getProductPriceTierListList())) return false;
       if (getCardProductRemainDays()
           != other.getCardProductRemainDays()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -217,7 +272,7 @@ public final class PlayerRechargeDataNotifyOuterClass {
       }
       hash = (37 * hash) + CARD_PRODUCT_REMAIN_DAYS_FIELD_NUMBER;
       hash = (53 * hash) + getCardProductRemainDays();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -338,24 +393,29 @@ public final class PlayerRechargeDataNotifyOuterClass {
 
       // Construct using emu.grasscutter.net.proto.PlayerRechargeDataNotifyOuterClass.PlayerRechargeDataNotify.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getProductPriceTierListFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
         if (productPriceTierListBuilder_ == null) {
           productPriceTierList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
-          productPriceTierList_ = null;
           productPriceTierListBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000001);
         cardProductRemainDays_ = 0;
 
         return this;
@@ -472,7 +532,7 @@ public final class PlayerRechargeDataNotifyOuterClass {
         if (other.getCardProductRemainDays() != 0) {
           setCardProductRemainDays(other.getCardProductRemainDays());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -487,48 +547,17 @@ public final class PlayerRechargeDataNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.PlayerRechargeDataNotifyOuterClass.PlayerRechargeDataNotify parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 50: {
-                emu.grasscutter.net.proto.ProductPriceTierOuterClass.ProductPriceTier m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.ProductPriceTierOuterClass.ProductPriceTier.parser(),
-                        extensionRegistry);
-                if (productPriceTierListBuilder_ == null) {
-                  ensureProductPriceTierListIsMutable();
-                  productPriceTierList_.add(m);
-                } else {
-                  productPriceTierListBuilder_.addMessage(m);
-                }
-                break;
-              } // case 50
-              case 72: {
-                cardProductRemainDays_ = input.readUInt32();
-
-                break;
-              } // case 72
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.PlayerRechargeDataNotifyOuterClass.PlayerRechargeDataNotify) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -836,18 +865,7 @@ public final class PlayerRechargeDataNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new PlayerRechargeDataNotify(input, extensionRegistry);
       }
     };
 

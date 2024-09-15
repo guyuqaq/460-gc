@@ -70,6 +70,56 @@ public final class SceneEntitiesMovesRspOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private SceneEntitiesMovesRsp(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 50: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                entityMoveFailInfoList_ = new java.util.ArrayList<emu.grasscutter.net.proto.EntityMoveFailInfoOuterClass.EntityMoveFailInfo>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              entityMoveFailInfoList_.add(
+                  input.readMessage(emu.grasscutter.net.proto.EntityMoveFailInfoOuterClass.EntityMoveFailInfo.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          entityMoveFailInfoList_ = java.util.Collections.unmodifiableList(entityMoveFailInfoList_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.SceneEntitiesMovesRspOuterClass.internal_static_SceneEntitiesMovesRsp_descriptor;
@@ -140,7 +190,7 @@ public final class SceneEntitiesMovesRspOuterClass {
       for (int i = 0; i < entityMoveFailInfoList_.size(); i++) {
         output.writeMessage(6, entityMoveFailInfoList_.get(i));
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -153,7 +203,7 @@ public final class SceneEntitiesMovesRspOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, entityMoveFailInfoList_.get(i));
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -170,7 +220,7 @@ public final class SceneEntitiesMovesRspOuterClass {
 
       if (!getEntityMoveFailInfoListList()
           .equals(other.getEntityMoveFailInfoListList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -185,7 +235,7 @@ public final class SceneEntitiesMovesRspOuterClass {
         hash = (37 * hash) + ENTITY_MOVE_FAIL_INFO_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getEntityMoveFailInfoListList().hashCode();
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -302,24 +352,29 @@ public final class SceneEntitiesMovesRspOuterClass {
 
       // Construct using emu.grasscutter.net.proto.SceneEntitiesMovesRspOuterClass.SceneEntitiesMovesRsp.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getEntityMoveFailInfoListFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
         if (entityMoveFailInfoListBuilder_ == null) {
           entityMoveFailInfoList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
-          entityMoveFailInfoList_ = null;
           entityMoveFailInfoListBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -430,7 +485,7 @@ public final class SceneEntitiesMovesRspOuterClass {
             }
           }
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -445,43 +500,17 @@ public final class SceneEntitiesMovesRspOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.SceneEntitiesMovesRspOuterClass.SceneEntitiesMovesRsp parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 50: {
-                emu.grasscutter.net.proto.EntityMoveFailInfoOuterClass.EntityMoveFailInfo m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.EntityMoveFailInfoOuterClass.EntityMoveFailInfo.parser(),
-                        extensionRegistry);
-                if (entityMoveFailInfoListBuilder_ == null) {
-                  ensureEntityMoveFailInfoListIsMutable();
-                  entityMoveFailInfoList_.add(m);
-                } else {
-                  entityMoveFailInfoListBuilder_.addMessage(m);
-                }
-                break;
-              } // case 50
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.SceneEntitiesMovesRspOuterClass.SceneEntitiesMovesRsp) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -758,18 +787,7 @@ public final class SceneEntitiesMovesRspOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new SceneEntitiesMovesRsp(input, extensionRegistry);
       }
     };
 

@@ -189,6 +189,123 @@ public final class MainCoopOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private MainCoop(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                eIAEIMKELEJ_ = com.google.protobuf.MapField.newMapField(
+                    EIAEIMKELEJDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
+              eIAEIMKELEJ__ = input.readMessage(
+                  EIAEIMKELEJDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              eIAEIMKELEJ_.getMutableMap().put(
+                  eIAEIMKELEJ__.getKey(), eIAEIMKELEJ__.getValue());
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                seenEndingMap_ = com.google.protobuf.MapField.newMapField(
+                    SeenEndingMapDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000002;
+              }
+              com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
+              seenEndingMap__ = input.readMessage(
+                  SeenEndingMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              seenEndingMap_.getMutableMap().put(
+                  seenEndingMap__.getKey(), seenEndingMap__.getValue());
+              break;
+            }
+            case 34: {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                gBHMAGADALJ_ = com.google.protobuf.MapField.newMapField(
+                    GBHMAGADALJDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000004;
+              }
+              com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
+              gBHMAGADALJ__ = input.readMessage(
+                  GBHMAGADALJDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              gBHMAGADALJ_.getMutableMap().put(
+                  gBHMAGADALJ__.getKey(), gBHMAGADALJ__.getValue());
+              break;
+            }
+            case 48: {
+
+              id_ = input.readUInt32();
+              break;
+            }
+            case 72: {
+
+              selfConfidence_ = input.readUInt32();
+              break;
+            }
+            case 88: {
+              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
+                savePointIdList_ = newIntList();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              savePointIdList_.addInt(input.readUInt32());
+              break;
+            }
+            case 90: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000008) != 0) && input.getBytesUntilLimit() > 0) {
+                savePointIdList_ = newIntList();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                savePointIdList_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 112: {
+              int rawValue = input.readEnum();
+
+              status_ = rawValue;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000008) != 0)) {
+          savePointIdList_.makeImmutable(); // C
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.MainCoopOuterClass.internal_static_MainCoop_descriptor;
@@ -696,7 +813,7 @@ public final class MainCoopOuterClass {
       if (status_ != emu.grasscutter.net.proto.MainCoopOuterClass.MainCoop.Status.INVALID.getNumber()) {
         output.writeEnum(14, status_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -761,7 +878,7 @@ public final class MainCoopOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(14, status_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -789,7 +906,7 @@ public final class MainCoopOuterClass {
       if (!getSavePointIdListList()
           .equals(other.getSavePointIdListList())) return false;
       if (status_ != other.status_) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -822,7 +939,7 @@ public final class MainCoopOuterClass {
       }
       hash = (37 * hash) + STATUS_FIELD_NUMBER;
       hash = (53 * hash) + status_;
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -969,13 +1086,18 @@ public final class MainCoopOuterClass {
 
       // Construct using emu.grasscutter.net.proto.MainCoopOuterClass.MainCoop.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1105,7 +1227,7 @@ public final class MainCoopOuterClass {
         if (other.status_ != 0) {
           setStatusValue(other.getStatusValue());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -1120,85 +1242,17 @@ public final class MainCoopOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.MainCoopOuterClass.MainCoop parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
-                eIAEIMKELEJ__ = input.readMessage(
-                    EIAEIMKELEJDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-                internalGetMutableEIAEIMKELEJ().getMutableMap().put(
-                    eIAEIMKELEJ__.getKey(), eIAEIMKELEJ__.getValue());
-                break;
-              } // case 10
-              case 18: {
-                com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
-                seenEndingMap__ = input.readMessage(
-                    SeenEndingMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-                internalGetMutableSeenEndingMap().getMutableMap().put(
-                    seenEndingMap__.getKey(), seenEndingMap__.getValue());
-                break;
-              } // case 18
-              case 34: {
-                com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
-                gBHMAGADALJ__ = input.readMessage(
-                    GBHMAGADALJDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-                internalGetMutableGBHMAGADALJ().getMutableMap().put(
-                    gBHMAGADALJ__.getKey(), gBHMAGADALJ__.getValue());
-                break;
-              } // case 34
-              case 48: {
-                id_ = input.readUInt32();
-
-                break;
-              } // case 48
-              case 72: {
-                selfConfidence_ = input.readUInt32();
-
-                break;
-              } // case 72
-              case 88: {
-                int v = input.readUInt32();
-                ensureSavePointIdListIsMutable();
-                savePointIdList_.addInt(v);
-                break;
-              } // case 88
-              case 90: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureSavePointIdListIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  savePointIdList_.addInt(input.readUInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 90
-              case 112: {
-                status_ = input.readEnum();
-
-                break;
-              } // case 112
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.MainCoopOuterClass.MainCoop) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -1814,18 +1868,7 @@ public final class MainCoopOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new MainCoop(input, extensionRegistry);
       }
     };
 

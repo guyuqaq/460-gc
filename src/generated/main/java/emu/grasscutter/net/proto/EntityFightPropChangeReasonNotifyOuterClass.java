@@ -154,6 +154,125 @@ public final class EntityFightPropChangeReasonNotifyOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private EntityFightPropChangeReasonNotify(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              emu.grasscutter.net.proto.PBDPJNCFEOFOuterClass.PBDPJNCFEOF.Builder subBuilder = null;
+              if (detailInfo_ != null) {
+                subBuilder = detailInfo_.toBuilder();
+              }
+              detailInfo_ = input.readMessage(emu.grasscutter.net.proto.PBDPJNCFEOFOuterClass.PBDPJNCFEOF.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(detailInfo_);
+                detailInfo_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 16: {
+
+              entityId_ = input.readUInt32();
+              break;
+            }
+            case 24: {
+              int rawValue = input.readEnum();
+
+              reason_ = rawValue;
+              break;
+            }
+            case 56: {
+              int rawValue = input.readEnum();
+
+              changeHpDebtsReason_ = rawValue;
+              break;
+            }
+            case 64: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                paramList_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              paramList_.addInt(input.readUInt32());
+              break;
+            }
+            case 66: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
+                paramList_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                paramList_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 85: {
+
+              propDelta_ = input.readFloat();
+              break;
+            }
+            case 88: {
+
+              propType_ = input.readUInt32();
+              break;
+            }
+            case 101: {
+
+              propAbs_ = input.readFloat();
+              break;
+            }
+            case 104: {
+              int rawValue = input.readEnum();
+
+              changeHpReason_ = rawValue;
+              break;
+            }
+            case 120: {
+              int rawValue = input.readEnum();
+
+              changeEnergyReason_ = rawValue;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          paramList_.makeImmutable(); // C
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.EntityFightPropChangeReasonNotifyOuterClass.internal_static_EntityFightPropChangeReasonNotify_descriptor;
@@ -375,13 +494,13 @@ public final class EntityFightPropChangeReasonNotifyOuterClass {
       for (int i = 0; i < paramList_.size(); i++) {
         output.writeUInt32NoTag(paramList_.getInt(i));
       }
-      if (java.lang.Float.floatToRawIntBits(propDelta_) != 0) {
+      if (propDelta_ != 0F) {
         output.writeFloat(10, propDelta_);
       }
       if (propType_ != 0) {
         output.writeUInt32(11, propType_);
       }
-      if (java.lang.Float.floatToRawIntBits(propAbs_) != 0) {
+      if (propAbs_ != 0F) {
         output.writeFloat(12, propAbs_);
       }
       if (changeHpReason_ != emu.grasscutter.net.proto.ChangeHpReasonOuterClass.ChangeHpReason.CHANGE_HP_REASON_NONE.getNumber()) {
@@ -390,7 +509,7 @@ public final class EntityFightPropChangeReasonNotifyOuterClass {
       if (changeEnergyReason_ != emu.grasscutter.net.proto.ChangeEnergyReasonOuterClass.ChangeEnergyReason.CHANGE_ENERGY_REASON_NONE.getNumber()) {
         output.writeEnum(15, changeEnergyReason_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -429,7 +548,7 @@ public final class EntityFightPropChangeReasonNotifyOuterClass {
         }
         paramListMemoizedSerializedSize = dataSize;
       }
-      if (java.lang.Float.floatToRawIntBits(propDelta_) != 0) {
+      if (propDelta_ != 0F) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(10, propDelta_);
       }
@@ -437,7 +556,7 @@ public final class EntityFightPropChangeReasonNotifyOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(11, propType_);
       }
-      if (java.lang.Float.floatToRawIntBits(propAbs_) != 0) {
+      if (propAbs_ != 0F) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(12, propAbs_);
       }
@@ -449,7 +568,7 @@ public final class EntityFightPropChangeReasonNotifyOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(15, changeEnergyReason_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -485,7 +604,7 @@ public final class EntityFightPropChangeReasonNotifyOuterClass {
               other.getPropAbs())) return false;
       if (changeHpReason_ != other.changeHpReason_) return false;
       if (changeEnergyReason_ != other.changeEnergyReason_) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -522,7 +641,7 @@ public final class EntityFightPropChangeReasonNotifyOuterClass {
       hash = (53 * hash) + changeHpReason_;
       hash = (37 * hash) + CHANGE_ENERGY_REASON_FIELD_NUMBER;
       hash = (53 * hash) + changeEnergyReason_;
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -643,13 +762,18 @@ public final class EntityFightPropChangeReasonNotifyOuterClass {
 
       // Construct using emu.grasscutter.net.proto.EntityFightPropChangeReasonNotifyOuterClass.EntityFightPropChangeReasonNotify.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -808,7 +932,7 @@ public final class EntityFightPropChangeReasonNotifyOuterClass {
         if (other.changeEnergyReason_ != 0) {
           setChangeEnergyReasonValue(other.getChangeEnergyReasonValue());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -823,93 +947,17 @@ public final class EntityFightPropChangeReasonNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.EntityFightPropChangeReasonNotifyOuterClass.EntityFightPropChangeReasonNotify parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                input.readMessage(
-                    getDetailInfoFieldBuilder().getBuilder(),
-                    extensionRegistry);
-
-                break;
-              } // case 10
-              case 16: {
-                entityId_ = input.readUInt32();
-
-                break;
-              } // case 16
-              case 24: {
-                reason_ = input.readEnum();
-
-                break;
-              } // case 24
-              case 56: {
-                changeHpDebtsReason_ = input.readEnum();
-
-                break;
-              } // case 56
-              case 64: {
-                int v = input.readUInt32();
-                ensureParamListIsMutable();
-                paramList_.addInt(v);
-                break;
-              } // case 64
-              case 66: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureParamListIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  paramList_.addInt(input.readUInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 66
-              case 85: {
-                propDelta_ = input.readFloat();
-
-                break;
-              } // case 85
-              case 88: {
-                propType_ = input.readUInt32();
-
-                break;
-              } // case 88
-              case 101: {
-                propAbs_ = input.readFloat();
-
-                break;
-              } // case 101
-              case 104: {
-                changeHpReason_ = input.readEnum();
-
-                break;
-              } // case 104
-              case 120: {
-                changeEnergyReason_ = input.readEnum();
-
-                break;
-              } // case 120
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.EntityFightPropChangeReasonNotifyOuterClass.EntityFightPropChangeReasonNotify) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -1484,18 +1532,7 @@ public final class EntityFightPropChangeReasonNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new EntityFightPropChangeReasonNotify(input, extensionRegistry);
       }
     };
 

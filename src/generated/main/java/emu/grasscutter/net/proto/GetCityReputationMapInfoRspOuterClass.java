@@ -199,6 +199,232 @@ public final class GetCityReputationMapInfoRspOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private GetCityReputationMapInfoRsp(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              dJBPPBLKEGB_ = input.readBool();
+              break;
+            }
+            case 16: {
+
+              dOGDMGNBBOC_ = input.readBool();
+              break;
+            }
+            case 24: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                pEJNIFPFCFC_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              pEJNIFPFCFC_.addInt(input.readUInt32());
+              break;
+            }
+            case 26: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
+                pEJNIFPFCFC_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                pEJNIFPFCFC_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 32: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                lLKHPOOCCOJ_ = newIntList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              lLKHPOOCCOJ_.addInt(input.readUInt32());
+              break;
+            }
+            case 34: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000002) != 0) && input.getBytesUntilLimit() > 0) {
+                lLKHPOOCCOJ_ = newIntList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                lLKHPOOCCOJ_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 40: {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                bAFPIBOPILO_ = newIntList();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              bAFPIBOPILO_.addInt(input.readUInt32());
+              break;
+            }
+            case 42: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000004) != 0) && input.getBytesUntilLimit() > 0) {
+                bAFPIBOPILO_ = newIntList();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                bAFPIBOPILO_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 48: {
+              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
+                jDDPGPMPBFI_ = newIntList();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              jDDPGPMPBFI_.addInt(input.readUInt32());
+              break;
+            }
+            case 50: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000008) != 0) && input.getBytesUntilLimit() > 0) {
+                jDDPGPMPBFI_ = newIntList();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                jDDPGPMPBFI_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 56: {
+
+              retcode_ = input.readInt32();
+              break;
+            }
+            case 64: {
+              if (!((mutable_bitField0_ & 0x00000010) != 0)) {
+                iGIBBILCLJE_ = newIntList();
+                mutable_bitField0_ |= 0x00000010;
+              }
+              iGIBBILCLJE_.addInt(input.readUInt32());
+              break;
+            }
+            case 66: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000010) != 0) && input.getBytesUntilLimit() > 0) {
+                iGIBBILCLJE_ = newIntList();
+                mutable_bitField0_ |= 0x00000010;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                iGIBBILCLJE_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 88: {
+              if (!((mutable_bitField0_ & 0x00000020) != 0)) {
+                nGMJKIHMFAJ_ = newIntList();
+                mutable_bitField0_ |= 0x00000020;
+              }
+              nGMJKIHMFAJ_.addInt(input.readUInt32());
+              break;
+            }
+            case 90: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000020) != 0) && input.getBytesUntilLimit() > 0) {
+                nGMJKIHMFAJ_ = newIntList();
+                mutable_bitField0_ |= 0x00000020;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                nGMJKIHMFAJ_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 104: {
+              if (!((mutable_bitField0_ & 0x00000040) != 0)) {
+                eJGFNIJMAJC_ = newIntList();
+                mutable_bitField0_ |= 0x00000040;
+              }
+              eJGFNIJMAJC_.addInt(input.readUInt32());
+              break;
+            }
+            case 106: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000040) != 0) && input.getBytesUntilLimit() > 0) {
+                eJGFNIJMAJC_ = newIntList();
+                mutable_bitField0_ |= 0x00000040;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                eJGFNIJMAJC_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 112: {
+
+              pBLIMBGNNNB_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          pEJNIFPFCFC_.makeImmutable(); // C
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          lLKHPOOCCOJ_.makeImmutable(); // C
+        }
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
+          bAFPIBOPILO_.makeImmutable(); // C
+        }
+        if (((mutable_bitField0_ & 0x00000008) != 0)) {
+          jDDPGPMPBFI_.makeImmutable(); // C
+        }
+        if (((mutable_bitField0_ & 0x00000010) != 0)) {
+          iGIBBILCLJE_.makeImmutable(); // C
+        }
+        if (((mutable_bitField0_ & 0x00000020) != 0)) {
+          nGMJKIHMFAJ_.makeImmutable(); // C
+        }
+        if (((mutable_bitField0_ & 0x00000040) != 0)) {
+          eJGFNIJMAJC_.makeImmutable(); // C
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.GetCityReputationMapInfoRspOuterClass.internal_static_GetCityReputationMapInfoRsp_descriptor;
@@ -528,7 +754,7 @@ public final class GetCityReputationMapInfoRspOuterClass {
       if (pBLIMBGNNNB_ != false) {
         output.writeBool(14, pBLIMBGNNNB_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -651,7 +877,7 @@ public final class GetCityReputationMapInfoRspOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(14, pBLIMBGNNNB_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -688,7 +914,7 @@ public final class GetCityReputationMapInfoRspOuterClass {
           .equals(other.getEJGFNIJMAJCList())) return false;
       if (getPBLIMBGNNNB()
           != other.getPBLIMBGNNNB()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -738,7 +964,7 @@ public final class GetCityReputationMapInfoRspOuterClass {
       hash = (37 * hash) + PBLIMBGNNNB_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getPBLIMBGNNNB());
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -859,13 +1085,18 @@ public final class GetCityReputationMapInfoRspOuterClass {
 
       // Construct using emu.grasscutter.net.proto.GetCityReputationMapInfoRspOuterClass.GetCityReputationMapInfoRsp.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1088,7 +1319,7 @@ public final class GetCityReputationMapInfoRspOuterClass {
         if (other.getPBLIMBGNNNB() != false) {
           setPBLIMBGNNNB(other.getPBLIMBGNNNB());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -1103,162 +1334,17 @@ public final class GetCityReputationMapInfoRspOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.GetCityReputationMapInfoRspOuterClass.GetCityReputationMapInfoRsp parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                dJBPPBLKEGB_ = input.readBool();
-
-                break;
-              } // case 8
-              case 16: {
-                dOGDMGNBBOC_ = input.readBool();
-
-                break;
-              } // case 16
-              case 24: {
-                int v = input.readUInt32();
-                ensurePEJNIFPFCFCIsMutable();
-                pEJNIFPFCFC_.addInt(v);
-                break;
-              } // case 24
-              case 26: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensurePEJNIFPFCFCIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  pEJNIFPFCFC_.addInt(input.readUInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 26
-              case 32: {
-                int v = input.readUInt32();
-                ensureLLKHPOOCCOJIsMutable();
-                lLKHPOOCCOJ_.addInt(v);
-                break;
-              } // case 32
-              case 34: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureLLKHPOOCCOJIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  lLKHPOOCCOJ_.addInt(input.readUInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 34
-              case 40: {
-                int v = input.readUInt32();
-                ensureBAFPIBOPILOIsMutable();
-                bAFPIBOPILO_.addInt(v);
-                break;
-              } // case 40
-              case 42: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureBAFPIBOPILOIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  bAFPIBOPILO_.addInt(input.readUInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 42
-              case 48: {
-                int v = input.readUInt32();
-                ensureJDDPGPMPBFIIsMutable();
-                jDDPGPMPBFI_.addInt(v);
-                break;
-              } // case 48
-              case 50: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureJDDPGPMPBFIIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  jDDPGPMPBFI_.addInt(input.readUInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 50
-              case 56: {
-                retcode_ = input.readInt32();
-
-                break;
-              } // case 56
-              case 64: {
-                int v = input.readUInt32();
-                ensureIGIBBILCLJEIsMutable();
-                iGIBBILCLJE_.addInt(v);
-                break;
-              } // case 64
-              case 66: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureIGIBBILCLJEIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  iGIBBILCLJE_.addInt(input.readUInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 66
-              case 88: {
-                int v = input.readUInt32();
-                ensureNGMJKIHMFAJIsMutable();
-                nGMJKIHMFAJ_.addInt(v);
-                break;
-              } // case 88
-              case 90: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureNGMJKIHMFAJIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  nGMJKIHMFAJ_.addInt(input.readUInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 90
-              case 104: {
-                int v = input.readUInt32();
-                ensureEJGFNIJMAJCIsMutable();
-                eJGFNIJMAJC_.addInt(v);
-                break;
-              } // case 104
-              case 106: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureEJGFNIJMAJCIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  eJGFNIJMAJC_.addInt(input.readUInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 106
-              case 112: {
-                pBLIMBGNNNB_ = input.readBool();
-
-                break;
-              } // case 112
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.GetCityReputationMapInfoRspOuterClass.GetCityReputationMapInfoRsp) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -1972,18 +2058,7 @@ public final class GetCityReputationMapInfoRspOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new GetCityReputationMapInfoRsp(input, extensionRegistry);
       }
     };
 

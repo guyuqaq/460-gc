@@ -105,6 +105,90 @@ public final class CoopDataNotifyOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private CoopDataNotify(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 24: {
+
+              isHaveProgress_ = input.readBool();
+              break;
+            }
+            case 48: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                viewedChapterList_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              viewedChapterList_.addInt(input.readUInt32());
+              break;
+            }
+            case 50: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
+                viewedChapterList_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                viewedChapterList_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 66: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                chapterList_ = new java.util.ArrayList<emu.grasscutter.net.proto.CoopChapterOuterClass.CoopChapter>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              chapterList_.add(
+                  input.readMessage(emu.grasscutter.net.proto.CoopChapterOuterClass.CoopChapter.parser(), extensionRegistry));
+              break;
+            }
+            case 120: {
+
+              curCoopPoint_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          viewedChapterList_.makeImmutable(); // C
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          chapterList_ = java.util.Collections.unmodifiableList(chapterList_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.CoopDataNotifyOuterClass.internal_static_CoopDataNotify_descriptor;
@@ -239,7 +323,7 @@ public final class CoopDataNotifyOuterClass {
       if (curCoopPoint_ != 0) {
         output.writeUInt32(15, curCoopPoint_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -274,7 +358,7 @@ public final class CoopDataNotifyOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(15, curCoopPoint_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -297,7 +381,7 @@ public final class CoopDataNotifyOuterClass {
           .equals(other.getChapterListList())) return false;
       if (getCurCoopPoint()
           != other.getCurCoopPoint()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -321,7 +405,7 @@ public final class CoopDataNotifyOuterClass {
       }
       hash = (37 * hash) + CUR_COOP_POINT_FIELD_NUMBER;
       hash = (53 * hash) + getCurCoopPoint();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -443,13 +527,19 @@ public final class CoopDataNotifyOuterClass {
 
       // Construct using emu.grasscutter.net.proto.CoopDataNotifyOuterClass.CoopDataNotify.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getChapterListFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -460,11 +550,10 @@ public final class CoopDataNotifyOuterClass {
         bitField0_ = (bitField0_ & ~0x00000001);
         if (chapterListBuilder_ == null) {
           chapterList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
-          chapterList_ = null;
           chapterListBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000002);
         curCoopPoint_ = 0;
 
         return this;
@@ -600,7 +689,7 @@ public final class CoopDataNotifyOuterClass {
         if (other.getCurCoopPoint() != 0) {
           setCurCoopPoint(other.getCurCoopPoint());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -615,69 +704,17 @@ public final class CoopDataNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.CoopDataNotifyOuterClass.CoopDataNotify parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 24: {
-                isHaveProgress_ = input.readBool();
-
-                break;
-              } // case 24
-              case 48: {
-                int v = input.readUInt32();
-                ensureViewedChapterListIsMutable();
-                viewedChapterList_.addInt(v);
-                break;
-              } // case 48
-              case 50: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureViewedChapterListIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  viewedChapterList_.addInt(input.readUInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 50
-              case 66: {
-                emu.grasscutter.net.proto.CoopChapterOuterClass.CoopChapter m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.CoopChapterOuterClass.CoopChapter.parser(),
-                        extensionRegistry);
-                if (chapterListBuilder_ == null) {
-                  ensureChapterListIsMutable();
-                  chapterList_.add(m);
-                } else {
-                  chapterListBuilder_.addMessage(m);
-                }
-                break;
-              } // case 66
-              case 120: {
-                curCoopPoint_ = input.readUInt32();
-
-                break;
-              } // case 120
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.CoopDataNotifyOuterClass.CoopDataNotify) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -1095,18 +1132,7 @@ public final class CoopDataNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new CoopDataNotify(input, extensionRegistry);
       }
     };
 

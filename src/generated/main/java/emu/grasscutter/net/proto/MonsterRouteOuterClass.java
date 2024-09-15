@@ -100,6 +100,81 @@ public final class MonsterRouteOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private MonsterRoute(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                routePoints_ = new java.util.ArrayList<emu.grasscutter.net.proto.RoutePointOuterClass.RoutePoint>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              routePoints_.add(
+                  input.readMessage(emu.grasscutter.net.proto.RoutePointOuterClass.RoutePoint.parser(), extensionRegistry));
+              break;
+            }
+            case 16: {
+
+              speedLevel_ = input.readUInt32();
+              break;
+            }
+            case 24: {
+
+              routeType_ = input.readUInt32();
+              break;
+            }
+            case 37: {
+
+              arriveRange_ = input.readFloat();
+              break;
+            }
+            case 40: {
+
+              oFDFDKHNJGA_ = input.readBool();
+              break;
+            }
+            case 48: {
+
+              gPLDNOGEBDI_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          routePoints_ = java.util.Collections.unmodifiableList(routePoints_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.MonsterRouteOuterClass.internal_static_MonsterRoute_descriptor;
@@ -231,7 +306,7 @@ public final class MonsterRouteOuterClass {
       if (routeType_ != 0) {
         output.writeUInt32(3, routeType_);
       }
-      if (java.lang.Float.floatToRawIntBits(arriveRange_) != 0) {
+      if (arriveRange_ != 0F) {
         output.writeFloat(4, arriveRange_);
       }
       if (oFDFDKHNJGA_ != false) {
@@ -240,7 +315,7 @@ public final class MonsterRouteOuterClass {
       if (gPLDNOGEBDI_ != false) {
         output.writeBool(6, gPLDNOGEBDI_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -261,7 +336,7 @@ public final class MonsterRouteOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(3, routeType_);
       }
-      if (java.lang.Float.floatToRawIntBits(arriveRange_) != 0) {
+      if (arriveRange_ != 0F) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(4, arriveRange_);
       }
@@ -273,7 +348,7 @@ public final class MonsterRouteOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(6, gPLDNOGEBDI_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -301,7 +376,7 @@ public final class MonsterRouteOuterClass {
           != other.getOFDFDKHNJGA()) return false;
       if (getGPLDNOGEBDI()
           != other.getGPLDNOGEBDI()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -329,7 +404,7 @@ public final class MonsterRouteOuterClass {
       hash = (37 * hash) + GPLDNOGEBDI_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getGPLDNOGEBDI());
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -446,24 +521,29 @@ public final class MonsterRouteOuterClass {
 
       // Construct using emu.grasscutter.net.proto.MonsterRouteOuterClass.MonsterRoute.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getRoutePointsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
         if (routePointsBuilder_ == null) {
           routePoints_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
-          routePoints_ = null;
           routePointsBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000001);
         speedLevel_ = 0;
 
         routeType_ = 0;
@@ -604,7 +684,7 @@ public final class MonsterRouteOuterClass {
         if (other.getGPLDNOGEBDI() != false) {
           setGPLDNOGEBDI(other.getGPLDNOGEBDI());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -619,68 +699,17 @@ public final class MonsterRouteOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.MonsterRouteOuterClass.MonsterRoute parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                emu.grasscutter.net.proto.RoutePointOuterClass.RoutePoint m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.RoutePointOuterClass.RoutePoint.parser(),
-                        extensionRegistry);
-                if (routePointsBuilder_ == null) {
-                  ensureRoutePointsIsMutable();
-                  routePoints_.add(m);
-                } else {
-                  routePointsBuilder_.addMessage(m);
-                }
-                break;
-              } // case 10
-              case 16: {
-                speedLevel_ = input.readUInt32();
-
-                break;
-              } // case 16
-              case 24: {
-                routeType_ = input.readUInt32();
-
-                break;
-              } // case 24
-              case 37: {
-                arriveRange_ = input.readFloat();
-
-                break;
-              } // case 37
-              case 40: {
-                oFDFDKHNJGA_ = input.readBool();
-
-                break;
-              } // case 40
-              case 48: {
-                gPLDNOGEBDI_ = input.readBool();
-
-                break;
-              } // case 48
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.MonsterRouteOuterClass.MonsterRoute) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -1112,18 +1141,7 @@ public final class MonsterRouteOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new MonsterRoute(input, extensionRegistry);
       }
     };
 

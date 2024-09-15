@@ -103,6 +103,77 @@ public final class TreasureMapBonusChallengeInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private TreasureMapBonusChallengeInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 32: {
+
+              configId_ = input.readUInt32();
+              break;
+            }
+            case 72: {
+
+              isActive_ = input.readBool();
+              break;
+            }
+            case 96: {
+
+              isDone_ = input.readBool();
+              break;
+            }
+            case 106: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                fragmentMap_ = com.google.protobuf.MapField.newMapField(
+                    FragmentMapDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Boolean>
+              fragmentMap__ = input.readMessage(
+                  FragmentMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              fragmentMap_.getMutableMap().put(
+                  fragmentMap__.getKey(), fragmentMap__.getValue());
+              break;
+            }
+            case 120: {
+
+              solutionId_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.TreasureMapBonusChallengeInfoOuterClass.internal_static_TreasureMapBonusChallengeInfo_descriptor;
@@ -285,7 +356,7 @@ public final class TreasureMapBonusChallengeInfoOuterClass {
       if (solutionId_ != 0) {
         output.writeUInt32(15, solutionId_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -320,7 +391,7 @@ public final class TreasureMapBonusChallengeInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(15, solutionId_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -345,7 +416,7 @@ public final class TreasureMapBonusChallengeInfoOuterClass {
           other.internalGetFragmentMap())) return false;
       if (getSolutionId()
           != other.getSolutionId()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -370,7 +441,7 @@ public final class TreasureMapBonusChallengeInfoOuterClass {
       }
       hash = (37 * hash) + SOLUTION_ID_FIELD_NUMBER;
       hash = (53 * hash) + getSolutionId();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -509,13 +580,18 @@ public final class TreasureMapBonusChallengeInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.TreasureMapBonusChallengeInfoOuterClass.TreasureMapBonusChallengeInfo.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -624,7 +700,7 @@ public final class TreasureMapBonusChallengeInfoOuterClass {
         if (other.getSolutionId() != 0) {
           setSolutionId(other.getSolutionId());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -639,58 +715,17 @@ public final class TreasureMapBonusChallengeInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.TreasureMapBonusChallengeInfoOuterClass.TreasureMapBonusChallengeInfo parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 32: {
-                configId_ = input.readUInt32();
-
-                break;
-              } // case 32
-              case 72: {
-                isActive_ = input.readBool();
-
-                break;
-              } // case 72
-              case 96: {
-                isDone_ = input.readBool();
-
-                break;
-              } // case 96
-              case 106: {
-                com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Boolean>
-                fragmentMap__ = input.readMessage(
-                    FragmentMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-                internalGetMutableFragmentMap().getMutableMap().put(
-                    fragmentMap__.getKey(), fragmentMap__.getValue());
-                break;
-              } // case 106
-              case 120: {
-                solutionId_ = input.readUInt32();
-
-                break;
-              } // case 120
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.TreasureMapBonusChallengeInfoOuterClass.TreasureMapBonusChallengeInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -979,18 +1014,7 @@ public final class TreasureMapBonusChallengeInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new TreasureMapBonusChallengeInfo(input, extensionRegistry);
       }
     };
 

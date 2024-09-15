@@ -728,7 +728,6 @@ public final class PacketOpcodes {
 	public static final int TakeCityReputationLevelRewardRsp = 24356;
 	public static final int TakePlayerLevelRewardReq = 9556; 
 	public static final int PlayerLevelRewardUpdateNotify = 27750; 
-
 	public static final int GetCityReputationInfoReq = 23347;
 	public static final int GetCityReputationInfoRsp = 24488;
 	public static final int GetCityReputationMapInfoReq = 22557;
@@ -754,19 +753,36 @@ public final class PacketOpcodes {
 	public static final int TreasureMapRegionActiveNotify = 28662; // or 9476,28662
 	public static final int TreasureMapRegionInfoNotify = 4694;
 	public static final int TreasureSeelieCollectOrbsNotify = 25896; //or 25896,23140
-
-	public static final int EvtBeingHealedNotify = 26087;
-
 	public static final int RegionSearchChangeRegionNotify = 9937;
 	public static final int TakeRegionSearchRewardReq = 28104; // or 28104,3924
 	public static final int TakeRegionSearchRewardRsp = 21785; // or 21785,28114
+	public static final int LeaveSceneReq = 50028;
+	public static final int LeaveSceneRsp = 50029; // unknow cmdid 3060
+	public static final int EvtBeingHealedNotify = 26087;
+
+	// obfuscated
 	public static final int EntityAiKillSelfNotify = 1;
 	public static final int EvtBulletDeactiveNotify = 1;
 	public static final int EvtBulletMoveNotify = 1;
-	public static final int LeaveSceneReq = 50028;
-	public static final int LeaveSceneRsp = 50029; // unknow cmdid 3060
 	public static final int CancelCoopTaskReq = 1;
 	public static final int CancelCoopTaskRsp = 1;
+	public static final int UnlockCoopChapterReq = 1;
+	public static final int UnlockCoopChapterRsp = 1;
+	public static final int CoopCgShowNotify = 1;
+	public static final int CoopCgUpdateNotify = 1;
+	public static final int CoopPointUpdateNotify = 1;
+	public static final int CoopRewardUpdateNotify = 1;
+	public static final int FinishMainCoopReq = 1;
+	public static final int FinishMainCoopRsp = 1;
+	public static final int MainCoopFailNotify = 1;
+	public static final int MainCoopUpdateNotify = 1;
+	public static final int SaveCoopDialogReq = 1;
+	public static final int SaveCoopDialogRsp = 1;
+	public static final int SaveMainCoopReq = 1;
+	public static final int SaveMainCoopRsp = 1;
+	public static final int SetCoopChapterViewedReq = 1;
+	public static final int TakeCoopRewardReq = 1;
+	public static final int TakeCoopRewardRsp = 1;
 	public static final int CombineDataNotify = 1;
 	public static final int CreateMassiveEntityNotify = 1;
 	public static final int CreateMassiveEntityReq = 1;
@@ -787,8 +803,6 @@ public final class PacketOpcodes {
 	public static final int MarkEntityInMinMapNotify = 1;
 	public static final int UnmarkEntityInMinMapNotify = 1;
 	public static final int RefreshEntityAuthNotify = 1;
-
-	// obfuscated
 	public static final int FindHilichurlFinishSecondQuestNotify = 1;
 	public static final int ItemRenameAvatarRsp = 1;
 	public static final int TowerMiddleLevelChangeTeamNotify = 1;
@@ -875,7 +889,6 @@ public final class PacketOpcodes {
 	public static final int HomeChangeBgmRsp = 1;
 	public static final int HomeChangeModuleReq = 1;
 	public static final int HomeChangeModuleRsp = 1;
-
 	public static final int HomeNewUnlockedBgmIdListNotify = 1;
 	public static final int HomeResourceNotify = 1;
 	public static final int HomeResourceTakeFetterExpReq = 1;
@@ -986,7 +999,6 @@ public final class PacketOpcodes {
 	public static final int AkaFesRhythmFinishPlayRsp = 1;
 	public static final int AkaFesRhythmStartPlayReq = 1;
 	public static final int AkaFesRhythmStartPlayRsp = 1;
-	public static final int AllCoopInfoNotify = 1;
 	public static final int AllSeenMonsterNotify = 1;
 	public static final int AllShareCDDataNotify = 1;
 	public static final int AllWidgetBackgroundActiveStateNotify = 1;
@@ -1154,10 +1166,6 @@ public final class PacketOpcodes {
 	public static final int CoinCollectPrepareRsp = 1;
 	public static final int CoinCollectPrepareStageNotify = 1;
 	public static final int CommonPlayerTipsNotify = 1;
-	public static final int CoopCgShowNotify = 1;
-	public static final int CoopCgUpdateNotify = 1;
-	public static final int CoopPointUpdateNotify = 1;
-	public static final int CoopRewardUpdateNotify = 1;
 	public static final int CrystalLinkDungeonInfoNotify = 1;
 	public static final int CrystalLinkEnterDungeonReq = 1;
 	public static final int CrystalLinkEnterDungeonRsp = 1;
@@ -1340,8 +1348,6 @@ public final class PacketOpcodes {
 	public static final int FinishDeliveryNotify = 1;
 	public static final int FinishLanternProjectionReq = 1;
 	public static final int FinishLanternProjectionRsp = 1;
-	public static final int FinishMainCoopReq = 1;
-	public static final int FinishMainCoopRsp = 1;
 	public static final int FinishedTalkIdListNotify = 1;
 	public static final int FishAttractNotify = 1;
 	public static final int FishBaitGoneNotify = 1;
@@ -1821,8 +1827,6 @@ public final class PacketOpcodes {
 	public static final int LunaRiteSacrificeRsp = 1;
 	public static final int LunaRiteTakeSacrificeRewardReq = 1;
 	public static final int LunaRiteTakeSacrificeRewardRsp = 1;
-	public static final int MainCoopFailNotify = 1;
-	public static final int MainCoopUpdateNotify = 1;
 	public static final int MaterialDeleteReturnNotify = 1;
 	public static final int MaterialDeleteUpdateNotify = 1;
 	public static final int MechanicusCandidateTeamCreateReq = 1;
@@ -2102,12 +2106,8 @@ public final class PacketOpcodes {
 	public static final int SandwormCannonStartGalleryRsp = 1;
 	public static final int SaveAkaFesArchitectDungeonReq = 1;
 	public static final int SaveAkaFesArchitectDungeonRsp = 1;
-	public static final int SaveCoopDialogReq = 1;
-	public static final int SaveCoopDialogRsp = 1;
 	public static final int SaveCustomDungeonRoomReq = 1;
 	public static final int SaveCustomDungeonRoomRsp = 1;
-	public static final int SaveMainCoopReq = 1;
-	public static final int SaveMainCoopRsp = 1;
 	public static final int SaveUgcDungeonDataReq = 1;
 	public static final int SaveUgcDungeonDataRsp = 1;
 	public static final int SaveUgcDungeonDeploymentReq = 1;
@@ -2165,7 +2165,6 @@ public final class PacketOpcodes {
 	public static final int ServerTryCancelGeneralMatchNotify = 1;
 	public static final int SetCodexPushtipsReadReq = 1;
 	public static final int SetCodexPushtipsReadRsp = 1;
-	public static final int SetCoopChapterViewedReq = 1;
 	public static final int SetCurExpeditionChallengeIdReq = 1;
 	public static final int SetCurExpeditionChallengeIdRsp = 1;
 	public static final int SetH5ActivityRedDotTimestampReq = 1;
@@ -2247,8 +2246,6 @@ public final class PacketOpcodes {
 	public static final int SumoSwitchTeamRsp = 1;
 	public static final int TakeAsterSpecialRewardReq = 1;
 	public static final int TakeAsterSpecialRewardRsp = 1;
-	public static final int TakeCoopRewardReq = 1;
-	public static final int TakeCoopRewardRsp = 1;
 	public static final int TakeDeliveryDailyRewardReq = 1;
 	public static final int TakeDeliveryDailyRewardRsp = 1;
 	public static final int TakeEffigyFirstPassRewardReq = 1;
@@ -2361,8 +2358,6 @@ public final class PacketOpcodes {
 	public static final int UgcShopGadgetInfoNotify = 1;
 	public static final int UgcTowerBoughtSuccNotify = 1;
 	public static final int UgcTowerLevelUpNotify = 1;
-	public static final int UnlockCoopChapterReq = 1;
-	public static final int UnlockCoopChapterRsp = 1;
 	public static final int UpdatePS4BlockListReq = 1;
 	public static final int UpdatePS4BlockListRsp = 1;
 	public static final int UpdatePS4FriendListNotify = 1;

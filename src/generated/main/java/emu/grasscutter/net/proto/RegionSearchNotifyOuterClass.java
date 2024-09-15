@@ -76,6 +76,61 @@ public final class RegionSearchNotifyOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private RegionSearchNotify(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 40: {
+
+              uid_ = input.readUInt32();
+              break;
+            }
+            case 114: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                regionSearchList_ = new java.util.ArrayList<emu.grasscutter.net.proto.RegionSearchInfoOuterClass.RegionSearchInfo>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              regionSearchList_.add(
+                  input.readMessage(emu.grasscutter.net.proto.RegionSearchInfoOuterClass.RegionSearchInfo.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          regionSearchList_ = java.util.Collections.unmodifiableList(regionSearchList_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.RegionSearchNotifyOuterClass.internal_static_RegionSearchNotify_descriptor;
@@ -160,7 +215,7 @@ public final class RegionSearchNotifyOuterClass {
       for (int i = 0; i < regionSearchList_.size(); i++) {
         output.writeMessage(14, regionSearchList_.get(i));
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -177,7 +232,7 @@ public final class RegionSearchNotifyOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(14, regionSearchList_.get(i));
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -196,7 +251,7 @@ public final class RegionSearchNotifyOuterClass {
           != other.getUid()) return false;
       if (!getRegionSearchListList()
           .equals(other.getRegionSearchListList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -213,7 +268,7 @@ public final class RegionSearchNotifyOuterClass {
         hash = (37 * hash) + REGION_SEARCH_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getRegionSearchListList().hashCode();
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -330,13 +385,19 @@ public final class RegionSearchNotifyOuterClass {
 
       // Construct using emu.grasscutter.net.proto.RegionSearchNotifyOuterClass.RegionSearchNotify.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getRegionSearchListFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -345,11 +406,10 @@ public final class RegionSearchNotifyOuterClass {
 
         if (regionSearchListBuilder_ == null) {
           regionSearchList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
-          regionSearchList_ = null;
           regionSearchListBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -464,7 +524,7 @@ public final class RegionSearchNotifyOuterClass {
             }
           }
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -479,48 +539,17 @@ public final class RegionSearchNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.RegionSearchNotifyOuterClass.RegionSearchNotify parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 40: {
-                uid_ = input.readUInt32();
-
-                break;
-              } // case 40
-              case 114: {
-                emu.grasscutter.net.proto.RegionSearchInfoOuterClass.RegionSearchInfo m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.RegionSearchInfoOuterClass.RegionSearchInfo.parser(),
-                        extensionRegistry);
-                if (regionSearchListBuilder_ == null) {
-                  ensureRegionSearchListIsMutable();
-                  regionSearchList_.add(m);
-                } else {
-                  regionSearchListBuilder_.addMessage(m);
-                }
-                break;
-              } // case 114
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.RegionSearchNotifyOuterClass.RegionSearchNotify) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -828,18 +857,7 @@ public final class RegionSearchNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new RegionSearchNotify(input, extensionRegistry);
       }
     };
 

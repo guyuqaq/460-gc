@@ -122,6 +122,91 @@ public final class GachaItemOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private GachaItem(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder subBuilder = null;
+              if (gachaItem_ != null) {
+                subBuilder = gachaItem_.toBuilder();
+              }
+              gachaItem_ = input.readMessage(emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(gachaItem_);
+                gachaItem_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 32: {
+
+              isFlashCard_ = input.readBool();
+              break;
+            }
+            case 64: {
+
+              isGachaItemNew_ = input.readBool();
+              break;
+            }
+            case 114: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                tokenItemList_ = new java.util.ArrayList<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              tokenItemList_.add(
+                  input.readMessage(emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.parser(), extensionRegistry));
+              break;
+            }
+            case 122: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                transferItems_ = new java.util.ArrayList<emu.grasscutter.net.proto.GachaTransferItemOuterClass.GachaTransferItem>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              transferItems_.add(
+                  input.readMessage(emu.grasscutter.net.proto.GachaTransferItemOuterClass.GachaTransferItem.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          tokenItemList_ = java.util.Collections.unmodifiableList(tokenItemList_);
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          transferItems_ = java.util.Collections.unmodifiableList(transferItems_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.GachaItemOuterClass.internal_static_GachaItem_descriptor;
@@ -292,7 +377,7 @@ public final class GachaItemOuterClass {
       for (int i = 0; i < transferItems_.size(); i++) {
         output.writeMessage(15, transferItems_.get(i));
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -321,7 +406,7 @@ public final class GachaItemOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(15, transferItems_.get(i));
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -349,7 +434,7 @@ public final class GachaItemOuterClass {
           .equals(other.getTokenItemListList())) return false;
       if (!getTransferItemsList()
           .equals(other.getTransferItemsList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -378,7 +463,7 @@ public final class GachaItemOuterClass {
         hash = (37 * hash) + TRANSFER_ITEMS_FIELD_NUMBER;
         hash = (53 * hash) + getTransferItemsList().hashCode();
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -495,13 +580,20 @@ public final class GachaItemOuterClass {
 
       // Construct using emu.grasscutter.net.proto.GachaItemOuterClass.GachaItem.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getTokenItemListFieldBuilder();
+          getTransferItemsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -518,18 +610,16 @@ public final class GachaItemOuterClass {
 
         if (tokenItemListBuilder_ == null) {
           tokenItemList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
-          tokenItemList_ = null;
           tokenItemListBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000001);
         if (transferItemsBuilder_ == null) {
           transferItems_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
-          transferItems_ = null;
           transferItemsBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -691,7 +781,7 @@ public final class GachaItemOuterClass {
             }
           }
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -706,73 +796,17 @@ public final class GachaItemOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.GachaItemOuterClass.GachaItem parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                input.readMessage(
-                    getGachaItemFieldBuilder().getBuilder(),
-                    extensionRegistry);
-
-                break;
-              } // case 10
-              case 32: {
-                isFlashCard_ = input.readBool();
-
-                break;
-              } // case 32
-              case 64: {
-                isGachaItemNew_ = input.readBool();
-
-                break;
-              } // case 64
-              case 114: {
-                emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.parser(),
-                        extensionRegistry);
-                if (tokenItemListBuilder_ == null) {
-                  ensureTokenItemListIsMutable();
-                  tokenItemList_.add(m);
-                } else {
-                  tokenItemListBuilder_.addMessage(m);
-                }
-                break;
-              } // case 114
-              case 122: {
-                emu.grasscutter.net.proto.GachaTransferItemOuterClass.GachaTransferItem m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.GachaTransferItemOuterClass.GachaTransferItem.parser(),
-                        extensionRegistry);
-                if (transferItemsBuilder_ == null) {
-                  ensureTransferItemsIsMutable();
-                  transferItems_.add(m);
-                } else {
-                  transferItemsBuilder_.addMessage(m);
-                }
-                break;
-              } // case 122
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.GachaItemOuterClass.GachaItem) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -1470,18 +1504,7 @@ public final class GachaItemOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new GachaItem(input, extensionRegistry);
       }
     };
 

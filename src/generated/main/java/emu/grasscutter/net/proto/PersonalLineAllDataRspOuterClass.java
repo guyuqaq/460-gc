@@ -183,6 +183,143 @@ public final class PersonalLineAllDataRspOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private PersonalLineAllDataRsp(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                canBeUnlockedPersonalLineList_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              canBeUnlockedPersonalLineList_.addInt(input.readUInt32());
+              break;
+            }
+            case 10: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
+                canBeUnlockedPersonalLineList_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                canBeUnlockedPersonalLineList_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 16: {
+
+              legendaryKeyCount_ = input.readUInt32();
+              break;
+            }
+            case 58: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                lockedPersonalLineList_ = new java.util.ArrayList<emu.grasscutter.net.proto.LockedPersonallineDataOuterClass.LockedPersonallineData>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              lockedPersonalLineList_.add(
+                  input.readMessage(emu.grasscutter.net.proto.LockedPersonallineDataOuterClass.LockedPersonallineData.parser(), extensionRegistry));
+              break;
+            }
+            case 80: {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                ongoingPersonalLineList_ = newIntList();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              ongoingPersonalLineList_.addInt(input.readUInt32());
+              break;
+            }
+            case 82: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000004) != 0) && input.getBytesUntilLimit() > 0) {
+                ongoingPersonalLineList_ = newIntList();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                ongoingPersonalLineList_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 88: {
+
+              retcode_ = input.readInt32();
+              break;
+            }
+            case 96: {
+
+              curFinishedDailyTaskCount_ = input.readUInt32();
+              break;
+            }
+            case 104: {
+              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
+                bPBOJKLJAGA_ = newIntList();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              bPBOJKLJAGA_.addInt(input.readUInt32());
+              break;
+            }
+            case 106: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000008) != 0) && input.getBytesUntilLimit() > 0) {
+                bPBOJKLJAGA_ = newIntList();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                bPBOJKLJAGA_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          canBeUnlockedPersonalLineList_.makeImmutable(); // C
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          lockedPersonalLineList_ = java.util.Collections.unmodifiableList(lockedPersonalLineList_);
+        }
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
+          ongoingPersonalLineList_.makeImmutable(); // C
+        }
+        if (((mutable_bitField0_ & 0x00000008) != 0)) {
+          bPBOJKLJAGA_.makeImmutable(); // C
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.PersonalLineAllDataRspOuterClass.internal_static_PersonalLineAllDataRsp_descriptor;
@@ -437,7 +574,7 @@ public final class PersonalLineAllDataRspOuterClass {
       for (int i = 0; i < bPBOJKLJAGA_.size(); i++) {
         output.writeUInt32NoTag(bPBOJKLJAGA_.getInt(i));
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -504,7 +641,7 @@ public final class PersonalLineAllDataRspOuterClass {
         }
         bPBOJKLJAGAMemoizedSerializedSize = dataSize;
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -533,7 +670,7 @@ public final class PersonalLineAllDataRspOuterClass {
           != other.getCurFinishedDailyTaskCount()) return false;
       if (!getBPBOJKLJAGAList()
           .equals(other.getBPBOJKLJAGAList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -566,7 +703,7 @@ public final class PersonalLineAllDataRspOuterClass {
         hash = (37 * hash) + BPBOJKLJAGA_FIELD_NUMBER;
         hash = (53 * hash) + getBPBOJKLJAGAList().hashCode();
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -688,13 +825,19 @@ public final class PersonalLineAllDataRspOuterClass {
 
       // Construct using emu.grasscutter.net.proto.PersonalLineAllDataRspOuterClass.PersonalLineAllDataRsp.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getLockedPersonalLineListFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -705,11 +848,10 @@ public final class PersonalLineAllDataRspOuterClass {
 
         if (lockedPersonalLineListBuilder_ == null) {
           lockedPersonalLineList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
-          lockedPersonalLineList_ = null;
           lockedPersonalLineListBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000002);
         ongoingPersonalLineList_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000004);
         retcode_ = 0;
@@ -885,7 +1027,7 @@ public final class PersonalLineAllDataRspOuterClass {
           }
           onChanged();
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -900,106 +1042,17 @@ public final class PersonalLineAllDataRspOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.PersonalLineAllDataRspOuterClass.PersonalLineAllDataRsp parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                int v = input.readUInt32();
-                ensureCanBeUnlockedPersonalLineListIsMutable();
-                canBeUnlockedPersonalLineList_.addInt(v);
-                break;
-              } // case 8
-              case 10: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureCanBeUnlockedPersonalLineListIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  canBeUnlockedPersonalLineList_.addInt(input.readUInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 10
-              case 16: {
-                legendaryKeyCount_ = input.readUInt32();
-
-                break;
-              } // case 16
-              case 58: {
-                emu.grasscutter.net.proto.LockedPersonallineDataOuterClass.LockedPersonallineData m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.LockedPersonallineDataOuterClass.LockedPersonallineData.parser(),
-                        extensionRegistry);
-                if (lockedPersonalLineListBuilder_ == null) {
-                  ensureLockedPersonalLineListIsMutable();
-                  lockedPersonalLineList_.add(m);
-                } else {
-                  lockedPersonalLineListBuilder_.addMessage(m);
-                }
-                break;
-              } // case 58
-              case 80: {
-                int v = input.readUInt32();
-                ensureOngoingPersonalLineListIsMutable();
-                ongoingPersonalLineList_.addInt(v);
-                break;
-              } // case 80
-              case 82: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureOngoingPersonalLineListIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  ongoingPersonalLineList_.addInt(input.readUInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 82
-              case 88: {
-                retcode_ = input.readInt32();
-
-                break;
-              } // case 88
-              case 96: {
-                curFinishedDailyTaskCount_ = input.readUInt32();
-
-                break;
-              } // case 96
-              case 104: {
-                int v = input.readUInt32();
-                ensureBPBOJKLJAGAIsMutable();
-                bPBOJKLJAGA_.addInt(v);
-                break;
-              } // case 104
-              case 106: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureBPBOJKLJAGAIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  bPBOJKLJAGA_.addInt(input.readUInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 106
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.PersonalLineAllDataRspOuterClass.PersonalLineAllDataRsp) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -1690,18 +1743,7 @@ public final class PersonalLineAllDataRspOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new PersonalLineAllDataRsp(input, extensionRegistry);
       }
     };
 

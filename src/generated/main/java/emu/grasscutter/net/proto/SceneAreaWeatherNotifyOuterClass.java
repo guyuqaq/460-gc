@@ -103,6 +103,77 @@ public final class SceneAreaWeatherNotifyOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private SceneAreaWeatherNotify(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 37: {
+
+              transDuration_ = input.readFloat();
+              break;
+            }
+            case 66: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                weatherValueMap_ = com.google.protobuf.MapField.newMapField(
+                    WeatherValueMapDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.Integer, java.lang.String>
+              weatherValueMap__ = input.readMessage(
+                  WeatherValueMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              weatherValueMap_.getMutableMap().put(
+                  weatherValueMap__.getKey(), weatherValueMap__.getValue());
+              break;
+            }
+            case 96: {
+
+              weatherAreaId_ = input.readUInt32();
+              break;
+            }
+            case 104: {
+
+              climateType_ = input.readUInt32();
+              break;
+            }
+            case 112: {
+
+              weatherGadgetId_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.SceneAreaWeatherNotifyOuterClass.internal_static_SceneAreaWeatherNotify_descriptor;
@@ -267,7 +338,7 @@ public final class SceneAreaWeatherNotifyOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (java.lang.Float.floatToRawIntBits(transDuration_) != 0) {
+      if (transDuration_ != 0F) {
         output.writeFloat(4, transDuration_);
       }
       com.google.protobuf.GeneratedMessageV3
@@ -285,7 +356,7 @@ public final class SceneAreaWeatherNotifyOuterClass {
       if (weatherGadgetId_ != 0) {
         output.writeUInt32(14, weatherGadgetId_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -294,7 +365,7 @@ public final class SceneAreaWeatherNotifyOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (java.lang.Float.floatToRawIntBits(transDuration_) != 0) {
+      if (transDuration_ != 0F) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(4, transDuration_);
       }
@@ -320,7 +391,7 @@ public final class SceneAreaWeatherNotifyOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(14, weatherGadgetId_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -346,7 +417,7 @@ public final class SceneAreaWeatherNotifyOuterClass {
           != other.getClimateType()) return false;
       if (getWeatherGadgetId()
           != other.getWeatherGadgetId()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -370,7 +441,7 @@ public final class SceneAreaWeatherNotifyOuterClass {
       hash = (53 * hash) + getClimateType();
       hash = (37 * hash) + WEATHER_GADGET_ID_FIELD_NUMBER;
       hash = (53 * hash) + getWeatherGadgetId();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -509,13 +580,18 @@ public final class SceneAreaWeatherNotifyOuterClass {
 
       // Construct using emu.grasscutter.net.proto.SceneAreaWeatherNotifyOuterClass.SceneAreaWeatherNotify.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -624,7 +700,7 @@ public final class SceneAreaWeatherNotifyOuterClass {
         if (other.getWeatherGadgetId() != 0) {
           setWeatherGadgetId(other.getWeatherGadgetId());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -639,58 +715,17 @@ public final class SceneAreaWeatherNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.SceneAreaWeatherNotifyOuterClass.SceneAreaWeatherNotify parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 37: {
-                transDuration_ = input.readFloat();
-
-                break;
-              } // case 37
-              case 66: {
-                com.google.protobuf.MapEntry<java.lang.Integer, java.lang.String>
-                weatherValueMap__ = input.readMessage(
-                    WeatherValueMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-                internalGetMutableWeatherValueMap().getMutableMap().put(
-                    weatherValueMap__.getKey(), weatherValueMap__.getValue());
-                break;
-              } // case 66
-              case 96: {
-                weatherAreaId_ = input.readUInt32();
-
-                break;
-              } // case 96
-              case 104: {
-                climateType_ = input.readUInt32();
-
-                break;
-              } // case 104
-              case 112: {
-                weatherGadgetId_ = input.readUInt32();
-
-                break;
-              } // case 112
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.SceneAreaWeatherNotifyOuterClass.SceneAreaWeatherNotify) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -838,10 +873,7 @@ public final class SceneAreaWeatherNotifyOuterClass {
           int key,
           java.lang.String value) {
         
-        if (value == null) {
-  throw new NullPointerException("map value");
-}
-
+        if (value == null) { throw new java.lang.NullPointerException(); }
         internalGetMutableWeatherValueMap().getMutableMap()
             .put(key, value);
         return this;
@@ -982,18 +1014,7 @@ public final class SceneAreaWeatherNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new SceneAreaWeatherNotify(input, extensionRegistry);
       }
     };
 

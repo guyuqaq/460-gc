@@ -211,6 +211,183 @@ public final class ShopGoodsOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private ShopGoods(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              goodsId_ = input.readUInt32();
+              break;
+            }
+            case 16: {
+
+              beginTime_ = input.readUInt32();
+              break;
+            }
+            case 24: {
+
+              nextRefreshTime_ = input.readUInt32();
+              break;
+            }
+            case 32: {
+
+              disableType_ = input.readUInt32();
+              break;
+            }
+            case 40: {
+
+              mcoin_ = input.readUInt32();
+              break;
+            }
+            case 50: {
+              emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder subBuilder = null;
+              if (goodsItem_ != null) {
+                subBuilder = goodsItem_.toBuilder();
+              }
+              goodsItem_ = input.readMessage(emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(goodsItem_);
+                goodsItem_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 56: {
+
+              buyLimit_ = input.readUInt32();
+              break;
+            }
+            case 64: {
+
+              hcoin_ = input.readUInt32();
+              break;
+            }
+            case 72: {
+
+              iBCGFFJGCID_ = input.readUInt32();
+              break;
+            }
+            case 80: {
+
+              scoin_ = input.readUInt32();
+              break;
+            }
+            case 88: {
+
+              minLevel_ = input.readUInt32();
+              break;
+            }
+            case 98: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                costItemList_ = new java.util.ArrayList<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              costItemList_.add(
+                  input.readMessage(emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.parser(), extensionRegistry));
+              break;
+            }
+            case 104: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                preGoodsIdList_ = newIntList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              preGoodsIdList_.addInt(input.readUInt32());
+              break;
+            }
+            case 106: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000002) != 0) && input.getBytesUntilLimit() > 0) {
+                preGoodsIdList_ = newIntList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                preGoodsIdList_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 112: {
+
+              boughtNum_ = input.readUInt32();
+              break;
+            }
+            case 120: {
+
+              endTime_ = input.readUInt32();
+              break;
+            }
+            case 4720: {
+
+              maxLevel_ = input.readUInt32();
+              break;
+            }
+            case 11896: {
+
+              bHNAJCLPOJE_ = input.readUInt32();
+              break;
+            }
+            case 12328: {
+
+              kJAGOOHCNON_ = input.readUInt32();
+              break;
+            }
+            case 12696: {
+
+              aFOGAPGJCOH_ = input.readUInt32();
+              break;
+            }
+            case 13984: {
+
+              eHIAIOONFDH_ = input.readBool();
+              break;
+            }
+            case 15536: {
+
+              mNCAAIMGCJJ_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          costItemList_ = java.util.Collections.unmodifiableList(costItemList_);
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          preGoodsIdList_.makeImmutable(); // C
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.ShopGoodsOuterClass.internal_static_ShopGoods_descriptor;
@@ -598,7 +775,7 @@ public final class ShopGoodsOuterClass {
       if (mNCAAIMGCJJ_ != 0) {
         output.writeUInt32(1942, mNCAAIMGCJJ_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -701,7 +878,7 @@ public final class ShopGoodsOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(1942, mNCAAIMGCJJ_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -761,7 +938,7 @@ public final class ShopGoodsOuterClass {
           != other.getEHIAIOONFDH()) return false;
       if (getMNCAAIMGCJJ()
           != other.getMNCAAIMGCJJ()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -821,7 +998,7 @@ public final class ShopGoodsOuterClass {
           getEHIAIOONFDH());
       hash = (37 * hash) + MNCAAIMGCJJ_FIELD_NUMBER;
       hash = (53 * hash) + getMNCAAIMGCJJ();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -938,13 +1115,19 @@ public final class ShopGoodsOuterClass {
 
       // Construct using emu.grasscutter.net.proto.ShopGoodsOuterClass.ShopGoods.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getCostItemListFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -977,11 +1160,10 @@ public final class ShopGoodsOuterClass {
 
         if (costItemListBuilder_ == null) {
           costItemList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
-          costItemList_ = null;
           costItemListBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000001);
         preGoodsIdList_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000002);
         boughtNum_ = 0;
@@ -1205,7 +1387,7 @@ public final class ShopGoodsOuterClass {
         if (other.getMNCAAIMGCJJ() != 0) {
           setMNCAAIMGCJJ(other.getMNCAAIMGCJJ());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -1220,156 +1402,17 @@ public final class ShopGoodsOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.ShopGoodsOuterClass.ShopGoods parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                goodsId_ = input.readUInt32();
-
-                break;
-              } // case 8
-              case 16: {
-                beginTime_ = input.readUInt32();
-
-                break;
-              } // case 16
-              case 24: {
-                nextRefreshTime_ = input.readUInt32();
-
-                break;
-              } // case 24
-              case 32: {
-                disableType_ = input.readUInt32();
-
-                break;
-              } // case 32
-              case 40: {
-                mcoin_ = input.readUInt32();
-
-                break;
-              } // case 40
-              case 50: {
-                input.readMessage(
-                    getGoodsItemFieldBuilder().getBuilder(),
-                    extensionRegistry);
-
-                break;
-              } // case 50
-              case 56: {
-                buyLimit_ = input.readUInt32();
-
-                break;
-              } // case 56
-              case 64: {
-                hcoin_ = input.readUInt32();
-
-                break;
-              } // case 64
-              case 72: {
-                iBCGFFJGCID_ = input.readUInt32();
-
-                break;
-              } // case 72
-              case 80: {
-                scoin_ = input.readUInt32();
-
-                break;
-              } // case 80
-              case 88: {
-                minLevel_ = input.readUInt32();
-
-                break;
-              } // case 88
-              case 98: {
-                emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.parser(),
-                        extensionRegistry);
-                if (costItemListBuilder_ == null) {
-                  ensureCostItemListIsMutable();
-                  costItemList_.add(m);
-                } else {
-                  costItemListBuilder_.addMessage(m);
-                }
-                break;
-              } // case 98
-              case 104: {
-                int v = input.readUInt32();
-                ensurePreGoodsIdListIsMutable();
-                preGoodsIdList_.addInt(v);
-                break;
-              } // case 104
-              case 106: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensurePreGoodsIdListIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  preGoodsIdList_.addInt(input.readUInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 106
-              case 112: {
-                boughtNum_ = input.readUInt32();
-
-                break;
-              } // case 112
-              case 120: {
-                endTime_ = input.readUInt32();
-
-                break;
-              } // case 120
-              case 4720: {
-                maxLevel_ = input.readUInt32();
-
-                break;
-              } // case 4720
-              case 11896: {
-                bHNAJCLPOJE_ = input.readUInt32();
-
-                break;
-              } // case 11896
-              case 12328: {
-                kJAGOOHCNON_ = input.readUInt32();
-
-                break;
-              } // case 12328
-              case 12696: {
-                aFOGAPGJCOH_ = input.readUInt32();
-
-                break;
-              } // case 12696
-              case 13984: {
-                eHIAIOONFDH_ = input.readBool();
-
-                break;
-              } // case 13984
-              case 15536: {
-                mNCAAIMGCJJ_ = input.readUInt32();
-
-                break;
-              } // case 15536
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.ShopGoodsOuterClass.ShopGoods) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -2402,18 +2445,7 @@ public final class ShopGoodsOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new ShopGoods(input, extensionRegistry);
       }
     };
 

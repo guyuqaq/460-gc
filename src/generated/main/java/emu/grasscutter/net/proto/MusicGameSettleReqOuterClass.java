@@ -182,6 +182,172 @@ public final class MusicGameSettleReqOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private MusicGameSettleReq(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              aBOAGOKKIEA_ = input.readUInt32();
+              break;
+            }
+            case 16: {
+
+              cLCABCNLGFM_ = input.readUInt32();
+              break;
+            }
+            case 24: {
+
+              musicBasicId_ = input.readUInt32();
+              break;
+            }
+            case 32: {
+
+              combo_ = input.readUInt32();
+              break;
+            }
+            case 40: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                nNFBHPJCONO_ = newIntList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              nNFBHPJCONO_.addInt(input.readUInt32());
+              break;
+            }
+            case 42: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000002) != 0) && input.getBytesUntilLimit() > 0) {
+                nNFBHPJCONO_ = newIntList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                nNFBHPJCONO_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 64: {
+
+              maxCombo_ = input.readUInt32();
+              break;
+            }
+            case 72: {
+
+              bHPGPLPCNPL_ = input.readUInt32();
+              break;
+            }
+            case 96: {
+
+              score_ = input.readUInt32();
+              break;
+            }
+            case 104: {
+
+              correctHit_ = input.readUInt32();
+              break;
+            }
+            case 112: {
+
+              isSaveScore_ = input.readBool();
+              break;
+            }
+            case 120: {
+
+              ugcGuid_ = input.readUInt64();
+              break;
+            }
+            case 256: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                cFKPLNKHFKN_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              cFKPLNKHFKN_.addInt(input.readUInt32());
+              break;
+            }
+            case 258: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
+                cFKPLNKHFKN_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                cFKPLNKHFKN_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 3637: {
+
+              speed_ = input.readFloat();
+              break;
+            }
+            case 4120: {
+
+              oEDCPFGAKAM_ = input.readBool();
+              break;
+            }
+            case 6960: {
+
+              gIKJKDBLFAD_ = input.readUInt32();
+              break;
+            }
+            case 7432: {
+
+              jJKIBHBPPPO_ = input.readUInt32();
+              break;
+            }
+            case 11216: {
+
+              jPEGLEBNIGL_ = input.readUInt32();
+              break;
+            }
+            case 13776: {
+
+              hKJPCJFLNFJ_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          nNFBHPJCONO_.makeImmutable(); // C
+        }
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          cFKPLNKHFKN_.makeImmutable(); // C
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.MusicGameSettleReqOuterClass.internal_static_MusicGameSettleReq_descriptor;
@@ -486,7 +652,7 @@ public final class MusicGameSettleReqOuterClass {
       for (int i = 0; i < cFKPLNKHFKN_.size(); i++) {
         output.writeUInt32NoTag(cFKPLNKHFKN_.getInt(i));
       }
-      if (java.lang.Float.floatToRawIntBits(speed_) != 0) {
+      if (speed_ != 0F) {
         output.writeFloat(454, speed_);
       }
       if (oEDCPFGAKAM_ != false) {
@@ -504,7 +670,7 @@ public final class MusicGameSettleReqOuterClass {
       if (hKJPCJFLNFJ_ != false) {
         output.writeBool(1722, hKJPCJFLNFJ_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -581,7 +747,7 @@ public final class MusicGameSettleReqOuterClass {
         }
         cFKPLNKHFKNMemoizedSerializedSize = dataSize;
       }
-      if (java.lang.Float.floatToRawIntBits(speed_) != 0) {
+      if (speed_ != 0F) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(454, speed_);
       }
@@ -605,7 +771,7 @@ public final class MusicGameSettleReqOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(1722, hKJPCJFLNFJ_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -657,7 +823,7 @@ public final class MusicGameSettleReqOuterClass {
           != other.getCombo()) return false;
       if (getABOAGOKKIEA()
           != other.getABOAGOKKIEA()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -713,7 +879,7 @@ public final class MusicGameSettleReqOuterClass {
       hash = (53 * hash) + getCombo();
       hash = (37 * hash) + ABOAGOKKIEA_FIELD_NUMBER;
       hash = (53 * hash) + getABOAGOKKIEA();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -835,13 +1001,18 @@ public final class MusicGameSettleReqOuterClass {
 
       // Construct using emu.grasscutter.net.proto.MusicGameSettleReqOuterClass.MusicGameSettleReq.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1051,7 +1222,7 @@ public final class MusicGameSettleReqOuterClass {
         if (other.getABOAGOKKIEA() != 0) {
           setABOAGOKKIEA(other.getABOAGOKKIEA());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -1066,142 +1237,17 @@ public final class MusicGameSettleReqOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.MusicGameSettleReqOuterClass.MusicGameSettleReq parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                aBOAGOKKIEA_ = input.readUInt32();
-
-                break;
-              } // case 8
-              case 16: {
-                cLCABCNLGFM_ = input.readUInt32();
-
-                break;
-              } // case 16
-              case 24: {
-                musicBasicId_ = input.readUInt32();
-
-                break;
-              } // case 24
-              case 32: {
-                combo_ = input.readUInt32();
-
-                break;
-              } // case 32
-              case 40: {
-                int v = input.readUInt32();
-                ensureNNFBHPJCONOIsMutable();
-                nNFBHPJCONO_.addInt(v);
-                break;
-              } // case 40
-              case 42: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureNNFBHPJCONOIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  nNFBHPJCONO_.addInt(input.readUInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 42
-              case 64: {
-                maxCombo_ = input.readUInt32();
-
-                break;
-              } // case 64
-              case 72: {
-                bHPGPLPCNPL_ = input.readUInt32();
-
-                break;
-              } // case 72
-              case 96: {
-                score_ = input.readUInt32();
-
-                break;
-              } // case 96
-              case 104: {
-                correctHit_ = input.readUInt32();
-
-                break;
-              } // case 104
-              case 112: {
-                isSaveScore_ = input.readBool();
-
-                break;
-              } // case 112
-              case 120: {
-                ugcGuid_ = input.readUInt64();
-
-                break;
-              } // case 120
-              case 256: {
-                int v = input.readUInt32();
-                ensureCFKPLNKHFKNIsMutable();
-                cFKPLNKHFKN_.addInt(v);
-                break;
-              } // case 256
-              case 258: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureCFKPLNKHFKNIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  cFKPLNKHFKN_.addInt(input.readUInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 258
-              case 3637: {
-                speed_ = input.readFloat();
-
-                break;
-              } // case 3637
-              case 4120: {
-                oEDCPFGAKAM_ = input.readBool();
-
-                break;
-              } // case 4120
-              case 6960: {
-                gIKJKDBLFAD_ = input.readUInt32();
-
-                break;
-              } // case 6960
-              case 7432: {
-                jJKIBHBPPPO_ = input.readUInt32();
-
-                break;
-              } // case 7432
-              case 11216: {
-                jPEGLEBNIGL_ = input.readUInt32();
-
-                break;
-              } // case 11216
-              case 13776: {
-                hKJPCJFLNFJ_ = input.readBool();
-
-                break;
-              } // case 13776
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.MusicGameSettleReqOuterClass.MusicGameSettleReq) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -1892,18 +1938,7 @@ public final class MusicGameSettleReqOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new MusicGameSettleReq(input, extensionRegistry);
       }
     };
 
