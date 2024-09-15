@@ -1,4 +1,4 @@
-package emu.grasscutter.server.packet.recv;
+SetPlayerHeadImageReqpackage emu.grasscutter.server.packet.recv;
 
 import emu.grasscutter.net.packet.*;
 import emu.grasscutter.net.proto.SetPlayerHeadImageReqOuterClass.SetPlayerHeadImageReq;
@@ -11,11 +11,9 @@ public class HandlerSetPlayerHeadImageReq extends PacketHandler {
     public void handle(GameSession session, byte[] header, byte[] payload) throws Exception {
         SetPlayerHeadImageReq req = SetPlayerHeadImageReq.parseFrom(payload);
 
-        int id = req.getAvatarId();
+        int id = req.getHeadImageId();
 
-        if (session.getPlayer().getAvatars().hasAvatar(id)) {
-            session.getPlayer().setHeadImage(id);
-            session.send(new PacketSetPlayerHeadImageRsp(session.getPlayer()));
-        }
+        session.getPlayer().setHeadImage(id);
+        session.send(new PacketSetPlayerHeadImageRsp(session.getPlayer()));
     }
 }

@@ -238,6 +238,7 @@ public class Player implements DatabaseObject<Player>, PlayerHook, FieldFetch {
             }
             this.properties.put(prop.getId(), 0);
         }
+
         this.gachaInfo = new PlayerGachaInfo();
         this.nameCardList = new HashSet<>();
         this.flyCloakList = new HashSet<>();
@@ -1101,7 +1102,7 @@ public class Player implements DatabaseObject<Player>, PlayerHook, FieldFetch {
             .setMpSettingType(this.getMpSetting())
             .setNameCardId(this.getNameCardId())
             .setSignature(this.getSignature())
-            .setProfilePicture(ProfilePicture.newBuilder().setAvatarId(this.getHeadImage()));
+            .setProfilePicture(ProfilePicture.newBuilder().setHeadImageId(this.getHeadImage()));
 
         if (this.getWorld() != null) {
             onlineInfo.setCurPlayerNumInWorld(getWorld().getPlayerCount());
@@ -1156,7 +1157,7 @@ public class Player implements DatabaseObject<Player>, PlayerHook, FieldFetch {
 
         return SocialDetail.newBuilder()
             .setUid(this.getUid())
-            .setProfilePicture(ProfilePicture.newBuilder().setAvatarId(this.getHeadImage()))
+            .setProfilePicture(ProfilePicture.newBuilder().setHeadImageId(this.getHeadImage()))
             .setNickname(this.getNickname())
             .setSignature(this.getSignature())
             .setLevel(this.getLevel())
@@ -1522,6 +1523,7 @@ public class Player implements DatabaseObject<Player>, PlayerHook, FieldFetch {
 
         session.send(new PacketPlayerEnterSceneNotify(this)); // Enter game world
         session.send(new PacketPlayerLevelRewardUpdateNotify(rewardedLevels));
+
         // First notify packets sent
         this.hasSentLoginPackets = true;
 
@@ -1532,6 +1534,7 @@ public class Player implements DatabaseObject<Player>, PlayerHook, FieldFetch {
         if (this.isNew) {
             this.getMailHandler().sendWelcomeMail();
         }
+
         // Call join event.
         PlayerJoinEvent event = new PlayerJoinEvent(this);
         event.call();
