@@ -754,6 +754,9 @@ public final class PacketOpcodes {
 	public static final int TreasureMapRegionActiveNotify = 28662; // or 9476,28662
 	public static final int TreasureMapRegionInfoNotify = 4694;
 	public static final int TreasureSeelieCollectOrbsNotify = 25896; //or 25896,23140
+
+	public static final int EvtBeingHealedNotify = 26087;
+
 	public static final int RegionSearchChangeRegionNotify = 9937;
 	public static final int TakeRegionSearchRewardReq = 28104; // or 28104,3924
 	public static final int TakeRegionSearchRewardRsp = 21785; // or 21785,28114
@@ -1310,7 +1313,6 @@ public final class PacketOpcodes {
 	public static final int EquipRoguelikeRuneRsp = 1;
 	public static final int EvtAnimatorParameterNotify = 1;
 	public static final int EvtAnimatorStateChangedNotify = 1;
-	public static final int EvtBeingHealedNotify = 1;
 	public static final int EvtCostStaminaNotify = 1;
 	public static final int EvtDestroyServerGadgetNotify = 1;
 	public static final int EvtFaceToDirNotify = 1;

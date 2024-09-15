@@ -20,10 +20,10 @@ public final class EvtBeingHealedNotifyOuterClass {
 
     /**
      * <pre>
-     * 8
+     * 4
      * </pre>
      *
-     * <code>float heal_amount = 4;</code>
+     * <code>float heal_amount = 8;</code>
      * @return The healAmount.
      */
     float getHealAmount();
@@ -36,10 +36,10 @@ public final class EvtBeingHealedNotifyOuterClass {
 
     /**
      * <pre>
-     * 4
+     * 8
      * </pre>
      *
-     * <code>float real_heal_amount = 8;</code>
+     * <code>float real_heal_amount = 4;</code>
      * @return The realHealAmount.
      */
     float getRealHealAmount();
@@ -109,14 +109,14 @@ public final class EvtBeingHealedNotifyOuterClass {
               emu.grasscutter.net.proto.EvtBeingHealedNotifyOuterClass.EvtBeingHealedNotify.class, emu.grasscutter.net.proto.EvtBeingHealedNotifyOuterClass.EvtBeingHealedNotify.Builder.class);
     }
 
-    public static final int HEAL_AMOUNT_FIELD_NUMBER = 4;
+    public static final int HEAL_AMOUNT_FIELD_NUMBER = 8;
     private float healAmount_;
     /**
      * <pre>
-     * 8
+     * 4
      * </pre>
      *
-     * <code>float heal_amount = 4;</code>
+     * <code>float heal_amount = 8;</code>
      * @return The healAmount.
      */
     @java.lang.Override
@@ -135,14 +135,14 @@ public final class EvtBeingHealedNotifyOuterClass {
       return nNDDEADLGGD_;
     }
 
-    public static final int REAL_HEAL_AMOUNT_FIELD_NUMBER = 8;
+    public static final int REAL_HEAL_AMOUNT_FIELD_NUMBER = 4;
     private float realHealAmount_;
     /**
      * <pre>
-     * 4
+     * 8
      * </pre>
      *
-     * <code>float real_heal_amount = 8;</code>
+     * <code>float real_heal_amount = 4;</code>
      * @return The realHealAmount.
      */
     @java.lang.Override
@@ -224,14 +224,14 @@ public final class EvtBeingHealedNotifyOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (java.lang.Float.floatToRawIntBits(healAmount_) != 0) {
-        output.writeFloat(4, healAmount_);
+      if (java.lang.Float.floatToRawIntBits(realHealAmount_) != 0) {
+        output.writeFloat(4, realHealAmount_);
       }
       if (nNDDEADLGGD_ != false) {
         output.writeBool(7, nNDDEADLGGD_);
       }
-      if (java.lang.Float.floatToRawIntBits(realHealAmount_) != 0) {
-        output.writeFloat(8, realHealAmount_);
+      if (java.lang.Float.floatToRawIntBits(healAmount_) != 0) {
+        output.writeFloat(8, healAmount_);
       }
       if (sourceId_ != 0) {
         output.writeUInt32(9, sourceId_);
@@ -251,17 +251,17 @@ public final class EvtBeingHealedNotifyOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (java.lang.Float.floatToRawIntBits(healAmount_) != 0) {
+      if (java.lang.Float.floatToRawIntBits(realHealAmount_) != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(4, healAmount_);
+          .computeFloatSize(4, realHealAmount_);
       }
       if (nNDDEADLGGD_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(7, nNDDEADLGGD_);
       }
-      if (java.lang.Float.floatToRawIntBits(realHealAmount_) != 0) {
+      if (java.lang.Float.floatToRawIntBits(healAmount_) != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(8, realHealAmount_);
+          .computeFloatSize(8, healAmount_);
       }
       if (sourceId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -595,7 +595,7 @@ public final class EvtBeingHealedNotifyOuterClass {
                 done = true;
                 break;
               case 37: {
-                healAmount_ = input.readFloat();
+                realHealAmount_ = input.readFloat();
 
                 break;
               } // case 37
@@ -605,7 +605,7 @@ public final class EvtBeingHealedNotifyOuterClass {
                 break;
               } // case 56
               case 69: {
-                realHealAmount_ = input.readFloat();
+                healAmount_ = input.readFloat();
 
                 break;
               } // case 69
@@ -643,10 +643,10 @@ public final class EvtBeingHealedNotifyOuterClass {
       private float healAmount_ ;
       /**
        * <pre>
-       * 8
+       * 4
        * </pre>
        *
-       * <code>float heal_amount = 4;</code>
+       * <code>float heal_amount = 8;</code>
        * @return The healAmount.
        */
       @java.lang.Override
@@ -655,10 +655,10 @@ public final class EvtBeingHealedNotifyOuterClass {
       }
       /**
        * <pre>
-       * 8
+       * 4
        * </pre>
        *
-       * <code>float heal_amount = 4;</code>
+       * <code>float heal_amount = 8;</code>
        * @param value The healAmount to set.
        * @return This builder for chaining.
        */
@@ -670,10 +670,10 @@ public final class EvtBeingHealedNotifyOuterClass {
       }
       /**
        * <pre>
-       * 8
+       * 4
        * </pre>
        *
-       * <code>float heal_amount = 4;</code>
+       * <code>float heal_amount = 8;</code>
        * @return This builder for chaining.
        */
       public Builder clearHealAmount() {
@@ -717,10 +717,10 @@ public final class EvtBeingHealedNotifyOuterClass {
       private float realHealAmount_ ;
       /**
        * <pre>
-       * 4
+       * 8
        * </pre>
        *
-       * <code>float real_heal_amount = 8;</code>
+       * <code>float real_heal_amount = 4;</code>
        * @return The realHealAmount.
        */
       @java.lang.Override
@@ -729,10 +729,10 @@ public final class EvtBeingHealedNotifyOuterClass {
       }
       /**
        * <pre>
-       * 4
+       * 8
        * </pre>
        *
-       * <code>float real_heal_amount = 8;</code>
+       * <code>float real_heal_amount = 4;</code>
        * @param value The realHealAmount to set.
        * @return This builder for chaining.
        */
@@ -744,10 +744,10 @@ public final class EvtBeingHealedNotifyOuterClass {
       }
       /**
        * <pre>
-       * 4
+       * 8
        * </pre>
        *
-       * <code>float real_heal_amount = 8;</code>
+       * <code>float real_heal_amount = 4;</code>
        * @return This builder for chaining.
        */
       public Builder clearRealHealAmount() {
@@ -973,8 +973,8 @@ public final class EvtBeingHealedNotifyOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\032EvtBeingHealedNotify.proto\"\225\001\n\024EvtBein" +
-      "gHealedNotify\022\023\n\013heal_amount\030\004 \001(\002\022\023\n\013NN" +
-      "DDEADLGGD\030\007 \001(\010\022\030\n\020real_heal_amount\030\010 \001(" +
+      "gHealedNotify\022\023\n\013heal_amount\030\010 \001(\002\022\023\n\013NN" +
+      "DDEADLGGD\030\007 \001(\010\022\030\n\020real_heal_amount\030\004 \001(" +
       "\002\022\021\n\tsource_id\030\t \001(\r\022\023\n\013AHCFMJJLEJN\030\013 \001(" +
       "\t\022\021\n\ttarget_id\030\r \001(\rB\033\n\031emu.grasscutter." +
       "net.protob\006proto3"
