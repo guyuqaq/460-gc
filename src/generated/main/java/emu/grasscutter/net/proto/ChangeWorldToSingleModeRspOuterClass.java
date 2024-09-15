@@ -19,21 +19,20 @@ public final class ChangeWorldToSingleModeRspOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int32 retcode = 10;</code>
-     * @return The retcode.
-     */
-    int getRetcode();
-
-    /**
-     * <code>uint32 quit_mp_valid_time = 8;</code>
+     * <code>uint32 quit_mp_valid_time = 10;</code>
      * @return The quitMpValidTime.
      */
     int getQuitMpValidTime();
+
+    /**
+     * <code>int32 retcode = 11;</code>
+     * @return The retcode.
+     */
+    int getRetcode();
   }
   /**
    * <pre>
-   * CmdId: 5912
-   * Obf: HMECHAPKFND
+   * CmdId: 20845
    * </pre>
    *
    * Protobuf type {@code ChangeWorldToSingleModeRsp}
@@ -80,12 +79,12 @@ public final class ChangeWorldToSingleModeRspOuterClass {
             case 0:
               done = true;
               break;
-            case 64: {
+            case 80: {
 
               quitMpValidTime_ = input.readUInt32();
               break;
             }
-            case 80: {
+            case 88: {
 
               retcode_ = input.readInt32();
               break;
@@ -122,26 +121,26 @@ public final class ChangeWorldToSingleModeRspOuterClass {
               emu.grasscutter.net.proto.ChangeWorldToSingleModeRspOuterClass.ChangeWorldToSingleModeRsp.class, emu.grasscutter.net.proto.ChangeWorldToSingleModeRspOuterClass.ChangeWorldToSingleModeRsp.Builder.class);
     }
 
-    public static final int RETCODE_FIELD_NUMBER = 10;
-    private int retcode_;
-    /**
-     * <code>int32 retcode = 10;</code>
-     * @return The retcode.
-     */
-    @java.lang.Override
-    public int getRetcode() {
-      return retcode_;
-    }
-
-    public static final int QUIT_MP_VALID_TIME_FIELD_NUMBER = 8;
+    public static final int QUIT_MP_VALID_TIME_FIELD_NUMBER = 10;
     private int quitMpValidTime_;
     /**
-     * <code>uint32 quit_mp_valid_time = 8;</code>
+     * <code>uint32 quit_mp_valid_time = 10;</code>
      * @return The quitMpValidTime.
      */
     @java.lang.Override
     public int getQuitMpValidTime() {
       return quitMpValidTime_;
+    }
+
+    public static final int RETCODE_FIELD_NUMBER = 11;
+    private int retcode_;
+    /**
+     * <code>int32 retcode = 11;</code>
+     * @return The retcode.
+     */
+    @java.lang.Override
+    public int getRetcode() {
+      return retcode_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -159,10 +158,10 @@ public final class ChangeWorldToSingleModeRspOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (quitMpValidTime_ != 0) {
-        output.writeUInt32(8, quitMpValidTime_);
+        output.writeUInt32(10, quitMpValidTime_);
       }
       if (retcode_ != 0) {
-        output.writeInt32(10, retcode_);
+        output.writeInt32(11, retcode_);
       }
       unknownFields.writeTo(output);
     }
@@ -175,11 +174,11 @@ public final class ChangeWorldToSingleModeRspOuterClass {
       size = 0;
       if (quitMpValidTime_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(8, quitMpValidTime_);
+          .computeUInt32Size(10, quitMpValidTime_);
       }
       if (retcode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(10, retcode_);
+          .computeInt32Size(11, retcode_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -196,10 +195,10 @@ public final class ChangeWorldToSingleModeRspOuterClass {
       }
       emu.grasscutter.net.proto.ChangeWorldToSingleModeRspOuterClass.ChangeWorldToSingleModeRsp other = (emu.grasscutter.net.proto.ChangeWorldToSingleModeRspOuterClass.ChangeWorldToSingleModeRsp) obj;
 
-      if (getRetcode()
-          != other.getRetcode()) return false;
       if (getQuitMpValidTime()
           != other.getQuitMpValidTime()) return false;
+      if (getRetcode()
+          != other.getRetcode()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -211,10 +210,10 @@ public final class ChangeWorldToSingleModeRspOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + RETCODE_FIELD_NUMBER;
-      hash = (53 * hash) + getRetcode();
       hash = (37 * hash) + QUIT_MP_VALID_TIME_FIELD_NUMBER;
       hash = (53 * hash) + getQuitMpValidTime();
+      hash = (37 * hash) + RETCODE_FIELD_NUMBER;
+      hash = (53 * hash) + getRetcode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -312,8 +311,7 @@ public final class ChangeWorldToSingleModeRspOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 5912
-     * Obf: HMECHAPKFND
+     * CmdId: 20845
      * </pre>
      *
      * Protobuf type {@code ChangeWorldToSingleModeRsp}
@@ -353,9 +351,9 @@ public final class ChangeWorldToSingleModeRspOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        retcode_ = 0;
-
         quitMpValidTime_ = 0;
+
+        retcode_ = 0;
 
         return this;
       }
@@ -383,8 +381,8 @@ public final class ChangeWorldToSingleModeRspOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.ChangeWorldToSingleModeRspOuterClass.ChangeWorldToSingleModeRsp buildPartial() {
         emu.grasscutter.net.proto.ChangeWorldToSingleModeRspOuterClass.ChangeWorldToSingleModeRsp result = new emu.grasscutter.net.proto.ChangeWorldToSingleModeRspOuterClass.ChangeWorldToSingleModeRsp(this);
-        result.retcode_ = retcode_;
         result.quitMpValidTime_ = quitMpValidTime_;
+        result.retcode_ = retcode_;
         onBuilt();
         return result;
       }
@@ -433,11 +431,11 @@ public final class ChangeWorldToSingleModeRspOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.ChangeWorldToSingleModeRspOuterClass.ChangeWorldToSingleModeRsp other) {
         if (other == emu.grasscutter.net.proto.ChangeWorldToSingleModeRspOuterClass.ChangeWorldToSingleModeRsp.getDefaultInstance()) return this;
-        if (other.getRetcode() != 0) {
-          setRetcode(other.getRetcode());
-        }
         if (other.getQuitMpValidTime() != 0) {
           setQuitMpValidTime(other.getQuitMpValidTime());
+        }
+        if (other.getRetcode() != 0) {
+          setRetcode(other.getRetcode());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -468,40 +466,9 @@ public final class ChangeWorldToSingleModeRspOuterClass {
         return this;
       }
 
-      private int retcode_ ;
-      /**
-       * <code>int32 retcode = 10;</code>
-       * @return The retcode.
-       */
-      @java.lang.Override
-      public int getRetcode() {
-        return retcode_;
-      }
-      /**
-       * <code>int32 retcode = 10;</code>
-       * @param value The retcode to set.
-       * @return This builder for chaining.
-       */
-      public Builder setRetcode(int value) {
-        
-        retcode_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int32 retcode = 10;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearRetcode() {
-        
-        retcode_ = 0;
-        onChanged();
-        return this;
-      }
-
       private int quitMpValidTime_ ;
       /**
-       * <code>uint32 quit_mp_valid_time = 8;</code>
+       * <code>uint32 quit_mp_valid_time = 10;</code>
        * @return The quitMpValidTime.
        */
       @java.lang.Override
@@ -509,7 +476,7 @@ public final class ChangeWorldToSingleModeRspOuterClass {
         return quitMpValidTime_;
       }
       /**
-       * <code>uint32 quit_mp_valid_time = 8;</code>
+       * <code>uint32 quit_mp_valid_time = 10;</code>
        * @param value The quitMpValidTime to set.
        * @return This builder for chaining.
        */
@@ -520,12 +487,43 @@ public final class ChangeWorldToSingleModeRspOuterClass {
         return this;
       }
       /**
-       * <code>uint32 quit_mp_valid_time = 8;</code>
+       * <code>uint32 quit_mp_valid_time = 10;</code>
        * @return This builder for chaining.
        */
       public Builder clearQuitMpValidTime() {
         
         quitMpValidTime_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int retcode_ ;
+      /**
+       * <code>int32 retcode = 11;</code>
+       * @return The retcode.
+       */
+      @java.lang.Override
+      public int getRetcode() {
+        return retcode_;
+      }
+      /**
+       * <code>int32 retcode = 11;</code>
+       * @param value The retcode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRetcode(int value) {
+        
+        retcode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 retcode = 11;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRetcode() {
+        
+        retcode_ = 0;
         onChanged();
         return this;
       }
@@ -597,8 +595,8 @@ public final class ChangeWorldToSingleModeRspOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n ChangeWorldToSingleModeRsp.proto\"I\n\032Ch" +
-      "angeWorldToSingleModeRsp\022\017\n\007retcode\030\n \001(" +
-      "\005\022\032\n\022quit_mp_valid_time\030\010 \001(\rB\033\n\031emu.gra" +
+      "angeWorldToSingleModeRsp\022\032\n\022quit_mp_vali" +
+      "d_time\030\n \001(\r\022\017\n\007retcode\030\013 \001(\005B\033\n\031emu.gra" +
       "sscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -610,7 +608,7 @@ public final class ChangeWorldToSingleModeRspOuterClass {
     internal_static_ChangeWorldToSingleModeRsp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ChangeWorldToSingleModeRsp_descriptor,
-        new java.lang.String[] { "Retcode", "QuitMpValidTime", });
+        new java.lang.String[] { "QuitMpValidTime", "Retcode", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
