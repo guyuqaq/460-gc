@@ -9,18 +9,20 @@ import emu.grasscutter.game.entity.GameEntity;
 public class ActionExecuteGadgetLua extends AbilityActionHandler {
     @Override
     public boolean execute(
-        Ability ability, AbilityModifierAction action, ByteString abilityData, GameEntity target) {
-        GameEntity owner = ability.getOwner();
+            Ability ability, AbilityModifierAction action, ByteString abilityData, GameEntity target) {
+//        GameEntity owner = ability.getOwner();
+//
+//        // Investigate if we need to use target
+//
+//        if (owner.getEntityController() != null) {
+//            owner
+//                    .getEntityController()
+//                    .onClientExecuteRequest(owner, action.param1, action.param2, action.param3);
+//            return true;
+//        }
+//
+//        return false;
 
-        // Investigate if we need to use target
-
-        if (owner.getEntityController() != null) {
-            owner
-                    .getEntityController()
-                    .onClientExecuteRequest(owner, action.param1, action.param2, action.param3);
-            return true;
-        }
-
-        return false;
+        return true;
     }
 }

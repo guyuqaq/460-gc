@@ -19,21 +19,20 @@ public final class TakeRegionSearchRewardReqOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 search_id = 4;</code>
+     * <code>uint32 search_id = 12;</code>
      * @return The searchId.
      */
     int getSearchId();
 
     /**
-     * <code>uint32 id = 8;</code>
+     * <code>uint32 id = 11;</code>
      * @return The id.
      */
     int getId();
   }
   /**
    * <pre>
-   * CmdId: 5375
-   * Obf: EBEFFALDCEG
+   * CmdId: 28104
    * </pre>
    *
    * Protobuf type {@code TakeRegionSearchRewardReq}
@@ -62,53 +61,6 @@ public final class TakeRegionSearchRewardReqOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private TakeRegionSearchRewardReq(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 32: {
-
-              searchId_ = input.readUInt32();
-              break;
-            }
-            case 64: {
-
-              id_ = input.readUInt32();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.TakeRegionSearchRewardReqOuterClass.internal_static_TakeRegionSearchRewardReq_descriptor;
@@ -122,10 +74,10 @@ public final class TakeRegionSearchRewardReqOuterClass {
               emu.grasscutter.net.proto.TakeRegionSearchRewardReqOuterClass.TakeRegionSearchRewardReq.class, emu.grasscutter.net.proto.TakeRegionSearchRewardReqOuterClass.TakeRegionSearchRewardReq.Builder.class);
     }
 
-    public static final int SEARCH_ID_FIELD_NUMBER = 4;
+    public static final int SEARCH_ID_FIELD_NUMBER = 12;
     private int searchId_;
     /**
-     * <code>uint32 search_id = 4;</code>
+     * <code>uint32 search_id = 12;</code>
      * @return The searchId.
      */
     @java.lang.Override
@@ -133,10 +85,10 @@ public final class TakeRegionSearchRewardReqOuterClass {
       return searchId_;
     }
 
-    public static final int ID_FIELD_NUMBER = 8;
+    public static final int ID_FIELD_NUMBER = 11;
     private int id_;
     /**
-     * <code>uint32 id = 8;</code>
+     * <code>uint32 id = 11;</code>
      * @return The id.
      */
     @java.lang.Override
@@ -158,13 +110,13 @@ public final class TakeRegionSearchRewardReqOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (searchId_ != 0) {
-        output.writeUInt32(4, searchId_);
-      }
       if (id_ != 0) {
-        output.writeUInt32(8, id_);
+        output.writeUInt32(11, id_);
       }
-      unknownFields.writeTo(output);
+      if (searchId_ != 0) {
+        output.writeUInt32(12, searchId_);
+      }
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -173,15 +125,15 @@ public final class TakeRegionSearchRewardReqOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (searchId_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(4, searchId_);
-      }
       if (id_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(8, id_);
+          .computeUInt32Size(11, id_);
       }
-      size += unknownFields.getSerializedSize();
+      if (searchId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(12, searchId_);
+      }
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -200,7 +152,7 @@ public final class TakeRegionSearchRewardReqOuterClass {
           != other.getSearchId()) return false;
       if (getId()
           != other.getId()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -215,7 +167,7 @@ public final class TakeRegionSearchRewardReqOuterClass {
       hash = (53 * hash) + getSearchId();
       hash = (37 * hash) + ID_FIELD_NUMBER;
       hash = (53 * hash) + getId();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -312,8 +264,7 @@ public final class TakeRegionSearchRewardReqOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 5375
-     * Obf: EBEFFALDCEG
+     * CmdId: 28104
      * </pre>
      *
      * Protobuf type {@code TakeRegionSearchRewardReq}
@@ -337,18 +288,13 @@ public final class TakeRegionSearchRewardReqOuterClass {
 
       // Construct using emu.grasscutter.net.proto.TakeRegionSearchRewardReqOuterClass.TakeRegionSearchRewardReq.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -439,7 +385,7 @@ public final class TakeRegionSearchRewardReqOuterClass {
         if (other.getId() != 0) {
           setId(other.getId());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -454,23 +400,46 @@ public final class TakeRegionSearchRewardReqOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.TakeRegionSearchRewardReqOuterClass.TakeRegionSearchRewardReq parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 88: {
+                id_ = input.readUInt32();
+
+                break;
+              } // case 88
+              case 96: {
+                searchId_ = input.readUInt32();
+
+                break;
+              } // case 96
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.TakeRegionSearchRewardReqOuterClass.TakeRegionSearchRewardReq) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
       private int searchId_ ;
       /**
-       * <code>uint32 search_id = 4;</code>
+       * <code>uint32 search_id = 12;</code>
        * @return The searchId.
        */
       @java.lang.Override
@@ -478,7 +447,7 @@ public final class TakeRegionSearchRewardReqOuterClass {
         return searchId_;
       }
       /**
-       * <code>uint32 search_id = 4;</code>
+       * <code>uint32 search_id = 12;</code>
        * @param value The searchId to set.
        * @return This builder for chaining.
        */
@@ -489,7 +458,7 @@ public final class TakeRegionSearchRewardReqOuterClass {
         return this;
       }
       /**
-       * <code>uint32 search_id = 4;</code>
+       * <code>uint32 search_id = 12;</code>
        * @return This builder for chaining.
        */
       public Builder clearSearchId() {
@@ -501,7 +470,7 @@ public final class TakeRegionSearchRewardReqOuterClass {
 
       private int id_ ;
       /**
-       * <code>uint32 id = 8;</code>
+       * <code>uint32 id = 11;</code>
        * @return The id.
        */
       @java.lang.Override
@@ -509,7 +478,7 @@ public final class TakeRegionSearchRewardReqOuterClass {
         return id_;
       }
       /**
-       * <code>uint32 id = 8;</code>
+       * <code>uint32 id = 11;</code>
        * @param value The id to set.
        * @return This builder for chaining.
        */
@@ -520,7 +489,7 @@ public final class TakeRegionSearchRewardReqOuterClass {
         return this;
       }
       /**
-       * <code>uint32 id = 8;</code>
+       * <code>uint32 id = 11;</code>
        * @return This builder for chaining.
        */
       public Builder clearId() {
@@ -562,7 +531,18 @@ public final class TakeRegionSearchRewardReqOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new TakeRegionSearchRewardReq(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -597,8 +577,8 @@ public final class TakeRegionSearchRewardReqOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\037TakeRegionSearchRewardReq.proto\":\n\031Tak" +
-      "eRegionSearchRewardReq\022\021\n\tsearch_id\030\004 \001(" +
-      "\r\022\n\n\002id\030\010 \001(\rB\033\n\031emu.grasscutter.net.pro" +
+      "eRegionSearchRewardReq\022\021\n\tsearch_id\030\014 \001(" +
+      "\r\022\n\n\002id\030\013 \001(\rB\033\n\031emu.grasscutter.net.pro" +
       "tob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
