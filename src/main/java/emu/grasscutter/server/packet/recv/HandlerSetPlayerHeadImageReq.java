@@ -1,4 +1,4 @@
-SetPlayerHeadImageReqpackage emu.grasscutter.server.packet.recv;
+package emu.grasscutter.server.packet.recv;
 
 import emu.grasscutter.net.packet.*;
 import emu.grasscutter.net.proto.SetPlayerHeadImageReqOuterClass.SetPlayerHeadImageReq;

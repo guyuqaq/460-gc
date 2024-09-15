@@ -275,7 +275,7 @@ public class AbilityModifier implements Serializable {
 
         @SerializedName(
                 value = "amount",
-                alternate = {"LNFMOCKIAGK", "PDLLIFICICJ","LKDJMGOJHAH","GHINLKIEMFA"})
+                alternate = {"LNFMOCKIAGK", "PDLLIFICICJ","LKDJMGOJHAH"})
         public DynamicFloat amount = DynamicFloat.ZERO;
 
         @SerializedName(
@@ -288,7 +288,7 @@ public class AbilityModifier implements Serializable {
 
         @SerializedName(
                 value = "amountByCasterMaxHPRatio",
-                alternate = {"PKPBLCNMPIG", "HFNJHOGGFKB", "GEJGGCIOLKN", "MEEACMKOLJF", "OLMENJCGGJJ","EJGDELKANMO","HFGOEPIEBEE","ECOAIFKENNM","CKDBFHCIJEK"})
+                alternate = {"PKPBLCNMPIG", "HFNJHOGGFKB", "GEJGGCIOLKN", "MEEACMKOLJF", "OLMENJCGGJJ","EJGDELKANMO"})
         public DynamicFloat amountByCasterMaxHPRatio = DynamicFloat.ZERO;
 
         public DynamicFloat amountByGetDamage = DynamicFloat.ZERO;
@@ -348,7 +348,7 @@ public class AbilityModifier implements Serializable {
 
         public int param1;
         //public int param2;
-        // public int param3;
+        //public int param3;
 
         public String funcName;
         public LuaCallType luaCallType;
