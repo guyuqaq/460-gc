@@ -246,7 +246,6 @@ public final class PacketOpcodes {
 	public static final int TryEnterHomeReq = 29384;
 	public static final int TryEnterHomeRsp = 21829;
 	public static final int HomeBasicInfoNotify = 20840;
-	public static final int HomeLimitedShopInfoNotify = 23361;
 	public static final int PlayerQuitFromHomeNotify = 3135;
 	public static final int BackMyWorldReq = 29558;
 	public static final int BackMyWorldRsp = 23771;
@@ -287,7 +286,7 @@ public final class PacketOpcodes {
 	public static final int SalvageEscortSettleNotify = 7421;
 	public static final int ServerUpdateGlobalValueNotify = 1498;
 	public static final int UgcDungeonPlayRecordNotify = 7584;
-	public static final int ViewCodexRsp = 28795;
+	public static final int ViewCodexRsp = 28795; // unknow fields
 	public static final int SaveUgcRsp = 5480;
 	public static final int ActivityInfoNotify = 29575;
 	public static final int HomeAvatarSummonAllEventNotify = 22990;
@@ -342,7 +341,7 @@ public final class PacketOpcodes {
 	public static final int HomeCreateBlueprintRsp = 25729;
 	public static final int WorldPlayerLocationNotify = 22207;
 	public static final int ResinChangeNotify = 4336;
-	public static final int GetAllMailReq = 7646;
+	public static final int GetAllMailReq = 26533;
 	public static final int GetAllMailRsp = 22156;
 	public static final int GetMailItemReq = 8354;
 	public static final int GetMailItemRsp = 9691;
@@ -374,7 +373,7 @@ public final class PacketOpcodes {
 	public static final int UnfreezeGroupLimitNotify = 2540;
 	public static final int MapAreaChangeNotify = 21409;
 	public static final int QueryCodexMonsterBeKilledNumReq = 5718;
-	public static final int QueryCodexMonsterBeKilledNumRsp = 27403;
+	public static final int QueryCodexMonsterBeKilledNumRsp = 27403; // unknow fields
 	public static final int GetRegionSearchReq = 27191;
 	public static final int GetHomeExchangeWoodInfoReq = 5768;
 	public static final int PlayerChatReq = 21209;
@@ -526,7 +525,7 @@ public final class PacketOpcodes {
 	public static final int ChangeGameTimeReq = 9437;
 	public static final int ChangeGameTimeRsp = 29694;
 	public static final int AvatarChangeElementTypeReq = 21263;
-	public static final int AvatarChangeElementTypeRsp = 50000;
+	public static final int AvatarChangeElementTypeRsp = 50000; // unknow cmdid
 	public static final int AbilityInvocationFailNotify = 9225;
 	public static final int AbilityInvocationFixedNotify = 3547;
 	public static final int UpdateAbilityCreatedMovingPlatformNotify = 6274;
@@ -612,7 +611,7 @@ public final class PacketOpcodes {
     public static final int MusicGameSettleRsp = 25598; // or 25598,6575
     public static final int MusicGameStartReq = 3045; // or 3045,20846
     public static final int MusicGameStartRsp = 27757; // or 27757,20172,28729
-    public static final int PathfindingEnterSceneRsp = 50006;
+    public static final int PathfindingEnterSceneRsp = 50006; //unknow cmdid
     public static final int PersonalSceneJumpRsp = 1612;
     public static final int PlayerApplyEnterHomeNotify = 8132; // or 8132,38
     public static final int PlayerApplyEnterHomeResultNotify = 22086;
@@ -758,9 +757,18 @@ public final class PacketOpcodes {
 	public static final int LeaveSceneReq = 50028;
 	public static final int LeaveSceneRsp = 50029; // unknow cmdid 3060
 	public static final int EvtBeingHealedNotify = 26087;
-	public static final int ChangeWorldToSingleModeReq = 50029;
+	public static final int ChangeWorldToSingleModeReq = 50036;
 	public static final int ChangeWorldToSingleModeRsp = 20845;
 	public static final int ChangeWorldToSingleModeNotify = 50030;
+	public static final int HomeLimitedShopInfoNotify = 50031; // unknow cmdid 
+	public static final int HomeLimitedShopGoodsListReq = 50035;
+	public static final int HomeLimitedShopInfoReq = 50032;
+	public static final int HomeLimitedShopInfoRsp = 23361;
+	public static final int HomeSceneInitFinishReq = 50033;
+	public static final int HomeSceneInitFinishRsp = 50034;// unknow cmdid 
+
+
+	public static final int ShowClientGuideNotify = 1;
 
 	// obfuscated
 	public static final int EntityAiKillSelfNotify = 1;
@@ -899,8 +907,6 @@ public final class PacketOpcodes {
 	public static final int HomeResourceTakeHomeCoinRsp = 1;
 	public static final int HomeSaveArrangementNoChangeReq = 1;
 	public static final int HomeSaveArrangementNoChangeRsp = 1;
-	public static final int HomeSceneInitFinishReq = 1;
-	public static final int HomeSceneInitFinishRsp = 1;
 	public static final int HomeTransferRsp = 1;
 	public static final int LaunchFireworksReq = 1;
 	public static final int LaunchFireworksRsp = 1;
@@ -924,7 +930,6 @@ public final class PacketOpcodes {
 	public static final int SetChatEmojiCollectionRsp = 1;
 	public static final int SetUpLunchBoxWidgetReq = 1;
 	public static final int SetUpLunchBoxWidgetRsp = 1;
-	public static final int ShowClientGuideNotify = 1;
 	public static final int SpiceActivityGivingRecordNotify = 1;
 	public static final int SumoDungeonSettleNotify = 1;
 	public static final int ToTheMoonQueryPathReq = 1;
@@ -1686,9 +1691,6 @@ public final class PacketOpcodes {
 	public static final int HomeGetFishFarmingInfoRsp = 1;
 	public static final int HomeGetGroupRecordReq = 1;
 	public static final int HomeGetGroupRecordRsp = 1;
-	public static final int HomeLimitedShopGoodsListReq = 1;
-	public static final int HomeLimitedShopInfoReq = 1;
-	public static final int HomeLimitedShopInfoRsp = 1;
 	public static final int HomePictureFrameInfoNotify = 1;
 	public static final int HomePlantFieldNotify = 1;
 	public static final int HomePlantInfoNotify = 1;
