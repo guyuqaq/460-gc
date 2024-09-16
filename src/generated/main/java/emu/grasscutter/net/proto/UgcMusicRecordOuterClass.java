@@ -19,25 +19,25 @@ public final class UgcMusicRecordOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .UgcMusicTrack music_track_list = 14;</code>
+     * <code>repeated .UgcMusicTrack music_track_list = 11;</code>
      */
     java.util.List<emu.grasscutter.net.proto.UgcMusicTrackOuterClass.UgcMusicTrack> 
         getMusicTrackListList();
     /**
-     * <code>repeated .UgcMusicTrack music_track_list = 14;</code>
+     * <code>repeated .UgcMusicTrack music_track_list = 11;</code>
      */
     emu.grasscutter.net.proto.UgcMusicTrackOuterClass.UgcMusicTrack getMusicTrackList(int index);
     /**
-     * <code>repeated .UgcMusicTrack music_track_list = 14;</code>
+     * <code>repeated .UgcMusicTrack music_track_list = 11;</code>
      */
     int getMusicTrackListCount();
     /**
-     * <code>repeated .UgcMusicTrack music_track_list = 14;</code>
+     * <code>repeated .UgcMusicTrack music_track_list = 11;</code>
      */
     java.util.List<? extends emu.grasscutter.net.proto.UgcMusicTrackOuterClass.UgcMusicTrackOrBuilder> 
         getMusicTrackListOrBuilderList();
     /**
-     * <code>repeated .UgcMusicTrack music_track_list = 14;</code>
+     * <code>repeated .UgcMusicTrack music_track_list = 11;</code>
      */
     emu.grasscutter.net.proto.UgcMusicTrackOuterClass.UgcMusicTrackOrBuilder getMusicTrackListOrBuilder(
         int index);
@@ -49,10 +49,6 @@ public final class UgcMusicRecordOuterClass {
     int getMusicId();
   }
   /**
-   * <pre>
-   * Obf: HILPBDEAEAP
-   * </pre>
-   *
    * Protobuf type {@code UgcMusicRecord}
    */
   public static final class UgcMusicRecord extends
@@ -99,18 +95,18 @@ public final class UgcMusicRecordOuterClass {
             case 0:
               done = true;
               break;
-            case 96: {
-
-              musicId_ = input.readUInt32();
-              break;
-            }
-            case 114: {
+            case 90: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 musicTrackList_ = new java.util.ArrayList<emu.grasscutter.net.proto.UgcMusicTrackOuterClass.UgcMusicTrack>();
                 mutable_bitField0_ |= 0x00000001;
               }
               musicTrackList_.add(
                   input.readMessage(emu.grasscutter.net.proto.UgcMusicTrackOuterClass.UgcMusicTrack.parser(), extensionRegistry));
+              break;
+            }
+            case 96: {
+
+              musicId_ = input.readUInt32();
               break;
             }
             default: {
@@ -148,17 +144,17 @@ public final class UgcMusicRecordOuterClass {
               emu.grasscutter.net.proto.UgcMusicRecordOuterClass.UgcMusicRecord.class, emu.grasscutter.net.proto.UgcMusicRecordOuterClass.UgcMusicRecord.Builder.class);
     }
 
-    public static final int MUSIC_TRACK_LIST_FIELD_NUMBER = 14;
+    public static final int MUSIC_TRACK_LIST_FIELD_NUMBER = 11;
     private java.util.List<emu.grasscutter.net.proto.UgcMusicTrackOuterClass.UgcMusicTrack> musicTrackList_;
     /**
-     * <code>repeated .UgcMusicTrack music_track_list = 14;</code>
+     * <code>repeated .UgcMusicTrack music_track_list = 11;</code>
      */
     @java.lang.Override
     public java.util.List<emu.grasscutter.net.proto.UgcMusicTrackOuterClass.UgcMusicTrack> getMusicTrackListList() {
       return musicTrackList_;
     }
     /**
-     * <code>repeated .UgcMusicTrack music_track_list = 14;</code>
+     * <code>repeated .UgcMusicTrack music_track_list = 11;</code>
      */
     @java.lang.Override
     public java.util.List<? extends emu.grasscutter.net.proto.UgcMusicTrackOuterClass.UgcMusicTrackOrBuilder> 
@@ -166,21 +162,21 @@ public final class UgcMusicRecordOuterClass {
       return musicTrackList_;
     }
     /**
-     * <code>repeated .UgcMusicTrack music_track_list = 14;</code>
+     * <code>repeated .UgcMusicTrack music_track_list = 11;</code>
      */
     @java.lang.Override
     public int getMusicTrackListCount() {
       return musicTrackList_.size();
     }
     /**
-     * <code>repeated .UgcMusicTrack music_track_list = 14;</code>
+     * <code>repeated .UgcMusicTrack music_track_list = 11;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.UgcMusicTrackOuterClass.UgcMusicTrack getMusicTrackList(int index) {
       return musicTrackList_.get(index);
     }
     /**
-     * <code>repeated .UgcMusicTrack music_track_list = 14;</code>
+     * <code>repeated .UgcMusicTrack music_track_list = 11;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.UgcMusicTrackOuterClass.UgcMusicTrackOrBuilder getMusicTrackListOrBuilder(
@@ -213,11 +209,11 @@ public final class UgcMusicRecordOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      for (int i = 0; i < musicTrackList_.size(); i++) {
+        output.writeMessage(11, musicTrackList_.get(i));
+      }
       if (musicId_ != 0) {
         output.writeUInt32(12, musicId_);
-      }
-      for (int i = 0; i < musicTrackList_.size(); i++) {
-        output.writeMessage(14, musicTrackList_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -228,13 +224,13 @@ public final class UgcMusicRecordOuterClass {
       if (size != -1) return size;
 
       size = 0;
+      for (int i = 0; i < musicTrackList_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, musicTrackList_.get(i));
+      }
       if (musicId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(12, musicId_);
-      }
-      for (int i = 0; i < musicTrackList_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(14, musicTrackList_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -368,10 +364,6 @@ public final class UgcMusicRecordOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * Obf: HILPBDEAEAP
-     * </pre>
-     *
      * Protobuf type {@code UgcMusicRecord}
      */
     public static final class Builder extends
@@ -575,7 +567,7 @@ public final class UgcMusicRecordOuterClass {
           emu.grasscutter.net.proto.UgcMusicTrackOuterClass.UgcMusicTrack, emu.grasscutter.net.proto.UgcMusicTrackOuterClass.UgcMusicTrack.Builder, emu.grasscutter.net.proto.UgcMusicTrackOuterClass.UgcMusicTrackOrBuilder> musicTrackListBuilder_;
 
       /**
-       * <code>repeated .UgcMusicTrack music_track_list = 14;</code>
+       * <code>repeated .UgcMusicTrack music_track_list = 11;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.UgcMusicTrackOuterClass.UgcMusicTrack> getMusicTrackListList() {
         if (musicTrackListBuilder_ == null) {
@@ -585,7 +577,7 @@ public final class UgcMusicRecordOuterClass {
         }
       }
       /**
-       * <code>repeated .UgcMusicTrack music_track_list = 14;</code>
+       * <code>repeated .UgcMusicTrack music_track_list = 11;</code>
        */
       public int getMusicTrackListCount() {
         if (musicTrackListBuilder_ == null) {
@@ -595,7 +587,7 @@ public final class UgcMusicRecordOuterClass {
         }
       }
       /**
-       * <code>repeated .UgcMusicTrack music_track_list = 14;</code>
+       * <code>repeated .UgcMusicTrack music_track_list = 11;</code>
        */
       public emu.grasscutter.net.proto.UgcMusicTrackOuterClass.UgcMusicTrack getMusicTrackList(int index) {
         if (musicTrackListBuilder_ == null) {
@@ -605,7 +597,7 @@ public final class UgcMusicRecordOuterClass {
         }
       }
       /**
-       * <code>repeated .UgcMusicTrack music_track_list = 14;</code>
+       * <code>repeated .UgcMusicTrack music_track_list = 11;</code>
        */
       public Builder setMusicTrackList(
           int index, emu.grasscutter.net.proto.UgcMusicTrackOuterClass.UgcMusicTrack value) {
@@ -622,7 +614,7 @@ public final class UgcMusicRecordOuterClass {
         return this;
       }
       /**
-       * <code>repeated .UgcMusicTrack music_track_list = 14;</code>
+       * <code>repeated .UgcMusicTrack music_track_list = 11;</code>
        */
       public Builder setMusicTrackList(
           int index, emu.grasscutter.net.proto.UgcMusicTrackOuterClass.UgcMusicTrack.Builder builderForValue) {
@@ -636,7 +628,7 @@ public final class UgcMusicRecordOuterClass {
         return this;
       }
       /**
-       * <code>repeated .UgcMusicTrack music_track_list = 14;</code>
+       * <code>repeated .UgcMusicTrack music_track_list = 11;</code>
        */
       public Builder addMusicTrackList(emu.grasscutter.net.proto.UgcMusicTrackOuterClass.UgcMusicTrack value) {
         if (musicTrackListBuilder_ == null) {
@@ -652,7 +644,7 @@ public final class UgcMusicRecordOuterClass {
         return this;
       }
       /**
-       * <code>repeated .UgcMusicTrack music_track_list = 14;</code>
+       * <code>repeated .UgcMusicTrack music_track_list = 11;</code>
        */
       public Builder addMusicTrackList(
           int index, emu.grasscutter.net.proto.UgcMusicTrackOuterClass.UgcMusicTrack value) {
@@ -669,7 +661,7 @@ public final class UgcMusicRecordOuterClass {
         return this;
       }
       /**
-       * <code>repeated .UgcMusicTrack music_track_list = 14;</code>
+       * <code>repeated .UgcMusicTrack music_track_list = 11;</code>
        */
       public Builder addMusicTrackList(
           emu.grasscutter.net.proto.UgcMusicTrackOuterClass.UgcMusicTrack.Builder builderForValue) {
@@ -683,7 +675,7 @@ public final class UgcMusicRecordOuterClass {
         return this;
       }
       /**
-       * <code>repeated .UgcMusicTrack music_track_list = 14;</code>
+       * <code>repeated .UgcMusicTrack music_track_list = 11;</code>
        */
       public Builder addMusicTrackList(
           int index, emu.grasscutter.net.proto.UgcMusicTrackOuterClass.UgcMusicTrack.Builder builderForValue) {
@@ -697,7 +689,7 @@ public final class UgcMusicRecordOuterClass {
         return this;
       }
       /**
-       * <code>repeated .UgcMusicTrack music_track_list = 14;</code>
+       * <code>repeated .UgcMusicTrack music_track_list = 11;</code>
        */
       public Builder addAllMusicTrackList(
           java.lang.Iterable<? extends emu.grasscutter.net.proto.UgcMusicTrackOuterClass.UgcMusicTrack> values) {
@@ -712,7 +704,7 @@ public final class UgcMusicRecordOuterClass {
         return this;
       }
       /**
-       * <code>repeated .UgcMusicTrack music_track_list = 14;</code>
+       * <code>repeated .UgcMusicTrack music_track_list = 11;</code>
        */
       public Builder clearMusicTrackList() {
         if (musicTrackListBuilder_ == null) {
@@ -725,7 +717,7 @@ public final class UgcMusicRecordOuterClass {
         return this;
       }
       /**
-       * <code>repeated .UgcMusicTrack music_track_list = 14;</code>
+       * <code>repeated .UgcMusicTrack music_track_list = 11;</code>
        */
       public Builder removeMusicTrackList(int index) {
         if (musicTrackListBuilder_ == null) {
@@ -738,14 +730,14 @@ public final class UgcMusicRecordOuterClass {
         return this;
       }
       /**
-       * <code>repeated .UgcMusicTrack music_track_list = 14;</code>
+       * <code>repeated .UgcMusicTrack music_track_list = 11;</code>
        */
       public emu.grasscutter.net.proto.UgcMusicTrackOuterClass.UgcMusicTrack.Builder getMusicTrackListBuilder(
           int index) {
         return getMusicTrackListFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .UgcMusicTrack music_track_list = 14;</code>
+       * <code>repeated .UgcMusicTrack music_track_list = 11;</code>
        */
       public emu.grasscutter.net.proto.UgcMusicTrackOuterClass.UgcMusicTrackOrBuilder getMusicTrackListOrBuilder(
           int index) {
@@ -755,7 +747,7 @@ public final class UgcMusicRecordOuterClass {
         }
       }
       /**
-       * <code>repeated .UgcMusicTrack music_track_list = 14;</code>
+       * <code>repeated .UgcMusicTrack music_track_list = 11;</code>
        */
       public java.util.List<? extends emu.grasscutter.net.proto.UgcMusicTrackOuterClass.UgcMusicTrackOrBuilder> 
            getMusicTrackListOrBuilderList() {
@@ -766,14 +758,14 @@ public final class UgcMusicRecordOuterClass {
         }
       }
       /**
-       * <code>repeated .UgcMusicTrack music_track_list = 14;</code>
+       * <code>repeated .UgcMusicTrack music_track_list = 11;</code>
        */
       public emu.grasscutter.net.proto.UgcMusicTrackOuterClass.UgcMusicTrack.Builder addMusicTrackListBuilder() {
         return getMusicTrackListFieldBuilder().addBuilder(
             emu.grasscutter.net.proto.UgcMusicTrackOuterClass.UgcMusicTrack.getDefaultInstance());
       }
       /**
-       * <code>repeated .UgcMusicTrack music_track_list = 14;</code>
+       * <code>repeated .UgcMusicTrack music_track_list = 11;</code>
        */
       public emu.grasscutter.net.proto.UgcMusicTrackOuterClass.UgcMusicTrack.Builder addMusicTrackListBuilder(
           int index) {
@@ -781,7 +773,7 @@ public final class UgcMusicRecordOuterClass {
             index, emu.grasscutter.net.proto.UgcMusicTrackOuterClass.UgcMusicTrack.getDefaultInstance());
       }
       /**
-       * <code>repeated .UgcMusicTrack music_track_list = 14;</code>
+       * <code>repeated .UgcMusicTrack music_track_list = 11;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.UgcMusicTrackOuterClass.UgcMusicTrack.Builder> 
            getMusicTrackListBuilderList() {
@@ -901,7 +893,7 @@ public final class UgcMusicRecordOuterClass {
     java.lang.String[] descriptorData = {
       "\n\024UgcMusicRecord.proto\032\023UgcMusicTrack.pr" +
       "oto\"L\n\016UgcMusicRecord\022(\n\020music_track_lis" +
-      "t\030\016 \003(\0132\016.UgcMusicTrack\022\020\n\010music_id\030\014 \001(" +
+      "t\030\013 \003(\0132\016.UgcMusicTrack\022\020\n\010music_id\030\014 \001(" +
       "\rB\033\n\031emu.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

@@ -19,10 +19,10 @@ public final class UgcMusicBriefInfoOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 NDAMECLAEDH = 1;</code>
-     * @return The nDAMECLAEDH.
+     * <code>uint32 music_id = 1;</code>
+     * @return The musicId.
      */
-    int getNDAMECLAEDH();
+    int getMusicId();
 
     /**
      * <code>bool is_psn_platform = 2;</code>
@@ -244,7 +244,7 @@ public final class UgcMusicBriefInfoOuterClass {
               break;
             case 8: {
 
-              nDAMECLAEDH_ = input.readUInt32();
+              musicId_ = input.readUInt32();
               break;
             }
             case 16: {
@@ -436,15 +436,15 @@ public final class UgcMusicBriefInfoOuterClass {
               emu.grasscutter.net.proto.UgcMusicBriefInfoOuterClass.UgcMusicBriefInfo.class, emu.grasscutter.net.proto.UgcMusicBriefInfoOuterClass.UgcMusicBriefInfo.Builder.class);
     }
 
-    public static final int NDAMECLAEDH_FIELD_NUMBER = 1;
-    private int nDAMECLAEDH_;
+    public static final int MUSIC_ID_FIELD_NUMBER = 1;
+    private int musicId_;
     /**
-     * <code>uint32 NDAMECLAEDH = 1;</code>
-     * @return The nDAMECLAEDH.
+     * <code>uint32 music_id = 1;</code>
+     * @return The musicId.
      */
     @java.lang.Override
-    public int getNDAMECLAEDH() {
-      return nDAMECLAEDH_;
+    public int getMusicId() {
+      return musicId_;
     }
 
     public static final int IS_PSN_PLATFORM_FIELD_NUMBER = 2;
@@ -780,8 +780,8 @@ public final class UgcMusicBriefInfoOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
-      if (nDAMECLAEDH_ != 0) {
-        output.writeUInt32(1, nDAMECLAEDH_);
+      if (musicId_ != 0) {
+        output.writeUInt32(1, musicId_);
       }
       if (isPsnPlatform_ != false) {
         output.writeBool(2, isPsnPlatform_);
@@ -866,9 +866,9 @@ public final class UgcMusicBriefInfoOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (nDAMECLAEDH_ != 0) {
+      if (musicId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(1, nDAMECLAEDH_);
+          .computeUInt32Size(1, musicId_);
       }
       if (isPsnPlatform_ != false) {
         size += com.google.protobuf.CodedOutputStream
@@ -992,8 +992,8 @@ public final class UgcMusicBriefInfoOuterClass {
       }
       emu.grasscutter.net.proto.UgcMusicBriefInfoOuterClass.UgcMusicBriefInfo other = (emu.grasscutter.net.proto.UgcMusicBriefInfoOuterClass.UgcMusicBriefInfo) obj;
 
-      if (getNDAMECLAEDH()
-          != other.getNDAMECLAEDH()) return false;
+      if (getMusicId()
+          != other.getMusicId()) return false;
       if (getIsPsnPlatform()
           != other.getIsPsnPlatform()) return false;
       if (getBKPMHMLDIHK()
@@ -1052,8 +1052,8 @@ public final class UgcMusicBriefInfoOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NDAMECLAEDH_FIELD_NUMBER;
-      hash = (53 * hash) + getNDAMECLAEDH();
+      hash = (37 * hash) + MUSIC_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getMusicId();
       hash = (37 * hash) + IS_PSN_PLATFORM_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsPsnPlatform());
@@ -1243,7 +1243,7 @@ public final class UgcMusicBriefInfoOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        nDAMECLAEDH_ = 0;
+        musicId_ = 0;
 
         isPsnPlatform_ = false;
 
@@ -1320,7 +1320,7 @@ public final class UgcMusicBriefInfoOuterClass {
       public emu.grasscutter.net.proto.UgcMusicBriefInfoOuterClass.UgcMusicBriefInfo buildPartial() {
         emu.grasscutter.net.proto.UgcMusicBriefInfoOuterClass.UgcMusicBriefInfo result = new emu.grasscutter.net.proto.UgcMusicBriefInfoOuterClass.UgcMusicBriefInfo(this);
         int from_bitField0_ = bitField0_;
-        result.nDAMECLAEDH_ = nDAMECLAEDH_;
+        result.musicId_ = musicId_;
         result.isPsnPlatform_ = isPsnPlatform_;
         result.bKPMHMLDIHK_ = bKPMHMLDIHK_;
         result.gLHJIOOJEEH_ = gLHJIOOJEEH_;
@@ -1403,8 +1403,8 @@ public final class UgcMusicBriefInfoOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.UgcMusicBriefInfoOuterClass.UgcMusicBriefInfo other) {
         if (other == emu.grasscutter.net.proto.UgcMusicBriefInfoOuterClass.UgcMusicBriefInfo.getDefaultInstance()) return this;
-        if (other.getNDAMECLAEDH() != 0) {
-          setNDAMECLAEDH(other.getNDAMECLAEDH());
+        if (other.getMusicId() != 0) {
+          setMusicId(other.getMusicId());
         }
         if (other.getIsPsnPlatform() != false) {
           setIsPsnPlatform(other.getIsPsnPlatform());
@@ -1517,33 +1517,33 @@ public final class UgcMusicBriefInfoOuterClass {
       }
       private int bitField0_;
 
-      private int nDAMECLAEDH_ ;
+      private int musicId_ ;
       /**
-       * <code>uint32 NDAMECLAEDH = 1;</code>
-       * @return The nDAMECLAEDH.
+       * <code>uint32 music_id = 1;</code>
+       * @return The musicId.
        */
       @java.lang.Override
-      public int getNDAMECLAEDH() {
-        return nDAMECLAEDH_;
+      public int getMusicId() {
+        return musicId_;
       }
       /**
-       * <code>uint32 NDAMECLAEDH = 1;</code>
-       * @param value The nDAMECLAEDH to set.
+       * <code>uint32 music_id = 1;</code>
+       * @param value The musicId to set.
        * @return This builder for chaining.
        */
-      public Builder setNDAMECLAEDH(int value) {
+      public Builder setMusicId(int value) {
         
-        nDAMECLAEDH_ = value;
+        musicId_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 NDAMECLAEDH = 1;</code>
+       * <code>uint32 music_id = 1;</code>
        * @return This builder for chaining.
        */
-      public Builder clearNDAMECLAEDH() {
+      public Builder clearMusicId() {
         
-        nDAMECLAEDH_ = 0;
+        musicId_ = 0;
         onChanged();
         return this;
       }
@@ -2526,21 +2526,21 @@ public final class UgcMusicBriefInfoOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\027UgcMusicBriefInfo.proto\032\021FAJKFECCLCG.p" +
-      "roto\"\220\004\n\021UgcMusicBriefInfo\022\023\n\013NDAMECLAED" +
-      "H\030\001 \001(\r\022\027\n\017is_psn_platform\030\002 \001(\010\022\023\n\013BKPM" +
-      "HMLDIHK\030\003 \001(\r\022\023\n\013GLHJIOOJEEH\030\004 \001(\r\022\030\n\020cr" +
-      "eator_nickname\030\005 \001(\t\022\034\n\024import_from_ugc_" +
-      "guid\030\006 \001(\004\022\023\n\013BHAHCOLOCMA\030\007 \001(\010\022\021\n\tmax_s" +
-      "core\030\010 \001(\r\022\023\n\013NKCHBIAFPOM\030\t \001(\010\022\020\n\010ugc_g" +
-      "uid\030\n \001(\004\022\017\n\007version\030\013 \001(\r\022\023\n\013KBLIFMGHAK" +
-      "I\030\014 \001(\r\022\023\n\013INGMFKKOKHG\030\r \001(\010\022\023\n\013PKMJLHLC" +
-      "ELO\030\016 \001(\r\022\023\n\013OPPFABKNMMB\030\017 \001(\r\022\024\n\013HKNINP" +
-      "EJHNP\030\212\004 \001(\r\022\024\n\013EEFJNJEGJMJ\030\277\004 \001(\r\022\024\n\013KI" +
-      "LFCMKBHHM\030\240\013 \003(\r\022\024\n\013OJHGLMDJCMK\030\365\014 \001(\r\022\035" +
-      "\n\006social\030\242\r \001(\0132\014.FAJKFECCLCG\022\024\n\013HMJNBGD" +
-      "GLMA\030\313\016 \003(\r\022\024\n\013NGDDIACFMIK\030\211\017 \001(\r\022\024\n\013FKM" +
-      "DGINHHND\030\243\017 \001(\rB\033\n\031emu.grasscutter.net.p" +
-      "rotob\006proto3"
+      "roto\"\215\004\n\021UgcMusicBriefInfo\022\020\n\010music_id\030\001" +
+      " \001(\r\022\027\n\017is_psn_platform\030\002 \001(\010\022\023\n\013BKPMHML" +
+      "DIHK\030\003 \001(\r\022\023\n\013GLHJIOOJEEH\030\004 \001(\r\022\030\n\020creat" +
+      "or_nickname\030\005 \001(\t\022\034\n\024import_from_ugc_gui" +
+      "d\030\006 \001(\004\022\023\n\013BHAHCOLOCMA\030\007 \001(\010\022\021\n\tmax_scor" +
+      "e\030\010 \001(\r\022\023\n\013NKCHBIAFPOM\030\t \001(\010\022\020\n\010ugc_guid" +
+      "\030\n \001(\004\022\017\n\007version\030\013 \001(\r\022\023\n\013KBLIFMGHAKI\030\014" +
+      " \001(\r\022\023\n\013INGMFKKOKHG\030\r \001(\010\022\023\n\013PKMJLHLCELO" +
+      "\030\016 \001(\r\022\023\n\013OPPFABKNMMB\030\017 \001(\r\022\024\n\013HKNINPEJH" +
+      "NP\030\212\004 \001(\r\022\024\n\013EEFJNJEGJMJ\030\277\004 \001(\r\022\024\n\013KILFC" +
+      "MKBHHM\030\240\013 \003(\r\022\024\n\013OJHGLMDJCMK\030\365\014 \001(\r\022\035\n\006s" +
+      "ocial\030\242\r \001(\0132\014.FAJKFECCLCG\022\024\n\013HMJNBGDGLM" +
+      "A\030\313\016 \003(\r\022\024\n\013NGDDIACFMIK\030\211\017 \001(\r\022\024\n\013FKMDGI" +
+      "NHHND\030\243\017 \001(\rB\033\n\031emu.grasscutter.net.prot" +
+      "ob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2552,7 +2552,7 @@ public final class UgcMusicBriefInfoOuterClass {
     internal_static_UgcMusicBriefInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_UgcMusicBriefInfo_descriptor,
-        new java.lang.String[] { "NDAMECLAEDH", "IsPsnPlatform", "BKPMHMLDIHK", "GLHJIOOJEEH", "CreatorNickname", "ImportFromUgcGuid", "BHAHCOLOCMA", "MaxScore", "NKCHBIAFPOM", "UgcGuid", "Version", "KBLIFMGHAKI", "INGMFKKOKHG", "PKMJLHLCELO", "OPPFABKNMMB", "HKNINPEJHNP", "EEFJNJEGJMJ", "KILFCMKBHHM", "OJHGLMDJCMK", "Social", "HMJNBGDGLMA", "NGDDIACFMIK", "FKMDGINHHND", });
+        new java.lang.String[] { "MusicId", "IsPsnPlatform", "BKPMHMLDIHK", "GLHJIOOJEEH", "CreatorNickname", "ImportFromUgcGuid", "BHAHCOLOCMA", "MaxScore", "NKCHBIAFPOM", "UgcGuid", "Version", "KBLIFMGHAKI", "INGMFKKOKHG", "PKMJLHLCELO", "OPPFABKNMMB", "HKNINPEJHNP", "EEFJNJEGJMJ", "KILFCMKBHHM", "OJHGLMDJCMK", "Social", "HMJNBGDGLMA", "NGDDIACFMIK", "FKMDGINHHND", });
     emu.grasscutter.net.proto.FAJKFECCLCGOuterClass.getDescriptor();
   }
 
