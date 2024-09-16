@@ -795,9 +795,11 @@ public final class PacketOpcodes {
 	public static final int BeginCameraSceneLookNotify = 8133;
 	public static final int EndCameraSceneLookNotify = 50041;
 	public static final int DelScenePlayTeamEntityNotify = 29714; // or 29714,26259
-
 	public static final int PathfindingEnterSceneReq = 2374;
+
 	// obfuscated
+	public static final int PlayerEnterMapLayerNotify = 26672;
+	public static final int PlayerEnterChildMapLayerNotify = 2225;
 	public static final int PathfindingEnterSceneRsp = 1;
 	public static final int EnterSceneWeatherAreaNotify = 1;
 	public static final int ExitSceneWeatherAreaNotify = 1;
@@ -2454,3 +2456,4 @@ public final class PacketOpcodes {
 	public static final int WorldAllRoutineTypeNotify = 1;
 	public static final int WorldOwnerBlossomScheduleInfoNotify = 1;
 }
+//2458
