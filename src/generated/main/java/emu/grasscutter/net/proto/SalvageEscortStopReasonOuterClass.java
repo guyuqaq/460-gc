@@ -15,10 +15,6 @@ public final class SalvageEscortStopReasonOuterClass {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   /**
-   * <pre>
-   * Obf: IEFIFHKIGNC
-   * </pre>
-   *
    * Protobuf enum {@code SalvageEscortStopReason}
    */
   public enum SalvageEscortStopReason

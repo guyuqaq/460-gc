@@ -193,7 +193,7 @@ public final class CodexDataUpdateNotifyOuterClass {
       if (id_ != 0) {
         output.writeUInt32(1, id_);
       }
-      if (type_ != emu.grasscutter.net.proto.CodexTypeOuterClass.CodexType.CODEX_NONE.getNumber()) {
+      if (type_ != emu.grasscutter.net.proto.CodexTypeOuterClass.CodexType.CODEX_TYPE_NONE.getNumber()) {
         output.writeEnum(2, type_);
       }
       if (weaponMaxPromoteLevel_ != 0) {
@@ -212,7 +212,7 @@ public final class CodexDataUpdateNotifyOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(1, id_);
       }
-      if (type_ != emu.grasscutter.net.proto.CodexTypeOuterClass.CodexType.CODEX_NONE.getNumber()) {
+      if (type_ != emu.grasscutter.net.proto.CodexTypeOuterClass.CodexType.CODEX_TYPE_NONE.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(2, type_);
       }

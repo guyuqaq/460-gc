@@ -19,100 +19,98 @@ public final class PlayerOfferingDataOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>bool is_first_interact = 4;</code>
+     * <code>bool is_first_interact = 1;</code>
      * @return The isFirstInteract.
      */
     boolean getIsFirstInteract();
 
     /**
-     * <code>uint32 offering_id = 11;</code>
-     * @return The offeringId.
-     */
-    int getOfferingId();
-
-    /**
-     * <code>uint32 level = 8;</code>
-     * @return The level.
-     */
-    int getLevel();
-
-    /**
-     * <code>bool DDNFFOGFCIC = 13;</code>
-     * @return The dDNFFOGFCIC.
-     */
-    boolean getDDNFFOGFCIC();
-
-    /**
-     * <code>map&lt;uint32, uint32&gt; ELLFOGGMMKI = 2;</code>
-     */
-    int getELLFOGGMMKICount();
-    /**
-     * <code>map&lt;uint32, uint32&gt; ELLFOGGMMKI = 2;</code>
-     */
-    boolean containsELLFOGGMMKI(
-        int key);
-    /**
-     * Use {@link #getELLFOGGMMKIMap()} instead.
-     */
-    @java.lang.Deprecated
-    java.util.Map<java.lang.Integer, java.lang.Integer>
-    getELLFOGGMMKI();
-    /**
-     * <code>map&lt;uint32, uint32&gt; ELLFOGGMMKI = 2;</code>
-     */
-    java.util.Map<java.lang.Integer, java.lang.Integer>
-    getELLFOGGMMKIMap();
-    /**
-     * <code>map&lt;uint32, uint32&gt; ELLFOGGMMKI = 2;</code>
-     */
-
-    int getELLFOGGMMKIOrDefault(
-        int key,
-        int defaultValue);
-    /**
-     * <code>map&lt;uint32, uint32&gt; ELLFOGGMMKI = 2;</code>
-     */
-
-    int getELLFOGGMMKIOrThrow(
-        int key);
-
-    /**
-     * <code>repeated uint32 taken_level_reward_list = 7;</code>
+     * <code>repeated uint32 taken_level_reward_list = 2;</code>
      * @return A list containing the takenLevelRewardList.
      */
     java.util.List<java.lang.Integer> getTakenLevelRewardListList();
     /**
-     * <code>repeated uint32 taken_level_reward_list = 7;</code>
+     * <code>repeated uint32 taken_level_reward_list = 2;</code>
      * @return The count of takenLevelRewardList.
      */
     int getTakenLevelRewardListCount();
     /**
-     * <code>repeated uint32 taken_level_reward_list = 7;</code>
+     * <code>repeated uint32 taken_level_reward_list = 2;</code>
      * @param index The index of the element to return.
      * @return The takenLevelRewardList at the given index.
      */
     int getTakenLevelRewardList(int index);
 
     /**
-     * <code>optional .OfferingPariDetailData offering_pari_detail_data = 173;</code>
+     * <code>map&lt;uint32, uint32&gt; NKDLECNDEPA = 8;</code>
+     */
+    int getNKDLECNDEPACount();
+    /**
+     * <code>map&lt;uint32, uint32&gt; NKDLECNDEPA = 8;</code>
+     */
+    boolean containsNKDLECNDEPA(
+        int key);
+    /**
+     * Use {@link #getNKDLECNDEPAMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.Integer, java.lang.Integer>
+    getNKDLECNDEPA();
+    /**
+     * <code>map&lt;uint32, uint32&gt; NKDLECNDEPA = 8;</code>
+     */
+    java.util.Map<java.lang.Integer, java.lang.Integer>
+    getNKDLECNDEPAMap();
+    /**
+     * <code>map&lt;uint32, uint32&gt; NKDLECNDEPA = 8;</code>
+     */
+
+    int getNKDLECNDEPAOrDefault(
+        int key,
+        int defaultValue);
+    /**
+     * <code>map&lt;uint32, uint32&gt; NKDLECNDEPA = 8;</code>
+     */
+
+    int getNKDLECNDEPAOrThrow(
+        int key);
+
+    /**
+     * <code>uint32 offering_id = 9;</code>
+     * @return The offeringId.
+     */
+    int getOfferingId();
+
+    /**
+     * <code>bool is_new_max_level = 12;</code>
+     * @return The isNewMaxLevel.
+     */
+    boolean getIsNewMaxLevel();
+
+    /**
+     * <code>uint32 level = 15;</code>
+     * @return The level.
+     */
+    int getLevel();
+
+    /**
+     * <code>.OfferingPariDetailData offering_pari_detail_data = 814;</code>
      * @return Whether the offeringPariDetailData field is set.
      */
     boolean hasOfferingPariDetailData();
     /**
-     * <code>optional .OfferingPariDetailData offering_pari_detail_data = 173;</code>
+     * <code>.OfferingPariDetailData offering_pari_detail_data = 814;</code>
      * @return The offeringPariDetailData.
      */
     emu.grasscutter.net.proto.OfferingPariDetailDataOuterClass.OfferingPariDetailData getOfferingPariDetailData();
     /**
-     * <code>optional .OfferingPariDetailData offering_pari_detail_data = 173;</code>
+     * <code>.OfferingPariDetailData offering_pari_detail_data = 814;</code>
      */
     emu.grasscutter.net.proto.OfferingPariDetailDataOuterClass.OfferingPariDetailDataOrBuilder getOfferingPariDetailDataOrBuilder();
+
+    public emu.grasscutter.net.proto.PlayerOfferingDataOuterClass.PlayerOfferingData.DetailCase getDetailCase();
   }
   /**
-   * <pre>
-   * Obf: EHPEFDGPGAA
-   * </pre>
-   *
    * Protobuf type {@code PlayerOfferingData}
    */
   public static final class PlayerOfferingData extends
@@ -159,38 +157,25 @@ public final class PlayerOfferingDataOuterClass {
             case 0:
               done = true;
               break;
-            case 18: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                eLLFOGGMMKI_ = com.google.protobuf.MapField.newMapField(
-                    ELLFOGGMMKIDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000001;
-              }
-              com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
-              eLLFOGGMMKI__ = input.readMessage(
-                  ELLFOGGMMKIDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              eLLFOGGMMKI_.getMutableMap().put(
-                  eLLFOGGMMKI__.getKey(), eLLFOGGMMKI__.getValue());
-              break;
-            }
-            case 32: {
+            case 8: {
 
               isFirstInteract_ = input.readBool();
               break;
             }
-            case 56: {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+            case 16: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 takenLevelRewardList_ = newIntList();
-                mutable_bitField0_ |= 0x00000002;
+                mutable_bitField0_ |= 0x00000001;
               }
               takenLevelRewardList_.addInt(input.readUInt32());
               break;
             }
-            case 58: {
+            case 18: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000002) != 0) && input.getBytesUntilLimit() > 0) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
                 takenLevelRewardList_ = newIntList();
-                mutable_bitField0_ |= 0x00000002;
+                mutable_bitField0_ |= 0x00000001;
               }
               while (input.getBytesUntilLimit() > 0) {
                 takenLevelRewardList_.addInt(input.readUInt32());
@@ -198,32 +183,46 @@ public final class PlayerOfferingDataOuterClass {
               input.popLimit(limit);
               break;
             }
-            case 64: {
-
-              level_ = input.readUInt32();
+            case 66: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                nKDLECNDEPA_ = com.google.protobuf.MapField.newMapField(
+                    NKDLECNDEPADefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000002;
+              }
+              com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
+              nKDLECNDEPA__ = input.readMessage(
+                  NKDLECNDEPADefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              nKDLECNDEPA_.getMutableMap().put(
+                  nKDLECNDEPA__.getKey(), nKDLECNDEPA__.getValue());
               break;
             }
-            case 88: {
+            case 72: {
 
               offeringId_ = input.readUInt32();
               break;
             }
-            case 104: {
+            case 96: {
 
-              dDNFFOGFCIC_ = input.readBool();
+              isNewMaxLevel_ = input.readBool();
               break;
             }
-            case 1386: {
+            case 120: {
+
+              level_ = input.readUInt32();
+              break;
+            }
+            case 6514: {
               emu.grasscutter.net.proto.OfferingPariDetailDataOuterClass.OfferingPariDetailData.Builder subBuilder = null;
-              if (((bitField0_ & 0x00000001) != 0)) {
-                subBuilder = offeringPariDetailData_.toBuilder();
+              if (detailCase_ == 814) {
+                subBuilder = ((emu.grasscutter.net.proto.OfferingPariDetailDataOuterClass.OfferingPariDetailData) detail_).toBuilder();
               }
-              offeringPariDetailData_ = input.readMessage(emu.grasscutter.net.proto.OfferingPariDetailDataOuterClass.OfferingPariDetailData.parser(), extensionRegistry);
+              detail_ =
+                  input.readMessage(emu.grasscutter.net.proto.OfferingPariDetailDataOuterClass.OfferingPariDetailData.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(offeringPariDetailData_);
-                offeringPariDetailData_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom((emu.grasscutter.net.proto.OfferingPariDetailDataOuterClass.OfferingPariDetailData) detail_);
+                detail_ = subBuilder.buildPartial();
               }
-              bitField0_ |= 0x00000001;
+              detailCase_ = 814;
               break;
             }
             default: {
@@ -241,7 +240,7 @@ public final class PlayerOfferingDataOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           takenLevelRewardList_.makeImmutable(); // C
         }
         this.unknownFields = unknownFields.build();
@@ -258,8 +257,8 @@ public final class PlayerOfferingDataOuterClass {
     protected com.google.protobuf.MapField internalGetMapField(
         int number) {
       switch (number) {
-        case 2:
-          return internalGetELLFOGGMMKI();
+        case 8:
+          return internalGetNKDLECNDEPA();
         default:
           throw new RuntimeException(
               "Invalid map field number: " + number);
@@ -273,11 +272,49 @@ public final class PlayerOfferingDataOuterClass {
               emu.grasscutter.net.proto.PlayerOfferingDataOuterClass.PlayerOfferingData.class, emu.grasscutter.net.proto.PlayerOfferingDataOuterClass.PlayerOfferingData.Builder.class);
     }
 
-    private int bitField0_;
-    public static final int IS_FIRST_INTERACT_FIELD_NUMBER = 4;
+    private int detailCase_ = 0;
+    private java.lang.Object detail_;
+    public enum DetailCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      OFFERING_PARI_DETAIL_DATA(814),
+      DETAIL_NOT_SET(0);
+      private final int value;
+      private DetailCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static DetailCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static DetailCase forNumber(int value) {
+        switch (value) {
+          case 814: return OFFERING_PARI_DETAIL_DATA;
+          case 0: return DETAIL_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public DetailCase
+    getDetailCase() {
+      return DetailCase.forNumber(
+          detailCase_);
+    }
+
+    public static final int IS_FIRST_INTERACT_FIELD_NUMBER = 1;
     private boolean isFirstInteract_;
     /**
-     * <code>bool is_first_interact = 4;</code>
+     * <code>bool is_first_interact = 1;</code>
      * @return The isFirstInteract.
      */
     @java.lang.Override
@@ -285,124 +322,10 @@ public final class PlayerOfferingDataOuterClass {
       return isFirstInteract_;
     }
 
-    public static final int OFFERING_ID_FIELD_NUMBER = 11;
-    private int offeringId_;
-    /**
-     * <code>uint32 offering_id = 11;</code>
-     * @return The offeringId.
-     */
-    @java.lang.Override
-    public int getOfferingId() {
-      return offeringId_;
-    }
-
-    public static final int LEVEL_FIELD_NUMBER = 8;
-    private int level_;
-    /**
-     * <code>uint32 level = 8;</code>
-     * @return The level.
-     */
-    @java.lang.Override
-    public int getLevel() {
-      return level_;
-    }
-
-    public static final int DDNFFOGFCIC_FIELD_NUMBER = 13;
-    private boolean dDNFFOGFCIC_;
-    /**
-     * <code>bool DDNFFOGFCIC = 13;</code>
-     * @return The dDNFFOGFCIC.
-     */
-    @java.lang.Override
-    public boolean getDDNFFOGFCIC() {
-      return dDNFFOGFCIC_;
-    }
-
-    public static final int ELLFOGGMMKI_FIELD_NUMBER = 2;
-    private static final class ELLFOGGMMKIDefaultEntryHolder {
-      static final com.google.protobuf.MapEntry<
-          java.lang.Integer, java.lang.Integer> defaultEntry =
-              com.google.protobuf.MapEntry
-              .<java.lang.Integer, java.lang.Integer>newDefaultInstance(
-                  emu.grasscutter.net.proto.PlayerOfferingDataOuterClass.internal_static_PlayerOfferingData_ELLFOGGMMKIEntry_descriptor, 
-                  com.google.protobuf.WireFormat.FieldType.UINT32,
-                  0,
-                  com.google.protobuf.WireFormat.FieldType.UINT32,
-                  0);
-    }
-    private com.google.protobuf.MapField<
-        java.lang.Integer, java.lang.Integer> eLLFOGGMMKI_;
-    private com.google.protobuf.MapField<java.lang.Integer, java.lang.Integer>
-    internalGetELLFOGGMMKI() {
-      if (eLLFOGGMMKI_ == null) {
-        return com.google.protobuf.MapField.emptyMapField(
-            ELLFOGGMMKIDefaultEntryHolder.defaultEntry);
-      }
-      return eLLFOGGMMKI_;
-    }
-
-    public int getELLFOGGMMKICount() {
-      return internalGetELLFOGGMMKI().getMap().size();
-    }
-    /**
-     * <code>map&lt;uint32, uint32&gt; ELLFOGGMMKI = 2;</code>
-     */
-
-    @java.lang.Override
-    public boolean containsELLFOGGMMKI(
-        int key) {
-      
-      return internalGetELLFOGGMMKI().getMap().containsKey(key);
-    }
-    /**
-     * Use {@link #getELLFOGGMMKIMap()} instead.
-     */
-    @java.lang.Override
-    @java.lang.Deprecated
-    public java.util.Map<java.lang.Integer, java.lang.Integer> getELLFOGGMMKI() {
-      return getELLFOGGMMKIMap();
-    }
-    /**
-     * <code>map&lt;uint32, uint32&gt; ELLFOGGMMKI = 2;</code>
-     */
-    @java.lang.Override
-
-    public java.util.Map<java.lang.Integer, java.lang.Integer> getELLFOGGMMKIMap() {
-      return internalGetELLFOGGMMKI().getMap();
-    }
-    /**
-     * <code>map&lt;uint32, uint32&gt; ELLFOGGMMKI = 2;</code>
-     */
-    @java.lang.Override
-
-    public int getELLFOGGMMKIOrDefault(
-        int key,
-        int defaultValue) {
-      
-      java.util.Map<java.lang.Integer, java.lang.Integer> map =
-          internalGetELLFOGGMMKI().getMap();
-      return map.containsKey(key) ? map.get(key) : defaultValue;
-    }
-    /**
-     * <code>map&lt;uint32, uint32&gt; ELLFOGGMMKI = 2;</code>
-     */
-    @java.lang.Override
-
-    public int getELLFOGGMMKIOrThrow(
-        int key) {
-      
-      java.util.Map<java.lang.Integer, java.lang.Integer> map =
-          internalGetELLFOGGMMKI().getMap();
-      if (!map.containsKey(key)) {
-        throw new java.lang.IllegalArgumentException();
-      }
-      return map.get(key);
-    }
-
-    public static final int TAKEN_LEVEL_REWARD_LIST_FIELD_NUMBER = 7;
+    public static final int TAKEN_LEVEL_REWARD_LIST_FIELD_NUMBER = 2;
     private com.google.protobuf.Internal.IntList takenLevelRewardList_;
     /**
-     * <code>repeated uint32 taken_level_reward_list = 7;</code>
+     * <code>repeated uint32 taken_level_reward_list = 2;</code>
      * @return A list containing the takenLevelRewardList.
      */
     @java.lang.Override
@@ -411,14 +334,14 @@ public final class PlayerOfferingDataOuterClass {
       return takenLevelRewardList_;
     }
     /**
-     * <code>repeated uint32 taken_level_reward_list = 7;</code>
+     * <code>repeated uint32 taken_level_reward_list = 2;</code>
      * @return The count of takenLevelRewardList.
      */
     public int getTakenLevelRewardListCount() {
       return takenLevelRewardList_.size();
     }
     /**
-     * <code>repeated uint32 taken_level_reward_list = 7;</code>
+     * <code>repeated uint32 taken_level_reward_list = 2;</code>
      * @param index The index of the element to return.
      * @return The takenLevelRewardList at the given index.
      */
@@ -427,30 +350,149 @@ public final class PlayerOfferingDataOuterClass {
     }
     private int takenLevelRewardListMemoizedSerializedSize = -1;
 
-    public static final int OFFERING_PARI_DETAIL_DATA_FIELD_NUMBER = 173;
-    private emu.grasscutter.net.proto.OfferingPariDetailDataOuterClass.OfferingPariDetailData offeringPariDetailData_;
+    public static final int NKDLECNDEPA_FIELD_NUMBER = 8;
+    private static final class NKDLECNDEPADefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.Integer, java.lang.Integer> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.Integer, java.lang.Integer>newDefaultInstance(
+                  emu.grasscutter.net.proto.PlayerOfferingDataOuterClass.internal_static_PlayerOfferingData_NKDLECNDEPAEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.UINT32,
+                  0,
+                  com.google.protobuf.WireFormat.FieldType.UINT32,
+                  0);
+    }
+    private com.google.protobuf.MapField<
+        java.lang.Integer, java.lang.Integer> nKDLECNDEPA_;
+    private com.google.protobuf.MapField<java.lang.Integer, java.lang.Integer>
+    internalGetNKDLECNDEPA() {
+      if (nKDLECNDEPA_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            NKDLECNDEPADefaultEntryHolder.defaultEntry);
+      }
+      return nKDLECNDEPA_;
+    }
+
+    public int getNKDLECNDEPACount() {
+      return internalGetNKDLECNDEPA().getMap().size();
+    }
     /**
-     * <code>optional .OfferingPariDetailData offering_pari_detail_data = 173;</code>
+     * <code>map&lt;uint32, uint32&gt; NKDLECNDEPA = 8;</code>
+     */
+
+    @java.lang.Override
+    public boolean containsNKDLECNDEPA(
+        int key) {
+      
+      return internalGetNKDLECNDEPA().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getNKDLECNDEPAMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.Integer, java.lang.Integer> getNKDLECNDEPA() {
+      return getNKDLECNDEPAMap();
+    }
+    /**
+     * <code>map&lt;uint32, uint32&gt; NKDLECNDEPA = 8;</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.Integer, java.lang.Integer> getNKDLECNDEPAMap() {
+      return internalGetNKDLECNDEPA().getMap();
+    }
+    /**
+     * <code>map&lt;uint32, uint32&gt; NKDLECNDEPA = 8;</code>
+     */
+    @java.lang.Override
+
+    public int getNKDLECNDEPAOrDefault(
+        int key,
+        int defaultValue) {
+      
+      java.util.Map<java.lang.Integer, java.lang.Integer> map =
+          internalGetNKDLECNDEPA().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;uint32, uint32&gt; NKDLECNDEPA = 8;</code>
+     */
+    @java.lang.Override
+
+    public int getNKDLECNDEPAOrThrow(
+        int key) {
+      
+      java.util.Map<java.lang.Integer, java.lang.Integer> map =
+          internalGetNKDLECNDEPA().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    public static final int OFFERING_ID_FIELD_NUMBER = 9;
+    private int offeringId_;
+    /**
+     * <code>uint32 offering_id = 9;</code>
+     * @return The offeringId.
+     */
+    @java.lang.Override
+    public int getOfferingId() {
+      return offeringId_;
+    }
+
+    public static final int IS_NEW_MAX_LEVEL_FIELD_NUMBER = 12;
+    private boolean isNewMaxLevel_;
+    /**
+     * <code>bool is_new_max_level = 12;</code>
+     * @return The isNewMaxLevel.
+     */
+    @java.lang.Override
+    public boolean getIsNewMaxLevel() {
+      return isNewMaxLevel_;
+    }
+
+    public static final int LEVEL_FIELD_NUMBER = 15;
+    private int level_;
+    /**
+     * <code>uint32 level = 15;</code>
+     * @return The level.
+     */
+    @java.lang.Override
+    public int getLevel() {
+      return level_;
+    }
+
+    public static final int OFFERING_PARI_DETAIL_DATA_FIELD_NUMBER = 814;
+    /**
+     * <code>.OfferingPariDetailData offering_pari_detail_data = 814;</code>
      * @return Whether the offeringPariDetailData field is set.
      */
     @java.lang.Override
     public boolean hasOfferingPariDetailData() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return detailCase_ == 814;
     }
     /**
-     * <code>optional .OfferingPariDetailData offering_pari_detail_data = 173;</code>
+     * <code>.OfferingPariDetailData offering_pari_detail_data = 814;</code>
      * @return The offeringPariDetailData.
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.OfferingPariDetailDataOuterClass.OfferingPariDetailData getOfferingPariDetailData() {
-      return offeringPariDetailData_ == null ? emu.grasscutter.net.proto.OfferingPariDetailDataOuterClass.OfferingPariDetailData.getDefaultInstance() : offeringPariDetailData_;
+      if (detailCase_ == 814) {
+         return (emu.grasscutter.net.proto.OfferingPariDetailDataOuterClass.OfferingPariDetailData) detail_;
+      }
+      return emu.grasscutter.net.proto.OfferingPariDetailDataOuterClass.OfferingPariDetailData.getDefaultInstance();
     }
     /**
-     * <code>optional .OfferingPariDetailData offering_pari_detail_data = 173;</code>
+     * <code>.OfferingPariDetailData offering_pari_detail_data = 814;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.OfferingPariDetailDataOuterClass.OfferingPariDetailDataOrBuilder getOfferingPariDetailDataOrBuilder() {
-      return offeringPariDetailData_ == null ? emu.grasscutter.net.proto.OfferingPariDetailDataOuterClass.OfferingPariDetailData.getDefaultInstance() : offeringPariDetailData_;
+      if (detailCase_ == 814) {
+         return (emu.grasscutter.net.proto.OfferingPariDetailDataOuterClass.OfferingPariDetailData) detail_;
+      }
+      return emu.grasscutter.net.proto.OfferingPariDetailDataOuterClass.OfferingPariDetailData.getDefaultInstance();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -468,33 +510,33 @@ public final class PlayerOfferingDataOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
-      com.google.protobuf.GeneratedMessageV3
-        .serializeIntegerMapTo(
-          output,
-          internalGetELLFOGGMMKI(),
-          ELLFOGGMMKIDefaultEntryHolder.defaultEntry,
-          2);
       if (isFirstInteract_ != false) {
-        output.writeBool(4, isFirstInteract_);
+        output.writeBool(1, isFirstInteract_);
       }
       if (getTakenLevelRewardListList().size() > 0) {
-        output.writeUInt32NoTag(58);
+        output.writeUInt32NoTag(18);
         output.writeUInt32NoTag(takenLevelRewardListMemoizedSerializedSize);
       }
       for (int i = 0; i < takenLevelRewardList_.size(); i++) {
         output.writeUInt32NoTag(takenLevelRewardList_.getInt(i));
       }
-      if (level_ != 0) {
-        output.writeUInt32(8, level_);
-      }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeIntegerMapTo(
+          output,
+          internalGetNKDLECNDEPA(),
+          NKDLECNDEPADefaultEntryHolder.defaultEntry,
+          8);
       if (offeringId_ != 0) {
-        output.writeUInt32(11, offeringId_);
+        output.writeUInt32(9, offeringId_);
       }
-      if (dDNFFOGFCIC_ != false) {
-        output.writeBool(13, dDNFFOGFCIC_);
+      if (isNewMaxLevel_ != false) {
+        output.writeBool(12, isNewMaxLevel_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(173, getOfferingPariDetailData());
+      if (level_ != 0) {
+        output.writeUInt32(15, level_);
+      }
+      if (detailCase_ == 814) {
+        output.writeMessage(814, (emu.grasscutter.net.proto.OfferingPariDetailDataOuterClass.OfferingPariDetailData) detail_);
       }
       unknownFields.writeTo(output);
     }
@@ -505,19 +547,9 @@ public final class PlayerOfferingDataOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      for (java.util.Map.Entry<java.lang.Integer, java.lang.Integer> entry
-           : internalGetELLFOGGMMKI().getMap().entrySet()) {
-        com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
-        eLLFOGGMMKI__ = ELLFOGGMMKIDefaultEntryHolder.defaultEntry.newBuilderForType()
-            .setKey(entry.getKey())
-            .setValue(entry.getValue())
-            .build();
-        size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(2, eLLFOGGMMKI__);
-      }
       if (isFirstInteract_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(4, isFirstInteract_);
+          .computeBoolSize(1, isFirstInteract_);
       }
       {
         int dataSize = 0;
@@ -533,21 +565,31 @@ public final class PlayerOfferingDataOuterClass {
         }
         takenLevelRewardListMemoizedSerializedSize = dataSize;
       }
-      if (level_ != 0) {
+      for (java.util.Map.Entry<java.lang.Integer, java.lang.Integer> entry
+           : internalGetNKDLECNDEPA().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
+        nKDLECNDEPA__ = NKDLECNDEPADefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(8, level_);
+            .computeMessageSize(8, nKDLECNDEPA__);
       }
       if (offeringId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(11, offeringId_);
+          .computeUInt32Size(9, offeringId_);
       }
-      if (dDNFFOGFCIC_ != false) {
+      if (isNewMaxLevel_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(13, dDNFFOGFCIC_);
+          .computeBoolSize(12, isNewMaxLevel_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (level_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(173, getOfferingPariDetailData());
+          .computeUInt32Size(15, level_);
+      }
+      if (detailCase_ == 814) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(814, (emu.grasscutter.net.proto.OfferingPariDetailDataOuterClass.OfferingPariDetailData) detail_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -566,20 +608,24 @@ public final class PlayerOfferingDataOuterClass {
 
       if (getIsFirstInteract()
           != other.getIsFirstInteract()) return false;
-      if (getOfferingId()
-          != other.getOfferingId()) return false;
-      if (getLevel()
-          != other.getLevel()) return false;
-      if (getDDNFFOGFCIC()
-          != other.getDDNFFOGFCIC()) return false;
-      if (!internalGetELLFOGGMMKI().equals(
-          other.internalGetELLFOGGMMKI())) return false;
       if (!getTakenLevelRewardListList()
           .equals(other.getTakenLevelRewardListList())) return false;
-      if (hasOfferingPariDetailData() != other.hasOfferingPariDetailData()) return false;
-      if (hasOfferingPariDetailData()) {
-        if (!getOfferingPariDetailData()
-            .equals(other.getOfferingPariDetailData())) return false;
+      if (!internalGetNKDLECNDEPA().equals(
+          other.internalGetNKDLECNDEPA())) return false;
+      if (getOfferingId()
+          != other.getOfferingId()) return false;
+      if (getIsNewMaxLevel()
+          != other.getIsNewMaxLevel()) return false;
+      if (getLevel()
+          != other.getLevel()) return false;
+      if (!getDetailCase().equals(other.getDetailCase())) return false;
+      switch (detailCase_) {
+        case 814:
+          if (!getOfferingPariDetailData()
+              .equals(other.getOfferingPariDetailData())) return false;
+          break;
+        case 0:
+        default:
       }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
@@ -595,24 +641,28 @@ public final class PlayerOfferingDataOuterClass {
       hash = (37 * hash) + IS_FIRST_INTERACT_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsFirstInteract());
-      hash = (37 * hash) + OFFERING_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getOfferingId();
-      hash = (37 * hash) + LEVEL_FIELD_NUMBER;
-      hash = (53 * hash) + getLevel();
-      hash = (37 * hash) + DDNFFOGFCIC_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getDDNFFOGFCIC());
-      if (!internalGetELLFOGGMMKI().getMap().isEmpty()) {
-        hash = (37 * hash) + ELLFOGGMMKI_FIELD_NUMBER;
-        hash = (53 * hash) + internalGetELLFOGGMMKI().hashCode();
-      }
       if (getTakenLevelRewardListCount() > 0) {
         hash = (37 * hash) + TAKEN_LEVEL_REWARD_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getTakenLevelRewardListList().hashCode();
       }
-      if (hasOfferingPariDetailData()) {
-        hash = (37 * hash) + OFFERING_PARI_DETAIL_DATA_FIELD_NUMBER;
-        hash = (53 * hash) + getOfferingPariDetailData().hashCode();
+      if (!internalGetNKDLECNDEPA().getMap().isEmpty()) {
+        hash = (37 * hash) + NKDLECNDEPA_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetNKDLECNDEPA().hashCode();
+      }
+      hash = (37 * hash) + OFFERING_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getOfferingId();
+      hash = (37 * hash) + IS_NEW_MAX_LEVEL_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsNewMaxLevel());
+      hash = (37 * hash) + LEVEL_FIELD_NUMBER;
+      hash = (53 * hash) + getLevel();
+      switch (detailCase_) {
+        case 814:
+          hash = (37 * hash) + OFFERING_PARI_DETAIL_DATA_FIELD_NUMBER;
+          hash = (53 * hash) + getOfferingPariDetailData().hashCode();
+          break;
+        case 0:
+        default:
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -710,10 +760,6 @@ public final class PlayerOfferingDataOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * Obf: EHPEFDGPGAA
-     * </pre>
-     *
      * Protobuf type {@code PlayerOfferingData}
      */
     public static final class Builder extends
@@ -729,8 +775,8 @@ public final class PlayerOfferingDataOuterClass {
       protected com.google.protobuf.MapField internalGetMapField(
           int number) {
         switch (number) {
-          case 2:
-            return internalGetELLFOGGMMKI();
+          case 8:
+            return internalGetNKDLECNDEPA();
           default:
             throw new RuntimeException(
                 "Invalid map field number: " + number);
@@ -740,8 +786,8 @@ public final class PlayerOfferingDataOuterClass {
       protected com.google.protobuf.MapField internalGetMutableMapField(
           int number) {
         switch (number) {
-          case 2:
-            return internalGetMutableELLFOGGMMKI();
+          case 8:
+            return internalGetMutableNKDLECNDEPA();
           default:
             throw new RuntimeException(
                 "Invalid map field number: " + number);
@@ -768,7 +814,6 @@ public final class PlayerOfferingDataOuterClass {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
-          getOfferingPariDetailDataFieldBuilder();
         }
       }
       @java.lang.Override
@@ -776,21 +821,17 @@ public final class PlayerOfferingDataOuterClass {
         super.clear();
         isFirstInteract_ = false;
 
+        takenLevelRewardList_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        internalGetMutableNKDLECNDEPA().clear();
         offeringId_ = 0;
+
+        isNewMaxLevel_ = false;
 
         level_ = 0;
 
-        dDNFFOGFCIC_ = false;
-
-        internalGetMutableELLFOGGMMKI().clear();
-        takenLevelRewardList_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000002);
-        if (offeringPariDetailDataBuilder_ == null) {
-          offeringPariDetailData_ = null;
-        } else {
-          offeringPariDetailDataBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000004);
+        detailCase_ = 0;
+        detail_ = null;
         return this;
       }
 
@@ -818,27 +859,25 @@ public final class PlayerOfferingDataOuterClass {
       public emu.grasscutter.net.proto.PlayerOfferingDataOuterClass.PlayerOfferingData buildPartial() {
         emu.grasscutter.net.proto.PlayerOfferingDataOuterClass.PlayerOfferingData result = new emu.grasscutter.net.proto.PlayerOfferingDataOuterClass.PlayerOfferingData(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.isFirstInteract_ = isFirstInteract_;
-        result.offeringId_ = offeringId_;
-        result.level_ = level_;
-        result.dDNFFOGFCIC_ = dDNFFOGFCIC_;
-        result.eLLFOGGMMKI_ = internalGetELLFOGGMMKI();
-        result.eLLFOGGMMKI_.makeImmutable();
-        if (((bitField0_ & 0x00000002) != 0)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           takenLevelRewardList_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.takenLevelRewardList_ = takenLevelRewardList_;
-        if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.nKDLECNDEPA_ = internalGetNKDLECNDEPA();
+        result.nKDLECNDEPA_.makeImmutable();
+        result.offeringId_ = offeringId_;
+        result.isNewMaxLevel_ = isNewMaxLevel_;
+        result.level_ = level_;
+        if (detailCase_ == 814) {
           if (offeringPariDetailDataBuilder_ == null) {
-            result.offeringPariDetailData_ = offeringPariDetailData_;
+            result.detail_ = detail_;
           } else {
-            result.offeringPariDetailData_ = offeringPariDetailDataBuilder_.build();
+            result.detail_ = offeringPariDetailDataBuilder_.build();
           }
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ = to_bitField0_;
+        result.detailCase_ = detailCase_;
         onBuilt();
         return result;
       }
@@ -890,29 +929,35 @@ public final class PlayerOfferingDataOuterClass {
         if (other.getIsFirstInteract() != false) {
           setIsFirstInteract(other.getIsFirstInteract());
         }
-        if (other.getOfferingId() != 0) {
-          setOfferingId(other.getOfferingId());
-        }
-        if (other.getLevel() != 0) {
-          setLevel(other.getLevel());
-        }
-        if (other.getDDNFFOGFCIC() != false) {
-          setDDNFFOGFCIC(other.getDDNFFOGFCIC());
-        }
-        internalGetMutableELLFOGGMMKI().mergeFrom(
-            other.internalGetELLFOGGMMKI());
         if (!other.takenLevelRewardList_.isEmpty()) {
           if (takenLevelRewardList_.isEmpty()) {
             takenLevelRewardList_ = other.takenLevelRewardList_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureTakenLevelRewardListIsMutable();
             takenLevelRewardList_.addAll(other.takenLevelRewardList_);
           }
           onChanged();
         }
-        if (other.hasOfferingPariDetailData()) {
-          mergeOfferingPariDetailData(other.getOfferingPariDetailData());
+        internalGetMutableNKDLECNDEPA().mergeFrom(
+            other.internalGetNKDLECNDEPA());
+        if (other.getOfferingId() != 0) {
+          setOfferingId(other.getOfferingId());
+        }
+        if (other.getIsNewMaxLevel() != false) {
+          setIsNewMaxLevel(other.getIsNewMaxLevel());
+        }
+        if (other.getLevel() != 0) {
+          setLevel(other.getLevel());
+        }
+        switch (other.getDetailCase()) {
+          case OFFERING_PARI_DETAIL_DATA: {
+            mergeOfferingPariDetailData(other.getOfferingPariDetailData());
+            break;
+          }
+          case DETAIL_NOT_SET: {
+            break;
+          }
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -942,11 +987,26 @@ public final class PlayerOfferingDataOuterClass {
         }
         return this;
       }
+      private int detailCase_ = 0;
+      private java.lang.Object detail_;
+      public DetailCase
+          getDetailCase() {
+        return DetailCase.forNumber(
+            detailCase_);
+      }
+
+      public Builder clearDetail() {
+        detailCase_ = 0;
+        detail_ = null;
+        onChanged();
+        return this;
+      }
+
       private int bitField0_;
 
       private boolean isFirstInteract_ ;
       /**
-       * <code>bool is_first_interact = 4;</code>
+       * <code>bool is_first_interact = 1;</code>
        * @return The isFirstInteract.
        */
       @java.lang.Override
@@ -954,7 +1014,7 @@ public final class PlayerOfferingDataOuterClass {
         return isFirstInteract_;
       }
       /**
-       * <code>bool is_first_interact = 4;</code>
+       * <code>bool is_first_interact = 1;</code>
        * @param value The isFirstInteract to set.
        * @return This builder for chaining.
        */
@@ -965,7 +1025,7 @@ public final class PlayerOfferingDataOuterClass {
         return this;
       }
       /**
-       * <code>bool is_first_interact = 4;</code>
+       * <code>bool is_first_interact = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearIsFirstInteract() {
@@ -975,252 +1035,31 @@ public final class PlayerOfferingDataOuterClass {
         return this;
       }
 
-      private int offeringId_ ;
-      /**
-       * <code>uint32 offering_id = 11;</code>
-       * @return The offeringId.
-       */
-      @java.lang.Override
-      public int getOfferingId() {
-        return offeringId_;
-      }
-      /**
-       * <code>uint32 offering_id = 11;</code>
-       * @param value The offeringId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setOfferingId(int value) {
-        
-        offeringId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 offering_id = 11;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearOfferingId() {
-        
-        offeringId_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int level_ ;
-      /**
-       * <code>uint32 level = 8;</code>
-       * @return The level.
-       */
-      @java.lang.Override
-      public int getLevel() {
-        return level_;
-      }
-      /**
-       * <code>uint32 level = 8;</code>
-       * @param value The level to set.
-       * @return This builder for chaining.
-       */
-      public Builder setLevel(int value) {
-        
-        level_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 level = 8;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearLevel() {
-        
-        level_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private boolean dDNFFOGFCIC_ ;
-      /**
-       * <code>bool DDNFFOGFCIC = 13;</code>
-       * @return The dDNFFOGFCIC.
-       */
-      @java.lang.Override
-      public boolean getDDNFFOGFCIC() {
-        return dDNFFOGFCIC_;
-      }
-      /**
-       * <code>bool DDNFFOGFCIC = 13;</code>
-       * @param value The dDNFFOGFCIC to set.
-       * @return This builder for chaining.
-       */
-      public Builder setDDNFFOGFCIC(boolean value) {
-        
-        dDNFFOGFCIC_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bool DDNFFOGFCIC = 13;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearDDNFFOGFCIC() {
-        
-        dDNFFOGFCIC_ = false;
-        onChanged();
-        return this;
-      }
-
-      private com.google.protobuf.MapField<
-          java.lang.Integer, java.lang.Integer> eLLFOGGMMKI_;
-      private com.google.protobuf.MapField<java.lang.Integer, java.lang.Integer>
-      internalGetELLFOGGMMKI() {
-        if (eLLFOGGMMKI_ == null) {
-          return com.google.protobuf.MapField.emptyMapField(
-              ELLFOGGMMKIDefaultEntryHolder.defaultEntry);
-        }
-        return eLLFOGGMMKI_;
-      }
-      private com.google.protobuf.MapField<java.lang.Integer, java.lang.Integer>
-      internalGetMutableELLFOGGMMKI() {
-        onChanged();;
-        if (eLLFOGGMMKI_ == null) {
-          eLLFOGGMMKI_ = com.google.protobuf.MapField.newMapField(
-              ELLFOGGMMKIDefaultEntryHolder.defaultEntry);
-        }
-        if (!eLLFOGGMMKI_.isMutable()) {
-          eLLFOGGMMKI_ = eLLFOGGMMKI_.copy();
-        }
-        return eLLFOGGMMKI_;
-      }
-
-      public int getELLFOGGMMKICount() {
-        return internalGetELLFOGGMMKI().getMap().size();
-      }
-      /**
-       * <code>map&lt;uint32, uint32&gt; ELLFOGGMMKI = 2;</code>
-       */
-
-      @java.lang.Override
-      public boolean containsELLFOGGMMKI(
-          int key) {
-        
-        return internalGetELLFOGGMMKI().getMap().containsKey(key);
-      }
-      /**
-       * Use {@link #getELLFOGGMMKIMap()} instead.
-       */
-      @java.lang.Override
-      @java.lang.Deprecated
-      public java.util.Map<java.lang.Integer, java.lang.Integer> getELLFOGGMMKI() {
-        return getELLFOGGMMKIMap();
-      }
-      /**
-       * <code>map&lt;uint32, uint32&gt; ELLFOGGMMKI = 2;</code>
-       */
-      @java.lang.Override
-
-      public java.util.Map<java.lang.Integer, java.lang.Integer> getELLFOGGMMKIMap() {
-        return internalGetELLFOGGMMKI().getMap();
-      }
-      /**
-       * <code>map&lt;uint32, uint32&gt; ELLFOGGMMKI = 2;</code>
-       */
-      @java.lang.Override
-
-      public int getELLFOGGMMKIOrDefault(
-          int key,
-          int defaultValue) {
-        
-        java.util.Map<java.lang.Integer, java.lang.Integer> map =
-            internalGetELLFOGGMMKI().getMap();
-        return map.containsKey(key) ? map.get(key) : defaultValue;
-      }
-      /**
-       * <code>map&lt;uint32, uint32&gt; ELLFOGGMMKI = 2;</code>
-       */
-      @java.lang.Override
-
-      public int getELLFOGGMMKIOrThrow(
-          int key) {
-        
-        java.util.Map<java.lang.Integer, java.lang.Integer> map =
-            internalGetELLFOGGMMKI().getMap();
-        if (!map.containsKey(key)) {
-          throw new java.lang.IllegalArgumentException();
-        }
-        return map.get(key);
-      }
-
-      public Builder clearELLFOGGMMKI() {
-        internalGetMutableELLFOGGMMKI().getMutableMap()
-            .clear();
-        return this;
-      }
-      /**
-       * <code>map&lt;uint32, uint32&gt; ELLFOGGMMKI = 2;</code>
-       */
-
-      public Builder removeELLFOGGMMKI(
-          int key) {
-        
-        internalGetMutableELLFOGGMMKI().getMutableMap()
-            .remove(key);
-        return this;
-      }
-      /**
-       * Use alternate mutation accessors instead.
-       */
-      @java.lang.Deprecated
-      public java.util.Map<java.lang.Integer, java.lang.Integer>
-      getMutableELLFOGGMMKI() {
-        return internalGetMutableELLFOGGMMKI().getMutableMap();
-      }
-      /**
-       * <code>map&lt;uint32, uint32&gt; ELLFOGGMMKI = 2;</code>
-       */
-      public Builder putELLFOGGMMKI(
-          int key,
-          int value) {
-        
-        
-        internalGetMutableELLFOGGMMKI().getMutableMap()
-            .put(key, value);
-        return this;
-      }
-      /**
-       * <code>map&lt;uint32, uint32&gt; ELLFOGGMMKI = 2;</code>
-       */
-
-      public Builder putAllELLFOGGMMKI(
-          java.util.Map<java.lang.Integer, java.lang.Integer> values) {
-        internalGetMutableELLFOGGMMKI().getMutableMap()
-            .putAll(values);
-        return this;
-      }
-
       private com.google.protobuf.Internal.IntList takenLevelRewardList_ = emptyIntList();
       private void ensureTakenLevelRewardListIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           takenLevelRewardList_ = mutableCopy(takenLevelRewardList_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000001;
          }
       }
       /**
-       * <code>repeated uint32 taken_level_reward_list = 7;</code>
+       * <code>repeated uint32 taken_level_reward_list = 2;</code>
        * @return A list containing the takenLevelRewardList.
        */
       public java.util.List<java.lang.Integer>
           getTakenLevelRewardListList() {
-        return ((bitField0_ & 0x00000002) != 0) ?
+        return ((bitField0_ & 0x00000001) != 0) ?
                  java.util.Collections.unmodifiableList(takenLevelRewardList_) : takenLevelRewardList_;
       }
       /**
-       * <code>repeated uint32 taken_level_reward_list = 7;</code>
+       * <code>repeated uint32 taken_level_reward_list = 2;</code>
        * @return The count of takenLevelRewardList.
        */
       public int getTakenLevelRewardListCount() {
         return takenLevelRewardList_.size();
       }
       /**
-       * <code>repeated uint32 taken_level_reward_list = 7;</code>
+       * <code>repeated uint32 taken_level_reward_list = 2;</code>
        * @param index The index of the element to return.
        * @return The takenLevelRewardList at the given index.
        */
@@ -1228,7 +1067,7 @@ public final class PlayerOfferingDataOuterClass {
         return takenLevelRewardList_.getInt(index);
       }
       /**
-       * <code>repeated uint32 taken_level_reward_list = 7;</code>
+       * <code>repeated uint32 taken_level_reward_list = 2;</code>
        * @param index The index to set the value at.
        * @param value The takenLevelRewardList to set.
        * @return This builder for chaining.
@@ -1241,7 +1080,7 @@ public final class PlayerOfferingDataOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 taken_level_reward_list = 7;</code>
+       * <code>repeated uint32 taken_level_reward_list = 2;</code>
        * @param value The takenLevelRewardList to add.
        * @return This builder for chaining.
        */
@@ -1252,7 +1091,7 @@ public final class PlayerOfferingDataOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 taken_level_reward_list = 7;</code>
+       * <code>repeated uint32 taken_level_reward_list = 2;</code>
        * @param values The takenLevelRewardList to add.
        * @return This builder for chaining.
        */
@@ -1265,133 +1104,375 @@ public final class PlayerOfferingDataOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 taken_level_reward_list = 7;</code>
+       * <code>repeated uint32 taken_level_reward_list = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearTakenLevelRewardList() {
         takenLevelRewardList_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
 
-      private emu.grasscutter.net.proto.OfferingPariDetailDataOuterClass.OfferingPariDetailData offeringPariDetailData_;
+      private com.google.protobuf.MapField<
+          java.lang.Integer, java.lang.Integer> nKDLECNDEPA_;
+      private com.google.protobuf.MapField<java.lang.Integer, java.lang.Integer>
+      internalGetNKDLECNDEPA() {
+        if (nKDLECNDEPA_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              NKDLECNDEPADefaultEntryHolder.defaultEntry);
+        }
+        return nKDLECNDEPA_;
+      }
+      private com.google.protobuf.MapField<java.lang.Integer, java.lang.Integer>
+      internalGetMutableNKDLECNDEPA() {
+        onChanged();;
+        if (nKDLECNDEPA_ == null) {
+          nKDLECNDEPA_ = com.google.protobuf.MapField.newMapField(
+              NKDLECNDEPADefaultEntryHolder.defaultEntry);
+        }
+        if (!nKDLECNDEPA_.isMutable()) {
+          nKDLECNDEPA_ = nKDLECNDEPA_.copy();
+        }
+        return nKDLECNDEPA_;
+      }
+
+      public int getNKDLECNDEPACount() {
+        return internalGetNKDLECNDEPA().getMap().size();
+      }
+      /**
+       * <code>map&lt;uint32, uint32&gt; NKDLECNDEPA = 8;</code>
+       */
+
+      @java.lang.Override
+      public boolean containsNKDLECNDEPA(
+          int key) {
+        
+        return internalGetNKDLECNDEPA().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getNKDLECNDEPAMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.Integer, java.lang.Integer> getNKDLECNDEPA() {
+        return getNKDLECNDEPAMap();
+      }
+      /**
+       * <code>map&lt;uint32, uint32&gt; NKDLECNDEPA = 8;</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.Integer, java.lang.Integer> getNKDLECNDEPAMap() {
+        return internalGetNKDLECNDEPA().getMap();
+      }
+      /**
+       * <code>map&lt;uint32, uint32&gt; NKDLECNDEPA = 8;</code>
+       */
+      @java.lang.Override
+
+      public int getNKDLECNDEPAOrDefault(
+          int key,
+          int defaultValue) {
+        
+        java.util.Map<java.lang.Integer, java.lang.Integer> map =
+            internalGetNKDLECNDEPA().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;uint32, uint32&gt; NKDLECNDEPA = 8;</code>
+       */
+      @java.lang.Override
+
+      public int getNKDLECNDEPAOrThrow(
+          int key) {
+        
+        java.util.Map<java.lang.Integer, java.lang.Integer> map =
+            internalGetNKDLECNDEPA().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearNKDLECNDEPA() {
+        internalGetMutableNKDLECNDEPA().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;uint32, uint32&gt; NKDLECNDEPA = 8;</code>
+       */
+
+      public Builder removeNKDLECNDEPA(
+          int key) {
+        
+        internalGetMutableNKDLECNDEPA().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.Integer, java.lang.Integer>
+      getMutableNKDLECNDEPA() {
+        return internalGetMutableNKDLECNDEPA().getMutableMap();
+      }
+      /**
+       * <code>map&lt;uint32, uint32&gt; NKDLECNDEPA = 8;</code>
+       */
+      public Builder putNKDLECNDEPA(
+          int key,
+          int value) {
+        
+        
+        internalGetMutableNKDLECNDEPA().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <code>map&lt;uint32, uint32&gt; NKDLECNDEPA = 8;</code>
+       */
+
+      public Builder putAllNKDLECNDEPA(
+          java.util.Map<java.lang.Integer, java.lang.Integer> values) {
+        internalGetMutableNKDLECNDEPA().getMutableMap()
+            .putAll(values);
+        return this;
+      }
+
+      private int offeringId_ ;
+      /**
+       * <code>uint32 offering_id = 9;</code>
+       * @return The offeringId.
+       */
+      @java.lang.Override
+      public int getOfferingId() {
+        return offeringId_;
+      }
+      /**
+       * <code>uint32 offering_id = 9;</code>
+       * @param value The offeringId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOfferingId(int value) {
+        
+        offeringId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 offering_id = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOfferingId() {
+        
+        offeringId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean isNewMaxLevel_ ;
+      /**
+       * <code>bool is_new_max_level = 12;</code>
+       * @return The isNewMaxLevel.
+       */
+      @java.lang.Override
+      public boolean getIsNewMaxLevel() {
+        return isNewMaxLevel_;
+      }
+      /**
+       * <code>bool is_new_max_level = 12;</code>
+       * @param value The isNewMaxLevel to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsNewMaxLevel(boolean value) {
+        
+        isNewMaxLevel_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool is_new_max_level = 12;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsNewMaxLevel() {
+        
+        isNewMaxLevel_ = false;
+        onChanged();
+        return this;
+      }
+
+      private int level_ ;
+      /**
+       * <code>uint32 level = 15;</code>
+       * @return The level.
+       */
+      @java.lang.Override
+      public int getLevel() {
+        return level_;
+      }
+      /**
+       * <code>uint32 level = 15;</code>
+       * @param value The level to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLevel(int value) {
+        
+        level_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 level = 15;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLevel() {
+        
+        level_ = 0;
+        onChanged();
+        return this;
+      }
+
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.OfferingPariDetailDataOuterClass.OfferingPariDetailData, emu.grasscutter.net.proto.OfferingPariDetailDataOuterClass.OfferingPariDetailData.Builder, emu.grasscutter.net.proto.OfferingPariDetailDataOuterClass.OfferingPariDetailDataOrBuilder> offeringPariDetailDataBuilder_;
       /**
-       * <code>optional .OfferingPariDetailData offering_pari_detail_data = 173;</code>
+       * <code>.OfferingPariDetailData offering_pari_detail_data = 814;</code>
        * @return Whether the offeringPariDetailData field is set.
        */
+      @java.lang.Override
       public boolean hasOfferingPariDetailData() {
-        return ((bitField0_ & 0x00000004) != 0);
+        return detailCase_ == 814;
       }
       /**
-       * <code>optional .OfferingPariDetailData offering_pari_detail_data = 173;</code>
+       * <code>.OfferingPariDetailData offering_pari_detail_data = 814;</code>
        * @return The offeringPariDetailData.
        */
+      @java.lang.Override
       public emu.grasscutter.net.proto.OfferingPariDetailDataOuterClass.OfferingPariDetailData getOfferingPariDetailData() {
         if (offeringPariDetailDataBuilder_ == null) {
-          return offeringPariDetailData_ == null ? emu.grasscutter.net.proto.OfferingPariDetailDataOuterClass.OfferingPariDetailData.getDefaultInstance() : offeringPariDetailData_;
+          if (detailCase_ == 814) {
+            return (emu.grasscutter.net.proto.OfferingPariDetailDataOuterClass.OfferingPariDetailData) detail_;
+          }
+          return emu.grasscutter.net.proto.OfferingPariDetailDataOuterClass.OfferingPariDetailData.getDefaultInstance();
         } else {
-          return offeringPariDetailDataBuilder_.getMessage();
+          if (detailCase_ == 814) {
+            return offeringPariDetailDataBuilder_.getMessage();
+          }
+          return emu.grasscutter.net.proto.OfferingPariDetailDataOuterClass.OfferingPariDetailData.getDefaultInstance();
         }
       }
       /**
-       * <code>optional .OfferingPariDetailData offering_pari_detail_data = 173;</code>
+       * <code>.OfferingPariDetailData offering_pari_detail_data = 814;</code>
        */
       public Builder setOfferingPariDetailData(emu.grasscutter.net.proto.OfferingPariDetailDataOuterClass.OfferingPariDetailData value) {
         if (offeringPariDetailDataBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          offeringPariDetailData_ = value;
+          detail_ = value;
           onChanged();
         } else {
           offeringPariDetailDataBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000004;
+        detailCase_ = 814;
         return this;
       }
       /**
-       * <code>optional .OfferingPariDetailData offering_pari_detail_data = 173;</code>
+       * <code>.OfferingPariDetailData offering_pari_detail_data = 814;</code>
        */
       public Builder setOfferingPariDetailData(
           emu.grasscutter.net.proto.OfferingPariDetailDataOuterClass.OfferingPariDetailData.Builder builderForValue) {
         if (offeringPariDetailDataBuilder_ == null) {
-          offeringPariDetailData_ = builderForValue.build();
+          detail_ = builderForValue.build();
           onChanged();
         } else {
           offeringPariDetailDataBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000004;
+        detailCase_ = 814;
         return this;
       }
       /**
-       * <code>optional .OfferingPariDetailData offering_pari_detail_data = 173;</code>
+       * <code>.OfferingPariDetailData offering_pari_detail_data = 814;</code>
        */
       public Builder mergeOfferingPariDetailData(emu.grasscutter.net.proto.OfferingPariDetailDataOuterClass.OfferingPariDetailData value) {
         if (offeringPariDetailDataBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0) &&
-              offeringPariDetailData_ != null &&
-              offeringPariDetailData_ != emu.grasscutter.net.proto.OfferingPariDetailDataOuterClass.OfferingPariDetailData.getDefaultInstance()) {
-            offeringPariDetailData_ =
-              emu.grasscutter.net.proto.OfferingPariDetailDataOuterClass.OfferingPariDetailData.newBuilder(offeringPariDetailData_).mergeFrom(value).buildPartial();
+          if (detailCase_ == 814 &&
+              detail_ != emu.grasscutter.net.proto.OfferingPariDetailDataOuterClass.OfferingPariDetailData.getDefaultInstance()) {
+            detail_ = emu.grasscutter.net.proto.OfferingPariDetailDataOuterClass.OfferingPariDetailData.newBuilder((emu.grasscutter.net.proto.OfferingPariDetailDataOuterClass.OfferingPariDetailData) detail_)
+                .mergeFrom(value).buildPartial();
           } else {
-            offeringPariDetailData_ = value;
+            detail_ = value;
           }
           onChanged();
         } else {
-          offeringPariDetailDataBuilder_.mergeFrom(value);
+          if (detailCase_ == 814) {
+            offeringPariDetailDataBuilder_.mergeFrom(value);
+          }
+          offeringPariDetailDataBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000004;
+        detailCase_ = 814;
         return this;
       }
       /**
-       * <code>optional .OfferingPariDetailData offering_pari_detail_data = 173;</code>
+       * <code>.OfferingPariDetailData offering_pari_detail_data = 814;</code>
        */
       public Builder clearOfferingPariDetailData() {
         if (offeringPariDetailDataBuilder_ == null) {
-          offeringPariDetailData_ = null;
-          onChanged();
+          if (detailCase_ == 814) {
+            detailCase_ = 0;
+            detail_ = null;
+            onChanged();
+          }
         } else {
+          if (detailCase_ == 814) {
+            detailCase_ = 0;
+            detail_ = null;
+          }
           offeringPariDetailDataBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
       /**
-       * <code>optional .OfferingPariDetailData offering_pari_detail_data = 173;</code>
+       * <code>.OfferingPariDetailData offering_pari_detail_data = 814;</code>
        */
       public emu.grasscutter.net.proto.OfferingPariDetailDataOuterClass.OfferingPariDetailData.Builder getOfferingPariDetailDataBuilder() {
-        bitField0_ |= 0x00000004;
-        onChanged();
         return getOfferingPariDetailDataFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .OfferingPariDetailData offering_pari_detail_data = 173;</code>
+       * <code>.OfferingPariDetailData offering_pari_detail_data = 814;</code>
        */
+      @java.lang.Override
       public emu.grasscutter.net.proto.OfferingPariDetailDataOuterClass.OfferingPariDetailDataOrBuilder getOfferingPariDetailDataOrBuilder() {
-        if (offeringPariDetailDataBuilder_ != null) {
+        if ((detailCase_ == 814) && (offeringPariDetailDataBuilder_ != null)) {
           return offeringPariDetailDataBuilder_.getMessageOrBuilder();
         } else {
-          return offeringPariDetailData_ == null ?
-              emu.grasscutter.net.proto.OfferingPariDetailDataOuterClass.OfferingPariDetailData.getDefaultInstance() : offeringPariDetailData_;
+          if (detailCase_ == 814) {
+            return (emu.grasscutter.net.proto.OfferingPariDetailDataOuterClass.OfferingPariDetailData) detail_;
+          }
+          return emu.grasscutter.net.proto.OfferingPariDetailDataOuterClass.OfferingPariDetailData.getDefaultInstance();
         }
       }
       /**
-       * <code>optional .OfferingPariDetailData offering_pari_detail_data = 173;</code>
+       * <code>.OfferingPariDetailData offering_pari_detail_data = 814;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.OfferingPariDetailDataOuterClass.OfferingPariDetailData, emu.grasscutter.net.proto.OfferingPariDetailDataOuterClass.OfferingPariDetailData.Builder, emu.grasscutter.net.proto.OfferingPariDetailDataOuterClass.OfferingPariDetailDataOrBuilder> 
           getOfferingPariDetailDataFieldBuilder() {
         if (offeringPariDetailDataBuilder_ == null) {
+          if (!(detailCase_ == 814)) {
+            detail_ = emu.grasscutter.net.proto.OfferingPariDetailDataOuterClass.OfferingPariDetailData.getDefaultInstance();
+          }
           offeringPariDetailDataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               emu.grasscutter.net.proto.OfferingPariDetailDataOuterClass.OfferingPariDetailData, emu.grasscutter.net.proto.OfferingPariDetailDataOuterClass.OfferingPariDetailData.Builder, emu.grasscutter.net.proto.OfferingPariDetailDataOuterClass.OfferingPariDetailDataOrBuilder>(
-                  getOfferingPariDetailData(),
+                  (emu.grasscutter.net.proto.OfferingPariDetailDataOuterClass.OfferingPariDetailData) detail_,
                   getParentForChildren(),
                   isClean());
-          offeringPariDetailData_ = null;
+          detail_ = null;
         }
+        detailCase_ = 814;
+        onChanged();;
         return offeringPariDetailDataBuilder_;
       }
       @java.lang.Override
@@ -1453,10 +1534,10 @@ public final class PlayerOfferingDataOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_PlayerOfferingData_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_PlayerOfferingData_ELLFOGGMMKIEntry_descriptor;
+    internal_static_PlayerOfferingData_NKDLECNDEPAEntry_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_PlayerOfferingData_ELLFOGGMMKIEntry_fieldAccessorTable;
+      internal_static_PlayerOfferingData_NKDLECNDEPAEntry_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1467,16 +1548,16 @@ public final class PlayerOfferingDataOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\030PlayerOfferingData.proto\032\034OfferingPari" +
-      "DetailData.proto\"\330\002\n\022PlayerOfferingData\022" +
-      "\031\n\021is_first_interact\030\004 \001(\010\022\023\n\013offering_i" +
-      "d\030\013 \001(\r\022\r\n\005level\030\010 \001(\r\022\023\n\013DDNFFOGFCIC\030\r " +
-      "\001(\010\0229\n\013ELLFOGGMMKI\030\002 \003(\0132$.PlayerOfferin" +
-      "gData.ELLFOGGMMKIEntry\022\037\n\027taken_level_re" +
-      "ward_list\030\007 \003(\r\022@\n\031offering_pari_detail_" +
-      "data\030\255\001 \001(\0132\027.OfferingPariDetailDataH\000\210\001" +
-      "\001\0322\n\020ELLFOGGMMKIEntry\022\013\n\003key\030\001 \001(\r\022\r\n\005va" +
-      "lue\030\002 \001(\r:\0028\001B\034\n\032_offering_pari_detail_d" +
-      "ataB\033\n\031emu.grasscutter.net.protob\006proto3"
+      "DetailData.proto\"\306\002\n\022PlayerOfferingData\022" +
+      "\031\n\021is_first_interact\030\001 \001(\010\022\037\n\027taken_leve" +
+      "l_reward_list\030\002 \003(\r\0229\n\013NKDLECNDEPA\030\010 \003(\013" +
+      "2$.PlayerOfferingData.NKDLECNDEPAEntry\022\023" +
+      "\n\013offering_id\030\t \001(\r\022\030\n\020is_new_max_level\030" +
+      "\014 \001(\010\022\r\n\005level\030\017 \001(\r\022=\n\031offering_pari_de" +
+      "tail_data\030\256\006 \001(\0132\027.OfferingPariDetailDat" +
+      "aH\000\0322\n\020NKDLECNDEPAEntry\022\013\n\003key\030\001 \001(\r\022\r\n\005" +
+      "value\030\002 \001(\r:\0028\001B\010\n\006detailB\033\n\031emu.grasscu" +
+      "tter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1488,12 +1569,12 @@ public final class PlayerOfferingDataOuterClass {
     internal_static_PlayerOfferingData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_PlayerOfferingData_descriptor,
-        new java.lang.String[] { "IsFirstInteract", "OfferingId", "Level", "DDNFFOGFCIC", "ELLFOGGMMKI", "TakenLevelRewardList", "OfferingPariDetailData", "OfferingPariDetailData", });
-    internal_static_PlayerOfferingData_ELLFOGGMMKIEntry_descriptor =
+        new java.lang.String[] { "IsFirstInteract", "TakenLevelRewardList", "NKDLECNDEPA", "OfferingId", "IsNewMaxLevel", "Level", "OfferingPariDetailData", "Detail", });
+    internal_static_PlayerOfferingData_NKDLECNDEPAEntry_descriptor =
       internal_static_PlayerOfferingData_descriptor.getNestedTypes().get(0);
-    internal_static_PlayerOfferingData_ELLFOGGMMKIEntry_fieldAccessorTable = new
+    internal_static_PlayerOfferingData_NKDLECNDEPAEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_PlayerOfferingData_ELLFOGGMMKIEntry_descriptor,
+        internal_static_PlayerOfferingData_NKDLECNDEPAEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     emu.grasscutter.net.proto.OfferingPariDetailDataOuterClass.getDescriptor();
   }

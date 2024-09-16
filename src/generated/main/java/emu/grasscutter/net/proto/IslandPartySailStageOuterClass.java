@@ -15,10 +15,6 @@ public final class IslandPartySailStageOuterClass {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   /**
-   * <pre>
-   * Obf: IAJMOMGBODC
-   * </pre>
-   *
    * Protobuf enum {@code IslandPartySailStage}
    */
   public enum IslandPartySailStage

@@ -19,44 +19,43 @@ public final class ServerUpdateGlobalValueNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>float delta = 2;</code>
-     * @return The delta.
-     */
-    float getDelta();
-
-    /**
-     * <code>uint32 entity_id = 8;</code>
-     * @return The entityId.
-     */
-    int getEntityId();
-
-    /**
-     * <code>uint32 key_hash = 5;</code>
-     * @return The keyHash.
-     */
-    int getKeyHash();
-
-    /**
-     * <code>.ServerUpdateGlobalValueNotify.UpdateType update_type = 3;</code>
+     * <code>.ServerUpdateGlobalValueNotify.UpdateType update_type = 4;</code>
      * @return The enum numeric value on the wire for updateType.
      */
     int getUpdateTypeValue();
     /**
-     * <code>.ServerUpdateGlobalValueNotify.UpdateType update_type = 3;</code>
+     * <code>.ServerUpdateGlobalValueNotify.UpdateType update_type = 4;</code>
      * @return The updateType.
      */
     emu.grasscutter.net.proto.ServerUpdateGlobalValueNotifyOuterClass.ServerUpdateGlobalValueNotify.UpdateType getUpdateType();
 
     /**
-     * <code>float value = 1;</code>
+     * <code>uint32 key_hash = 6;</code>
+     * @return The keyHash.
+     */
+    int getKeyHash();
+
+    /**
+     * <code>float delta = 7;</code>
+     * @return The delta.
+     */
+    float getDelta();
+
+    /**
+     * <code>uint32 entity_id = 11;</code>
+     * @return The entityId.
+     */
+    int getEntityId();
+
+    /**
+     * <code>float value = 14;</code>
      * @return The value.
      */
     float getValue();
   }
   /**
    * <pre>
-   * CmdId: 1181
-   * Obf: BKDHPPNCFBO
+   * CmdId: 1498
    * </pre>
    *
    * Protobuf type {@code ServerUpdateGlobalValueNotify}
@@ -104,30 +103,30 @@ public final class ServerUpdateGlobalValueNotifyOuterClass {
             case 0:
               done = true;
               break;
-            case 13: {
-
-              value_ = input.readFloat();
-              break;
-            }
-            case 21: {
-
-              delta_ = input.readFloat();
-              break;
-            }
-            case 24: {
+            case 32: {
               int rawValue = input.readEnum();
 
               updateType_ = rawValue;
               break;
             }
-            case 40: {
+            case 48: {
 
               keyHash_ = input.readUInt32();
               break;
             }
-            case 64: {
+            case 61: {
+
+              delta_ = input.readFloat();
+              break;
+            }
+            case 88: {
 
               entityId_ = input.readUInt32();
+              break;
+            }
+            case 117: {
+
+              value_ = input.readFloat();
               break;
             }
             default: {
@@ -163,10 +162,6 @@ public final class ServerUpdateGlobalValueNotifyOuterClass {
     }
 
     /**
-     * <pre>
-     * Obf: AHKBKOMMMJD
-     * </pre>
-     *
      * Protobuf enum {@code ServerUpdateGlobalValueNotify.UpdateType}
      */
     public enum UpdateType
@@ -283,50 +278,17 @@ public final class ServerUpdateGlobalValueNotifyOuterClass {
       // @@protoc_insertion_point(enum_scope:ServerUpdateGlobalValueNotify.UpdateType)
     }
 
-    public static final int DELTA_FIELD_NUMBER = 2;
-    private float delta_;
-    /**
-     * <code>float delta = 2;</code>
-     * @return The delta.
-     */
-    @java.lang.Override
-    public float getDelta() {
-      return delta_;
-    }
-
-    public static final int ENTITY_ID_FIELD_NUMBER = 8;
-    private int entityId_;
-    /**
-     * <code>uint32 entity_id = 8;</code>
-     * @return The entityId.
-     */
-    @java.lang.Override
-    public int getEntityId() {
-      return entityId_;
-    }
-
-    public static final int KEY_HASH_FIELD_NUMBER = 5;
-    private int keyHash_;
-    /**
-     * <code>uint32 key_hash = 5;</code>
-     * @return The keyHash.
-     */
-    @java.lang.Override
-    public int getKeyHash() {
-      return keyHash_;
-    }
-
-    public static final int UPDATE_TYPE_FIELD_NUMBER = 3;
+    public static final int UPDATE_TYPE_FIELD_NUMBER = 4;
     private int updateType_;
     /**
-     * <code>.ServerUpdateGlobalValueNotify.UpdateType update_type = 3;</code>
+     * <code>.ServerUpdateGlobalValueNotify.UpdateType update_type = 4;</code>
      * @return The enum numeric value on the wire for updateType.
      */
     @java.lang.Override public int getUpdateTypeValue() {
       return updateType_;
     }
     /**
-     * <code>.ServerUpdateGlobalValueNotify.UpdateType update_type = 3;</code>
+     * <code>.ServerUpdateGlobalValueNotify.UpdateType update_type = 4;</code>
      * @return The updateType.
      */
     @java.lang.Override public emu.grasscutter.net.proto.ServerUpdateGlobalValueNotifyOuterClass.ServerUpdateGlobalValueNotify.UpdateType getUpdateType() {
@@ -335,10 +297,43 @@ public final class ServerUpdateGlobalValueNotifyOuterClass {
       return result == null ? emu.grasscutter.net.proto.ServerUpdateGlobalValueNotifyOuterClass.ServerUpdateGlobalValueNotify.UpdateType.UNRECOGNIZED : result;
     }
 
-    public static final int VALUE_FIELD_NUMBER = 1;
+    public static final int KEY_HASH_FIELD_NUMBER = 6;
+    private int keyHash_;
+    /**
+     * <code>uint32 key_hash = 6;</code>
+     * @return The keyHash.
+     */
+    @java.lang.Override
+    public int getKeyHash() {
+      return keyHash_;
+    }
+
+    public static final int DELTA_FIELD_NUMBER = 7;
+    private float delta_;
+    /**
+     * <code>float delta = 7;</code>
+     * @return The delta.
+     */
+    @java.lang.Override
+    public float getDelta() {
+      return delta_;
+    }
+
+    public static final int ENTITY_ID_FIELD_NUMBER = 11;
+    private int entityId_;
+    /**
+     * <code>uint32 entity_id = 11;</code>
+     * @return The entityId.
+     */
+    @java.lang.Override
+    public int getEntityId() {
+      return entityId_;
+    }
+
+    public static final int VALUE_FIELD_NUMBER = 14;
     private float value_;
     /**
-     * <code>float value = 1;</code>
+     * <code>float value = 14;</code>
      * @return The value.
      */
     @java.lang.Override
@@ -360,20 +355,20 @@ public final class ServerUpdateGlobalValueNotifyOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (value_ != 0F) {
-        output.writeFloat(1, value_);
-      }
-      if (delta_ != 0F) {
-        output.writeFloat(2, delta_);
-      }
       if (updateType_ != emu.grasscutter.net.proto.ServerUpdateGlobalValueNotifyOuterClass.ServerUpdateGlobalValueNotify.UpdateType.INVALUE.getNumber()) {
-        output.writeEnum(3, updateType_);
+        output.writeEnum(4, updateType_);
       }
       if (keyHash_ != 0) {
-        output.writeUInt32(5, keyHash_);
+        output.writeUInt32(6, keyHash_);
+      }
+      if (delta_ != 0F) {
+        output.writeFloat(7, delta_);
       }
       if (entityId_ != 0) {
-        output.writeUInt32(8, entityId_);
+        output.writeUInt32(11, entityId_);
+      }
+      if (value_ != 0F) {
+        output.writeFloat(14, value_);
       }
       unknownFields.writeTo(output);
     }
@@ -384,25 +379,25 @@ public final class ServerUpdateGlobalValueNotifyOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (value_ != 0F) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(1, value_);
-      }
-      if (delta_ != 0F) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(2, delta_);
-      }
       if (updateType_ != emu.grasscutter.net.proto.ServerUpdateGlobalValueNotifyOuterClass.ServerUpdateGlobalValueNotify.UpdateType.INVALUE.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(3, updateType_);
+          .computeEnumSize(4, updateType_);
       }
       if (keyHash_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(5, keyHash_);
+          .computeUInt32Size(6, keyHash_);
+      }
+      if (delta_ != 0F) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(7, delta_);
       }
       if (entityId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(8, entityId_);
+          .computeUInt32Size(11, entityId_);
+      }
+      if (value_ != 0F) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(14, value_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -419,14 +414,14 @@ public final class ServerUpdateGlobalValueNotifyOuterClass {
       }
       emu.grasscutter.net.proto.ServerUpdateGlobalValueNotifyOuterClass.ServerUpdateGlobalValueNotify other = (emu.grasscutter.net.proto.ServerUpdateGlobalValueNotifyOuterClass.ServerUpdateGlobalValueNotify) obj;
 
+      if (updateType_ != other.updateType_) return false;
+      if (getKeyHash()
+          != other.getKeyHash()) return false;
       if (java.lang.Float.floatToIntBits(getDelta())
           != java.lang.Float.floatToIntBits(
               other.getDelta())) return false;
       if (getEntityId()
           != other.getEntityId()) return false;
-      if (getKeyHash()
-          != other.getKeyHash()) return false;
-      if (updateType_ != other.updateType_) return false;
       if (java.lang.Float.floatToIntBits(getValue())
           != java.lang.Float.floatToIntBits(
               other.getValue())) return false;
@@ -441,15 +436,15 @@ public final class ServerUpdateGlobalValueNotifyOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + UPDATE_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + updateType_;
+      hash = (37 * hash) + KEY_HASH_FIELD_NUMBER;
+      hash = (53 * hash) + getKeyHash();
       hash = (37 * hash) + DELTA_FIELD_NUMBER;
       hash = (53 * hash) + java.lang.Float.floatToIntBits(
           getDelta());
       hash = (37 * hash) + ENTITY_ID_FIELD_NUMBER;
       hash = (53 * hash) + getEntityId();
-      hash = (37 * hash) + KEY_HASH_FIELD_NUMBER;
-      hash = (53 * hash) + getKeyHash();
-      hash = (37 * hash) + UPDATE_TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + updateType_;
       hash = (37 * hash) + VALUE_FIELD_NUMBER;
       hash = (53 * hash) + java.lang.Float.floatToIntBits(
           getValue());
@@ -550,8 +545,7 @@ public final class ServerUpdateGlobalValueNotifyOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 1181
-     * Obf: BKDHPPNCFBO
+     * CmdId: 1498
      * </pre>
      *
      * Protobuf type {@code ServerUpdateGlobalValueNotify}
@@ -591,13 +585,13 @@ public final class ServerUpdateGlobalValueNotifyOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        delta_ = 0F;
-
-        entityId_ = 0;
+        updateType_ = 0;
 
         keyHash_ = 0;
 
-        updateType_ = 0;
+        delta_ = 0F;
+
+        entityId_ = 0;
 
         value_ = 0F;
 
@@ -627,10 +621,10 @@ public final class ServerUpdateGlobalValueNotifyOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.ServerUpdateGlobalValueNotifyOuterClass.ServerUpdateGlobalValueNotify buildPartial() {
         emu.grasscutter.net.proto.ServerUpdateGlobalValueNotifyOuterClass.ServerUpdateGlobalValueNotify result = new emu.grasscutter.net.proto.ServerUpdateGlobalValueNotifyOuterClass.ServerUpdateGlobalValueNotify(this);
+        result.updateType_ = updateType_;
+        result.keyHash_ = keyHash_;
         result.delta_ = delta_;
         result.entityId_ = entityId_;
-        result.keyHash_ = keyHash_;
-        result.updateType_ = updateType_;
         result.value_ = value_;
         onBuilt();
         return result;
@@ -680,17 +674,17 @@ public final class ServerUpdateGlobalValueNotifyOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.ServerUpdateGlobalValueNotifyOuterClass.ServerUpdateGlobalValueNotify other) {
         if (other == emu.grasscutter.net.proto.ServerUpdateGlobalValueNotifyOuterClass.ServerUpdateGlobalValueNotify.getDefaultInstance()) return this;
+        if (other.updateType_ != 0) {
+          setUpdateTypeValue(other.getUpdateTypeValue());
+        }
+        if (other.getKeyHash() != 0) {
+          setKeyHash(other.getKeyHash());
+        }
         if (other.getDelta() != 0F) {
           setDelta(other.getDelta());
         }
         if (other.getEntityId() != 0) {
           setEntityId(other.getEntityId());
-        }
-        if (other.getKeyHash() != 0) {
-          setKeyHash(other.getKeyHash());
-        }
-        if (other.updateType_ != 0) {
-          setUpdateTypeValue(other.getUpdateTypeValue());
         }
         if (other.getValue() != 0F) {
           setValue(other.getValue());
@@ -724,109 +718,16 @@ public final class ServerUpdateGlobalValueNotifyOuterClass {
         return this;
       }
 
-      private float delta_ ;
-      /**
-       * <code>float delta = 2;</code>
-       * @return The delta.
-       */
-      @java.lang.Override
-      public float getDelta() {
-        return delta_;
-      }
-      /**
-       * <code>float delta = 2;</code>
-       * @param value The delta to set.
-       * @return This builder for chaining.
-       */
-      public Builder setDelta(float value) {
-        
-        delta_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>float delta = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearDelta() {
-        
-        delta_ = 0F;
-        onChanged();
-        return this;
-      }
-
-      private int entityId_ ;
-      /**
-       * <code>uint32 entity_id = 8;</code>
-       * @return The entityId.
-       */
-      @java.lang.Override
-      public int getEntityId() {
-        return entityId_;
-      }
-      /**
-       * <code>uint32 entity_id = 8;</code>
-       * @param value The entityId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setEntityId(int value) {
-        
-        entityId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 entity_id = 8;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearEntityId() {
-        
-        entityId_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int keyHash_ ;
-      /**
-       * <code>uint32 key_hash = 5;</code>
-       * @return The keyHash.
-       */
-      @java.lang.Override
-      public int getKeyHash() {
-        return keyHash_;
-      }
-      /**
-       * <code>uint32 key_hash = 5;</code>
-       * @param value The keyHash to set.
-       * @return This builder for chaining.
-       */
-      public Builder setKeyHash(int value) {
-        
-        keyHash_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 key_hash = 5;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearKeyHash() {
-        
-        keyHash_ = 0;
-        onChanged();
-        return this;
-      }
-
       private int updateType_ = 0;
       /**
-       * <code>.ServerUpdateGlobalValueNotify.UpdateType update_type = 3;</code>
+       * <code>.ServerUpdateGlobalValueNotify.UpdateType update_type = 4;</code>
        * @return The enum numeric value on the wire for updateType.
        */
       @java.lang.Override public int getUpdateTypeValue() {
         return updateType_;
       }
       /**
-       * <code>.ServerUpdateGlobalValueNotify.UpdateType update_type = 3;</code>
+       * <code>.ServerUpdateGlobalValueNotify.UpdateType update_type = 4;</code>
        * @param value The enum numeric value on the wire for updateType to set.
        * @return This builder for chaining.
        */
@@ -837,7 +738,7 @@ public final class ServerUpdateGlobalValueNotifyOuterClass {
         return this;
       }
       /**
-       * <code>.ServerUpdateGlobalValueNotify.UpdateType update_type = 3;</code>
+       * <code>.ServerUpdateGlobalValueNotify.UpdateType update_type = 4;</code>
        * @return The updateType.
        */
       @java.lang.Override
@@ -847,7 +748,7 @@ public final class ServerUpdateGlobalValueNotifyOuterClass {
         return result == null ? emu.grasscutter.net.proto.ServerUpdateGlobalValueNotifyOuterClass.ServerUpdateGlobalValueNotify.UpdateType.UNRECOGNIZED : result;
       }
       /**
-       * <code>.ServerUpdateGlobalValueNotify.UpdateType update_type = 3;</code>
+       * <code>.ServerUpdateGlobalValueNotify.UpdateType update_type = 4;</code>
        * @param value The updateType to set.
        * @return This builder for chaining.
        */
@@ -861,7 +762,7 @@ public final class ServerUpdateGlobalValueNotifyOuterClass {
         return this;
       }
       /**
-       * <code>.ServerUpdateGlobalValueNotify.UpdateType update_type = 3;</code>
+       * <code>.ServerUpdateGlobalValueNotify.UpdateType update_type = 4;</code>
        * @return This builder for chaining.
        */
       public Builder clearUpdateType() {
@@ -871,9 +772,102 @@ public final class ServerUpdateGlobalValueNotifyOuterClass {
         return this;
       }
 
+      private int keyHash_ ;
+      /**
+       * <code>uint32 key_hash = 6;</code>
+       * @return The keyHash.
+       */
+      @java.lang.Override
+      public int getKeyHash() {
+        return keyHash_;
+      }
+      /**
+       * <code>uint32 key_hash = 6;</code>
+       * @param value The keyHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKeyHash(int value) {
+        
+        keyHash_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 key_hash = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearKeyHash() {
+        
+        keyHash_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private float delta_ ;
+      /**
+       * <code>float delta = 7;</code>
+       * @return The delta.
+       */
+      @java.lang.Override
+      public float getDelta() {
+        return delta_;
+      }
+      /**
+       * <code>float delta = 7;</code>
+       * @param value The delta to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDelta(float value) {
+        
+        delta_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>float delta = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDelta() {
+        
+        delta_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      private int entityId_ ;
+      /**
+       * <code>uint32 entity_id = 11;</code>
+       * @return The entityId.
+       */
+      @java.lang.Override
+      public int getEntityId() {
+        return entityId_;
+      }
+      /**
+       * <code>uint32 entity_id = 11;</code>
+       * @param value The entityId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEntityId(int value) {
+        
+        entityId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 entity_id = 11;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEntityId() {
+        
+        entityId_ = 0;
+        onChanged();
+        return this;
+      }
+
       private float value_ ;
       /**
-       * <code>float value = 1;</code>
+       * <code>float value = 14;</code>
        * @return The value.
        */
       @java.lang.Override
@@ -881,7 +875,7 @@ public final class ServerUpdateGlobalValueNotifyOuterClass {
         return value_;
       }
       /**
-       * <code>float value = 1;</code>
+       * <code>float value = 14;</code>
        * @param value The value to set.
        * @return This builder for chaining.
        */
@@ -892,7 +886,7 @@ public final class ServerUpdateGlobalValueNotifyOuterClass {
         return this;
       }
       /**
-       * <code>float value = 1;</code>
+       * <code>float value = 14;</code>
        * @return This builder for chaining.
        */
       public Builder clearValue() {
@@ -969,10 +963,10 @@ public final class ServerUpdateGlobalValueNotifyOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n#ServerUpdateGlobalValueNotify.proto\"\317\001" +
-      "\n\035ServerUpdateGlobalValueNotify\022\r\n\005delta" +
-      "\030\002 \001(\002\022\021\n\tentity_id\030\010 \001(\r\022\020\n\010key_hash\030\005 " +
-      "\001(\r\022>\n\013update_type\030\003 \001(\0162).ServerUpdateG" +
-      "lobalValueNotify.UpdateType\022\r\n\005value\030\001 \001" +
+      "\n\035ServerUpdateGlobalValueNotify\022>\n\013updat" +
+      "e_type\030\004 \001(\0162).ServerUpdateGlobalValueNo" +
+      "tify.UpdateType\022\020\n\010key_hash\030\006 \001(\r\022\r\n\005del" +
+      "ta\030\007 \001(\002\022\021\n\tentity_id\030\013 \001(\r\022\r\n\005value\030\016 \001" +
       "(\002\"+\n\nUpdateType\022\013\n\007INVALUE\020\000\022\007\n\003ADD\020\001\022\007" +
       "\n\003SET\020\002B\033\n\031emu.grasscutter.net.protob\006pr" +
       "oto3"
@@ -986,7 +980,7 @@ public final class ServerUpdateGlobalValueNotifyOuterClass {
     internal_static_ServerUpdateGlobalValueNotify_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ServerUpdateGlobalValueNotify_descriptor,
-        new java.lang.String[] { "Delta", "EntityId", "KeyHash", "UpdateType", "Value", });
+        new java.lang.String[] { "UpdateType", "KeyHash", "Delta", "EntityId", "Value", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

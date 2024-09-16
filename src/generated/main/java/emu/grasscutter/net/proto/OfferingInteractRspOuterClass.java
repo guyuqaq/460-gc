@@ -25,24 +25,23 @@ public final class OfferingInteractRspOuterClass {
     int getRetcode();
 
     /**
-     * <code>.PlayerOfferingData offering_data = 10;</code>
+     * <code>.PlayerOfferingData offering_data = 7;</code>
      * @return Whether the offeringData field is set.
      */
     boolean hasOfferingData();
     /**
-     * <code>.PlayerOfferingData offering_data = 10;</code>
+     * <code>.PlayerOfferingData offering_data = 7;</code>
      * @return The offeringData.
      */
     emu.grasscutter.net.proto.PlayerOfferingDataOuterClass.PlayerOfferingData getOfferingData();
     /**
-     * <code>.PlayerOfferingData offering_data = 10;</code>
+     * <code>.PlayerOfferingData offering_data = 7;</code>
      */
     emu.grasscutter.net.proto.PlayerOfferingDataOuterClass.PlayerOfferingDataOrBuilder getOfferingDataOrBuilder();
   }
   /**
    * <pre>
-   * CmdId: 21253
-   * Obf: KEHILLDAGMC
+   * CmdId: 29863
    * </pre>
    *
    * Protobuf type {@code OfferingInteractRsp}
@@ -94,7 +93,7 @@ public final class OfferingInteractRspOuterClass {
               retcode_ = input.readInt32();
               break;
             }
-            case 82: {
+            case 58: {
               emu.grasscutter.net.proto.PlayerOfferingDataOuterClass.PlayerOfferingData.Builder subBuilder = null;
               if (offeringData_ != null) {
                 subBuilder = offeringData_.toBuilder();
@@ -150,10 +149,10 @@ public final class OfferingInteractRspOuterClass {
       return retcode_;
     }
 
-    public static final int OFFERING_DATA_FIELD_NUMBER = 10;
+    public static final int OFFERING_DATA_FIELD_NUMBER = 7;
     private emu.grasscutter.net.proto.PlayerOfferingDataOuterClass.PlayerOfferingData offeringData_;
     /**
-     * <code>.PlayerOfferingData offering_data = 10;</code>
+     * <code>.PlayerOfferingData offering_data = 7;</code>
      * @return Whether the offeringData field is set.
      */
     @java.lang.Override
@@ -161,7 +160,7 @@ public final class OfferingInteractRspOuterClass {
       return offeringData_ != null;
     }
     /**
-     * <code>.PlayerOfferingData offering_data = 10;</code>
+     * <code>.PlayerOfferingData offering_data = 7;</code>
      * @return The offeringData.
      */
     @java.lang.Override
@@ -169,7 +168,7 @@ public final class OfferingInteractRspOuterClass {
       return offeringData_ == null ? emu.grasscutter.net.proto.PlayerOfferingDataOuterClass.PlayerOfferingData.getDefaultInstance() : offeringData_;
     }
     /**
-     * <code>.PlayerOfferingData offering_data = 10;</code>
+     * <code>.PlayerOfferingData offering_data = 7;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.PlayerOfferingDataOuterClass.PlayerOfferingDataOrBuilder getOfferingDataOrBuilder() {
@@ -194,7 +193,7 @@ public final class OfferingInteractRspOuterClass {
         output.writeInt32(1, retcode_);
       }
       if (offeringData_ != null) {
-        output.writeMessage(10, getOfferingData());
+        output.writeMessage(7, getOfferingData());
       }
       unknownFields.writeTo(output);
     }
@@ -211,7 +210,7 @@ public final class OfferingInteractRspOuterClass {
       }
       if (offeringData_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(10, getOfferingData());
+          .computeMessageSize(7, getOfferingData());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -349,8 +348,7 @@ public final class OfferingInteractRspOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 21253
-     * Obf: KEHILLDAGMC
+     * CmdId: 29863
      * </pre>
      *
      * Protobuf type {@code OfferingInteractRsp}
@@ -548,14 +546,14 @@ public final class OfferingInteractRspOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.PlayerOfferingDataOuterClass.PlayerOfferingData, emu.grasscutter.net.proto.PlayerOfferingDataOuterClass.PlayerOfferingData.Builder, emu.grasscutter.net.proto.PlayerOfferingDataOuterClass.PlayerOfferingDataOrBuilder> offeringDataBuilder_;
       /**
-       * <code>.PlayerOfferingData offering_data = 10;</code>
+       * <code>.PlayerOfferingData offering_data = 7;</code>
        * @return Whether the offeringData field is set.
        */
       public boolean hasOfferingData() {
         return offeringDataBuilder_ != null || offeringData_ != null;
       }
       /**
-       * <code>.PlayerOfferingData offering_data = 10;</code>
+       * <code>.PlayerOfferingData offering_data = 7;</code>
        * @return The offeringData.
        */
       public emu.grasscutter.net.proto.PlayerOfferingDataOuterClass.PlayerOfferingData getOfferingData() {
@@ -566,7 +564,7 @@ public final class OfferingInteractRspOuterClass {
         }
       }
       /**
-       * <code>.PlayerOfferingData offering_data = 10;</code>
+       * <code>.PlayerOfferingData offering_data = 7;</code>
        */
       public Builder setOfferingData(emu.grasscutter.net.proto.PlayerOfferingDataOuterClass.PlayerOfferingData value) {
         if (offeringDataBuilder_ == null) {
@@ -582,7 +580,7 @@ public final class OfferingInteractRspOuterClass {
         return this;
       }
       /**
-       * <code>.PlayerOfferingData offering_data = 10;</code>
+       * <code>.PlayerOfferingData offering_data = 7;</code>
        */
       public Builder setOfferingData(
           emu.grasscutter.net.proto.PlayerOfferingDataOuterClass.PlayerOfferingData.Builder builderForValue) {
@@ -596,7 +594,7 @@ public final class OfferingInteractRspOuterClass {
         return this;
       }
       /**
-       * <code>.PlayerOfferingData offering_data = 10;</code>
+       * <code>.PlayerOfferingData offering_data = 7;</code>
        */
       public Builder mergeOfferingData(emu.grasscutter.net.proto.PlayerOfferingDataOuterClass.PlayerOfferingData value) {
         if (offeringDataBuilder_ == null) {
@@ -614,7 +612,7 @@ public final class OfferingInteractRspOuterClass {
         return this;
       }
       /**
-       * <code>.PlayerOfferingData offering_data = 10;</code>
+       * <code>.PlayerOfferingData offering_data = 7;</code>
        */
       public Builder clearOfferingData() {
         if (offeringDataBuilder_ == null) {
@@ -628,7 +626,7 @@ public final class OfferingInteractRspOuterClass {
         return this;
       }
       /**
-       * <code>.PlayerOfferingData offering_data = 10;</code>
+       * <code>.PlayerOfferingData offering_data = 7;</code>
        */
       public emu.grasscutter.net.proto.PlayerOfferingDataOuterClass.PlayerOfferingData.Builder getOfferingDataBuilder() {
         
@@ -636,7 +634,7 @@ public final class OfferingInteractRspOuterClass {
         return getOfferingDataFieldBuilder().getBuilder();
       }
       /**
-       * <code>.PlayerOfferingData offering_data = 10;</code>
+       * <code>.PlayerOfferingData offering_data = 7;</code>
        */
       public emu.grasscutter.net.proto.PlayerOfferingDataOuterClass.PlayerOfferingDataOrBuilder getOfferingDataOrBuilder() {
         if (offeringDataBuilder_ != null) {
@@ -647,7 +645,7 @@ public final class OfferingInteractRspOuterClass {
         }
       }
       /**
-       * <code>.PlayerOfferingData offering_data = 10;</code>
+       * <code>.PlayerOfferingData offering_data = 7;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.PlayerOfferingDataOuterClass.PlayerOfferingData, emu.grasscutter.net.proto.PlayerOfferingDataOuterClass.PlayerOfferingData.Builder, emu.grasscutter.net.proto.PlayerOfferingDataOuterClass.PlayerOfferingDataOrBuilder> 
@@ -731,7 +729,7 @@ public final class OfferingInteractRspOuterClass {
     java.lang.String[] descriptorData = {
       "\n\031OfferingInteractRsp.proto\032\030PlayerOffer" +
       "ingData.proto\"R\n\023OfferingInteractRsp\022\017\n\007" +
-      "retcode\030\001 \001(\005\022*\n\roffering_data\030\n \001(\0132\023.P" +
+      "retcode\030\001 \001(\005\022*\n\roffering_data\030\007 \001(\0132\023.P" +
       "layerOfferingDataB\033\n\031emu.grasscutter.net" +
       ".protob\006proto3"
     };

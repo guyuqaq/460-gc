@@ -43,10 +43,10 @@ public final class GetInvestigationMonsterRspOuterClass {
         int index);
 
     /**
-     * <code>bool kis_for_mark = 13;</code>
-     * @return The kisForMark.
+     * <code>bool is_for_mark = 13;</code>
+     * @return The isForMark.
      */
-    boolean getKisForMark();
+    boolean getIsForMark();
 
     /**
      * <code>int32 retcode = 15;</code>
@@ -55,6 +55,10 @@ public final class GetInvestigationMonsterRspOuterClass {
     int getRetcode();
   }
   /**
+   * <pre>
+   * CmdId: 21253
+   * </pre>
+   *
    * Protobuf type {@code GetInvestigationMonsterRsp}
    */
   public static final class GetInvestigationMonsterRsp extends
@@ -112,7 +116,7 @@ public final class GetInvestigationMonsterRspOuterClass {
             }
             case 104: {
 
-              kisForMark_ = input.readBool();
+              isForMark_ = input.readBool();
               break;
             }
             case 120: {
@@ -195,15 +199,15 @@ public final class GetInvestigationMonsterRspOuterClass {
       return monsterList_.get(index);
     }
 
-    public static final int KIS_FOR_MARK_FIELD_NUMBER = 13;
-    private boolean kisForMark_;
+    public static final int IS_FOR_MARK_FIELD_NUMBER = 13;
+    private boolean isForMark_;
     /**
-     * <code>bool kis_for_mark = 13;</code>
-     * @return The kisForMark.
+     * <code>bool is_for_mark = 13;</code>
+     * @return The isForMark.
      */
     @java.lang.Override
-    public boolean getKisForMark() {
-      return kisForMark_;
+    public boolean getIsForMark() {
+      return isForMark_;
     }
 
     public static final int RETCODE_FIELD_NUMBER = 15;
@@ -234,8 +238,8 @@ public final class GetInvestigationMonsterRspOuterClass {
       for (int i = 0; i < monsterList_.size(); i++) {
         output.writeMessage(4, monsterList_.get(i));
       }
-      if (kisForMark_ != false) {
-        output.writeBool(13, kisForMark_);
+      if (isForMark_ != false) {
+        output.writeBool(13, isForMark_);
       }
       if (retcode_ != 0) {
         output.writeInt32(15, retcode_);
@@ -253,9 +257,9 @@ public final class GetInvestigationMonsterRspOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, monsterList_.get(i));
       }
-      if (kisForMark_ != false) {
+      if (isForMark_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(13, kisForMark_);
+          .computeBoolSize(13, isForMark_);
       }
       if (retcode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -278,8 +282,8 @@ public final class GetInvestigationMonsterRspOuterClass {
 
       if (!getMonsterListList()
           .equals(other.getMonsterListList())) return false;
-      if (getKisForMark()
-          != other.getKisForMark()) return false;
+      if (getIsForMark()
+          != other.getIsForMark()) return false;
       if (getRetcode()
           != other.getRetcode()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
@@ -297,9 +301,9 @@ public final class GetInvestigationMonsterRspOuterClass {
         hash = (37 * hash) + MONSTER_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getMonsterListList().hashCode();
       }
-      hash = (37 * hash) + KIS_FOR_MARK_FIELD_NUMBER;
+      hash = (37 * hash) + IS_FOR_MARK_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getKisForMark());
+          getIsForMark());
       hash = (37 * hash) + RETCODE_FIELD_NUMBER;
       hash = (53 * hash) + getRetcode();
       hash = (29 * hash) + unknownFields.hashCode();
@@ -398,6 +402,10 @@ public final class GetInvestigationMonsterRspOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * CmdId: 21253
+     * </pre>
+     *
      * Protobuf type {@code GetInvestigationMonsterRsp}
      */
     public static final class Builder extends
@@ -442,7 +450,7 @@ public final class GetInvestigationMonsterRspOuterClass {
         } else {
           monsterListBuilder_.clear();
         }
-        kisForMark_ = false;
+        isForMark_ = false;
 
         retcode_ = 0;
 
@@ -482,7 +490,7 @@ public final class GetInvestigationMonsterRspOuterClass {
         } else {
           result.monsterList_ = monsterListBuilder_.build();
         }
-        result.kisForMark_ = kisForMark_;
+        result.isForMark_ = isForMark_;
         result.retcode_ = retcode_;
         onBuilt();
         return result;
@@ -558,8 +566,8 @@ public final class GetInvestigationMonsterRspOuterClass {
             }
           }
         }
-        if (other.getKisForMark() != false) {
-          setKisForMark(other.getKisForMark());
+        if (other.getIsForMark() != false) {
+          setIsForMark(other.getIsForMark());
         }
         if (other.getRetcode() != 0) {
           setRetcode(other.getRetcode());
@@ -834,33 +842,33 @@ public final class GetInvestigationMonsterRspOuterClass {
         return monsterListBuilder_;
       }
 
-      private boolean kisForMark_ ;
+      private boolean isForMark_ ;
       /**
-       * <code>bool kis_for_mark = 13;</code>
-       * @return The kisForMark.
+       * <code>bool is_for_mark = 13;</code>
+       * @return The isForMark.
        */
       @java.lang.Override
-      public boolean getKisForMark() {
-        return kisForMark_;
+      public boolean getIsForMark() {
+        return isForMark_;
       }
       /**
-       * <code>bool kis_for_mark = 13;</code>
-       * @param value The kisForMark to set.
+       * <code>bool is_for_mark = 13;</code>
+       * @param value The isForMark to set.
        * @return This builder for chaining.
        */
-      public Builder setKisForMark(boolean value) {
+      public Builder setIsForMark(boolean value) {
         
-        kisForMark_ = value;
+        isForMark_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>bool kis_for_mark = 13;</code>
+       * <code>bool is_for_mark = 13;</code>
        * @return This builder for chaining.
        */
-      public Builder clearKisForMark() {
+      public Builder clearIsForMark() {
         
-        kisForMark_ = false;
+        isForMark_ = false;
         onChanged();
         return this;
       }
@@ -963,11 +971,11 @@ public final class GetInvestigationMonsterRspOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n GetInvestigationMonsterRsp.proto\032\032Inve" +
-      "stigationMonster.proto\"p\n\032GetInvestigati" +
+      "stigationMonster.proto\"o\n\032GetInvestigati" +
       "onMonsterRsp\022+\n\014monster_list\030\004 \003(\0132\025.Inv" +
-      "estigationMonster\022\024\n\014kis_for_mark\030\r \001(\010\022" +
-      "\017\n\007retcode\030\017 \001(\005B\033\n\031emu.grasscutter.net." +
-      "protob\006proto3"
+      "estigationMonster\022\023\n\013is_for_mark\030\r \001(\010\022\017" +
+      "\n\007retcode\030\017 \001(\005B\033\n\031emu.grasscutter.net.p" +
+      "rotob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -979,7 +987,7 @@ public final class GetInvestigationMonsterRspOuterClass {
     internal_static_GetInvestigationMonsterRsp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_GetInvestigationMonsterRsp_descriptor,
-        new java.lang.String[] { "MonsterList", "KisForMark", "Retcode", });
+        new java.lang.String[] { "MonsterList", "IsForMark", "Retcode", });
     emu.grasscutter.net.proto.InvestigationMonsterOuterClass.getDescriptor();
   }
 

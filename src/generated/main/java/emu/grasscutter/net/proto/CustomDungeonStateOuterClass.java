@@ -15,10 +15,6 @@ public final class CustomDungeonStateOuterClass {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   /**
-   * <pre>
-   * Obf: FNOIEOJLKAB
-   * </pre>
-   *
    * Protobuf enum {@code CustomDungeonState}
    */
   public enum CustomDungeonState

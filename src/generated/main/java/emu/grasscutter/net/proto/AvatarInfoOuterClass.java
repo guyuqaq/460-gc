@@ -420,10 +420,21 @@ public final class AvatarInfoOuterClass {
     int getAnimHash();
 
     /**
-     * <pre>
-     *JNHGJAIIMGJ PINDEGAFOAE = 28;
-     * </pre>
-     *
+     * <code>.MirrorAvatarInfo mirror_avatar_info = 28;</code>
+     * @return Whether the mirrorAvatarInfo field is set.
+     */
+    boolean hasMirrorAvatarInfo();
+    /**
+     * <code>.MirrorAvatarInfo mirror_avatar_info = 28;</code>
+     * @return The mirrorAvatarInfo.
+     */
+    emu.grasscutter.net.proto.MirrorAvatarInfoOuterClass.MirrorAvatarInfo getMirrorAvatarInfo();
+    /**
+     * <code>.MirrorAvatarInfo mirror_avatar_info = 28;</code>
+     */
+    emu.grasscutter.net.proto.MirrorAvatarInfoOuterClass.MirrorAvatarInfoOrBuilder getMirrorAvatarInfoOrBuilder();
+
+    /**
      * <code>uint32 ABLFJPMKKDA = 29;</code>
      * @return The aBLFJPMKKDA.
      */
@@ -436,10 +447,10 @@ public final class AvatarInfoOuterClass {
     int getGCHGLANNHMC();
 
     /**
-     * <code>uint32 KCINBOMOIGL = 31;</code>
-     * @return The kCINBOMOIGL.
+     * <code>uint32 trace_effect_id = 31;</code>
+     * @return The traceEffectId.
      */
-    int getKCINBOMOIGL();
+    int getTraceEffectId();
   }
   /**
    * Protobuf type {@code AvatarInfo}
@@ -773,6 +784,19 @@ public final class AvatarInfoOuterClass {
               animHash_ = input.readUInt32();
               break;
             }
+            case 226: {
+              emu.grasscutter.net.proto.MirrorAvatarInfoOuterClass.MirrorAvatarInfo.Builder subBuilder = null;
+              if (mirrorAvatarInfo_ != null) {
+                subBuilder = mirrorAvatarInfo_.toBuilder();
+              }
+              mirrorAvatarInfo_ = input.readMessage(emu.grasscutter.net.proto.MirrorAvatarInfoOuterClass.MirrorAvatarInfo.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(mirrorAvatarInfo_);
+                mirrorAvatarInfo_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
             case 232: {
 
               aBLFJPMKKDA_ = input.readUInt32();
@@ -785,7 +809,7 @@ public final class AvatarInfoOuterClass {
             }
             case 248: {
 
-              kCINBOMOIGL_ = input.readUInt32();
+              traceEffectId_ = input.readUInt32();
               break;
             }
             default: {
@@ -1661,13 +1685,35 @@ public final class AvatarInfoOuterClass {
       return animHash_;
     }
 
+    public static final int MIRROR_AVATAR_INFO_FIELD_NUMBER = 28;
+    private emu.grasscutter.net.proto.MirrorAvatarInfoOuterClass.MirrorAvatarInfo mirrorAvatarInfo_;
+    /**
+     * <code>.MirrorAvatarInfo mirror_avatar_info = 28;</code>
+     * @return Whether the mirrorAvatarInfo field is set.
+     */
+    @java.lang.Override
+    public boolean hasMirrorAvatarInfo() {
+      return mirrorAvatarInfo_ != null;
+    }
+    /**
+     * <code>.MirrorAvatarInfo mirror_avatar_info = 28;</code>
+     * @return The mirrorAvatarInfo.
+     */
+    @java.lang.Override
+    public emu.grasscutter.net.proto.MirrorAvatarInfoOuterClass.MirrorAvatarInfo getMirrorAvatarInfo() {
+      return mirrorAvatarInfo_ == null ? emu.grasscutter.net.proto.MirrorAvatarInfoOuterClass.MirrorAvatarInfo.getDefaultInstance() : mirrorAvatarInfo_;
+    }
+    /**
+     * <code>.MirrorAvatarInfo mirror_avatar_info = 28;</code>
+     */
+    @java.lang.Override
+    public emu.grasscutter.net.proto.MirrorAvatarInfoOuterClass.MirrorAvatarInfoOrBuilder getMirrorAvatarInfoOrBuilder() {
+      return getMirrorAvatarInfo();
+    }
+
     public static final int ABLFJPMKKDA_FIELD_NUMBER = 29;
     private int aBLFJPMKKDA_;
     /**
-     * <pre>
-     *JNHGJAIIMGJ PINDEGAFOAE = 28;
-     * </pre>
-     *
      * <code>uint32 ABLFJPMKKDA = 29;</code>
      * @return The aBLFJPMKKDA.
      */
@@ -1687,15 +1733,15 @@ public final class AvatarInfoOuterClass {
       return gCHGLANNHMC_;
     }
 
-    public static final int KCINBOMOIGL_FIELD_NUMBER = 31;
-    private int kCINBOMOIGL_;
+    public static final int TRACE_EFFECT_ID_FIELD_NUMBER = 31;
+    private int traceEffectId_;
     /**
-     * <code>uint32 KCINBOMOIGL = 31;</code>
-     * @return The kCINBOMOIGL.
+     * <code>uint32 trace_effect_id = 31;</code>
+     * @return The traceEffectId.
      */
     @java.lang.Override
-    public int getKCINBOMOIGL() {
-      return kCINBOMOIGL_;
+    public int getTraceEffectId() {
+      return traceEffectId_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -1826,14 +1872,17 @@ public final class AvatarInfoOuterClass {
       if (animHash_ != 0) {
         output.writeUInt32(27, animHash_);
       }
+      if (mirrorAvatarInfo_ != null) {
+        output.writeMessage(28, getMirrorAvatarInfo());
+      }
       if (aBLFJPMKKDA_ != 0) {
         output.writeUInt32(29, aBLFJPMKKDA_);
       }
       if (gCHGLANNHMC_ != 0) {
         output.writeUInt32(30, gCHGLANNHMC_);
       }
-      if (kCINBOMOIGL_ != 0) {
-        output.writeUInt32(31, kCINBOMOIGL_);
+      if (traceEffectId_ != 0) {
+        output.writeUInt32(31, traceEffectId_);
       }
       unknownFields.writeTo(output);
     }
@@ -2028,6 +2077,10 @@ public final class AvatarInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(27, animHash_);
       }
+      if (mirrorAvatarInfo_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(28, getMirrorAvatarInfo());
+      }
       if (aBLFJPMKKDA_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(29, aBLFJPMKKDA_);
@@ -2036,9 +2089,9 @@ public final class AvatarInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(30, gCHGLANNHMC_);
       }
-      if (kCINBOMOIGL_ != 0) {
+      if (traceEffectId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(31, kCINBOMOIGL_);
+          .computeUInt32Size(31, traceEffectId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2115,12 +2168,17 @@ public final class AvatarInfoOuterClass {
       }
       if (getAnimHash()
           != other.getAnimHash()) return false;
+      if (hasMirrorAvatarInfo() != other.hasMirrorAvatarInfo()) return false;
+      if (hasMirrorAvatarInfo()) {
+        if (!getMirrorAvatarInfo()
+            .equals(other.getMirrorAvatarInfo())) return false;
+      }
       if (getABLFJPMKKDA()
           != other.getABLFJPMKKDA()) return false;
       if (getGCHGLANNHMC()
           != other.getGCHGLANNHMC()) return false;
-      if (getKCINBOMOIGL()
-          != other.getKCINBOMOIGL()) return false;
+      if (getTraceEffectId()
+          != other.getTraceEffectId()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -2214,12 +2272,16 @@ public final class AvatarInfoOuterClass {
       }
       hash = (37 * hash) + ANIM_HASH_FIELD_NUMBER;
       hash = (53 * hash) + getAnimHash();
+      if (hasMirrorAvatarInfo()) {
+        hash = (37 * hash) + MIRROR_AVATAR_INFO_FIELD_NUMBER;
+        hash = (53 * hash) + getMirrorAvatarInfo().hashCode();
+      }
       hash = (37 * hash) + ABLFJPMKKDA_FIELD_NUMBER;
       hash = (53 * hash) + getABLFJPMKKDA();
       hash = (37 * hash) + GCHGLANNHMC_FIELD_NUMBER;
       hash = (53 * hash) + getGCHGLANNHMC();
-      hash = (37 * hash) + KCINBOMOIGL_FIELD_NUMBER;
-      hash = (53 * hash) + getKCINBOMOIGL();
+      hash = (37 * hash) + TRACE_EFFECT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getTraceEffectId();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2455,11 +2517,17 @@ public final class AvatarInfoOuterClass {
         }
         animHash_ = 0;
 
+        if (mirrorAvatarInfoBuilder_ == null) {
+          mirrorAvatarInfo_ = null;
+        } else {
+          mirrorAvatarInfo_ = null;
+          mirrorAvatarInfoBuilder_ = null;
+        }
         aBLFJPMKKDA_ = 0;
 
         gCHGLANNHMC_ = 0;
 
-        kCINBOMOIGL_ = 0;
+        traceEffectId_ = 0;
 
         return this;
       }
@@ -2559,9 +2627,14 @@ public final class AvatarInfoOuterClass {
           result.excelInfo_ = excelInfoBuilder_.build();
         }
         result.animHash_ = animHash_;
+        if (mirrorAvatarInfoBuilder_ == null) {
+          result.mirrorAvatarInfo_ = mirrorAvatarInfo_;
+        } else {
+          result.mirrorAvatarInfo_ = mirrorAvatarInfoBuilder_.build();
+        }
         result.aBLFJPMKKDA_ = aBLFJPMKKDA_;
         result.gCHGLANNHMC_ = gCHGLANNHMC_;
-        result.kCINBOMOIGL_ = kCINBOMOIGL_;
+        result.traceEffectId_ = traceEffectId_;
         onBuilt();
         return result;
       }
@@ -2741,14 +2814,17 @@ public final class AvatarInfoOuterClass {
         if (other.getAnimHash() != 0) {
           setAnimHash(other.getAnimHash());
         }
+        if (other.hasMirrorAvatarInfo()) {
+          mergeMirrorAvatarInfo(other.getMirrorAvatarInfo());
+        }
         if (other.getABLFJPMKKDA() != 0) {
           setABLFJPMKKDA(other.getABLFJPMKKDA());
         }
         if (other.getGCHGLANNHMC() != 0) {
           setGCHGLANNHMC(other.getGCHGLANNHMC());
         }
-        if (other.getKCINBOMOIGL() != 0) {
-          setKCINBOMOIGL(other.getKCINBOMOIGL());
+        if (other.getTraceEffectId() != 0) {
+          setTraceEffectId(other.getTraceEffectId());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -4807,12 +4883,127 @@ public final class AvatarInfoOuterClass {
         return this;
       }
 
+      private emu.grasscutter.net.proto.MirrorAvatarInfoOuterClass.MirrorAvatarInfo mirrorAvatarInfo_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          emu.grasscutter.net.proto.MirrorAvatarInfoOuterClass.MirrorAvatarInfo, emu.grasscutter.net.proto.MirrorAvatarInfoOuterClass.MirrorAvatarInfo.Builder, emu.grasscutter.net.proto.MirrorAvatarInfoOuterClass.MirrorAvatarInfoOrBuilder> mirrorAvatarInfoBuilder_;
+      /**
+       * <code>.MirrorAvatarInfo mirror_avatar_info = 28;</code>
+       * @return Whether the mirrorAvatarInfo field is set.
+       */
+      public boolean hasMirrorAvatarInfo() {
+        return mirrorAvatarInfoBuilder_ != null || mirrorAvatarInfo_ != null;
+      }
+      /**
+       * <code>.MirrorAvatarInfo mirror_avatar_info = 28;</code>
+       * @return The mirrorAvatarInfo.
+       */
+      public emu.grasscutter.net.proto.MirrorAvatarInfoOuterClass.MirrorAvatarInfo getMirrorAvatarInfo() {
+        if (mirrorAvatarInfoBuilder_ == null) {
+          return mirrorAvatarInfo_ == null ? emu.grasscutter.net.proto.MirrorAvatarInfoOuterClass.MirrorAvatarInfo.getDefaultInstance() : mirrorAvatarInfo_;
+        } else {
+          return mirrorAvatarInfoBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.MirrorAvatarInfo mirror_avatar_info = 28;</code>
+       */
+      public Builder setMirrorAvatarInfo(emu.grasscutter.net.proto.MirrorAvatarInfoOuterClass.MirrorAvatarInfo value) {
+        if (mirrorAvatarInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          mirrorAvatarInfo_ = value;
+          onChanged();
+        } else {
+          mirrorAvatarInfoBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.MirrorAvatarInfo mirror_avatar_info = 28;</code>
+       */
+      public Builder setMirrorAvatarInfo(
+          emu.grasscutter.net.proto.MirrorAvatarInfoOuterClass.MirrorAvatarInfo.Builder builderForValue) {
+        if (mirrorAvatarInfoBuilder_ == null) {
+          mirrorAvatarInfo_ = builderForValue.build();
+          onChanged();
+        } else {
+          mirrorAvatarInfoBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.MirrorAvatarInfo mirror_avatar_info = 28;</code>
+       */
+      public Builder mergeMirrorAvatarInfo(emu.grasscutter.net.proto.MirrorAvatarInfoOuterClass.MirrorAvatarInfo value) {
+        if (mirrorAvatarInfoBuilder_ == null) {
+          if (mirrorAvatarInfo_ != null) {
+            mirrorAvatarInfo_ =
+              emu.grasscutter.net.proto.MirrorAvatarInfoOuterClass.MirrorAvatarInfo.newBuilder(mirrorAvatarInfo_).mergeFrom(value).buildPartial();
+          } else {
+            mirrorAvatarInfo_ = value;
+          }
+          onChanged();
+        } else {
+          mirrorAvatarInfoBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.MirrorAvatarInfo mirror_avatar_info = 28;</code>
+       */
+      public Builder clearMirrorAvatarInfo() {
+        if (mirrorAvatarInfoBuilder_ == null) {
+          mirrorAvatarInfo_ = null;
+          onChanged();
+        } else {
+          mirrorAvatarInfo_ = null;
+          mirrorAvatarInfoBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.MirrorAvatarInfo mirror_avatar_info = 28;</code>
+       */
+      public emu.grasscutter.net.proto.MirrorAvatarInfoOuterClass.MirrorAvatarInfo.Builder getMirrorAvatarInfoBuilder() {
+        
+        onChanged();
+        return getMirrorAvatarInfoFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.MirrorAvatarInfo mirror_avatar_info = 28;</code>
+       */
+      public emu.grasscutter.net.proto.MirrorAvatarInfoOuterClass.MirrorAvatarInfoOrBuilder getMirrorAvatarInfoOrBuilder() {
+        if (mirrorAvatarInfoBuilder_ != null) {
+          return mirrorAvatarInfoBuilder_.getMessageOrBuilder();
+        } else {
+          return mirrorAvatarInfo_ == null ?
+              emu.grasscutter.net.proto.MirrorAvatarInfoOuterClass.MirrorAvatarInfo.getDefaultInstance() : mirrorAvatarInfo_;
+        }
+      }
+      /**
+       * <code>.MirrorAvatarInfo mirror_avatar_info = 28;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          emu.grasscutter.net.proto.MirrorAvatarInfoOuterClass.MirrorAvatarInfo, emu.grasscutter.net.proto.MirrorAvatarInfoOuterClass.MirrorAvatarInfo.Builder, emu.grasscutter.net.proto.MirrorAvatarInfoOuterClass.MirrorAvatarInfoOrBuilder> 
+          getMirrorAvatarInfoFieldBuilder() {
+        if (mirrorAvatarInfoBuilder_ == null) {
+          mirrorAvatarInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              emu.grasscutter.net.proto.MirrorAvatarInfoOuterClass.MirrorAvatarInfo, emu.grasscutter.net.proto.MirrorAvatarInfoOuterClass.MirrorAvatarInfo.Builder, emu.grasscutter.net.proto.MirrorAvatarInfoOuterClass.MirrorAvatarInfoOrBuilder>(
+                  getMirrorAvatarInfo(),
+                  getParentForChildren(),
+                  isClean());
+          mirrorAvatarInfo_ = null;
+        }
+        return mirrorAvatarInfoBuilder_;
+      }
+
       private int aBLFJPMKKDA_ ;
       /**
-       * <pre>
-       *JNHGJAIIMGJ PINDEGAFOAE = 28;
-       * </pre>
-       *
        * <code>uint32 ABLFJPMKKDA = 29;</code>
        * @return The aBLFJPMKKDA.
        */
@@ -4821,10 +5012,6 @@ public final class AvatarInfoOuterClass {
         return aBLFJPMKKDA_;
       }
       /**
-       * <pre>
-       *JNHGJAIIMGJ PINDEGAFOAE = 28;
-       * </pre>
-       *
        * <code>uint32 ABLFJPMKKDA = 29;</code>
        * @param value The aBLFJPMKKDA to set.
        * @return This builder for chaining.
@@ -4836,10 +5023,6 @@ public final class AvatarInfoOuterClass {
         return this;
       }
       /**
-       * <pre>
-       *JNHGJAIIMGJ PINDEGAFOAE = 28;
-       * </pre>
-       *
        * <code>uint32 ABLFJPMKKDA = 29;</code>
        * @return This builder for chaining.
        */
@@ -4881,33 +5064,33 @@ public final class AvatarInfoOuterClass {
         return this;
       }
 
-      private int kCINBOMOIGL_ ;
+      private int traceEffectId_ ;
       /**
-       * <code>uint32 KCINBOMOIGL = 31;</code>
-       * @return The kCINBOMOIGL.
+       * <code>uint32 trace_effect_id = 31;</code>
+       * @return The traceEffectId.
        */
       @java.lang.Override
-      public int getKCINBOMOIGL() {
-        return kCINBOMOIGL_;
+      public int getTraceEffectId() {
+        return traceEffectId_;
       }
       /**
-       * <code>uint32 KCINBOMOIGL = 31;</code>
-       * @param value The kCINBOMOIGL to set.
+       * <code>uint32 trace_effect_id = 31;</code>
+       * @param value The traceEffectId to set.
        * @return This builder for chaining.
        */
-      public Builder setKCINBOMOIGL(int value) {
+      public Builder setTraceEffectId(int value) {
         
-        kCINBOMOIGL_ = value;
+        traceEffectId_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 KCINBOMOIGL = 31;</code>
+       * <code>uint32 trace_effect_id = 31;</code>
        * @return This builder for chaining.
        */
-      public Builder clearKCINBOMOIGL() {
+      public Builder clearTraceEffectId() {
         
-        kCINBOMOIGL_ = 0;
+        traceEffectId_ = 0;
         onChanged();
         return this;
       }
@@ -5005,42 +5188,44 @@ public final class AvatarInfoOuterClass {
     java.lang.String[] descriptorData = {
       "\n\020AvatarInfo.proto\032\017PropValue.proto\032\025Ava" +
       "tarSkillInfo.proto\032\025TrialAvatarInfo.prot" +
-      "o\032\026AvatarFetterInfo.proto\032\033AvatarExpedit" +
-      "ionState.proto\032\032AvatarEquipAffixInfo.pro" +
-      "to\032\025AvatarExcelInfo.proto\"\355\t\n\nAvatarInfo" +
-      "\022\021\n\tavatar_id\030\001 \001(\r\022\014\n\004guid\030\002 \001(\004\022*\n\010pro" +
-      "p_map\030\003 \003(\0132\030.AvatarInfo.PropMapEntry\022\022\n" +
-      "\nlife_state\030\004 \001(\r\022\027\n\017equip_guid_list\030\005 \003" +
-      "(\004\022\026\n\016talent_id_list\030\006 \003(\r\0225\n\016fight_prop" +
-      "_map\030\007 \003(\0132\035.AvatarInfo.FightPropMapEntr" +
-      "y\022+\n\021trial_avatar_info\030\t \001(\0132\020.TrialAvat" +
-      "arInfo\022,\n\tskill_map\030\n \003(\0132\031.AvatarInfo.S" +
-      "killMapEntry\022\026\n\016skill_depot_id\030\013 \001(\r\022&\n\013" +
-      "fetter_info\030\014 \001(\0132\021.AvatarFetterInfo\022\036\n\026" +
-      "core_proud_skill_level\030\r \001(\r\022!\n\031inherent" +
-      "_proud_skill_list\030\016 \003(\r\0227\n\017skill_level_m" +
-      "ap\030\017 \003(\0132\036.AvatarInfo.SkillLevelMapEntry" +
-      "\0220\n\020expedition_state\030\020 \001(\0162\026.AvatarExped" +
-      "itionState\022M\n\033proud_skill_extra_level_ma" +
-      "p\030\021 \003(\0132(.AvatarInfo.ProudSkillExtraLeve" +
-      "lMapEntry\022\020\n\010is_focus\030\022 \001(\010\022\023\n\013avatar_ty" +
-      "pe\030\023 \001(\r\022\033\n\023team_resonance_list\030\024 \003(\r\022\033\n" +
-      "\023wearing_flycloak_id\030\025 \001(\r\022/\n\020equip_affi" +
-      "x_list\030\026 \003(\0132\025.AvatarEquipAffixInfo\022\021\n\tb" +
-      "orn_time\030\027 \001(\r\022#\n\033pending_promote_reward" +
-      "_list\030\030 \003(\r\022\022\n\ncostume_id\030\031 \001(\r\022$\n\nexcel" +
-      "_info\030\032 \001(\0132\020.AvatarExcelInfo\022\021\n\tanim_ha" +
-      "sh\030\033 \001(\r\022\023\n\013ABLFJPMKKDA\030\035 \001(\r\022\023\n\013GCHGLAN" +
-      "NHMC\030\036 \001(\r\022\023\n\013KCINBOMOIGL\030\037 \001(\r\032:\n\014PropM" +
-      "apEntry\022\013\n\003key\030\001 \001(\r\022\031\n\005value\030\002 \001(\0132\n.Pr" +
-      "opValue:\0028\001\0323\n\021FightPropMapEntry\022\013\n\003key\030" +
-      "\001 \001(\r\022\r\n\005value\030\002 \001(\002:\0028\001\032A\n\rSkillMapEntr" +
-      "y\022\013\n\003key\030\001 \001(\r\022\037\n\005value\030\002 \001(\0132\020.AvatarSk" +
-      "illInfo:\0028\001\0324\n\022SkillLevelMapEntry\022\013\n\003key" +
-      "\030\001 \001(\r\022\r\n\005value\030\002 \001(\r:\0028\001\032>\n\034ProudSkillE" +
-      "xtraLevelMapEntry\022\013\n\003key\030\001 \001(\r\022\r\n\005value\030" +
-      "\002 \001(\r:\0028\001B\033\n\031emu.grasscutter.net.protob\006" +
-      "proto3"
+      "o\032\026MirrorAvatarInfo.proto\032\026AvatarFetterI" +
+      "nfo.proto\032\033AvatarExpeditionState.proto\032\032" +
+      "AvatarEquipAffixInfo.proto\032\025AvatarExcelI" +
+      "nfo.proto\"\240\n\n\nAvatarInfo\022\021\n\tavatar_id\030\001 " +
+      "\001(\r\022\014\n\004guid\030\002 \001(\004\022*\n\010prop_map\030\003 \003(\0132\030.Av" +
+      "atarInfo.PropMapEntry\022\022\n\nlife_state\030\004 \001(" +
+      "\r\022\027\n\017equip_guid_list\030\005 \003(\004\022\026\n\016talent_id_" +
+      "list\030\006 \003(\r\0225\n\016fight_prop_map\030\007 \003(\0132\035.Ava" +
+      "tarInfo.FightPropMapEntry\022+\n\021trial_avata" +
+      "r_info\030\t \001(\0132\020.TrialAvatarInfo\022,\n\tskill_" +
+      "map\030\n \003(\0132\031.AvatarInfo.SkillMapEntry\022\026\n\016" +
+      "skill_depot_id\030\013 \001(\r\022&\n\013fetter_info\030\014 \001(" +
+      "\0132\021.AvatarFetterInfo\022\036\n\026core_proud_skill" +
+      "_level\030\r \001(\r\022!\n\031inherent_proud_skill_lis" +
+      "t\030\016 \003(\r\0227\n\017skill_level_map\030\017 \003(\0132\036.Avata" +
+      "rInfo.SkillLevelMapEntry\0220\n\020expedition_s" +
+      "tate\030\020 \001(\0162\026.AvatarExpeditionState\022M\n\033pr" +
+      "oud_skill_extra_level_map\030\021 \003(\0132(.Avatar" +
+      "Info.ProudSkillExtraLevelMapEntry\022\020\n\010is_" +
+      "focus\030\022 \001(\010\022\023\n\013avatar_type\030\023 \001(\r\022\033\n\023team" +
+      "_resonance_list\030\024 \003(\r\022\033\n\023wearing_flycloa" +
+      "k_id\030\025 \001(\r\022/\n\020equip_affix_list\030\026 \003(\0132\025.A" +
+      "vatarEquipAffixInfo\022\021\n\tborn_time\030\027 \001(\r\022#" +
+      "\n\033pending_promote_reward_list\030\030 \003(\r\022\022\n\nc" +
+      "ostume_id\030\031 \001(\r\022$\n\nexcel_info\030\032 \001(\0132\020.Av" +
+      "atarExcelInfo\022\021\n\tanim_hash\030\033 \001(\r\022-\n\022mirr" +
+      "or_avatar_info\030\034 \001(\0132\021.MirrorAvatarInfo\022" +
+      "\023\n\013ABLFJPMKKDA\030\035 \001(\r\022\023\n\013GCHGLANNHMC\030\036 \001(" +
+      "\r\022\027\n\017trace_effect_id\030\037 \001(\r\032:\n\014PropMapEnt" +
+      "ry\022\013\n\003key\030\001 \001(\r\022\031\n\005value\030\002 \001(\0132\n.PropVal" +
+      "ue:\0028\001\0323\n\021FightPropMapEntry\022\013\n\003key\030\001 \001(\r" +
+      "\022\r\n\005value\030\002 \001(\002:\0028\001\032A\n\rSkillMapEntry\022\013\n\003" +
+      "key\030\001 \001(\r\022\037\n\005value\030\002 \001(\0132\020.AvatarSkillIn" +
+      "fo:\0028\001\0324\n\022SkillLevelMapEntry\022\013\n\003key\030\001 \001(" +
+      "\r\022\r\n\005value\030\002 \001(\r:\0028\001\032>\n\034ProudSkillExtraL" +
+      "evelMapEntry\022\013\n\003key\030\001 \001(\r\022\r\n\005value\030\002 \001(\r" +
+      ":\0028\001B\033\n\031emu.grasscutter.net.protob\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -5048,6 +5233,7 @@ public final class AvatarInfoOuterClass {
           emu.grasscutter.net.proto.PropValueOuterClass.getDescriptor(),
           emu.grasscutter.net.proto.AvatarSkillInfoOuterClass.getDescriptor(),
           emu.grasscutter.net.proto.TrialAvatarInfoOuterClass.getDescriptor(),
+          emu.grasscutter.net.proto.MirrorAvatarInfoOuterClass.getDescriptor(),
           emu.grasscutter.net.proto.AvatarFetterInfoOuterClass.getDescriptor(),
           emu.grasscutter.net.proto.AvatarExpeditionStateOuterClass.getDescriptor(),
           emu.grasscutter.net.proto.AvatarEquipAffixInfoOuterClass.getDescriptor(),
@@ -5058,7 +5244,7 @@ public final class AvatarInfoOuterClass {
     internal_static_AvatarInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_AvatarInfo_descriptor,
-        new java.lang.String[] { "AvatarId", "Guid", "PropMap", "LifeState", "EquipGuidList", "TalentIdList", "FightPropMap", "TrialAvatarInfo", "SkillMap", "SkillDepotId", "FetterInfo", "CoreProudSkillLevel", "InherentProudSkillList", "SkillLevelMap", "ExpeditionState", "ProudSkillExtraLevelMap", "IsFocus", "AvatarType", "TeamResonanceList", "WearingFlycloakId", "EquipAffixList", "BornTime", "PendingPromoteRewardList", "CostumeId", "ExcelInfo", "AnimHash", "ABLFJPMKKDA", "GCHGLANNHMC", "KCINBOMOIGL", });
+        new java.lang.String[] { "AvatarId", "Guid", "PropMap", "LifeState", "EquipGuidList", "TalentIdList", "FightPropMap", "TrialAvatarInfo", "SkillMap", "SkillDepotId", "FetterInfo", "CoreProudSkillLevel", "InherentProudSkillList", "SkillLevelMap", "ExpeditionState", "ProudSkillExtraLevelMap", "IsFocus", "AvatarType", "TeamResonanceList", "WearingFlycloakId", "EquipAffixList", "BornTime", "PendingPromoteRewardList", "CostumeId", "ExcelInfo", "AnimHash", "MirrorAvatarInfo", "ABLFJPMKKDA", "GCHGLANNHMC", "TraceEffectId", });
     internal_static_AvatarInfo_PropMapEntry_descriptor =
       internal_static_AvatarInfo_descriptor.getNestedTypes().get(0);
     internal_static_AvatarInfo_PropMapEntry_fieldAccessorTable = new
@@ -5092,6 +5278,7 @@ public final class AvatarInfoOuterClass {
     emu.grasscutter.net.proto.PropValueOuterClass.getDescriptor();
     emu.grasscutter.net.proto.AvatarSkillInfoOuterClass.getDescriptor();
     emu.grasscutter.net.proto.TrialAvatarInfoOuterClass.getDescriptor();
+    emu.grasscutter.net.proto.MirrorAvatarInfoOuterClass.getDescriptor();
     emu.grasscutter.net.proto.AvatarFetterInfoOuterClass.getDescriptor();
     emu.grasscutter.net.proto.AvatarExpeditionStateOuterClass.getDescriptor();
     emu.grasscutter.net.proto.AvatarEquipAffixInfoOuterClass.getDescriptor();

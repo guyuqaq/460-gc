@@ -21,7 +21,6 @@ public final class ChangeWorldToSingleModeReqOuterClass {
   /**
    * <pre>
    * CmdId: 23683
-   * Obf: DBLNBBNCINO
    * </pre>
    *
    * Protobuf type {@code ChangeWorldToSingleModeReq}
@@ -247,7 +246,6 @@ public final class ChangeWorldToSingleModeReqOuterClass {
     /**
      * <pre>
      * CmdId: 23683
-     * Obf: DBLNBBNCINO
      * </pre>
      *
      * Protobuf type {@code ChangeWorldToSingleModeReq}

@@ -20,8 +20,7 @@ public final class GetWorldMpInfoReqOuterClass {
   }
   /**
    * <pre>
-   * CmdId: 6964
-   * Obf: EGCDJCJPCCI
+   * CmdId: 6731
    * </pre>
    *
    * Protobuf type {@code GetWorldMpInfoReq}
@@ -246,8 +245,7 @@ public final class GetWorldMpInfoReqOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 6964
-     * Obf: EGCDJCJPCCI
+     * CmdId: 6731
      * </pre>
      *
      * Protobuf type {@code GetWorldMpInfoReq}

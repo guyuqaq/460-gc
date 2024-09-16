@@ -19,22 +19,18 @@ public final class OfferingPariDetailDataOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 GEDMGFJIPAH = 14;</code>
-     * @return The gEDMGFJIPAH.
+     * <code>bool IGHGEFKMLJP = 3;</code>
+     * @return The iGHGEFKMLJP.
      */
-    int getGEDMGFJIPAH();
+    boolean getIGHGEFKMLJP();
 
     /**
-     * <code>bool BLMBNCGDAOI = 15;</code>
-     * @return The bLMBNCGDAOI.
+     * <code>uint32 BKGMABCACCG = 11;</code>
+     * @return The bKGMABCACCG.
      */
-    boolean getBLMBNCGDAOI();
+    int getBKGMABCACCG();
   }
   /**
-   * <pre>
-   * Obf: KMNOJIOKFHB
-   * </pre>
-   *
    * Protobuf type {@code OfferingPariDetailData}
    */
   public static final class OfferingPariDetailData extends
@@ -79,14 +75,14 @@ public final class OfferingPariDetailDataOuterClass {
             case 0:
               done = true;
               break;
-            case 112: {
+            case 24: {
 
-              gEDMGFJIPAH_ = input.readUInt32();
+              iGHGEFKMLJP_ = input.readBool();
               break;
             }
-            case 120: {
+            case 88: {
 
-              bLMBNCGDAOI_ = input.readBool();
+              bKGMABCACCG_ = input.readUInt32();
               break;
             }
             default: {
@@ -121,26 +117,26 @@ public final class OfferingPariDetailDataOuterClass {
               emu.grasscutter.net.proto.OfferingPariDetailDataOuterClass.OfferingPariDetailData.class, emu.grasscutter.net.proto.OfferingPariDetailDataOuterClass.OfferingPariDetailData.Builder.class);
     }
 
-    public static final int GEDMGFJIPAH_FIELD_NUMBER = 14;
-    private int gEDMGFJIPAH_;
+    public static final int IGHGEFKMLJP_FIELD_NUMBER = 3;
+    private boolean iGHGEFKMLJP_;
     /**
-     * <code>uint32 GEDMGFJIPAH = 14;</code>
-     * @return The gEDMGFJIPAH.
+     * <code>bool IGHGEFKMLJP = 3;</code>
+     * @return The iGHGEFKMLJP.
      */
     @java.lang.Override
-    public int getGEDMGFJIPAH() {
-      return gEDMGFJIPAH_;
+    public boolean getIGHGEFKMLJP() {
+      return iGHGEFKMLJP_;
     }
 
-    public static final int BLMBNCGDAOI_FIELD_NUMBER = 15;
-    private boolean bLMBNCGDAOI_;
+    public static final int BKGMABCACCG_FIELD_NUMBER = 11;
+    private int bKGMABCACCG_;
     /**
-     * <code>bool BLMBNCGDAOI = 15;</code>
-     * @return The bLMBNCGDAOI.
+     * <code>uint32 BKGMABCACCG = 11;</code>
+     * @return The bKGMABCACCG.
      */
     @java.lang.Override
-    public boolean getBLMBNCGDAOI() {
-      return bLMBNCGDAOI_;
+    public int getBKGMABCACCG() {
+      return bKGMABCACCG_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -157,11 +153,11 @@ public final class OfferingPariDetailDataOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (gEDMGFJIPAH_ != 0) {
-        output.writeUInt32(14, gEDMGFJIPAH_);
+      if (iGHGEFKMLJP_ != false) {
+        output.writeBool(3, iGHGEFKMLJP_);
       }
-      if (bLMBNCGDAOI_ != false) {
-        output.writeBool(15, bLMBNCGDAOI_);
+      if (bKGMABCACCG_ != 0) {
+        output.writeUInt32(11, bKGMABCACCG_);
       }
       unknownFields.writeTo(output);
     }
@@ -172,13 +168,13 @@ public final class OfferingPariDetailDataOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (gEDMGFJIPAH_ != 0) {
+      if (iGHGEFKMLJP_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(14, gEDMGFJIPAH_);
+          .computeBoolSize(3, iGHGEFKMLJP_);
       }
-      if (bLMBNCGDAOI_ != false) {
+      if (bKGMABCACCG_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(15, bLMBNCGDAOI_);
+          .computeUInt32Size(11, bKGMABCACCG_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -195,10 +191,10 @@ public final class OfferingPariDetailDataOuterClass {
       }
       emu.grasscutter.net.proto.OfferingPariDetailDataOuterClass.OfferingPariDetailData other = (emu.grasscutter.net.proto.OfferingPariDetailDataOuterClass.OfferingPariDetailData) obj;
 
-      if (getGEDMGFJIPAH()
-          != other.getGEDMGFJIPAH()) return false;
-      if (getBLMBNCGDAOI()
-          != other.getBLMBNCGDAOI()) return false;
+      if (getIGHGEFKMLJP()
+          != other.getIGHGEFKMLJP()) return false;
+      if (getBKGMABCACCG()
+          != other.getBKGMABCACCG()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -210,11 +206,11 @@ public final class OfferingPariDetailDataOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + GEDMGFJIPAH_FIELD_NUMBER;
-      hash = (53 * hash) + getGEDMGFJIPAH();
-      hash = (37 * hash) + BLMBNCGDAOI_FIELD_NUMBER;
+      hash = (37 * hash) + IGHGEFKMLJP_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getBLMBNCGDAOI());
+          getIGHGEFKMLJP());
+      hash = (37 * hash) + BKGMABCACCG_FIELD_NUMBER;
+      hash = (53 * hash) + getBKGMABCACCG();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -311,10 +307,6 @@ public final class OfferingPariDetailDataOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * Obf: KMNOJIOKFHB
-     * </pre>
-     *
      * Protobuf type {@code OfferingPariDetailData}
      */
     public static final class Builder extends
@@ -352,9 +344,9 @@ public final class OfferingPariDetailDataOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        gEDMGFJIPAH_ = 0;
+        iGHGEFKMLJP_ = false;
 
-        bLMBNCGDAOI_ = false;
+        bKGMABCACCG_ = 0;
 
         return this;
       }
@@ -382,8 +374,8 @@ public final class OfferingPariDetailDataOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.OfferingPariDetailDataOuterClass.OfferingPariDetailData buildPartial() {
         emu.grasscutter.net.proto.OfferingPariDetailDataOuterClass.OfferingPariDetailData result = new emu.grasscutter.net.proto.OfferingPariDetailDataOuterClass.OfferingPariDetailData(this);
-        result.gEDMGFJIPAH_ = gEDMGFJIPAH_;
-        result.bLMBNCGDAOI_ = bLMBNCGDAOI_;
+        result.iGHGEFKMLJP_ = iGHGEFKMLJP_;
+        result.bKGMABCACCG_ = bKGMABCACCG_;
         onBuilt();
         return result;
       }
@@ -432,11 +424,11 @@ public final class OfferingPariDetailDataOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.OfferingPariDetailDataOuterClass.OfferingPariDetailData other) {
         if (other == emu.grasscutter.net.proto.OfferingPariDetailDataOuterClass.OfferingPariDetailData.getDefaultInstance()) return this;
-        if (other.getGEDMGFJIPAH() != 0) {
-          setGEDMGFJIPAH(other.getGEDMGFJIPAH());
+        if (other.getIGHGEFKMLJP() != false) {
+          setIGHGEFKMLJP(other.getIGHGEFKMLJP());
         }
-        if (other.getBLMBNCGDAOI() != false) {
-          setBLMBNCGDAOI(other.getBLMBNCGDAOI());
+        if (other.getBKGMABCACCG() != 0) {
+          setBKGMABCACCG(other.getBKGMABCACCG());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -467,64 +459,64 @@ public final class OfferingPariDetailDataOuterClass {
         return this;
       }
 
-      private int gEDMGFJIPAH_ ;
+      private boolean iGHGEFKMLJP_ ;
       /**
-       * <code>uint32 GEDMGFJIPAH = 14;</code>
-       * @return The gEDMGFJIPAH.
+       * <code>bool IGHGEFKMLJP = 3;</code>
+       * @return The iGHGEFKMLJP.
        */
       @java.lang.Override
-      public int getGEDMGFJIPAH() {
-        return gEDMGFJIPAH_;
+      public boolean getIGHGEFKMLJP() {
+        return iGHGEFKMLJP_;
       }
       /**
-       * <code>uint32 GEDMGFJIPAH = 14;</code>
-       * @param value The gEDMGFJIPAH to set.
+       * <code>bool IGHGEFKMLJP = 3;</code>
+       * @param value The iGHGEFKMLJP to set.
        * @return This builder for chaining.
        */
-      public Builder setGEDMGFJIPAH(int value) {
+      public Builder setIGHGEFKMLJP(boolean value) {
         
-        gEDMGFJIPAH_ = value;
+        iGHGEFKMLJP_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 GEDMGFJIPAH = 14;</code>
+       * <code>bool IGHGEFKMLJP = 3;</code>
        * @return This builder for chaining.
        */
-      public Builder clearGEDMGFJIPAH() {
+      public Builder clearIGHGEFKMLJP() {
         
-        gEDMGFJIPAH_ = 0;
+        iGHGEFKMLJP_ = false;
         onChanged();
         return this;
       }
 
-      private boolean bLMBNCGDAOI_ ;
+      private int bKGMABCACCG_ ;
       /**
-       * <code>bool BLMBNCGDAOI = 15;</code>
-       * @return The bLMBNCGDAOI.
+       * <code>uint32 BKGMABCACCG = 11;</code>
+       * @return The bKGMABCACCG.
        */
       @java.lang.Override
-      public boolean getBLMBNCGDAOI() {
-        return bLMBNCGDAOI_;
+      public int getBKGMABCACCG() {
+        return bKGMABCACCG_;
       }
       /**
-       * <code>bool BLMBNCGDAOI = 15;</code>
-       * @param value The bLMBNCGDAOI to set.
+       * <code>uint32 BKGMABCACCG = 11;</code>
+       * @param value The bKGMABCACCG to set.
        * @return This builder for chaining.
        */
-      public Builder setBLMBNCGDAOI(boolean value) {
+      public Builder setBKGMABCACCG(int value) {
         
-        bLMBNCGDAOI_ = value;
+        bKGMABCACCG_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>bool BLMBNCGDAOI = 15;</code>
+       * <code>uint32 BKGMABCACCG = 11;</code>
        * @return This builder for chaining.
        */
-      public Builder clearBLMBNCGDAOI() {
+      public Builder clearBKGMABCACCG() {
         
-        bLMBNCGDAOI_ = false;
+        bKGMABCACCG_ = 0;
         onChanged();
         return this;
       }
@@ -596,8 +588,8 @@ public final class OfferingPariDetailDataOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\034OfferingPariDetailData.proto\"B\n\026Offeri" +
-      "ngPariDetailData\022\023\n\013GEDMGFJIPAH\030\016 \001(\r\022\023\n" +
-      "\013BLMBNCGDAOI\030\017 \001(\010B\033\n\031emu.grasscutter.ne" +
+      "ngPariDetailData\022\023\n\013IGHGEFKMLJP\030\003 \001(\010\022\023\n" +
+      "\013BKGMABCACCG\030\013 \001(\rB\033\n\031emu.grasscutter.ne" +
       "t.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -609,7 +601,7 @@ public final class OfferingPariDetailDataOuterClass {
     internal_static_OfferingPariDetailData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_OfferingPariDetailData_descriptor,
-        new java.lang.String[] { "GEDMGFJIPAH", "BLMBNCGDAOI", });
+        new java.lang.String[] { "IGHGEFKMLJP", "BKGMABCACCG", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

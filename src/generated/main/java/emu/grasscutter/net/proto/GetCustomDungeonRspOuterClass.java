@@ -19,54 +19,53 @@ public final class GetCustomDungeonRspOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.CustomDungeonBanInfo ban_info = 2;</code>
-     * @return Whether the banInfo field is set.
-     */
-    boolean hasBanInfo();
-    /**
-     * <code>.CustomDungeonBanInfo ban_info = 2;</code>
-     * @return The banInfo.
-     */
-    emu.grasscutter.net.proto.CustomDungeonBanInfoOuterClass.CustomDungeonBanInfo getBanInfo();
-    /**
-     * <code>.CustomDungeonBanInfo ban_info = 2;</code>
-     */
-    emu.grasscutter.net.proto.CustomDungeonBanInfoOuterClass.CustomDungeonBanInfoOrBuilder getBanInfoOrBuilder();
-
-    /**
-     * <code>int32 retcode = 10;</code>
+     * <code>int32 retcode = 7;</code>
      * @return The retcode.
      */
     int getRetcode();
 
     /**
-     * <code>repeated .CustomDungeonBrief brief_list = 15;</code>
+     * <code>repeated .CustomDungeonBrief brief_list = 11;</code>
      */
     java.util.List<emu.grasscutter.net.proto.CustomDungeonBriefOuterClass.CustomDungeonBrief> 
         getBriefListList();
     /**
-     * <code>repeated .CustomDungeonBrief brief_list = 15;</code>
+     * <code>repeated .CustomDungeonBrief brief_list = 11;</code>
      */
     emu.grasscutter.net.proto.CustomDungeonBriefOuterClass.CustomDungeonBrief getBriefList(int index);
     /**
-     * <code>repeated .CustomDungeonBrief brief_list = 15;</code>
+     * <code>repeated .CustomDungeonBrief brief_list = 11;</code>
      */
     int getBriefListCount();
     /**
-     * <code>repeated .CustomDungeonBrief brief_list = 15;</code>
+     * <code>repeated .CustomDungeonBrief brief_list = 11;</code>
      */
     java.util.List<? extends emu.grasscutter.net.proto.CustomDungeonBriefOuterClass.CustomDungeonBriefOrBuilder> 
         getBriefListOrBuilderList();
     /**
-     * <code>repeated .CustomDungeonBrief brief_list = 15;</code>
+     * <code>repeated .CustomDungeonBrief brief_list = 11;</code>
      */
     emu.grasscutter.net.proto.CustomDungeonBriefOuterClass.CustomDungeonBriefOrBuilder getBriefListOrBuilder(
         int index);
+
+    /**
+     * <code>.CustomDungeonBanInfo ban_info = 13;</code>
+     * @return Whether the banInfo field is set.
+     */
+    boolean hasBanInfo();
+    /**
+     * <code>.CustomDungeonBanInfo ban_info = 13;</code>
+     * @return The banInfo.
+     */
+    emu.grasscutter.net.proto.CustomDungeonBanInfoOuterClass.CustomDungeonBanInfo getBanInfo();
+    /**
+     * <code>.CustomDungeonBanInfo ban_info = 13;</code>
+     */
+    emu.grasscutter.net.proto.CustomDungeonBanInfoOuterClass.CustomDungeonBanInfoOrBuilder getBanInfoOrBuilder();
   }
   /**
    * <pre>
-   * CmdId: 5372
-   * Obf: OMIHDIPFCBH
+   * CmdId: 9793
    * </pre>
    *
    * Protobuf type {@code GetCustomDungeonRsp}
@@ -115,7 +114,21 @@ public final class GetCustomDungeonRspOuterClass {
             case 0:
               done = true;
               break;
-            case 18: {
+            case 56: {
+
+              retcode_ = input.readInt32();
+              break;
+            }
+            case 90: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                briefList_ = new java.util.ArrayList<emu.grasscutter.net.proto.CustomDungeonBriefOuterClass.CustomDungeonBrief>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              briefList_.add(
+                  input.readMessage(emu.grasscutter.net.proto.CustomDungeonBriefOuterClass.CustomDungeonBrief.parser(), extensionRegistry));
+              break;
+            }
+            case 106: {
               emu.grasscutter.net.proto.CustomDungeonBanInfoOuterClass.CustomDungeonBanInfo.Builder subBuilder = null;
               if (banInfo_ != null) {
                 subBuilder = banInfo_.toBuilder();
@@ -126,20 +139,6 @@ public final class GetCustomDungeonRspOuterClass {
                 banInfo_ = subBuilder.buildPartial();
               }
 
-              break;
-            }
-            case 80: {
-
-              retcode_ = input.readInt32();
-              break;
-            }
-            case 122: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                briefList_ = new java.util.ArrayList<emu.grasscutter.net.proto.CustomDungeonBriefOuterClass.CustomDungeonBrief>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              briefList_.add(
-                  input.readMessage(emu.grasscutter.net.proto.CustomDungeonBriefOuterClass.CustomDungeonBrief.parser(), extensionRegistry));
               break;
             }
             default: {
@@ -177,36 +176,10 @@ public final class GetCustomDungeonRspOuterClass {
               emu.grasscutter.net.proto.GetCustomDungeonRspOuterClass.GetCustomDungeonRsp.class, emu.grasscutter.net.proto.GetCustomDungeonRspOuterClass.GetCustomDungeonRsp.Builder.class);
     }
 
-    public static final int BAN_INFO_FIELD_NUMBER = 2;
-    private emu.grasscutter.net.proto.CustomDungeonBanInfoOuterClass.CustomDungeonBanInfo banInfo_;
-    /**
-     * <code>.CustomDungeonBanInfo ban_info = 2;</code>
-     * @return Whether the banInfo field is set.
-     */
-    @java.lang.Override
-    public boolean hasBanInfo() {
-      return banInfo_ != null;
-    }
-    /**
-     * <code>.CustomDungeonBanInfo ban_info = 2;</code>
-     * @return The banInfo.
-     */
-    @java.lang.Override
-    public emu.grasscutter.net.proto.CustomDungeonBanInfoOuterClass.CustomDungeonBanInfo getBanInfo() {
-      return banInfo_ == null ? emu.grasscutter.net.proto.CustomDungeonBanInfoOuterClass.CustomDungeonBanInfo.getDefaultInstance() : banInfo_;
-    }
-    /**
-     * <code>.CustomDungeonBanInfo ban_info = 2;</code>
-     */
-    @java.lang.Override
-    public emu.grasscutter.net.proto.CustomDungeonBanInfoOuterClass.CustomDungeonBanInfoOrBuilder getBanInfoOrBuilder() {
-      return getBanInfo();
-    }
-
-    public static final int RETCODE_FIELD_NUMBER = 10;
+    public static final int RETCODE_FIELD_NUMBER = 7;
     private int retcode_;
     /**
-     * <code>int32 retcode = 10;</code>
+     * <code>int32 retcode = 7;</code>
      * @return The retcode.
      */
     @java.lang.Override
@@ -214,17 +187,17 @@ public final class GetCustomDungeonRspOuterClass {
       return retcode_;
     }
 
-    public static final int BRIEF_LIST_FIELD_NUMBER = 15;
+    public static final int BRIEF_LIST_FIELD_NUMBER = 11;
     private java.util.List<emu.grasscutter.net.proto.CustomDungeonBriefOuterClass.CustomDungeonBrief> briefList_;
     /**
-     * <code>repeated .CustomDungeonBrief brief_list = 15;</code>
+     * <code>repeated .CustomDungeonBrief brief_list = 11;</code>
      */
     @java.lang.Override
     public java.util.List<emu.grasscutter.net.proto.CustomDungeonBriefOuterClass.CustomDungeonBrief> getBriefListList() {
       return briefList_;
     }
     /**
-     * <code>repeated .CustomDungeonBrief brief_list = 15;</code>
+     * <code>repeated .CustomDungeonBrief brief_list = 11;</code>
      */
     @java.lang.Override
     public java.util.List<? extends emu.grasscutter.net.proto.CustomDungeonBriefOuterClass.CustomDungeonBriefOrBuilder> 
@@ -232,26 +205,52 @@ public final class GetCustomDungeonRspOuterClass {
       return briefList_;
     }
     /**
-     * <code>repeated .CustomDungeonBrief brief_list = 15;</code>
+     * <code>repeated .CustomDungeonBrief brief_list = 11;</code>
      */
     @java.lang.Override
     public int getBriefListCount() {
       return briefList_.size();
     }
     /**
-     * <code>repeated .CustomDungeonBrief brief_list = 15;</code>
+     * <code>repeated .CustomDungeonBrief brief_list = 11;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.CustomDungeonBriefOuterClass.CustomDungeonBrief getBriefList(int index) {
       return briefList_.get(index);
     }
     /**
-     * <code>repeated .CustomDungeonBrief brief_list = 15;</code>
+     * <code>repeated .CustomDungeonBrief brief_list = 11;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.CustomDungeonBriefOuterClass.CustomDungeonBriefOrBuilder getBriefListOrBuilder(
         int index) {
       return briefList_.get(index);
+    }
+
+    public static final int BAN_INFO_FIELD_NUMBER = 13;
+    private emu.grasscutter.net.proto.CustomDungeonBanInfoOuterClass.CustomDungeonBanInfo banInfo_;
+    /**
+     * <code>.CustomDungeonBanInfo ban_info = 13;</code>
+     * @return Whether the banInfo field is set.
+     */
+    @java.lang.Override
+    public boolean hasBanInfo() {
+      return banInfo_ != null;
+    }
+    /**
+     * <code>.CustomDungeonBanInfo ban_info = 13;</code>
+     * @return The banInfo.
+     */
+    @java.lang.Override
+    public emu.grasscutter.net.proto.CustomDungeonBanInfoOuterClass.CustomDungeonBanInfo getBanInfo() {
+      return banInfo_ == null ? emu.grasscutter.net.proto.CustomDungeonBanInfoOuterClass.CustomDungeonBanInfo.getDefaultInstance() : banInfo_;
+    }
+    /**
+     * <code>.CustomDungeonBanInfo ban_info = 13;</code>
+     */
+    @java.lang.Override
+    public emu.grasscutter.net.proto.CustomDungeonBanInfoOuterClass.CustomDungeonBanInfoOrBuilder getBanInfoOrBuilder() {
+      return getBanInfo();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -268,14 +267,14 @@ public final class GetCustomDungeonRspOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (banInfo_ != null) {
-        output.writeMessage(2, getBanInfo());
-      }
       if (retcode_ != 0) {
-        output.writeInt32(10, retcode_);
+        output.writeInt32(7, retcode_);
       }
       for (int i = 0; i < briefList_.size(); i++) {
-        output.writeMessage(15, briefList_.get(i));
+        output.writeMessage(11, briefList_.get(i));
+      }
+      if (banInfo_ != null) {
+        output.writeMessage(13, getBanInfo());
       }
       unknownFields.writeTo(output);
     }
@@ -286,17 +285,17 @@ public final class GetCustomDungeonRspOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (banInfo_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getBanInfo());
-      }
       if (retcode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(10, retcode_);
+          .computeInt32Size(7, retcode_);
       }
       for (int i = 0; i < briefList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(15, briefList_.get(i));
+          .computeMessageSize(11, briefList_.get(i));
+      }
+      if (banInfo_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(13, getBanInfo());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -313,15 +312,15 @@ public final class GetCustomDungeonRspOuterClass {
       }
       emu.grasscutter.net.proto.GetCustomDungeonRspOuterClass.GetCustomDungeonRsp other = (emu.grasscutter.net.proto.GetCustomDungeonRspOuterClass.GetCustomDungeonRsp) obj;
 
+      if (getRetcode()
+          != other.getRetcode()) return false;
+      if (!getBriefListList()
+          .equals(other.getBriefListList())) return false;
       if (hasBanInfo() != other.hasBanInfo()) return false;
       if (hasBanInfo()) {
         if (!getBanInfo()
             .equals(other.getBanInfo())) return false;
       }
-      if (getRetcode()
-          != other.getRetcode()) return false;
-      if (!getBriefListList()
-          .equals(other.getBriefListList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -333,15 +332,15 @@ public final class GetCustomDungeonRspOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasBanInfo()) {
-        hash = (37 * hash) + BAN_INFO_FIELD_NUMBER;
-        hash = (53 * hash) + getBanInfo().hashCode();
-      }
       hash = (37 * hash) + RETCODE_FIELD_NUMBER;
       hash = (53 * hash) + getRetcode();
       if (getBriefListCount() > 0) {
         hash = (37 * hash) + BRIEF_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getBriefListList().hashCode();
+      }
+      if (hasBanInfo()) {
+        hash = (37 * hash) + BAN_INFO_FIELD_NUMBER;
+        hash = (53 * hash) + getBanInfo().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -440,8 +439,7 @@ public final class GetCustomDungeonRspOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 5372
-     * Obf: OMIHDIPFCBH
+     * CmdId: 9793
      * </pre>
      *
      * Protobuf type {@code GetCustomDungeonRsp}
@@ -482,12 +480,6 @@ public final class GetCustomDungeonRspOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (banInfoBuilder_ == null) {
-          banInfo_ = null;
-        } else {
-          banInfo_ = null;
-          banInfoBuilder_ = null;
-        }
         retcode_ = 0;
 
         if (briefListBuilder_ == null) {
@@ -495,6 +487,12 @@ public final class GetCustomDungeonRspOuterClass {
           bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           briefListBuilder_.clear();
+        }
+        if (banInfoBuilder_ == null) {
+          banInfo_ = null;
+        } else {
+          banInfo_ = null;
+          banInfoBuilder_ = null;
         }
         return this;
       }
@@ -523,11 +521,6 @@ public final class GetCustomDungeonRspOuterClass {
       public emu.grasscutter.net.proto.GetCustomDungeonRspOuterClass.GetCustomDungeonRsp buildPartial() {
         emu.grasscutter.net.proto.GetCustomDungeonRspOuterClass.GetCustomDungeonRsp result = new emu.grasscutter.net.proto.GetCustomDungeonRspOuterClass.GetCustomDungeonRsp(this);
         int from_bitField0_ = bitField0_;
-        if (banInfoBuilder_ == null) {
-          result.banInfo_ = banInfo_;
-        } else {
-          result.banInfo_ = banInfoBuilder_.build();
-        }
         result.retcode_ = retcode_;
         if (briefListBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
@@ -537,6 +530,11 @@ public final class GetCustomDungeonRspOuterClass {
           result.briefList_ = briefList_;
         } else {
           result.briefList_ = briefListBuilder_.build();
+        }
+        if (banInfoBuilder_ == null) {
+          result.banInfo_ = banInfo_;
+        } else {
+          result.banInfo_ = banInfoBuilder_.build();
         }
         onBuilt();
         return result;
@@ -586,9 +584,6 @@ public final class GetCustomDungeonRspOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.GetCustomDungeonRspOuterClass.GetCustomDungeonRsp other) {
         if (other == emu.grasscutter.net.proto.GetCustomDungeonRspOuterClass.GetCustomDungeonRsp.getDefaultInstance()) return this;
-        if (other.hasBanInfo()) {
-          mergeBanInfo(other.getBanInfo());
-        }
         if (other.getRetcode() != 0) {
           setRetcode(other.getRetcode());
         }
@@ -617,6 +612,9 @@ public final class GetCustomDungeonRspOuterClass {
               briefListBuilder_.addAllMessages(other.briefList_);
             }
           }
+        }
+        if (other.hasBanInfo()) {
+          mergeBanInfo(other.getBanInfo());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -648,128 +646,9 @@ public final class GetCustomDungeonRspOuterClass {
       }
       private int bitField0_;
 
-      private emu.grasscutter.net.proto.CustomDungeonBanInfoOuterClass.CustomDungeonBanInfo banInfo_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          emu.grasscutter.net.proto.CustomDungeonBanInfoOuterClass.CustomDungeonBanInfo, emu.grasscutter.net.proto.CustomDungeonBanInfoOuterClass.CustomDungeonBanInfo.Builder, emu.grasscutter.net.proto.CustomDungeonBanInfoOuterClass.CustomDungeonBanInfoOrBuilder> banInfoBuilder_;
-      /**
-       * <code>.CustomDungeonBanInfo ban_info = 2;</code>
-       * @return Whether the banInfo field is set.
-       */
-      public boolean hasBanInfo() {
-        return banInfoBuilder_ != null || banInfo_ != null;
-      }
-      /**
-       * <code>.CustomDungeonBanInfo ban_info = 2;</code>
-       * @return The banInfo.
-       */
-      public emu.grasscutter.net.proto.CustomDungeonBanInfoOuterClass.CustomDungeonBanInfo getBanInfo() {
-        if (banInfoBuilder_ == null) {
-          return banInfo_ == null ? emu.grasscutter.net.proto.CustomDungeonBanInfoOuterClass.CustomDungeonBanInfo.getDefaultInstance() : banInfo_;
-        } else {
-          return banInfoBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>.CustomDungeonBanInfo ban_info = 2;</code>
-       */
-      public Builder setBanInfo(emu.grasscutter.net.proto.CustomDungeonBanInfoOuterClass.CustomDungeonBanInfo value) {
-        if (banInfoBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          banInfo_ = value;
-          onChanged();
-        } else {
-          banInfoBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.CustomDungeonBanInfo ban_info = 2;</code>
-       */
-      public Builder setBanInfo(
-          emu.grasscutter.net.proto.CustomDungeonBanInfoOuterClass.CustomDungeonBanInfo.Builder builderForValue) {
-        if (banInfoBuilder_ == null) {
-          banInfo_ = builderForValue.build();
-          onChanged();
-        } else {
-          banInfoBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <code>.CustomDungeonBanInfo ban_info = 2;</code>
-       */
-      public Builder mergeBanInfo(emu.grasscutter.net.proto.CustomDungeonBanInfoOuterClass.CustomDungeonBanInfo value) {
-        if (banInfoBuilder_ == null) {
-          if (banInfo_ != null) {
-            banInfo_ =
-              emu.grasscutter.net.proto.CustomDungeonBanInfoOuterClass.CustomDungeonBanInfo.newBuilder(banInfo_).mergeFrom(value).buildPartial();
-          } else {
-            banInfo_ = value;
-          }
-          onChanged();
-        } else {
-          banInfoBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.CustomDungeonBanInfo ban_info = 2;</code>
-       */
-      public Builder clearBanInfo() {
-        if (banInfoBuilder_ == null) {
-          banInfo_ = null;
-          onChanged();
-        } else {
-          banInfo_ = null;
-          banInfoBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <code>.CustomDungeonBanInfo ban_info = 2;</code>
-       */
-      public emu.grasscutter.net.proto.CustomDungeonBanInfoOuterClass.CustomDungeonBanInfo.Builder getBanInfoBuilder() {
-        
-        onChanged();
-        return getBanInfoFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.CustomDungeonBanInfo ban_info = 2;</code>
-       */
-      public emu.grasscutter.net.proto.CustomDungeonBanInfoOuterClass.CustomDungeonBanInfoOrBuilder getBanInfoOrBuilder() {
-        if (banInfoBuilder_ != null) {
-          return banInfoBuilder_.getMessageOrBuilder();
-        } else {
-          return banInfo_ == null ?
-              emu.grasscutter.net.proto.CustomDungeonBanInfoOuterClass.CustomDungeonBanInfo.getDefaultInstance() : banInfo_;
-        }
-      }
-      /**
-       * <code>.CustomDungeonBanInfo ban_info = 2;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          emu.grasscutter.net.proto.CustomDungeonBanInfoOuterClass.CustomDungeonBanInfo, emu.grasscutter.net.proto.CustomDungeonBanInfoOuterClass.CustomDungeonBanInfo.Builder, emu.grasscutter.net.proto.CustomDungeonBanInfoOuterClass.CustomDungeonBanInfoOrBuilder> 
-          getBanInfoFieldBuilder() {
-        if (banInfoBuilder_ == null) {
-          banInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              emu.grasscutter.net.proto.CustomDungeonBanInfoOuterClass.CustomDungeonBanInfo, emu.grasscutter.net.proto.CustomDungeonBanInfoOuterClass.CustomDungeonBanInfo.Builder, emu.grasscutter.net.proto.CustomDungeonBanInfoOuterClass.CustomDungeonBanInfoOrBuilder>(
-                  getBanInfo(),
-                  getParentForChildren(),
-                  isClean());
-          banInfo_ = null;
-        }
-        return banInfoBuilder_;
-      }
-
       private int retcode_ ;
       /**
-       * <code>int32 retcode = 10;</code>
+       * <code>int32 retcode = 7;</code>
        * @return The retcode.
        */
       @java.lang.Override
@@ -777,7 +656,7 @@ public final class GetCustomDungeonRspOuterClass {
         return retcode_;
       }
       /**
-       * <code>int32 retcode = 10;</code>
+       * <code>int32 retcode = 7;</code>
        * @param value The retcode to set.
        * @return This builder for chaining.
        */
@@ -788,7 +667,7 @@ public final class GetCustomDungeonRspOuterClass {
         return this;
       }
       /**
-       * <code>int32 retcode = 10;</code>
+       * <code>int32 retcode = 7;</code>
        * @return This builder for chaining.
        */
       public Builder clearRetcode() {
@@ -811,7 +690,7 @@ public final class GetCustomDungeonRspOuterClass {
           emu.grasscutter.net.proto.CustomDungeonBriefOuterClass.CustomDungeonBrief, emu.grasscutter.net.proto.CustomDungeonBriefOuterClass.CustomDungeonBrief.Builder, emu.grasscutter.net.proto.CustomDungeonBriefOuterClass.CustomDungeonBriefOrBuilder> briefListBuilder_;
 
       /**
-       * <code>repeated .CustomDungeonBrief brief_list = 15;</code>
+       * <code>repeated .CustomDungeonBrief brief_list = 11;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.CustomDungeonBriefOuterClass.CustomDungeonBrief> getBriefListList() {
         if (briefListBuilder_ == null) {
@@ -821,7 +700,7 @@ public final class GetCustomDungeonRspOuterClass {
         }
       }
       /**
-       * <code>repeated .CustomDungeonBrief brief_list = 15;</code>
+       * <code>repeated .CustomDungeonBrief brief_list = 11;</code>
        */
       public int getBriefListCount() {
         if (briefListBuilder_ == null) {
@@ -831,7 +710,7 @@ public final class GetCustomDungeonRspOuterClass {
         }
       }
       /**
-       * <code>repeated .CustomDungeonBrief brief_list = 15;</code>
+       * <code>repeated .CustomDungeonBrief brief_list = 11;</code>
        */
       public emu.grasscutter.net.proto.CustomDungeonBriefOuterClass.CustomDungeonBrief getBriefList(int index) {
         if (briefListBuilder_ == null) {
@@ -841,7 +720,7 @@ public final class GetCustomDungeonRspOuterClass {
         }
       }
       /**
-       * <code>repeated .CustomDungeonBrief brief_list = 15;</code>
+       * <code>repeated .CustomDungeonBrief brief_list = 11;</code>
        */
       public Builder setBriefList(
           int index, emu.grasscutter.net.proto.CustomDungeonBriefOuterClass.CustomDungeonBrief value) {
@@ -858,7 +737,7 @@ public final class GetCustomDungeonRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .CustomDungeonBrief brief_list = 15;</code>
+       * <code>repeated .CustomDungeonBrief brief_list = 11;</code>
        */
       public Builder setBriefList(
           int index, emu.grasscutter.net.proto.CustomDungeonBriefOuterClass.CustomDungeonBrief.Builder builderForValue) {
@@ -872,7 +751,7 @@ public final class GetCustomDungeonRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .CustomDungeonBrief brief_list = 15;</code>
+       * <code>repeated .CustomDungeonBrief brief_list = 11;</code>
        */
       public Builder addBriefList(emu.grasscutter.net.proto.CustomDungeonBriefOuterClass.CustomDungeonBrief value) {
         if (briefListBuilder_ == null) {
@@ -888,7 +767,7 @@ public final class GetCustomDungeonRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .CustomDungeonBrief brief_list = 15;</code>
+       * <code>repeated .CustomDungeonBrief brief_list = 11;</code>
        */
       public Builder addBriefList(
           int index, emu.grasscutter.net.proto.CustomDungeonBriefOuterClass.CustomDungeonBrief value) {
@@ -905,7 +784,7 @@ public final class GetCustomDungeonRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .CustomDungeonBrief brief_list = 15;</code>
+       * <code>repeated .CustomDungeonBrief brief_list = 11;</code>
        */
       public Builder addBriefList(
           emu.grasscutter.net.proto.CustomDungeonBriefOuterClass.CustomDungeonBrief.Builder builderForValue) {
@@ -919,7 +798,7 @@ public final class GetCustomDungeonRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .CustomDungeonBrief brief_list = 15;</code>
+       * <code>repeated .CustomDungeonBrief brief_list = 11;</code>
        */
       public Builder addBriefList(
           int index, emu.grasscutter.net.proto.CustomDungeonBriefOuterClass.CustomDungeonBrief.Builder builderForValue) {
@@ -933,7 +812,7 @@ public final class GetCustomDungeonRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .CustomDungeonBrief brief_list = 15;</code>
+       * <code>repeated .CustomDungeonBrief brief_list = 11;</code>
        */
       public Builder addAllBriefList(
           java.lang.Iterable<? extends emu.grasscutter.net.proto.CustomDungeonBriefOuterClass.CustomDungeonBrief> values) {
@@ -948,7 +827,7 @@ public final class GetCustomDungeonRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .CustomDungeonBrief brief_list = 15;</code>
+       * <code>repeated .CustomDungeonBrief brief_list = 11;</code>
        */
       public Builder clearBriefList() {
         if (briefListBuilder_ == null) {
@@ -961,7 +840,7 @@ public final class GetCustomDungeonRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .CustomDungeonBrief brief_list = 15;</code>
+       * <code>repeated .CustomDungeonBrief brief_list = 11;</code>
        */
       public Builder removeBriefList(int index) {
         if (briefListBuilder_ == null) {
@@ -974,14 +853,14 @@ public final class GetCustomDungeonRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .CustomDungeonBrief brief_list = 15;</code>
+       * <code>repeated .CustomDungeonBrief brief_list = 11;</code>
        */
       public emu.grasscutter.net.proto.CustomDungeonBriefOuterClass.CustomDungeonBrief.Builder getBriefListBuilder(
           int index) {
         return getBriefListFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .CustomDungeonBrief brief_list = 15;</code>
+       * <code>repeated .CustomDungeonBrief brief_list = 11;</code>
        */
       public emu.grasscutter.net.proto.CustomDungeonBriefOuterClass.CustomDungeonBriefOrBuilder getBriefListOrBuilder(
           int index) {
@@ -991,7 +870,7 @@ public final class GetCustomDungeonRspOuterClass {
         }
       }
       /**
-       * <code>repeated .CustomDungeonBrief brief_list = 15;</code>
+       * <code>repeated .CustomDungeonBrief brief_list = 11;</code>
        */
       public java.util.List<? extends emu.grasscutter.net.proto.CustomDungeonBriefOuterClass.CustomDungeonBriefOrBuilder> 
            getBriefListOrBuilderList() {
@@ -1002,14 +881,14 @@ public final class GetCustomDungeonRspOuterClass {
         }
       }
       /**
-       * <code>repeated .CustomDungeonBrief brief_list = 15;</code>
+       * <code>repeated .CustomDungeonBrief brief_list = 11;</code>
        */
       public emu.grasscutter.net.proto.CustomDungeonBriefOuterClass.CustomDungeonBrief.Builder addBriefListBuilder() {
         return getBriefListFieldBuilder().addBuilder(
             emu.grasscutter.net.proto.CustomDungeonBriefOuterClass.CustomDungeonBrief.getDefaultInstance());
       }
       /**
-       * <code>repeated .CustomDungeonBrief brief_list = 15;</code>
+       * <code>repeated .CustomDungeonBrief brief_list = 11;</code>
        */
       public emu.grasscutter.net.proto.CustomDungeonBriefOuterClass.CustomDungeonBrief.Builder addBriefListBuilder(
           int index) {
@@ -1017,7 +896,7 @@ public final class GetCustomDungeonRspOuterClass {
             index, emu.grasscutter.net.proto.CustomDungeonBriefOuterClass.CustomDungeonBrief.getDefaultInstance());
       }
       /**
-       * <code>repeated .CustomDungeonBrief brief_list = 15;</code>
+       * <code>repeated .CustomDungeonBrief brief_list = 11;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.CustomDungeonBriefOuterClass.CustomDungeonBrief.Builder> 
            getBriefListBuilderList() {
@@ -1036,6 +915,125 @@ public final class GetCustomDungeonRspOuterClass {
           briefList_ = null;
         }
         return briefListBuilder_;
+      }
+
+      private emu.grasscutter.net.proto.CustomDungeonBanInfoOuterClass.CustomDungeonBanInfo banInfo_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          emu.grasscutter.net.proto.CustomDungeonBanInfoOuterClass.CustomDungeonBanInfo, emu.grasscutter.net.proto.CustomDungeonBanInfoOuterClass.CustomDungeonBanInfo.Builder, emu.grasscutter.net.proto.CustomDungeonBanInfoOuterClass.CustomDungeonBanInfoOrBuilder> banInfoBuilder_;
+      /**
+       * <code>.CustomDungeonBanInfo ban_info = 13;</code>
+       * @return Whether the banInfo field is set.
+       */
+      public boolean hasBanInfo() {
+        return banInfoBuilder_ != null || banInfo_ != null;
+      }
+      /**
+       * <code>.CustomDungeonBanInfo ban_info = 13;</code>
+       * @return The banInfo.
+       */
+      public emu.grasscutter.net.proto.CustomDungeonBanInfoOuterClass.CustomDungeonBanInfo getBanInfo() {
+        if (banInfoBuilder_ == null) {
+          return banInfo_ == null ? emu.grasscutter.net.proto.CustomDungeonBanInfoOuterClass.CustomDungeonBanInfo.getDefaultInstance() : banInfo_;
+        } else {
+          return banInfoBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.CustomDungeonBanInfo ban_info = 13;</code>
+       */
+      public Builder setBanInfo(emu.grasscutter.net.proto.CustomDungeonBanInfoOuterClass.CustomDungeonBanInfo value) {
+        if (banInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          banInfo_ = value;
+          onChanged();
+        } else {
+          banInfoBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.CustomDungeonBanInfo ban_info = 13;</code>
+       */
+      public Builder setBanInfo(
+          emu.grasscutter.net.proto.CustomDungeonBanInfoOuterClass.CustomDungeonBanInfo.Builder builderForValue) {
+        if (banInfoBuilder_ == null) {
+          banInfo_ = builderForValue.build();
+          onChanged();
+        } else {
+          banInfoBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.CustomDungeonBanInfo ban_info = 13;</code>
+       */
+      public Builder mergeBanInfo(emu.grasscutter.net.proto.CustomDungeonBanInfoOuterClass.CustomDungeonBanInfo value) {
+        if (banInfoBuilder_ == null) {
+          if (banInfo_ != null) {
+            banInfo_ =
+              emu.grasscutter.net.proto.CustomDungeonBanInfoOuterClass.CustomDungeonBanInfo.newBuilder(banInfo_).mergeFrom(value).buildPartial();
+          } else {
+            banInfo_ = value;
+          }
+          onChanged();
+        } else {
+          banInfoBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.CustomDungeonBanInfo ban_info = 13;</code>
+       */
+      public Builder clearBanInfo() {
+        if (banInfoBuilder_ == null) {
+          banInfo_ = null;
+          onChanged();
+        } else {
+          banInfo_ = null;
+          banInfoBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.CustomDungeonBanInfo ban_info = 13;</code>
+       */
+      public emu.grasscutter.net.proto.CustomDungeonBanInfoOuterClass.CustomDungeonBanInfo.Builder getBanInfoBuilder() {
+        
+        onChanged();
+        return getBanInfoFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.CustomDungeonBanInfo ban_info = 13;</code>
+       */
+      public emu.grasscutter.net.proto.CustomDungeonBanInfoOuterClass.CustomDungeonBanInfoOrBuilder getBanInfoOrBuilder() {
+        if (banInfoBuilder_ != null) {
+          return banInfoBuilder_.getMessageOrBuilder();
+        } else {
+          return banInfo_ == null ?
+              emu.grasscutter.net.proto.CustomDungeonBanInfoOuterClass.CustomDungeonBanInfo.getDefaultInstance() : banInfo_;
+        }
+      }
+      /**
+       * <code>.CustomDungeonBanInfo ban_info = 13;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          emu.grasscutter.net.proto.CustomDungeonBanInfoOuterClass.CustomDungeonBanInfo, emu.grasscutter.net.proto.CustomDungeonBanInfoOuterClass.CustomDungeonBanInfo.Builder, emu.grasscutter.net.proto.CustomDungeonBanInfoOuterClass.CustomDungeonBanInfoOrBuilder> 
+          getBanInfoFieldBuilder() {
+        if (banInfoBuilder_ == null) {
+          banInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              emu.grasscutter.net.proto.CustomDungeonBanInfoOuterClass.CustomDungeonBanInfo, emu.grasscutter.net.proto.CustomDungeonBanInfoOuterClass.CustomDungeonBanInfo.Builder, emu.grasscutter.net.proto.CustomDungeonBanInfoOuterClass.CustomDungeonBanInfoOrBuilder>(
+                  getBanInfo(),
+                  getParentForChildren(),
+                  isClean());
+          banInfo_ = null;
+        }
+        return banInfoBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -1106,10 +1104,10 @@ public final class GetCustomDungeonRspOuterClass {
     java.lang.String[] descriptorData = {
       "\n\031GetCustomDungeonRsp.proto\032\032CustomDunge" +
       "onBanInfo.proto\032\030CustomDungeonBrief.prot" +
-      "o\"x\n\023GetCustomDungeonRsp\022\'\n\010ban_info\030\002 \001" +
-      "(\0132\025.CustomDungeonBanInfo\022\017\n\007retcode\030\n \001" +
-      "(\005\022\'\n\nbrief_list\030\017 \003(\0132\023.CustomDungeonBr" +
-      "iefB\033\n\031emu.grasscutter.net.protob\006proto3"
+      "o\"x\n\023GetCustomDungeonRsp\022\017\n\007retcode\030\007 \001(" +
+      "\005\022\'\n\nbrief_list\030\013 \003(\0132\023.CustomDungeonBri" +
+      "ef\022\'\n\010ban_info\030\r \001(\0132\025.CustomDungeonBanI" +
+      "nfoB\033\n\031emu.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1122,7 +1120,7 @@ public final class GetCustomDungeonRspOuterClass {
     internal_static_GetCustomDungeonRsp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_GetCustomDungeonRsp_descriptor,
-        new java.lang.String[] { "BanInfo", "Retcode", "BriefList", });
+        new java.lang.String[] { "Retcode", "BriefList", "BanInfo", });
     emu.grasscutter.net.proto.CustomDungeonBanInfoOuterClass.getDescriptor();
     emu.grasscutter.net.proto.CustomDungeonBriefOuterClass.getDescriptor();
   }

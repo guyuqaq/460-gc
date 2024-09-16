@@ -19,18 +19,6 @@ public final class IslandPartySailInfoNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 kill_monster_count = 6;</code>
-     * @return The killMonsterCount.
-     */
-    int getKillMonsterCount();
-
-    /**
-     * <code>uint32 progress = 8;</code>
-     * @return The progress.
-     */
-    int getProgress();
-
-    /**
      * <code>.IslandPartySailStage stage = 2;</code>
      * @return The enum numeric value on the wire for stage.
      */
@@ -42,15 +30,26 @@ public final class IslandPartySailInfoNotifyOuterClass {
     emu.grasscutter.net.proto.IslandPartySailStageOuterClass.IslandPartySailStage getStage();
 
     /**
-     * <code>uint32 coin = 4;</code>
+     * <code>uint32 progress = 3;</code>
+     * @return The progress.
+     */
+    int getProgress();
+
+    /**
+     * <code>uint32 kill_monster_count = 11;</code>
+     * @return The killMonsterCount.
+     */
+    int getKillMonsterCount();
+
+    /**
+     * <code>uint32 coin = 14;</code>
      * @return The coin.
      */
     int getCoin();
   }
   /**
    * <pre>
-   * CmdId: 8726
-   * Obf: NICKHMIPEIF
+   * CmdId: 5059
    * </pre>
    *
    * Protobuf type {@code IslandPartySailInfoNotify}
@@ -104,19 +103,19 @@ public final class IslandPartySailInfoNotifyOuterClass {
               stage_ = rawValue;
               break;
             }
-            case 32: {
+            case 24: {
 
-              coin_ = input.readUInt32();
+              progress_ = input.readUInt32();
               break;
             }
-            case 48: {
+            case 88: {
 
               killMonsterCount_ = input.readUInt32();
               break;
             }
-            case 64: {
+            case 112: {
 
-              progress_ = input.readUInt32();
+              coin_ = input.readUInt32();
               break;
             }
             default: {
@@ -151,28 +150,6 @@ public final class IslandPartySailInfoNotifyOuterClass {
               emu.grasscutter.net.proto.IslandPartySailInfoNotifyOuterClass.IslandPartySailInfoNotify.class, emu.grasscutter.net.proto.IslandPartySailInfoNotifyOuterClass.IslandPartySailInfoNotify.Builder.class);
     }
 
-    public static final int KILL_MONSTER_COUNT_FIELD_NUMBER = 6;
-    private int killMonsterCount_;
-    /**
-     * <code>uint32 kill_monster_count = 6;</code>
-     * @return The killMonsterCount.
-     */
-    @java.lang.Override
-    public int getKillMonsterCount() {
-      return killMonsterCount_;
-    }
-
-    public static final int PROGRESS_FIELD_NUMBER = 8;
-    private int progress_;
-    /**
-     * <code>uint32 progress = 8;</code>
-     * @return The progress.
-     */
-    @java.lang.Override
-    public int getProgress() {
-      return progress_;
-    }
-
     public static final int STAGE_FIELD_NUMBER = 2;
     private int stage_;
     /**
@@ -192,10 +169,32 @@ public final class IslandPartySailInfoNotifyOuterClass {
       return result == null ? emu.grasscutter.net.proto.IslandPartySailStageOuterClass.IslandPartySailStage.UNRECOGNIZED : result;
     }
 
-    public static final int COIN_FIELD_NUMBER = 4;
+    public static final int PROGRESS_FIELD_NUMBER = 3;
+    private int progress_;
+    /**
+     * <code>uint32 progress = 3;</code>
+     * @return The progress.
+     */
+    @java.lang.Override
+    public int getProgress() {
+      return progress_;
+    }
+
+    public static final int KILL_MONSTER_COUNT_FIELD_NUMBER = 11;
+    private int killMonsterCount_;
+    /**
+     * <code>uint32 kill_monster_count = 11;</code>
+     * @return The killMonsterCount.
+     */
+    @java.lang.Override
+    public int getKillMonsterCount() {
+      return killMonsterCount_;
+    }
+
+    public static final int COIN_FIELD_NUMBER = 14;
     private int coin_;
     /**
-     * <code>uint32 coin = 4;</code>
+     * <code>uint32 coin = 14;</code>
      * @return The coin.
      */
     @java.lang.Override
@@ -220,14 +219,14 @@ public final class IslandPartySailInfoNotifyOuterClass {
       if (stage_ != emu.grasscutter.net.proto.IslandPartySailStageOuterClass.IslandPartySailStage.ISLAND_PARTY_SAIL_STAGE_NONE.getNumber()) {
         output.writeEnum(2, stage_);
       }
-      if (coin_ != 0) {
-        output.writeUInt32(4, coin_);
+      if (progress_ != 0) {
+        output.writeUInt32(3, progress_);
       }
       if (killMonsterCount_ != 0) {
-        output.writeUInt32(6, killMonsterCount_);
+        output.writeUInt32(11, killMonsterCount_);
       }
-      if (progress_ != 0) {
-        output.writeUInt32(8, progress_);
+      if (coin_ != 0) {
+        output.writeUInt32(14, coin_);
       }
       unknownFields.writeTo(output);
     }
@@ -242,17 +241,17 @@ public final class IslandPartySailInfoNotifyOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(2, stage_);
       }
-      if (coin_ != 0) {
+      if (progress_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(4, coin_);
+          .computeUInt32Size(3, progress_);
       }
       if (killMonsterCount_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(6, killMonsterCount_);
+          .computeUInt32Size(11, killMonsterCount_);
       }
-      if (progress_ != 0) {
+      if (coin_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(8, progress_);
+          .computeUInt32Size(14, coin_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -269,11 +268,11 @@ public final class IslandPartySailInfoNotifyOuterClass {
       }
       emu.grasscutter.net.proto.IslandPartySailInfoNotifyOuterClass.IslandPartySailInfoNotify other = (emu.grasscutter.net.proto.IslandPartySailInfoNotifyOuterClass.IslandPartySailInfoNotify) obj;
 
-      if (getKillMonsterCount()
-          != other.getKillMonsterCount()) return false;
+      if (stage_ != other.stage_) return false;
       if (getProgress()
           != other.getProgress()) return false;
-      if (stage_ != other.stage_) return false;
+      if (getKillMonsterCount()
+          != other.getKillMonsterCount()) return false;
       if (getCoin()
           != other.getCoin()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
@@ -287,12 +286,12 @@ public final class IslandPartySailInfoNotifyOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + KILL_MONSTER_COUNT_FIELD_NUMBER;
-      hash = (53 * hash) + getKillMonsterCount();
-      hash = (37 * hash) + PROGRESS_FIELD_NUMBER;
-      hash = (53 * hash) + getProgress();
       hash = (37 * hash) + STAGE_FIELD_NUMBER;
       hash = (53 * hash) + stage_;
+      hash = (37 * hash) + PROGRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getProgress();
+      hash = (37 * hash) + KILL_MONSTER_COUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getKillMonsterCount();
       hash = (37 * hash) + COIN_FIELD_NUMBER;
       hash = (53 * hash) + getCoin();
       hash = (29 * hash) + unknownFields.hashCode();
@@ -392,8 +391,7 @@ public final class IslandPartySailInfoNotifyOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 8726
-     * Obf: NICKHMIPEIF
+     * CmdId: 5059
      * </pre>
      *
      * Protobuf type {@code IslandPartySailInfoNotify}
@@ -433,11 +431,11 @@ public final class IslandPartySailInfoNotifyOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        killMonsterCount_ = 0;
+        stage_ = 0;
 
         progress_ = 0;
 
-        stage_ = 0;
+        killMonsterCount_ = 0;
 
         coin_ = 0;
 
@@ -467,9 +465,9 @@ public final class IslandPartySailInfoNotifyOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.IslandPartySailInfoNotifyOuterClass.IslandPartySailInfoNotify buildPartial() {
         emu.grasscutter.net.proto.IslandPartySailInfoNotifyOuterClass.IslandPartySailInfoNotify result = new emu.grasscutter.net.proto.IslandPartySailInfoNotifyOuterClass.IslandPartySailInfoNotify(this);
-        result.killMonsterCount_ = killMonsterCount_;
-        result.progress_ = progress_;
         result.stage_ = stage_;
+        result.progress_ = progress_;
+        result.killMonsterCount_ = killMonsterCount_;
         result.coin_ = coin_;
         onBuilt();
         return result;
@@ -519,14 +517,14 @@ public final class IslandPartySailInfoNotifyOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.IslandPartySailInfoNotifyOuterClass.IslandPartySailInfoNotify other) {
         if (other == emu.grasscutter.net.proto.IslandPartySailInfoNotifyOuterClass.IslandPartySailInfoNotify.getDefaultInstance()) return this;
-        if (other.getKillMonsterCount() != 0) {
-          setKillMonsterCount(other.getKillMonsterCount());
+        if (other.stage_ != 0) {
+          setStageValue(other.getStageValue());
         }
         if (other.getProgress() != 0) {
           setProgress(other.getProgress());
         }
-        if (other.stage_ != 0) {
-          setStageValue(other.getStageValue());
+        if (other.getKillMonsterCount() != 0) {
+          setKillMonsterCount(other.getKillMonsterCount());
         }
         if (other.getCoin() != 0) {
           setCoin(other.getCoin());
@@ -557,68 +555,6 @@ public final class IslandPartySailInfoNotifyOuterClass {
             mergeFrom(parsedMessage);
           }
         }
-        return this;
-      }
-
-      private int killMonsterCount_ ;
-      /**
-       * <code>uint32 kill_monster_count = 6;</code>
-       * @return The killMonsterCount.
-       */
-      @java.lang.Override
-      public int getKillMonsterCount() {
-        return killMonsterCount_;
-      }
-      /**
-       * <code>uint32 kill_monster_count = 6;</code>
-       * @param value The killMonsterCount to set.
-       * @return This builder for chaining.
-       */
-      public Builder setKillMonsterCount(int value) {
-        
-        killMonsterCount_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 kill_monster_count = 6;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearKillMonsterCount() {
-        
-        killMonsterCount_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int progress_ ;
-      /**
-       * <code>uint32 progress = 8;</code>
-       * @return The progress.
-       */
-      @java.lang.Override
-      public int getProgress() {
-        return progress_;
-      }
-      /**
-       * <code>uint32 progress = 8;</code>
-       * @param value The progress to set.
-       * @return This builder for chaining.
-       */
-      public Builder setProgress(int value) {
-        
-        progress_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 progress = 8;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearProgress() {
-        
-        progress_ = 0;
-        onChanged();
         return this;
       }
 
@@ -676,9 +612,71 @@ public final class IslandPartySailInfoNotifyOuterClass {
         return this;
       }
 
+      private int progress_ ;
+      /**
+       * <code>uint32 progress = 3;</code>
+       * @return The progress.
+       */
+      @java.lang.Override
+      public int getProgress() {
+        return progress_;
+      }
+      /**
+       * <code>uint32 progress = 3;</code>
+       * @param value The progress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProgress(int value) {
+        
+        progress_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 progress = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProgress() {
+        
+        progress_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int killMonsterCount_ ;
+      /**
+       * <code>uint32 kill_monster_count = 11;</code>
+       * @return The killMonsterCount.
+       */
+      @java.lang.Override
+      public int getKillMonsterCount() {
+        return killMonsterCount_;
+      }
+      /**
+       * <code>uint32 kill_monster_count = 11;</code>
+       * @param value The killMonsterCount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKillMonsterCount(int value) {
+        
+        killMonsterCount_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 kill_monster_count = 11;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearKillMonsterCount() {
+        
+        killMonsterCount_ = 0;
+        onChanged();
+        return this;
+      }
+
       private int coin_ ;
       /**
-       * <code>uint32 coin = 4;</code>
+       * <code>uint32 coin = 14;</code>
        * @return The coin.
        */
       @java.lang.Override
@@ -686,7 +684,7 @@ public final class IslandPartySailInfoNotifyOuterClass {
         return coin_;
       }
       /**
-       * <code>uint32 coin = 4;</code>
+       * <code>uint32 coin = 14;</code>
        * @param value The coin to set.
        * @return This builder for chaining.
        */
@@ -697,7 +695,7 @@ public final class IslandPartySailInfoNotifyOuterClass {
         return this;
       }
       /**
-       * <code>uint32 coin = 4;</code>
+       * <code>uint32 coin = 14;</code>
        * @return This builder for chaining.
        */
       public Builder clearCoin() {
@@ -775,9 +773,9 @@ public final class IslandPartySailInfoNotifyOuterClass {
     java.lang.String[] descriptorData = {
       "\n\037IslandPartySailInfoNotify.proto\032\032Islan" +
       "dPartySailStage.proto\"}\n\031IslandPartySail" +
-      "InfoNotify\022\032\n\022kill_monster_count\030\006 \001(\r\022\020" +
-      "\n\010progress\030\010 \001(\r\022$\n\005stage\030\002 \001(\0162\025.Island" +
-      "PartySailStage\022\014\n\004coin\030\004 \001(\rB\033\n\031emu.gras" +
+      "InfoNotify\022$\n\005stage\030\002 \001(\0162\025.IslandPartyS" +
+      "ailStage\022\020\n\010progress\030\003 \001(\r\022\032\n\022kill_monst" +
+      "er_count\030\013 \001(\r\022\014\n\004coin\030\016 \001(\rB\033\n\031emu.gras" +
       "scutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -790,7 +788,7 @@ public final class IslandPartySailInfoNotifyOuterClass {
     internal_static_IslandPartySailInfoNotify_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_IslandPartySailInfoNotify_descriptor,
-        new java.lang.String[] { "KillMonsterCount", "Progress", "Stage", "Coin", });
+        new java.lang.String[] { "Stage", "Progress", "KillMonsterCount", "Coin", });
     emu.grasscutter.net.proto.IslandPartySailStageOuterClass.getDescriptor();
   }
 

@@ -15,10 +15,6 @@ public final class CustomDungeonBanTypeOuterClass {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   /**
-   * <pre>
-   * Obf: DHBHFOPCKCO
-   * </pre>
-   *
    * Protobuf enum {@code CustomDungeonBanType}
    */
   public enum CustomDungeonBanType
