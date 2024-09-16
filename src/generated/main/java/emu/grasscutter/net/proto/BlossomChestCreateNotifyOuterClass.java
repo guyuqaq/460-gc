@@ -19,21 +19,20 @@ public final class BlossomChestCreateNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 refresh_id = 8;</code>
+     * <code>uint32 refresh_id = 12;</code>
      * @return The refreshId.
      */
     int getRefreshId();
 
     /**
-     * <code>uint32 circle_camp_id = 2;</code>
+     * <code>uint32 circle_camp_id = 15;</code>
      * @return The circleCampId.
      */
     int getCircleCampId();
   }
   /**
    * <pre>
-   * CmdId: 2992
-   * Obf: DHFOJJJLEBN
+   * CmdId: 28996
    * </pre>
    *
    * Protobuf type {@code BlossomChestCreateNotify}
@@ -80,14 +79,14 @@ public final class BlossomChestCreateNotifyOuterClass {
             case 0:
               done = true;
               break;
-            case 16: {
-
-              circleCampId_ = input.readUInt32();
-              break;
-            }
-            case 64: {
+            case 96: {
 
               refreshId_ = input.readUInt32();
+              break;
+            }
+            case 120: {
+
+              circleCampId_ = input.readUInt32();
               break;
             }
             default: {
@@ -122,10 +121,10 @@ public final class BlossomChestCreateNotifyOuterClass {
               emu.grasscutter.net.proto.BlossomChestCreateNotifyOuterClass.BlossomChestCreateNotify.class, emu.grasscutter.net.proto.BlossomChestCreateNotifyOuterClass.BlossomChestCreateNotify.Builder.class);
     }
 
-    public static final int REFRESH_ID_FIELD_NUMBER = 8;
+    public static final int REFRESH_ID_FIELD_NUMBER = 12;
     private int refreshId_;
     /**
-     * <code>uint32 refresh_id = 8;</code>
+     * <code>uint32 refresh_id = 12;</code>
      * @return The refreshId.
      */
     @java.lang.Override
@@ -133,10 +132,10 @@ public final class BlossomChestCreateNotifyOuterClass {
       return refreshId_;
     }
 
-    public static final int CIRCLE_CAMP_ID_FIELD_NUMBER = 2;
+    public static final int CIRCLE_CAMP_ID_FIELD_NUMBER = 15;
     private int circleCampId_;
     /**
-     * <code>uint32 circle_camp_id = 2;</code>
+     * <code>uint32 circle_camp_id = 15;</code>
      * @return The circleCampId.
      */
     @java.lang.Override
@@ -158,11 +157,11 @@ public final class BlossomChestCreateNotifyOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (circleCampId_ != 0) {
-        output.writeUInt32(2, circleCampId_);
-      }
       if (refreshId_ != 0) {
-        output.writeUInt32(8, refreshId_);
+        output.writeUInt32(12, refreshId_);
+      }
+      if (circleCampId_ != 0) {
+        output.writeUInt32(15, circleCampId_);
       }
       unknownFields.writeTo(output);
     }
@@ -173,13 +172,13 @@ public final class BlossomChestCreateNotifyOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (circleCampId_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(2, circleCampId_);
-      }
       if (refreshId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(8, refreshId_);
+          .computeUInt32Size(12, refreshId_);
+      }
+      if (circleCampId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(15, circleCampId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -312,8 +311,7 @@ public final class BlossomChestCreateNotifyOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 2992
-     * Obf: DHFOJJJLEBN
+     * CmdId: 28996
      * </pre>
      *
      * Protobuf type {@code BlossomChestCreateNotify}
@@ -470,7 +468,7 @@ public final class BlossomChestCreateNotifyOuterClass {
 
       private int refreshId_ ;
       /**
-       * <code>uint32 refresh_id = 8;</code>
+       * <code>uint32 refresh_id = 12;</code>
        * @return The refreshId.
        */
       @java.lang.Override
@@ -478,7 +476,7 @@ public final class BlossomChestCreateNotifyOuterClass {
         return refreshId_;
       }
       /**
-       * <code>uint32 refresh_id = 8;</code>
+       * <code>uint32 refresh_id = 12;</code>
        * @param value The refreshId to set.
        * @return This builder for chaining.
        */
@@ -489,7 +487,7 @@ public final class BlossomChestCreateNotifyOuterClass {
         return this;
       }
       /**
-       * <code>uint32 refresh_id = 8;</code>
+       * <code>uint32 refresh_id = 12;</code>
        * @return This builder for chaining.
        */
       public Builder clearRefreshId() {
@@ -501,7 +499,7 @@ public final class BlossomChestCreateNotifyOuterClass {
 
       private int circleCampId_ ;
       /**
-       * <code>uint32 circle_camp_id = 2;</code>
+       * <code>uint32 circle_camp_id = 15;</code>
        * @return The circleCampId.
        */
       @java.lang.Override
@@ -509,7 +507,7 @@ public final class BlossomChestCreateNotifyOuterClass {
         return circleCampId_;
       }
       /**
-       * <code>uint32 circle_camp_id = 2;</code>
+       * <code>uint32 circle_camp_id = 15;</code>
        * @param value The circleCampId to set.
        * @return This builder for chaining.
        */
@@ -520,7 +518,7 @@ public final class BlossomChestCreateNotifyOuterClass {
         return this;
       }
       /**
-       * <code>uint32 circle_camp_id = 2;</code>
+       * <code>uint32 circle_camp_id = 15;</code>
        * @return This builder for chaining.
        */
       public Builder clearCircleCampId() {
@@ -597,8 +595,8 @@ public final class BlossomChestCreateNotifyOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\036BlossomChestCreateNotify.proto\"F\n\030Blos" +
-      "somChestCreateNotify\022\022\n\nrefresh_id\030\010 \001(\r" +
-      "\022\026\n\016circle_camp_id\030\002 \001(\rB\033\n\031emu.grasscut" +
+      "somChestCreateNotify\022\022\n\nrefresh_id\030\014 \001(\r" +
+      "\022\026\n\016circle_camp_id\030\017 \001(\rB\033\n\031emu.grasscut" +
       "ter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

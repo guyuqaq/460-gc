@@ -26,8 +26,7 @@ public final class DungeonSlipRevivePointActivateReqOuterClass {
   }
   /**
    * <pre>
-   * CmdId: 8721
-   * Obf: NMHIJGEDOLK
+   * CmdId: 29939
    * </pre>
    *
    * Protobuf type {@code DungeonSlipRevivePointActivateReq}
@@ -279,8 +278,7 @@ public final class DungeonSlipRevivePointActivateReqOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 8721
-     * Obf: NMHIJGEDOLK
+     * CmdId: 29939
      * </pre>
      *
      * Protobuf type {@code DungeonSlipRevivePointActivateReq}

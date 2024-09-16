@@ -43,21 +43,21 @@ public final class PathfindingEnterSceneReqOuterClass {
         int index);
 
     /**
-     * <code>repeated int32 HDFCDNCGBBH = 9;</code>
-     * @return A list containing the hDFCDNCGBBH.
+     * <code>repeated int32 activity_id = 9;</code>
+     * @return A list containing the activityId.
      */
-    java.util.List<java.lang.Integer> getHDFCDNCGBBHList();
+    java.util.List<java.lang.Integer> getActivityIdList();
     /**
-     * <code>repeated int32 HDFCDNCGBBH = 9;</code>
-     * @return The count of hDFCDNCGBBH.
+     * <code>repeated int32 activity_id = 9;</code>
+     * @return The count of activityId.
      */
-    int getHDFCDNCGBBHCount();
+    int getActivityIdCount();
     /**
-     * <code>repeated int32 HDFCDNCGBBH = 9;</code>
+     * <code>repeated int32 activity_id = 9;</code>
      * @param index The index of the element to return.
-     * @return The hDFCDNCGBBH at the given index.
+     * @return The activityId at the given index.
      */
-    int getHDFCDNCGBBH(int index);
+    int getActivityId(int index);
 
     /**
      * <code>bool is_editor = 8;</code>
@@ -90,6 +90,10 @@ public final class PathfindingEnterSceneReqOuterClass {
     int getCDDPHGDDCCN();
   }
   /**
+   * <pre>
+   * CmdId: 2374
+   * </pre>
+   *
    * Protobuf type {@code PathfindingEnterSceneReq}
    */
   public static final class PathfindingEnterSceneReq extends
@@ -103,7 +107,7 @@ public final class PathfindingEnterSceneReqOuterClass {
     }
     private PathfindingEnterSceneReq() {
       obstacles_ = java.util.Collections.emptyList();
-      hDFCDNCGBBH_ = emptyIntList();
+      activityId_ = emptyIntList();
     }
 
     @java.lang.Override
@@ -154,21 +158,21 @@ public final class PathfindingEnterSceneReqOuterClass {
             }
             case 72: {
               if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                hDFCDNCGBBH_ = newIntList();
+                activityId_ = newIntList();
                 mutable_bitField0_ |= 0x00000002;
               }
-              hDFCDNCGBBH_.addInt(input.readInt32());
+              activityId_.addInt(input.readInt32());
               break;
             }
             case 74: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
               if (!((mutable_bitField0_ & 0x00000002) != 0) && input.getBytesUntilLimit() > 0) {
-                hDFCDNCGBBH_ = newIntList();
+                activityId_ = newIntList();
                 mutable_bitField0_ |= 0x00000002;
               }
               while (input.getBytesUntilLimit() > 0) {
-                hDFCDNCGBBH_.addInt(input.readInt32());
+                activityId_.addInt(input.readInt32());
               }
               input.popLimit(limit);
               break;
@@ -208,7 +212,7 @@ public final class PathfindingEnterSceneReqOuterClass {
             e).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000002) != 0)) {
-          hDFCDNCGBBH_.makeImmutable(); // C
+          activityId_.makeImmutable(); // C
         }
         if (((mutable_bitField0_ & 0x00000001) != 0)) {
           obstacles_ = java.util.Collections.unmodifiableList(obstacles_);
@@ -270,33 +274,33 @@ public final class PathfindingEnterSceneReqOuterClass {
       return obstacles_.get(index);
     }
 
-    public static final int HDFCDNCGBBH_FIELD_NUMBER = 9;
-    private com.google.protobuf.Internal.IntList hDFCDNCGBBH_;
+    public static final int ACTIVITY_ID_FIELD_NUMBER = 9;
+    private com.google.protobuf.Internal.IntList activityId_;
     /**
-     * <code>repeated int32 HDFCDNCGBBH = 9;</code>
-     * @return A list containing the hDFCDNCGBBH.
+     * <code>repeated int32 activity_id = 9;</code>
+     * @return A list containing the activityId.
      */
     @java.lang.Override
     public java.util.List<java.lang.Integer>
-        getHDFCDNCGBBHList() {
-      return hDFCDNCGBBH_;
+        getActivityIdList() {
+      return activityId_;
     }
     /**
-     * <code>repeated int32 HDFCDNCGBBH = 9;</code>
-     * @return The count of hDFCDNCGBBH.
+     * <code>repeated int32 activity_id = 9;</code>
+     * @return The count of activityId.
      */
-    public int getHDFCDNCGBBHCount() {
-      return hDFCDNCGBBH_.size();
+    public int getActivityIdCount() {
+      return activityId_.size();
     }
     /**
-     * <code>repeated int32 HDFCDNCGBBH = 9;</code>
+     * <code>repeated int32 activity_id = 9;</code>
      * @param index The index of the element to return.
-     * @return The hDFCDNCGBBH at the given index.
+     * @return The activityId at the given index.
      */
-    public int getHDFCDNCGBBH(int index) {
-      return hDFCDNCGBBH_.getInt(index);
+    public int getActivityId(int index) {
+      return activityId_.getInt(index);
     }
-    private int hDFCDNCGBBHMemoizedSerializedSize = -1;
+    private int activityIdMemoizedSerializedSize = -1;
 
     public static final int IS_EDITOR_FIELD_NUMBER = 8;
     private boolean isEditor_;
@@ -377,12 +381,12 @@ public final class PathfindingEnterSceneReqOuterClass {
       if (isEditor_ != false) {
         output.writeBool(8, isEditor_);
       }
-      if (getHDFCDNCGBBHList().size() > 0) {
+      if (getActivityIdList().size() > 0) {
         output.writeUInt32NoTag(74);
-        output.writeUInt32NoTag(hDFCDNCGBBHMemoizedSerializedSize);
+        output.writeUInt32NoTag(activityIdMemoizedSerializedSize);
       }
-      for (int i = 0; i < hDFCDNCGBBH_.size(); i++) {
-        output.writeInt32NoTag(hDFCDNCGBBH_.getInt(i));
+      for (int i = 0; i < activityId_.size(); i++) {
+        output.writeInt32NoTag(activityId_.getInt(i));
       }
       for (int i = 0; i < obstacles_.size(); i++) {
         output.writeMessage(10, obstacles_.get(i));
@@ -416,17 +420,17 @@ public final class PathfindingEnterSceneReqOuterClass {
       }
       {
         int dataSize = 0;
-        for (int i = 0; i < hDFCDNCGBBH_.size(); i++) {
+        for (int i = 0; i < activityId_.size(); i++) {
           dataSize += com.google.protobuf.CodedOutputStream
-            .computeInt32SizeNoTag(hDFCDNCGBBH_.getInt(i));
+            .computeInt32SizeNoTag(activityId_.getInt(i));
         }
         size += dataSize;
-        if (!getHDFCDNCGBBHList().isEmpty()) {
+        if (!getActivityIdList().isEmpty()) {
           size += 1;
           size += com.google.protobuf.CodedOutputStream
               .computeInt32SizeNoTag(dataSize);
         }
-        hDFCDNCGBBHMemoizedSerializedSize = dataSize;
+        activityIdMemoizedSerializedSize = dataSize;
       }
       for (int i = 0; i < obstacles_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
@@ -457,8 +461,8 @@ public final class PathfindingEnterSceneReqOuterClass {
 
       if (!getObstaclesList()
           .equals(other.getObstaclesList())) return false;
-      if (!getHDFCDNCGBBHList()
-          .equals(other.getHDFCDNCGBBHList())) return false;
+      if (!getActivityIdList()
+          .equals(other.getActivityIdList())) return false;
       if (getIsEditor()
           != other.getIsEditor()) return false;
       if (getDKEOBFMAFPK()
@@ -484,9 +488,9 @@ public final class PathfindingEnterSceneReqOuterClass {
         hash = (37 * hash) + OBSTACLES_FIELD_NUMBER;
         hash = (53 * hash) + getObstaclesList().hashCode();
       }
-      if (getHDFCDNCGBBHCount() > 0) {
-        hash = (37 * hash) + HDFCDNCGBBH_FIELD_NUMBER;
-        hash = (53 * hash) + getHDFCDNCGBBHList().hashCode();
+      if (getActivityIdCount() > 0) {
+        hash = (37 * hash) + ACTIVITY_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getActivityIdList().hashCode();
       }
       hash = (37 * hash) + IS_EDITOR_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
@@ -595,6 +599,10 @@ public final class PathfindingEnterSceneReqOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * CmdId: 2374
+     * </pre>
+     *
      * Protobuf type {@code PathfindingEnterSceneReq}
      */
     public static final class Builder extends
@@ -639,7 +647,7 @@ public final class PathfindingEnterSceneReqOuterClass {
         } else {
           obstaclesBuilder_.clear();
         }
-        hDFCDNCGBBH_ = emptyIntList();
+        activityId_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000002);
         isEditor_ = false;
 
@@ -688,10 +696,10 @@ public final class PathfindingEnterSceneReqOuterClass {
           result.obstacles_ = obstaclesBuilder_.build();
         }
         if (((bitField0_ & 0x00000002) != 0)) {
-          hDFCDNCGBBH_.makeImmutable();
+          activityId_.makeImmutable();
           bitField0_ = (bitField0_ & ~0x00000002);
         }
-        result.hDFCDNCGBBH_ = hDFCDNCGBBH_;
+        result.activityId_ = activityId_;
         result.isEditor_ = isEditor_;
         result.dKEOBFMAFPK_ = dKEOBFMAFPK_;
         result.sceneId_ = sceneId_;
@@ -771,13 +779,13 @@ public final class PathfindingEnterSceneReqOuterClass {
             }
           }
         }
-        if (!other.hDFCDNCGBBH_.isEmpty()) {
-          if (hDFCDNCGBBH_.isEmpty()) {
-            hDFCDNCGBBH_ = other.hDFCDNCGBBH_;
+        if (!other.activityId_.isEmpty()) {
+          if (activityId_.isEmpty()) {
+            activityId_ = other.activityId_;
             bitField0_ = (bitField0_ & ~0x00000002);
           } else {
-            ensureHDFCDNCGBBHIsMutable();
-            hDFCDNCGBBH_.addAll(other.hDFCDNCGBBH_);
+            ensureActivityIdIsMutable();
+            activityId_.addAll(other.activityId_);
           }
           onChanged();
         }
@@ -1066,80 +1074,80 @@ public final class PathfindingEnterSceneReqOuterClass {
         return obstaclesBuilder_;
       }
 
-      private com.google.protobuf.Internal.IntList hDFCDNCGBBH_ = emptyIntList();
-      private void ensureHDFCDNCGBBHIsMutable() {
+      private com.google.protobuf.Internal.IntList activityId_ = emptyIntList();
+      private void ensureActivityIdIsMutable() {
         if (!((bitField0_ & 0x00000002) != 0)) {
-          hDFCDNCGBBH_ = mutableCopy(hDFCDNCGBBH_);
+          activityId_ = mutableCopy(activityId_);
           bitField0_ |= 0x00000002;
          }
       }
       /**
-       * <code>repeated int32 HDFCDNCGBBH = 9;</code>
-       * @return A list containing the hDFCDNCGBBH.
+       * <code>repeated int32 activity_id = 9;</code>
+       * @return A list containing the activityId.
        */
       public java.util.List<java.lang.Integer>
-          getHDFCDNCGBBHList() {
+          getActivityIdList() {
         return ((bitField0_ & 0x00000002) != 0) ?
-                 java.util.Collections.unmodifiableList(hDFCDNCGBBH_) : hDFCDNCGBBH_;
+                 java.util.Collections.unmodifiableList(activityId_) : activityId_;
       }
       /**
-       * <code>repeated int32 HDFCDNCGBBH = 9;</code>
-       * @return The count of hDFCDNCGBBH.
+       * <code>repeated int32 activity_id = 9;</code>
+       * @return The count of activityId.
        */
-      public int getHDFCDNCGBBHCount() {
-        return hDFCDNCGBBH_.size();
+      public int getActivityIdCount() {
+        return activityId_.size();
       }
       /**
-       * <code>repeated int32 HDFCDNCGBBH = 9;</code>
+       * <code>repeated int32 activity_id = 9;</code>
        * @param index The index of the element to return.
-       * @return The hDFCDNCGBBH at the given index.
+       * @return The activityId at the given index.
        */
-      public int getHDFCDNCGBBH(int index) {
-        return hDFCDNCGBBH_.getInt(index);
+      public int getActivityId(int index) {
+        return activityId_.getInt(index);
       }
       /**
-       * <code>repeated int32 HDFCDNCGBBH = 9;</code>
+       * <code>repeated int32 activity_id = 9;</code>
        * @param index The index to set the value at.
-       * @param value The hDFCDNCGBBH to set.
+       * @param value The activityId to set.
        * @return This builder for chaining.
        */
-      public Builder setHDFCDNCGBBH(
+      public Builder setActivityId(
           int index, int value) {
-        ensureHDFCDNCGBBHIsMutable();
-        hDFCDNCGBBH_.setInt(index, value);
+        ensureActivityIdIsMutable();
+        activityId_.setInt(index, value);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated int32 HDFCDNCGBBH = 9;</code>
-       * @param value The hDFCDNCGBBH to add.
+       * <code>repeated int32 activity_id = 9;</code>
+       * @param value The activityId to add.
        * @return This builder for chaining.
        */
-      public Builder addHDFCDNCGBBH(int value) {
-        ensureHDFCDNCGBBHIsMutable();
-        hDFCDNCGBBH_.addInt(value);
+      public Builder addActivityId(int value) {
+        ensureActivityIdIsMutable();
+        activityId_.addInt(value);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated int32 HDFCDNCGBBH = 9;</code>
-       * @param values The hDFCDNCGBBH to add.
+       * <code>repeated int32 activity_id = 9;</code>
+       * @param values The activityId to add.
        * @return This builder for chaining.
        */
-      public Builder addAllHDFCDNCGBBH(
+      public Builder addAllActivityId(
           java.lang.Iterable<? extends java.lang.Integer> values) {
-        ensureHDFCDNCGBBHIsMutable();
+        ensureActivityIdIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, hDFCDNCGBBH_);
+            values, activityId_);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated int32 HDFCDNCGBBH = 9;</code>
+       * <code>repeated int32 activity_id = 9;</code>
        * @return This builder for chaining.
        */
-      public Builder clearHDFCDNCGBBH() {
-        hDFCDNCGBBH_ = emptyIntList();
+      public Builder clearActivityId() {
+        activityId_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
@@ -1368,8 +1376,8 @@ public final class PathfindingEnterSceneReqOuterClass {
     java.lang.String[] descriptorData = {
       "\n\036PathfindingEnterSceneReq.proto\032\022Obstac" +
       "leInfo.proto\"\261\001\n\030PathfindingEnterSceneRe" +
-      "q\022 \n\tobstacles\030\n \003(\0132\r.ObstacleInfo\022\023\n\013H" +
-      "DFCDNCGBBH\030\t \003(\005\022\021\n\tis_editor\030\010 \001(\010\022\023\n\013D" +
+      "q\022 \n\tobstacles\030\n \003(\0132\r.ObstacleInfo\022\023\n\013a" +
+      "ctivity_id\030\t \003(\005\022\021\n\tis_editor\030\010 \001(\010\022\023\n\013D" +
       "KEOBFMAFPK\030\r \001(\r\022\020\n\010scene_id\030\016 \001(\r\022\017\n\007ve" +
       "rsion\030\005 \001(\r\022\023\n\013CDDPHGDDCCN\030\003 \001(\rB\033\n\031emu." +
       "grasscutter.net.protob\006proto3"
@@ -1384,7 +1392,7 @@ public final class PathfindingEnterSceneReqOuterClass {
     internal_static_PathfindingEnterSceneReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_PathfindingEnterSceneReq_descriptor,
-        new java.lang.String[] { "Obstacles", "HDFCDNCGBBH", "IsEditor", "DKEOBFMAFPK", "SceneId", "Version", "CDDPHGDDCCN", });
+        new java.lang.String[] { "Obstacles", "ActivityId", "IsEditor", "DKEOBFMAFPK", "SceneId", "Version", "CDDPHGDDCCN", });
     emu.grasscutter.net.proto.ObstacleInfoOuterClass.getDescriptor();
   }
 
