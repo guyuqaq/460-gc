@@ -780,9 +780,9 @@ public final class PacketOpcodes {
 	public static final int DungeonCandidateTeamChangeAvatarRsp = 50039 ; // unknow cmdid
 	public static final int DungeonRestartReq = 50038 ;
 	public static final int DungeonShowReminderNotify = 8540 ; // or 8540,8326,5604
-	// 7996 and 26350, 6753 and 23606 , 29939 and 3113, 4597 and 28349, 24615 and 7072
-	public static final int DungeonSlipRevivePointActivateReq = 7996 ;
-	public static final int DungeonSlipRevivePointActivateRsp = 26350 ;
+	// 6753 and 23606 , 29939 and 3113, 4597 and 28349, 24615 and 7072
+	public static final int DungeonSlipRevivePointActivateReq = 6753 ;
+	public static final int DungeonSlipRevivePointActivateRsp = 23606 ;
 	public static final int DungeonWayPointActivateReq = 1 ;
 	public static final int DungeonWayPointActivateRsp = 1 ;
 	public static final int DeleteFriendNotify = 50040 ;  // unknow cmdid
