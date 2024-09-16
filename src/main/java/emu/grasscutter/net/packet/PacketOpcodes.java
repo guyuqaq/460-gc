@@ -786,8 +786,10 @@ public final class PacketOpcodes {
 	public static final int DungeonWayPointActivateReq = 7996 ;
 	public static final int DungeonWayPointActivateRsp = 26350 ;
 	public static final int DeleteFriendNotify = 50040 ;  // unknow cmdid
+	public static final int PlayerEnterMapLayerNotify = 26672 ;
+	public static final int PlayerEnterChildMapLayerNotify = 2225 ;
+
 	// obfuscated
-	public static final int PlayerEnterMapLayerNotify = 26672;
 	public static final int EntityAiKillSelfNotify = 1;
 	public static final int EvtBulletDeactiveNotify = 1;
 	public static final int EvtBulletMoveNotify = 1;
@@ -2453,4 +2455,4 @@ public final class PacketOpcodes {
 	public static final int WinterCampTriathlonSettleNotify = 1;
 	public static final int WorldAllRoutineTypeNotify = 1;
 	public static final int WorldOwnerBlossomScheduleInfoNotify = 1;
-}
+	}
