@@ -19,13 +19,13 @@ public final class DungeonSlipRevivePointActivateRspOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 slip_revive_point_id = 2;</code>
+     * <code>uint32 slip_revive_point_id = 8;</code>
      * @return The slipRevivePointId.
      */
     int getSlipRevivePointId();
 
     /**
-     * <code>int32 retcode = 7;</code>
+     * <code>int32 retcode = 5;</code>
      * @return The retcode.
      */
     int getRetcode();
@@ -80,14 +80,14 @@ public final class DungeonSlipRevivePointActivateRspOuterClass {
             case 0:
               done = true;
               break;
-            case 16: {
-
-              slipRevivePointId_ = input.readUInt32();
-              break;
-            }
-            case 56: {
+            case 40: {
 
               retcode_ = input.readInt32();
+              break;
+            }
+            case 64: {
+
+              slipRevivePointId_ = input.readUInt32();
               break;
             }
             default: {
@@ -122,10 +122,10 @@ public final class DungeonSlipRevivePointActivateRspOuterClass {
               emu.grasscutter.net.proto.DungeonSlipRevivePointActivateRspOuterClass.DungeonSlipRevivePointActivateRsp.class, emu.grasscutter.net.proto.DungeonSlipRevivePointActivateRspOuterClass.DungeonSlipRevivePointActivateRsp.Builder.class);
     }
 
-    public static final int SLIP_REVIVE_POINT_ID_FIELD_NUMBER = 2;
+    public static final int SLIP_REVIVE_POINT_ID_FIELD_NUMBER = 8;
     private int slipRevivePointId_;
     /**
-     * <code>uint32 slip_revive_point_id = 2;</code>
+     * <code>uint32 slip_revive_point_id = 8;</code>
      * @return The slipRevivePointId.
      */
     @java.lang.Override
@@ -133,10 +133,10 @@ public final class DungeonSlipRevivePointActivateRspOuterClass {
       return slipRevivePointId_;
     }
 
-    public static final int RETCODE_FIELD_NUMBER = 7;
+    public static final int RETCODE_FIELD_NUMBER = 5;
     private int retcode_;
     /**
-     * <code>int32 retcode = 7;</code>
+     * <code>int32 retcode = 5;</code>
      * @return The retcode.
      */
     @java.lang.Override
@@ -158,11 +158,11 @@ public final class DungeonSlipRevivePointActivateRspOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (slipRevivePointId_ != 0) {
-        output.writeUInt32(2, slipRevivePointId_);
-      }
       if (retcode_ != 0) {
-        output.writeInt32(7, retcode_);
+        output.writeInt32(5, retcode_);
+      }
+      if (slipRevivePointId_ != 0) {
+        output.writeUInt32(8, slipRevivePointId_);
       }
       unknownFields.writeTo(output);
     }
@@ -173,13 +173,13 @@ public final class DungeonSlipRevivePointActivateRspOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (slipRevivePointId_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(2, slipRevivePointId_);
-      }
       if (retcode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(7, retcode_);
+          .computeInt32Size(5, retcode_);
+      }
+      if (slipRevivePointId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(8, slipRevivePointId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -470,7 +470,7 @@ public final class DungeonSlipRevivePointActivateRspOuterClass {
 
       private int slipRevivePointId_ ;
       /**
-       * <code>uint32 slip_revive_point_id = 2;</code>
+       * <code>uint32 slip_revive_point_id = 8;</code>
        * @return The slipRevivePointId.
        */
       @java.lang.Override
@@ -478,7 +478,7 @@ public final class DungeonSlipRevivePointActivateRspOuterClass {
         return slipRevivePointId_;
       }
       /**
-       * <code>uint32 slip_revive_point_id = 2;</code>
+       * <code>uint32 slip_revive_point_id = 8;</code>
        * @param value The slipRevivePointId to set.
        * @return This builder for chaining.
        */
@@ -489,7 +489,7 @@ public final class DungeonSlipRevivePointActivateRspOuterClass {
         return this;
       }
       /**
-       * <code>uint32 slip_revive_point_id = 2;</code>
+       * <code>uint32 slip_revive_point_id = 8;</code>
        * @return This builder for chaining.
        */
       public Builder clearSlipRevivePointId() {
@@ -501,7 +501,7 @@ public final class DungeonSlipRevivePointActivateRspOuterClass {
 
       private int retcode_ ;
       /**
-       * <code>int32 retcode = 7;</code>
+       * <code>int32 retcode = 5;</code>
        * @return The retcode.
        */
       @java.lang.Override
@@ -509,7 +509,7 @@ public final class DungeonSlipRevivePointActivateRspOuterClass {
         return retcode_;
       }
       /**
-       * <code>int32 retcode = 7;</code>
+       * <code>int32 retcode = 5;</code>
        * @param value The retcode to set.
        * @return This builder for chaining.
        */
@@ -520,7 +520,7 @@ public final class DungeonSlipRevivePointActivateRspOuterClass {
         return this;
       }
       /**
-       * <code>int32 retcode = 7;</code>
+       * <code>int32 retcode = 5;</code>
        * @return This builder for chaining.
        */
       public Builder clearRetcode() {
@@ -598,8 +598,8 @@ public final class DungeonSlipRevivePointActivateRspOuterClass {
     java.lang.String[] descriptorData = {
       "\n\'DungeonSlipRevivePointActivateRsp.prot" +
       "o\"R\n!DungeonSlipRevivePointActivateRsp\022\034" +
-      "\n\024slip_revive_point_id\030\002 \001(\r\022\017\n\007retcode\030" +
-      "\007 \001(\005B\033\n\031emu.grasscutter.net.protob\006prot" +
+      "\n\024slip_revive_point_id\030\010 \001(\r\022\017\n\007retcode\030" +
+      "\005 \001(\005B\033\n\031emu.grasscutter.net.protob\006prot" +
       "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
