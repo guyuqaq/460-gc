@@ -19,14 +19,14 @@ public final class DungeonShowReminderNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 reminder_id = 13;</code>
+     * <code>uint32 reminder_id = 1;</code>
      * @return The reminderId.
      */
     int getReminderId();
   }
   /**
    * <pre>
-   * CmdId: 7524
+   * CmdId: 8540
    * Obf: LLKABFDGMBI
    * </pre>
    *
@@ -56,6 +56,48 @@ public final class DungeonShowReminderNotifyOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private DungeonShowReminderNotify(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              reminderId_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.DungeonShowReminderNotifyOuterClass.internal_static_DungeonShowReminderNotify_descriptor;
@@ -69,10 +111,10 @@ public final class DungeonShowReminderNotifyOuterClass {
               emu.grasscutter.net.proto.DungeonShowReminderNotifyOuterClass.DungeonShowReminderNotify.class, emu.grasscutter.net.proto.DungeonShowReminderNotifyOuterClass.DungeonShowReminderNotify.Builder.class);
     }
 
-    public static final int REMINDER_ID_FIELD_NUMBER = 13;
+    public static final int REMINDER_ID_FIELD_NUMBER = 1;
     private int reminderId_;
     /**
-     * <code>uint32 reminder_id = 13;</code>
+     * <code>uint32 reminder_id = 1;</code>
      * @return The reminderId.
      */
     @java.lang.Override
@@ -95,9 +137,9 @@ public final class DungeonShowReminderNotifyOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (reminderId_ != 0) {
-        output.writeUInt32(13, reminderId_);
+        output.writeUInt32(1, reminderId_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -108,9 +150,9 @@ public final class DungeonShowReminderNotifyOuterClass {
       size = 0;
       if (reminderId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(13, reminderId_);
+          .computeUInt32Size(1, reminderId_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -127,7 +169,7 @@ public final class DungeonShowReminderNotifyOuterClass {
 
       if (getReminderId()
           != other.getReminderId()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -140,7 +182,7 @@ public final class DungeonShowReminderNotifyOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + REMINDER_ID_FIELD_NUMBER;
       hash = (53 * hash) + getReminderId();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -237,7 +279,7 @@ public final class DungeonShowReminderNotifyOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 7524
+     * CmdId: 8540
      * Obf: LLKABFDGMBI
      * </pre>
      *
@@ -262,13 +304,18 @@ public final class DungeonShowReminderNotifyOuterClass {
 
       // Construct using emu.grasscutter.net.proto.DungeonShowReminderNotifyOuterClass.DungeonShowReminderNotify.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -353,7 +400,7 @@ public final class DungeonShowReminderNotifyOuterClass {
         if (other.getReminderId() != 0) {
           setReminderId(other.getReminderId());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -368,41 +415,23 @@ public final class DungeonShowReminderNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.DungeonShowReminderNotifyOuterClass.DungeonShowReminderNotify parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 104: {
-                reminderId_ = input.readUInt32();
-
-                break;
-              } // case 104
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.DungeonShowReminderNotifyOuterClass.DungeonShowReminderNotify) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
 
       private int reminderId_ ;
       /**
-       * <code>uint32 reminder_id = 13;</code>
+       * <code>uint32 reminder_id = 1;</code>
        * @return The reminderId.
        */
       @java.lang.Override
@@ -410,7 +439,7 @@ public final class DungeonShowReminderNotifyOuterClass {
         return reminderId_;
       }
       /**
-       * <code>uint32 reminder_id = 13;</code>
+       * <code>uint32 reminder_id = 1;</code>
        * @param value The reminderId to set.
        * @return This builder for chaining.
        */
@@ -421,7 +450,7 @@ public final class DungeonShowReminderNotifyOuterClass {
         return this;
       }
       /**
-       * <code>uint32 reminder_id = 13;</code>
+       * <code>uint32 reminder_id = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearReminderId() {
@@ -463,18 +492,7 @@ public final class DungeonShowReminderNotifyOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new DungeonShowReminderNotify(input, extensionRegistry);
       }
     };
 
@@ -509,7 +527,7 @@ public final class DungeonShowReminderNotifyOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\037DungeonShowReminderNotify.proto\"0\n\031Dun" +
-      "geonShowReminderNotify\022\023\n\013reminder_id\030\r " +
+      "geonShowReminderNotify\022\023\n\013reminder_id\030\001 " +
       "\001(\rB\033\n\031emu.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

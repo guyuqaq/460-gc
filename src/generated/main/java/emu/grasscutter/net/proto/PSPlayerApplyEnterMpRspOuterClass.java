@@ -19,33 +19,32 @@ public final class PSPlayerApplyEnterMpRspOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int32 retcode = 14;</code>
+     * <code>int32 retcode = 5;</code>
      * @return The retcode.
      */
     int getRetcode();
 
     /**
-     * <code>string target_psn_id = 7;</code>
+     * <code>string target_psn_id = 6;</code>
      * @return The targetPsnId.
      */
     java.lang.String getTargetPsnId();
     /**
-     * <code>string target_psn_id = 7;</code>
+     * <code>string target_psn_id = 6;</code>
      * @return The bytes for targetPsnId.
      */
     com.google.protobuf.ByteString
         getTargetPsnIdBytes();
 
     /**
-     * <code>uint32 param = 13;</code>
+     * <code>uint32 param = 12;</code>
      * @return The param.
      */
     int getParam();
   }
   /**
    * <pre>
-   * CmdId: 21696
-   * Obf: IPBKEIBFBCN
+   * CmdId: 29904
    * </pre>
    *
    * Protobuf type {@code PSPlayerApplyEnterMpRsp}
@@ -75,6 +74,59 @@ public final class PSPlayerApplyEnterMpRspOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private PSPlayerApplyEnterMpRsp(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 40: {
+
+              retcode_ = input.readInt32();
+              break;
+            }
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              targetPsnId_ = s;
+              break;
+            }
+            case 96: {
+
+              param_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.PSPlayerApplyEnterMpRspOuterClass.internal_static_PSPlayerApplyEnterMpRsp_descriptor;
@@ -88,10 +140,10 @@ public final class PSPlayerApplyEnterMpRspOuterClass {
               emu.grasscutter.net.proto.PSPlayerApplyEnterMpRspOuterClass.PSPlayerApplyEnterMpRsp.class, emu.grasscutter.net.proto.PSPlayerApplyEnterMpRspOuterClass.PSPlayerApplyEnterMpRsp.Builder.class);
     }
 
-    public static final int RETCODE_FIELD_NUMBER = 14;
+    public static final int RETCODE_FIELD_NUMBER = 5;
     private int retcode_;
     /**
-     * <code>int32 retcode = 14;</code>
+     * <code>int32 retcode = 5;</code>
      * @return The retcode.
      */
     @java.lang.Override
@@ -99,10 +151,10 @@ public final class PSPlayerApplyEnterMpRspOuterClass {
       return retcode_;
     }
 
-    public static final int TARGET_PSN_ID_FIELD_NUMBER = 7;
+    public static final int TARGET_PSN_ID_FIELD_NUMBER = 6;
     private volatile java.lang.Object targetPsnId_;
     /**
-     * <code>string target_psn_id = 7;</code>
+     * <code>string target_psn_id = 6;</code>
      * @return The targetPsnId.
      */
     @java.lang.Override
@@ -119,7 +171,7 @@ public final class PSPlayerApplyEnterMpRspOuterClass {
       }
     }
     /**
-     * <code>string target_psn_id = 7;</code>
+     * <code>string target_psn_id = 6;</code>
      * @return The bytes for targetPsnId.
      */
     @java.lang.Override
@@ -137,10 +189,10 @@ public final class PSPlayerApplyEnterMpRspOuterClass {
       }
     }
 
-    public static final int PARAM_FIELD_NUMBER = 13;
+    public static final int PARAM_FIELD_NUMBER = 12;
     private int param_;
     /**
-     * <code>uint32 param = 13;</code>
+     * <code>uint32 param = 12;</code>
      * @return The param.
      */
     @java.lang.Override
@@ -162,16 +214,16 @@ public final class PSPlayerApplyEnterMpRspOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (retcode_ != 0) {
+        output.writeInt32(5, retcode_);
+      }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(targetPsnId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, targetPsnId_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, targetPsnId_);
       }
       if (param_ != 0) {
-        output.writeUInt32(13, param_);
+        output.writeUInt32(12, param_);
       }
-      if (retcode_ != 0) {
-        output.writeInt32(14, retcode_);
-      }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -180,18 +232,18 @@ public final class PSPlayerApplyEnterMpRspOuterClass {
       if (size != -1) return size;
 
       size = 0;
+      if (retcode_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(5, retcode_);
+      }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(targetPsnId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, targetPsnId_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, targetPsnId_);
       }
       if (param_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(13, param_);
+          .computeUInt32Size(12, param_);
       }
-      if (retcode_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(14, retcode_);
-      }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -212,7 +264,7 @@ public final class PSPlayerApplyEnterMpRspOuterClass {
           .equals(other.getTargetPsnId())) return false;
       if (getParam()
           != other.getParam()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -229,7 +281,7 @@ public final class PSPlayerApplyEnterMpRspOuterClass {
       hash = (53 * hash) + getTargetPsnId().hashCode();
       hash = (37 * hash) + PARAM_FIELD_NUMBER;
       hash = (53 * hash) + getParam();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -326,8 +378,7 @@ public final class PSPlayerApplyEnterMpRspOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 21696
-     * Obf: IPBKEIBFBCN
+     * CmdId: 29904
      * </pre>
      *
      * Protobuf type {@code PSPlayerApplyEnterMpRsp}
@@ -351,13 +402,18 @@ public final class PSPlayerApplyEnterMpRspOuterClass {
 
       // Construct using emu.grasscutter.net.proto.PSPlayerApplyEnterMpRspOuterClass.PSPlayerApplyEnterMpRsp.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -455,7 +511,7 @@ public final class PSPlayerApplyEnterMpRspOuterClass {
         if (other.getParam() != 0) {
           setParam(other.getParam());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -470,51 +526,23 @@ public final class PSPlayerApplyEnterMpRspOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.PSPlayerApplyEnterMpRspOuterClass.PSPlayerApplyEnterMpRsp parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 58: {
-                targetPsnId_ = input.readStringRequireUtf8();
-
-                break;
-              } // case 58
-              case 104: {
-                param_ = input.readUInt32();
-
-                break;
-              } // case 104
-              case 112: {
-                retcode_ = input.readInt32();
-
-                break;
-              } // case 112
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.PSPlayerApplyEnterMpRspOuterClass.PSPlayerApplyEnterMpRsp) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
 
       private int retcode_ ;
       /**
-       * <code>int32 retcode = 14;</code>
+       * <code>int32 retcode = 5;</code>
        * @return The retcode.
        */
       @java.lang.Override
@@ -522,7 +550,7 @@ public final class PSPlayerApplyEnterMpRspOuterClass {
         return retcode_;
       }
       /**
-       * <code>int32 retcode = 14;</code>
+       * <code>int32 retcode = 5;</code>
        * @param value The retcode to set.
        * @return This builder for chaining.
        */
@@ -533,7 +561,7 @@ public final class PSPlayerApplyEnterMpRspOuterClass {
         return this;
       }
       /**
-       * <code>int32 retcode = 14;</code>
+       * <code>int32 retcode = 5;</code>
        * @return This builder for chaining.
        */
       public Builder clearRetcode() {
@@ -545,7 +573,7 @@ public final class PSPlayerApplyEnterMpRspOuterClass {
 
       private java.lang.Object targetPsnId_ = "";
       /**
-       * <code>string target_psn_id = 7;</code>
+       * <code>string target_psn_id = 6;</code>
        * @return The targetPsnId.
        */
       public java.lang.String getTargetPsnId() {
@@ -561,7 +589,7 @@ public final class PSPlayerApplyEnterMpRspOuterClass {
         }
       }
       /**
-       * <code>string target_psn_id = 7;</code>
+       * <code>string target_psn_id = 6;</code>
        * @return The bytes for targetPsnId.
        */
       public com.google.protobuf.ByteString
@@ -578,7 +606,7 @@ public final class PSPlayerApplyEnterMpRspOuterClass {
         }
       }
       /**
-       * <code>string target_psn_id = 7;</code>
+       * <code>string target_psn_id = 6;</code>
        * @param value The targetPsnId to set.
        * @return This builder for chaining.
        */
@@ -593,7 +621,7 @@ public final class PSPlayerApplyEnterMpRspOuterClass {
         return this;
       }
       /**
-       * <code>string target_psn_id = 7;</code>
+       * <code>string target_psn_id = 6;</code>
        * @return This builder for chaining.
        */
       public Builder clearTargetPsnId() {
@@ -603,7 +631,7 @@ public final class PSPlayerApplyEnterMpRspOuterClass {
         return this;
       }
       /**
-       * <code>string target_psn_id = 7;</code>
+       * <code>string target_psn_id = 6;</code>
        * @param value The bytes for targetPsnId to set.
        * @return This builder for chaining.
        */
@@ -621,7 +649,7 @@ public final class PSPlayerApplyEnterMpRspOuterClass {
 
       private int param_ ;
       /**
-       * <code>uint32 param = 13;</code>
+       * <code>uint32 param = 12;</code>
        * @return The param.
        */
       @java.lang.Override
@@ -629,7 +657,7 @@ public final class PSPlayerApplyEnterMpRspOuterClass {
         return param_;
       }
       /**
-       * <code>uint32 param = 13;</code>
+       * <code>uint32 param = 12;</code>
        * @param value The param to set.
        * @return This builder for chaining.
        */
@@ -640,7 +668,7 @@ public final class PSPlayerApplyEnterMpRspOuterClass {
         return this;
       }
       /**
-       * <code>uint32 param = 13;</code>
+       * <code>uint32 param = 12;</code>
        * @return This builder for chaining.
        */
       public Builder clearParam() {
@@ -682,18 +710,7 @@ public final class PSPlayerApplyEnterMpRspOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new PSPlayerApplyEnterMpRsp(input, extensionRegistry);
       }
     };
 
@@ -728,8 +745,8 @@ public final class PSPlayerApplyEnterMpRspOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\035PSPlayerApplyEnterMpRsp.proto\"P\n\027PSPla" +
-      "yerApplyEnterMpRsp\022\017\n\007retcode\030\016 \001(\005\022\025\n\rt" +
-      "arget_psn_id\030\007 \001(\t\022\r\n\005param\030\r \001(\rB\033\n\031emu" +
+      "yerApplyEnterMpRsp\022\017\n\007retcode\030\005 \001(\005\022\025\n\rt" +
+      "arget_psn_id\030\006 \001(\t\022\r\n\005param\030\014 \001(\rB\033\n\031emu" +
       ".grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

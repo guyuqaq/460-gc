@@ -116,15 +116,15 @@ public final class InvestigationMonsterOuterClass {
     int getRefreshInterval();
 
     /**
-     * <code>.LockState lock_state = 13;</code>
+     * <code>.InvestigationMonster.LockState lock_state = 13;</code>
      * @return The enum numeric value on the wire for lockState.
      */
     int getLockStateValue();
     /**
-     * <code>.LockState lock_state = 13;</code>
+     * <code>.InvestigationMonster.LockState lock_state = 13;</code>
      * @return The lockState.
      */
-    emu.grasscutter.net.proto.LockStateOuterClass.LockState getLockState();
+    emu.grasscutter.net.proto.InvestigationMonsterOuterClass.InvestigationMonster.LockState getLockState();
 
     /**
      * <code>.WeeklyBossResinDiscountInfo weekly_boss_resin_discount_info = 14;</code>
@@ -361,6 +361,114 @@ public final class InvestigationMonsterOuterClass {
               emu.grasscutter.net.proto.InvestigationMonsterOuterClass.InvestigationMonster.class, emu.grasscutter.net.proto.InvestigationMonsterOuterClass.InvestigationMonster.Builder.class);
     }
 
+    /**
+     * Protobuf enum {@code InvestigationMonster.LockState}
+     */
+    public enum LockState
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>LOCK_NONE = 0;</code>
+       */
+      LOCK_NONE(0),
+      /**
+       * <code>LOCK_QUEST = 1;</code>
+       */
+      LOCK_QUEST(1),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>LOCK_NONE = 0;</code>
+       */
+      public static final int LOCK_NONE_VALUE = 0;
+      /**
+       * <code>LOCK_QUEST = 1;</code>
+       */
+      public static final int LOCK_QUEST_VALUE = 1;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static LockState valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static LockState forNumber(int value) {
+        switch (value) {
+          case 0: return LOCK_NONE;
+          case 1: return LOCK_QUEST;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<LockState>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          LockState> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<LockState>() {
+              public LockState findValueByNumber(int number) {
+                return LockState.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return emu.grasscutter.net.proto.InvestigationMonsterOuterClass.InvestigationMonster.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final LockState[] VALUES = values();
+
+      public static LockState valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private LockState(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:InvestigationMonster.LockState)
+    }
+
     public static final int ID_FIELD_NUMBER = 1;
     private int id_;
     /**
@@ -527,20 +635,20 @@ public final class InvestigationMonsterOuterClass {
     public static final int LOCK_STATE_FIELD_NUMBER = 13;
     private int lockState_;
     /**
-     * <code>.LockState lock_state = 13;</code>
+     * <code>.InvestigationMonster.LockState lock_state = 13;</code>
      * @return The enum numeric value on the wire for lockState.
      */
     @java.lang.Override public int getLockStateValue() {
       return lockState_;
     }
     /**
-     * <code>.LockState lock_state = 13;</code>
+     * <code>.InvestigationMonster.LockState lock_state = 13;</code>
      * @return The lockState.
      */
-    @java.lang.Override public emu.grasscutter.net.proto.LockStateOuterClass.LockState getLockState() {
+    @java.lang.Override public emu.grasscutter.net.proto.InvestigationMonsterOuterClass.InvestigationMonster.LockState getLockState() {
       @SuppressWarnings("deprecation")
-      emu.grasscutter.net.proto.LockStateOuterClass.LockState result = emu.grasscutter.net.proto.LockStateOuterClass.LockState.valueOf(lockState_);
-      return result == null ? emu.grasscutter.net.proto.LockStateOuterClass.LockState.UNRECOGNIZED : result;
+      emu.grasscutter.net.proto.InvestigationMonsterOuterClass.InvestigationMonster.LockState result = emu.grasscutter.net.proto.InvestigationMonsterOuterClass.InvestigationMonster.LockState.valueOf(lockState_);
+      return result == null ? emu.grasscutter.net.proto.InvestigationMonsterOuterClass.InvestigationMonster.LockState.UNRECOGNIZED : result;
     }
 
     public static final int WEEKLY_BOSS_RESIN_DISCOUNT_INFO_FIELD_NUMBER = 14;
@@ -674,7 +782,7 @@ public final class InvestigationMonsterOuterClass {
       if (refreshInterval_ != 0) {
         output.writeUInt32(12, refreshInterval_);
       }
-      if (lockState_ != emu.grasscutter.net.proto.LockStateOuterClass.LockState.LOCK_NONE.getNumber()) {
+      if (lockState_ != emu.grasscutter.net.proto.InvestigationMonsterOuterClass.InvestigationMonster.LockState.LOCK_NONE.getNumber()) {
         output.writeEnum(13, lockState_);
       }
       if (weeklyBossResinDiscountInfo_ != null) {
@@ -752,7 +860,7 @@ public final class InvestigationMonsterOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(12, refreshInterval_);
       }
-      if (lockState_ != emu.grasscutter.net.proto.LockStateOuterClass.LockState.LOCK_NONE.getNumber()) {
+      if (lockState_ != emu.grasscutter.net.proto.InvestigationMonsterOuterClass.InvestigationMonster.LockState.LOCK_NONE.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(13, lockState_);
       }
@@ -1770,14 +1878,14 @@ public final class InvestigationMonsterOuterClass {
 
       private int lockState_ = 0;
       /**
-       * <code>.LockState lock_state = 13;</code>
+       * <code>.InvestigationMonster.LockState lock_state = 13;</code>
        * @return The enum numeric value on the wire for lockState.
        */
       @java.lang.Override public int getLockStateValue() {
         return lockState_;
       }
       /**
-       * <code>.LockState lock_state = 13;</code>
+       * <code>.InvestigationMonster.LockState lock_state = 13;</code>
        * @param value The enum numeric value on the wire for lockState to set.
        * @return This builder for chaining.
        */
@@ -1788,21 +1896,21 @@ public final class InvestigationMonsterOuterClass {
         return this;
       }
       /**
-       * <code>.LockState lock_state = 13;</code>
+       * <code>.InvestigationMonster.LockState lock_state = 13;</code>
        * @return The lockState.
        */
       @java.lang.Override
-      public emu.grasscutter.net.proto.LockStateOuterClass.LockState getLockState() {
+      public emu.grasscutter.net.proto.InvestigationMonsterOuterClass.InvestigationMonster.LockState getLockState() {
         @SuppressWarnings("deprecation")
-        emu.grasscutter.net.proto.LockStateOuterClass.LockState result = emu.grasscutter.net.proto.LockStateOuterClass.LockState.valueOf(lockState_);
-        return result == null ? emu.grasscutter.net.proto.LockStateOuterClass.LockState.UNRECOGNIZED : result;
+        emu.grasscutter.net.proto.InvestigationMonsterOuterClass.InvestigationMonster.LockState result = emu.grasscutter.net.proto.InvestigationMonsterOuterClass.InvestigationMonster.LockState.valueOf(lockState_);
+        return result == null ? emu.grasscutter.net.proto.InvestigationMonsterOuterClass.InvestigationMonster.LockState.UNRECOGNIZED : result;
       }
       /**
-       * <code>.LockState lock_state = 13;</code>
+       * <code>.InvestigationMonster.LockState lock_state = 13;</code>
        * @param value The lockState to set.
        * @return This builder for chaining.
        */
-      public Builder setLockState(emu.grasscutter.net.proto.LockStateOuterClass.LockState value) {
+      public Builder setLockState(emu.grasscutter.net.proto.InvestigationMonsterOuterClass.InvestigationMonster.LockState value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -1812,7 +1920,7 @@ public final class InvestigationMonsterOuterClass {
         return this;
       }
       /**
-       * <code>.LockState lock_state = 13;</code>
+       * <code>.InvestigationMonster.LockState lock_state = 13;</code>
        * @return This builder for chaining.
        */
       public Builder clearLockState() {
@@ -2164,20 +2272,22 @@ public final class InvestigationMonsterOuterClass {
     java.lang.String[] descriptorData = {
       "\n\032InvestigationMonster.proto\032\014Vector.pro" +
       "to\032\017LockState.proto\032!WeeklyBossResinDisc" +
-      "ountInfo.proto\"\355\003\n\024InvestigationMonster\022" +
+      "ountInfo.proto\"\256\004\n\024InvestigationMonster\022" +
       "\n\n\002id\030\001 \001(\r\022\020\n\010is_alive\030\002 \001(\010\022\026\n\016boss_ch" +
       "est_num\030\003 \001(\r\022\r\n\005resin\030\004 \001(\r\022\026\n\016is_area_" +
       "locked\030\005 \001(\010\022\032\n\022max_boss_chest_num\030\006 \001(\r" +
       "\022\031\n\021next_refresh_time\030\007 \001(\r\022\017\n\007city_id\030\010" +
       " \001(\r\022$\n\034next_boss_chest_refresh_time\030\t \001" +
       "(\r\022\020\n\010scene_id\030\n \001(\r\022\024\n\003pos\030\013 \001(\0132\007.Vect" +
-      "or\022\030\n\020refresh_interval\030\014 \001(\r\022\036\n\nlock_sta" +
-      "te\030\r \001(\0162\n.LockState\022E\n\037weekly_boss_resi" +
-      "n_discount_info\030\016 \001(\0132\034.WeeklyBossResinD" +
-      "iscountInfo\022\r\n\005level\030\017 \001(\r\022\024\n\013IDNKJEEDOG" +
-      "C\030\225\004 \001(\010\022\023\n\nmonster_id\030\351\010 \001(\r\022\021\n\010group_i" +
-      "d\030\267\n \001(\r\022\024\n\013AGIENJJKPBE\030\314\014 \001(\rB\033\n\031emu.gr" +
-      "asscutter.net.protob\006proto3"
+      "or\022\030\n\020refresh_interval\030\014 \001(\r\0223\n\nlock_sta" +
+      "te\030\r \001(\0162\037.InvestigationMonster.LockStat" +
+      "e\022E\n\037weekly_boss_resin_discount_info\030\016 \001" +
+      "(\0132\034.WeeklyBossResinDiscountInfo\022\r\n\005leve" +
+      "l\030\017 \001(\r\022\024\n\013IDNKJEEDOGC\030\225\004 \001(\010\022\023\n\nmonster" +
+      "_id\030\351\010 \001(\r\022\021\n\010group_id\030\267\n \001(\r\022\024\n\013AGIENJJ" +
+      "KPBE\030\314\014 \001(\r\"*\n\tLockState\022\r\n\tLOCK_NONE\020\000\022" +
+      "\016\n\nLOCK_QUEST\020\001B\033\n\031emu.grasscutter.net.p" +
+      "rotob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

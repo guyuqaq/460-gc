@@ -36,10 +36,21 @@ public final class PlayerWorldSceneInfoOuterClass {
     int getSceneTagIdList(int index);
 
     /**
-     * <pre>
-     *CGMAOKBGOHO DFNDKDAFEJO = 7;
-     * </pre>
-     *
+     * <code>.CGMAOKBGOHO DFNDKDAFEJO = 7;</code>
+     * @return Whether the dFNDKDAFEJO field is set.
+     */
+    boolean hasDFNDKDAFEJO();
+    /**
+     * <code>.CGMAOKBGOHO DFNDKDAFEJO = 7;</code>
+     * @return The dFNDKDAFEJO.
+     */
+    emu.grasscutter.net.proto.CGMAOKBGOHOOuterClass.CGMAOKBGOHO getDFNDKDAFEJO();
+    /**
+     * <code>.CGMAOKBGOHO DFNDKDAFEJO = 7;</code>
+     */
+    emu.grasscutter.net.proto.CGMAOKBGOHOOuterClass.CGMAOKBGOHOOrBuilder getDFNDKDAFEJOOrBuilder();
+
+    /**
      * <code>bool is_locked = 10;</code>
      * @return The isLocked.
      */
@@ -134,6 +145,19 @@ public final class PlayerWorldSceneInfoOuterClass {
               input.popLimit(limit);
               break;
             }
+            case 58: {
+              emu.grasscutter.net.proto.CGMAOKBGOHOOuterClass.CGMAOKBGOHO.Builder subBuilder = null;
+              if (dFNDKDAFEJO_ != null) {
+                subBuilder = dFNDKDAFEJO_.toBuilder();
+              }
+              dFNDKDAFEJO_ = input.readMessage(emu.grasscutter.net.proto.CGMAOKBGOHOOuterClass.CGMAOKBGOHO.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(dFNDKDAFEJO_);
+                dFNDKDAFEJO_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
             case 80: {
 
               isLocked_ = input.readBool();
@@ -220,13 +244,35 @@ public final class PlayerWorldSceneInfoOuterClass {
     }
     private int sceneTagIdListMemoizedSerializedSize = -1;
 
+    public static final int DFNDKDAFEJO_FIELD_NUMBER = 7;
+    private emu.grasscutter.net.proto.CGMAOKBGOHOOuterClass.CGMAOKBGOHO dFNDKDAFEJO_;
+    /**
+     * <code>.CGMAOKBGOHO DFNDKDAFEJO = 7;</code>
+     * @return Whether the dFNDKDAFEJO field is set.
+     */
+    @java.lang.Override
+    public boolean hasDFNDKDAFEJO() {
+      return dFNDKDAFEJO_ != null;
+    }
+    /**
+     * <code>.CGMAOKBGOHO DFNDKDAFEJO = 7;</code>
+     * @return The dFNDKDAFEJO.
+     */
+    @java.lang.Override
+    public emu.grasscutter.net.proto.CGMAOKBGOHOOuterClass.CGMAOKBGOHO getDFNDKDAFEJO() {
+      return dFNDKDAFEJO_ == null ? emu.grasscutter.net.proto.CGMAOKBGOHOOuterClass.CGMAOKBGOHO.getDefaultInstance() : dFNDKDAFEJO_;
+    }
+    /**
+     * <code>.CGMAOKBGOHO DFNDKDAFEJO = 7;</code>
+     */
+    @java.lang.Override
+    public emu.grasscutter.net.proto.CGMAOKBGOHOOuterClass.CGMAOKBGOHOOrBuilder getDFNDKDAFEJOOrBuilder() {
+      return getDFNDKDAFEJO();
+    }
+
     public static final int IS_LOCKED_FIELD_NUMBER = 10;
     private boolean isLocked_;
     /**
-     * <pre>
-     *CGMAOKBGOHO DFNDKDAFEJO = 7;
-     * </pre>
-     *
      * <code>bool is_locked = 10;</code>
      * @return The isLocked.
      */
@@ -294,6 +340,9 @@ public final class PlayerWorldSceneInfoOuterClass {
       for (int i = 0; i < sceneTagIdList_.size(); i++) {
         output.writeUInt32NoTag(sceneTagIdList_.getInt(i));
       }
+      if (dFNDKDAFEJO_ != null) {
+        output.writeMessage(7, getDFNDKDAFEJO());
+      }
       if (isLocked_ != false) {
         output.writeBool(10, isLocked_);
       }
@@ -326,6 +375,10 @@ public final class PlayerWorldSceneInfoOuterClass {
         }
         sceneTagIdListMemoizedSerializedSize = dataSize;
       }
+      if (dFNDKDAFEJO_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getDFNDKDAFEJO());
+      }
       if (isLocked_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(10, isLocked_);
@@ -355,6 +408,11 @@ public final class PlayerWorldSceneInfoOuterClass {
 
       if (!getSceneTagIdListList()
           .equals(other.getSceneTagIdListList())) return false;
+      if (hasDFNDKDAFEJO() != other.hasDFNDKDAFEJO()) return false;
+      if (hasDFNDKDAFEJO()) {
+        if (!getDFNDKDAFEJO()
+            .equals(other.getDFNDKDAFEJO())) return false;
+      }
       if (getIsLocked()
           != other.getIsLocked()) return false;
       if (getSceneId()
@@ -378,6 +436,10 @@ public final class PlayerWorldSceneInfoOuterClass {
       if (getSceneTagIdListCount() > 0) {
         hash = (37 * hash) + SCENE_TAG_ID_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getSceneTagIdListList().hashCode();
+      }
+      if (hasDFNDKDAFEJO()) {
+        hash = (37 * hash) + DFNDKDAFEJO_FIELD_NUMBER;
+        hash = (53 * hash) + getDFNDKDAFEJO().hashCode();
       }
       hash = (37 * hash) + IS_LOCKED_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
@@ -523,6 +585,12 @@ public final class PlayerWorldSceneInfoOuterClass {
         super.clear();
         sceneTagIdList_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000001);
+        if (dFNDKDAFEJOBuilder_ == null) {
+          dFNDKDAFEJO_ = null;
+        } else {
+          dFNDKDAFEJO_ = null;
+          dFNDKDAFEJOBuilder_ = null;
+        }
         isLocked_ = false;
 
         sceneId_ = 0;
@@ -565,6 +633,11 @@ public final class PlayerWorldSceneInfoOuterClass {
           bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.sceneTagIdList_ = sceneTagIdList_;
+        if (dFNDKDAFEJOBuilder_ == null) {
+          result.dFNDKDAFEJO_ = dFNDKDAFEJO_;
+        } else {
+          result.dFNDKDAFEJO_ = dFNDKDAFEJOBuilder_.build();
+        }
         result.isLocked_ = isLocked_;
         result.sceneId_ = sceneId_;
         if (mapLayerInfoBuilder_ == null) {
@@ -629,6 +702,9 @@ public final class PlayerWorldSceneInfoOuterClass {
             sceneTagIdList_.addAll(other.sceneTagIdList_);
           }
           onChanged();
+        }
+        if (other.hasDFNDKDAFEJO()) {
+          mergeDFNDKDAFEJO(other.getDFNDKDAFEJO());
         }
         if (other.getIsLocked() != false) {
           setIsLocked(other.getIsLocked());
@@ -748,12 +824,127 @@ public final class PlayerWorldSceneInfoOuterClass {
         return this;
       }
 
+      private emu.grasscutter.net.proto.CGMAOKBGOHOOuterClass.CGMAOKBGOHO dFNDKDAFEJO_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          emu.grasscutter.net.proto.CGMAOKBGOHOOuterClass.CGMAOKBGOHO, emu.grasscutter.net.proto.CGMAOKBGOHOOuterClass.CGMAOKBGOHO.Builder, emu.grasscutter.net.proto.CGMAOKBGOHOOuterClass.CGMAOKBGOHOOrBuilder> dFNDKDAFEJOBuilder_;
+      /**
+       * <code>.CGMAOKBGOHO DFNDKDAFEJO = 7;</code>
+       * @return Whether the dFNDKDAFEJO field is set.
+       */
+      public boolean hasDFNDKDAFEJO() {
+        return dFNDKDAFEJOBuilder_ != null || dFNDKDAFEJO_ != null;
+      }
+      /**
+       * <code>.CGMAOKBGOHO DFNDKDAFEJO = 7;</code>
+       * @return The dFNDKDAFEJO.
+       */
+      public emu.grasscutter.net.proto.CGMAOKBGOHOOuterClass.CGMAOKBGOHO getDFNDKDAFEJO() {
+        if (dFNDKDAFEJOBuilder_ == null) {
+          return dFNDKDAFEJO_ == null ? emu.grasscutter.net.proto.CGMAOKBGOHOOuterClass.CGMAOKBGOHO.getDefaultInstance() : dFNDKDAFEJO_;
+        } else {
+          return dFNDKDAFEJOBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.CGMAOKBGOHO DFNDKDAFEJO = 7;</code>
+       */
+      public Builder setDFNDKDAFEJO(emu.grasscutter.net.proto.CGMAOKBGOHOOuterClass.CGMAOKBGOHO value) {
+        if (dFNDKDAFEJOBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          dFNDKDAFEJO_ = value;
+          onChanged();
+        } else {
+          dFNDKDAFEJOBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.CGMAOKBGOHO DFNDKDAFEJO = 7;</code>
+       */
+      public Builder setDFNDKDAFEJO(
+          emu.grasscutter.net.proto.CGMAOKBGOHOOuterClass.CGMAOKBGOHO.Builder builderForValue) {
+        if (dFNDKDAFEJOBuilder_ == null) {
+          dFNDKDAFEJO_ = builderForValue.build();
+          onChanged();
+        } else {
+          dFNDKDAFEJOBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.CGMAOKBGOHO DFNDKDAFEJO = 7;</code>
+       */
+      public Builder mergeDFNDKDAFEJO(emu.grasscutter.net.proto.CGMAOKBGOHOOuterClass.CGMAOKBGOHO value) {
+        if (dFNDKDAFEJOBuilder_ == null) {
+          if (dFNDKDAFEJO_ != null) {
+            dFNDKDAFEJO_ =
+              emu.grasscutter.net.proto.CGMAOKBGOHOOuterClass.CGMAOKBGOHO.newBuilder(dFNDKDAFEJO_).mergeFrom(value).buildPartial();
+          } else {
+            dFNDKDAFEJO_ = value;
+          }
+          onChanged();
+        } else {
+          dFNDKDAFEJOBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.CGMAOKBGOHO DFNDKDAFEJO = 7;</code>
+       */
+      public Builder clearDFNDKDAFEJO() {
+        if (dFNDKDAFEJOBuilder_ == null) {
+          dFNDKDAFEJO_ = null;
+          onChanged();
+        } else {
+          dFNDKDAFEJO_ = null;
+          dFNDKDAFEJOBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.CGMAOKBGOHO DFNDKDAFEJO = 7;</code>
+       */
+      public emu.grasscutter.net.proto.CGMAOKBGOHOOuterClass.CGMAOKBGOHO.Builder getDFNDKDAFEJOBuilder() {
+        
+        onChanged();
+        return getDFNDKDAFEJOFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.CGMAOKBGOHO DFNDKDAFEJO = 7;</code>
+       */
+      public emu.grasscutter.net.proto.CGMAOKBGOHOOuterClass.CGMAOKBGOHOOrBuilder getDFNDKDAFEJOOrBuilder() {
+        if (dFNDKDAFEJOBuilder_ != null) {
+          return dFNDKDAFEJOBuilder_.getMessageOrBuilder();
+        } else {
+          return dFNDKDAFEJO_ == null ?
+              emu.grasscutter.net.proto.CGMAOKBGOHOOuterClass.CGMAOKBGOHO.getDefaultInstance() : dFNDKDAFEJO_;
+        }
+      }
+      /**
+       * <code>.CGMAOKBGOHO DFNDKDAFEJO = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          emu.grasscutter.net.proto.CGMAOKBGOHOOuterClass.CGMAOKBGOHO, emu.grasscutter.net.proto.CGMAOKBGOHOOuterClass.CGMAOKBGOHO.Builder, emu.grasscutter.net.proto.CGMAOKBGOHOOuterClass.CGMAOKBGOHOOrBuilder> 
+          getDFNDKDAFEJOFieldBuilder() {
+        if (dFNDKDAFEJOBuilder_ == null) {
+          dFNDKDAFEJOBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              emu.grasscutter.net.proto.CGMAOKBGOHOOuterClass.CGMAOKBGOHO, emu.grasscutter.net.proto.CGMAOKBGOHOOuterClass.CGMAOKBGOHO.Builder, emu.grasscutter.net.proto.CGMAOKBGOHOOuterClass.CGMAOKBGOHOOrBuilder>(
+                  getDFNDKDAFEJO(),
+                  getParentForChildren(),
+                  isClean());
+          dFNDKDAFEJO_ = null;
+        }
+        return dFNDKDAFEJOBuilder_;
+      }
+
       private boolean isLocked_ ;
       /**
-       * <pre>
-       *CGMAOKBGOHO DFNDKDAFEJO = 7;
-       * </pre>
-       *
        * <code>bool is_locked = 10;</code>
        * @return The isLocked.
        */
@@ -762,10 +953,6 @@ public final class PlayerWorldSceneInfoOuterClass {
         return isLocked_;
       }
       /**
-       * <pre>
-       *CGMAOKBGOHO DFNDKDAFEJO = 7;
-       * </pre>
-       *
        * <code>bool is_locked = 10;</code>
        * @param value The isLocked to set.
        * @return This builder for chaining.
@@ -777,10 +964,6 @@ public final class PlayerWorldSceneInfoOuterClass {
         return this;
       }
       /**
-       * <pre>
-       *CGMAOKBGOHO DFNDKDAFEJO = 7;
-       * </pre>
-       *
        * <code>bool is_locked = 10;</code>
        * @return This builder for chaining.
        */
@@ -1008,24 +1191,27 @@ public final class PlayerWorldSceneInfoOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\032PlayerWorldSceneInfo.proto\032\022MapLayerIn" +
-      "fo.proto\"}\n\024PlayerWorldSceneInfo\022\031\n\021scen" +
-      "e_tag_id_list\030\005 \003(\r\022\021\n\tis_locked\030\n \001(\010\022\020" +
-      "\n\010scene_id\030\013 \001(\r\022%\n\016map_layer_info\030\016 \001(\013" +
-      "2\r.MapLayerInfoB\033\n\031emu.grasscutter.net.p" +
-      "rotob\006proto3"
+      "fo.proto\032\021CGMAOKBGOHO.proto\"\240\001\n\024PlayerWo" +
+      "rldSceneInfo\022\031\n\021scene_tag_id_list\030\005 \003(\r\022" +
+      "!\n\013DFNDKDAFEJO\030\007 \001(\0132\014.CGMAOKBGOHO\022\021\n\tis" +
+      "_locked\030\n \001(\010\022\020\n\010scene_id\030\013 \001(\r\022%\n\016map_l" +
+      "ayer_info\030\016 \001(\0132\r.MapLayerInfoB\033\n\031emu.gr" +
+      "asscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           emu.grasscutter.net.proto.MapLayerInfoOuterClass.getDescriptor(),
+          emu.grasscutter.net.proto.CGMAOKBGOHOOuterClass.getDescriptor(),
         });
     internal_static_PlayerWorldSceneInfo_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_PlayerWorldSceneInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_PlayerWorldSceneInfo_descriptor,
-        new java.lang.String[] { "SceneTagIdList", "IsLocked", "SceneId", "MapLayerInfo", });
+        new java.lang.String[] { "SceneTagIdList", "DFNDKDAFEJO", "IsLocked", "SceneId", "MapLayerInfo", });
     emu.grasscutter.net.proto.MapLayerInfoOuterClass.getDescriptor();
+    emu.grasscutter.net.proto.CGMAOKBGOHOOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
