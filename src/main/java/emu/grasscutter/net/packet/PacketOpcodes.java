@@ -795,8 +795,8 @@ public final class PacketOpcodes {
 	public static final int BeginCameraSceneLookNotify = 8133;
 	public static final int EndCameraSceneLookNotify = 50041;
 	public static final int DelScenePlayTeamEntityNotify = 29714; // or 29714,26259
+
 	public static final int PathfindingEnterSceneReq = 2374;
-	
 	// obfuscated
 	public static final int PathfindingEnterSceneRsp = 1;
 	public static final int EnterSceneWeatherAreaNotify = 1;
@@ -878,8 +878,6 @@ public final class PacketOpcodes {
 	public static final int CloseCommonTipsNotify = 1;
 	public static final int DelBackupAvatarTeamReq = 1;
 	public static final int DelBackupAvatarTeamRsp = 1;
-	public static final int DeleteFriendReq = 1;
-	public static final int DeleteFriendRsp = 1;
 	public static final int FireworksLaunchDataNotify = 1;
 	public static final int FireworksReformDataNotify = 1;
 	public static final int FleurFairMusicGameSettleReq = 1;
@@ -905,8 +903,6 @@ public final class PacketOpcodes {
 	public static final int GetUgcBriefInfoRsp = 1;
 	public static final int GetUgcReq = 1;
 	public static final int GetUgcRsp = 1;
-	public static final int GroupSuiteNotify = 1;
-	public static final int GroupUnloadNotify = 1;
 	public static final int H5ActivityIdsNotify = 1;
 	public static final int HomeAvatarSummonEventRsp = 1;
 	public static final int HomeAvatarSummonFinishReq = 1;
@@ -1193,7 +1189,6 @@ public final class PacketOpcodes {
 	public static final int CustomGalleryProgressUpdateNotify = 1;
 	public static final int CustomGalleryScoreBoardUpdateNotify = 1;
 	public static final int CustomGalleryTargetNotify = 1;
-	public static final int DailyTaskScoreRewardNotify = 1;
 	public static final int DeathZoneObserveNotify = 1;
 	public static final int DelUgcDungeonReq = 1;
 	public static final int DelUgcDungeonRsp = 1;
