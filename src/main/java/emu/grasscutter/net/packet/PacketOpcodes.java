@@ -786,8 +786,8 @@ public final class PacketOpcodes {
 	public static final int DungeonWayPointActivateReq = 7996 ;
 	public static final int DungeonWayPointActivateRsp = 26350 ;
 	public static final int DeleteFriendNotify = 50040 ;  // unknow cmdid
-
 	// obfuscated
+	public static final int PlayerEnterMapLayerNotify = 26672;
 	public static final int EntityAiKillSelfNotify = 1;
 	public static final int EvtBulletDeactiveNotify = 1;
 	public static final int EvtBulletMoveNotify = 1;
