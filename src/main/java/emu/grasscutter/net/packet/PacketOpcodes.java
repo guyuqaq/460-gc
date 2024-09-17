@@ -796,6 +796,9 @@ public final class PacketOpcodes {
 	public static final int EndCameraSceneLookNotify = 50041;
 	public static final int DelScenePlayTeamEntityNotify = 29714; // or 29714,26259
 	public static final int PathfindingEnterSceneReq = 2374;
+	public static final int BeginCameraSceneLookWithTemplateNotify = 1;
+	public static final int GuestBeginEnterSceneNotify = 1;
+
 
 	// obfuscated
 	public static final int PlayerEnterMapLayerNotify = 26672;
@@ -803,7 +806,6 @@ public final class PacketOpcodes {
 	public static final int PathfindingEnterSceneRsp = 1;
 	public static final int EnterSceneWeatherAreaNotify = 1;
 	public static final int ExitSceneWeatherAreaNotify = 1;
-	public static final int GuestBeginEnterSceneNotify = 1;
 	public static final int GuestPostEnterSceneNotify = 1;
 	public static final int DailyTaskFilterCityReq = 1 ;
 	public static final int DailyTaskFilterCityRsp = 1 ;
@@ -1056,7 +1058,6 @@ public final class PacketOpcodes {
 	public static final int BartenderLevelProgressNotify = 1;
 	public static final int BartenderStartLevelReq = 1;
 	public static final int BartenderStartLevelRsp = 1;
-	public static final int BeginCameraSceneLookWithTemplateNotify = 1;
 	public static final int BigTalentPointConvertReq = 1;
 	public static final int BigTalentPointConvertRsp = 1;
 	public static final int BlessingAcceptAllGivePicReq = 1;

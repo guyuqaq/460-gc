@@ -25,6 +25,10 @@ public final class AbilityMixinCostStaminaOuterClass {
     boolean getIsSwim();
   }
   /**
+   * <pre>
+   * Obf: NHHEEDNHOLI
+   * </pre>
+   *
    * Protobuf type {@code AbilityMixinCostStamina}
    */
   public static final class AbilityMixinCostStamina extends
@@ -274,6 +278,10 @@ public final class AbilityMixinCostStaminaOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Obf: NHHEEDNHOLI
+     * </pre>
+     *
      * Protobuf type {@code AbilityMixinCostStamina}
      */
     public static final class Builder extends
