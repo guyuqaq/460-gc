@@ -25,21 +25,21 @@ public final class FinishMainCoopRspOuterClass {
     int getRetcode();
 
     /**
-     * <code>uint32 id = 4;</code>
+     * <code>uint32 id = 5;</code>
      * @return The id.
      */
     int getId();
 
     /**
-     * <code>uint32 ending_save_point_id = 1;</code>
+     * <code>uint32 ending_save_point_id = 7;</code>
      * @return The endingSavePointId.
      */
     int getEndingSavePointId();
   }
   /**
    * <pre>
-   * CmdId: 23766
-   * Obf: FOIFFFGHDOJ
+   * CmdId: 28114
+   * Obf: LKMAPFLFBMP
    * </pre>
    *
    * Protobuf type {@code FinishMainCoopRsp}
@@ -86,14 +86,14 @@ public final class FinishMainCoopRspOuterClass {
             case 0:
               done = true;
               break;
-            case 8: {
-
-              endingSavePointId_ = input.readUInt32();
-              break;
-            }
-            case 32: {
+            case 40: {
 
               id_ = input.readUInt32();
+              break;
+            }
+            case 56: {
+
+              endingSavePointId_ = input.readUInt32();
               break;
             }
             case 104: {
@@ -144,10 +144,10 @@ public final class FinishMainCoopRspOuterClass {
       return retcode_;
     }
 
-    public static final int ID_FIELD_NUMBER = 4;
+    public static final int ID_FIELD_NUMBER = 5;
     private int id_;
     /**
-     * <code>uint32 id = 4;</code>
+     * <code>uint32 id = 5;</code>
      * @return The id.
      */
     @java.lang.Override
@@ -155,10 +155,10 @@ public final class FinishMainCoopRspOuterClass {
       return id_;
     }
 
-    public static final int ENDING_SAVE_POINT_ID_FIELD_NUMBER = 1;
+    public static final int ENDING_SAVE_POINT_ID_FIELD_NUMBER = 7;
     private int endingSavePointId_;
     /**
-     * <code>uint32 ending_save_point_id = 1;</code>
+     * <code>uint32 ending_save_point_id = 7;</code>
      * @return The endingSavePointId.
      */
     @java.lang.Override
@@ -180,11 +180,11 @@ public final class FinishMainCoopRspOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (endingSavePointId_ != 0) {
-        output.writeUInt32(1, endingSavePointId_);
-      }
       if (id_ != 0) {
-        output.writeUInt32(4, id_);
+        output.writeUInt32(5, id_);
+      }
+      if (endingSavePointId_ != 0) {
+        output.writeUInt32(7, endingSavePointId_);
       }
       if (retcode_ != 0) {
         output.writeInt32(13, retcode_);
@@ -198,13 +198,13 @@ public final class FinishMainCoopRspOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (endingSavePointId_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(1, endingSavePointId_);
-      }
       if (id_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(4, id_);
+          .computeUInt32Size(5, id_);
+      }
+      if (endingSavePointId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(7, endingSavePointId_);
       }
       if (retcode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -345,8 +345,8 @@ public final class FinishMainCoopRspOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 23766
-     * Obf: FOIFFFGHDOJ
+     * CmdId: 28114
+     * Obf: LKMAPFLFBMP
      * </pre>
      *
      * Protobuf type {@code FinishMainCoopRsp}
@@ -540,7 +540,7 @@ public final class FinishMainCoopRspOuterClass {
 
       private int id_ ;
       /**
-       * <code>uint32 id = 4;</code>
+       * <code>uint32 id = 5;</code>
        * @return The id.
        */
       @java.lang.Override
@@ -548,7 +548,7 @@ public final class FinishMainCoopRspOuterClass {
         return id_;
       }
       /**
-       * <code>uint32 id = 4;</code>
+       * <code>uint32 id = 5;</code>
        * @param value The id to set.
        * @return This builder for chaining.
        */
@@ -559,7 +559,7 @@ public final class FinishMainCoopRspOuterClass {
         return this;
       }
       /**
-       * <code>uint32 id = 4;</code>
+       * <code>uint32 id = 5;</code>
        * @return This builder for chaining.
        */
       public Builder clearId() {
@@ -571,7 +571,7 @@ public final class FinishMainCoopRspOuterClass {
 
       private int endingSavePointId_ ;
       /**
-       * <code>uint32 ending_save_point_id = 1;</code>
+       * <code>uint32 ending_save_point_id = 7;</code>
        * @return The endingSavePointId.
        */
       @java.lang.Override
@@ -579,7 +579,7 @@ public final class FinishMainCoopRspOuterClass {
         return endingSavePointId_;
       }
       /**
-       * <code>uint32 ending_save_point_id = 1;</code>
+       * <code>uint32 ending_save_point_id = 7;</code>
        * @param value The endingSavePointId to set.
        * @return This builder for chaining.
        */
@@ -590,7 +590,7 @@ public final class FinishMainCoopRspOuterClass {
         return this;
       }
       /**
-       * <code>uint32 ending_save_point_id = 1;</code>
+       * <code>uint32 ending_save_point_id = 7;</code>
        * @return This builder for chaining.
        */
       public Builder clearEndingSavePointId() {
@@ -667,8 +667,8 @@ public final class FinishMainCoopRspOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\027FinishMainCoopRsp.proto\"N\n\021FinishMainC" +
-      "oopRsp\022\017\n\007retcode\030\r \001(\005\022\n\n\002id\030\004 \001(\r\022\034\n\024e" +
-      "nding_save_point_id\030\001 \001(\rB\033\n\031emu.grasscu" +
+      "oopRsp\022\017\n\007retcode\030\r \001(\005\022\n\n\002id\030\005 \001(\r\022\034\n\024e" +
+      "nding_save_point_id\030\007 \001(\rB\033\n\031emu.grasscu" +
       "tter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

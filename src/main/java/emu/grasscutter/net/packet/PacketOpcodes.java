@@ -632,7 +632,6 @@ public final class PacketOpcodes {
     public static final int ScenePlayerSoundNotify = 1408;
     public static final int SceneWeatherForcastReq = 23364;
     public static final int ServerDisconnectClientNotify = 1387;
-    public static final int SetCoopChapterViewedRsp = 2246; // or 2246,29751,22019
     public static final int ShowCommonTipsNotify = 20003;
     public static final int StartCoopPointReq = 27436;
     public static final int StartCoopPointRsp = 2147;
@@ -656,7 +655,7 @@ public final class PacketOpcodes {
 	public static final int PlayerRandomCookReq = 23985;
 	public static final int PlayerRandomCookRsp = 50010;// unknow cmdid
     public static final int SceneKickPlayerReq = 27213;
-    public static final int SceneKickPlayerRsp = 20150; // 7966,20150,9301,24287,5497,21021,7700
+    public static final int SceneKickPlayerRsp = 7966; // 7966,20150,9301,24287,5497,21021,7700
     public static final int PlayerForceExitRsp = 50007; // unknow cmdid
     public static final int AddBackupAvatarTeamReq = 23418;
     public static final int AddBackupAvatarTeamRsp = 7643; // unknow cmdid
@@ -796,13 +795,43 @@ public final class PacketOpcodes {
 	public static final int EndCameraSceneLookNotify = 50041;
 	public static final int DelScenePlayTeamEntityNotify = 29714; // or 29714,26259
 	public static final int PathfindingEnterSceneReq = 2374;
-	public static final int BeginCameraSceneLookWithTemplateNotify = 1;
-	public static final int GuestBeginEnterSceneNotify = 1;
-
+	public static final int ActivityTakeScoreRewardReq = 27197;
+	public static final int ActivityTakeScoreRewardRsp = 9807;
+	public static final int ActivityTakeWatcherRewardReq = 23448;
+	public static final int ActivityTakeWatcherRewardRsp = 8927;
+	public static final int ActivityUpdateWatcherNotify = 1303;
+	public static final int CoopRewardUpdateNotify = 3014;
+	public static final int TakeCoopRewardReq = 3452;
+	public static final int TakeCoopRewardRsp = 27100;
+	public static final int SetCoopChapterViewedReq = 21755; //or 21755,29621,1940
+	public static final int SetCoopChapterViewedRsp = 29751; // or 2246,29751,22019
+	public static final int UnlockCoopChapterReq = 1; //or 21755,29621,1940
+	public static final int UnlockCoopChapterRsp = 1; // or 2246,29751,22019
+	public static final int CancelCoopTaskReq = 1; // or 21755,29621,1940
+	public static final int CancelCoopTaskRsp = 1; // or 2246,29751,22019
+	public static final int CoopPointUpdateNotify = 22694;
+	// 28104 and 21785, 3924 and 28114
+	public static final int FinishMainCoopReq = 3924;
+	public static final int FinishMainCoopRsp = 28114;
+	public static final int MainCoopFailNotify = 21050;
+	public static final int AllCoopInfoNotify = 5763 ; // or 1857,5763
+	public static final int MainCoopUpdateNotify = 1857; // or 1857,5763
+	public static final int SaveMainCoopReq = 23152;
+	public static final int SaveMainCoopRsp = 28300;
 
 	// obfuscated
 	public static final int PlayerEnterMapLayerNotify = 26672;
 	public static final int PlayerEnterChildMapLayerNotify = 2225;
+	public static final int CoopCgShowNotify = 1;
+	public static final int CoopCgUpdateNotify = 1;
+	public static final int SaveCoopDialogReq = 1;
+	public static final int SaveCoopDialogRsp = 1;
+	public static final int BeginCameraSceneLookWithTemplateNotify = 1;
+	public static final int GuestBeginEnterSceneNotify = 1;
+	public static final int JoinHomeWorldFailNotify = 1;
+	public static final int JoinPlayerFailNotify = 1;
+	public static final int JoinPlayerSceneReq = 1;
+	public static final int JoinPlayerSceneRsp = 1; 
 	public static final int PathfindingEnterSceneRsp = 1;
 	public static final int EnterSceneWeatherAreaNotify = 1;
 	public static final int ExitSceneWeatherAreaNotify = 1;
@@ -836,28 +865,6 @@ public final class PacketOpcodes {
 	public static final int ItemRenameAvatarRsp = 1;
 	public static final int TowerMiddleLevelChangeTeamNotify = 1;
 	public static final int GetDungeonEntryExploreConditionRsp = 1;
-	public static final int CancelCoopTaskReq = 1;
-	public static final int CancelCoopTaskRsp = 1;
-	public static final int UnlockCoopChapterReq = 1;
-	public static final int UnlockCoopChapterRsp = 1;
-	public static final int CoopCgShowNotify = 1;
-	public static final int CoopCgUpdateNotify = 1;
-	public static final int CoopPointUpdateNotify = 1;
-	public static final int CoopRewardUpdateNotify = 1;
-	public static final int FinishMainCoopReq = 1;
-	public static final int FinishMainCoopRsp = 1;
-	public static final int MainCoopFailNotify = 1;
-	public static final int MainCoopUpdateNotify = 1;
-	public static final int SaveCoopDialogReq = 1;
-	public static final int SaveCoopDialogRsp = 1;
-	public static final int SaveMainCoopReq = 1;
-	public static final int SaveMainCoopRsp = 1;
-	public static final int SetCoopChapterViewedReq = 1;
-	public static final int TakeCoopRewardReq = 1;
-	public static final int TakeCoopRewardRsp = 1;
-	public static final int ActivityTakeWatcherRewardReq = 1;
-	public static final int ActivityTakeWatcherRewardRsp = 1;
-	public static final int ActivityUpdateWatcherNotify = 1;
 	public static final int AllWidgetDataNotify = 1;
 	public static final int AvatarExpeditionAllDataReq = 1;
 	public static final int AvatarExpeditionAllDataRsp = 1;
@@ -984,8 +991,6 @@ public final class PacketOpcodes {
 	public static final int ActivitySetGiftWishRsp = 1;
 	public static final int ActivityTakeAllScoreRewardReq = 1;
 	public static final int ActivityTakeAllScoreRewardRsp = 1;
-	public static final int ActivityTakeScoreRewardReq = 1;
-	public static final int ActivityTakeScoreRewardRsp = 1;
 	public static final int ActivityTakeWatcherRewardBatchReq = 1;
 	public static final int ActivityTakeWatcherRewardBatchRsp = 1;
 	public static final int AddAranaraCollectionNotify = 1;
@@ -1770,10 +1775,6 @@ public final class PacketOpcodes {
 	public static final int IslandPartyRaftInfoNotify = 1;
 	public static final int IslandPartySettleNotify = 1;
 	public static final int ItemCdGroupTimeNotify = 1;
-	public static final int JoinHomeWorldFailNotify = 1;
-	public static final int JoinPlayerFailNotify = 1;
-	public static final int JoinPlayerSceneReq = 1;
-	public static final int JoinPlayerSceneRsp = 1;
 	public static final int JourneyDiceDungeonSettleNotify = 1;
 	public static final int JourneyDiceDungeonUseBuffNotify = 1;
 	public static final int JourneyDiceEnterDungeonReq = 1;
@@ -2457,4 +2458,4 @@ public final class PacketOpcodes {
 	public static final int WorldAllRoutineTypeNotify = 1;
 	public static final int WorldOwnerBlossomScheduleInfoNotify = 1;
 }
-//2458
+//2460

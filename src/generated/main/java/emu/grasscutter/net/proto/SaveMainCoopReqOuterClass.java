@@ -19,95 +19,94 @@ public final class SaveMainCoopReqOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>map&lt;uint32, int32&gt; GEHNFJEPCJL = 3;</code>
+     * <code>map&lt;uint32, int32&gt; GBHMAGADALJ = 1;</code>
      */
-    int getGEHNFJEPCJLCount();
+    int getGBHMAGADALJCount();
     /**
-     * <code>map&lt;uint32, int32&gt; GEHNFJEPCJL = 3;</code>
+     * <code>map&lt;uint32, int32&gt; GBHMAGADALJ = 1;</code>
      */
-    boolean containsGEHNFJEPCJL(
+    boolean containsGBHMAGADALJ(
         int key);
     /**
-     * Use {@link #getGEHNFJEPCJLMap()} instead.
+     * Use {@link #getGBHMAGADALJMap()} instead.
      */
     @java.lang.Deprecated
     java.util.Map<java.lang.Integer, java.lang.Integer>
-    getGEHNFJEPCJL();
+    getGBHMAGADALJ();
     /**
-     * <code>map&lt;uint32, int32&gt; GEHNFJEPCJL = 3;</code>
+     * <code>map&lt;uint32, int32&gt; GBHMAGADALJ = 1;</code>
      */
     java.util.Map<java.lang.Integer, java.lang.Integer>
-    getGEHNFJEPCJLMap();
+    getGBHMAGADALJMap();
     /**
-     * <code>map&lt;uint32, int32&gt; GEHNFJEPCJL = 3;</code>
+     * <code>map&lt;uint32, int32&gt; GBHMAGADALJ = 1;</code>
      */
 
-    int getGEHNFJEPCJLOrDefault(
+    int getGBHMAGADALJOrDefault(
         int key,
         int defaultValue);
     /**
-     * <code>map&lt;uint32, int32&gt; GEHNFJEPCJL = 3;</code>
+     * <code>map&lt;uint32, int32&gt; GBHMAGADALJ = 1;</code>
      */
 
-    int getGEHNFJEPCJLOrThrow(
+    int getGBHMAGADALJOrThrow(
         int key);
 
     /**
-     * <code>map&lt;uint32, int32&gt; GDBKBKACDFO = 10;</code>
+     * <code>map&lt;uint32, int32&gt; EIAEIMKELEJ = 9;</code>
      */
-    int getGDBKBKACDFOCount();
+    int getEIAEIMKELEJCount();
     /**
-     * <code>map&lt;uint32, int32&gt; GDBKBKACDFO = 10;</code>
+     * <code>map&lt;uint32, int32&gt; EIAEIMKELEJ = 9;</code>
      */
-    boolean containsGDBKBKACDFO(
+    boolean containsEIAEIMKELEJ(
         int key);
     /**
-     * Use {@link #getGDBKBKACDFOMap()} instead.
+     * Use {@link #getEIAEIMKELEJMap()} instead.
      */
     @java.lang.Deprecated
     java.util.Map<java.lang.Integer, java.lang.Integer>
-    getGDBKBKACDFO();
+    getEIAEIMKELEJ();
     /**
-     * <code>map&lt;uint32, int32&gt; GDBKBKACDFO = 10;</code>
+     * <code>map&lt;uint32, int32&gt; EIAEIMKELEJ = 9;</code>
      */
     java.util.Map<java.lang.Integer, java.lang.Integer>
-    getGDBKBKACDFOMap();
+    getEIAEIMKELEJMap();
     /**
-     * <code>map&lt;uint32, int32&gt; GDBKBKACDFO = 10;</code>
+     * <code>map&lt;uint32, int32&gt; EIAEIMKELEJ = 9;</code>
      */
 
-    int getGDBKBKACDFOOrDefault(
+    int getEIAEIMKELEJOrDefault(
         int key,
         int defaultValue);
     /**
-     * <code>map&lt;uint32, int32&gt; GDBKBKACDFO = 10;</code>
+     * <code>map&lt;uint32, int32&gt; EIAEIMKELEJ = 9;</code>
      */
 
-    int getGDBKBKACDFOOrThrow(
+    int getEIAEIMKELEJOrThrow(
         int key);
 
     /**
-     * <code>uint32 save_point_id = 11;</code>
+     * <code>uint32 save_point_id = 5;</code>
      * @return The savePointId.
      */
     int getSavePointId();
+
+    /**
+     * <code>uint32 self_confidence = 4;</code>
+     * @return The selfConfidence.
+     */
+    int getSelfConfidence();
 
     /**
      * <code>uint32 id = 6;</code>
      * @return The id.
      */
     int getId();
-
-    /**
-     * <code>uint32 self_confidence = 7;</code>
-     * @return The selfConfidence.
-     */
-    int getSelfConfidence();
   }
   /**
    * <pre>
-   * CmdId: 764
-   * Obf: DEBIEHHKCMA
+   * CmdId: 23152
    * </pre>
    *
    * Protobuf type {@code SaveMainCoopReq}
@@ -155,17 +154,27 @@ public final class SaveMainCoopReqOuterClass {
             case 0:
               done = true;
               break;
-            case 26: {
+            case 10: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                gEHNFJEPCJL_ = com.google.protobuf.MapField.newMapField(
-                    GEHNFJEPCJLDefaultEntryHolder.defaultEntry);
+                gBHMAGADALJ_ = com.google.protobuf.MapField.newMapField(
+                    GBHMAGADALJDefaultEntryHolder.defaultEntry);
                 mutable_bitField0_ |= 0x00000001;
               }
               com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
-              gEHNFJEPCJL__ = input.readMessage(
-                  GEHNFJEPCJLDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              gEHNFJEPCJL_.getMutableMap().put(
-                  gEHNFJEPCJL__.getKey(), gEHNFJEPCJL__.getValue());
+              gBHMAGADALJ__ = input.readMessage(
+                  GBHMAGADALJDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              gBHMAGADALJ_.getMutableMap().put(
+                  gBHMAGADALJ__.getKey(), gBHMAGADALJ__.getValue());
+              break;
+            }
+            case 32: {
+
+              selfConfidence_ = input.readUInt32();
+              break;
+            }
+            case 40: {
+
+              savePointId_ = input.readUInt32();
               break;
             }
             case 48: {
@@ -173,27 +182,17 @@ public final class SaveMainCoopReqOuterClass {
               id_ = input.readUInt32();
               break;
             }
-            case 56: {
-
-              selfConfidence_ = input.readUInt32();
-              break;
-            }
-            case 82: {
+            case 74: {
               if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                gDBKBKACDFO_ = com.google.protobuf.MapField.newMapField(
-                    GDBKBKACDFODefaultEntryHolder.defaultEntry);
+                eIAEIMKELEJ_ = com.google.protobuf.MapField.newMapField(
+                    EIAEIMKELEJDefaultEntryHolder.defaultEntry);
                 mutable_bitField0_ |= 0x00000002;
               }
               com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
-              gDBKBKACDFO__ = input.readMessage(
-                  GDBKBKACDFODefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              gDBKBKACDFO_.getMutableMap().put(
-                  gDBKBKACDFO__.getKey(), gDBKBKACDFO__.getValue());
-              break;
-            }
-            case 88: {
-
-              savePointId_ = input.readUInt32();
+              eIAEIMKELEJ__ = input.readMessage(
+                  EIAEIMKELEJDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              eIAEIMKELEJ_.getMutableMap().put(
+                  eIAEIMKELEJ__.getKey(), eIAEIMKELEJ__.getValue());
               break;
             }
             default: {
@@ -225,10 +224,10 @@ public final class SaveMainCoopReqOuterClass {
     protected com.google.protobuf.MapField internalGetMapField(
         int number) {
       switch (number) {
-        case 3:
-          return internalGetGEHNFJEPCJL();
-        case 10:
-          return internalGetGDBKBKACDFO();
+        case 1:
+          return internalGetGBHMAGADALJ();
+        case 9:
+          return internalGetEIAEIMKELEJ();
         default:
           throw new RuntimeException(
               "Invalid map field number: " + number);
@@ -242,177 +241,188 @@ public final class SaveMainCoopReqOuterClass {
               emu.grasscutter.net.proto.SaveMainCoopReqOuterClass.SaveMainCoopReq.class, emu.grasscutter.net.proto.SaveMainCoopReqOuterClass.SaveMainCoopReq.Builder.class);
     }
 
-    public static final int GEHNFJEPCJL_FIELD_NUMBER = 3;
-    private static final class GEHNFJEPCJLDefaultEntryHolder {
+    public static final int GBHMAGADALJ_FIELD_NUMBER = 1;
+    private static final class GBHMAGADALJDefaultEntryHolder {
       static final com.google.protobuf.MapEntry<
           java.lang.Integer, java.lang.Integer> defaultEntry =
               com.google.protobuf.MapEntry
               .<java.lang.Integer, java.lang.Integer>newDefaultInstance(
-                  emu.grasscutter.net.proto.SaveMainCoopReqOuterClass.internal_static_SaveMainCoopReq_GEHNFJEPCJLEntry_descriptor, 
+                  emu.grasscutter.net.proto.SaveMainCoopReqOuterClass.internal_static_SaveMainCoopReq_GBHMAGADALJEntry_descriptor, 
                   com.google.protobuf.WireFormat.FieldType.UINT32,
                   0,
                   com.google.protobuf.WireFormat.FieldType.INT32,
                   0);
     }
     private com.google.protobuf.MapField<
-        java.lang.Integer, java.lang.Integer> gEHNFJEPCJL_;
+        java.lang.Integer, java.lang.Integer> gBHMAGADALJ_;
     private com.google.protobuf.MapField<java.lang.Integer, java.lang.Integer>
-    internalGetGEHNFJEPCJL() {
-      if (gEHNFJEPCJL_ == null) {
+    internalGetGBHMAGADALJ() {
+      if (gBHMAGADALJ_ == null) {
         return com.google.protobuf.MapField.emptyMapField(
-            GEHNFJEPCJLDefaultEntryHolder.defaultEntry);
+            GBHMAGADALJDefaultEntryHolder.defaultEntry);
       }
-      return gEHNFJEPCJL_;
+      return gBHMAGADALJ_;
     }
 
-    public int getGEHNFJEPCJLCount() {
-      return internalGetGEHNFJEPCJL().getMap().size();
+    public int getGBHMAGADALJCount() {
+      return internalGetGBHMAGADALJ().getMap().size();
     }
     /**
-     * <code>map&lt;uint32, int32&gt; GEHNFJEPCJL = 3;</code>
+     * <code>map&lt;uint32, int32&gt; GBHMAGADALJ = 1;</code>
      */
 
     @java.lang.Override
-    public boolean containsGEHNFJEPCJL(
+    public boolean containsGBHMAGADALJ(
         int key) {
       
-      return internalGetGEHNFJEPCJL().getMap().containsKey(key);
+      return internalGetGBHMAGADALJ().getMap().containsKey(key);
     }
     /**
-     * Use {@link #getGEHNFJEPCJLMap()} instead.
+     * Use {@link #getGBHMAGADALJMap()} instead.
      */
     @java.lang.Override
     @java.lang.Deprecated
-    public java.util.Map<java.lang.Integer, java.lang.Integer> getGEHNFJEPCJL() {
-      return getGEHNFJEPCJLMap();
+    public java.util.Map<java.lang.Integer, java.lang.Integer> getGBHMAGADALJ() {
+      return getGBHMAGADALJMap();
     }
     /**
-     * <code>map&lt;uint32, int32&gt; GEHNFJEPCJL = 3;</code>
+     * <code>map&lt;uint32, int32&gt; GBHMAGADALJ = 1;</code>
      */
     @java.lang.Override
 
-    public java.util.Map<java.lang.Integer, java.lang.Integer> getGEHNFJEPCJLMap() {
-      return internalGetGEHNFJEPCJL().getMap();
+    public java.util.Map<java.lang.Integer, java.lang.Integer> getGBHMAGADALJMap() {
+      return internalGetGBHMAGADALJ().getMap();
     }
     /**
-     * <code>map&lt;uint32, int32&gt; GEHNFJEPCJL = 3;</code>
+     * <code>map&lt;uint32, int32&gt; GBHMAGADALJ = 1;</code>
      */
     @java.lang.Override
 
-    public int getGEHNFJEPCJLOrDefault(
+    public int getGBHMAGADALJOrDefault(
         int key,
         int defaultValue) {
       
       java.util.Map<java.lang.Integer, java.lang.Integer> map =
-          internalGetGEHNFJEPCJL().getMap();
+          internalGetGBHMAGADALJ().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
-     * <code>map&lt;uint32, int32&gt; GEHNFJEPCJL = 3;</code>
+     * <code>map&lt;uint32, int32&gt; GBHMAGADALJ = 1;</code>
      */
     @java.lang.Override
 
-    public int getGEHNFJEPCJLOrThrow(
+    public int getGBHMAGADALJOrThrow(
         int key) {
       
       java.util.Map<java.lang.Integer, java.lang.Integer> map =
-          internalGetGEHNFJEPCJL().getMap();
+          internalGetGBHMAGADALJ().getMap();
       if (!map.containsKey(key)) {
         throw new java.lang.IllegalArgumentException();
       }
       return map.get(key);
     }
 
-    public static final int GDBKBKACDFO_FIELD_NUMBER = 10;
-    private static final class GDBKBKACDFODefaultEntryHolder {
+    public static final int EIAEIMKELEJ_FIELD_NUMBER = 9;
+    private static final class EIAEIMKELEJDefaultEntryHolder {
       static final com.google.protobuf.MapEntry<
           java.lang.Integer, java.lang.Integer> defaultEntry =
               com.google.protobuf.MapEntry
               .<java.lang.Integer, java.lang.Integer>newDefaultInstance(
-                  emu.grasscutter.net.proto.SaveMainCoopReqOuterClass.internal_static_SaveMainCoopReq_GDBKBKACDFOEntry_descriptor, 
+                  emu.grasscutter.net.proto.SaveMainCoopReqOuterClass.internal_static_SaveMainCoopReq_EIAEIMKELEJEntry_descriptor, 
                   com.google.protobuf.WireFormat.FieldType.UINT32,
                   0,
                   com.google.protobuf.WireFormat.FieldType.INT32,
                   0);
     }
     private com.google.protobuf.MapField<
-        java.lang.Integer, java.lang.Integer> gDBKBKACDFO_;
+        java.lang.Integer, java.lang.Integer> eIAEIMKELEJ_;
     private com.google.protobuf.MapField<java.lang.Integer, java.lang.Integer>
-    internalGetGDBKBKACDFO() {
-      if (gDBKBKACDFO_ == null) {
+    internalGetEIAEIMKELEJ() {
+      if (eIAEIMKELEJ_ == null) {
         return com.google.protobuf.MapField.emptyMapField(
-            GDBKBKACDFODefaultEntryHolder.defaultEntry);
+            EIAEIMKELEJDefaultEntryHolder.defaultEntry);
       }
-      return gDBKBKACDFO_;
+      return eIAEIMKELEJ_;
     }
 
-    public int getGDBKBKACDFOCount() {
-      return internalGetGDBKBKACDFO().getMap().size();
+    public int getEIAEIMKELEJCount() {
+      return internalGetEIAEIMKELEJ().getMap().size();
     }
     /**
-     * <code>map&lt;uint32, int32&gt; GDBKBKACDFO = 10;</code>
+     * <code>map&lt;uint32, int32&gt; EIAEIMKELEJ = 9;</code>
      */
 
     @java.lang.Override
-    public boolean containsGDBKBKACDFO(
+    public boolean containsEIAEIMKELEJ(
         int key) {
       
-      return internalGetGDBKBKACDFO().getMap().containsKey(key);
+      return internalGetEIAEIMKELEJ().getMap().containsKey(key);
     }
     /**
-     * Use {@link #getGDBKBKACDFOMap()} instead.
+     * Use {@link #getEIAEIMKELEJMap()} instead.
      */
     @java.lang.Override
     @java.lang.Deprecated
-    public java.util.Map<java.lang.Integer, java.lang.Integer> getGDBKBKACDFO() {
-      return getGDBKBKACDFOMap();
+    public java.util.Map<java.lang.Integer, java.lang.Integer> getEIAEIMKELEJ() {
+      return getEIAEIMKELEJMap();
     }
     /**
-     * <code>map&lt;uint32, int32&gt; GDBKBKACDFO = 10;</code>
+     * <code>map&lt;uint32, int32&gt; EIAEIMKELEJ = 9;</code>
      */
     @java.lang.Override
 
-    public java.util.Map<java.lang.Integer, java.lang.Integer> getGDBKBKACDFOMap() {
-      return internalGetGDBKBKACDFO().getMap();
+    public java.util.Map<java.lang.Integer, java.lang.Integer> getEIAEIMKELEJMap() {
+      return internalGetEIAEIMKELEJ().getMap();
     }
     /**
-     * <code>map&lt;uint32, int32&gt; GDBKBKACDFO = 10;</code>
+     * <code>map&lt;uint32, int32&gt; EIAEIMKELEJ = 9;</code>
      */
     @java.lang.Override
 
-    public int getGDBKBKACDFOOrDefault(
+    public int getEIAEIMKELEJOrDefault(
         int key,
         int defaultValue) {
       
       java.util.Map<java.lang.Integer, java.lang.Integer> map =
-          internalGetGDBKBKACDFO().getMap();
+          internalGetEIAEIMKELEJ().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
-     * <code>map&lt;uint32, int32&gt; GDBKBKACDFO = 10;</code>
+     * <code>map&lt;uint32, int32&gt; EIAEIMKELEJ = 9;</code>
      */
     @java.lang.Override
 
-    public int getGDBKBKACDFOOrThrow(
+    public int getEIAEIMKELEJOrThrow(
         int key) {
       
       java.util.Map<java.lang.Integer, java.lang.Integer> map =
-          internalGetGDBKBKACDFO().getMap();
+          internalGetEIAEIMKELEJ().getMap();
       if (!map.containsKey(key)) {
         throw new java.lang.IllegalArgumentException();
       }
       return map.get(key);
     }
 
-    public static final int SAVE_POINT_ID_FIELD_NUMBER = 11;
+    public static final int SAVE_POINT_ID_FIELD_NUMBER = 5;
     private int savePointId_;
     /**
-     * <code>uint32 save_point_id = 11;</code>
+     * <code>uint32 save_point_id = 5;</code>
      * @return The savePointId.
      */
     @java.lang.Override
     public int getSavePointId() {
       return savePointId_;
+    }
+
+    public static final int SELF_CONFIDENCE_FIELD_NUMBER = 4;
+    private int selfConfidence_;
+    /**
+     * <code>uint32 self_confidence = 4;</code>
+     * @return The selfConfidence.
+     */
+    @java.lang.Override
+    public int getSelfConfidence() {
+      return selfConfidence_;
     }
 
     public static final int ID_FIELD_NUMBER = 6;
@@ -424,17 +434,6 @@ public final class SaveMainCoopReqOuterClass {
     @java.lang.Override
     public int getId() {
       return id_;
-    }
-
-    public static final int SELF_CONFIDENCE_FIELD_NUMBER = 7;
-    private int selfConfidence_;
-    /**
-     * <code>uint32 self_confidence = 7;</code>
-     * @return The selfConfidence.
-     */
-    @java.lang.Override
-    public int getSelfConfidence() {
-      return selfConfidence_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -454,24 +453,24 @@ public final class SaveMainCoopReqOuterClass {
       com.google.protobuf.GeneratedMessageV3
         .serializeIntegerMapTo(
           output,
-          internalGetGEHNFJEPCJL(),
-          GEHNFJEPCJLDefaultEntryHolder.defaultEntry,
-          3);
+          internalGetGBHMAGADALJ(),
+          GBHMAGADALJDefaultEntryHolder.defaultEntry,
+          1);
+      if (selfConfidence_ != 0) {
+        output.writeUInt32(4, selfConfidence_);
+      }
+      if (savePointId_ != 0) {
+        output.writeUInt32(5, savePointId_);
+      }
       if (id_ != 0) {
         output.writeUInt32(6, id_);
-      }
-      if (selfConfidence_ != 0) {
-        output.writeUInt32(7, selfConfidence_);
       }
       com.google.protobuf.GeneratedMessageV3
         .serializeIntegerMapTo(
           output,
-          internalGetGDBKBKACDFO(),
-          GDBKBKACDFODefaultEntryHolder.defaultEntry,
-          10);
-      if (savePointId_ != 0) {
-        output.writeUInt32(11, savePointId_);
-      }
+          internalGetEIAEIMKELEJ(),
+          EIAEIMKELEJDefaultEntryHolder.defaultEntry,
+          9);
       unknownFields.writeTo(output);
     }
 
@@ -482,36 +481,36 @@ public final class SaveMainCoopReqOuterClass {
 
       size = 0;
       for (java.util.Map.Entry<java.lang.Integer, java.lang.Integer> entry
-           : internalGetGEHNFJEPCJL().getMap().entrySet()) {
+           : internalGetGBHMAGADALJ().getMap().entrySet()) {
         com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
-        gEHNFJEPCJL__ = GEHNFJEPCJLDefaultEntryHolder.defaultEntry.newBuilderForType()
+        gBHMAGADALJ__ = GBHMAGADALJDefaultEntryHolder.defaultEntry.newBuilderForType()
             .setKey(entry.getKey())
             .setValue(entry.getValue())
             .build();
         size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(3, gEHNFJEPCJL__);
+            .computeMessageSize(1, gBHMAGADALJ__);
+      }
+      if (selfConfidence_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(4, selfConfidence_);
+      }
+      if (savePointId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(5, savePointId_);
       }
       if (id_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(6, id_);
       }
-      if (selfConfidence_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(7, selfConfidence_);
-      }
       for (java.util.Map.Entry<java.lang.Integer, java.lang.Integer> entry
-           : internalGetGDBKBKACDFO().getMap().entrySet()) {
+           : internalGetEIAEIMKELEJ().getMap().entrySet()) {
         com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
-        gDBKBKACDFO__ = GDBKBKACDFODefaultEntryHolder.defaultEntry.newBuilderForType()
+        eIAEIMKELEJ__ = EIAEIMKELEJDefaultEntryHolder.defaultEntry.newBuilderForType()
             .setKey(entry.getKey())
             .setValue(entry.getValue())
             .build();
         size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(10, gDBKBKACDFO__);
-      }
-      if (savePointId_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(11, savePointId_);
+            .computeMessageSize(9, eIAEIMKELEJ__);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -528,16 +527,16 @@ public final class SaveMainCoopReqOuterClass {
       }
       emu.grasscutter.net.proto.SaveMainCoopReqOuterClass.SaveMainCoopReq other = (emu.grasscutter.net.proto.SaveMainCoopReqOuterClass.SaveMainCoopReq) obj;
 
-      if (!internalGetGEHNFJEPCJL().equals(
-          other.internalGetGEHNFJEPCJL())) return false;
-      if (!internalGetGDBKBKACDFO().equals(
-          other.internalGetGDBKBKACDFO())) return false;
+      if (!internalGetGBHMAGADALJ().equals(
+          other.internalGetGBHMAGADALJ())) return false;
+      if (!internalGetEIAEIMKELEJ().equals(
+          other.internalGetEIAEIMKELEJ())) return false;
       if (getSavePointId()
           != other.getSavePointId()) return false;
-      if (getId()
-          != other.getId()) return false;
       if (getSelfConfidence()
           != other.getSelfConfidence()) return false;
+      if (getId()
+          != other.getId()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -549,20 +548,20 @@ public final class SaveMainCoopReqOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (!internalGetGEHNFJEPCJL().getMap().isEmpty()) {
-        hash = (37 * hash) + GEHNFJEPCJL_FIELD_NUMBER;
-        hash = (53 * hash) + internalGetGEHNFJEPCJL().hashCode();
+      if (!internalGetGBHMAGADALJ().getMap().isEmpty()) {
+        hash = (37 * hash) + GBHMAGADALJ_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetGBHMAGADALJ().hashCode();
       }
-      if (!internalGetGDBKBKACDFO().getMap().isEmpty()) {
-        hash = (37 * hash) + GDBKBKACDFO_FIELD_NUMBER;
-        hash = (53 * hash) + internalGetGDBKBKACDFO().hashCode();
+      if (!internalGetEIAEIMKELEJ().getMap().isEmpty()) {
+        hash = (37 * hash) + EIAEIMKELEJ_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetEIAEIMKELEJ().hashCode();
       }
       hash = (37 * hash) + SAVE_POINT_ID_FIELD_NUMBER;
       hash = (53 * hash) + getSavePointId();
-      hash = (37 * hash) + ID_FIELD_NUMBER;
-      hash = (53 * hash) + getId();
       hash = (37 * hash) + SELF_CONFIDENCE_FIELD_NUMBER;
       hash = (53 * hash) + getSelfConfidence();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -660,8 +659,7 @@ public final class SaveMainCoopReqOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 764
-     * Obf: DEBIEHHKCMA
+     * CmdId: 23152
      * </pre>
      *
      * Protobuf type {@code SaveMainCoopReq}
@@ -679,10 +677,10 @@ public final class SaveMainCoopReqOuterClass {
       protected com.google.protobuf.MapField internalGetMapField(
           int number) {
         switch (number) {
-          case 3:
-            return internalGetGEHNFJEPCJL();
-          case 10:
-            return internalGetGDBKBKACDFO();
+          case 1:
+            return internalGetGBHMAGADALJ();
+          case 9:
+            return internalGetEIAEIMKELEJ();
           default:
             throw new RuntimeException(
                 "Invalid map field number: " + number);
@@ -692,10 +690,10 @@ public final class SaveMainCoopReqOuterClass {
       protected com.google.protobuf.MapField internalGetMutableMapField(
           int number) {
         switch (number) {
-          case 3:
-            return internalGetMutableGEHNFJEPCJL();
-          case 10:
-            return internalGetMutableGDBKBKACDFO();
+          case 1:
+            return internalGetMutableGBHMAGADALJ();
+          case 9:
+            return internalGetMutableEIAEIMKELEJ();
           default:
             throw new RuntimeException(
                 "Invalid map field number: " + number);
@@ -727,13 +725,13 @@ public final class SaveMainCoopReqOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        internalGetMutableGEHNFJEPCJL().clear();
-        internalGetMutableGDBKBKACDFO().clear();
+        internalGetMutableGBHMAGADALJ().clear();
+        internalGetMutableEIAEIMKELEJ().clear();
         savePointId_ = 0;
 
-        id_ = 0;
-
         selfConfidence_ = 0;
+
+        id_ = 0;
 
         return this;
       }
@@ -762,13 +760,13 @@ public final class SaveMainCoopReqOuterClass {
       public emu.grasscutter.net.proto.SaveMainCoopReqOuterClass.SaveMainCoopReq buildPartial() {
         emu.grasscutter.net.proto.SaveMainCoopReqOuterClass.SaveMainCoopReq result = new emu.grasscutter.net.proto.SaveMainCoopReqOuterClass.SaveMainCoopReq(this);
         int from_bitField0_ = bitField0_;
-        result.gEHNFJEPCJL_ = internalGetGEHNFJEPCJL();
-        result.gEHNFJEPCJL_.makeImmutable();
-        result.gDBKBKACDFO_ = internalGetGDBKBKACDFO();
-        result.gDBKBKACDFO_.makeImmutable();
+        result.gBHMAGADALJ_ = internalGetGBHMAGADALJ();
+        result.gBHMAGADALJ_.makeImmutable();
+        result.eIAEIMKELEJ_ = internalGetEIAEIMKELEJ();
+        result.eIAEIMKELEJ_.makeImmutable();
         result.savePointId_ = savePointId_;
-        result.id_ = id_;
         result.selfConfidence_ = selfConfidence_;
+        result.id_ = id_;
         onBuilt();
         return result;
       }
@@ -817,18 +815,18 @@ public final class SaveMainCoopReqOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.SaveMainCoopReqOuterClass.SaveMainCoopReq other) {
         if (other == emu.grasscutter.net.proto.SaveMainCoopReqOuterClass.SaveMainCoopReq.getDefaultInstance()) return this;
-        internalGetMutableGEHNFJEPCJL().mergeFrom(
-            other.internalGetGEHNFJEPCJL());
-        internalGetMutableGDBKBKACDFO().mergeFrom(
-            other.internalGetGDBKBKACDFO());
+        internalGetMutableGBHMAGADALJ().mergeFrom(
+            other.internalGetGBHMAGADALJ());
+        internalGetMutableEIAEIMKELEJ().mergeFrom(
+            other.internalGetEIAEIMKELEJ());
         if (other.getSavePointId() != 0) {
           setSavePointId(other.getSavePointId());
         }
-        if (other.getId() != 0) {
-          setId(other.getId());
-        }
         if (other.getSelfConfidence() != 0) {
           setSelfConfidence(other.getSelfConfidence());
+        }
+        if (other.getId() != 0) {
+          setId(other.getId());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -861,99 +859,99 @@ public final class SaveMainCoopReqOuterClass {
       private int bitField0_;
 
       private com.google.protobuf.MapField<
-          java.lang.Integer, java.lang.Integer> gEHNFJEPCJL_;
+          java.lang.Integer, java.lang.Integer> gBHMAGADALJ_;
       private com.google.protobuf.MapField<java.lang.Integer, java.lang.Integer>
-      internalGetGEHNFJEPCJL() {
-        if (gEHNFJEPCJL_ == null) {
+      internalGetGBHMAGADALJ() {
+        if (gBHMAGADALJ_ == null) {
           return com.google.protobuf.MapField.emptyMapField(
-              GEHNFJEPCJLDefaultEntryHolder.defaultEntry);
+              GBHMAGADALJDefaultEntryHolder.defaultEntry);
         }
-        return gEHNFJEPCJL_;
+        return gBHMAGADALJ_;
       }
       private com.google.protobuf.MapField<java.lang.Integer, java.lang.Integer>
-      internalGetMutableGEHNFJEPCJL() {
+      internalGetMutableGBHMAGADALJ() {
         onChanged();;
-        if (gEHNFJEPCJL_ == null) {
-          gEHNFJEPCJL_ = com.google.protobuf.MapField.newMapField(
-              GEHNFJEPCJLDefaultEntryHolder.defaultEntry);
+        if (gBHMAGADALJ_ == null) {
+          gBHMAGADALJ_ = com.google.protobuf.MapField.newMapField(
+              GBHMAGADALJDefaultEntryHolder.defaultEntry);
         }
-        if (!gEHNFJEPCJL_.isMutable()) {
-          gEHNFJEPCJL_ = gEHNFJEPCJL_.copy();
+        if (!gBHMAGADALJ_.isMutable()) {
+          gBHMAGADALJ_ = gBHMAGADALJ_.copy();
         }
-        return gEHNFJEPCJL_;
+        return gBHMAGADALJ_;
       }
 
-      public int getGEHNFJEPCJLCount() {
-        return internalGetGEHNFJEPCJL().getMap().size();
+      public int getGBHMAGADALJCount() {
+        return internalGetGBHMAGADALJ().getMap().size();
       }
       /**
-       * <code>map&lt;uint32, int32&gt; GEHNFJEPCJL = 3;</code>
+       * <code>map&lt;uint32, int32&gt; GBHMAGADALJ = 1;</code>
        */
 
       @java.lang.Override
-      public boolean containsGEHNFJEPCJL(
+      public boolean containsGBHMAGADALJ(
           int key) {
         
-        return internalGetGEHNFJEPCJL().getMap().containsKey(key);
+        return internalGetGBHMAGADALJ().getMap().containsKey(key);
       }
       /**
-       * Use {@link #getGEHNFJEPCJLMap()} instead.
+       * Use {@link #getGBHMAGADALJMap()} instead.
        */
       @java.lang.Override
       @java.lang.Deprecated
-      public java.util.Map<java.lang.Integer, java.lang.Integer> getGEHNFJEPCJL() {
-        return getGEHNFJEPCJLMap();
+      public java.util.Map<java.lang.Integer, java.lang.Integer> getGBHMAGADALJ() {
+        return getGBHMAGADALJMap();
       }
       /**
-       * <code>map&lt;uint32, int32&gt; GEHNFJEPCJL = 3;</code>
+       * <code>map&lt;uint32, int32&gt; GBHMAGADALJ = 1;</code>
        */
       @java.lang.Override
 
-      public java.util.Map<java.lang.Integer, java.lang.Integer> getGEHNFJEPCJLMap() {
-        return internalGetGEHNFJEPCJL().getMap();
+      public java.util.Map<java.lang.Integer, java.lang.Integer> getGBHMAGADALJMap() {
+        return internalGetGBHMAGADALJ().getMap();
       }
       /**
-       * <code>map&lt;uint32, int32&gt; GEHNFJEPCJL = 3;</code>
+       * <code>map&lt;uint32, int32&gt; GBHMAGADALJ = 1;</code>
        */
       @java.lang.Override
 
-      public int getGEHNFJEPCJLOrDefault(
+      public int getGBHMAGADALJOrDefault(
           int key,
           int defaultValue) {
         
         java.util.Map<java.lang.Integer, java.lang.Integer> map =
-            internalGetGEHNFJEPCJL().getMap();
+            internalGetGBHMAGADALJ().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
-       * <code>map&lt;uint32, int32&gt; GEHNFJEPCJL = 3;</code>
+       * <code>map&lt;uint32, int32&gt; GBHMAGADALJ = 1;</code>
        */
       @java.lang.Override
 
-      public int getGEHNFJEPCJLOrThrow(
+      public int getGBHMAGADALJOrThrow(
           int key) {
         
         java.util.Map<java.lang.Integer, java.lang.Integer> map =
-            internalGetGEHNFJEPCJL().getMap();
+            internalGetGBHMAGADALJ().getMap();
         if (!map.containsKey(key)) {
           throw new java.lang.IllegalArgumentException();
         }
         return map.get(key);
       }
 
-      public Builder clearGEHNFJEPCJL() {
-        internalGetMutableGEHNFJEPCJL().getMutableMap()
+      public Builder clearGBHMAGADALJ() {
+        internalGetMutableGBHMAGADALJ().getMutableMap()
             .clear();
         return this;
       }
       /**
-       * <code>map&lt;uint32, int32&gt; GEHNFJEPCJL = 3;</code>
+       * <code>map&lt;uint32, int32&gt; GBHMAGADALJ = 1;</code>
        */
 
-      public Builder removeGEHNFJEPCJL(
+      public Builder removeGBHMAGADALJ(
           int key) {
         
-        internalGetMutableGEHNFJEPCJL().getMutableMap()
+        internalGetMutableGBHMAGADALJ().getMutableMap()
             .remove(key);
         return this;
       }
@@ -962,126 +960,126 @@ public final class SaveMainCoopReqOuterClass {
        */
       @java.lang.Deprecated
       public java.util.Map<java.lang.Integer, java.lang.Integer>
-      getMutableGEHNFJEPCJL() {
-        return internalGetMutableGEHNFJEPCJL().getMutableMap();
+      getMutableGBHMAGADALJ() {
+        return internalGetMutableGBHMAGADALJ().getMutableMap();
       }
       /**
-       * <code>map&lt;uint32, int32&gt; GEHNFJEPCJL = 3;</code>
+       * <code>map&lt;uint32, int32&gt; GBHMAGADALJ = 1;</code>
        */
-      public Builder putGEHNFJEPCJL(
+      public Builder putGBHMAGADALJ(
           int key,
           int value) {
         
         
-        internalGetMutableGEHNFJEPCJL().getMutableMap()
+        internalGetMutableGBHMAGADALJ().getMutableMap()
             .put(key, value);
         return this;
       }
       /**
-       * <code>map&lt;uint32, int32&gt; GEHNFJEPCJL = 3;</code>
+       * <code>map&lt;uint32, int32&gt; GBHMAGADALJ = 1;</code>
        */
 
-      public Builder putAllGEHNFJEPCJL(
+      public Builder putAllGBHMAGADALJ(
           java.util.Map<java.lang.Integer, java.lang.Integer> values) {
-        internalGetMutableGEHNFJEPCJL().getMutableMap()
+        internalGetMutableGBHMAGADALJ().getMutableMap()
             .putAll(values);
         return this;
       }
 
       private com.google.protobuf.MapField<
-          java.lang.Integer, java.lang.Integer> gDBKBKACDFO_;
+          java.lang.Integer, java.lang.Integer> eIAEIMKELEJ_;
       private com.google.protobuf.MapField<java.lang.Integer, java.lang.Integer>
-      internalGetGDBKBKACDFO() {
-        if (gDBKBKACDFO_ == null) {
+      internalGetEIAEIMKELEJ() {
+        if (eIAEIMKELEJ_ == null) {
           return com.google.protobuf.MapField.emptyMapField(
-              GDBKBKACDFODefaultEntryHolder.defaultEntry);
+              EIAEIMKELEJDefaultEntryHolder.defaultEntry);
         }
-        return gDBKBKACDFO_;
+        return eIAEIMKELEJ_;
       }
       private com.google.protobuf.MapField<java.lang.Integer, java.lang.Integer>
-      internalGetMutableGDBKBKACDFO() {
+      internalGetMutableEIAEIMKELEJ() {
         onChanged();;
-        if (gDBKBKACDFO_ == null) {
-          gDBKBKACDFO_ = com.google.protobuf.MapField.newMapField(
-              GDBKBKACDFODefaultEntryHolder.defaultEntry);
+        if (eIAEIMKELEJ_ == null) {
+          eIAEIMKELEJ_ = com.google.protobuf.MapField.newMapField(
+              EIAEIMKELEJDefaultEntryHolder.defaultEntry);
         }
-        if (!gDBKBKACDFO_.isMutable()) {
-          gDBKBKACDFO_ = gDBKBKACDFO_.copy();
+        if (!eIAEIMKELEJ_.isMutable()) {
+          eIAEIMKELEJ_ = eIAEIMKELEJ_.copy();
         }
-        return gDBKBKACDFO_;
+        return eIAEIMKELEJ_;
       }
 
-      public int getGDBKBKACDFOCount() {
-        return internalGetGDBKBKACDFO().getMap().size();
+      public int getEIAEIMKELEJCount() {
+        return internalGetEIAEIMKELEJ().getMap().size();
       }
       /**
-       * <code>map&lt;uint32, int32&gt; GDBKBKACDFO = 10;</code>
+       * <code>map&lt;uint32, int32&gt; EIAEIMKELEJ = 9;</code>
        */
 
       @java.lang.Override
-      public boolean containsGDBKBKACDFO(
+      public boolean containsEIAEIMKELEJ(
           int key) {
         
-        return internalGetGDBKBKACDFO().getMap().containsKey(key);
+        return internalGetEIAEIMKELEJ().getMap().containsKey(key);
       }
       /**
-       * Use {@link #getGDBKBKACDFOMap()} instead.
+       * Use {@link #getEIAEIMKELEJMap()} instead.
        */
       @java.lang.Override
       @java.lang.Deprecated
-      public java.util.Map<java.lang.Integer, java.lang.Integer> getGDBKBKACDFO() {
-        return getGDBKBKACDFOMap();
+      public java.util.Map<java.lang.Integer, java.lang.Integer> getEIAEIMKELEJ() {
+        return getEIAEIMKELEJMap();
       }
       /**
-       * <code>map&lt;uint32, int32&gt; GDBKBKACDFO = 10;</code>
+       * <code>map&lt;uint32, int32&gt; EIAEIMKELEJ = 9;</code>
        */
       @java.lang.Override
 
-      public java.util.Map<java.lang.Integer, java.lang.Integer> getGDBKBKACDFOMap() {
-        return internalGetGDBKBKACDFO().getMap();
+      public java.util.Map<java.lang.Integer, java.lang.Integer> getEIAEIMKELEJMap() {
+        return internalGetEIAEIMKELEJ().getMap();
       }
       /**
-       * <code>map&lt;uint32, int32&gt; GDBKBKACDFO = 10;</code>
+       * <code>map&lt;uint32, int32&gt; EIAEIMKELEJ = 9;</code>
        */
       @java.lang.Override
 
-      public int getGDBKBKACDFOOrDefault(
+      public int getEIAEIMKELEJOrDefault(
           int key,
           int defaultValue) {
         
         java.util.Map<java.lang.Integer, java.lang.Integer> map =
-            internalGetGDBKBKACDFO().getMap();
+            internalGetEIAEIMKELEJ().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
-       * <code>map&lt;uint32, int32&gt; GDBKBKACDFO = 10;</code>
+       * <code>map&lt;uint32, int32&gt; EIAEIMKELEJ = 9;</code>
        */
       @java.lang.Override
 
-      public int getGDBKBKACDFOOrThrow(
+      public int getEIAEIMKELEJOrThrow(
           int key) {
         
         java.util.Map<java.lang.Integer, java.lang.Integer> map =
-            internalGetGDBKBKACDFO().getMap();
+            internalGetEIAEIMKELEJ().getMap();
         if (!map.containsKey(key)) {
           throw new java.lang.IllegalArgumentException();
         }
         return map.get(key);
       }
 
-      public Builder clearGDBKBKACDFO() {
-        internalGetMutableGDBKBKACDFO().getMutableMap()
+      public Builder clearEIAEIMKELEJ() {
+        internalGetMutableEIAEIMKELEJ().getMutableMap()
             .clear();
         return this;
       }
       /**
-       * <code>map&lt;uint32, int32&gt; GDBKBKACDFO = 10;</code>
+       * <code>map&lt;uint32, int32&gt; EIAEIMKELEJ = 9;</code>
        */
 
-      public Builder removeGDBKBKACDFO(
+      public Builder removeEIAEIMKELEJ(
           int key) {
         
-        internalGetMutableGDBKBKACDFO().getMutableMap()
+        internalGetMutableEIAEIMKELEJ().getMutableMap()
             .remove(key);
         return this;
       }
@@ -1090,35 +1088,35 @@ public final class SaveMainCoopReqOuterClass {
        */
       @java.lang.Deprecated
       public java.util.Map<java.lang.Integer, java.lang.Integer>
-      getMutableGDBKBKACDFO() {
-        return internalGetMutableGDBKBKACDFO().getMutableMap();
+      getMutableEIAEIMKELEJ() {
+        return internalGetMutableEIAEIMKELEJ().getMutableMap();
       }
       /**
-       * <code>map&lt;uint32, int32&gt; GDBKBKACDFO = 10;</code>
+       * <code>map&lt;uint32, int32&gt; EIAEIMKELEJ = 9;</code>
        */
-      public Builder putGDBKBKACDFO(
+      public Builder putEIAEIMKELEJ(
           int key,
           int value) {
         
         
-        internalGetMutableGDBKBKACDFO().getMutableMap()
+        internalGetMutableEIAEIMKELEJ().getMutableMap()
             .put(key, value);
         return this;
       }
       /**
-       * <code>map&lt;uint32, int32&gt; GDBKBKACDFO = 10;</code>
+       * <code>map&lt;uint32, int32&gt; EIAEIMKELEJ = 9;</code>
        */
 
-      public Builder putAllGDBKBKACDFO(
+      public Builder putAllEIAEIMKELEJ(
           java.util.Map<java.lang.Integer, java.lang.Integer> values) {
-        internalGetMutableGDBKBKACDFO().getMutableMap()
+        internalGetMutableEIAEIMKELEJ().getMutableMap()
             .putAll(values);
         return this;
       }
 
       private int savePointId_ ;
       /**
-       * <code>uint32 save_point_id = 11;</code>
+       * <code>uint32 save_point_id = 5;</code>
        * @return The savePointId.
        */
       @java.lang.Override
@@ -1126,7 +1124,7 @@ public final class SaveMainCoopReqOuterClass {
         return savePointId_;
       }
       /**
-       * <code>uint32 save_point_id = 11;</code>
+       * <code>uint32 save_point_id = 5;</code>
        * @param value The savePointId to set.
        * @return This builder for chaining.
        */
@@ -1137,12 +1135,43 @@ public final class SaveMainCoopReqOuterClass {
         return this;
       }
       /**
-       * <code>uint32 save_point_id = 11;</code>
+       * <code>uint32 save_point_id = 5;</code>
        * @return This builder for chaining.
        */
       public Builder clearSavePointId() {
         
         savePointId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int selfConfidence_ ;
+      /**
+       * <code>uint32 self_confidence = 4;</code>
+       * @return The selfConfidence.
+       */
+      @java.lang.Override
+      public int getSelfConfidence() {
+        return selfConfidence_;
+      }
+      /**
+       * <code>uint32 self_confidence = 4;</code>
+       * @param value The selfConfidence to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSelfConfidence(int value) {
+        
+        selfConfidence_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 self_confidence = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSelfConfidence() {
+        
+        selfConfidence_ = 0;
         onChanged();
         return this;
       }
@@ -1174,37 +1203,6 @@ public final class SaveMainCoopReqOuterClass {
       public Builder clearId() {
         
         id_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int selfConfidence_ ;
-      /**
-       * <code>uint32 self_confidence = 7;</code>
-       * @return The selfConfidence.
-       */
-      @java.lang.Override
-      public int getSelfConfidence() {
-        return selfConfidence_;
-      }
-      /**
-       * <code>uint32 self_confidence = 7;</code>
-       * @param value The selfConfidence to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSelfConfidence(int value) {
-        
-        selfConfidence_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 self_confidence = 7;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearSelfConfidence() {
-        
-        selfConfidence_ = 0;
         onChanged();
         return this;
       }
@@ -1267,15 +1265,15 @@ public final class SaveMainCoopReqOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_SaveMainCoopReq_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_SaveMainCoopReq_GEHNFJEPCJLEntry_descriptor;
+    internal_static_SaveMainCoopReq_GBHMAGADALJEntry_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_SaveMainCoopReq_GEHNFJEPCJLEntry_fieldAccessorTable;
+      internal_static_SaveMainCoopReq_GBHMAGADALJEntry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_SaveMainCoopReq_GDBKBKACDFOEntry_descriptor;
+    internal_static_SaveMainCoopReq_EIAEIMKELEJEntry_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_SaveMainCoopReq_GDBKBKACDFOEntry_fieldAccessorTable;
+      internal_static_SaveMainCoopReq_EIAEIMKELEJEntry_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1286,13 +1284,13 @@ public final class SaveMainCoopReqOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\025SaveMainCoopReq.proto\"\245\002\n\017SaveMainCoop" +
-      "Req\0226\n\013GEHNFJEPCJL\030\003 \003(\0132!.SaveMainCoopR" +
-      "eq.GEHNFJEPCJLEntry\0226\n\013GDBKBKACDFO\030\n \003(\013" +
-      "2!.SaveMainCoopReq.GDBKBKACDFOEntry\022\025\n\rs" +
-      "ave_point_id\030\013 \001(\r\022\n\n\002id\030\006 \001(\r\022\027\n\017self_c" +
-      "onfidence\030\007 \001(\r\0322\n\020GEHNFJEPCJLEntry\022\013\n\003k" +
-      "ey\030\001 \001(\r\022\r\n\005value\030\002 \001(\005:\0028\001\0322\n\020GDBKBKACD" +
-      "FOEntry\022\013\n\003key\030\001 \001(\r\022\r\n\005value\030\002 \001(\005:\0028\001B" +
+      "Req\0226\n\013GBHMAGADALJ\030\001 \003(\0132!.SaveMainCoopR" +
+      "eq.GBHMAGADALJEntry\0226\n\013EIAEIMKELEJ\030\t \003(\013" +
+      "2!.SaveMainCoopReq.EIAEIMKELEJEntry\022\025\n\rs" +
+      "ave_point_id\030\005 \001(\r\022\027\n\017self_confidence\030\004 " +
+      "\001(\r\022\n\n\002id\030\006 \001(\r\0322\n\020GBHMAGADALJEntry\022\013\n\003k" +
+      "ey\030\001 \001(\r\022\r\n\005value\030\002 \001(\005:\0028\001\0322\n\020EIAEIMKEL" +
+      "EJEntry\022\013\n\003key\030\001 \001(\r\022\r\n\005value\030\002 \001(\005:\0028\001B" +
       "\033\n\031emu.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -1304,18 +1302,18 @@ public final class SaveMainCoopReqOuterClass {
     internal_static_SaveMainCoopReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_SaveMainCoopReq_descriptor,
-        new java.lang.String[] { "GEHNFJEPCJL", "GDBKBKACDFO", "SavePointId", "Id", "SelfConfidence", });
-    internal_static_SaveMainCoopReq_GEHNFJEPCJLEntry_descriptor =
+        new java.lang.String[] { "GBHMAGADALJ", "EIAEIMKELEJ", "SavePointId", "SelfConfidence", "Id", });
+    internal_static_SaveMainCoopReq_GBHMAGADALJEntry_descriptor =
       internal_static_SaveMainCoopReq_descriptor.getNestedTypes().get(0);
-    internal_static_SaveMainCoopReq_GEHNFJEPCJLEntry_fieldAccessorTable = new
+    internal_static_SaveMainCoopReq_GBHMAGADALJEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_SaveMainCoopReq_GEHNFJEPCJLEntry_descriptor,
+        internal_static_SaveMainCoopReq_GBHMAGADALJEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
-    internal_static_SaveMainCoopReq_GDBKBKACDFOEntry_descriptor =
+    internal_static_SaveMainCoopReq_EIAEIMKELEJEntry_descriptor =
       internal_static_SaveMainCoopReq_descriptor.getNestedTypes().get(1);
-    internal_static_SaveMainCoopReq_GDBKBKACDFOEntry_fieldAccessorTable = new
+    internal_static_SaveMainCoopReq_EIAEIMKELEJEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_SaveMainCoopReq_GDBKBKACDFOEntry_descriptor,
+        internal_static_SaveMainCoopReq_EIAEIMKELEJEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
   }
 

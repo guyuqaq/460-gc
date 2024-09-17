@@ -1479,11 +1479,11 @@ public class Player implements DatabaseObject<Player>, PlayerHook, FieldFetch {
         session.send(new PacketAvatarDataNotify(this));
 
         // 设置玩家角色初始元素属性
-        if (this.isWind) {
-            var se  = new seCommand();
-            Element element = se.getElementFromString("wind");
-            se.changeAvatarElement(this, 10000007, element);
-        }
+        //if (this.isWind) {
+           // var se  = new seCommand();
+            //Element element = se.getElementFromString("wind");
+            //se.changeAvatarElement(this, 10000007, element);
+        //}
 
         this.getProgressManager().onPlayerLogin();
 
