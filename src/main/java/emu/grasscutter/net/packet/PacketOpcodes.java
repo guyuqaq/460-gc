@@ -656,7 +656,7 @@ public final class PacketOpcodes {
 	public static final int PlayerRandomCookReq = 23985;
 	public static final int PlayerRandomCookRsp = 50010;// unknow cmdid
     public static final int SceneKickPlayerReq = 27213;
-    public static final int SceneKickPlayerRsp = 7966; // 7966,20150,9301,24287,5497,21021,7700
+    public static final int SceneKickPlayerRsp = 20150; // 7966,20150,9301,24287,5497,21021,7700
     public static final int PlayerForceExitRsp = 50007; // unknow cmdid
     public static final int AddBackupAvatarTeamReq = 23418;
     public static final int AddBackupAvatarTeamRsp = 7643; // unknow cmdid
