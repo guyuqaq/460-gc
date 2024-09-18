@@ -112,6 +112,17 @@ public final class RoutePointOuterClass {
      */
     emu.grasscutter.net.proto.MathQuaternionOuterClass.MathQuaternionOrBuilder getAxisSpeedOrBuilder();
 
+    /**
+     * <code>.MKKPICHLCGL point_type = 24;</code>
+     * @return The enum numeric value on the wire for pointType.
+     */
+    int getPointTypeValue();
+    /**
+     * <code>.MKKPICHLCGL point_type = 24;</code>
+     * @return The pointType.
+     */
+    emu.grasscutter.net.proto.MKKPICHLCGLOuterClass.MKKPICHLCGL getPointType();
+
     public emu.grasscutter.net.proto.RoutePointOuterClass.RoutePoint.MoveParamsCase getMoveParamsCase();
 
     public emu.grasscutter.net.proto.RoutePointOuterClass.RoutePoint.RotateParamsCase getRotateParamsCase();
@@ -129,6 +140,7 @@ public final class RoutePointOuterClass {
       super(builder);
     }
     private RoutePoint() {
+      pointType_ = 0;
     }
 
     @java.lang.Override
@@ -234,6 +246,12 @@ public final class RoutePointOuterClass {
                 rotateParams_ = subBuilder.buildPartial();
               }
               rotateParamsCase_ = 23;
+              break;
+            }
+            case 192: {
+              int rawValue = input.readEnum();
+
+              pointType_ = rawValue;
               break;
             }
             default: {
@@ -535,6 +553,25 @@ public final class RoutePointOuterClass {
       return emu.grasscutter.net.proto.MathQuaternionOuterClass.MathQuaternion.getDefaultInstance();
     }
 
+    public static final int POINT_TYPE_FIELD_NUMBER = 24;
+    private int pointType_;
+    /**
+     * <code>.MKKPICHLCGL point_type = 24;</code>
+     * @return The enum numeric value on the wire for pointType.
+     */
+    @java.lang.Override public int getPointTypeValue() {
+      return pointType_;
+    }
+    /**
+     * <code>.MKKPICHLCGL point_type = 24;</code>
+     * @return The pointType.
+     */
+    @java.lang.Override public emu.grasscutter.net.proto.MKKPICHLCGLOuterClass.MKKPICHLCGL getPointType() {
+      @SuppressWarnings("deprecation")
+      emu.grasscutter.net.proto.MKKPICHLCGLOuterClass.MKKPICHLCGL result = emu.grasscutter.net.proto.MKKPICHLCGLOuterClass.MKKPICHLCGL.valueOf(pointType_);
+      return result == null ? emu.grasscutter.net.proto.MKKPICHLCGLOuterClass.MKKPICHLCGL.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -574,6 +611,9 @@ public final class RoutePointOuterClass {
       }
       if (rotateParamsCase_ == 23) {
         output.writeMessage(23, (emu.grasscutter.net.proto.MathQuaternionOuterClass.MathQuaternion) rotateParams_);
+      }
+      if (pointType_ != emu.grasscutter.net.proto.MKKPICHLCGLOuterClass.MKKPICHLCGL.DEFAULT_VALUE.getNumber()) {
+        output.writeEnum(24, pointType_);
       }
       unknownFields.writeTo(output);
     }
@@ -618,6 +658,10 @@ public final class RoutePointOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(23, (emu.grasscutter.net.proto.MathQuaternionOuterClass.MathQuaternion) rotateParams_);
       }
+      if (pointType_ != emu.grasscutter.net.proto.MKKPICHLCGLOuterClass.MKKPICHLCGL.DEFAULT_VALUE.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(24, pointType_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -643,6 +687,7 @@ public final class RoutePointOuterClass {
               other.getArriveRange())) return false;
       if (getHasReachEvent()
           != other.getHasReachEvent()) return false;
+      if (pointType_ != other.pointType_) return false;
       if (!getMoveParamsCase().equals(other.getMoveParamsCase())) return false;
       switch (moveParamsCase_) {
         case 11:
@@ -696,6 +741,8 @@ public final class RoutePointOuterClass {
       hash = (37 * hash) + HAS_REACH_EVENT_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getHasReachEvent());
+      hash = (37 * hash) + POINT_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + pointType_;
       switch (moveParamsCase_) {
         case 11:
           hash = (37 * hash) + VELOCITY_FIELD_NUMBER;
@@ -869,6 +916,8 @@ public final class RoutePointOuterClass {
 
         hasReachEvent_ = false;
 
+        pointType_ = 0;
+
         moveParamsCase_ = 0;
         moveParams_ = null;
         rotateParamsCase_ = 0;
@@ -933,6 +982,7 @@ public final class RoutePointOuterClass {
             result.rotateParams_ = axisSpeedBuilder_.build();
           }
         }
+        result.pointType_ = pointType_;
         result.moveParamsCase_ = moveParamsCase_;
         result.rotateParamsCase_ = rotateParamsCase_;
         onBuilt();
@@ -991,6 +1041,9 @@ public final class RoutePointOuterClass {
         }
         if (other.getHasReachEvent() != false) {
           setHasReachEvent(other.getHasReachEvent());
+        }
+        if (other.pointType_ != 0) {
+          setPointTypeValue(other.getPointTypeValue());
         }
         switch (other.getMoveParamsCase()) {
           case VELOCITY: {
@@ -1766,6 +1819,60 @@ public final class RoutePointOuterClass {
         onChanged();;
         return axisSpeedBuilder_;
       }
+
+      private int pointType_ = 0;
+      /**
+       * <code>.MKKPICHLCGL point_type = 24;</code>
+       * @return The enum numeric value on the wire for pointType.
+       */
+      @java.lang.Override public int getPointTypeValue() {
+        return pointType_;
+      }
+      /**
+       * <code>.MKKPICHLCGL point_type = 24;</code>
+       * @param value The enum numeric value on the wire for pointType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPointTypeValue(int value) {
+        
+        pointType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.MKKPICHLCGL point_type = 24;</code>
+       * @return The pointType.
+       */
+      @java.lang.Override
+      public emu.grasscutter.net.proto.MKKPICHLCGLOuterClass.MKKPICHLCGL getPointType() {
+        @SuppressWarnings("deprecation")
+        emu.grasscutter.net.proto.MKKPICHLCGLOuterClass.MKKPICHLCGL result = emu.grasscutter.net.proto.MKKPICHLCGLOuterClass.MKKPICHLCGL.valueOf(pointType_);
+        return result == null ? emu.grasscutter.net.proto.MKKPICHLCGLOuterClass.MKKPICHLCGL.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.MKKPICHLCGL point_type = 24;</code>
+       * @param value The pointType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPointType(emu.grasscutter.net.proto.MKKPICHLCGLOuterClass.MKKPICHLCGL value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        pointType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.MKKPICHLCGL point_type = 24;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPointType() {
+        
+        pointType_ = 0;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -1834,29 +1941,33 @@ public final class RoutePointOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\020RoutePoint.proto\032\014Vector.proto\032\024MathQu" +
-      "aternion.proto\"\207\002\n\nRoutePoint\022\031\n\010positio" +
-      "n\030\001 \001(\0132\007.Vector\022\024\n\014arrive_range\030\002 \001(\002\022\027" +
-      "\n\017has_reach_event\030\003 \001(\010\022\022\n\010velocity\030\013 \001(" +
-      "\002H\000\022\016\n\004time\030\014 \001(\002H\000\022\033\n\010rotation\030\025 \001(\0132\007." +
-      "VectorH\001\022)\n\016rotation_speed\030\026 \001(\0132\017.MathQ" +
-      "uaternionH\001\022%\n\naxis_speed\030\027 \001(\0132\017.MathQu" +
-      "aternionH\001B\014\n\nMoveParamsB\016\n\014RotateParams" +
-      "B\033\n\031emu.grasscutter.net.protob\006proto3"
+      "aternion.proto\032\021MKKPICHLCGL.proto\"\251\002\n\nRo" +
+      "utePoint\022\031\n\010position\030\001 \001(\0132\007.Vector\022\024\n\014a" +
+      "rrive_range\030\002 \001(\002\022\027\n\017has_reach_event\030\003 \001" +
+      "(\010\022\022\n\010velocity\030\013 \001(\002H\000\022\016\n\004time\030\014 \001(\002H\000\022\033" +
+      "\n\010rotation\030\025 \001(\0132\007.VectorH\001\022)\n\016rotation_" +
+      "speed\030\026 \001(\0132\017.MathQuaternionH\001\022%\n\naxis_s" +
+      "peed\030\027 \001(\0132\017.MathQuaternionH\001\022 \n\npoint_t" +
+      "ype\030\030 \001(\0162\014.MKKPICHLCGLB\014\n\nMoveParamsB\016\n" +
+      "\014RotateParamsB\033\n\031emu.grasscutter.net.pro" +
+      "tob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           emu.grasscutter.net.proto.VectorOuterClass.getDescriptor(),
           emu.grasscutter.net.proto.MathQuaternionOuterClass.getDescriptor(),
+          emu.grasscutter.net.proto.MKKPICHLCGLOuterClass.getDescriptor(),
         });
     internal_static_RoutePoint_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_RoutePoint_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_RoutePoint_descriptor,
-        new java.lang.String[] { "Position", "ArriveRange", "HasReachEvent", "Velocity", "Time", "Rotation", "RotationSpeed", "AxisSpeed", "MoveParams", "RotateParams", });
+        new java.lang.String[] { "Position", "ArriveRange", "HasReachEvent", "Velocity", "Time", "Rotation", "RotationSpeed", "AxisSpeed", "PointType", "MoveParams", "RotateParams", });
     emu.grasscutter.net.proto.VectorOuterClass.getDescriptor();
     emu.grasscutter.net.proto.MathQuaternionOuterClass.getDescriptor();
+    emu.grasscutter.net.proto.MKKPICHLCGLOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

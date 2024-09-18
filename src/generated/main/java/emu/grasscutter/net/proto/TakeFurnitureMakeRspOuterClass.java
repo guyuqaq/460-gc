@@ -34,44 +34,24 @@ public final class TakeFurnitureMakeRspOuterClass {
     emu.grasscutter.net.proto.FurnitureMakeSlotOuterClass.FurnitureMakeSlotOrBuilder getFurnitureMakeSlotOrBuilder();
 
     /**
-     * <pre>
-     * obf: MKMHPOMEAHP 字段可能猜的是错的
-     * </pre>
-     *
      * <code>repeated .ItemParam return_item_list = 6;</code>
      */
     java.util.List<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam> 
         getReturnItemListList();
     /**
-     * <pre>
-     * obf: MKMHPOMEAHP 字段可能猜的是错的
-     * </pre>
-     *
      * <code>repeated .ItemParam return_item_list = 6;</code>
      */
     emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam getReturnItemList(int index);
     /**
-     * <pre>
-     * obf: MKMHPOMEAHP 字段可能猜的是错的
-     * </pre>
-     *
      * <code>repeated .ItemParam return_item_list = 6;</code>
      */
     int getReturnItemListCount();
     /**
-     * <pre>
-     * obf: MKMHPOMEAHP 字段可能猜的是错的
-     * </pre>
-     *
      * <code>repeated .ItemParam return_item_list = 6;</code>
      */
     java.util.List<? extends emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder> 
         getReturnItemListOrBuilderList();
     /**
-     * <pre>
-     * obf: MKMHPOMEAHP 字段可能猜的是错的
-     * </pre>
-     *
      * <code>repeated .ItemParam return_item_list = 6;</code>
      */
     emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder getReturnItemListOrBuilder(
@@ -84,44 +64,24 @@ public final class TakeFurnitureMakeRspOuterClass {
     int getRetcode();
 
     /**
-     * <pre>
-     * obf: GBEPKGLFBFD 字段可能猜的是错的
-     * </pre>
-     *
      * <code>repeated .ItemParam output_item_list = 12;</code>
      */
     java.util.List<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam> 
         getOutputItemListList();
     /**
-     * <pre>
-     * obf: GBEPKGLFBFD 字段可能猜的是错的
-     * </pre>
-     *
      * <code>repeated .ItemParam output_item_list = 12;</code>
      */
     emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam getOutputItemList(int index);
     /**
-     * <pre>
-     * obf: GBEPKGLFBFD 字段可能猜的是错的
-     * </pre>
-     *
      * <code>repeated .ItemParam output_item_list = 12;</code>
      */
     int getOutputItemListCount();
     /**
-     * <pre>
-     * obf: GBEPKGLFBFD 字段可能猜的是错的
-     * </pre>
-     *
      * <code>repeated .ItemParam output_item_list = 12;</code>
      */
     java.util.List<? extends emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder> 
         getOutputItemListOrBuilderList();
     /**
-     * <pre>
-     * obf: GBEPKGLFBFD 字段可能猜的是错的
-     * </pre>
-     *
      * <code>repeated .ItemParam output_item_list = 12;</code>
      */
     emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder getOutputItemListOrBuilder(
@@ -136,7 +96,6 @@ public final class TakeFurnitureMakeRspOuterClass {
   /**
    * <pre>
    * CmdId: 6584
-   * obf: NKPACMDAIDM
    * </pre>
    *
    * Protobuf type {@code TakeFurnitureMakeRsp}
@@ -294,10 +253,6 @@ public final class TakeFurnitureMakeRspOuterClass {
     public static final int RETURN_ITEM_LIST_FIELD_NUMBER = 6;
     private java.util.List<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam> returnItemList_;
     /**
-     * <pre>
-     * obf: MKMHPOMEAHP 字段可能猜的是错的
-     * </pre>
-     *
      * <code>repeated .ItemParam return_item_list = 6;</code>
      */
     @java.lang.Override
@@ -305,10 +260,6 @@ public final class TakeFurnitureMakeRspOuterClass {
       return returnItemList_;
     }
     /**
-     * <pre>
-     * obf: MKMHPOMEAHP 字段可能猜的是错的
-     * </pre>
-     *
      * <code>repeated .ItemParam return_item_list = 6;</code>
      */
     @java.lang.Override
@@ -317,10 +268,6 @@ public final class TakeFurnitureMakeRspOuterClass {
       return returnItemList_;
     }
     /**
-     * <pre>
-     * obf: MKMHPOMEAHP 字段可能猜的是错的
-     * </pre>
-     *
      * <code>repeated .ItemParam return_item_list = 6;</code>
      */
     @java.lang.Override
@@ -328,10 +275,6 @@ public final class TakeFurnitureMakeRspOuterClass {
       return returnItemList_.size();
     }
     /**
-     * <pre>
-     * obf: MKMHPOMEAHP 字段可能猜的是错的
-     * </pre>
-     *
      * <code>repeated .ItemParam return_item_list = 6;</code>
      */
     @java.lang.Override
@@ -339,10 +282,6 @@ public final class TakeFurnitureMakeRspOuterClass {
       return returnItemList_.get(index);
     }
     /**
-     * <pre>
-     * obf: MKMHPOMEAHP 字段可能猜的是错的
-     * </pre>
-     *
      * <code>repeated .ItemParam return_item_list = 6;</code>
      */
     @java.lang.Override
@@ -365,10 +304,6 @@ public final class TakeFurnitureMakeRspOuterClass {
     public static final int OUTPUT_ITEM_LIST_FIELD_NUMBER = 12;
     private java.util.List<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam> outputItemList_;
     /**
-     * <pre>
-     * obf: GBEPKGLFBFD 字段可能猜的是错的
-     * </pre>
-     *
      * <code>repeated .ItemParam output_item_list = 12;</code>
      */
     @java.lang.Override
@@ -376,10 +311,6 @@ public final class TakeFurnitureMakeRspOuterClass {
       return outputItemList_;
     }
     /**
-     * <pre>
-     * obf: GBEPKGLFBFD 字段可能猜的是错的
-     * </pre>
-     *
      * <code>repeated .ItemParam output_item_list = 12;</code>
      */
     @java.lang.Override
@@ -388,10 +319,6 @@ public final class TakeFurnitureMakeRspOuterClass {
       return outputItemList_;
     }
     /**
-     * <pre>
-     * obf: GBEPKGLFBFD 字段可能猜的是错的
-     * </pre>
-     *
      * <code>repeated .ItemParam output_item_list = 12;</code>
      */
     @java.lang.Override
@@ -399,10 +326,6 @@ public final class TakeFurnitureMakeRspOuterClass {
       return outputItemList_.size();
     }
     /**
-     * <pre>
-     * obf: GBEPKGLFBFD 字段可能猜的是错的
-     * </pre>
-     *
      * <code>repeated .ItemParam output_item_list = 12;</code>
      */
     @java.lang.Override
@@ -410,10 +333,6 @@ public final class TakeFurnitureMakeRspOuterClass {
       return outputItemList_.get(index);
     }
     /**
-     * <pre>
-     * obf: GBEPKGLFBFD 字段可能猜的是错的
-     * </pre>
-     *
      * <code>repeated .ItemParam output_item_list = 12;</code>
      */
     @java.lang.Override
@@ -644,7 +563,6 @@ public final class TakeFurnitureMakeRspOuterClass {
     /**
      * <pre>
      * CmdId: 6584
-     * obf: NKPACMDAIDM
      * </pre>
      *
      * Protobuf type {@code TakeFurnitureMakeRsp}
@@ -1031,10 +949,6 @@ public final class TakeFurnitureMakeRspOuterClass {
           emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam, emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder, emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder> returnItemListBuilder_;
 
       /**
-       * <pre>
-       * obf: MKMHPOMEAHP 字段可能猜的是错的
-       * </pre>
-       *
        * <code>repeated .ItemParam return_item_list = 6;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam> getReturnItemListList() {
@@ -1045,10 +959,6 @@ public final class TakeFurnitureMakeRspOuterClass {
         }
       }
       /**
-       * <pre>
-       * obf: MKMHPOMEAHP 字段可能猜的是错的
-       * </pre>
-       *
        * <code>repeated .ItemParam return_item_list = 6;</code>
        */
       public int getReturnItemListCount() {
@@ -1059,10 +969,6 @@ public final class TakeFurnitureMakeRspOuterClass {
         }
       }
       /**
-       * <pre>
-       * obf: MKMHPOMEAHP 字段可能猜的是错的
-       * </pre>
-       *
        * <code>repeated .ItemParam return_item_list = 6;</code>
        */
       public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam getReturnItemList(int index) {
@@ -1073,10 +979,6 @@ public final class TakeFurnitureMakeRspOuterClass {
         }
       }
       /**
-       * <pre>
-       * obf: MKMHPOMEAHP 字段可能猜的是错的
-       * </pre>
-       *
        * <code>repeated .ItemParam return_item_list = 6;</code>
        */
       public Builder setReturnItemList(
@@ -1094,10 +996,6 @@ public final class TakeFurnitureMakeRspOuterClass {
         return this;
       }
       /**
-       * <pre>
-       * obf: MKMHPOMEAHP 字段可能猜的是错的
-       * </pre>
-       *
        * <code>repeated .ItemParam return_item_list = 6;</code>
        */
       public Builder setReturnItemList(
@@ -1112,10 +1010,6 @@ public final class TakeFurnitureMakeRspOuterClass {
         return this;
       }
       /**
-       * <pre>
-       * obf: MKMHPOMEAHP 字段可能猜的是错的
-       * </pre>
-       *
        * <code>repeated .ItemParam return_item_list = 6;</code>
        */
       public Builder addReturnItemList(emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam value) {
@@ -1132,10 +1026,6 @@ public final class TakeFurnitureMakeRspOuterClass {
         return this;
       }
       /**
-       * <pre>
-       * obf: MKMHPOMEAHP 字段可能猜的是错的
-       * </pre>
-       *
        * <code>repeated .ItemParam return_item_list = 6;</code>
        */
       public Builder addReturnItemList(
@@ -1153,10 +1043,6 @@ public final class TakeFurnitureMakeRspOuterClass {
         return this;
       }
       /**
-       * <pre>
-       * obf: MKMHPOMEAHP 字段可能猜的是错的
-       * </pre>
-       *
        * <code>repeated .ItemParam return_item_list = 6;</code>
        */
       public Builder addReturnItemList(
@@ -1171,10 +1057,6 @@ public final class TakeFurnitureMakeRspOuterClass {
         return this;
       }
       /**
-       * <pre>
-       * obf: MKMHPOMEAHP 字段可能猜的是错的
-       * </pre>
-       *
        * <code>repeated .ItemParam return_item_list = 6;</code>
        */
       public Builder addReturnItemList(
@@ -1189,10 +1071,6 @@ public final class TakeFurnitureMakeRspOuterClass {
         return this;
       }
       /**
-       * <pre>
-       * obf: MKMHPOMEAHP 字段可能猜的是错的
-       * </pre>
-       *
        * <code>repeated .ItemParam return_item_list = 6;</code>
        */
       public Builder addAllReturnItemList(
@@ -1208,10 +1086,6 @@ public final class TakeFurnitureMakeRspOuterClass {
         return this;
       }
       /**
-       * <pre>
-       * obf: MKMHPOMEAHP 字段可能猜的是错的
-       * </pre>
-       *
        * <code>repeated .ItemParam return_item_list = 6;</code>
        */
       public Builder clearReturnItemList() {
@@ -1225,10 +1099,6 @@ public final class TakeFurnitureMakeRspOuterClass {
         return this;
       }
       /**
-       * <pre>
-       * obf: MKMHPOMEAHP 字段可能猜的是错的
-       * </pre>
-       *
        * <code>repeated .ItemParam return_item_list = 6;</code>
        */
       public Builder removeReturnItemList(int index) {
@@ -1242,10 +1112,6 @@ public final class TakeFurnitureMakeRspOuterClass {
         return this;
       }
       /**
-       * <pre>
-       * obf: MKMHPOMEAHP 字段可能猜的是错的
-       * </pre>
-       *
        * <code>repeated .ItemParam return_item_list = 6;</code>
        */
       public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder getReturnItemListBuilder(
@@ -1253,10 +1119,6 @@ public final class TakeFurnitureMakeRspOuterClass {
         return getReturnItemListFieldBuilder().getBuilder(index);
       }
       /**
-       * <pre>
-       * obf: MKMHPOMEAHP 字段可能猜的是错的
-       * </pre>
-       *
        * <code>repeated .ItemParam return_item_list = 6;</code>
        */
       public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder getReturnItemListOrBuilder(
@@ -1267,10 +1129,6 @@ public final class TakeFurnitureMakeRspOuterClass {
         }
       }
       /**
-       * <pre>
-       * obf: MKMHPOMEAHP 字段可能猜的是错的
-       * </pre>
-       *
        * <code>repeated .ItemParam return_item_list = 6;</code>
        */
       public java.util.List<? extends emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder> 
@@ -1282,10 +1140,6 @@ public final class TakeFurnitureMakeRspOuterClass {
         }
       }
       /**
-       * <pre>
-       * obf: MKMHPOMEAHP 字段可能猜的是错的
-       * </pre>
-       *
        * <code>repeated .ItemParam return_item_list = 6;</code>
        */
       public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder addReturnItemListBuilder() {
@@ -1293,10 +1147,6 @@ public final class TakeFurnitureMakeRspOuterClass {
             emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.getDefaultInstance());
       }
       /**
-       * <pre>
-       * obf: MKMHPOMEAHP 字段可能猜的是错的
-       * </pre>
-       *
        * <code>repeated .ItemParam return_item_list = 6;</code>
        */
       public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder addReturnItemListBuilder(
@@ -1305,10 +1155,6 @@ public final class TakeFurnitureMakeRspOuterClass {
             index, emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.getDefaultInstance());
       }
       /**
-       * <pre>
-       * obf: MKMHPOMEAHP 字段可能猜的是错的
-       * </pre>
-       *
        * <code>repeated .ItemParam return_item_list = 6;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder> 
@@ -1374,10 +1220,6 @@ public final class TakeFurnitureMakeRspOuterClass {
           emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam, emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder, emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder> outputItemListBuilder_;
 
       /**
-       * <pre>
-       * obf: GBEPKGLFBFD 字段可能猜的是错的
-       * </pre>
-       *
        * <code>repeated .ItemParam output_item_list = 12;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam> getOutputItemListList() {
@@ -1388,10 +1230,6 @@ public final class TakeFurnitureMakeRspOuterClass {
         }
       }
       /**
-       * <pre>
-       * obf: GBEPKGLFBFD 字段可能猜的是错的
-       * </pre>
-       *
        * <code>repeated .ItemParam output_item_list = 12;</code>
        */
       public int getOutputItemListCount() {
@@ -1402,10 +1240,6 @@ public final class TakeFurnitureMakeRspOuterClass {
         }
       }
       /**
-       * <pre>
-       * obf: GBEPKGLFBFD 字段可能猜的是错的
-       * </pre>
-       *
        * <code>repeated .ItemParam output_item_list = 12;</code>
        */
       public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam getOutputItemList(int index) {
@@ -1416,10 +1250,6 @@ public final class TakeFurnitureMakeRspOuterClass {
         }
       }
       /**
-       * <pre>
-       * obf: GBEPKGLFBFD 字段可能猜的是错的
-       * </pre>
-       *
        * <code>repeated .ItemParam output_item_list = 12;</code>
        */
       public Builder setOutputItemList(
@@ -1437,10 +1267,6 @@ public final class TakeFurnitureMakeRspOuterClass {
         return this;
       }
       /**
-       * <pre>
-       * obf: GBEPKGLFBFD 字段可能猜的是错的
-       * </pre>
-       *
        * <code>repeated .ItemParam output_item_list = 12;</code>
        */
       public Builder setOutputItemList(
@@ -1455,10 +1281,6 @@ public final class TakeFurnitureMakeRspOuterClass {
         return this;
       }
       /**
-       * <pre>
-       * obf: GBEPKGLFBFD 字段可能猜的是错的
-       * </pre>
-       *
        * <code>repeated .ItemParam output_item_list = 12;</code>
        */
       public Builder addOutputItemList(emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam value) {
@@ -1475,10 +1297,6 @@ public final class TakeFurnitureMakeRspOuterClass {
         return this;
       }
       /**
-       * <pre>
-       * obf: GBEPKGLFBFD 字段可能猜的是错的
-       * </pre>
-       *
        * <code>repeated .ItemParam output_item_list = 12;</code>
        */
       public Builder addOutputItemList(
@@ -1496,10 +1314,6 @@ public final class TakeFurnitureMakeRspOuterClass {
         return this;
       }
       /**
-       * <pre>
-       * obf: GBEPKGLFBFD 字段可能猜的是错的
-       * </pre>
-       *
        * <code>repeated .ItemParam output_item_list = 12;</code>
        */
       public Builder addOutputItemList(
@@ -1514,10 +1328,6 @@ public final class TakeFurnitureMakeRspOuterClass {
         return this;
       }
       /**
-       * <pre>
-       * obf: GBEPKGLFBFD 字段可能猜的是错的
-       * </pre>
-       *
        * <code>repeated .ItemParam output_item_list = 12;</code>
        */
       public Builder addOutputItemList(
@@ -1532,10 +1342,6 @@ public final class TakeFurnitureMakeRspOuterClass {
         return this;
       }
       /**
-       * <pre>
-       * obf: GBEPKGLFBFD 字段可能猜的是错的
-       * </pre>
-       *
        * <code>repeated .ItemParam output_item_list = 12;</code>
        */
       public Builder addAllOutputItemList(
@@ -1551,10 +1357,6 @@ public final class TakeFurnitureMakeRspOuterClass {
         return this;
       }
       /**
-       * <pre>
-       * obf: GBEPKGLFBFD 字段可能猜的是错的
-       * </pre>
-       *
        * <code>repeated .ItemParam output_item_list = 12;</code>
        */
       public Builder clearOutputItemList() {
@@ -1568,10 +1370,6 @@ public final class TakeFurnitureMakeRspOuterClass {
         return this;
       }
       /**
-       * <pre>
-       * obf: GBEPKGLFBFD 字段可能猜的是错的
-       * </pre>
-       *
        * <code>repeated .ItemParam output_item_list = 12;</code>
        */
       public Builder removeOutputItemList(int index) {
@@ -1585,10 +1383,6 @@ public final class TakeFurnitureMakeRspOuterClass {
         return this;
       }
       /**
-       * <pre>
-       * obf: GBEPKGLFBFD 字段可能猜的是错的
-       * </pre>
-       *
        * <code>repeated .ItemParam output_item_list = 12;</code>
        */
       public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder getOutputItemListBuilder(
@@ -1596,10 +1390,6 @@ public final class TakeFurnitureMakeRspOuterClass {
         return getOutputItemListFieldBuilder().getBuilder(index);
       }
       /**
-       * <pre>
-       * obf: GBEPKGLFBFD 字段可能猜的是错的
-       * </pre>
-       *
        * <code>repeated .ItemParam output_item_list = 12;</code>
        */
       public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder getOutputItemListOrBuilder(
@@ -1610,10 +1400,6 @@ public final class TakeFurnitureMakeRspOuterClass {
         }
       }
       /**
-       * <pre>
-       * obf: GBEPKGLFBFD 字段可能猜的是错的
-       * </pre>
-       *
        * <code>repeated .ItemParam output_item_list = 12;</code>
        */
       public java.util.List<? extends emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder> 
@@ -1625,10 +1411,6 @@ public final class TakeFurnitureMakeRspOuterClass {
         }
       }
       /**
-       * <pre>
-       * obf: GBEPKGLFBFD 字段可能猜的是错的
-       * </pre>
-       *
        * <code>repeated .ItemParam output_item_list = 12;</code>
        */
       public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder addOutputItemListBuilder() {
@@ -1636,10 +1418,6 @@ public final class TakeFurnitureMakeRspOuterClass {
             emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.getDefaultInstance());
       }
       /**
-       * <pre>
-       * obf: GBEPKGLFBFD 字段可能猜的是错的
-       * </pre>
-       *
        * <code>repeated .ItemParam output_item_list = 12;</code>
        */
       public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder addOutputItemListBuilder(
@@ -1648,10 +1426,6 @@ public final class TakeFurnitureMakeRspOuterClass {
             index, emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.getDefaultInstance());
       }
       /**
-       * <pre>
-       * obf: GBEPKGLFBFD 字段可能猜的是错的
-       * </pre>
-       *
        * <code>repeated .ItemParam output_item_list = 12;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder> 
@@ -1770,8 +1544,8 @@ public final class TakeFurnitureMakeRspOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\032TakeFurnitureMakeRsp.proto\032\027FurnitureM" +
-      "akeSlot.proto\032\017ItemParam.proto\"\265\001\n\024TakeF" +
+      "\n\032TakeFurnitureMakeRsp.proto\032\017ItemParam." +
+      "proto\032\027FurnitureMakeSlot.proto\"\265\001\n\024TakeF" +
       "urnitureMakeRsp\022/\n\023furniture_make_slot\030\003" +
       " \001(\0132\022.FurnitureMakeSlot\022$\n\020return_item_" +
       "list\030\006 \003(\0132\n.ItemParam\022\017\n\007retcode\030\010 \001(\005\022" +
@@ -1782,8 +1556,8 @@ public final class TakeFurnitureMakeRspOuterClass {
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          emu.grasscutter.net.proto.FurnitureMakeSlotOuterClass.getDescriptor(),
           emu.grasscutter.net.proto.ItemParamOuterClass.getDescriptor(),
+          emu.grasscutter.net.proto.FurnitureMakeSlotOuterClass.getDescriptor(),
         });
     internal_static_TakeFurnitureMakeRsp_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -1791,8 +1565,8 @@ public final class TakeFurnitureMakeRspOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_TakeFurnitureMakeRsp_descriptor,
         new java.lang.String[] { "FurnitureMakeSlot", "ReturnItemList", "Retcode", "OutputItemList", "MakeId", });
-    emu.grasscutter.net.proto.FurnitureMakeSlotOuterClass.getDescriptor();
     emu.grasscutter.net.proto.ItemParamOuterClass.getDescriptor();
+    emu.grasscutter.net.proto.FurnitureMakeSlotOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
