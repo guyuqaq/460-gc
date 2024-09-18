@@ -19,20 +19,20 @@ public final class DeleteFriendRspOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 target_uid = 4;</code>
+     * <code>uint32 target_uid = 14;</code>
      * @return The targetUid.
      */
     int getTargetUid();
 
     /**
-     * <code>int32 retcode = 12;</code>
+     * <code>int32 retcode = 13;</code>
      * @return The retcode.
      */
     int getRetcode();
   }
   /**
    * <pre>
-   * CmdId: 7966
+   * CmdId: 9786
    * Obf: BDBANFKGEEN
    * </pre>
    *
@@ -80,14 +80,14 @@ public final class DeleteFriendRspOuterClass {
             case 0:
               done = true;
               break;
-            case 32: {
-
-              targetUid_ = input.readUInt32();
-              break;
-            }
-            case 96: {
+            case 104: {
 
               retcode_ = input.readInt32();
+              break;
+            }
+            case 112: {
+
+              targetUid_ = input.readUInt32();
               break;
             }
             default: {
@@ -122,10 +122,10 @@ public final class DeleteFriendRspOuterClass {
               emu.grasscutter.net.proto.DeleteFriendRspOuterClass.DeleteFriendRsp.class, emu.grasscutter.net.proto.DeleteFriendRspOuterClass.DeleteFriendRsp.Builder.class);
     }
 
-    public static final int TARGET_UID_FIELD_NUMBER = 4;
+    public static final int TARGET_UID_FIELD_NUMBER = 14;
     private int targetUid_;
     /**
-     * <code>uint32 target_uid = 4;</code>
+     * <code>uint32 target_uid = 14;</code>
      * @return The targetUid.
      */
     @java.lang.Override
@@ -133,10 +133,10 @@ public final class DeleteFriendRspOuterClass {
       return targetUid_;
     }
 
-    public static final int RETCODE_FIELD_NUMBER = 12;
+    public static final int RETCODE_FIELD_NUMBER = 13;
     private int retcode_;
     /**
-     * <code>int32 retcode = 12;</code>
+     * <code>int32 retcode = 13;</code>
      * @return The retcode.
      */
     @java.lang.Override
@@ -158,11 +158,11 @@ public final class DeleteFriendRspOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (targetUid_ != 0) {
-        output.writeUInt32(4, targetUid_);
-      }
       if (retcode_ != 0) {
-        output.writeInt32(12, retcode_);
+        output.writeInt32(13, retcode_);
+      }
+      if (targetUid_ != 0) {
+        output.writeUInt32(14, targetUid_);
       }
       unknownFields.writeTo(output);
     }
@@ -173,13 +173,13 @@ public final class DeleteFriendRspOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (targetUid_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(4, targetUid_);
-      }
       if (retcode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(12, retcode_);
+          .computeInt32Size(13, retcode_);
+      }
+      if (targetUid_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(14, targetUid_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -312,7 +312,7 @@ public final class DeleteFriendRspOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 7966
+     * CmdId: 9786
      * Obf: BDBANFKGEEN
      * </pre>
      *
@@ -470,7 +470,7 @@ public final class DeleteFriendRspOuterClass {
 
       private int targetUid_ ;
       /**
-       * <code>uint32 target_uid = 4;</code>
+       * <code>uint32 target_uid = 14;</code>
        * @return The targetUid.
        */
       @java.lang.Override
@@ -478,7 +478,7 @@ public final class DeleteFriendRspOuterClass {
         return targetUid_;
       }
       /**
-       * <code>uint32 target_uid = 4;</code>
+       * <code>uint32 target_uid = 14;</code>
        * @param value The targetUid to set.
        * @return This builder for chaining.
        */
@@ -489,7 +489,7 @@ public final class DeleteFriendRspOuterClass {
         return this;
       }
       /**
-       * <code>uint32 target_uid = 4;</code>
+       * <code>uint32 target_uid = 14;</code>
        * @return This builder for chaining.
        */
       public Builder clearTargetUid() {
@@ -501,7 +501,7 @@ public final class DeleteFriendRspOuterClass {
 
       private int retcode_ ;
       /**
-       * <code>int32 retcode = 12;</code>
+       * <code>int32 retcode = 13;</code>
        * @return The retcode.
        */
       @java.lang.Override
@@ -509,7 +509,7 @@ public final class DeleteFriendRspOuterClass {
         return retcode_;
       }
       /**
-       * <code>int32 retcode = 12;</code>
+       * <code>int32 retcode = 13;</code>
        * @param value The retcode to set.
        * @return This builder for chaining.
        */
@@ -520,7 +520,7 @@ public final class DeleteFriendRspOuterClass {
         return this;
       }
       /**
-       * <code>int32 retcode = 12;</code>
+       * <code>int32 retcode = 13;</code>
        * @return This builder for chaining.
        */
       public Builder clearRetcode() {
@@ -597,7 +597,7 @@ public final class DeleteFriendRspOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\025DeleteFriendRsp.proto\"6\n\017DeleteFriendR" +
-      "sp\022\022\n\ntarget_uid\030\004 \001(\r\022\017\n\007retcode\030\014 \001(\005B" +
+      "sp\022\022\n\ntarget_uid\030\016 \001(\r\022\017\n\007retcode\030\r \001(\005B" +
       "\033\n\031emu.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

@@ -19,6 +19,11 @@ public final class TreasureMapMpChallengeNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
   }
   /**
+   * <pre>
+   * CmdId: 8790
+   * Obf: OKLHGHMKKHI
+   * </pre>
+   *
    * Protobuf type {@code TreasureMapMpChallengeNotify}
    */
   public static final class TreasureMapMpChallengeNotify extends
@@ -240,6 +245,11 @@ public final class TreasureMapMpChallengeNotifyOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * CmdId: 8790
+     * Obf: OKLHGHMKKHI
+     * </pre>
+     *
      * Protobuf type {@code TreasureMapMpChallengeNotify}
      */
     public static final class Builder extends

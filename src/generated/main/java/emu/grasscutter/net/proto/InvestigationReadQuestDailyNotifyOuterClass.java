@@ -19,6 +19,11 @@ public final class InvestigationReadQuestDailyNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
   }
   /**
+   * <pre>
+   * CmdId: 6920
+   * Obf: NNFAHGOLKAK
+   * </pre>
+   *
    * Protobuf type {@code InvestigationReadQuestDailyNotify}
    */
   public static final class InvestigationReadQuestDailyNotify extends
@@ -240,6 +245,11 @@ public final class InvestigationReadQuestDailyNotifyOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * CmdId: 6920
+     * Obf: NNFAHGOLKAK
+     * </pre>
+     *
      * Protobuf type {@code InvestigationReadQuestDailyNotify}
      */
     public static final class Builder extends

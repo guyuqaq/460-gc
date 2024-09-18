@@ -19,6 +19,11 @@ public final class LeaveWorldNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
   }
   /**
+   * <pre>
+   * CmdId: 22405
+   * Obf: AFINGDDHMPO
+   * </pre>
+   *
    * Protobuf type {@code LeaveWorldNotify}
    */
   public static final class LeaveWorldNotify extends
@@ -240,6 +245,11 @@ public final class LeaveWorldNotifyOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * CmdId: 22405
+     * Obf: AFINGDDHMPO
+     * </pre>
+     *
      * Protobuf type {@code LeaveWorldNotify}
      */
     public static final class Builder extends

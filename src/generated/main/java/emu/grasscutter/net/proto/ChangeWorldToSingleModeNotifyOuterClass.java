@@ -21,6 +21,7 @@ public final class ChangeWorldToSingleModeNotifyOuterClass {
   /**
    * <pre>
    * CmdId: 24701
+   * Obf: PGFINJBAJOF
    * </pre>
    *
    * Protobuf type {@code ChangeWorldToSingleModeNotify}
@@ -246,6 +247,7 @@ public final class ChangeWorldToSingleModeNotifyOuterClass {
     /**
      * <pre>
      * CmdId: 24701
+     * Obf: PGFINJBAJOF
      * </pre>
      *
      * Protobuf type {@code ChangeWorldToSingleModeNotify}

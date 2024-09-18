@@ -21,6 +21,7 @@ public final class LeaveSceneReqOuterClass {
   /**
    * <pre>
    * CmdId: 1616
+   * Obf: PJEHOELFIJM
    * </pre>
    *
    * Protobuf type {@code LeaveSceneReq}
@@ -246,6 +247,7 @@ public final class LeaveSceneReqOuterClass {
     /**
      * <pre>
      * CmdId: 1616
+     * Obf: PJEHOELFIJM
      * </pre>
      *
      * Protobuf type {@code LeaveSceneReq}

@@ -26,7 +26,8 @@ public final class ExecuteGadgetLuaRspOuterClass {
   }
   /**
    * <pre>
-   * CmdId: 6502
+   * CmdId: 1263
+   * Obf: DPEMGHFBEEK
    * </pre>
    *
    * Protobuf type {@code ExecuteGadgetLuaRsp}
@@ -278,7 +279,8 @@ public final class ExecuteGadgetLuaRspOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 6502
+     * CmdId: 1263
+     * Obf: DPEMGHFBEEK
      * </pre>
      *
      * Protobuf type {@code ExecuteGadgetLuaRsp}

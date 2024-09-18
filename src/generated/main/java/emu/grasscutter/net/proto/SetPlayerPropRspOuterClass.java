@@ -26,7 +26,8 @@ public final class SetPlayerPropRspOuterClass {
   }
   /**
    * <pre>
-   * CmdId: 50021
+   * CmdId: 1391
+   * Obf: MFEACCDFFAI
    * </pre>
    *
    * Protobuf type {@code SetPlayerPropRsp}
@@ -278,7 +279,8 @@ public final class SetPlayerPropRspOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 50021
+     * CmdId: 1391
+     * Obf: MFEACCDFFAI
      * </pre>
      *
      * Protobuf type {@code SetPlayerPropRsp}

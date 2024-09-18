@@ -27,6 +27,7 @@ public final class AvatarChangeElementTypeRspOuterClass {
   /**
    * <pre>
    * CmdId: 26227
+   * Obf: CLNCAJHKIFD
    * </pre>
    *
    * Protobuf type {@code AvatarChangeElementTypeRsp}
@@ -279,6 +280,7 @@ public final class AvatarChangeElementTypeRspOuterClass {
     /**
      * <pre>
      * CmdId: 26227
+     * Obf: CLNCAJHKIFD
      * </pre>
      *
      * Protobuf type {@code AvatarChangeElementTypeRsp}
