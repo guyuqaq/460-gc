@@ -55,10 +55,10 @@ public final class PlayerLoginRspOuterClass {
     int getTargetUid();
 
     /**
-     * <code>bool PCNBCFNBPGF = 6;</code>
-     * @return The pCNBCFNBPGF.
+     * <code>bool is_use_ability_hash = 6;</code>
+     * @return The isUseAbilityHash.
      */
-    boolean getPCNBCFNBPGF();
+    boolean getIsUseAbilityHash();
 
     /**
      * <code>int32 ability_hash_code = 8;</code>
@@ -511,7 +511,7 @@ public final class PlayerLoginRspOuterClass {
             }
             case 48: {
 
-              pCNBCFNBPGF_ = input.readBool();
+              isUseAbilityHash_ = input.readBool();
               break;
             }
             case 64: {
@@ -860,15 +860,15 @@ public final class PlayerLoginRspOuterClass {
       return targetUid_;
     }
 
-    public static final int PCNBCFNBPGF_FIELD_NUMBER = 6;
-    private boolean pCNBCFNBPGF_;
+    public static final int IS_USE_ABILITY_HASH_FIELD_NUMBER = 6;
+    private boolean isUseAbilityHash_;
     /**
-     * <code>bool PCNBCFNBPGF = 6;</code>
-     * @return The pCNBCFNBPGF.
+     * <code>bool is_use_ability_hash = 6;</code>
+     * @return The isUseAbilityHash.
      */
     @java.lang.Override
-    public boolean getPCNBCFNBPGF() {
-      return pCNBCFNBPGF_;
+    public boolean getIsUseAbilityHash() {
+      return isUseAbilityHash_;
     }
 
     public static final int ABILITY_HASH_CODE_FIELD_NUMBER = 8;
@@ -1727,8 +1727,8 @@ public final class PlayerLoginRspOuterClass {
       if (targetUid_ != 0) {
         output.writeUInt32(5, targetUid_);
       }
-      if (pCNBCFNBPGF_ != false) {
-        output.writeBool(6, pCNBCFNBPGF_);
+      if (isUseAbilityHash_ != false) {
+        output.writeBool(6, isUseAbilityHash_);
       }
       if (abilityHashCode_ != 0) {
         output.writeInt32(8, abilityHashCode_);
@@ -1857,9 +1857,9 @@ public final class PlayerLoginRspOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(5, targetUid_);
       }
-      if (pCNBCFNBPGF_ != false) {
+      if (isUseAbilityHash_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(6, pCNBCFNBPGF_);
+          .computeBoolSize(6, isUseAbilityHash_);
       }
       if (abilityHashCode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -2013,8 +2013,8 @@ public final class PlayerLoginRspOuterClass {
           .equals(other.getPlayerData())) return false;
       if (getTargetUid()
           != other.getTargetUid()) return false;
-      if (getPCNBCFNBPGF()
-          != other.getPCNBCFNBPGF()) return false;
+      if (getIsUseAbilityHash()
+          != other.getIsUseAbilityHash()) return false;
       if (getAbilityHashCode()
           != other.getAbilityHashCode()) return false;
       if (getLoginRand()
@@ -2110,9 +2110,9 @@ public final class PlayerLoginRspOuterClass {
       hash = (53 * hash) + getPlayerData().hashCode();
       hash = (37 * hash) + TARGET_UID_FIELD_NUMBER;
       hash = (53 * hash) + getTargetUid();
-      hash = (37 * hash) + PCNBCFNBPGF_FIELD_NUMBER;
+      hash = (37 * hash) + IS_USE_ABILITY_HASH_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getPCNBCFNBPGF());
+          getIsUseAbilityHash());
       hash = (37 * hash) + ABILITY_HASH_CODE_FIELD_NUMBER;
       hash = (53 * hash) + getAbilityHashCode();
       hash = (37 * hash) + LOGIN_RAND_FIELD_NUMBER;
@@ -2372,7 +2372,7 @@ public final class PlayerLoginRspOuterClass {
 
         targetUid_ = 0;
 
-        pCNBCFNBPGF_ = false;
+        isUseAbilityHash_ = false;
 
         abilityHashCode_ = 0;
 
@@ -2486,7 +2486,7 @@ public final class PlayerLoginRspOuterClass {
         result.oAMCACIICJJ_ = oAMCACIICJJ_;
         result.playerData_ = playerData_;
         result.targetUid_ = targetUid_;
-        result.pCNBCFNBPGF_ = pCNBCFNBPGF_;
+        result.isUseAbilityHash_ = isUseAbilityHash_;
         result.abilityHashCode_ = abilityHashCode_;
         result.loginRand_ = loginRand_;
         result.playerDataVersion_ = playerDataVersion_;
@@ -2612,8 +2612,8 @@ public final class PlayerLoginRspOuterClass {
         if (other.getTargetUid() != 0) {
           setTargetUid(other.getTargetUid());
         }
-        if (other.getPCNBCFNBPGF() != false) {
-          setPCNBCFNBPGF(other.getPCNBCFNBPGF());
+        if (other.getIsUseAbilityHash() != false) {
+          setIsUseAbilityHash(other.getIsUseAbilityHash());
         }
         if (other.getAbilityHashCode() != 0) {
           setAbilityHashCode(other.getAbilityHashCode());
@@ -2994,33 +2994,33 @@ public final class PlayerLoginRspOuterClass {
         return this;
       }
 
-      private boolean pCNBCFNBPGF_ ;
+      private boolean isUseAbilityHash_ ;
       /**
-       * <code>bool PCNBCFNBPGF = 6;</code>
-       * @return The pCNBCFNBPGF.
+       * <code>bool is_use_ability_hash = 6;</code>
+       * @return The isUseAbilityHash.
        */
       @java.lang.Override
-      public boolean getPCNBCFNBPGF() {
-        return pCNBCFNBPGF_;
+      public boolean getIsUseAbilityHash() {
+        return isUseAbilityHash_;
       }
       /**
-       * <code>bool PCNBCFNBPGF = 6;</code>
-       * @param value The pCNBCFNBPGF to set.
+       * <code>bool is_use_ability_hash = 6;</code>
+       * @param value The isUseAbilityHash to set.
        * @return This builder for chaining.
        */
-      public Builder setPCNBCFNBPGF(boolean value) {
+      public Builder setIsUseAbilityHash(boolean value) {
         
-        pCNBCFNBPGF_ = value;
+        isUseAbilityHash_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>bool PCNBCFNBPGF = 6;</code>
+       * <code>bool is_use_ability_hash = 6;</code>
        * @return This builder for chaining.
        */
-      public Builder clearPCNBCFNBPGF() {
+      public Builder clearIsUseAbilityHash() {
         
-        pCNBCFNBPGF_ = false;
+        isUseAbilityHash_ = false;
         onChanged();
         return this;
       }
@@ -5349,39 +5349,39 @@ public final class PlayerLoginRspOuterClass {
       "\n\024PlayerLoginRsp.proto\032\032ShortAbilityHash" +
       "Pair.proto\032\026ResVersionConfig.proto\032\026Feat" +
       "ureBlockInfo.proto\032\024StopServerInfo.proto" +
-      "\032\017BlockInfo.proto\"\310\t\n\016PlayerLoginRsp\022\025\n\r" +
+      "\032\017BlockInfo.proto\"\320\t\n\016PlayerLoginRsp\022\025\n\r" +
       "is_new_player\030\001 \001(\010\022\020\n\010game_biz\030\002 \001(\t\022\023\n" +
       "\013OAMCACIICJJ\030\003 \001(\010\022\023\n\013player_data\030\004 \001(\014\022" +
-      "\022\n\ntarget_uid\030\005 \001(\r\022\023\n\013PCNBCFNBPGF\030\006 \001(\010" +
-      "\022\031\n\021ability_hash_code\030\010 \001(\005\022\022\n\nlogin_ran" +
-      "d\030\t \001(\004\022\033\n\023player_data_version\030\n \001(\r\022#\n\033" +
-      "client_silence_data_version\030\013 \001(\r\022\017\n\007ret" +
-      "code\030\014 \001(\005\022=\n\020ability_hash_map\030\016 \003(\0132#.P" +
-      "layerLoginRsp.AbilityHashMapEntry\022\033\n\023cli" +
-      "ent_data_version\030\017 \001(\r\022\020\n\010is_audit\030C \001(\010" +
-      "\0225\n\026short_ability_hash_map\030Z \003(\0132\025.Short" +
-      "AbilityHashPair\022-\n\022res_version_config\030q " +
-      "\001(\0132\021.ResVersionConfig\022\024\n\013KLLPFNOLBHO\030\263\001" +
-      " \001(\010\022\024\n\013KECGLOKOIDC\030\371\001 \001(\t\0223\n\027feature_bl" +
-      "ock_info_list\030\320\002 \003(\0132\021.FeatureBlockInfo\022" +
-      "\024\n\013EFPHHJIKPJG\030\303\003 \001(\010\022\020\n\007sc_info\030\231\006 \001(\014\022" +
-      "&\n\035client_silence_version_suffix\030\310\010 \001(\t\022" +
-      "\036\n\025target_home_owner_uid\030\373\010 \001(\r\022\024\n\013JAGEL" +
-      "BDJFJH\030\245\t \001(\010\022\014\n\003msg\030\267\t \001(\t\022\024\n\013CLJBEGINE" +
-      "NC\030\222\n \001(\010\022\030\n\017total_tick_time\030\260\013 \001(\001\022\036\n\025c" +
-      "lient_version_suffix\030\322\013 \001(\t\022%\n\013ABPMACCDD" +
-      "JH\030\372\013 \001(\0132\017.StopServerInfo\022\032\n\021next_resou" +
-      "rce_url\030\215\014 \001(\t\022\024\n\013PKEKLEEOLJL\030\272\014 \001(\t\022:\n\016" +
-      "block_info_map\030\274\014 \003(\0132!.PlayerLoginRsp.B" +
-      "lockInfoMapEntry\022\021\n\010birthday\030\231\r \001(\t\022\024\n\013J" +
-      "KANELMFGEP\030\300\r \001(\t\022\035\n\024is_data_need_relogi" +
-      "n\030\315\016 \001(\010\022\025\n\014country_code\030\352\016 \001(\t\0223\n\027next_" +
-      "res_version_config\030\267\017 \001(\0132\021.ResVersionCo" +
-      "nfig\0325\n\023AbilityHashMapEntry\022\013\n\003key\030\001 \001(\t" +
-      "\022\r\n\005value\030\002 \001(\005:\0028\001\032?\n\021BlockInfoMapEntry" +
-      "\022\013\n\003key\030\001 \001(\r\022\031\n\005value\030\002 \001(\0132\n.BlockInfo" +
-      ":\0028\001B\033\n\031emu.grasscutter.net.protob\006proto" +
-      "3"
+      "\022\n\ntarget_uid\030\005 \001(\r\022\033\n\023is_use_ability_ha" +
+      "sh\030\006 \001(\010\022\031\n\021ability_hash_code\030\010 \001(\005\022\022\n\nl" +
+      "ogin_rand\030\t \001(\004\022\033\n\023player_data_version\030\n" +
+      " \001(\r\022#\n\033client_silence_data_version\030\013 \001(" +
+      "\r\022\017\n\007retcode\030\014 \001(\005\022=\n\020ability_hash_map\030\016" +
+      " \003(\0132#.PlayerLoginRsp.AbilityHashMapEntr" +
+      "y\022\033\n\023client_data_version\030\017 \001(\r\022\020\n\010is_aud" +
+      "it\030C \001(\010\0225\n\026short_ability_hash_map\030Z \003(\013" +
+      "2\025.ShortAbilityHashPair\022-\n\022res_version_c" +
+      "onfig\030q \001(\0132\021.ResVersionConfig\022\024\n\013KLLPFN" +
+      "OLBHO\030\263\001 \001(\010\022\024\n\013KECGLOKOIDC\030\371\001 \001(\t\0223\n\027fe" +
+      "ature_block_info_list\030\320\002 \003(\0132\021.FeatureBl" +
+      "ockInfo\022\024\n\013EFPHHJIKPJG\030\303\003 \001(\010\022\020\n\007sc_info" +
+      "\030\231\006 \001(\014\022&\n\035client_silence_version_suffix" +
+      "\030\310\010 \001(\t\022\036\n\025target_home_owner_uid\030\373\010 \001(\r\022" +
+      "\024\n\013JAGELBDJFJH\030\245\t \001(\010\022\014\n\003msg\030\267\t \001(\t\022\024\n\013C" +
+      "LJBEGINENC\030\222\n \001(\010\022\030\n\017total_tick_time\030\260\013 " +
+      "\001(\001\022\036\n\025client_version_suffix\030\322\013 \001(\t\022%\n\013A" +
+      "BPMACCDDJH\030\372\013 \001(\0132\017.StopServerInfo\022\032\n\021ne" +
+      "xt_resource_url\030\215\014 \001(\t\022\024\n\013PKEKLEEOLJL\030\272\014" +
+      " \001(\t\022:\n\016block_info_map\030\274\014 \003(\0132!.PlayerLo" +
+      "ginRsp.BlockInfoMapEntry\022\021\n\010birthday\030\231\r " +
+      "\001(\t\022\024\n\013JKANELMFGEP\030\300\r \001(\t\022\035\n\024is_data_nee" +
+      "d_relogin\030\315\016 \001(\010\022\025\n\014country_code\030\352\016 \001(\t\022" +
+      "3\n\027next_res_version_config\030\267\017 \001(\0132\021.ResV" +
+      "ersionConfig\0325\n\023AbilityHashMapEntry\022\013\n\003k" +
+      "ey\030\001 \001(\t\022\r\n\005value\030\002 \001(\005:\0028\001\032?\n\021BlockInfo" +
+      "MapEntry\022\013\n\003key\030\001 \001(\r\022\031\n\005value\030\002 \001(\0132\n.B" +
+      "lockInfo:\0028\001B\033\n\031emu.grasscutter.net.prot" +
+      "ob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -5397,7 +5397,7 @@ public final class PlayerLoginRspOuterClass {
     internal_static_PlayerLoginRsp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_PlayerLoginRsp_descriptor,
-        new java.lang.String[] { "IsNewPlayer", "GameBiz", "OAMCACIICJJ", "PlayerData", "TargetUid", "PCNBCFNBPGF", "AbilityHashCode", "LoginRand", "PlayerDataVersion", "ClientSilenceDataVersion", "Retcode", "AbilityHashMap", "ClientDataVersion", "IsAudit", "ShortAbilityHashMap", "ResVersionConfig", "KLLPFNOLBHO", "KECGLOKOIDC", "FeatureBlockInfoList", "EFPHHJIKPJG", "ScInfo", "ClientSilenceVersionSuffix", "TargetHomeOwnerUid", "JAGELBDJFJH", "Msg", "CLJBEGINENC", "TotalTickTime", "ClientVersionSuffix", "ABPMACCDDJH", "NextResourceUrl", "PKEKLEEOLJL", "BlockInfoMap", "Birthday", "JKANELMFGEP", "IsDataNeedRelogin", "CountryCode", "NextResVersionConfig", });
+        new java.lang.String[] { "IsNewPlayer", "GameBiz", "OAMCACIICJJ", "PlayerData", "TargetUid", "IsUseAbilityHash", "AbilityHashCode", "LoginRand", "PlayerDataVersion", "ClientSilenceDataVersion", "Retcode", "AbilityHashMap", "ClientDataVersion", "IsAudit", "ShortAbilityHashMap", "ResVersionConfig", "KLLPFNOLBHO", "KECGLOKOIDC", "FeatureBlockInfoList", "EFPHHJIKPJG", "ScInfo", "ClientSilenceVersionSuffix", "TargetHomeOwnerUid", "JAGELBDJFJH", "Msg", "CLJBEGINENC", "TotalTickTime", "ClientVersionSuffix", "ABPMACCDDJH", "NextResourceUrl", "PKEKLEEOLJL", "BlockInfoMap", "Birthday", "JKANELMFGEP", "IsDataNeedRelogin", "CountryCode", "NextResVersionConfig", });
     internal_static_PlayerLoginRsp_AbilityHashMapEntry_descriptor =
       internal_static_PlayerLoginRsp_descriptor.getNestedTypes().get(0);
     internal_static_PlayerLoginRsp_AbilityHashMapEntry_fieldAccessorTable = new
