@@ -817,7 +817,7 @@ public final class PacketOpcodes {
 
 
     public static final int TakeFurnitureMakeRsp = 6584; // unknow fields
-    public static final int FurnitureMakeStartRsp = 29740; // or 29740,24667
+    public static final int FurnitureMakeStartRsp = 24667; // or 29740,24667
 	public static final int FurnitureMakeStartReq = 20645;
 	public static final int FurnitureMakeRsp = 3859;
 	public static final int FunitureMakeMakeInfoChangeNotify = 2719;
