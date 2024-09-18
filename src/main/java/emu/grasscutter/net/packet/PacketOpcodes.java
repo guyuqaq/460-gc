@@ -814,10 +814,8 @@ public final class PacketOpcodes {
 	public static final int MainCoopUpdateNotify = 1857; // or 1857,5763
 	public static final int SaveMainCoopReq = 23152;
 	public static final int SaveMainCoopRsp = 28300;
-
-
     public static final int TakeFurnitureMakeRsp = 6584; // unknow fields
-    public static final int FurnitureMakeStartRsp = 24667; // or 29740,24667
+    public static final int FurnitureMakeStartRsp = 29740; // or 29740,24667
 	public static final int FurnitureMakeStartReq = 20645;
 	public static final int FurnitureMakeRsp = 3859;
 	public static final int FunitureMakeMakeInfoChangeNotify = 2719;
@@ -831,18 +829,16 @@ public final class PacketOpcodes {
 	public static final int SeeMonsterRsp = 50046; // unknow cmdid
 	public static final int MonsterForceAlertNotify = 25405;
 	public static final int MonsterPointArrayRouteUpdateNotify = 7729;
-	
 	public static final int ForgeGetQueueDataReq = 50043;
 	public static final int ForgeQueueManipulateReq = 20233;
-	public static final int ForgeQueueManipulateRsp = 1;
-	public static final int EvtBulletDeactiveNotify = 1;
-	public static final int EvtBulletMoveNotify = 1;
-	public static final int GetOnlinePlayerInfoReq = 1;
-	public static final int GetHomeLevelUpRewardRsp = 1;
+	public static final int ForgeQueueManipulateRsp = 7441; // unknow fields
 
-	public static final int SceneAvatarStaminaStepReq = 1;
-	public static final int SceneAvatarStaminaStepRsp = 1;
-	public static final int SceneRouteChangeNotify = 1;
+	public static final int GadgetGeneralRewardInfoNotify = 4886;
+	public static final int BossChestActivateNotify = 21254;
+	public static final int EvtBulletDeactiveNotify = 20290; // or 20290,8696
+	public static final int EvtBulletMoveNotify = 8696; // // or 20290,8696
+	public static final int GetHomeLevelUpRewardRsp = 8555; // or 8555,22345
+	public static final int SceneRouteChangeNotify = 20596;
 
 	public static final int AvatarExpeditionAllDataReq = 1;
 	public static final int AvatarExpeditionAllDataRsp = 1;
@@ -857,7 +853,9 @@ public final class PacketOpcodes {
 	public static final int QuickUseWidgetRsp = 1;
 	public static final int SetUpLunchBoxWidgetReq = 1;
 	public static final int SetUpLunchBoxWidgetRsp = 1;
-
+	public static final int GetOnlinePlayerInfoReq = 1;
+	public static final int SceneAvatarStaminaStepReq = 1;
+	public static final int SceneAvatarStaminaStepRsp = 1;
 
 
 
@@ -1102,7 +1100,6 @@ public final class PacketOpcodes {
 	public static final int BonusActivityInfoReq = 1;
 	public static final int BonusActivityInfoRsp = 1;
 	public static final int BonusActivityUpdateNotify = 1;
-	public static final int BossChestActivateNotify = 1;
 	public static final int BounceConjuringSettleNotify = 1;
 	public static final int BrickBreakerPlayerReadyNotify = 1;
 	public static final int BrickBreakerPlayerSetAvatarNotify = 1;
@@ -1588,7 +1585,6 @@ public final class PacketOpcodes {
 	public static final int GadgetChangeLevelTagReq = 1;
 	public static final int GadgetChangeLevelTagRsp = 1;
 	public static final int GadgetCustomTreeInfoNotify = 1;
-	public static final int GadgetGeneralRewardInfoNotify = 1;
 	public static final int GadgetPlayDataNotify = 1;
 	public static final int GadgetPlayStartNotify = 1;
 	public static final int GadgetPlayStopNotify = 1;
@@ -2465,4 +2461,4 @@ public final class PacketOpcodes {
 	public static final int WorldAllRoutineTypeNotify = 1;
 	public static final int WorldOwnerBlossomScheduleInfoNotify = 1;
 }
-//2468
+//2460
