@@ -832,13 +832,14 @@ public final class PacketOpcodes {
 	public static final int ForgeGetQueueDataReq = 50043;
 	public static final int ForgeQueueManipulateReq = 20233;
 	public static final int ForgeQueueManipulateRsp = 7441; // unknow fields
-
 	public static final int GadgetGeneralRewardInfoNotify = 4886;
 	public static final int BossChestActivateNotify = 21254;
 	public static final int EvtBulletDeactiveNotify = 20290; // or 20290,8696
 	public static final int EvtBulletMoveNotify = 8696; // // or 20290,8696
 	public static final int GetHomeLevelUpRewardRsp = 8555; // or 8555,22345
-	public static final int SceneRouteChangeNotify = 20596;
+	public static final int SceneRouteChangeNotify = 20596; // quit multiplayer mode
+	public static final int AdjustWorldLevelReq = 25984; // or 25984,23118,26732
+	public static final int AdjustWorldLevelRsp = 29530;
 
 	public static final int AvatarExpeditionAllDataReq = 1;
 	public static final int AvatarExpeditionAllDataRsp = 1;
@@ -1018,8 +1019,6 @@ public final class PacketOpcodes {
 	public static final int AddReunionReportedTypeRsp = 1;
 	public static final int AddSeenMonsterNotify = 1;
 	public static final int AdjustGachaTimesNotify = 1;
-	public static final int AdjustWorldLevelReq = 1;
-	public static final int AdjustWorldLevelRsp = 1;
 	public static final int AkaFesArchitectDungeonRecoverNotify = 1;
 	public static final int AkaFesArchitectSuccNotify = 1;
 	public static final int AkaFesAstrolabeFinishLevelReq = 1;
