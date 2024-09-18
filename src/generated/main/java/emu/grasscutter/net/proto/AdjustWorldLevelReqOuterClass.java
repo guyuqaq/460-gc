@@ -19,20 +19,20 @@ public final class AdjustWorldLevelReqOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 NNPGBAMPCJL = 10;</code>
-     * @return The nNPGBAMPCJL.
+     * <code>uint32 cur_world_level = 10;</code>
+     * @return The curWorldLevel.
      */
-    int getNNPGBAMPCJL();
+    int getCurWorldLevel();
 
     /**
-     * <code>uint32 NOBDOODOHKI = 13;</code>
-     * @return The nOBDOODOHKI.
+     * <code>uint32 expect_world_level = 13;</code>
+     * @return The expectWorldLevel.
      */
-    int getNOBDOODOHKI();
+    int getExpectWorldLevel();
   }
   /**
    * <pre>
-   * CmdId: 25984
+   * CmdId: 26732
    * </pre>
    *
    * Protobuf type {@code AdjustWorldLevelReq}
@@ -81,12 +81,12 @@ public final class AdjustWorldLevelReqOuterClass {
               break;
             case 80: {
 
-              nNPGBAMPCJL_ = input.readUInt32();
+              curWorldLevel_ = input.readUInt32();
               break;
             }
             case 104: {
 
-              nOBDOODOHKI_ = input.readUInt32();
+              expectWorldLevel_ = input.readUInt32();
               break;
             }
             default: {
@@ -121,26 +121,26 @@ public final class AdjustWorldLevelReqOuterClass {
               emu.grasscutter.net.proto.AdjustWorldLevelReqOuterClass.AdjustWorldLevelReq.class, emu.grasscutter.net.proto.AdjustWorldLevelReqOuterClass.AdjustWorldLevelReq.Builder.class);
     }
 
-    public static final int NNPGBAMPCJL_FIELD_NUMBER = 10;
-    private int nNPGBAMPCJL_;
+    public static final int CUR_WORLD_LEVEL_FIELD_NUMBER = 10;
+    private int curWorldLevel_;
     /**
-     * <code>uint32 NNPGBAMPCJL = 10;</code>
-     * @return The nNPGBAMPCJL.
+     * <code>uint32 cur_world_level = 10;</code>
+     * @return The curWorldLevel.
      */
     @java.lang.Override
-    public int getNNPGBAMPCJL() {
-      return nNPGBAMPCJL_;
+    public int getCurWorldLevel() {
+      return curWorldLevel_;
     }
 
-    public static final int NOBDOODOHKI_FIELD_NUMBER = 13;
-    private int nOBDOODOHKI_;
+    public static final int EXPECT_WORLD_LEVEL_FIELD_NUMBER = 13;
+    private int expectWorldLevel_;
     /**
-     * <code>uint32 NOBDOODOHKI = 13;</code>
-     * @return The nOBDOODOHKI.
+     * <code>uint32 expect_world_level = 13;</code>
+     * @return The expectWorldLevel.
      */
     @java.lang.Override
-    public int getNOBDOODOHKI() {
-      return nOBDOODOHKI_;
+    public int getExpectWorldLevel() {
+      return expectWorldLevel_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -157,11 +157,11 @@ public final class AdjustWorldLevelReqOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (nNPGBAMPCJL_ != 0) {
-        output.writeUInt32(10, nNPGBAMPCJL_);
+      if (curWorldLevel_ != 0) {
+        output.writeUInt32(10, curWorldLevel_);
       }
-      if (nOBDOODOHKI_ != 0) {
-        output.writeUInt32(13, nOBDOODOHKI_);
+      if (expectWorldLevel_ != 0) {
+        output.writeUInt32(13, expectWorldLevel_);
       }
       unknownFields.writeTo(output);
     }
@@ -172,13 +172,13 @@ public final class AdjustWorldLevelReqOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (nNPGBAMPCJL_ != 0) {
+      if (curWorldLevel_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(10, nNPGBAMPCJL_);
+          .computeUInt32Size(10, curWorldLevel_);
       }
-      if (nOBDOODOHKI_ != 0) {
+      if (expectWorldLevel_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(13, nOBDOODOHKI_);
+          .computeUInt32Size(13, expectWorldLevel_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -195,10 +195,10 @@ public final class AdjustWorldLevelReqOuterClass {
       }
       emu.grasscutter.net.proto.AdjustWorldLevelReqOuterClass.AdjustWorldLevelReq other = (emu.grasscutter.net.proto.AdjustWorldLevelReqOuterClass.AdjustWorldLevelReq) obj;
 
-      if (getNNPGBAMPCJL()
-          != other.getNNPGBAMPCJL()) return false;
-      if (getNOBDOODOHKI()
-          != other.getNOBDOODOHKI()) return false;
+      if (getCurWorldLevel()
+          != other.getCurWorldLevel()) return false;
+      if (getExpectWorldLevel()
+          != other.getExpectWorldLevel()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -210,10 +210,10 @@ public final class AdjustWorldLevelReqOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NNPGBAMPCJL_FIELD_NUMBER;
-      hash = (53 * hash) + getNNPGBAMPCJL();
-      hash = (37 * hash) + NOBDOODOHKI_FIELD_NUMBER;
-      hash = (53 * hash) + getNOBDOODOHKI();
+      hash = (37 * hash) + CUR_WORLD_LEVEL_FIELD_NUMBER;
+      hash = (53 * hash) + getCurWorldLevel();
+      hash = (37 * hash) + EXPECT_WORLD_LEVEL_FIELD_NUMBER;
+      hash = (53 * hash) + getExpectWorldLevel();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -311,7 +311,7 @@ public final class AdjustWorldLevelReqOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 25984
+     * CmdId: 26732
      * </pre>
      *
      * Protobuf type {@code AdjustWorldLevelReq}
@@ -351,9 +351,9 @@ public final class AdjustWorldLevelReqOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        nNPGBAMPCJL_ = 0;
+        curWorldLevel_ = 0;
 
-        nOBDOODOHKI_ = 0;
+        expectWorldLevel_ = 0;
 
         return this;
       }
@@ -381,8 +381,8 @@ public final class AdjustWorldLevelReqOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.AdjustWorldLevelReqOuterClass.AdjustWorldLevelReq buildPartial() {
         emu.grasscutter.net.proto.AdjustWorldLevelReqOuterClass.AdjustWorldLevelReq result = new emu.grasscutter.net.proto.AdjustWorldLevelReqOuterClass.AdjustWorldLevelReq(this);
-        result.nNPGBAMPCJL_ = nNPGBAMPCJL_;
-        result.nOBDOODOHKI_ = nOBDOODOHKI_;
+        result.curWorldLevel_ = curWorldLevel_;
+        result.expectWorldLevel_ = expectWorldLevel_;
         onBuilt();
         return result;
       }
@@ -431,11 +431,11 @@ public final class AdjustWorldLevelReqOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.AdjustWorldLevelReqOuterClass.AdjustWorldLevelReq other) {
         if (other == emu.grasscutter.net.proto.AdjustWorldLevelReqOuterClass.AdjustWorldLevelReq.getDefaultInstance()) return this;
-        if (other.getNNPGBAMPCJL() != 0) {
-          setNNPGBAMPCJL(other.getNNPGBAMPCJL());
+        if (other.getCurWorldLevel() != 0) {
+          setCurWorldLevel(other.getCurWorldLevel());
         }
-        if (other.getNOBDOODOHKI() != 0) {
-          setNOBDOODOHKI(other.getNOBDOODOHKI());
+        if (other.getExpectWorldLevel() != 0) {
+          setExpectWorldLevel(other.getExpectWorldLevel());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -466,64 +466,64 @@ public final class AdjustWorldLevelReqOuterClass {
         return this;
       }
 
-      private int nNPGBAMPCJL_ ;
+      private int curWorldLevel_ ;
       /**
-       * <code>uint32 NNPGBAMPCJL = 10;</code>
-       * @return The nNPGBAMPCJL.
+       * <code>uint32 cur_world_level = 10;</code>
+       * @return The curWorldLevel.
        */
       @java.lang.Override
-      public int getNNPGBAMPCJL() {
-        return nNPGBAMPCJL_;
+      public int getCurWorldLevel() {
+        return curWorldLevel_;
       }
       /**
-       * <code>uint32 NNPGBAMPCJL = 10;</code>
-       * @param value The nNPGBAMPCJL to set.
+       * <code>uint32 cur_world_level = 10;</code>
+       * @param value The curWorldLevel to set.
        * @return This builder for chaining.
        */
-      public Builder setNNPGBAMPCJL(int value) {
+      public Builder setCurWorldLevel(int value) {
         
-        nNPGBAMPCJL_ = value;
+        curWorldLevel_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 NNPGBAMPCJL = 10;</code>
+       * <code>uint32 cur_world_level = 10;</code>
        * @return This builder for chaining.
        */
-      public Builder clearNNPGBAMPCJL() {
+      public Builder clearCurWorldLevel() {
         
-        nNPGBAMPCJL_ = 0;
+        curWorldLevel_ = 0;
         onChanged();
         return this;
       }
 
-      private int nOBDOODOHKI_ ;
+      private int expectWorldLevel_ ;
       /**
-       * <code>uint32 NOBDOODOHKI = 13;</code>
-       * @return The nOBDOODOHKI.
+       * <code>uint32 expect_world_level = 13;</code>
+       * @return The expectWorldLevel.
        */
       @java.lang.Override
-      public int getNOBDOODOHKI() {
-        return nOBDOODOHKI_;
+      public int getExpectWorldLevel() {
+        return expectWorldLevel_;
       }
       /**
-       * <code>uint32 NOBDOODOHKI = 13;</code>
-       * @param value The nOBDOODOHKI to set.
+       * <code>uint32 expect_world_level = 13;</code>
+       * @param value The expectWorldLevel to set.
        * @return This builder for chaining.
        */
-      public Builder setNOBDOODOHKI(int value) {
+      public Builder setExpectWorldLevel(int value) {
         
-        nOBDOODOHKI_ = value;
+        expectWorldLevel_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 NOBDOODOHKI = 13;</code>
+       * <code>uint32 expect_world_level = 13;</code>
        * @return This builder for chaining.
        */
-      public Builder clearNOBDOODOHKI() {
+      public Builder clearExpectWorldLevel() {
         
-        nOBDOODOHKI_ = 0;
+        expectWorldLevel_ = 0;
         onChanged();
         return this;
       }
@@ -594,10 +594,10 @@ public final class AdjustWorldLevelReqOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\031AdjustWorldLevelReq.proto\"?\n\023AdjustWor" +
-      "ldLevelReq\022\023\n\013NNPGBAMPCJL\030\n \001(\r\022\023\n\013NOBDO" +
-      "ODOHKI\030\r \001(\rB\033\n\031emu.grasscutter.net.prot" +
-      "ob\006proto3"
+      "\n\031AdjustWorldLevelReq.proto\"J\n\023AdjustWor" +
+      "ldLevelReq\022\027\n\017cur_world_level\030\n \001(\r\022\032\n\022e" +
+      "xpect_world_level\030\r \001(\rB\033\n\031emu.grasscutt" +
+      "er.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -608,7 +608,7 @@ public final class AdjustWorldLevelReqOuterClass {
     internal_static_AdjustWorldLevelReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_AdjustWorldLevelReq_descriptor,
-        new java.lang.String[] { "NNPGBAMPCJL", "NOBDOODOHKI", });
+        new java.lang.String[] { "CurWorldLevel", "ExpectWorldLevel", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
