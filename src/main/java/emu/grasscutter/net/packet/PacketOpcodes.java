@@ -838,7 +838,7 @@ public final class PacketOpcodes {
 	public static final int EvtBulletMoveNotify = 8696; // // or 20290,8696
 	public static final int GetHomeLevelUpRewardRsp = 8555; // or 8555,22345
 	public static final int SceneRouteChangeNotify = 20596; // quit multiplayer mode
-	public static final int AdjustWorldLevelReq = 25984; // or 25984,23118,26732
+	public static final int AdjustWorldLevelReq = 23118; // or 25984,23118,26732
 	public static final int AdjustWorldLevelRsp = 29530;
 
 	public static final int AvatarExpeditionAllDataReq = 1;
