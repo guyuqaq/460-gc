@@ -43,9 +43,7 @@ public final class DelTeamEntityNotifyOuterClass {
   }
   /**
    * <pre>
-   * DelTeamEntityNotify or DelScenePlayTeamEntityNotify
    * CmdId: 29714
-   * obf: GEIOMAELNGM
    * </pre>
    *
    * Protobuf type {@code DelTeamEntityNotify}
@@ -379,9 +377,7 @@ public final class DelTeamEntityNotifyOuterClass {
     }
     /**
      * <pre>
-     * DelTeamEntityNotify or DelScenePlayTeamEntityNotify
      * CmdId: 29714
-     * obf: GEIOMAELNGM
      * </pre>
      *
      * Protobuf type {@code DelTeamEntityNotify}

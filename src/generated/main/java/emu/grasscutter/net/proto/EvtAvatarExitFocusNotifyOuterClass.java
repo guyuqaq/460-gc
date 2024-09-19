@@ -53,7 +53,7 @@ public final class EvtAvatarExitFocusNotifyOuterClass {
   /**
    * <pre>
    * CmdId: 20290
-   * obf: FJMPEDGCKBH
+   * Obf: FJMPEDGCKBH
    * </pre>
    *
    * Protobuf type {@code EvtAvatarExitFocusNotify}
@@ -397,7 +397,7 @@ public final class EvtAvatarExitFocusNotifyOuterClass {
     /**
      * <pre>
      * CmdId: 20290
-     * obf: FJMPEDGCKBH
+     * Obf: FJMPEDGCKBH
      * </pre>
      *
      * Protobuf type {@code EvtAvatarExitFocusNotify}
@@ -836,8 +836,8 @@ public final class EvtAvatarExitFocusNotifyOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\036EvtAvatarExitFocusNotify.proto\032\021Forwar" +
-      "dType.proto\032\014Vector.proto\"r\n\030EvtAvatarEx" +
+      "\n\036EvtAvatarExitFocusNotify.proto\032\014Vector" +
+      ".proto\032\021ForwardType.proto\"r\n\030EvtAvatarEx" +
       "itFocusNotify\022\021\n\tentity_id\030\002 \001(\r\022\"\n\014forw" +
       "ard_type\030\005 \001(\0162\014.ForwardType\022\037\n\016finish_f" +
       "orward\030\r \001(\0132\007.VectorB\033\n\031emu.grasscutter" +
@@ -846,8 +846,8 @@ public final class EvtAvatarExitFocusNotifyOuterClass {
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          emu.grasscutter.net.proto.ForwardTypeOuterClass.getDescriptor(),
           emu.grasscutter.net.proto.VectorOuterClass.getDescriptor(),
+          emu.grasscutter.net.proto.ForwardTypeOuterClass.getDescriptor(),
         });
     internal_static_EvtAvatarExitFocusNotify_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -855,8 +855,8 @@ public final class EvtAvatarExitFocusNotifyOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_EvtAvatarExitFocusNotify_descriptor,
         new java.lang.String[] { "EntityId", "ForwardType", "FinishForward", });
-    emu.grasscutter.net.proto.ForwardTypeOuterClass.getDescriptor();
     emu.grasscutter.net.proto.VectorOuterClass.getDescriptor();
+    emu.grasscutter.net.proto.ForwardTypeOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -576,16 +576,11 @@ public final class PacketOpcodes {
     public static final int PlayerCompoundMaterialRsp = 22858;
     public static final int CompoundDataNotify = 5964;
     public static final int CoopDataNotify = 25237;
-    public static final int DelTeamEntityNotify = 29714; // or 29714,26259
     public static final int DropHintNotify = 3881;
     public static final int DungeonEntryToBeExploreNotify = 1436; // or 1436,21790
     public static final int DungeonRestartRsp = 2128; // or 2128,22307
     public static final int DungeonWayPointNotify = 3239;
     public static final int EnterTrialAvatarActivityDungeonRsp = 244; // or 244,1551
-    public static final int EvtAvatarEnterFocusNotify = 29042;
-    public static final int EvtAvatarExitFocusNotify = 20290; // or 20290,8696
-    public static final int EvtAvatarSitDownNotify = 22638;
-    public static final int EvtAvatarUpdateFocusNotify = 8696; // or 20290,8696
     public static final int ForgeDataNotify = 20023;
     public static final int ForgeGetQueueDataRsp = 27281;
     public static final int ForgeQueueDataNotify = 28170;
@@ -626,7 +621,6 @@ public final class PacketOpcodes {
     public static final int ReceivedTrialAvatarActivityRewardReq = 5449; // or 5449,5667
     public static final int ReceivedTrialAvatarActivityRewardRsp = 1551; // or 244,1551
     public static final int SceneAudioNotify = 21580;
-    public static final int SceneEntityMoveNotify = 7026; // or 7026,22008
     public static final int SceneEntityUpdateNotify = 1936; // or 1936,6409
     public static final int ScenePlayerSoundNotify = 1408;
     public static final int SceneWeatherForcastReq = 23364;
@@ -727,7 +721,6 @@ public final class PacketOpcodes {
 	public static final int SetFriendEnterHomeOptionRsp = 50020;// unknow cmdid
 	public static final int SetPlayerPropRsp = 50021;// unknow cmdid
 	public static final int SceneEntityDrownReq = 50022;// unknow cmdid
-	public static final int SceneEntityMoveReq = 7026; // or 7026,22008 
 	public static final int SceneEntityMoveRsp = 9718;
 	public static final int SceneEntitiesMoveCombineNotify = 3166; //or 29269,3166
 	public static final int SceneEntitiesMovesReq = 29269; //or 29269,3166
@@ -789,7 +782,6 @@ public final class PacketOpcodes {
 	public static final int GetBlossomBriefInfoListReq = 684;
 	public static final int BeginCameraSceneLookNotify = 8133;
 	public static final int EndCameraSceneLookNotify = 50041;
-	public static final int DelScenePlayTeamEntityNotify = 29714; // or 29714,26259
 	public static final int PathfindingEnterSceneReq = 2374;
 	public static final int ActivityTakeScoreRewardReq = 27197;
 	public static final int ActivityTakeScoreRewardRsp = 9807;
@@ -834,12 +826,21 @@ public final class PacketOpcodes {
 	public static final int ForgeQueueManipulateRsp = 7441; // unknow fields
 	public static final int GadgetGeneralRewardInfoNotify = 4886;
 	public static final int BossChestActivateNotify = 21254;
-	public static final int EvtBulletDeactiveNotify = 20290; // or 20290,8696
-	public static final int EvtBulletMoveNotify = 8696; // // or 20290,8696
 	public static final int GetHomeLevelUpRewardRsp = 8555; // or 8555,22345
 	public static final int SceneRouteChangeNotify = 20596; // quit multiplayer mode
-	public static final int AdjustWorldLevelReq = 26732; // or 25984,23118,26732
+	public static final int AdjustWorldLevelReq = 23118; // or 25984,23118,26732
 	public static final int AdjustWorldLevelRsp = 29530;
+    public static final int EvtAvatarEnterFocusNotify = 29042;
+	public static final int EvtAvatarSitDownNotify = 22638;
+
+	public static final int EvtAvatarUpdateFocusNotify = 28630;
+    public static final int EvtAvatarExitFocusNotify = 20290; // or 20290,8696
+	public static final int EvtBulletDeactiveNotify = 8696; // or 20290,8696
+	public static final int EvtBulletMoveNotify = 1957;
+	public static final int DelTeamEntityNotify = 29714; // or 29714,26259
+	public static final int DelScenePlayTeamEntityNotify = 26259; // or 29714,26259
+	public static final int SceneEntityMoveNotify = 7026; // or 7026,22008
+	public static final int SceneEntityMoveReq = 22008; // or 7026,22008 
 
 	public static final int AvatarExpeditionAllDataReq = 1;
 	public static final int AvatarExpeditionAllDataRsp = 1;
