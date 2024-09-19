@@ -826,8 +826,8 @@ public final class WidgetCreatorInfoOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\027WidgetCreatorInfo.proto\032\036WidgetCreateL" +
-      "ocationInfo.proto\032\031WidgetCreatorOpType.p" +
+      "\n\027WidgetCreatorInfo.proto\032\031WidgetCreator" +
+      "OpType.proto\032\036WidgetCreateLocationInfo.p" +
       "roto\"\177\n\021WidgetCreatorInfo\0220\n\rlocation_in" +
       "fo\030\002 \001(\0132\031.WidgetCreateLocationInfo\022\021\n\te" +
       "ntity_id\030\t \001(\r\022%\n\007op_type\030\014 \001(\0162\024.Widget" +
@@ -837,8 +837,8 @@ public final class WidgetCreatorInfoOuterClass {
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          emu.grasscutter.net.proto.WidgetCreateLocationInfoOuterClass.getDescriptor(),
           emu.grasscutter.net.proto.WidgetCreatorOpTypeOuterClass.getDescriptor(),
+          emu.grasscutter.net.proto.WidgetCreateLocationInfoOuterClass.getDescriptor(),
         });
     internal_static_WidgetCreatorInfo_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -846,8 +846,8 @@ public final class WidgetCreatorInfoOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_WidgetCreatorInfo_descriptor,
         new java.lang.String[] { "LocationInfo", "EntityId", "OpType", });
-    emu.grasscutter.net.proto.WidgetCreateLocationInfoOuterClass.getDescriptor();
     emu.grasscutter.net.proto.WidgetCreatorOpTypeOuterClass.getDescriptor();
+    emu.grasscutter.net.proto.WidgetCreateLocationInfoOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

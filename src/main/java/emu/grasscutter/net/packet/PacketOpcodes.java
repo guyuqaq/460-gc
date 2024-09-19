@@ -578,7 +578,7 @@ public final class PacketOpcodes {
     public static final int CoopDataNotify = 25237;
     public static final int DropHintNotify = 3881;
     public static final int DungeonEntryToBeExploreNotify = 1436; // or 1436,21790
-    public static final int DungeonRestartRsp = 22307; // or 2128,22307
+    public static final int DungeonRestartRsp = 2128; // or 2128,22307
     public static final int DungeonWayPointNotify = 3239;
     public static final int EnterTrialAvatarActivityDungeonRsp = 244; // or 244,1551
     public static final int ForgeDataNotify = 20023;
@@ -832,7 +832,6 @@ public final class PacketOpcodes {
 	public static final int AdjustWorldLevelRsp = 29530;
     public static final int EvtAvatarEnterFocusNotify = 29042;
 	public static final int EvtAvatarSitDownNotify = 22638;
-
 	public static final int EvtAvatarUpdateFocusNotify = 28630;
     public static final int EvtAvatarExitFocusNotify = 8696; // or 20290,8696
 	public static final int EvtBulletDeactiveNotify = 20290; // or 20290,8696
@@ -842,6 +841,22 @@ public final class PacketOpcodes {
 	public static final int SceneEntityMoveNotify = 7026; // or 7026,22008
 	public static final int SceneEntityMoveReq = 22008; // or 7026,22008 
 
+	public static final int BeginCameraSceneLookWithTemplateNotify = 458;
+	public static final int GetDungeonEntryExploreConditionRsp = 22306;
+	public static final int GetFriendShowNameCardInfoReq = 3380; // or 23462,3380,28004
+	public static final int AllWidgetDataNotify = 22193;
+	public static final int QuickUseWidgetReq = 9223;
+	public static final int QuickUseWidgetRsp = 29966;
+	public static final int SetUpLunchBoxWidgetReq = 28094;
+	public static final int SetUpLunchBoxWidgetRsp = 20533;
+	public static final int GetOnlinePlayerInfoReq = 27876;
+	public static final int SceneAvatarStaminaStepReq = 20036;
+	public static final int SceneAvatarStaminaStepRsp = 1653;
+	public static final int DungeonRestartResultNotify = 6190; // unknow
+	public static final int OneoffGatherPointDetectorDataNotify = 28309;
+	public static final int AllSeenMonsterNotify = 22273; // or 22273,7320
+	public static final int AllWidgetBackgroundActiveStateNotify = 24647;
+
 	public static final int AvatarExpeditionAllDataReq = 1;
 	public static final int AvatarExpeditionAllDataRsp = 1;
 	public static final int AvatarExpeditionCallBackReq = 1;
@@ -850,19 +865,7 @@ public final class PacketOpcodes {
 	public static final int AvatarExpeditionGetRewardRsp = 1;
 	public static final int AvatarExpeditionStartReq = 1;
 	public static final int AvatarExpeditionStartRsp = 1;
-	public static final int AllWidgetDataNotify = 1;
-	public static final int QuickUseWidgetReq = 1;
-	public static final int QuickUseWidgetRsp = 1;
-	public static final int SetUpLunchBoxWidgetReq = 1;
-	public static final int SetUpLunchBoxWidgetRsp = 1;
-	public static final int GetOnlinePlayerInfoReq = 1;
-	public static final int SceneAvatarStaminaStepReq = 1;
-	public static final int SceneAvatarStaminaStepRsp = 1;
-
-
-
 	// obfuscated
-	public static final int BeginCameraSceneLookWithTemplateNotify = 1;
 	public static final int GuestBeginEnterSceneNotify = 1;
 	public static final int JoinHomeWorldFailNotify = 1;
 	public static final int JoinPlayerFailNotify = 1;
@@ -904,7 +907,6 @@ public final class PacketOpcodes {
 	public static final int FindHilichurlFinishSecondQuestNotify = 1;
 	public static final int ItemRenameAvatarRsp = 1;
 	public static final int TowerMiddleLevelChangeTeamNotify = 1;
-	public static final int GetDungeonEntryExploreConditionRsp = 1;
 	public static final int BargainOfferPriceReq = 1;
 	public static final int BargainOfferPriceRsp = 1;
 	public static final int BargainStartNotify = 1;
@@ -934,7 +936,6 @@ public final class PacketOpcodes {
 	public static final int GetBargainDataRsp = 1;
 	public static final int GetChatEmojiCollectionReq = 1;
 	public static final int GetChatEmojiCollectionRsp = 1;
-	public static final int GetFriendShowNameCardInfoReq = 1;
 	public static final int GetUgcBriefInfoReq = 1;
 	public static final int GetUgcBriefInfoRsp = 1;
 	public static final int GetUgcReq = 1;
@@ -1038,9 +1039,7 @@ public final class PacketOpcodes {
 	public static final int AkaFesRhythmFinishPlayRsp = 1;
 	public static final int AkaFesRhythmStartPlayReq = 1;
 	public static final int AkaFesRhythmStartPlayRsp = 1;
-	public static final int AllSeenMonsterNotify = 1;
 	public static final int AllShareCDDataNotify = 1;
-	public static final int AllWidgetBackgroundActiveStateNotify = 1;
 	public static final int AnchorPointDataNotify = 1;
 	public static final int AnchorPointOpReq = 1;
 	public static final int AnchorPointOpRsp = 1;
@@ -1278,7 +1277,6 @@ public final class PacketOpcodes {
 	public static final int DungeonRestartInviteReplyNotify = 1;
 	public static final int DungeonRestartInviteReplyReq = 1;
 	public static final int DungeonRestartInviteReplyRsp = 1;
-	public static final int DungeonRestartResultNotify = 1;
 	public static final int DungeonReviseLevelNotify = 1;
 	public static final int EchoNotify = 1;
 	public static final int EchoShellTakeRewardReq = 1;
@@ -1915,7 +1913,6 @@ public final class PacketOpcodes {
 	public static final int NightCrowGadgetObservationMatchReq = 1;
 	public static final int NightCrowGadgetObservationMatchRsp = 1;
 	public static final int NpcTalkStateNotify = 1;
-	public static final int OneoffGatherPointDetectorDataNotify = 1;
 	public static final int OpActivityDataNotify = 1;
 	public static final int OpActivityStateNotify = 1;
 	public static final int OpActivityUpdateNotify = 1;
