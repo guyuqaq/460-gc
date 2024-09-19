@@ -271,7 +271,6 @@ public class Player implements DatabaseObject<Player>, PlayerHook, FieldFetch {
         this.clientAbilityInitFinishHandler = new InvokeHandler(PacketClientAbilityInitFinishNotify.class);
 
         this.birthday = new PlayerBirthday();
-        this.achievements = Achievements.blank();
         this.rewardedLevels = new HashSet<>();
         this.homeRewardedLevels = new HashSet<>();
         this.seenRealmList = new HashSet<>();
@@ -288,7 +287,6 @@ public class Player implements DatabaseObject<Player>, PlayerHook, FieldFetch {
         this.forgingManager = new ForgingManager(this);
         this.progressManager = new PlayerProgressManager(this);
         this.furnitureManager = new FurnitureManager(this);
-        this.battlePassManager = new BattlePassManager(this);
         this.cookingManager = new CookingManager(this);
         this.cookingCompoundManager = new CookingCompoundManager(this);
         this.satiationManager = new SatiationManager(this);
