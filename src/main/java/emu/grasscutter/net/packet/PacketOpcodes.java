@@ -840,7 +840,6 @@ public final class PacketOpcodes {
 	public static final int DelScenePlayTeamEntityNotify = 26259; // or 29714,26259
 	public static final int SceneEntityMoveNotify = 7026; // or 7026,22008
 	public static final int SceneEntityMoveReq = 22008; // or 7026,22008 
-
 	public static final int BeginCameraSceneLookWithTemplateNotify = 458;
 	public static final int GetDungeonEntryExploreConditionRsp = 22306;
 	public static final int GetFriendShowNameCardInfoReq = 3380; // or 23462,3380,28004
@@ -856,6 +855,10 @@ public final class PacketOpcodes {
 	public static final int OneoffGatherPointDetectorDataNotify = 28309;
 	public static final int AllSeenMonsterNotify = 22273; // or 22273,7320
 	public static final int AllWidgetBackgroundActiveStateNotify = 24647;
+
+	public static final int AnimatorForceSetAirMoveNotify = 1023;
+	public static final int EvtAnimatorParameterNotify = 25798;
+	public static final int EvtAnimatorStateChangedNotify = 23733;
 
 	public static final int AvatarExpeditionAllDataReq = 1;
 	public static final int AvatarExpeditionAllDataRsp = 1;
@@ -1043,7 +1046,6 @@ public final class PacketOpcodes {
 	public static final int AnchorPointDataNotify = 1;
 	public static final int AnchorPointOpReq = 1;
 	public static final int AnchorPointOpRsp = 1;
-	public static final int AnimatorForceSetAirMoveNotify = 1;
 	public static final int AranaraCollectionDataNotify = 1;
 	public static final int AreaPlayInfoNotify = 1;
 	public static final int ArenaChallengeFinishNotify = 1;
@@ -1348,8 +1350,6 @@ public final class PacketOpcodes {
 	public static final int EnterUgcDungeonRsp = 1;
 	public static final int EquipRoguelikeRuneReq = 1;
 	public static final int EquipRoguelikeRuneRsp = 1;
-	public static final int EvtAnimatorParameterNotify = 1;
-	public static final int EvtAnimatorStateChangedNotify = 1;
 	public static final int EvtCostStaminaNotify = 1;
 	public static final int EvtDestroyServerGadgetNotify = 1;
 	public static final int EvtFaceToDirNotify = 1;
@@ -2191,16 +2191,6 @@ public final class PacketOpcodes {
 	public static final int SingleStartBrickBreakerRsp = 1;
 	public static final int SkyCrystalDetectorDataUpdateNotify = 1;
 	public static final int SocialDataNotify = 1;
-	public static final int SorushTrialFinishPhotoMatchGalleryReq = 1;
-	public static final int SorushTrialFinishPhotoMatchGalleryRsp = 1;
-	public static final int SorushTrialHitmanGallerySettleNotify = 1;
-	public static final int SorushTrialPhotoMatchGallerySettleNotify = 1;
-	public static final int SorushTrialQuitGalleryReq = 1;
-	public static final int SorushTrialQuitGalleryRsp = 1;
-	public static final int SorushTrialRaceGallerySettleNotify = 1;
-	public static final int SorushTrialStartGalleryReq = 1;
-	public static final int SorushTrialStartGalleryRsp = 1;
-	public static final int SorushWidgetDataNotify = 1;
 	public static final int SpiceActivityFinishMakeSpiceReq = 1;
 	public static final int SpiceActivityFinishMakeSpiceRsp = 1;
 	public static final int SpiceActivityProcessFoodReq = 1;
@@ -2248,6 +2238,17 @@ public final class PacketOpcodes {
 	public static final int SumoSetNoSwitchPunishTimeNotify = 1;
 	public static final int SumoSwitchTeamReq = 1;
 	public static final int SumoSwitchTeamRsp = 1;
+	public static final int TriggerCreateGadgetToEquipPartNotify = 1;
+	public static final int SorushTrialFinishPhotoMatchGalleryReq = 1;
+	public static final int SorushTrialFinishPhotoMatchGalleryRsp = 1;
+	public static final int SorushTrialHitmanGallerySettleNotify = 1;
+	public static final int SorushTrialPhotoMatchGallerySettleNotify = 1;
+	public static final int SorushTrialQuitGalleryReq = 1;
+	public static final int SorushTrialQuitGalleryRsp = 1;
+	public static final int SorushTrialRaceGallerySettleNotify = 1;
+	public static final int SorushTrialStartGalleryReq = 1;
+	public static final int SorushTrialStartGalleryRsp = 1;
+	public static final int SorushWidgetDataNotify = 1;
 	public static final int TakeAsterSpecialRewardReq = 1;
 	public static final int TakeAsterSpecialRewardRsp = 1;
 	public static final int TakeDeliveryDailyRewardReq = 1;
@@ -2295,7 +2296,6 @@ public final class PacketOpcodes {
 	public static final int TowerSurrenderReq = 1;
 	public static final int TowerSurrenderRsp = 1;
 	public static final int TrialAvatarInDungeonIndexNotify = 1;
-	public static final int TriggerCreateGadgetToEquipPartNotify = 1;
 	public static final int TriggerRoguelikeCurseNotify = 1;
 	public static final int TriggerRoguelikeRuneReq = 1;
 	public static final int TriggerRoguelikeRuneRsp = 1;

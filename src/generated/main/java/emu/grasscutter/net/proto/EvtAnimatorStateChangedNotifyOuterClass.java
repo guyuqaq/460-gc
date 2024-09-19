@@ -19,35 +19,34 @@ public final class EvtAnimatorStateChangedNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.ForwardType forward_type = 8;</code>
+     * <code>.ForwardType forward_type = 1;</code>
      * @return The enum numeric value on the wire for forwardType.
      */
     int getForwardTypeValue();
     /**
-     * <code>.ForwardType forward_type = 8;</code>
+     * <code>.ForwardType forward_type = 1;</code>
      * @return The forwardType.
      */
     emu.grasscutter.net.proto.ForwardTypeOuterClass.ForwardType getForwardType();
 
     /**
-     * <code>.EvtAnimatorStateChangedInfo evt_animator_state_changed_info = 10;</code>
+     * <code>.EvtAnimatorStateChangedInfo evt_animator_state_changed_info = 12;</code>
      * @return Whether the evtAnimatorStateChangedInfo field is set.
      */
     boolean hasEvtAnimatorStateChangedInfo();
     /**
-     * <code>.EvtAnimatorStateChangedInfo evt_animator_state_changed_info = 10;</code>
+     * <code>.EvtAnimatorStateChangedInfo evt_animator_state_changed_info = 12;</code>
      * @return The evtAnimatorStateChangedInfo.
      */
     emu.grasscutter.net.proto.EvtAnimatorStateChangedInfoOuterClass.EvtAnimatorStateChangedInfo getEvtAnimatorStateChangedInfo();
     /**
-     * <code>.EvtAnimatorStateChangedInfo evt_animator_state_changed_info = 10;</code>
+     * <code>.EvtAnimatorStateChangedInfo evt_animator_state_changed_info = 12;</code>
      */
     emu.grasscutter.net.proto.EvtAnimatorStateChangedInfoOuterClass.EvtAnimatorStateChangedInfoOrBuilder getEvtAnimatorStateChangedInfoOrBuilder();
   }
   /**
    * <pre>
-   * CmdId: 1539
-   * Obf: FHJIKJADHNP
+   * CmdId: 23733
    * </pre>
    *
    * Protobuf type {@code EvtAnimatorStateChangedNotify}
@@ -95,13 +94,13 @@ public final class EvtAnimatorStateChangedNotifyOuterClass {
             case 0:
               done = true;
               break;
-            case 64: {
+            case 8: {
               int rawValue = input.readEnum();
 
               forwardType_ = rawValue;
               break;
             }
-            case 82: {
+            case 98: {
               emu.grasscutter.net.proto.EvtAnimatorStateChangedInfoOuterClass.EvtAnimatorStateChangedInfo.Builder subBuilder = null;
               if (evtAnimatorStateChangedInfo_ != null) {
                 subBuilder = evtAnimatorStateChangedInfo_.toBuilder();
@@ -146,17 +145,17 @@ public final class EvtAnimatorStateChangedNotifyOuterClass {
               emu.grasscutter.net.proto.EvtAnimatorStateChangedNotifyOuterClass.EvtAnimatorStateChangedNotify.class, emu.grasscutter.net.proto.EvtAnimatorStateChangedNotifyOuterClass.EvtAnimatorStateChangedNotify.Builder.class);
     }
 
-    public static final int FORWARD_TYPE_FIELD_NUMBER = 8;
+    public static final int FORWARD_TYPE_FIELD_NUMBER = 1;
     private int forwardType_;
     /**
-     * <code>.ForwardType forward_type = 8;</code>
+     * <code>.ForwardType forward_type = 1;</code>
      * @return The enum numeric value on the wire for forwardType.
      */
     @java.lang.Override public int getForwardTypeValue() {
       return forwardType_;
     }
     /**
-     * <code>.ForwardType forward_type = 8;</code>
+     * <code>.ForwardType forward_type = 1;</code>
      * @return The forwardType.
      */
     @java.lang.Override public emu.grasscutter.net.proto.ForwardTypeOuterClass.ForwardType getForwardType() {
@@ -165,10 +164,10 @@ public final class EvtAnimatorStateChangedNotifyOuterClass {
       return result == null ? emu.grasscutter.net.proto.ForwardTypeOuterClass.ForwardType.UNRECOGNIZED : result;
     }
 
-    public static final int EVT_ANIMATOR_STATE_CHANGED_INFO_FIELD_NUMBER = 10;
+    public static final int EVT_ANIMATOR_STATE_CHANGED_INFO_FIELD_NUMBER = 12;
     private emu.grasscutter.net.proto.EvtAnimatorStateChangedInfoOuterClass.EvtAnimatorStateChangedInfo evtAnimatorStateChangedInfo_;
     /**
-     * <code>.EvtAnimatorStateChangedInfo evt_animator_state_changed_info = 10;</code>
+     * <code>.EvtAnimatorStateChangedInfo evt_animator_state_changed_info = 12;</code>
      * @return Whether the evtAnimatorStateChangedInfo field is set.
      */
     @java.lang.Override
@@ -176,7 +175,7 @@ public final class EvtAnimatorStateChangedNotifyOuterClass {
       return evtAnimatorStateChangedInfo_ != null;
     }
     /**
-     * <code>.EvtAnimatorStateChangedInfo evt_animator_state_changed_info = 10;</code>
+     * <code>.EvtAnimatorStateChangedInfo evt_animator_state_changed_info = 12;</code>
      * @return The evtAnimatorStateChangedInfo.
      */
     @java.lang.Override
@@ -184,7 +183,7 @@ public final class EvtAnimatorStateChangedNotifyOuterClass {
       return evtAnimatorStateChangedInfo_ == null ? emu.grasscutter.net.proto.EvtAnimatorStateChangedInfoOuterClass.EvtAnimatorStateChangedInfo.getDefaultInstance() : evtAnimatorStateChangedInfo_;
     }
     /**
-     * <code>.EvtAnimatorStateChangedInfo evt_animator_state_changed_info = 10;</code>
+     * <code>.EvtAnimatorStateChangedInfo evt_animator_state_changed_info = 12;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.EvtAnimatorStateChangedInfoOuterClass.EvtAnimatorStateChangedInfoOrBuilder getEvtAnimatorStateChangedInfoOrBuilder() {
@@ -206,10 +205,10 @@ public final class EvtAnimatorStateChangedNotifyOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (forwardType_ != emu.grasscutter.net.proto.ForwardTypeOuterClass.ForwardType.FORWARD_TYPE_LOCAL.getNumber()) {
-        output.writeEnum(8, forwardType_);
+        output.writeEnum(1, forwardType_);
       }
       if (evtAnimatorStateChangedInfo_ != null) {
-        output.writeMessage(10, getEvtAnimatorStateChangedInfo());
+        output.writeMessage(12, getEvtAnimatorStateChangedInfo());
       }
       unknownFields.writeTo(output);
     }
@@ -222,11 +221,11 @@ public final class EvtAnimatorStateChangedNotifyOuterClass {
       size = 0;
       if (forwardType_ != emu.grasscutter.net.proto.ForwardTypeOuterClass.ForwardType.FORWARD_TYPE_LOCAL.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(8, forwardType_);
+          .computeEnumSize(1, forwardType_);
       }
       if (evtAnimatorStateChangedInfo_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(10, getEvtAnimatorStateChangedInfo());
+          .computeMessageSize(12, getEvtAnimatorStateChangedInfo());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -363,8 +362,7 @@ public final class EvtAnimatorStateChangedNotifyOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 1539
-     * Obf: FHJIKJADHNP
+     * CmdId: 23733
      * </pre>
      *
      * Protobuf type {@code EvtAnimatorStateChangedNotify}
@@ -529,14 +527,14 @@ public final class EvtAnimatorStateChangedNotifyOuterClass {
 
       private int forwardType_ = 0;
       /**
-       * <code>.ForwardType forward_type = 8;</code>
+       * <code>.ForwardType forward_type = 1;</code>
        * @return The enum numeric value on the wire for forwardType.
        */
       @java.lang.Override public int getForwardTypeValue() {
         return forwardType_;
       }
       /**
-       * <code>.ForwardType forward_type = 8;</code>
+       * <code>.ForwardType forward_type = 1;</code>
        * @param value The enum numeric value on the wire for forwardType to set.
        * @return This builder for chaining.
        */
@@ -547,7 +545,7 @@ public final class EvtAnimatorStateChangedNotifyOuterClass {
         return this;
       }
       /**
-       * <code>.ForwardType forward_type = 8;</code>
+       * <code>.ForwardType forward_type = 1;</code>
        * @return The forwardType.
        */
       @java.lang.Override
@@ -557,7 +555,7 @@ public final class EvtAnimatorStateChangedNotifyOuterClass {
         return result == null ? emu.grasscutter.net.proto.ForwardTypeOuterClass.ForwardType.UNRECOGNIZED : result;
       }
       /**
-       * <code>.ForwardType forward_type = 8;</code>
+       * <code>.ForwardType forward_type = 1;</code>
        * @param value The forwardType to set.
        * @return This builder for chaining.
        */
@@ -571,7 +569,7 @@ public final class EvtAnimatorStateChangedNotifyOuterClass {
         return this;
       }
       /**
-       * <code>.ForwardType forward_type = 8;</code>
+       * <code>.ForwardType forward_type = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearForwardType() {
@@ -585,14 +583,14 @@ public final class EvtAnimatorStateChangedNotifyOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.EvtAnimatorStateChangedInfoOuterClass.EvtAnimatorStateChangedInfo, emu.grasscutter.net.proto.EvtAnimatorStateChangedInfoOuterClass.EvtAnimatorStateChangedInfo.Builder, emu.grasscutter.net.proto.EvtAnimatorStateChangedInfoOuterClass.EvtAnimatorStateChangedInfoOrBuilder> evtAnimatorStateChangedInfoBuilder_;
       /**
-       * <code>.EvtAnimatorStateChangedInfo evt_animator_state_changed_info = 10;</code>
+       * <code>.EvtAnimatorStateChangedInfo evt_animator_state_changed_info = 12;</code>
        * @return Whether the evtAnimatorStateChangedInfo field is set.
        */
       public boolean hasEvtAnimatorStateChangedInfo() {
         return evtAnimatorStateChangedInfoBuilder_ != null || evtAnimatorStateChangedInfo_ != null;
       }
       /**
-       * <code>.EvtAnimatorStateChangedInfo evt_animator_state_changed_info = 10;</code>
+       * <code>.EvtAnimatorStateChangedInfo evt_animator_state_changed_info = 12;</code>
        * @return The evtAnimatorStateChangedInfo.
        */
       public emu.grasscutter.net.proto.EvtAnimatorStateChangedInfoOuterClass.EvtAnimatorStateChangedInfo getEvtAnimatorStateChangedInfo() {
@@ -603,7 +601,7 @@ public final class EvtAnimatorStateChangedNotifyOuterClass {
         }
       }
       /**
-       * <code>.EvtAnimatorStateChangedInfo evt_animator_state_changed_info = 10;</code>
+       * <code>.EvtAnimatorStateChangedInfo evt_animator_state_changed_info = 12;</code>
        */
       public Builder setEvtAnimatorStateChangedInfo(emu.grasscutter.net.proto.EvtAnimatorStateChangedInfoOuterClass.EvtAnimatorStateChangedInfo value) {
         if (evtAnimatorStateChangedInfoBuilder_ == null) {
@@ -619,7 +617,7 @@ public final class EvtAnimatorStateChangedNotifyOuterClass {
         return this;
       }
       /**
-       * <code>.EvtAnimatorStateChangedInfo evt_animator_state_changed_info = 10;</code>
+       * <code>.EvtAnimatorStateChangedInfo evt_animator_state_changed_info = 12;</code>
        */
       public Builder setEvtAnimatorStateChangedInfo(
           emu.grasscutter.net.proto.EvtAnimatorStateChangedInfoOuterClass.EvtAnimatorStateChangedInfo.Builder builderForValue) {
@@ -633,7 +631,7 @@ public final class EvtAnimatorStateChangedNotifyOuterClass {
         return this;
       }
       /**
-       * <code>.EvtAnimatorStateChangedInfo evt_animator_state_changed_info = 10;</code>
+       * <code>.EvtAnimatorStateChangedInfo evt_animator_state_changed_info = 12;</code>
        */
       public Builder mergeEvtAnimatorStateChangedInfo(emu.grasscutter.net.proto.EvtAnimatorStateChangedInfoOuterClass.EvtAnimatorStateChangedInfo value) {
         if (evtAnimatorStateChangedInfoBuilder_ == null) {
@@ -651,7 +649,7 @@ public final class EvtAnimatorStateChangedNotifyOuterClass {
         return this;
       }
       /**
-       * <code>.EvtAnimatorStateChangedInfo evt_animator_state_changed_info = 10;</code>
+       * <code>.EvtAnimatorStateChangedInfo evt_animator_state_changed_info = 12;</code>
        */
       public Builder clearEvtAnimatorStateChangedInfo() {
         if (evtAnimatorStateChangedInfoBuilder_ == null) {
@@ -665,7 +663,7 @@ public final class EvtAnimatorStateChangedNotifyOuterClass {
         return this;
       }
       /**
-       * <code>.EvtAnimatorStateChangedInfo evt_animator_state_changed_info = 10;</code>
+       * <code>.EvtAnimatorStateChangedInfo evt_animator_state_changed_info = 12;</code>
        */
       public emu.grasscutter.net.proto.EvtAnimatorStateChangedInfoOuterClass.EvtAnimatorStateChangedInfo.Builder getEvtAnimatorStateChangedInfoBuilder() {
         
@@ -673,7 +671,7 @@ public final class EvtAnimatorStateChangedNotifyOuterClass {
         return getEvtAnimatorStateChangedInfoFieldBuilder().getBuilder();
       }
       /**
-       * <code>.EvtAnimatorStateChangedInfo evt_animator_state_changed_info = 10;</code>
+       * <code>.EvtAnimatorStateChangedInfo evt_animator_state_changed_info = 12;</code>
        */
       public emu.grasscutter.net.proto.EvtAnimatorStateChangedInfoOuterClass.EvtAnimatorStateChangedInfoOrBuilder getEvtAnimatorStateChangedInfoOrBuilder() {
         if (evtAnimatorStateChangedInfoBuilder_ != null) {
@@ -684,7 +682,7 @@ public final class EvtAnimatorStateChangedNotifyOuterClass {
         }
       }
       /**
-       * <code>.EvtAnimatorStateChangedInfo evt_animator_state_changed_info = 10;</code>
+       * <code>.EvtAnimatorStateChangedInfo evt_animator_state_changed_info = 12;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.EvtAnimatorStateChangedInfoOuterClass.EvtAnimatorStateChangedInfo, emu.grasscutter.net.proto.EvtAnimatorStateChangedInfoOuterClass.EvtAnimatorStateChangedInfo.Builder, emu.grasscutter.net.proto.EvtAnimatorStateChangedInfoOuterClass.EvtAnimatorStateChangedInfoOrBuilder> 
@@ -769,8 +767,8 @@ public final class EvtAnimatorStateChangedNotifyOuterClass {
       "\n#EvtAnimatorStateChangedNotify.proto\032\021F" +
       "orwardType.proto\032!EvtAnimatorStateChange" +
       "dInfo.proto\"\212\001\n\035EvtAnimatorStateChangedN" +
-      "otify\022\"\n\014forward_type\030\010 \001(\0162\014.ForwardTyp" +
-      "e\022E\n\037evt_animator_state_changed_info\030\n \001" +
+      "otify\022\"\n\014forward_type\030\001 \001(\0162\014.ForwardTyp" +
+      "e\022E\n\037evt_animator_state_changed_info\030\014 \001" +
       "(\0132\034.EvtAnimatorStateChangedInfoB\033\n\031emu." +
       "grasscutter.net.protob\006proto3"
     };
