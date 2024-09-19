@@ -578,7 +578,7 @@ public final class PacketOpcodes {
     public static final int CoopDataNotify = 25237;
     public static final int DropHintNotify = 3881;
     public static final int DungeonEntryToBeExploreNotify = 1436; // or 1436,21790
-    public static final int DungeonRestartRsp = 2128; // or 2128,22307
+    public static final int DungeonRestartRsp = 22307; // or 2128,22307
     public static final int DungeonWayPointNotify = 3239;
     public static final int EnterTrialAvatarActivityDungeonRsp = 244; // or 244,1551
     public static final int ForgeDataNotify = 20023;
