@@ -833,8 +833,8 @@ public final class PacketOpcodes {
     public static final int EvtAvatarEnterFocusNotify = 29042;
 	public static final int EvtAvatarSitDownNotify = 22638;
 	public static final int EvtAvatarUpdateFocusNotify = 28630;
-    public static final int EvtAvatarExitFocusNotify = 20290; // or 20290,8696
-	public static final int EvtBulletDeactiveNotify = 8696; // or 20290,8696
+    public static final int EvtAvatarExitFocusNotify = 20290;
+	public static final int EvtBulletDeactiveNotify = 8696; 
 	public static final int EvtBulletMoveNotify = 1957;
 	public static final int DelTeamEntityNotify = 29714; // or 29714,26259
 	public static final int DelScenePlayTeamEntityNotify = 26259; // or 29714,26259
