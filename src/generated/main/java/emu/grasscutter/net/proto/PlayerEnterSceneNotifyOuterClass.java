@@ -87,10 +87,10 @@ public final class PlayerEnterSceneNotifyOuterClass {
     int getDungeonId();
 
     /**
-     * <code>uint32 EKIBACGBHCJ = 12;</code>
-     * @return The eKIBACGBHCJ.
+     * <code>uint32 prev_scene_id = 12;</code>
+     * @return The prevSceneId.
      */
-    int getEKIBACGBHCJ();
+    int getPrevSceneId();
 
     /**
      * <code>.Vector pos = 13;</code>
@@ -146,10 +146,10 @@ public final class PlayerEnterSceneNotifyOuterClass {
     int getTextId();
 
     /**
-     * <code>uint32 prev_scene_id = 358;</code>
-     * @return The prevSceneId.
+     * <code>uint32 world_type = 358;</code>
+     * @return The worldType.
      */
-    int getPrevSceneId();
+    int getWorldType();
 
     /**
      * <pre>
@@ -213,10 +213,10 @@ public final class PlayerEnterSceneNotifyOuterClass {
     boolean getIsFirstLoginEnterScene();
 
     /**
-     * <code>uint32 world_type = 1148;</code>
-     * @return The worldType.
+     * <code>uint32 EKIBACGBHCJ = 1148;</code>
+     * @return The eKIBACGBHCJ.
      */
-    int getWorldType();
+    int getEKIBACGBHCJ();
 
     /**
      * <code>string scene_transaction = 1492;</code>
@@ -362,7 +362,7 @@ public final class PlayerEnterSceneNotifyOuterClass {
             }
             case 96: {
 
-              eKIBACGBHCJ_ = input.readUInt32();
+              prevSceneId_ = input.readUInt32();
               break;
             }
             case 106: {
@@ -409,7 +409,7 @@ public final class PlayerEnterSceneNotifyOuterClass {
             }
             case 2864: {
 
-              prevSceneId_ = input.readUInt32();
+              worldType_ = input.readUInt32();
               break;
             }
             case 3712: {
@@ -463,7 +463,7 @@ public final class PlayerEnterSceneNotifyOuterClass {
             }
             case 9184: {
 
-              worldType_ = input.readUInt32();
+              eKIBACGBHCJ_ = input.readUInt32();
               break;
             }
             case 11938: {
@@ -637,15 +637,15 @@ public final class PlayerEnterSceneNotifyOuterClass {
       return dungeonId_;
     }
 
-    public static final int EKIBACGBHCJ_FIELD_NUMBER = 12;
-    private int eKIBACGBHCJ_;
+    public static final int PREV_SCENE_ID_FIELD_NUMBER = 12;
+    private int prevSceneId_;
     /**
-     * <code>uint32 EKIBACGBHCJ = 12;</code>
-     * @return The eKIBACGBHCJ.
+     * <code>uint32 prev_scene_id = 12;</code>
+     * @return The prevSceneId.
      */
     @java.lang.Override
-    public int getEKIBACGBHCJ() {
-      return eKIBACGBHCJ_;
+    public int getPrevSceneId() {
+      return prevSceneId_;
     }
 
     public static final int POS_FIELD_NUMBER = 13;
@@ -741,15 +741,15 @@ public final class PlayerEnterSceneNotifyOuterClass {
       return textId_;
     }
 
-    public static final int PREV_SCENE_ID_FIELD_NUMBER = 358;
-    private int prevSceneId_;
+    public static final int WORLD_TYPE_FIELD_NUMBER = 358;
+    private int worldType_;
     /**
-     * <code>uint32 prev_scene_id = 358;</code>
-     * @return The prevSceneId.
+     * <code>uint32 world_type = 358;</code>
+     * @return The worldType.
      */
     @java.lang.Override
-    public int getPrevSceneId() {
-      return prevSceneId_;
+    public int getWorldType() {
+      return worldType_;
     }
 
     public static final int ENTER_REASON_FIELD_NUMBER = 464;
@@ -856,15 +856,15 @@ public final class PlayerEnterSceneNotifyOuterClass {
       return isFirstLoginEnterScene_;
     }
 
-    public static final int WORLD_TYPE_FIELD_NUMBER = 1148;
-    private int worldType_;
+    public static final int EKIBACGBHCJ_FIELD_NUMBER = 1148;
+    private int eKIBACGBHCJ_;
     /**
-     * <code>uint32 world_type = 1148;</code>
-     * @return The worldType.
+     * <code>uint32 EKIBACGBHCJ = 1148;</code>
+     * @return The eKIBACGBHCJ.
      */
     @java.lang.Override
-    public int getWorldType() {
-      return worldType_;
+    public int getEKIBACGBHCJ() {
+      return eKIBACGBHCJ_;
     }
 
     public static final int SCENE_TRANSACTION_FIELD_NUMBER = 1492;
@@ -970,8 +970,8 @@ public final class PlayerEnterSceneNotifyOuterClass {
       if (dungeonId_ != 0) {
         output.writeUInt32(11, dungeonId_);
       }
-      if (eKIBACGBHCJ_ != 0) {
-        output.writeUInt32(12, eKIBACGBHCJ_);
+      if (prevSceneId_ != 0) {
+        output.writeUInt32(12, prevSceneId_);
       }
       if (pos_ != null) {
         output.writeMessage(13, getPos());
@@ -988,8 +988,8 @@ public final class PlayerEnterSceneNotifyOuterClass {
       if (textId_ != 0) {
         output.writeUInt32(338, textId_);
       }
-      if (prevSceneId_ != 0) {
-        output.writeUInt32(358, prevSceneId_);
+      if (worldType_ != 0) {
+        output.writeUInt32(358, worldType_);
       }
       if (enterReason_ != 0) {
         output.writeUInt32(464, enterReason_);
@@ -1006,8 +1006,8 @@ public final class PlayerEnterSceneNotifyOuterClass {
       if (isFirstLoginEnterScene_ != false) {
         output.writeBool(816, isFirstLoginEnterScene_);
       }
-      if (worldType_ != 0) {
-        output.writeUInt32(1148, worldType_);
+      if (eKIBACGBHCJ_ != 0) {
+        output.writeUInt32(1148, eKIBACGBHCJ_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sceneTransaction_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1492, sceneTransaction_);
@@ -1069,9 +1069,9 @@ public final class PlayerEnterSceneNotifyOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(11, dungeonId_);
       }
-      if (eKIBACGBHCJ_ != 0) {
+      if (prevSceneId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(12, eKIBACGBHCJ_);
+          .computeUInt32Size(12, prevSceneId_);
       }
       if (pos_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -1093,9 +1093,9 @@ public final class PlayerEnterSceneNotifyOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(338, textId_);
       }
-      if (prevSceneId_ != 0) {
+      if (worldType_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(358, prevSceneId_);
+          .computeUInt32Size(358, worldType_);
       }
       if (enterReason_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -1117,9 +1117,9 @@ public final class PlayerEnterSceneNotifyOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(816, isFirstLoginEnterScene_);
       }
-      if (worldType_ != 0) {
+      if (eKIBACGBHCJ_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(1148, worldType_);
+          .computeUInt32Size(1148, eKIBACGBHCJ_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sceneTransaction_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1492, sceneTransaction_);
@@ -1166,8 +1166,8 @@ public final class PlayerEnterSceneNotifyOuterClass {
           != other.getEnterSceneToken()) return false;
       if (getDungeonId()
           != other.getDungeonId()) return false;
-      if (getEKIBACGBHCJ()
-          != other.getEKIBACGBHCJ()) return false;
+      if (getPrevSceneId()
+          != other.getPrevSceneId()) return false;
       if (hasPos() != other.hasPos()) return false;
       if (hasPos()) {
         if (!getPos()
@@ -1183,8 +1183,8 @@ public final class PlayerEnterSceneNotifyOuterClass {
       }
       if (getTextId()
           != other.getTextId()) return false;
-      if (getPrevSceneId()
-          != other.getPrevSceneId()) return false;
+      if (getWorldType()
+          != other.getWorldType()) return false;
       if (getEnterReason()
           != other.getEnterReason()) return false;
       if (hasBFPGBNDFGBO() != other.hasBFPGBNDFGBO()) return false;
@@ -1204,8 +1204,8 @@ public final class PlayerEnterSceneNotifyOuterClass {
       }
       if (getIsFirstLoginEnterScene()
           != other.getIsFirstLoginEnterScene()) return false;
-      if (getWorldType()
-          != other.getWorldType()) return false;
+      if (getEKIBACGBHCJ()
+          != other.getEKIBACGBHCJ()) return false;
       if (!getSceneTransaction()
           .equals(other.getSceneTransaction())) return false;
       if (getCreatePlayerUid()
@@ -1245,8 +1245,8 @@ public final class PlayerEnterSceneNotifyOuterClass {
       hash = (53 * hash) + getEnterSceneToken();
       hash = (37 * hash) + DUNGEON_ID_FIELD_NUMBER;
       hash = (53 * hash) + getDungeonId();
-      hash = (37 * hash) + EKIBACGBHCJ_FIELD_NUMBER;
-      hash = (53 * hash) + getEKIBACGBHCJ();
+      hash = (37 * hash) + PREV_SCENE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getPrevSceneId();
       if (hasPos()) {
         hash = (37 * hash) + POS_FIELD_NUMBER;
         hash = (53 * hash) + getPos().hashCode();
@@ -1261,8 +1261,8 @@ public final class PlayerEnterSceneNotifyOuterClass {
       }
       hash = (37 * hash) + TEXT_ID_FIELD_NUMBER;
       hash = (53 * hash) + getTextId();
-      hash = (37 * hash) + PREV_SCENE_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getPrevSceneId();
+      hash = (37 * hash) + WORLD_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getWorldType();
       hash = (37 * hash) + ENTER_REASON_FIELD_NUMBER;
       hash = (53 * hash) + getEnterReason();
       if (hasBFPGBNDFGBO()) {
@@ -1280,8 +1280,8 @@ public final class PlayerEnterSceneNotifyOuterClass {
       hash = (37 * hash) + IS_FIRST_LOGIN_ENTER_SCENE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsFirstLoginEnterScene());
-      hash = (37 * hash) + WORLD_TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + getWorldType();
+      hash = (37 * hash) + EKIBACGBHCJ_FIELD_NUMBER;
+      hash = (53 * hash) + getEKIBACGBHCJ();
       hash = (37 * hash) + SCENE_TRANSACTION_FIELD_NUMBER;
       hash = (53 * hash) + getSceneTransaction().hashCode();
       hash = (37 * hash) + CREATE_PLAYER_UID_FIELD_NUMBER;
@@ -1446,7 +1446,7 @@ public final class PlayerEnterSceneNotifyOuterClass {
 
         dungeonId_ = 0;
 
-        eKIBACGBHCJ_ = 0;
+        prevSceneId_ = 0;
 
         if (posBuilder_ == null) {
           pos_ = null;
@@ -1466,7 +1466,7 @@ public final class PlayerEnterSceneNotifyOuterClass {
         }
         textId_ = 0;
 
-        prevSceneId_ = 0;
+        worldType_ = 0;
 
         enterReason_ = 0;
 
@@ -1490,7 +1490,7 @@ public final class PlayerEnterSceneNotifyOuterClass {
         }
         isFirstLoginEnterScene_ = false;
 
-        worldType_ = 0;
+        eKIBACGBHCJ_ = 0;
 
         sceneTransaction_ = "";
 
@@ -1541,7 +1541,7 @@ public final class PlayerEnterSceneNotifyOuterClass {
         result.sceneTagIdList_ = sceneTagIdList_;
         result.enterSceneToken_ = enterSceneToken_;
         result.dungeonId_ = dungeonId_;
-        result.eKIBACGBHCJ_ = eKIBACGBHCJ_;
+        result.prevSceneId_ = prevSceneId_;
         if (posBuilder_ == null) {
           result.pos_ = pos_;
         } else {
@@ -1555,7 +1555,7 @@ public final class PlayerEnterSceneNotifyOuterClass {
           result.dFNDKDAFEJO_ = dFNDKDAFEJOBuilder_.build();
         }
         result.textId_ = textId_;
-        result.prevSceneId_ = prevSceneId_;
+        result.worldType_ = worldType_;
         result.enterReason_ = enterReason_;
         if (bFPGBNDFGBOBuilder_ == null) {
           result.bFPGBNDFGBO_ = bFPGBNDFGBO_;
@@ -1573,7 +1573,7 @@ public final class PlayerEnterSceneNotifyOuterClass {
           result.dungeonPrevPos_ = dungeonPrevPosBuilder_.build();
         }
         result.isFirstLoginEnterScene_ = isFirstLoginEnterScene_;
-        result.worldType_ = worldType_;
+        result.eKIBACGBHCJ_ = eKIBACGBHCJ_;
         result.sceneTransaction_ = sceneTransaction_;
         result.createPlayerUid_ = createPlayerUid_;
         result.dungeonPrevSceneId_ = dungeonPrevSceneId_;
@@ -1656,8 +1656,8 @@ public final class PlayerEnterSceneNotifyOuterClass {
         if (other.getDungeonId() != 0) {
           setDungeonId(other.getDungeonId());
         }
-        if (other.getEKIBACGBHCJ() != 0) {
-          setEKIBACGBHCJ(other.getEKIBACGBHCJ());
+        if (other.getPrevSceneId() != 0) {
+          setPrevSceneId(other.getPrevSceneId());
         }
         if (other.hasPos()) {
           mergePos(other.getPos());
@@ -1674,8 +1674,8 @@ public final class PlayerEnterSceneNotifyOuterClass {
         if (other.getTextId() != 0) {
           setTextId(other.getTextId());
         }
-        if (other.getPrevSceneId() != 0) {
-          setPrevSceneId(other.getPrevSceneId());
+        if (other.getWorldType() != 0) {
+          setWorldType(other.getWorldType());
         }
         if (other.getEnterReason() != 0) {
           setEnterReason(other.getEnterReason());
@@ -1692,8 +1692,8 @@ public final class PlayerEnterSceneNotifyOuterClass {
         if (other.getIsFirstLoginEnterScene() != false) {
           setIsFirstLoginEnterScene(other.getIsFirstLoginEnterScene());
         }
-        if (other.getWorldType() != 0) {
-          setWorldType(other.getWorldType());
+        if (other.getEKIBACGBHCJ() != 0) {
+          setEKIBACGBHCJ(other.getEKIBACGBHCJ());
         }
         if (!other.getSceneTransaction().isEmpty()) {
           sceneTransaction_ = other.sceneTransaction_;
@@ -2119,33 +2119,33 @@ public final class PlayerEnterSceneNotifyOuterClass {
         return this;
       }
 
-      private int eKIBACGBHCJ_ ;
+      private int prevSceneId_ ;
       /**
-       * <code>uint32 EKIBACGBHCJ = 12;</code>
-       * @return The eKIBACGBHCJ.
+       * <code>uint32 prev_scene_id = 12;</code>
+       * @return The prevSceneId.
        */
       @java.lang.Override
-      public int getEKIBACGBHCJ() {
-        return eKIBACGBHCJ_;
+      public int getPrevSceneId() {
+        return prevSceneId_;
       }
       /**
-       * <code>uint32 EKIBACGBHCJ = 12;</code>
-       * @param value The eKIBACGBHCJ to set.
+       * <code>uint32 prev_scene_id = 12;</code>
+       * @param value The prevSceneId to set.
        * @return This builder for chaining.
        */
-      public Builder setEKIBACGBHCJ(int value) {
+      public Builder setPrevSceneId(int value) {
         
-        eKIBACGBHCJ_ = value;
+        prevSceneId_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 EKIBACGBHCJ = 12;</code>
+       * <code>uint32 prev_scene_id = 12;</code>
        * @return This builder for chaining.
        */
-      public Builder clearEKIBACGBHCJ() {
+      public Builder clearPrevSceneId() {
         
-        eKIBACGBHCJ_ = 0;
+        prevSceneId_ = 0;
         onChanged();
         return this;
       }
@@ -2504,33 +2504,33 @@ public final class PlayerEnterSceneNotifyOuterClass {
         return this;
       }
 
-      private int prevSceneId_ ;
+      private int worldType_ ;
       /**
-       * <code>uint32 prev_scene_id = 358;</code>
-       * @return The prevSceneId.
+       * <code>uint32 world_type = 358;</code>
+       * @return The worldType.
        */
       @java.lang.Override
-      public int getPrevSceneId() {
-        return prevSceneId_;
+      public int getWorldType() {
+        return worldType_;
       }
       /**
-       * <code>uint32 prev_scene_id = 358;</code>
-       * @param value The prevSceneId to set.
+       * <code>uint32 world_type = 358;</code>
+       * @param value The worldType to set.
        * @return This builder for chaining.
        */
-      public Builder setPrevSceneId(int value) {
+      public Builder setWorldType(int value) {
         
-        prevSceneId_ = value;
+        worldType_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 prev_scene_id = 358;</code>
+       * <code>uint32 world_type = 358;</code>
        * @return This builder for chaining.
        */
-      public Builder clearPrevSceneId() {
+      public Builder clearWorldType() {
         
-        prevSceneId_ = 0;
+        worldType_ = 0;
         onChanged();
         return this;
       }
@@ -2966,33 +2966,33 @@ public final class PlayerEnterSceneNotifyOuterClass {
         return this;
       }
 
-      private int worldType_ ;
+      private int eKIBACGBHCJ_ ;
       /**
-       * <code>uint32 world_type = 1148;</code>
-       * @return The worldType.
+       * <code>uint32 EKIBACGBHCJ = 1148;</code>
+       * @return The eKIBACGBHCJ.
        */
       @java.lang.Override
-      public int getWorldType() {
-        return worldType_;
+      public int getEKIBACGBHCJ() {
+        return eKIBACGBHCJ_;
       }
       /**
-       * <code>uint32 world_type = 1148;</code>
-       * @param value The worldType to set.
+       * <code>uint32 EKIBACGBHCJ = 1148;</code>
+       * @param value The eKIBACGBHCJ to set.
        * @return This builder for chaining.
        */
-      public Builder setWorldType(int value) {
+      public Builder setEKIBACGBHCJ(int value) {
         
-        worldType_ = value;
+        eKIBACGBHCJ_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 world_type = 1148;</code>
+       * <code>uint32 EKIBACGBHCJ = 1148;</code>
        * @return This builder for chaining.
        */
-      public Builder clearWorldType() {
+      public Builder clearEKIBACGBHCJ() {
         
-        worldType_ = 0;
+        eKIBACGBHCJ_ = 0;
         onChanged();
         return this;
       }
@@ -3209,16 +3209,16 @@ public final class PlayerEnterSceneNotifyOuterClass {
       "ld_level\030\003 \001(\r\022\022\n\ntarget_uid\030\004 \001(\r\022\030\n\020sc" +
       "ene_begin_time\030\005 \001(\004\022\031\n\021scene_tag_id_lis" +
       "t\030\006 \003(\r\022\031\n\021enter_scene_token\030\007 \001(\r\022\022\n\ndu" +
-      "ngeon_id\030\013 \001(\r\022\023\n\013EKIBACGBHCJ\030\014 \001(\r\022\024\n\003p" +
-      "os\030\r \001(\0132\007.Vector\022\020\n\010scene_id\030\016 \001(\r\022\030\n\004t" +
-      "ype\030\017 \001(\0162\n.EnterType\022!\n\013DFNDKDAFEJO\030` \001" +
-      "(\0132\014.CGMAOKBGOHO\022\020\n\007text_id\030\322\002 \001(\r\022\026\n\rpr" +
-      "ev_scene_id\030\346\002 \001(\r\022\025\n\014enter_reason\030\320\003 \001(" +
-      "\r\022\"\n\013BFPGBNDFGBO\030\251\005 \001(\0132\014.GJNOBDELMLF\022&\n" +
-      "\016map_layer_info\030\344\005 \001(\0132\r.MapLayerInfo\022\"\n" +
-      "\020dungeon_prev_pos\030\210\006 \001(\0132\007.Vector\022#\n\032is_" +
-      "first_login_enter_scene\030\260\006 \001(\010\022\023\n\nworld_" +
-      "type\030\374\010 \001(\r\022\032\n\021scene_transaction\030\324\013 \001(\t\022" +
+      "ngeon_id\030\013 \001(\r\022\025\n\rprev_scene_id\030\014 \001(\r\022\024\n" +
+      "\003pos\030\r \001(\0132\007.Vector\022\020\n\010scene_id\030\016 \001(\r\022\030\n" +
+      "\004type\030\017 \001(\0162\n.EnterType\022!\n\013DFNDKDAFEJO\030`" +
+      " \001(\0132\014.CGMAOKBGOHO\022\020\n\007text_id\030\322\002 \001(\r\022\023\n\n" +
+      "world_type\030\346\002 \001(\r\022\025\n\014enter_reason\030\320\003 \001(\r" +
+      "\022\"\n\013BFPGBNDFGBO\030\251\005 \001(\0132\014.GJNOBDELMLF\022&\n\016" +
+      "map_layer_info\030\344\005 \001(\0132\r.MapLayerInfo\022\"\n\020" +
+      "dungeon_prev_pos\030\210\006 \001(\0132\007.Vector\022#\n\032is_f" +
+      "irst_login_enter_scene\030\260\006 \001(\010\022\024\n\013EKIBACG" +
+      "BHCJ\030\374\010 \001(\r\022\032\n\021scene_transaction\030\324\013 \001(\t\022" +
       "\032\n\021create_player_uid\030\240\r \001(\r\022\036\n\025dungeon_p" +
       "rev_scene_id\030\316\016 \001(\rB\033\n\031emu.grasscutter.n" +
       "et.protob\006proto3"
@@ -3237,7 +3237,7 @@ public final class PlayerEnterSceneNotifyOuterClass {
     internal_static_PlayerEnterSceneNotify_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_PlayerEnterSceneNotify_descriptor,
-        new java.lang.String[] { "IsSkipUi", "PrevPos", "WorldLevel", "TargetUid", "SceneBeginTime", "SceneTagIdList", "EnterSceneToken", "DungeonId", "EKIBACGBHCJ", "Pos", "SceneId", "Type", "DFNDKDAFEJO", "TextId", "PrevSceneId", "EnterReason", "BFPGBNDFGBO", "MapLayerInfo", "DungeonPrevPos", "IsFirstLoginEnterScene", "WorldType", "SceneTransaction", "CreatePlayerUid", "DungeonPrevSceneId", });
+        new java.lang.String[] { "IsSkipUi", "PrevPos", "WorldLevel", "TargetUid", "SceneBeginTime", "SceneTagIdList", "EnterSceneToken", "DungeonId", "PrevSceneId", "Pos", "SceneId", "Type", "DFNDKDAFEJO", "TextId", "WorldType", "EnterReason", "BFPGBNDFGBO", "MapLayerInfo", "DungeonPrevPos", "IsFirstLoginEnterScene", "EKIBACGBHCJ", "SceneTransaction", "CreatePlayerUid", "DungeonPrevSceneId", });
     emu.grasscutter.net.proto.MapLayerInfoOuterClass.getDescriptor();
     emu.grasscutter.net.proto.VectorOuterClass.getDescriptor();
     emu.grasscutter.net.proto.EnterTypeOuterClass.getDescriptor();
