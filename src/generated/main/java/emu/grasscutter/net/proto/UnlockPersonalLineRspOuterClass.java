@@ -57,7 +57,6 @@ public final class UnlockPersonalLineRspOuterClass {
   /**
    * <pre>
    * CmdId: 24052
-   * obf: DLPKEKCNMCE
    * </pre>
    *
    * Protobuf type {@code UnlockPersonalLineRsp}
@@ -473,7 +472,6 @@ public final class UnlockPersonalLineRspOuterClass {
     /**
      * <pre>
      * CmdId: 24052
-     * obf: DLPKEKCNMCE
      * </pre>
      *
      * Protobuf type {@code UnlockPersonalLineRsp}

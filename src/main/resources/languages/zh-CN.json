@@ -356,11 +356,11 @@
     "spawn": {
       "success": "已生成 %s 个 %s。",
       "limit_reached": "场景中的生成数量已达上限。已替代为生成 %s 个实体。",
-      "limit_exceeded": "生成数量超过设定上限。生成数量必须在 0-20 之间。",
+      "limit_exceeded": "当前场景生成数量超过设定上限，请切换场景再次尝试。",
       "description": "在你附近生成实体"
     },
     "stop": {
-      "success": "正在关闭服务器...",
+      "success": "服务器自动重启中...",
       "description": "停止服务器"
     },
     "talent": {
