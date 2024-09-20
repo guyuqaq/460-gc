@@ -152,19 +152,19 @@ public final class PlayerEnterSceneNotifyOuterClass {
      * <pre>
      * </pre>
      *
-     * <code>uint32 world_type = 358;</code>
-     * @return The worldType.
+     * <code>uint32 enter_reason = 358;</code>
+     * @return The enterReason.
      */
-    int getWorldType();
+    int getEnterReason();
 
     /**
      * <pre>
      * </pre>
      *
-     * <code>uint32 enter_reason = 464;</code>
-     * @return The enterReason.
+     * <code>uint32 world_type = 464;</code>
+     * @return The worldType.
      */
-    int getEnterReason();
+    int getWorldType();
 
     /**
      * <code>.GJNOBDELMLF BFPGBNDFGBO = 681;</code>
@@ -417,12 +417,12 @@ public final class PlayerEnterSceneNotifyOuterClass {
             }
             case 2864: {
 
-              worldType_ = input.readUInt32();
+              enterReason_ = input.readUInt32();
               break;
             }
             case 3712: {
 
-              enterReason_ = input.readUInt32();
+              worldType_ = input.readUInt32();
               break;
             }
             case 5450: {
@@ -752,32 +752,32 @@ public final class PlayerEnterSceneNotifyOuterClass {
       return textId_;
     }
 
-    public static final int WORLD_TYPE_FIELD_NUMBER = 358;
-    private int worldType_;
-    /**
-     * <pre>
-     * </pre>
-     *
-     * <code>uint32 world_type = 358;</code>
-     * @return The worldType.
-     */
-    @java.lang.Override
-    public int getWorldType() {
-      return worldType_;
-    }
-
-    public static final int ENTER_REASON_FIELD_NUMBER = 464;
+    public static final int ENTER_REASON_FIELD_NUMBER = 358;
     private int enterReason_;
     /**
      * <pre>
      * </pre>
      *
-     * <code>uint32 enter_reason = 464;</code>
+     * <code>uint32 enter_reason = 358;</code>
      * @return The enterReason.
      */
     @java.lang.Override
     public int getEnterReason() {
       return enterReason_;
+    }
+
+    public static final int WORLD_TYPE_FIELD_NUMBER = 464;
+    private int worldType_;
+    /**
+     * <pre>
+     * </pre>
+     *
+     * <code>uint32 world_type = 464;</code>
+     * @return The worldType.
+     */
+    @java.lang.Override
+    public int getWorldType() {
+      return worldType_;
     }
 
     public static final int BFPGBNDFGBO_FIELD_NUMBER = 681;
@@ -1004,11 +1004,11 @@ public final class PlayerEnterSceneNotifyOuterClass {
       if (textId_ != 0) {
         output.writeUInt32(338, textId_);
       }
-      if (worldType_ != 0) {
-        output.writeUInt32(358, worldType_);
-      }
       if (enterReason_ != 0) {
-        output.writeUInt32(464, enterReason_);
+        output.writeUInt32(358, enterReason_);
+      }
+      if (worldType_ != 0) {
+        output.writeUInt32(464, worldType_);
       }
       if (bFPGBNDFGBO_ != null) {
         output.writeMessage(681, getBFPGBNDFGBO());
@@ -1109,13 +1109,13 @@ public final class PlayerEnterSceneNotifyOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(338, textId_);
       }
-      if (worldType_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(358, worldType_);
-      }
       if (enterReason_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(464, enterReason_);
+          .computeUInt32Size(358, enterReason_);
+      }
+      if (worldType_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(464, worldType_);
       }
       if (bFPGBNDFGBO_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -1199,10 +1199,10 @@ public final class PlayerEnterSceneNotifyOuterClass {
       }
       if (getTextId()
           != other.getTextId()) return false;
-      if (getWorldType()
-          != other.getWorldType()) return false;
       if (getEnterReason()
           != other.getEnterReason()) return false;
+      if (getWorldType()
+          != other.getWorldType()) return false;
       if (hasBFPGBNDFGBO() != other.hasBFPGBNDFGBO()) return false;
       if (hasBFPGBNDFGBO()) {
         if (!getBFPGBNDFGBO()
@@ -1277,10 +1277,10 @@ public final class PlayerEnterSceneNotifyOuterClass {
       }
       hash = (37 * hash) + TEXT_ID_FIELD_NUMBER;
       hash = (53 * hash) + getTextId();
-      hash = (37 * hash) + WORLD_TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + getWorldType();
       hash = (37 * hash) + ENTER_REASON_FIELD_NUMBER;
       hash = (53 * hash) + getEnterReason();
+      hash = (37 * hash) + WORLD_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getWorldType();
       if (hasBFPGBNDFGBO()) {
         hash = (37 * hash) + BFPGBNDFGBO_FIELD_NUMBER;
         hash = (53 * hash) + getBFPGBNDFGBO().hashCode();
@@ -1482,9 +1482,9 @@ public final class PlayerEnterSceneNotifyOuterClass {
         }
         textId_ = 0;
 
-        worldType_ = 0;
-
         enterReason_ = 0;
+
+        worldType_ = 0;
 
         if (bFPGBNDFGBOBuilder_ == null) {
           bFPGBNDFGBO_ = null;
@@ -1571,8 +1571,8 @@ public final class PlayerEnterSceneNotifyOuterClass {
           result.dFNDKDAFEJO_ = dFNDKDAFEJOBuilder_.build();
         }
         result.textId_ = textId_;
-        result.worldType_ = worldType_;
         result.enterReason_ = enterReason_;
+        result.worldType_ = worldType_;
         if (bFPGBNDFGBOBuilder_ == null) {
           result.bFPGBNDFGBO_ = bFPGBNDFGBO_;
         } else {
@@ -1690,11 +1690,11 @@ public final class PlayerEnterSceneNotifyOuterClass {
         if (other.getTextId() != 0) {
           setTextId(other.getTextId());
         }
-        if (other.getWorldType() != 0) {
-          setWorldType(other.getWorldType());
-        }
         if (other.getEnterReason() != 0) {
           setEnterReason(other.getEnterReason());
+        }
+        if (other.getWorldType() != 0) {
+          setWorldType(other.getWorldType());
         }
         if (other.hasBFPGBNDFGBO()) {
           mergeBFPGBNDFGBO(other.getBFPGBNDFGBO());
@@ -2529,52 +2529,12 @@ public final class PlayerEnterSceneNotifyOuterClass {
         return this;
       }
 
-      private int worldType_ ;
-      /**
-       * <pre>
-       * </pre>
-       *
-       * <code>uint32 world_type = 358;</code>
-       * @return The worldType.
-       */
-      @java.lang.Override
-      public int getWorldType() {
-        return worldType_;
-      }
-      /**
-       * <pre>
-       * </pre>
-       *
-       * <code>uint32 world_type = 358;</code>
-       * @param value The worldType to set.
-       * @return This builder for chaining.
-       */
-      public Builder setWorldType(int value) {
-        
-        worldType_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * </pre>
-       *
-       * <code>uint32 world_type = 358;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearWorldType() {
-        
-        worldType_ = 0;
-        onChanged();
-        return this;
-      }
-
       private int enterReason_ ;
       /**
        * <pre>
        * </pre>
        *
-       * <code>uint32 enter_reason = 464;</code>
+       * <code>uint32 enter_reason = 358;</code>
        * @return The enterReason.
        */
       @java.lang.Override
@@ -2585,7 +2545,7 @@ public final class PlayerEnterSceneNotifyOuterClass {
        * <pre>
        * </pre>
        *
-       * <code>uint32 enter_reason = 464;</code>
+       * <code>uint32 enter_reason = 358;</code>
        * @param value The enterReason to set.
        * @return This builder for chaining.
        */
@@ -2599,12 +2559,52 @@ public final class PlayerEnterSceneNotifyOuterClass {
        * <pre>
        * </pre>
        *
-       * <code>uint32 enter_reason = 464;</code>
+       * <code>uint32 enter_reason = 358;</code>
        * @return This builder for chaining.
        */
       public Builder clearEnterReason() {
         
         enterReason_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int worldType_ ;
+      /**
+       * <pre>
+       * </pre>
+       *
+       * <code>uint32 world_type = 464;</code>
+       * @return The worldType.
+       */
+      @java.lang.Override
+      public int getWorldType() {
+        return worldType_;
+      }
+      /**
+       * <pre>
+       * </pre>
+       *
+       * <code>uint32 world_type = 464;</code>
+       * @param value The worldType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWorldType(int value) {
+        
+        worldType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * </pre>
+       *
+       * <code>uint32 world_type = 464;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWorldType() {
+        
+        worldType_ = 0;
         onChanged();
         return this;
       }
@@ -3252,8 +3252,8 @@ public final class PlayerEnterSceneNotifyOuterClass {
       "ngeon_id\030\013 \001(\r\022\025\n\rprev_scene_id\030\014 \001(\r\022\024\n" +
       "\003pos\030\r \001(\0132\007.Vector\022\020\n\010scene_id\030\016 \001(\r\022\030\n" +
       "\004type\030\017 \001(\0162\n.EnterType\022!\n\013DFNDKDAFEJO\030`" +
-      " \001(\0132\014.CGMAOKBGOHO\022\020\n\007text_id\030\322\002 \001(\r\022\023\n\n" +
-      "world_type\030\346\002 \001(\r\022\025\n\014enter_reason\030\320\003 \001(\r" +
+      " \001(\0132\014.CGMAOKBGOHO\022\020\n\007text_id\030\322\002 \001(\r\022\025\n\014" +
+      "enter_reason\030\346\002 \001(\r\022\023\n\nworld_type\030\320\003 \001(\r" +
       "\022\"\n\013BFPGBNDFGBO\030\251\005 \001(\0132\014.GJNOBDELMLF\022&\n\016" +
       "map_layer_info\030\344\005 \001(\0132\r.MapLayerInfo\022\"\n\020" +
       "dungeon_prev_pos\030\210\006 \001(\0132\007.Vector\022#\n\032is_f" +
@@ -3277,7 +3277,7 @@ public final class PlayerEnterSceneNotifyOuterClass {
     internal_static_PlayerEnterSceneNotify_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_PlayerEnterSceneNotify_descriptor,
-        new java.lang.String[] { "IsSkipUi", "PrevPos", "WorldLevel", "TargetUid", "SceneBeginTime", "SceneTagIdList", "EnterSceneToken", "DungeonId", "PrevSceneId", "Pos", "SceneId", "Type", "DFNDKDAFEJO", "TextId", "WorldType", "EnterReason", "BFPGBNDFGBO", "MapLayerInfo", "DungeonPrevPos", "IsFirstLoginEnterScene", "DDGBKGDECME", "SceneTransaction", "CreatePlayerUid", "DungeonPrevSceneId", });
+        new java.lang.String[] { "IsSkipUi", "PrevPos", "WorldLevel", "TargetUid", "SceneBeginTime", "SceneTagIdList", "EnterSceneToken", "DungeonId", "PrevSceneId", "Pos", "SceneId", "Type", "DFNDKDAFEJO", "TextId", "EnterReason", "WorldType", "BFPGBNDFGBO", "MapLayerInfo", "DungeonPrevPos", "IsFirstLoginEnterScene", "DDGBKGDECME", "SceneTransaction", "CreatePlayerUid", "DungeonPrevSceneId", });
     emu.grasscutter.net.proto.MapLayerInfoOuterClass.getDescriptor();
     emu.grasscutter.net.proto.VectorOuterClass.getDescriptor();
     emu.grasscutter.net.proto.EnterTypeOuterClass.getDescriptor();

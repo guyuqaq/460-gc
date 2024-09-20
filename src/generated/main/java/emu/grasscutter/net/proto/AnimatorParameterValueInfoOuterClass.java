@@ -60,6 +60,10 @@ public final class AnimatorParameterValueInfoOuterClass {
     public emu.grasscutter.net.proto.AnimatorParameterValueInfoOuterClass.AnimatorParameterValueInfo.ParaValCase getParaValCase();
   }
   /**
+   * <pre>
+   * 5.0.0
+   * </pre>
+   *
    * Protobuf type {@code AnimatorParameterValueInfo}
    */
   public static final class AnimatorParameterValueInfo extends
@@ -492,6 +496,10 @@ public final class AnimatorParameterValueInfoOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * 5.0.0
+     * </pre>
+     *
      * Protobuf type {@code AnimatorParameterValueInfo}
      */
     public static final class Builder extends
