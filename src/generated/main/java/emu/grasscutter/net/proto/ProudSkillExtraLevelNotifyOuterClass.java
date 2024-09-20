@@ -20,7 +20,7 @@ public final class ProudSkillExtraLevelNotifyOuterClass {
 
     /**
      * <pre>
-     * 三个uint类型可能都不对
+     * sus
      * </pre>
      *
      * <code>uint32 talent_index = 3;</code>
@@ -152,7 +152,7 @@ public final class ProudSkillExtraLevelNotifyOuterClass {
     private int talentIndex_;
     /**
      * <pre>
-     * 三个uint类型可能都不对
+     * sus
      * </pre>
      *
      * <code>uint32 talent_index = 3;</code>
@@ -558,7 +558,7 @@ public final class ProudSkillExtraLevelNotifyOuterClass {
       private int talentIndex_ ;
       /**
        * <pre>
-       * 三个uint类型可能都不对
+       * sus
        * </pre>
        *
        * <code>uint32 talent_index = 3;</code>
@@ -570,7 +570,7 @@ public final class ProudSkillExtraLevelNotifyOuterClass {
       }
       /**
        * <pre>
-       * 三个uint类型可能都不对
+       * sus
        * </pre>
        *
        * <code>uint32 talent_index = 3;</code>
@@ -585,7 +585,7 @@ public final class ProudSkillExtraLevelNotifyOuterClass {
       }
       /**
        * <pre>
-       * 三个uint类型可能都不对
+       * sus
        * </pre>
        *
        * <code>uint32 talent_index = 3;</code>

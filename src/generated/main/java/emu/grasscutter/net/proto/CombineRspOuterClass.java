@@ -26,7 +26,7 @@ public final class CombineRspOuterClass {
 
     /**
      * <pre>
-     * obf: DIPIPCANMFM 解出来的可能不对
+     * sus
      * </pre>
      *
      * <code>repeated .ItemParam totalExtraItemList = 3;</code>
@@ -35,7 +35,7 @@ public final class CombineRspOuterClass {
         getTotalExtraItemListList();
     /**
      * <pre>
-     * obf: DIPIPCANMFM 解出来的可能不对
+     * sus
      * </pre>
      *
      * <code>repeated .ItemParam totalExtraItemList = 3;</code>
@@ -43,7 +43,7 @@ public final class CombineRspOuterClass {
     emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam getTotalExtraItemList(int index);
     /**
      * <pre>
-     * obf: DIPIPCANMFM 解出来的可能不对
+     * sus
      * </pre>
      *
      * <code>repeated .ItemParam totalExtraItemList = 3;</code>
@@ -51,7 +51,7 @@ public final class CombineRspOuterClass {
     int getTotalExtraItemListCount();
     /**
      * <pre>
-     * obf: DIPIPCANMFM 解出来的可能不对
+     * sus
      * </pre>
      *
      * <code>repeated .ItemParam totalExtraItemList = 3;</code>
@@ -60,7 +60,7 @@ public final class CombineRspOuterClass {
         getTotalExtraItemListOrBuilderList();
     /**
      * <pre>
-     * obf: DIPIPCANMFM 解出来的可能不对
+     * sus
      * </pre>
      *
      * <code>repeated .ItemParam totalExtraItemList = 3;</code>
@@ -70,7 +70,7 @@ public final class CombineRspOuterClass {
 
     /**
      * <pre>
-     * obf: FNNHLPFGPIN 解出来的可能不对
+     * sus
      * </pre>
      *
      * <code>repeated .ItemParam total_return_item_list = 4;</code>
@@ -79,7 +79,7 @@ public final class CombineRspOuterClass {
         getTotalReturnItemListList();
     /**
      * <pre>
-     * obf: FNNHLPFGPIN 解出来的可能不对
+     * sus
      * </pre>
      *
      * <code>repeated .ItemParam total_return_item_list = 4;</code>
@@ -87,7 +87,7 @@ public final class CombineRspOuterClass {
     emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam getTotalReturnItemList(int index);
     /**
      * <pre>
-     * obf: FNNHLPFGPIN 解出来的可能不对
+     * sus
      * </pre>
      *
      * <code>repeated .ItemParam total_return_item_list = 4;</code>
@@ -95,7 +95,7 @@ public final class CombineRspOuterClass {
     int getTotalReturnItemListCount();
     /**
      * <pre>
-     * obf: FNNHLPFGPIN 解出来的可能不对
+     * sus
      * </pre>
      *
      * <code>repeated .ItemParam total_return_item_list = 4;</code>
@@ -104,7 +104,7 @@ public final class CombineRspOuterClass {
         getTotalReturnItemListOrBuilderList();
     /**
      * <pre>
-     * obf: FNNHLPFGPIN 解出来的可能不对
+     * sus
      * </pre>
      *
      * <code>repeated .ItemParam total_return_item_list = 4;</code>
@@ -126,7 +126,7 @@ public final class CombineRspOuterClass {
 
     /**
      * <pre>
-     * obf: LLOJHCEIBGO 解出来的可能不对
+     * sus
      * </pre>
      *
      * <code>repeated .ItemParam totalRandomItemList = 9;</code>
@@ -135,7 +135,7 @@ public final class CombineRspOuterClass {
         getTotalRandomItemListList();
     /**
      * <pre>
-     * obf: LLOJHCEIBGO 解出来的可能不对
+     * sus
      * </pre>
      *
      * <code>repeated .ItemParam totalRandomItemList = 9;</code>
@@ -143,7 +143,7 @@ public final class CombineRspOuterClass {
     emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam getTotalRandomItemList(int index);
     /**
      * <pre>
-     * obf: LLOJHCEIBGO 解出来的可能不对
+     * sus
      * </pre>
      *
      * <code>repeated .ItemParam totalRandomItemList = 9;</code>
@@ -151,7 +151,7 @@ public final class CombineRspOuterClass {
     int getTotalRandomItemListCount();
     /**
      * <pre>
-     * obf: LLOJHCEIBGO 解出来的可能不对
+     * sus
      * </pre>
      *
      * <code>repeated .ItemParam totalRandomItemList = 9;</code>
@@ -160,7 +160,7 @@ public final class CombineRspOuterClass {
         getTotalRandomItemListOrBuilderList();
     /**
      * <pre>
-     * obf: LLOJHCEIBGO 解出来的可能不对
+     * sus
      * </pre>
      *
      * <code>repeated .ItemParam totalRandomItemList = 9;</code>
@@ -200,7 +200,7 @@ public final class CombineRspOuterClass {
 
     /**
      * <pre>
-     * obf: ELNAMCCOIJL 解出来的可能不对
+     * sus
      * </pre>
      *
      * <code>repeated .ItemParam uk10 = 13;</code>
@@ -209,7 +209,7 @@ public final class CombineRspOuterClass {
         getUk10List();
     /**
      * <pre>
-     * obf: ELNAMCCOIJL 解出来的可能不对
+     * sus
      * </pre>
      *
      * <code>repeated .ItemParam uk10 = 13;</code>
@@ -217,7 +217,7 @@ public final class CombineRspOuterClass {
     emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam getUk10(int index);
     /**
      * <pre>
-     * obf: ELNAMCCOIJL 解出来的可能不对
+     * sus
      * </pre>
      *
      * <code>repeated .ItemParam uk10 = 13;</code>
@@ -225,7 +225,7 @@ public final class CombineRspOuterClass {
     int getUk10Count();
     /**
      * <pre>
-     * obf: ELNAMCCOIJL 解出来的可能不对
+     * sus
      * </pre>
      *
      * <code>repeated .ItemParam uk10 = 13;</code>
@@ -234,7 +234,7 @@ public final class CombineRspOuterClass {
         getUk10OrBuilderList();
     /**
      * <pre>
-     * obf: ELNAMCCOIJL 解出来的可能不对
+     * sus
      * </pre>
      *
      * <code>repeated .ItemParam uk10 = 13;</code>
@@ -244,7 +244,7 @@ public final class CombineRspOuterClass {
 
     /**
      * <pre>
-     * obf: IHGOLMOHHNJ 解出来的可能不对
+     * sus
      * </pre>
      *
      * <code>repeated .ItemParam result_item_list = 15;</code>
@@ -253,7 +253,7 @@ public final class CombineRspOuterClass {
         getResultItemListList();
     /**
      * <pre>
-     * obf: IHGOLMOHHNJ 解出来的可能不对
+     * sus
      * </pre>
      *
      * <code>repeated .ItemParam result_item_list = 15;</code>
@@ -261,7 +261,7 @@ public final class CombineRspOuterClass {
     emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam getResultItemList(int index);
     /**
      * <pre>
-     * obf: IHGOLMOHHNJ 解出来的可能不对
+     * sus
      * </pre>
      *
      * <code>repeated .ItemParam result_item_list = 15;</code>
@@ -269,7 +269,7 @@ public final class CombineRspOuterClass {
     int getResultItemListCount();
     /**
      * <pre>
-     * obf: IHGOLMOHHNJ 解出来的可能不对
+     * sus
      * </pre>
      *
      * <code>repeated .ItemParam result_item_list = 15;</code>
@@ -278,7 +278,7 @@ public final class CombineRspOuterClass {
         getResultItemListOrBuilderList();
     /**
      * <pre>
-     * obf: IHGOLMOHHNJ 解出来的可能不对
+     * sus
      * </pre>
      *
      * <code>repeated .ItemParam result_item_list = 15;</code>
@@ -482,7 +482,7 @@ public final class CombineRspOuterClass {
     private java.util.List<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam> totalExtraItemList_;
     /**
      * <pre>
-     * obf: DIPIPCANMFM 解出来的可能不对
+     * sus
      * </pre>
      *
      * <code>repeated .ItemParam totalExtraItemList = 3;</code>
@@ -493,7 +493,7 @@ public final class CombineRspOuterClass {
     }
     /**
      * <pre>
-     * obf: DIPIPCANMFM 解出来的可能不对
+     * sus
      * </pre>
      *
      * <code>repeated .ItemParam totalExtraItemList = 3;</code>
@@ -505,7 +505,7 @@ public final class CombineRspOuterClass {
     }
     /**
      * <pre>
-     * obf: DIPIPCANMFM 解出来的可能不对
+     * sus
      * </pre>
      *
      * <code>repeated .ItemParam totalExtraItemList = 3;</code>
@@ -516,7 +516,7 @@ public final class CombineRspOuterClass {
     }
     /**
      * <pre>
-     * obf: DIPIPCANMFM 解出来的可能不对
+     * sus
      * </pre>
      *
      * <code>repeated .ItemParam totalExtraItemList = 3;</code>
@@ -527,7 +527,7 @@ public final class CombineRspOuterClass {
     }
     /**
      * <pre>
-     * obf: DIPIPCANMFM 解出来的可能不对
+     * sus
      * </pre>
      *
      * <code>repeated .ItemParam totalExtraItemList = 3;</code>
@@ -542,7 +542,7 @@ public final class CombineRspOuterClass {
     private java.util.List<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam> totalReturnItemList_;
     /**
      * <pre>
-     * obf: FNNHLPFGPIN 解出来的可能不对
+     * sus
      * </pre>
      *
      * <code>repeated .ItemParam total_return_item_list = 4;</code>
@@ -553,7 +553,7 @@ public final class CombineRspOuterClass {
     }
     /**
      * <pre>
-     * obf: FNNHLPFGPIN 解出来的可能不对
+     * sus
      * </pre>
      *
      * <code>repeated .ItemParam total_return_item_list = 4;</code>
@@ -565,7 +565,7 @@ public final class CombineRspOuterClass {
     }
     /**
      * <pre>
-     * obf: FNNHLPFGPIN 解出来的可能不对
+     * sus
      * </pre>
      *
      * <code>repeated .ItemParam total_return_item_list = 4;</code>
@@ -576,7 +576,7 @@ public final class CombineRspOuterClass {
     }
     /**
      * <pre>
-     * obf: FNNHLPFGPIN 解出来的可能不对
+     * sus
      * </pre>
      *
      * <code>repeated .ItemParam total_return_item_list = 4;</code>
@@ -587,7 +587,7 @@ public final class CombineRspOuterClass {
     }
     /**
      * <pre>
-     * obf: FNNHLPFGPIN 解出来的可能不对
+     * sus
      * </pre>
      *
      * <code>repeated .ItemParam total_return_item_list = 4;</code>
@@ -624,7 +624,7 @@ public final class CombineRspOuterClass {
     private java.util.List<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam> totalRandomItemList_;
     /**
      * <pre>
-     * obf: LLOJHCEIBGO 解出来的可能不对
+     * sus
      * </pre>
      *
      * <code>repeated .ItemParam totalRandomItemList = 9;</code>
@@ -635,7 +635,7 @@ public final class CombineRspOuterClass {
     }
     /**
      * <pre>
-     * obf: LLOJHCEIBGO 解出来的可能不对
+     * sus
      * </pre>
      *
      * <code>repeated .ItemParam totalRandomItemList = 9;</code>
@@ -647,7 +647,7 @@ public final class CombineRspOuterClass {
     }
     /**
      * <pre>
-     * obf: LLOJHCEIBGO 解出来的可能不对
+     * sus
      * </pre>
      *
      * <code>repeated .ItemParam totalRandomItemList = 9;</code>
@@ -658,7 +658,7 @@ public final class CombineRspOuterClass {
     }
     /**
      * <pre>
-     * obf: LLOJHCEIBGO 解出来的可能不对
+     * sus
      * </pre>
      *
      * <code>repeated .ItemParam totalRandomItemList = 9;</code>
@@ -669,7 +669,7 @@ public final class CombineRspOuterClass {
     }
     /**
      * <pre>
-     * obf: LLOJHCEIBGO 解出来的可能不对
+     * sus
      * </pre>
      *
      * <code>repeated .ItemParam totalRandomItemList = 9;</code>
@@ -735,7 +735,7 @@ public final class CombineRspOuterClass {
     private java.util.List<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam> uk10_;
     /**
      * <pre>
-     * obf: ELNAMCCOIJL 解出来的可能不对
+     * sus
      * </pre>
      *
      * <code>repeated .ItemParam uk10 = 13;</code>
@@ -746,7 +746,7 @@ public final class CombineRspOuterClass {
     }
     /**
      * <pre>
-     * obf: ELNAMCCOIJL 解出来的可能不对
+     * sus
      * </pre>
      *
      * <code>repeated .ItemParam uk10 = 13;</code>
@@ -758,7 +758,7 @@ public final class CombineRspOuterClass {
     }
     /**
      * <pre>
-     * obf: ELNAMCCOIJL 解出来的可能不对
+     * sus
      * </pre>
      *
      * <code>repeated .ItemParam uk10 = 13;</code>
@@ -769,7 +769,7 @@ public final class CombineRspOuterClass {
     }
     /**
      * <pre>
-     * obf: ELNAMCCOIJL 解出来的可能不对
+     * sus
      * </pre>
      *
      * <code>repeated .ItemParam uk10 = 13;</code>
@@ -780,7 +780,7 @@ public final class CombineRspOuterClass {
     }
     /**
      * <pre>
-     * obf: ELNAMCCOIJL 解出来的可能不对
+     * sus
      * </pre>
      *
      * <code>repeated .ItemParam uk10 = 13;</code>
@@ -795,7 +795,7 @@ public final class CombineRspOuterClass {
     private java.util.List<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam> resultItemList_;
     /**
      * <pre>
-     * obf: IHGOLMOHHNJ 解出来的可能不对
+     * sus
      * </pre>
      *
      * <code>repeated .ItemParam result_item_list = 15;</code>
@@ -806,7 +806,7 @@ public final class CombineRspOuterClass {
     }
     /**
      * <pre>
-     * obf: IHGOLMOHHNJ 解出来的可能不对
+     * sus
      * </pre>
      *
      * <code>repeated .ItemParam result_item_list = 15;</code>
@@ -818,7 +818,7 @@ public final class CombineRspOuterClass {
     }
     /**
      * <pre>
-     * obf: IHGOLMOHHNJ 解出来的可能不对
+     * sus
      * </pre>
      *
      * <code>repeated .ItemParam result_item_list = 15;</code>
@@ -829,7 +829,7 @@ public final class CombineRspOuterClass {
     }
     /**
      * <pre>
-     * obf: IHGOLMOHHNJ 解出来的可能不对
+     * sus
      * </pre>
      *
      * <code>repeated .ItemParam result_item_list = 15;</code>
@@ -840,7 +840,7 @@ public final class CombineRspOuterClass {
     }
     /**
      * <pre>
-     * obf: IHGOLMOHHNJ 解出来的可能不对
+     * sus
      * </pre>
      *
      * <code>repeated .ItemParam result_item_list = 15;</code>
@@ -1587,7 +1587,7 @@ public final class CombineRspOuterClass {
 
       /**
        * <pre>
-       * obf: DIPIPCANMFM 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam totalExtraItemList = 3;</code>
@@ -1601,7 +1601,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: DIPIPCANMFM 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam totalExtraItemList = 3;</code>
@@ -1615,7 +1615,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: DIPIPCANMFM 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam totalExtraItemList = 3;</code>
@@ -1629,7 +1629,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: DIPIPCANMFM 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam totalExtraItemList = 3;</code>
@@ -1650,7 +1650,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: DIPIPCANMFM 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam totalExtraItemList = 3;</code>
@@ -1668,7 +1668,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: DIPIPCANMFM 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam totalExtraItemList = 3;</code>
@@ -1688,7 +1688,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: DIPIPCANMFM 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam totalExtraItemList = 3;</code>
@@ -1709,7 +1709,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: DIPIPCANMFM 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam totalExtraItemList = 3;</code>
@@ -1727,7 +1727,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: DIPIPCANMFM 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam totalExtraItemList = 3;</code>
@@ -1745,7 +1745,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: DIPIPCANMFM 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam totalExtraItemList = 3;</code>
@@ -1764,7 +1764,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: DIPIPCANMFM 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam totalExtraItemList = 3;</code>
@@ -1781,7 +1781,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: DIPIPCANMFM 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam totalExtraItemList = 3;</code>
@@ -1798,7 +1798,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: DIPIPCANMFM 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam totalExtraItemList = 3;</code>
@@ -1809,7 +1809,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: DIPIPCANMFM 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam totalExtraItemList = 3;</code>
@@ -1823,7 +1823,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: DIPIPCANMFM 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam totalExtraItemList = 3;</code>
@@ -1838,7 +1838,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: DIPIPCANMFM 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam totalExtraItemList = 3;</code>
@@ -1849,7 +1849,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: DIPIPCANMFM 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam totalExtraItemList = 3;</code>
@@ -1861,7 +1861,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: DIPIPCANMFM 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam totalExtraItemList = 3;</code>
@@ -1899,7 +1899,7 @@ public final class CombineRspOuterClass {
 
       /**
        * <pre>
-       * obf: FNNHLPFGPIN 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam total_return_item_list = 4;</code>
@@ -1913,7 +1913,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: FNNHLPFGPIN 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam total_return_item_list = 4;</code>
@@ -1927,7 +1927,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: FNNHLPFGPIN 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam total_return_item_list = 4;</code>
@@ -1941,7 +1941,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: FNNHLPFGPIN 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam total_return_item_list = 4;</code>
@@ -1962,7 +1962,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: FNNHLPFGPIN 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam total_return_item_list = 4;</code>
@@ -1980,7 +1980,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: FNNHLPFGPIN 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam total_return_item_list = 4;</code>
@@ -2000,7 +2000,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: FNNHLPFGPIN 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam total_return_item_list = 4;</code>
@@ -2021,7 +2021,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: FNNHLPFGPIN 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam total_return_item_list = 4;</code>
@@ -2039,7 +2039,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: FNNHLPFGPIN 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam total_return_item_list = 4;</code>
@@ -2057,7 +2057,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: FNNHLPFGPIN 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam total_return_item_list = 4;</code>
@@ -2076,7 +2076,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: FNNHLPFGPIN 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam total_return_item_list = 4;</code>
@@ -2093,7 +2093,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: FNNHLPFGPIN 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam total_return_item_list = 4;</code>
@@ -2110,7 +2110,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: FNNHLPFGPIN 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam total_return_item_list = 4;</code>
@@ -2121,7 +2121,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: FNNHLPFGPIN 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam total_return_item_list = 4;</code>
@@ -2135,7 +2135,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: FNNHLPFGPIN 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam total_return_item_list = 4;</code>
@@ -2150,7 +2150,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: FNNHLPFGPIN 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam total_return_item_list = 4;</code>
@@ -2161,7 +2161,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: FNNHLPFGPIN 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam total_return_item_list = 4;</code>
@@ -2173,7 +2173,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: FNNHLPFGPIN 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam total_return_item_list = 4;</code>
@@ -2273,7 +2273,7 @@ public final class CombineRspOuterClass {
 
       /**
        * <pre>
-       * obf: LLOJHCEIBGO 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam totalRandomItemList = 9;</code>
@@ -2287,7 +2287,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: LLOJHCEIBGO 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam totalRandomItemList = 9;</code>
@@ -2301,7 +2301,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: LLOJHCEIBGO 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam totalRandomItemList = 9;</code>
@@ -2315,7 +2315,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: LLOJHCEIBGO 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam totalRandomItemList = 9;</code>
@@ -2336,7 +2336,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: LLOJHCEIBGO 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam totalRandomItemList = 9;</code>
@@ -2354,7 +2354,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: LLOJHCEIBGO 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam totalRandomItemList = 9;</code>
@@ -2374,7 +2374,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: LLOJHCEIBGO 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam totalRandomItemList = 9;</code>
@@ -2395,7 +2395,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: LLOJHCEIBGO 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam totalRandomItemList = 9;</code>
@@ -2413,7 +2413,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: LLOJHCEIBGO 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam totalRandomItemList = 9;</code>
@@ -2431,7 +2431,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: LLOJHCEIBGO 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam totalRandomItemList = 9;</code>
@@ -2450,7 +2450,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: LLOJHCEIBGO 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam totalRandomItemList = 9;</code>
@@ -2467,7 +2467,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: LLOJHCEIBGO 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam totalRandomItemList = 9;</code>
@@ -2484,7 +2484,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: LLOJHCEIBGO 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam totalRandomItemList = 9;</code>
@@ -2495,7 +2495,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: LLOJHCEIBGO 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam totalRandomItemList = 9;</code>
@@ -2509,7 +2509,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: LLOJHCEIBGO 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam totalRandomItemList = 9;</code>
@@ -2524,7 +2524,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: LLOJHCEIBGO 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam totalRandomItemList = 9;</code>
@@ -2535,7 +2535,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: LLOJHCEIBGO 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam totalRandomItemList = 9;</code>
@@ -2547,7 +2547,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: LLOJHCEIBGO 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam totalRandomItemList = 9;</code>
@@ -2856,7 +2856,7 @@ public final class CombineRspOuterClass {
 
       /**
        * <pre>
-       * obf: ELNAMCCOIJL 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam uk10 = 13;</code>
@@ -2870,7 +2870,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: ELNAMCCOIJL 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam uk10 = 13;</code>
@@ -2884,7 +2884,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: ELNAMCCOIJL 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam uk10 = 13;</code>
@@ -2898,7 +2898,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: ELNAMCCOIJL 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam uk10 = 13;</code>
@@ -2919,7 +2919,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: ELNAMCCOIJL 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam uk10 = 13;</code>
@@ -2937,7 +2937,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: ELNAMCCOIJL 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam uk10 = 13;</code>
@@ -2957,7 +2957,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: ELNAMCCOIJL 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam uk10 = 13;</code>
@@ -2978,7 +2978,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: ELNAMCCOIJL 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam uk10 = 13;</code>
@@ -2996,7 +2996,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: ELNAMCCOIJL 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam uk10 = 13;</code>
@@ -3014,7 +3014,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: ELNAMCCOIJL 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam uk10 = 13;</code>
@@ -3033,7 +3033,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: ELNAMCCOIJL 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam uk10 = 13;</code>
@@ -3050,7 +3050,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: ELNAMCCOIJL 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam uk10 = 13;</code>
@@ -3067,7 +3067,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: ELNAMCCOIJL 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam uk10 = 13;</code>
@@ -3078,7 +3078,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: ELNAMCCOIJL 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam uk10 = 13;</code>
@@ -3092,7 +3092,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: ELNAMCCOIJL 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam uk10 = 13;</code>
@@ -3107,7 +3107,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: ELNAMCCOIJL 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam uk10 = 13;</code>
@@ -3118,7 +3118,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: ELNAMCCOIJL 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam uk10 = 13;</code>
@@ -3130,7 +3130,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: ELNAMCCOIJL 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam uk10 = 13;</code>
@@ -3168,7 +3168,7 @@ public final class CombineRspOuterClass {
 
       /**
        * <pre>
-       * obf: IHGOLMOHHNJ 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam result_item_list = 15;</code>
@@ -3182,7 +3182,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: IHGOLMOHHNJ 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam result_item_list = 15;</code>
@@ -3196,7 +3196,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: IHGOLMOHHNJ 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam result_item_list = 15;</code>
@@ -3210,7 +3210,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: IHGOLMOHHNJ 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam result_item_list = 15;</code>
@@ -3231,7 +3231,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: IHGOLMOHHNJ 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam result_item_list = 15;</code>
@@ -3249,7 +3249,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: IHGOLMOHHNJ 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam result_item_list = 15;</code>
@@ -3269,7 +3269,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: IHGOLMOHHNJ 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam result_item_list = 15;</code>
@@ -3290,7 +3290,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: IHGOLMOHHNJ 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam result_item_list = 15;</code>
@@ -3308,7 +3308,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: IHGOLMOHHNJ 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam result_item_list = 15;</code>
@@ -3326,7 +3326,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: IHGOLMOHHNJ 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam result_item_list = 15;</code>
@@ -3345,7 +3345,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: IHGOLMOHHNJ 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam result_item_list = 15;</code>
@@ -3362,7 +3362,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: IHGOLMOHHNJ 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam result_item_list = 15;</code>
@@ -3379,7 +3379,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: IHGOLMOHHNJ 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam result_item_list = 15;</code>
@@ -3390,7 +3390,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: IHGOLMOHHNJ 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam result_item_list = 15;</code>
@@ -3404,7 +3404,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: IHGOLMOHHNJ 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam result_item_list = 15;</code>
@@ -3419,7 +3419,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: IHGOLMOHHNJ 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam result_item_list = 15;</code>
@@ -3430,7 +3430,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: IHGOLMOHHNJ 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam result_item_list = 15;</code>
@@ -3442,7 +3442,7 @@ public final class CombineRspOuterClass {
       }
       /**
        * <pre>
-       * obf: IHGOLMOHHNJ 解出来的可能不对
+       * sus
        * </pre>
        *
        * <code>repeated .ItemParam result_item_list = 15;</code>

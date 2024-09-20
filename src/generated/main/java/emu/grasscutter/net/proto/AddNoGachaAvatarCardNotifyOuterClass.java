@@ -32,7 +32,7 @@ public final class AddNoGachaAvatarCardNotifyOuterClass {
 
     /**
      * <pre>
-     * 可能不对 要和下面互换
+     * sus
      * </pre>
      *
      * <code>uint32 initial_level = 8;</code>
@@ -42,7 +42,7 @@ public final class AddNoGachaAvatarCardNotifyOuterClass {
 
     /**
      * <pre>
-     * 可能不对 要和下面互换
+     *sus
      * </pre>
      *
      * <code>uint32 initial_promote_level = 9;</code>
@@ -238,7 +238,7 @@ public final class AddNoGachaAvatarCardNotifyOuterClass {
     private int initialLevel_;
     /**
      * <pre>
-     * 可能不对 要和下面互换
+     * sus
      * </pre>
      *
      * <code>uint32 initial_level = 8;</code>
@@ -253,7 +253,7 @@ public final class AddNoGachaAvatarCardNotifyOuterClass {
     private int initialPromoteLevel_;
     /**
      * <pre>
-     * 可能不对 要和下面互换
+     *sus
      * </pre>
      *
      * <code>uint32 initial_promote_level = 9;</code>
@@ -841,7 +841,7 @@ public final class AddNoGachaAvatarCardNotifyOuterClass {
       private int initialLevel_ ;
       /**
        * <pre>
-       * 可能不对 要和下面互换
+       * sus
        * </pre>
        *
        * <code>uint32 initial_level = 8;</code>
@@ -853,7 +853,7 @@ public final class AddNoGachaAvatarCardNotifyOuterClass {
       }
       /**
        * <pre>
-       * 可能不对 要和下面互换
+       * sus
        * </pre>
        *
        * <code>uint32 initial_level = 8;</code>
@@ -868,7 +868,7 @@ public final class AddNoGachaAvatarCardNotifyOuterClass {
       }
       /**
        * <pre>
-       * 可能不对 要和下面互换
+       * sus
        * </pre>
        *
        * <code>uint32 initial_level = 8;</code>
@@ -884,7 +884,7 @@ public final class AddNoGachaAvatarCardNotifyOuterClass {
       private int initialPromoteLevel_ ;
       /**
        * <pre>
-       * 可能不对 要和下面互换
+       *sus
        * </pre>
        *
        * <code>uint32 initial_promote_level = 9;</code>
@@ -896,7 +896,7 @@ public final class AddNoGachaAvatarCardNotifyOuterClass {
       }
       /**
        * <pre>
-       * 可能不对 要和下面互换
+       *sus
        * </pre>
        *
        * <code>uint32 initial_promote_level = 9;</code>
@@ -911,7 +911,7 @@ public final class AddNoGachaAvatarCardNotifyOuterClass {
       }
       /**
        * <pre>
-       * 可能不对 要和下面互换
+       *sus
        * </pre>
        *
        * <code>uint32 initial_promote_level = 9;</code>

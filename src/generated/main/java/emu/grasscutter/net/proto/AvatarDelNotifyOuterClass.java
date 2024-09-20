@@ -19,16 +19,28 @@ public final class AvatarDelNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * sus
+     * </pre>
+     *
      * <code>repeated uint64 avatar_guid_list = 4;</code>
      * @return A list containing the avatarGuidList.
      */
     java.util.List<java.lang.Long> getAvatarGuidListList();
     /**
+     * <pre>
+     * sus
+     * </pre>
+     *
      * <code>repeated uint64 avatar_guid_list = 4;</code>
      * @return The count of avatarGuidList.
      */
     int getAvatarGuidListCount();
     /**
+     * <pre>
+     * sus
+     * </pre>
+     *
      * <code>repeated uint64 avatar_guid_list = 4;</code>
      * @param index The index of the element to return.
      * @return The avatarGuidList at the given index.
@@ -38,8 +50,6 @@ public final class AvatarDelNotifyOuterClass {
   /**
    * <pre>
    * CmdId: 24313
-   * obf: FDHLDCFBKNJ
-   * 这里可能解的不对
    * </pre>
    *
    * Protobuf type {@code AvatarDelNotify}
@@ -147,6 +157,10 @@ public final class AvatarDelNotifyOuterClass {
     public static final int AVATAR_GUID_LIST_FIELD_NUMBER = 4;
     private com.google.protobuf.Internal.LongList avatarGuidList_;
     /**
+     * <pre>
+     * sus
+     * </pre>
+     *
      * <code>repeated uint64 avatar_guid_list = 4;</code>
      * @return A list containing the avatarGuidList.
      */
@@ -156,6 +170,10 @@ public final class AvatarDelNotifyOuterClass {
       return avatarGuidList_;
     }
     /**
+     * <pre>
+     * sus
+     * </pre>
+     *
      * <code>repeated uint64 avatar_guid_list = 4;</code>
      * @return The count of avatarGuidList.
      */
@@ -163,6 +181,10 @@ public final class AvatarDelNotifyOuterClass {
       return avatarGuidList_.size();
     }
     /**
+     * <pre>
+     * sus
+     * </pre>
+     *
      * <code>repeated uint64 avatar_guid_list = 4;</code>
      * @param index The index of the element to return.
      * @return The avatarGuidList at the given index.
@@ -347,8 +369,6 @@ public final class AvatarDelNotifyOuterClass {
     /**
      * <pre>
      * CmdId: 24313
-     * obf: FDHLDCFBKNJ
-     * 这里可能解的不对
      * </pre>
      *
      * Protobuf type {@code AvatarDelNotify}
@@ -518,6 +538,10 @@ public final class AvatarDelNotifyOuterClass {
          }
       }
       /**
+       * <pre>
+       * sus
+       * </pre>
+       *
        * <code>repeated uint64 avatar_guid_list = 4;</code>
        * @return A list containing the avatarGuidList.
        */
@@ -527,6 +551,10 @@ public final class AvatarDelNotifyOuterClass {
                  java.util.Collections.unmodifiableList(avatarGuidList_) : avatarGuidList_;
       }
       /**
+       * <pre>
+       * sus
+       * </pre>
+       *
        * <code>repeated uint64 avatar_guid_list = 4;</code>
        * @return The count of avatarGuidList.
        */
@@ -534,6 +562,10 @@ public final class AvatarDelNotifyOuterClass {
         return avatarGuidList_.size();
       }
       /**
+       * <pre>
+       * sus
+       * </pre>
+       *
        * <code>repeated uint64 avatar_guid_list = 4;</code>
        * @param index The index of the element to return.
        * @return The avatarGuidList at the given index.
@@ -542,6 +574,10 @@ public final class AvatarDelNotifyOuterClass {
         return avatarGuidList_.getLong(index);
       }
       /**
+       * <pre>
+       * sus
+       * </pre>
+       *
        * <code>repeated uint64 avatar_guid_list = 4;</code>
        * @param index The index to set the value at.
        * @param value The avatarGuidList to set.
@@ -555,6 +591,10 @@ public final class AvatarDelNotifyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * sus
+       * </pre>
+       *
        * <code>repeated uint64 avatar_guid_list = 4;</code>
        * @param value The avatarGuidList to add.
        * @return This builder for chaining.
@@ -566,6 +606,10 @@ public final class AvatarDelNotifyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * sus
+       * </pre>
+       *
        * <code>repeated uint64 avatar_guid_list = 4;</code>
        * @param values The avatarGuidList to add.
        * @return This builder for chaining.
@@ -579,6 +623,10 @@ public final class AvatarDelNotifyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * sus
+       * </pre>
+       *
        * <code>repeated uint64 avatar_guid_list = 4;</code>
        * @return This builder for chaining.
        */

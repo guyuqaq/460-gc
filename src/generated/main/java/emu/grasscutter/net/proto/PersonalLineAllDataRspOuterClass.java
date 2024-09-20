@@ -20,7 +20,7 @@ public final class PersonalLineAllDataRspOuterClass {
 
     /**
      * <pre>
-     * sus 
+     * sus
      * </pre>
      *
      * <code>repeated uint32 can_be_unlocked_personal_line_list = 1;</code>
@@ -29,7 +29,7 @@ public final class PersonalLineAllDataRspOuterClass {
     java.util.List<java.lang.Integer> getCanBeUnlockedPersonalLineListList();
     /**
      * <pre>
-     * sus 
+     * sus
      * </pre>
      *
      * <code>repeated uint32 can_be_unlocked_personal_line_list = 1;</code>
@@ -38,7 +38,7 @@ public final class PersonalLineAllDataRspOuterClass {
     int getCanBeUnlockedPersonalLineListCount();
     /**
      * <pre>
-     * sus 
+     * sus
      * </pre>
      *
      * <code>repeated uint32 can_be_unlocked_personal_line_list = 1;</code>
@@ -119,25 +119,16 @@ public final class PersonalLineAllDataRspOuterClass {
     int getCurFinishedDailyTaskCount();
 
     /**
-     * <pre>
-     * </pre>
-     *
      * <code>repeated uint32 BPBOJKLJAGA = 13;</code>
      * @return A list containing the bPBOJKLJAGA.
      */
     java.util.List<java.lang.Integer> getBPBOJKLJAGAList();
     /**
-     * <pre>
-     * </pre>
-     *
      * <code>repeated uint32 BPBOJKLJAGA = 13;</code>
      * @return The count of bPBOJKLJAGA.
      */
     int getBPBOJKLJAGACount();
     /**
-     * <pre>
-     * </pre>
-     *
      * <code>repeated uint32 BPBOJKLJAGA = 13;</code>
      * @param index The index of the element to return.
      * @return The bPBOJKLJAGA at the given index.
@@ -333,7 +324,7 @@ public final class PersonalLineAllDataRspOuterClass {
     private com.google.protobuf.Internal.IntList canBeUnlockedPersonalLineList_;
     /**
      * <pre>
-     * sus 
+     * sus
      * </pre>
      *
      * <code>repeated uint32 can_be_unlocked_personal_line_list = 1;</code>
@@ -346,7 +337,7 @@ public final class PersonalLineAllDataRspOuterClass {
     }
     /**
      * <pre>
-     * sus 
+     * sus
      * </pre>
      *
      * <code>repeated uint32 can_be_unlocked_personal_line_list = 1;</code>
@@ -357,7 +348,7 @@ public final class PersonalLineAllDataRspOuterClass {
     }
     /**
      * <pre>
-     * sus 
+     * sus
      * </pre>
      *
      * <code>repeated uint32 can_be_unlocked_personal_line_list = 1;</code>
@@ -485,9 +476,6 @@ public final class PersonalLineAllDataRspOuterClass {
     public static final int BPBOJKLJAGA_FIELD_NUMBER = 13;
     private com.google.protobuf.Internal.IntList bPBOJKLJAGA_;
     /**
-     * <pre>
-     * </pre>
-     *
      * <code>repeated uint32 BPBOJKLJAGA = 13;</code>
      * @return A list containing the bPBOJKLJAGA.
      */
@@ -497,9 +485,6 @@ public final class PersonalLineAllDataRspOuterClass {
       return bPBOJKLJAGA_;
     }
     /**
-     * <pre>
-     * </pre>
-     *
      * <code>repeated uint32 BPBOJKLJAGA = 13;</code>
      * @return The count of bPBOJKLJAGA.
      */
@@ -507,9 +492,6 @@ public final class PersonalLineAllDataRspOuterClass {
       return bPBOJKLJAGA_.size();
     }
     /**
-     * <pre>
-     * </pre>
-     *
      * <code>repeated uint32 BPBOJKLJAGA = 13;</code>
      * @param index The index of the element to return.
      * @return The bPBOJKLJAGA at the given index.
@@ -1058,7 +1040,7 @@ public final class PersonalLineAllDataRspOuterClass {
       }
       /**
        * <pre>
-       * sus 
+       * sus
        * </pre>
        *
        * <code>repeated uint32 can_be_unlocked_personal_line_list = 1;</code>
@@ -1071,7 +1053,7 @@ public final class PersonalLineAllDataRspOuterClass {
       }
       /**
        * <pre>
-       * sus 
+       * sus
        * </pre>
        *
        * <code>repeated uint32 can_be_unlocked_personal_line_list = 1;</code>
@@ -1082,7 +1064,7 @@ public final class PersonalLineAllDataRspOuterClass {
       }
       /**
        * <pre>
-       * sus 
+       * sus
        * </pre>
        *
        * <code>repeated uint32 can_be_unlocked_personal_line_list = 1;</code>
@@ -1094,7 +1076,7 @@ public final class PersonalLineAllDataRspOuterClass {
       }
       /**
        * <pre>
-       * sus 
+       * sus
        * </pre>
        *
        * <code>repeated uint32 can_be_unlocked_personal_line_list = 1;</code>
@@ -1111,7 +1093,7 @@ public final class PersonalLineAllDataRspOuterClass {
       }
       /**
        * <pre>
-       * sus 
+       * sus
        * </pre>
        *
        * <code>repeated uint32 can_be_unlocked_personal_line_list = 1;</code>
@@ -1126,7 +1108,7 @@ public final class PersonalLineAllDataRspOuterClass {
       }
       /**
        * <pre>
-       * sus 
+       * sus
        * </pre>
        *
        * <code>repeated uint32 can_be_unlocked_personal_line_list = 1;</code>
@@ -1143,7 +1125,7 @@ public final class PersonalLineAllDataRspOuterClass {
       }
       /**
        * <pre>
-       * sus 
+       * sus
        * </pre>
        *
        * <code>repeated uint32 can_be_unlocked_personal_line_list = 1;</code>
@@ -1604,9 +1586,6 @@ public final class PersonalLineAllDataRspOuterClass {
          }
       }
       /**
-       * <pre>
-       * </pre>
-       *
        * <code>repeated uint32 BPBOJKLJAGA = 13;</code>
        * @return A list containing the bPBOJKLJAGA.
        */
@@ -1616,9 +1595,6 @@ public final class PersonalLineAllDataRspOuterClass {
                  java.util.Collections.unmodifiableList(bPBOJKLJAGA_) : bPBOJKLJAGA_;
       }
       /**
-       * <pre>
-       * </pre>
-       *
        * <code>repeated uint32 BPBOJKLJAGA = 13;</code>
        * @return The count of bPBOJKLJAGA.
        */
@@ -1626,9 +1602,6 @@ public final class PersonalLineAllDataRspOuterClass {
         return bPBOJKLJAGA_.size();
       }
       /**
-       * <pre>
-       * </pre>
-       *
        * <code>repeated uint32 BPBOJKLJAGA = 13;</code>
        * @param index The index of the element to return.
        * @return The bPBOJKLJAGA at the given index.
@@ -1637,9 +1610,6 @@ public final class PersonalLineAllDataRspOuterClass {
         return bPBOJKLJAGA_.getInt(index);
       }
       /**
-       * <pre>
-       * </pre>
-       *
        * <code>repeated uint32 BPBOJKLJAGA = 13;</code>
        * @param index The index to set the value at.
        * @param value The bPBOJKLJAGA to set.
@@ -1653,9 +1623,6 @@ public final class PersonalLineAllDataRspOuterClass {
         return this;
       }
       /**
-       * <pre>
-       * </pre>
-       *
        * <code>repeated uint32 BPBOJKLJAGA = 13;</code>
        * @param value The bPBOJKLJAGA to add.
        * @return This builder for chaining.
@@ -1667,9 +1634,6 @@ public final class PersonalLineAllDataRspOuterClass {
         return this;
       }
       /**
-       * <pre>
-       * </pre>
-       *
        * <code>repeated uint32 BPBOJKLJAGA = 13;</code>
        * @param values The bPBOJKLJAGA to add.
        * @return This builder for chaining.
@@ -1683,9 +1647,6 @@ public final class PersonalLineAllDataRspOuterClass {
         return this;
       }
       /**
-       * <pre>
-       * </pre>
-       *
        * <code>repeated uint32 BPBOJKLJAGA = 13;</code>
        * @return This builder for chaining.
        */
