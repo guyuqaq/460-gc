@@ -833,11 +833,11 @@ public final class PacketOpcodes {
     public static final int EvtAvatarEnterFocusNotify = 29042;
 	public static final int EvtAvatarSitDownNotify = 22638;
 	public static final int EvtAvatarUpdateFocusNotify = 28630;
-    public static final int EvtAvatarExitFocusNotify = 8696; // or 20290,8696
-	public static final int EvtBulletDeactiveNotify = 20290; // or 20290,8696
+    public static final int EvtAvatarExitFocusNotify = 20290; // or 20290,8696
+	public static final int EvtBulletDeactiveNotify = 8696; // or 20290,8696
 	public static final int EvtBulletMoveNotify = 1957;
-	public static final int DelTeamEntityNotify = 29714; // or 29714,26259
-	public static final int DelScenePlayTeamEntityNotify = 26259; // or 29714,26259
+	public static final int DelTeamEntityNotify = 26259; // or 29714,26259
+	public static final int DelScenePlayTeamEntityNotify = 29714; // or 29714,26259
 	public static final int SceneEntityMoveNotify = 7026; // or 7026,22008
 	public static final int SceneEntityMoveReq = 22008; // or 7026,22008 
 	public static final int BeginCameraSceneLookWithTemplateNotify = 458;
@@ -855,10 +855,14 @@ public final class PacketOpcodes {
 	public static final int OneoffGatherPointDetectorDataNotify = 28309;
 	public static final int AllSeenMonsterNotify = 22273; // or 22273,7320
 	public static final int AllWidgetBackgroundActiveStateNotify = 24647;
-
 	public static final int AnimatorForceSetAirMoveNotify = 1023;
 	public static final int EvtAnimatorParameterNotify = 25798;
 	public static final int EvtAnimatorStateChangedNotify = 23733;
+
+	public static final int PersonalLineNewUnlockNotify = 1;
+
+	public static final int BackRebornGalleryReq = 1;
+	public static final int BackRebornGalleryRsp = 1;
 
 	public static final int AvatarExpeditionAllDataReq = 1;
 	public static final int AvatarExpeditionAllDataRsp = 1;
@@ -1064,8 +1068,6 @@ public final class PacketOpcodes {
 	public static final int AvatarFollowRouteNotify = 1;
 	public static final int BackPlayCustomDungeonOfficialReq = 1;
 	public static final int BackPlayCustomDungeonOfficialRsp = 1;
-	public static final int BackRebornGalleryReq = 1;
-	public static final int BackRebornGalleryRsp = 1;
 	public static final int BartenderCancelLevelReq = 1;
 	public static final int BartenderCancelLevelRsp = 1;
 	public static final int BartenderCancelOrderReq = 1;
@@ -1930,7 +1932,6 @@ public final class PacketOpcodes {
 	public static final int PerformOperationNotify = 1;
 	public static final int PersistentDungeonSwitchAvatarReq = 1;
 	public static final int PersistentDungeonSwitchAvatarRsp = 1;
-	public static final int PersonalLineNewUnlockNotify = 1;
 	public static final int PhotoActivityClientViewReq = 1;
 	public static final int PhotoActivityClientViewRsp = 1;
 	public static final int PhotoActivityFinishReq = 1;
@@ -2458,4 +2459,3 @@ public final class PacketOpcodes {
 	public static final int WorldAllRoutineTypeNotify = 1;
 	public static final int WorldOwnerBlossomScheduleInfoNotify = 1;
 }
-//2460
