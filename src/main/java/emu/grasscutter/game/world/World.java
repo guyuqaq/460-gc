@@ -266,12 +266,19 @@ public class World implements Iterable<Player> {
                                         .build()));
             }
         }
-
+        // 处理传入的场景 ID 为 0 的情况
+        if (newSceneId != 0){
+            Grasscutter.getLogger().error("[UID: " + player.getUid() + "] newSceneId: " + newSceneId);
+        }
+        else
+        {
+            newSceneId = 3;
+            Grasscutter.getLogger().warn("[UID: " + player.getUid() + "] fixedSceneId: " + newSceneId);
+        }
         // Add to scene
         player.setSceneId(newSceneId);
+        
         // Debug log
-        Grasscutter.getLogger().info("[UID: " + player.getUid() + "] newSceneId: " + newSceneId);
-
         Scene scene = this.getSceneById(player.getSceneId());
     
         if (scene != null) {
