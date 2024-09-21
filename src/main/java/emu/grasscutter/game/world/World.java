@@ -216,6 +216,17 @@ public class World implements Iterable<Player> {
             }
         }
 
+        // 处理 SceneId 为 0 的情况
+        if (player.getSceneId() != 0){
+            Grasscutter.getLogger().info("[UID: " + player.getUid() + "] SceneId: " + player.getSceneId());
+        }
+        else
+        {
+            // 设置默认场景为 3
+            player.setSceneId(3);
+            Grasscutter.getLogger().warn("[UID: " + player.getUid() + "] fixedSceneId: " + player.getSceneId());
+        }
+
         // Add to scene
         Scene scene = this.getSceneById(player.getSceneId());
         scene.addPlayer(player);
@@ -266,20 +277,19 @@ public class World implements Iterable<Player> {
                                         .build()));
             }
         }
-        // 处理传入的场景 ID 为 0 的情况
+        // 处理传入的 newSceneId 为 0 的情况
         if (newSceneId != 0){
-            Grasscutter.getLogger().error("[UID: " + player.getUid() + "] newSceneId: " + newSceneId);
+            Grasscutter.getLogger().info("[UID: " + player.getUid() + "] newSceneId: " + newSceneId);
         }
         else
         {
             newSceneId = 3;
             Grasscutter.getLogger().warn("[UID: " + player.getUid() + "] fixedSceneId: " + newSceneId);
         }
+
         // Add to scene
         player.setSceneId(newSceneId);
-        
-        // Debug log
-        Scene scene = this.getSceneById(player.getSceneId());
+       Scene scene = this.getSceneById(player.getSceneId());
     
         if (scene != null) {
             scene.addPlayer(player);
@@ -312,6 +322,17 @@ public class World implements Iterable<Player> {
         // Deregister
         this.getPlayers().remove(player);
         player.setWorld(null);
+
+        // 处理 SceneId 为 0 的情况
+        if (player.getSceneId() != 0){
+            Grasscutter.getLogger().info("[UID: " + player.getUid() + "] SceneId: " + player.getSceneId());
+        }
+        else
+        {
+            // 设置默认场景为 3
+            player.setSceneId(3);
+            Grasscutter.getLogger().warn("[UID: " + player.getUid() + "] fixedSceneId: " + player.getSceneId());
+        }
 
         // Remove from scene
         Scene scene = this.getSceneById(player.getSceneId());
