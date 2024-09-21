@@ -1,5 +1,6 @@
 package emu.grasscutter.game.systems;
 
+import emu.grasscutter.Grasscutter;
 import emu.grasscutter.game.CoopRequest;
 import emu.grasscutter.game.player.Player;
 import emu.grasscutter.game.player.Player.SceneLoadState;
@@ -100,33 +101,38 @@ public class MultiplayerSystem extends BaseGameSystem {
         requester.sendPacket(new PacketPlayerEnterSceneNotify(requester, hostPlayer, EnterType.ENTER_TYPE_OTHER, EnterReason.TeamJoin, hostPlayer.getScene().getId(), hostPlayer.getPosition()));
     }
 
-    public boolean leaveCoop(Player player) {
-        // Make sure player is not in home
-        if (player.getCurHomeWorld().isInHome(player)) {
-            return false;
-        }
-
-        // Make sure player's world is multiplayer
-        if (!player.getWorld().isMultiplayer()) {
-            return false;
-        }
-
-        // Make sure everyone's scene is loaded
-        for (Player p : player.getWorld().getPlayers()) {
-            if (p.getSceneLoadState() != SceneLoadState.LOADED) {
-                return false;
-            }
-        }
-
-        // Create new world for player
-        World world = new World(player);
-        world.addPlayer(player);
-
-        // Packet
-        player.sendPacket(new PacketPlayerEnterSceneNotify(player, EnterType.ENTER_TYPE_SELF, EnterReason.TeamBack, player.getScene().getId(), player.getPosition()));
-
-        return true;
+public boolean leaveCoop(Player player) {
+    // Make sure player is not in home
+    if (player.getCurHomeWorld().isInHome(player)) {
+       Grasscutter.getLogger().info("[UID: " + player.getUid() + "] is in home, cannot leave coop.");
+        return false;
     }
+
+    // Make sure player's world is multiplayer
+    if (!player.getWorld().isMultiplayer()) {
+        Grasscutter.getLogger().info("[UID: " + player.getUid() + "] is not in a multiplayer world.");
+        return false;
+    }
+
+    // Make sure everyone's scene is loaded
+    for (Player p : player.getWorld().getPlayers()) {
+        if (p.getSceneLoadState() != SceneLoadState.LOADED) {
+            Grasscutter.getLogger().warn("[UID: " + p.getUid() + "] scene is not fully loaded. State: " + p.getSceneLoadState());
+            return false;
+        }
+    }
+
+    // Create new world for player
+    World world = new World(player);
+    world.addPlayer(player);
+
+    Grasscutter.getLogger().info("[UID: " + player.getUid() + "] is leaving multiplayer mode. New world created. Scene ID: " + player.getScene().getId() + ", Position: " + player.getPosition());
+
+    // Packet
+    player.sendPacket(new PacketPlayerEnterSceneNotify(player, EnterType.ENTER_TYPE_SELF, EnterReason.TeamBack, player.getScene().getId(), player.getPosition()));
+
+    return true;
+}
 
     public boolean kickPlayer(Player player, int targetUid) {
         // Make sure player's world is multiplayer and that player is owner

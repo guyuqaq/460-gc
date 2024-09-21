@@ -87,10 +87,10 @@ public final class PlayerEnterSceneNotifyOuterClass {
     int getDungeonId();
 
     /**
-     * <code>uint32 GPJHAEEMCBK = 12;</code>
-     * @return The gPJHAEEMCBK.
+     * <code>uint32 prev_scene_id = 12;</code>
+     * @return The prevSceneId.
      */
-    int getGPJHAEEMCBK();
+    int getPrevSceneId();
 
     /**
      * <code>.Vector pos = 13;</code>
@@ -152,10 +152,6 @@ public final class PlayerEnterSceneNotifyOuterClass {
     int getEKIBACGBHCJ();
 
     /**
-     * <pre>
-     * sus
-     * </pre>
-     *
      * <code>uint32 enter_reason = 464;</code>
      * @return The enterReason.
      */
@@ -213,10 +209,6 @@ public final class PlayerEnterSceneNotifyOuterClass {
     boolean getIsFirstLoginEnterScene();
 
     /**
-     * <pre>
-     * sus
-     * </pre>
-     *
      * <code>uint32 world_type = 1148;</code>
      * @return The worldType.
      */
@@ -241,10 +233,10 @@ public final class PlayerEnterSceneNotifyOuterClass {
     int getCreatePlayerUid();
 
     /**
-     * <code>uint32 prev_scene_id = 1870;</code>
-     * @return The prevSceneId.
+     * <code>uint32 dungeon_prev_scene_id = 1870;</code>
+     * @return The dungeonPrevSceneId.
      */
-    int getPrevSceneId();
+    int getDungeonPrevSceneId();
   }
   /**
    * <pre>
@@ -366,7 +358,7 @@ public final class PlayerEnterSceneNotifyOuterClass {
             }
             case 96: {
 
-              gPJHAEEMCBK_ = input.readUInt32();
+              prevSceneId_ = input.readUInt32();
               break;
             }
             case 106: {
@@ -483,7 +475,7 @@ public final class PlayerEnterSceneNotifyOuterClass {
             }
             case 14960: {
 
-              prevSceneId_ = input.readUInt32();
+              dungeonPrevSceneId_ = input.readUInt32();
               break;
             }
             default: {
@@ -641,15 +633,15 @@ public final class PlayerEnterSceneNotifyOuterClass {
       return dungeonId_;
     }
 
-    public static final int GPJHAEEMCBK_FIELD_NUMBER = 12;
-    private int gPJHAEEMCBK_;
+    public static final int PREV_SCENE_ID_FIELD_NUMBER = 12;
+    private int prevSceneId_;
     /**
-     * <code>uint32 GPJHAEEMCBK = 12;</code>
-     * @return The gPJHAEEMCBK.
+     * <code>uint32 prev_scene_id = 12;</code>
+     * @return The prevSceneId.
      */
     @java.lang.Override
-    public int getGPJHAEEMCBK() {
-      return gPJHAEEMCBK_;
+    public int getPrevSceneId() {
+      return prevSceneId_;
     }
 
     public static final int POS_FIELD_NUMBER = 13;
@@ -759,10 +751,6 @@ public final class PlayerEnterSceneNotifyOuterClass {
     public static final int ENTER_REASON_FIELD_NUMBER = 464;
     private int enterReason_;
     /**
-     * <pre>
-     * sus
-     * </pre>
-     *
      * <code>uint32 enter_reason = 464;</code>
      * @return The enterReason.
      */
@@ -863,10 +851,6 @@ public final class PlayerEnterSceneNotifyOuterClass {
     public static final int WORLD_TYPE_FIELD_NUMBER = 1148;
     private int worldType_;
     /**
-     * <pre>
-     * sus
-     * </pre>
-     *
      * <code>uint32 world_type = 1148;</code>
      * @return The worldType.
      */
@@ -924,15 +908,15 @@ public final class PlayerEnterSceneNotifyOuterClass {
       return createPlayerUid_;
     }
 
-    public static final int PREV_SCENE_ID_FIELD_NUMBER = 1870;
-    private int prevSceneId_;
+    public static final int DUNGEON_PREV_SCENE_ID_FIELD_NUMBER = 1870;
+    private int dungeonPrevSceneId_;
     /**
-     * <code>uint32 prev_scene_id = 1870;</code>
-     * @return The prevSceneId.
+     * <code>uint32 dungeon_prev_scene_id = 1870;</code>
+     * @return The dungeonPrevSceneId.
      */
     @java.lang.Override
-    public int getPrevSceneId() {
-      return prevSceneId_;
+    public int getDungeonPrevSceneId() {
+      return dungeonPrevSceneId_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -978,8 +962,8 @@ public final class PlayerEnterSceneNotifyOuterClass {
       if (dungeonId_ != 0) {
         output.writeUInt32(11, dungeonId_);
       }
-      if (gPJHAEEMCBK_ != 0) {
-        output.writeUInt32(12, gPJHAEEMCBK_);
+      if (prevSceneId_ != 0) {
+        output.writeUInt32(12, prevSceneId_);
       }
       if (pos_ != null) {
         output.writeMessage(13, getPos());
@@ -1023,8 +1007,8 @@ public final class PlayerEnterSceneNotifyOuterClass {
       if (createPlayerUid_ != 0) {
         output.writeUInt32(1696, createPlayerUid_);
       }
-      if (prevSceneId_ != 0) {
-        output.writeUInt32(1870, prevSceneId_);
+      if (dungeonPrevSceneId_ != 0) {
+        output.writeUInt32(1870, dungeonPrevSceneId_);
       }
       unknownFields.writeTo(output);
     }
@@ -1077,9 +1061,9 @@ public final class PlayerEnterSceneNotifyOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(11, dungeonId_);
       }
-      if (gPJHAEEMCBK_ != 0) {
+      if (prevSceneId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(12, gPJHAEEMCBK_);
+          .computeUInt32Size(12, prevSceneId_);
       }
       if (pos_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -1136,9 +1120,9 @@ public final class PlayerEnterSceneNotifyOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(1696, createPlayerUid_);
       }
-      if (prevSceneId_ != 0) {
+      if (dungeonPrevSceneId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(1870, prevSceneId_);
+          .computeUInt32Size(1870, dungeonPrevSceneId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1174,8 +1158,8 @@ public final class PlayerEnterSceneNotifyOuterClass {
           != other.getEnterSceneToken()) return false;
       if (getDungeonId()
           != other.getDungeonId()) return false;
-      if (getGPJHAEEMCBK()
-          != other.getGPJHAEEMCBK()) return false;
+      if (getPrevSceneId()
+          != other.getPrevSceneId()) return false;
       if (hasPos() != other.hasPos()) return false;
       if (hasPos()) {
         if (!getPos()
@@ -1218,8 +1202,8 @@ public final class PlayerEnterSceneNotifyOuterClass {
           .equals(other.getSceneTransaction())) return false;
       if (getCreatePlayerUid()
           != other.getCreatePlayerUid()) return false;
-      if (getPrevSceneId()
-          != other.getPrevSceneId()) return false;
+      if (getDungeonPrevSceneId()
+          != other.getDungeonPrevSceneId()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1253,8 +1237,8 @@ public final class PlayerEnterSceneNotifyOuterClass {
       hash = (53 * hash) + getEnterSceneToken();
       hash = (37 * hash) + DUNGEON_ID_FIELD_NUMBER;
       hash = (53 * hash) + getDungeonId();
-      hash = (37 * hash) + GPJHAEEMCBK_FIELD_NUMBER;
-      hash = (53 * hash) + getGPJHAEEMCBK();
+      hash = (37 * hash) + PREV_SCENE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getPrevSceneId();
       if (hasPos()) {
         hash = (37 * hash) + POS_FIELD_NUMBER;
         hash = (53 * hash) + getPos().hashCode();
@@ -1294,8 +1278,8 @@ public final class PlayerEnterSceneNotifyOuterClass {
       hash = (53 * hash) + getSceneTransaction().hashCode();
       hash = (37 * hash) + CREATE_PLAYER_UID_FIELD_NUMBER;
       hash = (53 * hash) + getCreatePlayerUid();
-      hash = (37 * hash) + PREV_SCENE_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getPrevSceneId();
+      hash = (37 * hash) + DUNGEON_PREV_SCENE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getDungeonPrevSceneId();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1454,7 +1438,7 @@ public final class PlayerEnterSceneNotifyOuterClass {
 
         dungeonId_ = 0;
 
-        gPJHAEEMCBK_ = 0;
+        prevSceneId_ = 0;
 
         if (posBuilder_ == null) {
           pos_ = null;
@@ -1504,7 +1488,7 @@ public final class PlayerEnterSceneNotifyOuterClass {
 
         createPlayerUid_ = 0;
 
-        prevSceneId_ = 0;
+        dungeonPrevSceneId_ = 0;
 
         return this;
       }
@@ -1549,7 +1533,7 @@ public final class PlayerEnterSceneNotifyOuterClass {
         result.sceneTagIdList_ = sceneTagIdList_;
         result.enterSceneToken_ = enterSceneToken_;
         result.dungeonId_ = dungeonId_;
-        result.gPJHAEEMCBK_ = gPJHAEEMCBK_;
+        result.prevSceneId_ = prevSceneId_;
         if (posBuilder_ == null) {
           result.pos_ = pos_;
         } else {
@@ -1584,7 +1568,7 @@ public final class PlayerEnterSceneNotifyOuterClass {
         result.worldType_ = worldType_;
         result.sceneTransaction_ = sceneTransaction_;
         result.createPlayerUid_ = createPlayerUid_;
-        result.prevSceneId_ = prevSceneId_;
+        result.dungeonPrevSceneId_ = dungeonPrevSceneId_;
         onBuilt();
         return result;
       }
@@ -1664,8 +1648,8 @@ public final class PlayerEnterSceneNotifyOuterClass {
         if (other.getDungeonId() != 0) {
           setDungeonId(other.getDungeonId());
         }
-        if (other.getGPJHAEEMCBK() != 0) {
-          setGPJHAEEMCBK(other.getGPJHAEEMCBK());
+        if (other.getPrevSceneId() != 0) {
+          setPrevSceneId(other.getPrevSceneId());
         }
         if (other.hasPos()) {
           mergePos(other.getPos());
@@ -1710,8 +1694,8 @@ public final class PlayerEnterSceneNotifyOuterClass {
         if (other.getCreatePlayerUid() != 0) {
           setCreatePlayerUid(other.getCreatePlayerUid());
         }
-        if (other.getPrevSceneId() != 0) {
-          setPrevSceneId(other.getPrevSceneId());
+        if (other.getDungeonPrevSceneId() != 0) {
+          setDungeonPrevSceneId(other.getDungeonPrevSceneId());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2127,33 +2111,33 @@ public final class PlayerEnterSceneNotifyOuterClass {
         return this;
       }
 
-      private int gPJHAEEMCBK_ ;
+      private int prevSceneId_ ;
       /**
-       * <code>uint32 GPJHAEEMCBK = 12;</code>
-       * @return The gPJHAEEMCBK.
+       * <code>uint32 prev_scene_id = 12;</code>
+       * @return The prevSceneId.
        */
       @java.lang.Override
-      public int getGPJHAEEMCBK() {
-        return gPJHAEEMCBK_;
+      public int getPrevSceneId() {
+        return prevSceneId_;
       }
       /**
-       * <code>uint32 GPJHAEEMCBK = 12;</code>
-       * @param value The gPJHAEEMCBK to set.
+       * <code>uint32 prev_scene_id = 12;</code>
+       * @param value The prevSceneId to set.
        * @return This builder for chaining.
        */
-      public Builder setGPJHAEEMCBK(int value) {
+      public Builder setPrevSceneId(int value) {
         
-        gPJHAEEMCBK_ = value;
+        prevSceneId_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 GPJHAEEMCBK = 12;</code>
+       * <code>uint32 prev_scene_id = 12;</code>
        * @return This builder for chaining.
        */
-      public Builder clearGPJHAEEMCBK() {
+      public Builder clearPrevSceneId() {
         
-        gPJHAEEMCBK_ = 0;
+        prevSceneId_ = 0;
         onChanged();
         return this;
       }
@@ -2545,10 +2529,6 @@ public final class PlayerEnterSceneNotifyOuterClass {
 
       private int enterReason_ ;
       /**
-       * <pre>
-       * sus
-       * </pre>
-       *
        * <code>uint32 enter_reason = 464;</code>
        * @return The enterReason.
        */
@@ -2557,10 +2537,6 @@ public final class PlayerEnterSceneNotifyOuterClass {
         return enterReason_;
       }
       /**
-       * <pre>
-       * sus
-       * </pre>
-       *
        * <code>uint32 enter_reason = 464;</code>
        * @param value The enterReason to set.
        * @return This builder for chaining.
@@ -2572,10 +2548,6 @@ public final class PlayerEnterSceneNotifyOuterClass {
         return this;
       }
       /**
-       * <pre>
-       * sus
-       * </pre>
-       *
        * <code>uint32 enter_reason = 464;</code>
        * @return This builder for chaining.
        */
@@ -2976,10 +2948,6 @@ public final class PlayerEnterSceneNotifyOuterClass {
 
       private int worldType_ ;
       /**
-       * <pre>
-       * sus
-       * </pre>
-       *
        * <code>uint32 world_type = 1148;</code>
        * @return The worldType.
        */
@@ -2988,10 +2956,6 @@ public final class PlayerEnterSceneNotifyOuterClass {
         return worldType_;
       }
       /**
-       * <pre>
-       * sus
-       * </pre>
-       *
        * <code>uint32 world_type = 1148;</code>
        * @param value The worldType to set.
        * @return This builder for chaining.
@@ -3003,10 +2967,6 @@ public final class PlayerEnterSceneNotifyOuterClass {
         return this;
       }
       /**
-       * <pre>
-       * sus
-       * </pre>
-       *
        * <code>uint32 world_type = 1148;</code>
        * @return This builder for chaining.
        */
@@ -3124,33 +3084,33 @@ public final class PlayerEnterSceneNotifyOuterClass {
         return this;
       }
 
-      private int prevSceneId_ ;
+      private int dungeonPrevSceneId_ ;
       /**
-       * <code>uint32 prev_scene_id = 1870;</code>
-       * @return The prevSceneId.
+       * <code>uint32 dungeon_prev_scene_id = 1870;</code>
+       * @return The dungeonPrevSceneId.
        */
       @java.lang.Override
-      public int getPrevSceneId() {
-        return prevSceneId_;
+      public int getDungeonPrevSceneId() {
+        return dungeonPrevSceneId_;
       }
       /**
-       * <code>uint32 prev_scene_id = 1870;</code>
-       * @param value The prevSceneId to set.
+       * <code>uint32 dungeon_prev_scene_id = 1870;</code>
+       * @param value The dungeonPrevSceneId to set.
        * @return This builder for chaining.
        */
-      public Builder setPrevSceneId(int value) {
+      public Builder setDungeonPrevSceneId(int value) {
         
-        prevSceneId_ = value;
+        dungeonPrevSceneId_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 prev_scene_id = 1870;</code>
+       * <code>uint32 dungeon_prev_scene_id = 1870;</code>
        * @return This builder for chaining.
        */
-      public Builder clearPrevSceneId() {
+      public Builder clearDungeonPrevSceneId() {
         
-        prevSceneId_ = 0;
+        dungeonPrevSceneId_ = 0;
         onChanged();
         return this;
       }
@@ -3224,24 +3184,24 @@ public final class PlayerEnterSceneNotifyOuterClass {
       "\n\034PlayerEnterSceneNotify.proto\032\022MapLayer" +
       "Info.proto\032\014Vector.proto\032\017EnterType.prot" +
       "o\032\021CGMAOKBGOHO.proto\032\021GJNOBDELMLF.proto\"" +
-      "\207\005\n\026PlayerEnterSceneNotify\022\022\n\nis_skip_ui" +
+      "\221\005\n\026PlayerEnterSceneNotify\022\022\n\nis_skip_ui" +
       "\030\001 \001(\010\022\031\n\010prev_pos\030\002 \001(\0132\007.Vector\022\023\n\013wor" +
       "ld_level\030\003 \001(\r\022\022\n\ntarget_uid\030\004 \001(\r\022\030\n\020sc" +
       "ene_begin_time\030\005 \001(\004\022\031\n\021scene_tag_id_lis" +
       "t\030\006 \003(\r\022\031\n\021enter_scene_token\030\007 \001(\r\022\022\n\ndu" +
-      "ngeon_id\030\013 \001(\r\022\023\n\013GPJHAEEMCBK\030\014 \001(\r\022\024\n\003p" +
-      "os\030\r \001(\0132\007.Vector\022\020\n\010scene_id\030\016 \001(\r\022\030\n\004t" +
-      "ype\030\017 \001(\0162\n.EnterType\022!\n\013DFNDKDAFEJO\030` \001" +
-      "(\0132\014.CGMAOKBGOHO\022\020\n\007text_id\030\322\002 \001(\r\022\024\n\013EK" +
-      "IBACGBHCJ\030\346\002 \001(\r\022\025\n\014enter_reason\030\320\003 \001(\r\022" +
-      "\"\n\013BFPGBNDFGBO\030\251\005 \001(\0132\014.GJNOBDELMLF\022&\n\016m" +
-      "ap_layer_info\030\344\005 \001(\0132\r.MapLayerInfo\022\"\n\020d" +
-      "ungeon_prev_pos\030\210\006 \001(\0132\007.Vector\022#\n\032is_fi" +
-      "rst_login_enter_scene\030\260\006 \001(\010\022\023\n\nworld_ty" +
-      "pe\030\374\010 \001(\r\022\032\n\021scene_transaction\030\324\013 \001(\t\022\032\n" +
-      "\021create_player_uid\030\240\r \001(\r\022\026\n\rprev_scene_" +
-      "id\030\316\016 \001(\rB\033\n\031emu.grasscutter.net.protob\006" +
-      "proto3"
+      "ngeon_id\030\013 \001(\r\022\025\n\rprev_scene_id\030\014 \001(\r\022\024\n" +
+      "\003pos\030\r \001(\0132\007.Vector\022\020\n\010scene_id\030\016 \001(\r\022\030\n" +
+      "\004type\030\017 \001(\0162\n.EnterType\022!\n\013DFNDKDAFEJO\030`" +
+      " \001(\0132\014.CGMAOKBGOHO\022\020\n\007text_id\030\322\002 \001(\r\022\024\n\013" +
+      "EKIBACGBHCJ\030\346\002 \001(\r\022\025\n\014enter_reason\030\320\003 \001(" +
+      "\r\022\"\n\013BFPGBNDFGBO\030\251\005 \001(\0132\014.GJNOBDELMLF\022&\n" +
+      "\016map_layer_info\030\344\005 \001(\0132\r.MapLayerInfo\022\"\n" +
+      "\020dungeon_prev_pos\030\210\006 \001(\0132\007.Vector\022#\n\032is_" +
+      "first_login_enter_scene\030\260\006 \001(\010\022\023\n\nworld_" +
+      "type\030\374\010 \001(\r\022\032\n\021scene_transaction\030\324\013 \001(\t\022" +
+      "\032\n\021create_player_uid\030\240\r \001(\r\022\036\n\025dungeon_p" +
+      "rev_scene_id\030\316\016 \001(\rB\033\n\031emu.grasscutter.n" +
+      "et.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3257,7 +3217,7 @@ public final class PlayerEnterSceneNotifyOuterClass {
     internal_static_PlayerEnterSceneNotify_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_PlayerEnterSceneNotify_descriptor,
-        new java.lang.String[] { "IsSkipUi", "PrevPos", "WorldLevel", "TargetUid", "SceneBeginTime", "SceneTagIdList", "EnterSceneToken", "DungeonId", "GPJHAEEMCBK", "Pos", "SceneId", "Type", "DFNDKDAFEJO", "TextId", "EKIBACGBHCJ", "EnterReason", "BFPGBNDFGBO", "MapLayerInfo", "DungeonPrevPos", "IsFirstLoginEnterScene", "WorldType", "SceneTransaction", "CreatePlayerUid", "PrevSceneId", });
+        new java.lang.String[] { "IsSkipUi", "PrevPos", "WorldLevel", "TargetUid", "SceneBeginTime", "SceneTagIdList", "EnterSceneToken", "DungeonId", "PrevSceneId", "Pos", "SceneId", "Type", "DFNDKDAFEJO", "TextId", "EKIBACGBHCJ", "EnterReason", "BFPGBNDFGBO", "MapLayerInfo", "DungeonPrevPos", "IsFirstLoginEnterScene", "WorldType", "SceneTransaction", "CreatePlayerUid", "DungeonPrevSceneId", });
     emu.grasscutter.net.proto.MapLayerInfoOuterClass.getDescriptor();
     emu.grasscutter.net.proto.VectorOuterClass.getDescriptor();
     emu.grasscutter.net.proto.EnterTypeOuterClass.getDescriptor();
