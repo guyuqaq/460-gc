@@ -289,16 +289,8 @@ public class World implements Iterable<Player> {
 
         // Add to scene
         player.setSceneId(newSceneId);
-       Scene scene = this.getSceneById(player.getSceneId());
-    
-        if (scene != null) {
-            scene.addPlayer(player);
-        } 
-        else 
-        {
-            // Debug log
-            Grasscutter.getLogger().warn("[UID: " + player.getUid() + "] scene is null, SceneId: " + player.getSceneId());
-        }
+        Scene scene = this.getSceneById(player.getSceneId());
+        scene.addPlayer(player);
 
         // Info packet for other players
         if (this.getPlayers().size() > 1) {
