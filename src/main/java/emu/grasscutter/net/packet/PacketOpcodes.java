@@ -2414,7 +2414,6 @@ public final class PacketOpcodes {
 	public static final int WidgetQuickHitTreeReq = 1;
 	public static final int WidgetQuickHitTreeRsp = 1;
 	public static final int WidgetReportReq = 1;
-    public static final int WidgetReportReq = 22;
 	public static final int WidgetReportRsp = 1;
 	public static final int WidgetUpdateExtraCDReq = 1;
 	public static final int WidgetUpdateExtraCDRsp = 1;
