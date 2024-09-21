@@ -270,7 +270,7 @@ public class World implements Iterable<Player> {
         // Add to scene
         player.setSceneId(newSceneId);
         // Debug log
-        Grasscutter.getLogger().Info("[UID: " + player.getUid() + "] newSceneId: " + newSceneId);
+        Grasscutter.getLogger().info("[UID: " + player.getUid() + "] newSceneId: " + newSceneId);
 
         Scene scene = this.getSceneById(player.getSceneId());
     
