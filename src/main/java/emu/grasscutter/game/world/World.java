@@ -218,13 +218,13 @@ public class World implements Iterable<Player> {
 
         // 处理 SceneId 为 0 的情况
         if (player.getSceneId() != 0){
-            Grasscutter.getLogger().info("[UID: " + player.getUid() + "] SceneId: " + player.getSceneId());
+            Grasscutter.getLogger().info("[UID: " + player.getUid() + "] 进入 SceneId: " + player.getSceneId());
         }
         else
         {
             // 设置默认场景为 3
             player.setSceneId(3);
-            Grasscutter.getLogger().warn("[UID: " + player.getUid() + "] fixedSceneId: " + player.getSceneId());
+            Grasscutter.getLogger().warn("[UID: " + player.getUid() + "] 进入 SceneId: 0 ，已修正为默认值" + player.getSceneId());
         }
 
         // Add to scene
@@ -279,12 +279,12 @@ public class World implements Iterable<Player> {
         }
         // 处理传入的 newSceneId 为 0 的情况
         if (newSceneId != 0){
-            Grasscutter.getLogger().info("[UID: " + player.getUid() + "] newSceneId: " + newSceneId);
+            Grasscutter.getLogger().info("[UID: " + player.getUid() + "] 进入 newSceneId: " + newSceneId);
         }
         else
         {
             newSceneId = 3;
-            Grasscutter.getLogger().warn("[UID: " + player.getUid() + "] fixedSceneId: " + newSceneId);
+            Grasscutter.getLogger().warn("[UID: " + player.getUid() + "] 进入 newSceneId: 0 ，已修正为默认值 " + newSceneId);
         }
 
         // Add to scene
@@ -325,13 +325,13 @@ public class World implements Iterable<Player> {
 
         // 处理 SceneId 为 0 的情况
         if (player.getSceneId() != 0){
-            Grasscutter.getLogger().info("[UID: " + player.getUid() + "] SceneId: " + player.getSceneId());
+            Grasscutter.getLogger().info("[UID: " + player.getUid() + "] 移除 SceneId: " + player.getSceneId());
         }
         else
         {
             // 设置默认场景为 3
             player.setSceneId(3);
-            Grasscutter.getLogger().warn("[UID: " + player.getUid() + "] fixedSceneId: " + player.getSceneId());
+            Grasscutter.getLogger().warn("[UID: " + player.getUid() + "] 移除 SceneId: 0 ，已修正为默认值 " + player.getSceneId());
         }
 
         // Remove from scene

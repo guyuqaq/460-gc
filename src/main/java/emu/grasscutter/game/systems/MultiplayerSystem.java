@@ -126,14 +126,14 @@ public boolean leaveCoop(Player player) {
     world.addPlayer(player);
 
     // 处理 SceneId 为 0 的情况
-    if (player.getSceneId() != 0){
-        Grasscutter.getLogger().info("[UID: " + player.getUid() + "] SceneId: " + player.getSceneId());
+    if (player.getScene().getId() != 0){
+        Grasscutter.getLogger().info("[UID: " + player.getUid() + "] 离开 SceneId: " + player.getScene().getId());
     }
     else
     {
         // 设置默认场景为 3
         player.setSceneId(3);
-        Grasscutter.getLogger().warn("[UID: " + player.getUid() + "] fixedSceneId: " + player.getSceneId());
+        Grasscutter.getLogger().warn("[UID: " + player.getUid() + "] 离开 SceneId: 0 ，已修正为默认值 " + player.getScene().getId());
     }
 
     // Packet
