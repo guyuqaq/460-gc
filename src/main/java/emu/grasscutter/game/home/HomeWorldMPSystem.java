@@ -191,7 +191,6 @@ public class HomeWorldMPSystem extends BaseGameSystem {
         // Make sure everyone's scene is loaded
         for (var p : player.getWorld().getPlayers()) {
             if (p.getSceneLoadState() != Player.SceneLoadState.LOADED) {
-                Grasscutter.getLogger().warn("[UID: " + p.getUid() + "] scene is not fully loaded. State: " + p.getSceneLoadState());
                 return false;
             }
         }

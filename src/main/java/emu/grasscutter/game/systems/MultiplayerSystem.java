@@ -106,20 +106,17 @@ public class MultiplayerSystem extends BaseGameSystem {
 public boolean leaveCoop(Player player) {
     // Make sure player is not in home
     if (player.getCurHomeWorld().isInHome(player)) {
-       Grasscutter.getLogger().info("[UID: " + player.getUid() + "] is in home, cannot leave coop.");
         return false;
     }
 
     // Make sure player's world is multiplayer
     if (!player.getWorld().isMultiplayer()) {
-        Grasscutter.getLogger().info("[UID: " + player.getUid() + "] is not in a multiplayer world.");
         return false;
     }
 
     // Make sure everyone's scene is loaded
     for (Player p : player.getWorld().getPlayers()) {
         if (p.getSceneLoadState() != SceneLoadState.LOADED) {
-            Grasscutter.getLogger().warn("[UID: " + p.getUid() + "] scene is not fully loaded. State: " + p.getSceneLoadState());
             return false;
         }
     }
@@ -128,7 +125,16 @@ public boolean leaveCoop(Player player) {
     World world = new World(player);
     world.addPlayer(player);
 
-    Grasscutter.getLogger().info("[UID: " + player.getUid() + "] is leaving multiplayer mode. New world created. Scene ID: " + player.getScene().getId() + ", Position: " + player.getPosition());
+    // 处理 SceneId 为 0 的情况
+    if (player.getSceneId() != 0){
+        Grasscutter.getLogger().info("[UID: " + player.getUid() + "] SceneId: " + player.getSceneId());
+    }
+    else
+    {
+        // 设置默认场景为 3
+        player.setSceneId(3);
+        Grasscutter.getLogger().warn("[UID: " + player.getUid() + "] fixedSceneId: " + player.getSceneId());
+    }
 
     // Packet
     player.sendPacket(new PacketPlayerEnterSceneNotify(player, EnterType.ENTER_TYPE_SELF, EnterReason.TeamBack, player.getScene().getId(), player.getPosition()));
