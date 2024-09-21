@@ -11,6 +11,8 @@ import emu.grasscutter.net.proto.PlayerApplyEnterMpResultNotifyOuterClass;
 import emu.grasscutter.server.game.*;
 import emu.grasscutter.server.packet.send.*;
 
+import static emu.grasscutter.config.Configuration.GAME_INFO;
+
 public class MultiplayerSystem extends BaseGameSystem {
 
     public MultiplayerSystem(GameServer server) {
@@ -73,7 +75,7 @@ public class MultiplayerSystem extends BaseGameSystem {
         request.getRequester().sendPacket(new PacketPlayerApplyEnterMpResultNotify(hostPlayer, isAgreed, PlayerApplyEnterMpResultNotifyOuterClass.PlayerApplyEnterMpResultNotify.Reason.REASON_PLAYER_JUDGE));
 
         // Declined
-        if (!isAgreed) {
+        if (!GAME_INFO.isCoop || !isAgreed) {
             return;
         }
 

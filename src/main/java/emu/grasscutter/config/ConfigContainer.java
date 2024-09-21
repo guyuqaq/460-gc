@@ -167,6 +167,7 @@ public class ConfigContainer {
     public static class Game {
         public boolean useWindy = false; //是否添加水印
         public boolean loginUnlockMap = false; //开局是否默认解锁全图
+        public boolean isCoop = true; //游戏内是否允许联机
         public String bindAddress = "0.0.0.0";
         public int bindPort = 22102;
 

@@ -1,5 +1,6 @@
 package emu.grasscutter.game.home;
 
+import emu.grasscutter.Grasscutter;
 import emu.grasscutter.game.player.Player;
 import emu.grasscutter.game.props.EnterReason;
 import emu.grasscutter.game.world.Position;
@@ -190,6 +191,7 @@ public class HomeWorldMPSystem extends BaseGameSystem {
         // Make sure everyone's scene is loaded
         for (var p : player.getWorld().getPlayers()) {
             if (p.getSceneLoadState() != Player.SceneLoadState.LOADED) {
+                Grasscutter.getLogger().warn("[UID: " + p.getUid() + "] scene is not fully loaded. State: " + p.getSceneLoadState());
                 return false;
             }
         }

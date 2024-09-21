@@ -1469,9 +1469,7 @@ public class Player implements DatabaseObject<Player>, PlayerHook, FieldFetch {
         this.setForceLegacyDrops(GAME_OPTIONS.forceLegacyDrops);
 
         // Multiplayer setting
-        //this.setProperty(PlayerProperty.PROP_PLAYER_MP_SETTING_TYPE, this.getMpSetting().getNumber(), false);
-        //this.setProperty(PlayerProperty.PROP_IS_MP_MODE_AVAILABLE, 1, false);
-        this.setProperty(PlayerProperty.PROP_PLAYER_MP_SETTING_TYPE, 0, false);
+        this.setProperty(PlayerProperty.PROP_PLAYER_MP_SETTING_TYPE, this.getMpSetting().getNumber(), false);
         this.setProperty(PlayerProperty.PROP_IS_MP_MODE_AVAILABLE, 1, false);
 
         // Execute daily reset logic if this is a new day.

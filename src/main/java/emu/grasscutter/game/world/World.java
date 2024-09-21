@@ -267,8 +267,15 @@ public class World implements Iterable<Player> {
             }
         }
 
+        if (newSceneId != null) {
+            Grasscutter.getLogger().warn("[UID: " + player.getUid() + "] newSceneId: " + newSceneId);
+        } else {
+            Grasscutter.getLogger().warn("[UID: " + player.getUid() + "] newSceneId is null.");
+        }
+
         // Add to scene
         player.setSceneId(newSceneId);
+
         Scene scene = this.getSceneById(player.getSceneId());
         scene.addPlayer(player);
 
