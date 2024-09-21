@@ -227,7 +227,6 @@ public class World implements Iterable<Player> {
     }
 
     public synchronized void addPlayer(Player player, int newSceneId) {
-        Grasscutter.getLogger().warn("[UID: " + player.getUid() + "] newSceneId: " + newSceneId);
         // Check if player already in
         if (this.getPlayers().contains(player)) {
             return;
@@ -270,9 +269,19 @@ public class World implements Iterable<Player> {
 
         // Add to scene
         player.setSceneId(newSceneId);
+        // Debug log
+        Grasscutter.getLogger().Info("[UID: " + player.getUid() + "] newSceneId: " + newSceneId);
 
         Scene scene = this.getSceneById(player.getSceneId());
-        scene.addPlayer(player);
+    
+        if (scene != null) {
+            scene.addPlayer(player);
+        } 
+        else 
+        {
+            // Debug log
+            Grasscutter.getLogger().warn("[UID: " + player.getUid() + "] scene is null, SceneId: " + player.getSceneId());
+        }
 
         // Info packet for other players
         if (this.getPlayers().size() > 1) {
