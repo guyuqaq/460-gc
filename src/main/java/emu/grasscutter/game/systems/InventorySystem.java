@@ -493,7 +493,7 @@ public class InventorySystem extends BaseGameSystem {
 
         // Calculate
         int oldRefineLevel = weapon.getRefinement();
-        int targetRefineLevel = 4;
+        int targetRefineLevel = Math.min(oldRefineLevel + feed.getRefinement() + 1, 4);
         int moraCost = 0;
 
         try {
