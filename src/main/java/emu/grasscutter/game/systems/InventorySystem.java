@@ -510,7 +510,8 @@ public class InventorySystem extends BaseGameSystem {
         // Get
         weapon.setRefinement(targetRefineLevel);
         weapon.save();
-
+        Grasscutter.getLogger().info("Weapon refined. New refinement level: " + targetRefineLevel);
+        
         // Avatar
         Avatar avatar =
                 weapon.getEquipCharacter() > 0
