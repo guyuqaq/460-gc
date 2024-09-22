@@ -15,6 +15,6 @@ public class HandlerWeaponAwakenReq extends PacketHandler {
         session
                 .getServer()
                 .getInventorySystem()
-                .refineWeapon(session.getPlayer(), req.getTargetWeaponGuid(), req.getItemGuid(), req.getAffixLevelListList());
+                .refineWeapon(session.getPlayer(), req.getTargetWeaponGuid(), req.getItemGuid());
     }
 }
