@@ -42,7 +42,7 @@ public final class WeaponAwakenReqOuterClass {
     long getAffixLevelList(int index);
 
     /**
-     * <code>uint64 item_guid = 2;</code>
+     * <code>uint64 item_guid = 12;</code>
      * @return The itemGuid.
      */
     long getItemGuid();
@@ -98,11 +98,6 @@ public final class WeaponAwakenReqOuterClass {
             case 0:
               done = true;
               break;
-            case 16: {
-
-              itemGuid_ = input.readUInt64();
-              break;
-            }
             case 24: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 affixLevelList_ = newLongList();
@@ -122,6 +117,11 @@ public final class WeaponAwakenReqOuterClass {
                 affixLevelList_.addLong(input.readUInt64());
               }
               input.popLimit(limit);
+              break;
+            }
+            case 96: {
+
+              itemGuid_ = input.readUInt64();
               break;
             }
             case 120: {
@@ -203,10 +203,10 @@ public final class WeaponAwakenReqOuterClass {
     }
     private int affixLevelListMemoizedSerializedSize = -1;
 
-    public static final int ITEM_GUID_FIELD_NUMBER = 2;
+    public static final int ITEM_GUID_FIELD_NUMBER = 12;
     private long itemGuid_;
     /**
-     * <code>uint64 item_guid = 2;</code>
+     * <code>uint64 item_guid = 12;</code>
      * @return The itemGuid.
      */
     @java.lang.Override
@@ -229,15 +229,15 @@ public final class WeaponAwakenReqOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
-      if (itemGuid_ != 0L) {
-        output.writeUInt64(2, itemGuid_);
-      }
       if (getAffixLevelListList().size() > 0) {
         output.writeUInt32NoTag(26);
         output.writeUInt32NoTag(affixLevelListMemoizedSerializedSize);
       }
       for (int i = 0; i < affixLevelList_.size(); i++) {
         output.writeUInt64NoTag(affixLevelList_.getLong(i));
+      }
+      if (itemGuid_ != 0L) {
+        output.writeUInt64(12, itemGuid_);
       }
       if (targetWeaponGuid_ != 0L) {
         output.writeUInt64(15, targetWeaponGuid_);
@@ -251,10 +251,6 @@ public final class WeaponAwakenReqOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (itemGuid_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(2, itemGuid_);
-      }
       {
         int dataSize = 0;
         for (int i = 0; i < affixLevelList_.size(); i++) {
@@ -268,6 +264,10 @@ public final class WeaponAwakenReqOuterClass {
               .computeInt32SizeNoTag(dataSize);
         }
         affixLevelListMemoizedSerializedSize = dataSize;
+      }
+      if (itemGuid_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(12, itemGuid_);
       }
       if (targetWeaponGuid_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
@@ -698,7 +698,7 @@ public final class WeaponAwakenReqOuterClass {
 
       private long itemGuid_ ;
       /**
-       * <code>uint64 item_guid = 2;</code>
+       * <code>uint64 item_guid = 12;</code>
        * @return The itemGuid.
        */
       @java.lang.Override
@@ -706,7 +706,7 @@ public final class WeaponAwakenReqOuterClass {
         return itemGuid_;
       }
       /**
-       * <code>uint64 item_guid = 2;</code>
+       * <code>uint64 item_guid = 12;</code>
        * @param value The itemGuid to set.
        * @return This builder for chaining.
        */
@@ -717,7 +717,7 @@ public final class WeaponAwakenReqOuterClass {
         return this;
       }
       /**
-       * <code>uint64 item_guid = 2;</code>
+       * <code>uint64 item_guid = 12;</code>
        * @return This builder for chaining.
        */
       public Builder clearItemGuid() {
@@ -795,7 +795,7 @@ public final class WeaponAwakenReqOuterClass {
     java.lang.String[] descriptorData = {
       "\n\025WeaponAwakenReq.proto\"Z\n\017WeaponAwakenR" +
       "eq\022\032\n\022target_weapon_guid\030\017 \001(\004\022\030\n\020affix_" +
-      "level_list\030\003 \003(\004\022\021\n\titem_guid\030\002 \001(\004B\033\n\031e" +
+      "level_list\030\003 \003(\004\022\021\n\titem_guid\030\014 \001(\004B\033\n\031e" +
       "mu.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
