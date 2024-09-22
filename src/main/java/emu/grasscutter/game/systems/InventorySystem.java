@@ -509,7 +509,6 @@ public class InventorySystem extends BaseGameSystem {
 
         // Get
         weapon.setRefinement(targetRefineLevel);
-        weapon.getAffixes().setLevel(affixLevelList.get(targetRefineLevel));
         weapon.save();
 
         // Avatar
