@@ -462,10 +462,10 @@ public class InventorySystem extends BaseGameSystem {
 
     public void refineWeapon(Player player, long targetGuid, long feedGuid) {
         // 处理传入 feedGuid 为 0 
-        if ( feedGuid == 0) {
-            feedGuid = targetGuid ;
-            Grasscutter.getLogger().warn("[UID: " + player.getUid() + "] 精炼消耗 WeaponId: 0，已修正为 " + feedGuid);
-        }
+        //if ( feedGuid == 0) {
+           // feedGuid = targetGuid ;
+            //Grasscutter.getLogger().warn("[UID: " + player.getUid() + "] 精炼消耗 WeaponId: 0，已修正为 " + feedGuid);
+        //}
         GameItem weapon = player.getInventory().getItemByGuid(targetGuid);
         GameItem feed = player.getInventory().getItemByGuid(feedGuid);
 
