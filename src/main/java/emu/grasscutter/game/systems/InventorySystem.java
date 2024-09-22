@@ -460,7 +460,7 @@ public class InventorySystem extends BaseGameSystem {
         return leftoverOreList;
     }
 
-    public void refineWeapon(Player player, long targetGuid, Long feedGuid) {
+    public void refineWeapon(Player player, long targetGuid, long feedGuid) {
         Grasscutter.getLogger().info("refineWeapon targetGuid: " + targetGuid + ",feedGuid: " + feedGuid);
 
         GameItem weapon = player.getInventory().getItemByGuid(targetGuid);
