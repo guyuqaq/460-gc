@@ -470,7 +470,7 @@ public class InventorySystem extends BaseGameSystem {
         GameItem feed = player.getInventory().getItemByGuid(feedGuid);
 
         // Sanity checks
-        if (weapon == null || feed == null || !feed.isDestroyable()) {
+        if (weapon == null || feed == null) {
             return;
         }
 
@@ -510,7 +510,7 @@ public class InventorySystem extends BaseGameSystem {
         }
 
         // Consume weapon
-        player.getInventory().removeItem(feed, 1);
+        //player.getInventory().removeItem(feed, 1);
 
         // Get
         weapon.setRefinement(targetRefineLevel);
