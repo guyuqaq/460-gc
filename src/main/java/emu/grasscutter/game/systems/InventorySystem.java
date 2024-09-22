@@ -461,26 +461,26 @@ public class InventorySystem extends BaseGameSystem {
     }
 
     public void refineWeapon(Player player, long targetGuid, long feedGuid) {
-        Grasscutter.getLogger().info("refineWeapon targetGuid: " + targetGuid + ",feedGuid: " + feedGuid);
-        if ( feedGuid == 0) feedGuid = targetGuid ;
+        // 处理传入 feedGuid 为 0 
+        if ( feedGuid == 0) {
+            feedGuid = targetGuid ;
+            Grasscutter.getLogger().warn("[UID: " + player.getUid() + "] 精炼消耗 WeaponId: 0，已修正为 " + feedGuid);
+        }
         GameItem weapon = player.getInventory().getItemByGuid(targetGuid);
         GameItem feed = player.getInventory().getItemByGuid(feedGuid);
 
         // Sanity checks
         if (weapon == null || feed == null || !feed.isDestroyable()) {
-            Grasscutter.getLogger().info("Weapon or feed is null or feed is not destroyable. Weapon: " + weapon + ", Feed: " + feed + "isDestroyable"+ feed.isDestroyable());
             return;
         }
 
         if (weapon.getItemData().getAwakenMaterial() == 0) {
             if (weapon.getItemType() != ItemType.ITEM_WEAPON || weapon.getItemId() != feed.getItemId()) {
-                Grasscutter.getLogger().info("Awaken material check failed. Weapon ID: " + weapon.getItemId() + ", Feed ID: " + feed.getItemId());
                 return;
             }
         } else {
             if (weapon.getItemType() != ItemType.ITEM_WEAPON
                     || weapon.getItemData().getAwakenMaterial() != feed.getItemId()) {
-                    Grasscutter.getLogger().info("Awaken material check failed. Weapon ID: " + weapon.getItemId() + ", Expected feed ID: " + weapon.getItemData().getAwakenMaterial());
                 return;
             }
         }
@@ -488,7 +488,6 @@ public class InventorySystem extends BaseGameSystem {
         if (weapon.getRefinement() >= 4
                 || weapon.getAffixes() == null
                 || weapon.getAffixes().size() == 0) {
-                 Grasscutter.getLogger().info("Weapon refinement is already maxed or affixes are not available. Refinement: " + weapon.getRefinement() + ", Affix size: " + (weapon.getAffixes() == null ? "null" : weapon.getAffixes().size()));
             return;
         }
 
@@ -516,7 +515,6 @@ public class InventorySystem extends BaseGameSystem {
         // Get
         weapon.setRefinement(targetRefineLevel);
         weapon.save();
-        Grasscutter.getLogger().info("Weapon refined. New refinement level: " + targetRefineLevel);
 
         // Avatar
         Avatar avatar =
