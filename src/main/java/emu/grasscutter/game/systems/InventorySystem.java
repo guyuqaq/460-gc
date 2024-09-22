@@ -460,7 +460,7 @@ public class InventorySystem extends BaseGameSystem {
         return leftoverOreList;
     }
 
-    public void refineWeapon(Player player, long targetGuid, long feedGuid) {
+    public void refineWeapon(Player player, long targetGuid, int feedGuid, List<Long> affixLevelList) {
         GameItem weapon = player.getInventory().getItemByGuid(targetGuid);
         GameItem feed = player.getInventory().getItemByGuid(feedGuid);
 
@@ -509,6 +509,7 @@ public class InventorySystem extends BaseGameSystem {
 
         // Get
         weapon.setRefinement(targetRefineLevel);
+        weapon.getAffixes().setLevel(affixLevelList.get(targetRefineLevel));
         weapon.save();
 
         // Avatar
