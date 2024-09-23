@@ -19,12 +19,6 @@ public final class GetSceneNpcPositionReqOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 scene_id = 3;</code>
-     * @return The sceneId.
-     */
-    int getSceneId();
-
-    /**
      * <code>repeated uint32 npc_id_list = 10;</code>
      * @return A list containing the npcIdList.
      */
@@ -40,11 +34,16 @@ public final class GetSceneNpcPositionReqOuterClass {
      * @return The npcIdList at the given index.
      */
     int getNpcIdList(int index);
+
+    /**
+     * <code>uint32 scene_id = 3;</code>
+     * @return The sceneId.
+     */
+    int getSceneId();
   }
   /**
    * <pre>
-   * CmdId: 24678
-   * Obf: IGIIAPAAIJH
+   * CmdId: 3810
    * </pre>
    *
    * Protobuf type {@code GetSceneNpcPositionReq}
@@ -154,17 +153,6 @@ public final class GetSceneNpcPositionReqOuterClass {
               emu.grasscutter.net.proto.GetSceneNpcPositionReqOuterClass.GetSceneNpcPositionReq.class, emu.grasscutter.net.proto.GetSceneNpcPositionReqOuterClass.GetSceneNpcPositionReq.Builder.class);
     }
 
-    public static final int SCENE_ID_FIELD_NUMBER = 3;
-    private int sceneId_;
-    /**
-     * <code>uint32 scene_id = 3;</code>
-     * @return The sceneId.
-     */
-    @java.lang.Override
-    public int getSceneId() {
-      return sceneId_;
-    }
-
     public static final int NPC_ID_LIST_FIELD_NUMBER = 10;
     private com.google.protobuf.Internal.IntList npcIdList_;
     /**
@@ -192,6 +180,17 @@ public final class GetSceneNpcPositionReqOuterClass {
       return npcIdList_.getInt(index);
     }
     private int npcIdListMemoizedSerializedSize = -1;
+
+    public static final int SCENE_ID_FIELD_NUMBER = 3;
+    private int sceneId_;
+    /**
+     * <code>uint32 scene_id = 3;</code>
+     * @return The sceneId.
+     */
+    @java.lang.Override
+    public int getSceneId() {
+      return sceneId_;
+    }
 
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
@@ -260,10 +259,10 @@ public final class GetSceneNpcPositionReqOuterClass {
       }
       emu.grasscutter.net.proto.GetSceneNpcPositionReqOuterClass.GetSceneNpcPositionReq other = (emu.grasscutter.net.proto.GetSceneNpcPositionReqOuterClass.GetSceneNpcPositionReq) obj;
 
-      if (getSceneId()
-          != other.getSceneId()) return false;
       if (!getNpcIdListList()
           .equals(other.getNpcIdListList())) return false;
+      if (getSceneId()
+          != other.getSceneId()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -275,12 +274,12 @@ public final class GetSceneNpcPositionReqOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + SCENE_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getSceneId();
       if (getNpcIdListCount() > 0) {
         hash = (37 * hash) + NPC_ID_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getNpcIdListList().hashCode();
       }
+      hash = (37 * hash) + SCENE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSceneId();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -378,8 +377,7 @@ public final class GetSceneNpcPositionReqOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 24678
-     * Obf: IGIIAPAAIJH
+     * CmdId: 3810
      * </pre>
      *
      * Protobuf type {@code GetSceneNpcPositionReq}
@@ -419,10 +417,10 @@ public final class GetSceneNpcPositionReqOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        sceneId_ = 0;
-
         npcIdList_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000001);
+        sceneId_ = 0;
+
         return this;
       }
 
@@ -450,12 +448,12 @@ public final class GetSceneNpcPositionReqOuterClass {
       public emu.grasscutter.net.proto.GetSceneNpcPositionReqOuterClass.GetSceneNpcPositionReq buildPartial() {
         emu.grasscutter.net.proto.GetSceneNpcPositionReqOuterClass.GetSceneNpcPositionReq result = new emu.grasscutter.net.proto.GetSceneNpcPositionReqOuterClass.GetSceneNpcPositionReq(this);
         int from_bitField0_ = bitField0_;
-        result.sceneId_ = sceneId_;
         if (((bitField0_ & 0x00000001) != 0)) {
           npcIdList_.makeImmutable();
           bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.npcIdList_ = npcIdList_;
+        result.sceneId_ = sceneId_;
         onBuilt();
         return result;
       }
@@ -504,9 +502,6 @@ public final class GetSceneNpcPositionReqOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.GetSceneNpcPositionReqOuterClass.GetSceneNpcPositionReq other) {
         if (other == emu.grasscutter.net.proto.GetSceneNpcPositionReqOuterClass.GetSceneNpcPositionReq.getDefaultInstance()) return this;
-        if (other.getSceneId() != 0) {
-          setSceneId(other.getSceneId());
-        }
         if (!other.npcIdList_.isEmpty()) {
           if (npcIdList_.isEmpty()) {
             npcIdList_ = other.npcIdList_;
@@ -516,6 +511,9 @@ public final class GetSceneNpcPositionReqOuterClass {
             npcIdList_.addAll(other.npcIdList_);
           }
           onChanged();
+        }
+        if (other.getSceneId() != 0) {
+          setSceneId(other.getSceneId());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -546,37 +544,6 @@ public final class GetSceneNpcPositionReqOuterClass {
         return this;
       }
       private int bitField0_;
-
-      private int sceneId_ ;
-      /**
-       * <code>uint32 scene_id = 3;</code>
-       * @return The sceneId.
-       */
-      @java.lang.Override
-      public int getSceneId() {
-        return sceneId_;
-      }
-      /**
-       * <code>uint32 scene_id = 3;</code>
-       * @param value The sceneId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSceneId(int value) {
-        
-        sceneId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 scene_id = 3;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearSceneId() {
-        
-        sceneId_ = 0;
-        onChanged();
-        return this;
-      }
 
       private com.google.protobuf.Internal.IntList npcIdList_ = emptyIntList();
       private void ensureNpcIdListIsMutable() {
@@ -656,6 +623,37 @@ public final class GetSceneNpcPositionReqOuterClass {
         onChanged();
         return this;
       }
+
+      private int sceneId_ ;
+      /**
+       * <code>uint32 scene_id = 3;</code>
+       * @return The sceneId.
+       */
+      @java.lang.Override
+      public int getSceneId() {
+        return sceneId_;
+      }
+      /**
+       * <code>uint32 scene_id = 3;</code>
+       * @param value The sceneId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSceneId(int value) {
+        
+        sceneId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 scene_id = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSceneId() {
+        
+        sceneId_ = 0;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -724,8 +722,8 @@ public final class GetSceneNpcPositionReqOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\034GetSceneNpcPositionReq.proto\"?\n\026GetSce" +
-      "neNpcPositionReq\022\020\n\010scene_id\030\003 \001(\r\022\023\n\013np" +
-      "c_id_list\030\n \003(\rB\033\n\031emu.grasscutter.net.p" +
+      "neNpcPositionReq\022\023\n\013npc_id_list\030\n \003(\r\022\020\n" +
+      "\010scene_id\030\003 \001(\rB\033\n\031emu.grasscutter.net.p" +
       "rotob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -737,7 +735,7 @@ public final class GetSceneNpcPositionReqOuterClass {
     internal_static_GetSceneNpcPositionReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_GetSceneNpcPositionReq_descriptor,
-        new java.lang.String[] { "SceneId", "NpcIdList", });
+        new java.lang.String[] { "NpcIdList", "SceneId", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

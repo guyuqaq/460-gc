@@ -19,45 +19,44 @@ public final class GetSceneNpcPositionRspOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .NpcPositionInfo npc_info_list = 3;</code>
+     * <code>repeated .NpcPositionInfo npc_info_list = 2;</code>
      */
     java.util.List<emu.grasscutter.net.proto.NpcPositionInfoOuterClass.NpcPositionInfo> 
         getNpcInfoListList();
     /**
-     * <code>repeated .NpcPositionInfo npc_info_list = 3;</code>
+     * <code>repeated .NpcPositionInfo npc_info_list = 2;</code>
      */
     emu.grasscutter.net.proto.NpcPositionInfoOuterClass.NpcPositionInfo getNpcInfoList(int index);
     /**
-     * <code>repeated .NpcPositionInfo npc_info_list = 3;</code>
+     * <code>repeated .NpcPositionInfo npc_info_list = 2;</code>
      */
     int getNpcInfoListCount();
     /**
-     * <code>repeated .NpcPositionInfo npc_info_list = 3;</code>
+     * <code>repeated .NpcPositionInfo npc_info_list = 2;</code>
      */
     java.util.List<? extends emu.grasscutter.net.proto.NpcPositionInfoOuterClass.NpcPositionInfoOrBuilder> 
         getNpcInfoListOrBuilderList();
     /**
-     * <code>repeated .NpcPositionInfo npc_info_list = 3;</code>
+     * <code>repeated .NpcPositionInfo npc_info_list = 2;</code>
      */
     emu.grasscutter.net.proto.NpcPositionInfoOuterClass.NpcPositionInfoOrBuilder getNpcInfoListOrBuilder(
         int index);
 
     /**
-     * <code>uint32 scene_id = 11;</code>
+     * <code>uint32 scene_id = 4;</code>
      * @return The sceneId.
      */
     int getSceneId();
 
     /**
-     * <code>int32 retcode = 1;</code>
+     * <code>int32 retcode = 6;</code>
      * @return The retcode.
      */
     int getRetcode();
   }
   /**
    * <pre>
-   * CmdId: 412
-   * Obf: BDFEJLKPOGK
+   * CmdId: 4331
    * </pre>
    *
    * Protobuf type {@code GetSceneNpcPositionRsp}
@@ -106,12 +105,7 @@ public final class GetSceneNpcPositionRspOuterClass {
             case 0:
               done = true;
               break;
-            case 8: {
-
-              retcode_ = input.readInt32();
-              break;
-            }
-            case 26: {
+            case 18: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 npcInfoList_ = new java.util.ArrayList<emu.grasscutter.net.proto.NpcPositionInfoOuterClass.NpcPositionInfo>();
                 mutable_bitField0_ |= 0x00000001;
@@ -120,9 +114,14 @@ public final class GetSceneNpcPositionRspOuterClass {
                   input.readMessage(emu.grasscutter.net.proto.NpcPositionInfoOuterClass.NpcPositionInfo.parser(), extensionRegistry));
               break;
             }
-            case 88: {
+            case 32: {
 
               sceneId_ = input.readUInt32();
+              break;
+            }
+            case 48: {
+
+              retcode_ = input.readInt32();
               break;
             }
             default: {
@@ -160,17 +159,17 @@ public final class GetSceneNpcPositionRspOuterClass {
               emu.grasscutter.net.proto.GetSceneNpcPositionRspOuterClass.GetSceneNpcPositionRsp.class, emu.grasscutter.net.proto.GetSceneNpcPositionRspOuterClass.GetSceneNpcPositionRsp.Builder.class);
     }
 
-    public static final int NPC_INFO_LIST_FIELD_NUMBER = 3;
+    public static final int NPC_INFO_LIST_FIELD_NUMBER = 2;
     private java.util.List<emu.grasscutter.net.proto.NpcPositionInfoOuterClass.NpcPositionInfo> npcInfoList_;
     /**
-     * <code>repeated .NpcPositionInfo npc_info_list = 3;</code>
+     * <code>repeated .NpcPositionInfo npc_info_list = 2;</code>
      */
     @java.lang.Override
     public java.util.List<emu.grasscutter.net.proto.NpcPositionInfoOuterClass.NpcPositionInfo> getNpcInfoListList() {
       return npcInfoList_;
     }
     /**
-     * <code>repeated .NpcPositionInfo npc_info_list = 3;</code>
+     * <code>repeated .NpcPositionInfo npc_info_list = 2;</code>
      */
     @java.lang.Override
     public java.util.List<? extends emu.grasscutter.net.proto.NpcPositionInfoOuterClass.NpcPositionInfoOrBuilder> 
@@ -178,21 +177,21 @@ public final class GetSceneNpcPositionRspOuterClass {
       return npcInfoList_;
     }
     /**
-     * <code>repeated .NpcPositionInfo npc_info_list = 3;</code>
+     * <code>repeated .NpcPositionInfo npc_info_list = 2;</code>
      */
     @java.lang.Override
     public int getNpcInfoListCount() {
       return npcInfoList_.size();
     }
     /**
-     * <code>repeated .NpcPositionInfo npc_info_list = 3;</code>
+     * <code>repeated .NpcPositionInfo npc_info_list = 2;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.NpcPositionInfoOuterClass.NpcPositionInfo getNpcInfoList(int index) {
       return npcInfoList_.get(index);
     }
     /**
-     * <code>repeated .NpcPositionInfo npc_info_list = 3;</code>
+     * <code>repeated .NpcPositionInfo npc_info_list = 2;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.NpcPositionInfoOuterClass.NpcPositionInfoOrBuilder getNpcInfoListOrBuilder(
@@ -200,10 +199,10 @@ public final class GetSceneNpcPositionRspOuterClass {
       return npcInfoList_.get(index);
     }
 
-    public static final int SCENE_ID_FIELD_NUMBER = 11;
+    public static final int SCENE_ID_FIELD_NUMBER = 4;
     private int sceneId_;
     /**
-     * <code>uint32 scene_id = 11;</code>
+     * <code>uint32 scene_id = 4;</code>
      * @return The sceneId.
      */
     @java.lang.Override
@@ -211,10 +210,10 @@ public final class GetSceneNpcPositionRspOuterClass {
       return sceneId_;
     }
 
-    public static final int RETCODE_FIELD_NUMBER = 1;
+    public static final int RETCODE_FIELD_NUMBER = 6;
     private int retcode_;
     /**
-     * <code>int32 retcode = 1;</code>
+     * <code>int32 retcode = 6;</code>
      * @return The retcode.
      */
     @java.lang.Override
@@ -236,14 +235,14 @@ public final class GetSceneNpcPositionRspOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (retcode_ != 0) {
-        output.writeInt32(1, retcode_);
-      }
       for (int i = 0; i < npcInfoList_.size(); i++) {
-        output.writeMessage(3, npcInfoList_.get(i));
+        output.writeMessage(2, npcInfoList_.get(i));
       }
       if (sceneId_ != 0) {
-        output.writeUInt32(11, sceneId_);
+        output.writeUInt32(4, sceneId_);
+      }
+      if (retcode_ != 0) {
+        output.writeInt32(6, retcode_);
       }
       unknownFields.writeTo(output);
     }
@@ -254,17 +253,17 @@ public final class GetSceneNpcPositionRspOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (retcode_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(1, retcode_);
-      }
       for (int i = 0; i < npcInfoList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, npcInfoList_.get(i));
+          .computeMessageSize(2, npcInfoList_.get(i));
       }
       if (sceneId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(11, sceneId_);
+          .computeUInt32Size(4, sceneId_);
+      }
+      if (retcode_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(6, retcode_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -403,8 +402,7 @@ public final class GetSceneNpcPositionRspOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 412
-     * Obf: BDFEJLKPOGK
+     * CmdId: 4331
      * </pre>
      *
      * Protobuf type {@code GetSceneNpcPositionRsp}
@@ -616,7 +614,7 @@ public final class GetSceneNpcPositionRspOuterClass {
           emu.grasscutter.net.proto.NpcPositionInfoOuterClass.NpcPositionInfo, emu.grasscutter.net.proto.NpcPositionInfoOuterClass.NpcPositionInfo.Builder, emu.grasscutter.net.proto.NpcPositionInfoOuterClass.NpcPositionInfoOrBuilder> npcInfoListBuilder_;
 
       /**
-       * <code>repeated .NpcPositionInfo npc_info_list = 3;</code>
+       * <code>repeated .NpcPositionInfo npc_info_list = 2;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.NpcPositionInfoOuterClass.NpcPositionInfo> getNpcInfoListList() {
         if (npcInfoListBuilder_ == null) {
@@ -626,7 +624,7 @@ public final class GetSceneNpcPositionRspOuterClass {
         }
       }
       /**
-       * <code>repeated .NpcPositionInfo npc_info_list = 3;</code>
+       * <code>repeated .NpcPositionInfo npc_info_list = 2;</code>
        */
       public int getNpcInfoListCount() {
         if (npcInfoListBuilder_ == null) {
@@ -636,7 +634,7 @@ public final class GetSceneNpcPositionRspOuterClass {
         }
       }
       /**
-       * <code>repeated .NpcPositionInfo npc_info_list = 3;</code>
+       * <code>repeated .NpcPositionInfo npc_info_list = 2;</code>
        */
       public emu.grasscutter.net.proto.NpcPositionInfoOuterClass.NpcPositionInfo getNpcInfoList(int index) {
         if (npcInfoListBuilder_ == null) {
@@ -646,7 +644,7 @@ public final class GetSceneNpcPositionRspOuterClass {
         }
       }
       /**
-       * <code>repeated .NpcPositionInfo npc_info_list = 3;</code>
+       * <code>repeated .NpcPositionInfo npc_info_list = 2;</code>
        */
       public Builder setNpcInfoList(
           int index, emu.grasscutter.net.proto.NpcPositionInfoOuterClass.NpcPositionInfo value) {
@@ -663,7 +661,7 @@ public final class GetSceneNpcPositionRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .NpcPositionInfo npc_info_list = 3;</code>
+       * <code>repeated .NpcPositionInfo npc_info_list = 2;</code>
        */
       public Builder setNpcInfoList(
           int index, emu.grasscutter.net.proto.NpcPositionInfoOuterClass.NpcPositionInfo.Builder builderForValue) {
@@ -677,7 +675,7 @@ public final class GetSceneNpcPositionRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .NpcPositionInfo npc_info_list = 3;</code>
+       * <code>repeated .NpcPositionInfo npc_info_list = 2;</code>
        */
       public Builder addNpcInfoList(emu.grasscutter.net.proto.NpcPositionInfoOuterClass.NpcPositionInfo value) {
         if (npcInfoListBuilder_ == null) {
@@ -693,7 +691,7 @@ public final class GetSceneNpcPositionRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .NpcPositionInfo npc_info_list = 3;</code>
+       * <code>repeated .NpcPositionInfo npc_info_list = 2;</code>
        */
       public Builder addNpcInfoList(
           int index, emu.grasscutter.net.proto.NpcPositionInfoOuterClass.NpcPositionInfo value) {
@@ -710,7 +708,7 @@ public final class GetSceneNpcPositionRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .NpcPositionInfo npc_info_list = 3;</code>
+       * <code>repeated .NpcPositionInfo npc_info_list = 2;</code>
        */
       public Builder addNpcInfoList(
           emu.grasscutter.net.proto.NpcPositionInfoOuterClass.NpcPositionInfo.Builder builderForValue) {
@@ -724,7 +722,7 @@ public final class GetSceneNpcPositionRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .NpcPositionInfo npc_info_list = 3;</code>
+       * <code>repeated .NpcPositionInfo npc_info_list = 2;</code>
        */
       public Builder addNpcInfoList(
           int index, emu.grasscutter.net.proto.NpcPositionInfoOuterClass.NpcPositionInfo.Builder builderForValue) {
@@ -738,7 +736,7 @@ public final class GetSceneNpcPositionRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .NpcPositionInfo npc_info_list = 3;</code>
+       * <code>repeated .NpcPositionInfo npc_info_list = 2;</code>
        */
       public Builder addAllNpcInfoList(
           java.lang.Iterable<? extends emu.grasscutter.net.proto.NpcPositionInfoOuterClass.NpcPositionInfo> values) {
@@ -753,7 +751,7 @@ public final class GetSceneNpcPositionRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .NpcPositionInfo npc_info_list = 3;</code>
+       * <code>repeated .NpcPositionInfo npc_info_list = 2;</code>
        */
       public Builder clearNpcInfoList() {
         if (npcInfoListBuilder_ == null) {
@@ -766,7 +764,7 @@ public final class GetSceneNpcPositionRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .NpcPositionInfo npc_info_list = 3;</code>
+       * <code>repeated .NpcPositionInfo npc_info_list = 2;</code>
        */
       public Builder removeNpcInfoList(int index) {
         if (npcInfoListBuilder_ == null) {
@@ -779,14 +777,14 @@ public final class GetSceneNpcPositionRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .NpcPositionInfo npc_info_list = 3;</code>
+       * <code>repeated .NpcPositionInfo npc_info_list = 2;</code>
        */
       public emu.grasscutter.net.proto.NpcPositionInfoOuterClass.NpcPositionInfo.Builder getNpcInfoListBuilder(
           int index) {
         return getNpcInfoListFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .NpcPositionInfo npc_info_list = 3;</code>
+       * <code>repeated .NpcPositionInfo npc_info_list = 2;</code>
        */
       public emu.grasscutter.net.proto.NpcPositionInfoOuterClass.NpcPositionInfoOrBuilder getNpcInfoListOrBuilder(
           int index) {
@@ -796,7 +794,7 @@ public final class GetSceneNpcPositionRspOuterClass {
         }
       }
       /**
-       * <code>repeated .NpcPositionInfo npc_info_list = 3;</code>
+       * <code>repeated .NpcPositionInfo npc_info_list = 2;</code>
        */
       public java.util.List<? extends emu.grasscutter.net.proto.NpcPositionInfoOuterClass.NpcPositionInfoOrBuilder> 
            getNpcInfoListOrBuilderList() {
@@ -807,14 +805,14 @@ public final class GetSceneNpcPositionRspOuterClass {
         }
       }
       /**
-       * <code>repeated .NpcPositionInfo npc_info_list = 3;</code>
+       * <code>repeated .NpcPositionInfo npc_info_list = 2;</code>
        */
       public emu.grasscutter.net.proto.NpcPositionInfoOuterClass.NpcPositionInfo.Builder addNpcInfoListBuilder() {
         return getNpcInfoListFieldBuilder().addBuilder(
             emu.grasscutter.net.proto.NpcPositionInfoOuterClass.NpcPositionInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .NpcPositionInfo npc_info_list = 3;</code>
+       * <code>repeated .NpcPositionInfo npc_info_list = 2;</code>
        */
       public emu.grasscutter.net.proto.NpcPositionInfoOuterClass.NpcPositionInfo.Builder addNpcInfoListBuilder(
           int index) {
@@ -822,7 +820,7 @@ public final class GetSceneNpcPositionRspOuterClass {
             index, emu.grasscutter.net.proto.NpcPositionInfoOuterClass.NpcPositionInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .NpcPositionInfo npc_info_list = 3;</code>
+       * <code>repeated .NpcPositionInfo npc_info_list = 2;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.NpcPositionInfoOuterClass.NpcPositionInfo.Builder> 
            getNpcInfoListBuilderList() {
@@ -845,7 +843,7 @@ public final class GetSceneNpcPositionRspOuterClass {
 
       private int sceneId_ ;
       /**
-       * <code>uint32 scene_id = 11;</code>
+       * <code>uint32 scene_id = 4;</code>
        * @return The sceneId.
        */
       @java.lang.Override
@@ -853,7 +851,7 @@ public final class GetSceneNpcPositionRspOuterClass {
         return sceneId_;
       }
       /**
-       * <code>uint32 scene_id = 11;</code>
+       * <code>uint32 scene_id = 4;</code>
        * @param value The sceneId to set.
        * @return This builder for chaining.
        */
@@ -864,7 +862,7 @@ public final class GetSceneNpcPositionRspOuterClass {
         return this;
       }
       /**
-       * <code>uint32 scene_id = 11;</code>
+       * <code>uint32 scene_id = 4;</code>
        * @return This builder for chaining.
        */
       public Builder clearSceneId() {
@@ -876,7 +874,7 @@ public final class GetSceneNpcPositionRspOuterClass {
 
       private int retcode_ ;
       /**
-       * <code>int32 retcode = 1;</code>
+       * <code>int32 retcode = 6;</code>
        * @return The retcode.
        */
       @java.lang.Override
@@ -884,7 +882,7 @@ public final class GetSceneNpcPositionRspOuterClass {
         return retcode_;
       }
       /**
-       * <code>int32 retcode = 1;</code>
+       * <code>int32 retcode = 6;</code>
        * @param value The retcode to set.
        * @return This builder for chaining.
        */
@@ -895,7 +893,7 @@ public final class GetSceneNpcPositionRspOuterClass {
         return this;
       }
       /**
-       * <code>int32 retcode = 1;</code>
+       * <code>int32 retcode = 6;</code>
        * @return This builder for chaining.
        */
       public Builder clearRetcode() {
@@ -973,8 +971,8 @@ public final class GetSceneNpcPositionRspOuterClass {
     java.lang.String[] descriptorData = {
       "\n\034GetSceneNpcPositionRsp.proto\032\025NpcPosit" +
       "ionInfo.proto\"d\n\026GetSceneNpcPositionRsp\022" +
-      "\'\n\rnpc_info_list\030\003 \003(\0132\020.NpcPositionInfo" +
-      "\022\020\n\010scene_id\030\013 \001(\r\022\017\n\007retcode\030\001 \001(\005B\033\n\031e" +
+      "\'\n\rnpc_info_list\030\002 \003(\0132\020.NpcPositionInfo" +
+      "\022\020\n\010scene_id\030\004 \001(\r\022\017\n\007retcode\030\006 \001(\005B\033\n\031e" +
       "mu.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

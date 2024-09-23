@@ -19,15 +19,14 @@ public final class HomeAvatarSummonFinishReqOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 event_id = 11;</code>
+     * <code>uint32 event_id = 1;</code>
      * @return The eventId.
      */
     int getEventId();
   }
   /**
    * <pre>
-   * CmdId: 24791
-   * Obf: OJLLDCGAIDJ
+   * CmdId: 29671
    * </pre>
    *
    * Protobuf type {@code HomeAvatarSummonFinishReq}
@@ -56,6 +55,48 @@ public final class HomeAvatarSummonFinishReqOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private HomeAvatarSummonFinishReq(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              eventId_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.HomeAvatarSummonFinishReqOuterClass.internal_static_HomeAvatarSummonFinishReq_descriptor;
@@ -69,10 +110,10 @@ public final class HomeAvatarSummonFinishReqOuterClass {
               emu.grasscutter.net.proto.HomeAvatarSummonFinishReqOuterClass.HomeAvatarSummonFinishReq.class, emu.grasscutter.net.proto.HomeAvatarSummonFinishReqOuterClass.HomeAvatarSummonFinishReq.Builder.class);
     }
 
-    public static final int EVENT_ID_FIELD_NUMBER = 11;
+    public static final int EVENT_ID_FIELD_NUMBER = 1;
     private int eventId_;
     /**
-     * <code>uint32 event_id = 11;</code>
+     * <code>uint32 event_id = 1;</code>
      * @return The eventId.
      */
     @java.lang.Override
@@ -95,9 +136,9 @@ public final class HomeAvatarSummonFinishReqOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (eventId_ != 0) {
-        output.writeUInt32(11, eventId_);
+        output.writeUInt32(1, eventId_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -108,9 +149,9 @@ public final class HomeAvatarSummonFinishReqOuterClass {
       size = 0;
       if (eventId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(11, eventId_);
+          .computeUInt32Size(1, eventId_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -127,7 +168,7 @@ public final class HomeAvatarSummonFinishReqOuterClass {
 
       if (getEventId()
           != other.getEventId()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -140,7 +181,7 @@ public final class HomeAvatarSummonFinishReqOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + EVENT_ID_FIELD_NUMBER;
       hash = (53 * hash) + getEventId();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -237,8 +278,7 @@ public final class HomeAvatarSummonFinishReqOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 24791
-     * Obf: OJLLDCGAIDJ
+     * CmdId: 29671
      * </pre>
      *
      * Protobuf type {@code HomeAvatarSummonFinishReq}
@@ -262,13 +302,18 @@ public final class HomeAvatarSummonFinishReqOuterClass {
 
       // Construct using emu.grasscutter.net.proto.HomeAvatarSummonFinishReqOuterClass.HomeAvatarSummonFinishReq.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -353,7 +398,7 @@ public final class HomeAvatarSummonFinishReqOuterClass {
         if (other.getEventId() != 0) {
           setEventId(other.getEventId());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -368,41 +413,23 @@ public final class HomeAvatarSummonFinishReqOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.HomeAvatarSummonFinishReqOuterClass.HomeAvatarSummonFinishReq parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 88: {
-                eventId_ = input.readUInt32();
-
-                break;
-              } // case 88
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.HomeAvatarSummonFinishReqOuterClass.HomeAvatarSummonFinishReq) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
 
       private int eventId_ ;
       /**
-       * <code>uint32 event_id = 11;</code>
+       * <code>uint32 event_id = 1;</code>
        * @return The eventId.
        */
       @java.lang.Override
@@ -410,7 +437,7 @@ public final class HomeAvatarSummonFinishReqOuterClass {
         return eventId_;
       }
       /**
-       * <code>uint32 event_id = 11;</code>
+       * <code>uint32 event_id = 1;</code>
        * @param value The eventId to set.
        * @return This builder for chaining.
        */
@@ -421,7 +448,7 @@ public final class HomeAvatarSummonFinishReqOuterClass {
         return this;
       }
       /**
-       * <code>uint32 event_id = 11;</code>
+       * <code>uint32 event_id = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearEventId() {
@@ -463,18 +490,7 @@ public final class HomeAvatarSummonFinishReqOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new HomeAvatarSummonFinishReq(input, extensionRegistry);
       }
     };
 
@@ -509,7 +525,7 @@ public final class HomeAvatarSummonFinishReqOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\037HomeAvatarSummonFinishReq.proto\"-\n\031Hom" +
-      "eAvatarSummonFinishReq\022\020\n\010event_id\030\013 \001(\r" +
+      "eAvatarSummonFinishReq\022\020\n\010event_id\030\001 \001(\r" +
       "B\033\n\031emu.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
