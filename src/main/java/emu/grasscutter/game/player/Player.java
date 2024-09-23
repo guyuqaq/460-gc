@@ -474,6 +474,7 @@ public class Player implements DatabaseObject<Player>, PlayerHook, FieldFetch {
     public void setHeadImage(int picture) {
         this.headImage = picture;
         this.updateProfile();
+        this.save();
     }
 
     public void setSignature(String signature) {

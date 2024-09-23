@@ -11,7 +11,7 @@ public class HandlerSetPlayerHeadImageReq extends PacketHandler {
     public void handle(GameSession session, byte[] header, byte[] payload) throws Exception {
         SetPlayerHeadImageReq req = SetPlayerHeadImageReq.parseFrom(payload);
 
-        int id = req.getHeadImageId();
+        int id = req.getAvatarId();
 
         session.getPlayer().setHeadImage(id);
         session.send(new PacketSetPlayerHeadImageRsp(session.getPlayer()));
