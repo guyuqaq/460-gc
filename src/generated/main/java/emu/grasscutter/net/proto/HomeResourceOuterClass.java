@@ -23,7 +23,7 @@ public final class HomeResourceOuterClass {
      * 14
      * </pre>
      *
-     * <code>uint32 store_limit = 1;</code>
+     * <code>uint32 store_limit = 14;</code>
      * @return The storeLimit.
      */
     int getStoreLimit();
@@ -39,7 +39,7 @@ public final class HomeResourceOuterClass {
      *1
      * </pre>
      *
-     * <code>uint32 store_value = 14;</code>
+     * <code>uint32 store_value = 1;</code>
      * @return The storeValue.
      */
     int getStoreValue();
@@ -91,7 +91,7 @@ public final class HomeResourceOuterClass {
               break;
             case 8: {
 
-              storeLimit_ = input.readUInt32();
+              storeValue_ = input.readUInt32();
               break;
             }
             case 53: {
@@ -101,7 +101,7 @@ public final class HomeResourceOuterClass {
             }
             case 112: {
 
-              storeValue_ = input.readUInt32();
+              storeLimit_ = input.readUInt32();
               break;
             }
             default: {
@@ -136,14 +136,14 @@ public final class HomeResourceOuterClass {
               emu.grasscutter.net.proto.HomeResourceOuterClass.HomeResource.class, emu.grasscutter.net.proto.HomeResourceOuterClass.HomeResource.Builder.class);
     }
 
-    public static final int STORE_LIMIT_FIELD_NUMBER = 1;
+    public static final int STORE_LIMIT_FIELD_NUMBER = 14;
     private int storeLimit_;
     /**
      * <pre>
      * 14
      * </pre>
      *
-     * <code>uint32 store_limit = 1;</code>
+     * <code>uint32 store_limit = 14;</code>
      * @return The storeLimit.
      */
     @java.lang.Override
@@ -162,14 +162,14 @@ public final class HomeResourceOuterClass {
       return nextRefreshTime_;
     }
 
-    public static final int STORE_VALUE_FIELD_NUMBER = 14;
+    public static final int STORE_VALUE_FIELD_NUMBER = 1;
     private int storeValue_;
     /**
      * <pre>
      *1
      * </pre>
      *
-     * <code>uint32 store_value = 14;</code>
+     * <code>uint32 store_value = 1;</code>
      * @return The storeValue.
      */
     @java.lang.Override
@@ -191,14 +191,14 @@ public final class HomeResourceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (storeLimit_ != 0) {
-        output.writeUInt32(1, storeLimit_);
+      if (storeValue_ != 0) {
+        output.writeUInt32(1, storeValue_);
       }
       if (nextRefreshTime_ != 0) {
         output.writeFixed32(6, nextRefreshTime_);
       }
-      if (storeValue_ != 0) {
-        output.writeUInt32(14, storeValue_);
+      if (storeLimit_ != 0) {
+        output.writeUInt32(14, storeLimit_);
       }
       unknownFields.writeTo(output);
     }
@@ -209,17 +209,17 @@ public final class HomeResourceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (storeLimit_ != 0) {
+      if (storeValue_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(1, storeLimit_);
+          .computeUInt32Size(1, storeValue_);
       }
       if (nextRefreshTime_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeFixed32Size(6, nextRefreshTime_);
       }
-      if (storeValue_ != 0) {
+      if (storeLimit_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(14, storeValue_);
+          .computeUInt32Size(14, storeLimit_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -519,7 +519,7 @@ public final class HomeResourceOuterClass {
        * 14
        * </pre>
        *
-       * <code>uint32 store_limit = 1;</code>
+       * <code>uint32 store_limit = 14;</code>
        * @return The storeLimit.
        */
       @java.lang.Override
@@ -531,7 +531,7 @@ public final class HomeResourceOuterClass {
        * 14
        * </pre>
        *
-       * <code>uint32 store_limit = 1;</code>
+       * <code>uint32 store_limit = 14;</code>
        * @param value The storeLimit to set.
        * @return This builder for chaining.
        */
@@ -546,7 +546,7 @@ public final class HomeResourceOuterClass {
        * 14
        * </pre>
        *
-       * <code>uint32 store_limit = 1;</code>
+       * <code>uint32 store_limit = 14;</code>
        * @return This builder for chaining.
        */
       public Builder clearStoreLimit() {
@@ -593,7 +593,7 @@ public final class HomeResourceOuterClass {
        *1
        * </pre>
        *
-       * <code>uint32 store_value = 14;</code>
+       * <code>uint32 store_value = 1;</code>
        * @return The storeValue.
        */
       @java.lang.Override
@@ -605,7 +605,7 @@ public final class HomeResourceOuterClass {
        *1
        * </pre>
        *
-       * <code>uint32 store_value = 14;</code>
+       * <code>uint32 store_value = 1;</code>
        * @param value The storeValue to set.
        * @return This builder for chaining.
        */
@@ -620,7 +620,7 @@ public final class HomeResourceOuterClass {
        *1
        * </pre>
        *
-       * <code>uint32 store_value = 14;</code>
+       * <code>uint32 store_value = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearStoreValue() {
@@ -697,8 +697,8 @@ public final class HomeResourceOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\022HomeResource.proto\"S\n\014HomeResource\022\023\n\013" +
-      "store_limit\030\001 \001(\r\022\031\n\021next_refresh_time\030\006" +
-      " \001(\007\022\023\n\013store_value\030\016 \001(\rB\033\n\031emu.grasscu" +
+      "store_limit\030\016 \001(\r\022\031\n\021next_refresh_time\030\006" +
+      " \001(\007\022\023\n\013store_value\030\001 \001(\rB\033\n\031emu.grasscu" +
       "tter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
