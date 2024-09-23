@@ -472,6 +472,8 @@ public class Player implements DatabaseObject<Player>, PlayerHook, FieldFetch {
     }
 
     public void setHeadImage(int picture) {
+        if (picture == 10000005) picture = 1;
+        if (picture == 10000007) picture = 2;
         this.headImage = picture;
         this.updateProfile();
         this.save();

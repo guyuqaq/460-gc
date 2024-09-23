@@ -20,13 +20,10 @@ public class HandlerSetPlayerBornDataReq extends PacketHandler {
 
         // Sanity checks
         int avatarId = req.getAvatarId();
-        int headImage;
         int startingSkillDepot;
         if (avatarId == GameConstants.MAIN_CHARACTER_MALE) {
-            headImage = 1 ;
             startingSkillDepot = 504;
         } else if (avatarId == GameConstants.MAIN_CHARACTER_FEMALE) {
-            headImage = 2 ;
             startingSkillDepot = 704;
         } else {
             return;
@@ -57,7 +54,7 @@ public class HandlerSetPlayerBornDataReq extends PacketHandler {
             // Manually handle adding to team
             player.addAvatar(mainCharacter, false);
             player.setMainCharacterId(avatarId);
-            player.setHeadImage(headImage);
+            player.setHeadImage(avatarId);
             player
                     .getTeamManager()
                     .getCurrentSinglePlayerTeamInfo()
