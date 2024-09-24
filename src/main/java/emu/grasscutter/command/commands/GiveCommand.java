@@ -2,6 +2,7 @@ package emu.grasscutter.command.commands;
 
 import static emu.grasscutter.GameConstants.*;
 import static emu.grasscutter.command.CommandHelpers.*;
+import static emu.grasscutter.config.Configuration.GAME_INFO;
 
 import emu.grasscutter.command.*;
 import emu.grasscutter.data.*;
@@ -411,6 +412,11 @@ public final class GiveCommand implements CommandHandler {
             sendUsageMessage(sender);
             return;
         }
+        if (targetPlayer.getLevel() < GAME_INFO.level){
+            CommandHandler.sendTranslatedMessage(sender, "commands.give.limit_level");
+            return;
+        }
+
         try {
             GiveItemParameters param = parseArgs(sender, args);
 

@@ -175,6 +175,7 @@
       "not_found_error": "實體不存在"
     },
     "give": {
+      "limit_level": "获取物品功能未解锁，请完成主线任务 “与轻风同行” ",
       "usage_relic": "用法： give <聖遺物 ID> [主詞條 ID] [<副詞條 ID>[,<次數>]]... [lv<等級 0-20>]",
       "illegal_relic": "你不可以取得這個聖遺物，因為該聖遺物 ID 在黑名單列表內。",
       "given": "已經將 %s 個 %s 給予 %s。",
