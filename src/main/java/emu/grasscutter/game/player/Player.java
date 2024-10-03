@@ -98,7 +98,6 @@ public class Player implements DatabaseObject<Player>, PlayerHook, FieldFetch {
     @Getter @Setter private int sceneId;
     @Getter @Setter private int regionId;
     @Getter private int mainCharacterId;
-	private int spawnedEntitiesCount; //limit entities
     @Getter @Setter private boolean inGodMode;
     @Getter @Setter private boolean unlimitedStamina;
     @Getter @Setter public boolean forceLegacyDrops;
@@ -329,23 +328,6 @@ public class Player implements DatabaseObject<Player>, PlayerHook, FieldFetch {
     @Override
     public Player getPlayer() {
         return this;
-    }
-	
-	/**
-	* Track the number of entities spawned by the player 
-	*
-	* @param count The add entities	
-	*/
-	 public int getSpawnedEntitiesCount() {
-        return spawnedEntitiesCount;
-    }
-
-    public void incrementSpawnedEntitiesCount(int count) {
-        this.spawnedEntitiesCount += count;
-    }
-	
-    public void resetSpawnedEntitiesCount() {
-        this.spawnedEntitiesCount = 0;
     }
 
     /**

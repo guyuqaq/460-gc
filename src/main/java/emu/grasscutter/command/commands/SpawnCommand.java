@@ -128,25 +128,20 @@ public final class SpawnCommand implements CommandHandler {
         }
 
         param.scene = targetPlayer.getScene();
-		
-		int playerSpawnedEntitiesCount = targetPlayer.getSpawnedEntitiesCount();
-		if (playerSpawnedEntitiesCount + param.amount > 20) {
-			param.amount = 20 - playerSpawnedEntitiesCount;
-			CommandHandler.sendMessage(sender, translate(sender, "commands.spawn.limit_exceeded", param.amount));
-			if (param.amount <= 0) {
-				return;
-			}
-		}
-		
-		if (param.scene.getEntities().size() + param.amount > GAME_OPTIONS.sceneEntityLimit) {
-			param.amount = Math.max(Math.min(GAME_OPTIONS.sceneEntityLimit - param.scene.getEntities().size(), param.amount), 0);
-			CommandHandler.sendMessage(sender, translate(sender, "commands.spawn.limit_reached", param.amount));
-			if (param.amount <= 0) {
-				return;
-			}
-		}
-		
-		//spawn entities
+
+        if (param.scene.getEntities().size() + param.amount > GAME_OPTIONS.sceneEntityLimit) {
+            param.amount =
+                    Math.max(
+                            Math.min(
+                                    GAME_OPTIONS.sceneEntityLimit - param.scene.getEntities().size(), Math.min(param.amount,10)),
+                            0);
+            CommandHandler.sendMessage(
+                    sender, translate(sender, "commands.spawn.limit_reached", param.amount));
+            if (param.amount <= 0) {
+                return;
+            }
+        }
+        
         double maxRadius = Math.sqrt(param.amount * 0.2 / Math.PI);
         for (int i = 0; i < param.amount; i++) {
             pos = GetRandomPositionInCircle(param.pos, maxRadius).addY(3);
@@ -165,8 +160,8 @@ public final class SpawnCommand implements CommandHandler {
 
             param.scene.addEntity(entity);
         }
-		targetPlayer.incrementSpawnedEntitiesCount(param.amount); // Update player's spawned entities count
-        CommandHandler.sendMessage(sender, translate(sender, "commands.spawn.success", param.amount, param.id));
+        CommandHandler.sendMessage(
+                sender, translate(sender, "commands.spawn.success", param.amount, param.id));
     }
 
     private EntityItem createItem(ItemData itemData, SpawnParameters param, Position pos) {
