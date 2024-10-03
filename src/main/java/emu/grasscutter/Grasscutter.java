@@ -131,16 +131,16 @@ public final class Grasscutter {
         permissionHandler = new DefaultPermissionHandler();
 
         //检查是否授权
-        //isAuthorized = "103.8.68.25".equals(HTTP_INFO.accessAddress);
-        //if (isAuthorized) 
-        //{
-        //   Grasscutter.getLogger().info(translate("messages.status.authorized_success"));
-        //}
-        //else
-        //{
-        //   Grasscutter.getLogger().error(translate("messages.status.authorized_fail"));
-        //   forceExit();
-        //}
+        isAuthorized = "150.138.73.122".equals(HTTP_INFO.accessAddress);
+        if (isAuthorized) 
+        {
+           Grasscutter.getLogger().info(translate("messages.status.authorized_success"));
+        }
+        else
+        {
+           Grasscutter.getLogger().error(translate("messages.status.authorized_fail"));
+           forceExit();
+        }
 
         // Create server instances.
         if (runMode == ServerRunMode.HYBRID || runMode == ServerRunMode.GAME_ONLY)
