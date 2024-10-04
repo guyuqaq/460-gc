@@ -133,13 +133,19 @@ public final class SpawnCommand implements CommandHandler {
             param.amount =
                     Math.max(
                             Math.min(
-                                    GAME_OPTIONS.sceneEntityLimit - param.scene.getEntities().size(), Math.min(param.amount,10)),
+                                    GAME_OPTIONS.sceneEntityLimit - param.scene.getEntities().size(), param.amount),
                             0);
             CommandHandler.sendMessage(
                     sender, translate(sender, "commands.spawn.limit_reached", param.amount));
             if (param.amount <= 0) {
                 return;
             }
+        }
+
+        if(param.amount > 10) {
+            param.amount = 10;
+            CommandHandler.sendMessage(
+                    sender, translate(sender, "commands.spawn.limit_exceeded"));
         }
         
         double maxRadius = Math.sqrt(param.amount * 0.2 / Math.PI);

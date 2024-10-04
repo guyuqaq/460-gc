@@ -357,7 +357,7 @@
     "spawn": {
       "success": "已生成 %s 个 %s。",
       "limit_reached": "场景中的生成数量已达上限。已替代为生成 %s 个实体。",
-      "limit_exceeded": "当前场景生成数量超过设定上限，请切换场景再次尝试。",
+      "limit_exceeded": "为避免恶意炸服，每次生成的实体数量不能超过10。",
       "description": "在你附近生成实体"
     },
     "stop": {
