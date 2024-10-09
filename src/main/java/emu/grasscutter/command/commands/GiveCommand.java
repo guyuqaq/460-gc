@@ -2,8 +2,7 @@ package emu.grasscutter.command.commands;
 
 import static emu.grasscutter.GameConstants.*;
 import static emu.grasscutter.command.CommandHelpers.*;
-import static emu.grasscutter.config.Configuration.GAME_INFO;
-
+import static emu.grasscutter.config.Configuration.GAME_OPTIONS;
 import emu.grasscutter.command.*;
 import emu.grasscutter.data.*;
 import emu.grasscutter.data.excels.ItemData;
@@ -12,6 +11,7 @@ import emu.grasscutter.data.excels.reliquary.*;
 import emu.grasscutter.game.avatar.Avatar;
 import emu.grasscutter.game.inventory.*;
 import emu.grasscutter.game.player.Player;
+import emu.grasscutter.game.quest.enums.*;
 import emu.grasscutter.game.props.*;
 import java.util.*;
 import java.util.function.BiConsumer;
@@ -412,8 +412,8 @@ public final class GiveCommand implements CommandHandler {
             sendUsageMessage(sender);
             return;
         }
-        if (targetPlayer.getLevel() < GAME_INFO.level){
-            CommandHandler.sendTranslatedMessage(sender, "commands.give.limit_level");
+        if ( GAME_OPTIONS.questing.enabled && targetPlayer.getQuestManager().getMainQuestById(360) == null){
+            CommandHandler.sendTranslatedMessage(sender, "commands.give.limit_give");
             return;
         }
 
