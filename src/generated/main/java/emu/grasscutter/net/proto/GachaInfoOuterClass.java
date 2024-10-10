@@ -234,21 +234,21 @@ public final class GachaInfoOuterClass {
     int getCurScheduleDailyGachaTimes();
 
     /**
-     * <code>repeated uint32 EFPBICLMCGG = 1448;</code>
-     * @return A list containing the eFPBICLMCGG.
+     * <code>repeated uint32 display_chronicle5_item_list = 1448;</code>
+     * @return A list containing the displayChronicle5ItemList.
      */
-    java.util.List<java.lang.Integer> getEFPBICLMCGGList();
+    java.util.List<java.lang.Integer> getDisplayChronicle5ItemListList();
     /**
-     * <code>repeated uint32 EFPBICLMCGG = 1448;</code>
-     * @return The count of eFPBICLMCGG.
+     * <code>repeated uint32 display_chronicle5_item_list = 1448;</code>
+     * @return The count of displayChronicle5ItemList.
      */
-    int getEFPBICLMCGGCount();
+    int getDisplayChronicle5ItemListCount();
     /**
-     * <code>repeated uint32 EFPBICLMCGG = 1448;</code>
+     * <code>repeated uint32 display_chronicle5_item_list = 1448;</code>
      * @param index The index of the element to return.
-     * @return The eFPBICLMCGG at the given index.
+     * @return The displayChronicle5ItemList at the given index.
      */
-    int getEFPBICLMCGG(int index);
+    int getDisplayChronicle5ItemList(int index);
 
     /**
      * <code>bool LAGAHPEKLHM = 1509;</code>
@@ -341,7 +341,7 @@ public final class GachaInfoOuterClass {
       displayUp5ItemList_ = emptyIntList();
       gachaProbUrlOversea_ = "";
       titleTextmap_ = "";
-      eFPBICLMCGG_ = emptyIntList();
+      displayChronicle5ItemList_ = emptyIntList();
       gachaUpInfoList_ = java.util.Collections.emptyList();
       displayUp4ItemList_ = emptyIntList();
       gachaRecordUrlOversea_ = "";
@@ -512,21 +512,21 @@ public final class GachaInfoOuterClass {
             }
             case 11584: {
               if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                eFPBICLMCGG_ = newIntList();
+                displayChronicle5ItemList_ = newIntList();
                 mutable_bitField0_ |= 0x00000002;
               }
-              eFPBICLMCGG_.addInt(input.readUInt32());
+              displayChronicle5ItemList_.addInt(input.readUInt32());
               break;
             }
             case 11586: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
               if (!((mutable_bitField0_ & 0x00000002) != 0) && input.getBytesUntilLimit() > 0) {
-                eFPBICLMCGG_ = newIntList();
+                displayChronicle5ItemList_ = newIntList();
                 mutable_bitField0_ |= 0x00000002;
               }
               while (input.getBytesUntilLimit() > 0) {
-                eFPBICLMCGG_.addInt(input.readUInt32());
+                displayChronicle5ItemList_.addInt(input.readUInt32());
               }
               input.popLimit(limit);
               break;
@@ -596,7 +596,7 @@ public final class GachaInfoOuterClass {
           displayUp5ItemList_.makeImmutable(); // C
         }
         if (((mutable_bitField0_ & 0x00000002) != 0)) {
-          eFPBICLMCGG_.makeImmutable(); // C
+          displayChronicle5ItemList_.makeImmutable(); // C
         }
         if (((mutable_bitField0_ & 0x00000004) != 0)) {
           gachaUpInfoList_ = java.util.Collections.unmodifiableList(gachaUpInfoList_);
@@ -1078,33 +1078,33 @@ public final class GachaInfoOuterClass {
       return curScheduleDailyGachaTimes_;
     }
 
-    public static final int EFPBICLMCGG_FIELD_NUMBER = 1448;
-    private com.google.protobuf.Internal.IntList eFPBICLMCGG_;
+    public static final int DISPLAY_CHRONICLE5_ITEM_LIST_FIELD_NUMBER = 1448;
+    private com.google.protobuf.Internal.IntList displayChronicle5ItemList_;
     /**
-     * <code>repeated uint32 EFPBICLMCGG = 1448;</code>
-     * @return A list containing the eFPBICLMCGG.
+     * <code>repeated uint32 display_chronicle5_item_list = 1448;</code>
+     * @return A list containing the displayChronicle5ItemList.
      */
     @java.lang.Override
     public java.util.List<java.lang.Integer>
-        getEFPBICLMCGGList() {
-      return eFPBICLMCGG_;
+        getDisplayChronicle5ItemListList() {
+      return displayChronicle5ItemList_;
     }
     /**
-     * <code>repeated uint32 EFPBICLMCGG = 1448;</code>
-     * @return The count of eFPBICLMCGG.
+     * <code>repeated uint32 display_chronicle5_item_list = 1448;</code>
+     * @return The count of displayChronicle5ItemList.
      */
-    public int getEFPBICLMCGGCount() {
-      return eFPBICLMCGG_.size();
+    public int getDisplayChronicle5ItemListCount() {
+      return displayChronicle5ItemList_.size();
     }
     /**
-     * <code>repeated uint32 EFPBICLMCGG = 1448;</code>
+     * <code>repeated uint32 display_chronicle5_item_list = 1448;</code>
      * @param index The index of the element to return.
-     * @return The eFPBICLMCGG at the given index.
+     * @return The displayChronicle5ItemList at the given index.
      */
-    public int getEFPBICLMCGG(int index) {
-      return eFPBICLMCGG_.getInt(index);
+    public int getDisplayChronicle5ItemList(int index) {
+      return displayChronicle5ItemList_.getInt(index);
     }
-    private int eFPBICLMCGGMemoizedSerializedSize = -1;
+    private int displayChronicle5ItemListMemoizedSerializedSize = -1;
 
     public static final int LAGAHPEKLHM_FIELD_NUMBER = 1509;
     private boolean lAGAHPEKLHM_;
@@ -1325,12 +1325,12 @@ public final class GachaInfoOuterClass {
       if (curScheduleDailyGachaTimes_ != 0) {
         output.writeUInt32(1087, curScheduleDailyGachaTimes_);
       }
-      if (getEFPBICLMCGGList().size() > 0) {
+      if (getDisplayChronicle5ItemListList().size() > 0) {
         output.writeUInt32NoTag(11586);
-        output.writeUInt32NoTag(eFPBICLMCGGMemoizedSerializedSize);
+        output.writeUInt32NoTag(displayChronicle5ItemListMemoizedSerializedSize);
       }
-      for (int i = 0; i < eFPBICLMCGG_.size(); i++) {
-        output.writeUInt32NoTag(eFPBICLMCGG_.getInt(i));
+      for (int i = 0; i < displayChronicle5ItemList_.size(); i++) {
+        output.writeUInt32NoTag(displayChronicle5ItemList_.getInt(i));
       }
       if (lAGAHPEKLHM_ != false) {
         output.writeBool(1509, lAGAHPEKLHM_);
@@ -1454,17 +1454,17 @@ public final class GachaInfoOuterClass {
       }
       {
         int dataSize = 0;
-        for (int i = 0; i < eFPBICLMCGG_.size(); i++) {
+        for (int i = 0; i < displayChronicle5ItemList_.size(); i++) {
           dataSize += com.google.protobuf.CodedOutputStream
-            .computeUInt32SizeNoTag(eFPBICLMCGG_.getInt(i));
+            .computeUInt32SizeNoTag(displayChronicle5ItemList_.getInt(i));
         }
         size += dataSize;
-        if (!getEFPBICLMCGGList().isEmpty()) {
+        if (!getDisplayChronicle5ItemListList().isEmpty()) {
           size += 2;
           size += com.google.protobuf.CodedOutputStream
               .computeInt32SizeNoTag(dataSize);
         }
-        eFPBICLMCGGMemoizedSerializedSize = dataSize;
+        displayChronicle5ItemListMemoizedSerializedSize = dataSize;
       }
       if (lAGAHPEKLHM_ != false) {
         size += com.google.protobuf.CodedOutputStream
@@ -1554,8 +1554,8 @@ public final class GachaInfoOuterClass {
           .equals(other.getTitleTextmap())) return false;
       if (getCurScheduleDailyGachaTimes()
           != other.getCurScheduleDailyGachaTimes()) return false;
-      if (!getEFPBICLMCGGList()
-          .equals(other.getEFPBICLMCGGList())) return false;
+      if (!getDisplayChronicle5ItemListList()
+          .equals(other.getDisplayChronicle5ItemListList())) return false;
       if (getLAGAHPEKLHM()
           != other.getLAGAHPEKLHM()) return false;
       if (!getGachaUpInfoListList()
@@ -1624,9 +1624,9 @@ public final class GachaInfoOuterClass {
       hash = (53 * hash) + getTitleTextmap().hashCode();
       hash = (37 * hash) + CUR_SCHEDULE_DAILY_GACHA_TIMES_FIELD_NUMBER;
       hash = (53 * hash) + getCurScheduleDailyGachaTimes();
-      if (getEFPBICLMCGGCount() > 0) {
-        hash = (37 * hash) + EFPBICLMCGG_FIELD_NUMBER;
-        hash = (53 * hash) + getEFPBICLMCGGList().hashCode();
+      if (getDisplayChronicle5ItemListCount() > 0) {
+        hash = (37 * hash) + DISPLAY_CHRONICLE5_ITEM_LIST_FIELD_NUMBER;
+        hash = (53 * hash) + getDisplayChronicle5ItemListList().hashCode();
       }
       hash = (37 * hash) + LAGAHPEKLHM_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
@@ -1821,7 +1821,7 @@ public final class GachaInfoOuterClass {
 
         curScheduleDailyGachaTimes_ = 0;
 
-        eFPBICLMCGG_ = emptyIntList();
+        displayChronicle5ItemList_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000002);
         lAGAHPEKLHM_ = false;
 
@@ -1891,10 +1891,10 @@ public final class GachaInfoOuterClass {
         result.titleTextmap_ = titleTextmap_;
         result.curScheduleDailyGachaTimes_ = curScheduleDailyGachaTimes_;
         if (((bitField0_ & 0x00000002) != 0)) {
-          eFPBICLMCGG_.makeImmutable();
+          displayChronicle5ItemList_.makeImmutable();
           bitField0_ = (bitField0_ & ~0x00000002);
         }
-        result.eFPBICLMCGG_ = eFPBICLMCGG_;
+        result.displayChronicle5ItemList_ = displayChronicle5ItemList_;
         result.lAGAHPEKLHM_ = lAGAHPEKLHM_;
         if (gachaUpInfoListBuilder_ == null) {
           if (((bitField0_ & 0x00000004) != 0)) {
@@ -2039,13 +2039,13 @@ public final class GachaInfoOuterClass {
         if (other.getCurScheduleDailyGachaTimes() != 0) {
           setCurScheduleDailyGachaTimes(other.getCurScheduleDailyGachaTimes());
         }
-        if (!other.eFPBICLMCGG_.isEmpty()) {
-          if (eFPBICLMCGG_.isEmpty()) {
-            eFPBICLMCGG_ = other.eFPBICLMCGG_;
+        if (!other.displayChronicle5ItemList_.isEmpty()) {
+          if (displayChronicle5ItemList_.isEmpty()) {
+            displayChronicle5ItemList_ = other.displayChronicle5ItemList_;
             bitField0_ = (bitField0_ & ~0x00000002);
           } else {
-            ensureEFPBICLMCGGIsMutable();
-            eFPBICLMCGG_.addAll(other.eFPBICLMCGG_);
+            ensureDisplayChronicle5ItemListIsMutable();
+            displayChronicle5ItemList_.addAll(other.displayChronicle5ItemList_);
           }
           onChanged();
         }
@@ -3215,80 +3215,80 @@ public final class GachaInfoOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Internal.IntList eFPBICLMCGG_ = emptyIntList();
-      private void ensureEFPBICLMCGGIsMutable() {
+      private com.google.protobuf.Internal.IntList displayChronicle5ItemList_ = emptyIntList();
+      private void ensureDisplayChronicle5ItemListIsMutable() {
         if (!((bitField0_ & 0x00000002) != 0)) {
-          eFPBICLMCGG_ = mutableCopy(eFPBICLMCGG_);
+          displayChronicle5ItemList_ = mutableCopy(displayChronicle5ItemList_);
           bitField0_ |= 0x00000002;
          }
       }
       /**
-       * <code>repeated uint32 EFPBICLMCGG = 1448;</code>
-       * @return A list containing the eFPBICLMCGG.
+       * <code>repeated uint32 display_chronicle5_item_list = 1448;</code>
+       * @return A list containing the displayChronicle5ItemList.
        */
       public java.util.List<java.lang.Integer>
-          getEFPBICLMCGGList() {
+          getDisplayChronicle5ItemListList() {
         return ((bitField0_ & 0x00000002) != 0) ?
-                 java.util.Collections.unmodifiableList(eFPBICLMCGG_) : eFPBICLMCGG_;
+                 java.util.Collections.unmodifiableList(displayChronicle5ItemList_) : displayChronicle5ItemList_;
       }
       /**
-       * <code>repeated uint32 EFPBICLMCGG = 1448;</code>
-       * @return The count of eFPBICLMCGG.
+       * <code>repeated uint32 display_chronicle5_item_list = 1448;</code>
+       * @return The count of displayChronicle5ItemList.
        */
-      public int getEFPBICLMCGGCount() {
-        return eFPBICLMCGG_.size();
+      public int getDisplayChronicle5ItemListCount() {
+        return displayChronicle5ItemList_.size();
       }
       /**
-       * <code>repeated uint32 EFPBICLMCGG = 1448;</code>
+       * <code>repeated uint32 display_chronicle5_item_list = 1448;</code>
        * @param index The index of the element to return.
-       * @return The eFPBICLMCGG at the given index.
+       * @return The displayChronicle5ItemList at the given index.
        */
-      public int getEFPBICLMCGG(int index) {
-        return eFPBICLMCGG_.getInt(index);
+      public int getDisplayChronicle5ItemList(int index) {
+        return displayChronicle5ItemList_.getInt(index);
       }
       /**
-       * <code>repeated uint32 EFPBICLMCGG = 1448;</code>
+       * <code>repeated uint32 display_chronicle5_item_list = 1448;</code>
        * @param index The index to set the value at.
-       * @param value The eFPBICLMCGG to set.
+       * @param value The displayChronicle5ItemList to set.
        * @return This builder for chaining.
        */
-      public Builder setEFPBICLMCGG(
+      public Builder setDisplayChronicle5ItemList(
           int index, int value) {
-        ensureEFPBICLMCGGIsMutable();
-        eFPBICLMCGG_.setInt(index, value);
+        ensureDisplayChronicle5ItemListIsMutable();
+        displayChronicle5ItemList_.setInt(index, value);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated uint32 EFPBICLMCGG = 1448;</code>
-       * @param value The eFPBICLMCGG to add.
+       * <code>repeated uint32 display_chronicle5_item_list = 1448;</code>
+       * @param value The displayChronicle5ItemList to add.
        * @return This builder for chaining.
        */
-      public Builder addEFPBICLMCGG(int value) {
-        ensureEFPBICLMCGGIsMutable();
-        eFPBICLMCGG_.addInt(value);
+      public Builder addDisplayChronicle5ItemList(int value) {
+        ensureDisplayChronicle5ItemListIsMutable();
+        displayChronicle5ItemList_.addInt(value);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated uint32 EFPBICLMCGG = 1448;</code>
-       * @param values The eFPBICLMCGG to add.
+       * <code>repeated uint32 display_chronicle5_item_list = 1448;</code>
+       * @param values The displayChronicle5ItemList to add.
        * @return This builder for chaining.
        */
-      public Builder addAllEFPBICLMCGG(
+      public Builder addAllDisplayChronicle5ItemList(
           java.lang.Iterable<? extends java.lang.Integer> values) {
-        ensureEFPBICLMCGGIsMutable();
+        ensureDisplayChronicle5ItemListIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, eFPBICLMCGG_);
+            values, displayChronicle5ItemList_);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated uint32 EFPBICLMCGG = 1448;</code>
+       * <code>repeated uint32 display_chronicle5_item_list = 1448;</code>
        * @return This builder for chaining.
        */
-      public Builder clearEFPBICLMCGG() {
-        eFPBICLMCGG_ = emptyIntList();
+      public Builder clearDisplayChronicle5ItemList() {
+        displayChronicle5ItemList_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
@@ -3832,7 +3832,7 @@ public final class GachaInfoOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\017GachaInfo.proto\032\021GachaUpInfo.proto\"\364\005\n" +
+      "\n\017GachaInfo.proto\032\021GachaUpInfo.proto\"\205\006\n" +
       "\tGachaInfo\022\020\n\010end_time\030\001 \001(\r\022\030\n\020ten_cost" +
       "_item_id\030\002 \001(\r\022\031\n\021ten_cost_item_num\030\003 \001(" +
       "\r\022!\n\031gacha_preview_prefab_path\030\004 \001(\t\022\022\n\n" +
@@ -3847,12 +3847,13 @@ public final class GachaInfoOuterClass {
       "_new_wish\030\373\001 \001(\010\022\025\n\014wish_item_id\030\327\004 \001(\r\022" +
       "\037\n\026gacha_prob_url_oversea\030\216\006 \001(\t\022\026\n\rtitl" +
       "e_textmap\030\236\006 \001(\t\022\'\n\036cur_schedule_daily_g" +
-      "acha_times\030\277\010 \001(\r\022\024\n\013EFPBICLMCGG\030\250\013 \003(\r\022" +
-      "\024\n\013LAGAHPEKLHM\030\345\013 \001(\010\022)\n\022gacha_up_info_l" +
-      "ist\030\257\r \003(\0132\014.GachaUpInfo\022\036\n\025display_up4_" +
-      "item_list\030\332\016 \003(\r\022\026\n\rwish_progress\030\222\017 \001(\r" +
-      "\022!\n\030gacha_record_url_oversea\030\300\017 \001(\tB\033\n\031e" +
-      "mu.grasscutter.net.protob\006proto3"
+      "acha_times\030\277\010 \001(\r\022%\n\034display_chronicle5_" +
+      "item_list\030\250\013 \003(\r\022\024\n\013LAGAHPEKLHM\030\345\013 \001(\010\022)" +
+      "\n\022gacha_up_info_list\030\257\r \003(\0132\014.GachaUpInf" +
+      "o\022\036\n\025display_up4_item_list\030\332\016 \003(\r\022\026\n\rwis" +
+      "h_progress\030\222\017 \001(\r\022!\n\030gacha_record_url_ov" +
+      "ersea\030\300\017 \001(\tB\033\n\031emu.grasscutter.net.prot" +
+      "ob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3864,7 +3865,7 @@ public final class GachaInfoOuterClass {
     internal_static_GachaInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_GachaInfo_descriptor,
-        new java.lang.String[] { "EndTime", "TenCostItemId", "TenCostItemNum", "GachaPreviewPrefabPath", "BeginTime", "GachaRecordUrl", "CostItemNum", "ScheduleId", "GachaProbUrl", "GachaType", "GachaPrefabPath", "CostItemId", "GachaSortId", "LeftGachaTimes", "GachaTimesLimit", "DisplayUp5ItemList", "WishMaxProgress", "IsNewWish", "WishItemId", "GachaProbUrlOversea", "TitleTextmap", "CurScheduleDailyGachaTimes", "EFPBICLMCGG", "LAGAHPEKLHM", "GachaUpInfoList", "DisplayUp4ItemList", "WishProgress", "GachaRecordUrlOversea", });
+        new java.lang.String[] { "EndTime", "TenCostItemId", "TenCostItemNum", "GachaPreviewPrefabPath", "BeginTime", "GachaRecordUrl", "CostItemNum", "ScheduleId", "GachaProbUrl", "GachaType", "GachaPrefabPath", "CostItemId", "GachaSortId", "LeftGachaTimes", "GachaTimesLimit", "DisplayUp5ItemList", "WishMaxProgress", "IsNewWish", "WishItemId", "GachaProbUrlOversea", "TitleTextmap", "CurScheduleDailyGachaTimes", "DisplayChronicle5ItemList", "LAGAHPEKLHM", "GachaUpInfoList", "DisplayUp4ItemList", "WishProgress", "GachaRecordUrlOversea", });
     emu.grasscutter.net.proto.GachaUpInfoOuterClass.getDescriptor();
   }
 
