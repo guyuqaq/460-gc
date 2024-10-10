@@ -6,16 +6,16 @@ import emu.grasscutter.net.proto.GachaWishRspOuterClass.GachaWishRsp;
 public class PacketGachaWishRsp extends BasePacket {
 
     public PacketGachaWishRsp(
-            int gachaSortId ,int gachaType, int scheduleId, int wishItemId, int tenCostItemId) {
+            int gachaType, int scheduleId, int itemId, int progress, int maxProgress) {
         super(PacketOpcodes.GachaWishRsp);
 
         GachaWishRsp proto =
                 GachaWishRsp.newBuilder()
-                        .setGachaSortId(gachaSortId)
                         .setGachaType(gachaType)
                         .setGachaScheduleId(scheduleId)
-                        .setWishItemId(wishItemId)
-                        .setTenCostItemId(tenCostItemId)
+                        .setWishItemId(itemId)
+                        .setWishProgress(progress)
+                        .setWishMaxProgress(maxProgress)
                         .build();
 
         this.setData(proto);

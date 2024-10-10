@@ -136,7 +136,7 @@ public class GachaBanner {
         if (this.fallbackItems5Pool2 == null)
             this.fallbackItems5Pool2 = this.bannerType.fallbackItems5Pool2;
         // Set max wish progress based on wish type, otherwise its 0
-        if (this.bannerType.equals(BannerType.WEAPON)) this.wishMaxProgress = 2;
+        if (this.bannerType.equals(BannerType.WEAPON)) this.wishMaxProgress = 1;
         if (this.bannerType.equals(BannerType.CHRONICLE)) this.wishMaxProgress = 1;
     }
 
